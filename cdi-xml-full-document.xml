@@ -5173,7 +5173,7 @@
       <v c='USA'  score='4.134352' weighted='0.471566'/>
    </vs>
    <!-- overall -->
-   <vs y='2015' r='LMY' i='CDI' precision='1'>
+   <vs y='2015' r='LMY' i='CDI'>
       <v c='AUS'  score='5.240357'/>
       <v c='AUT'  score='5.14399'/>
       <v c='BEL'  score='5.115515'/>

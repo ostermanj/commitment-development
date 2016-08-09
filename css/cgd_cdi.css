@@ -1,3 +1,11 @@
+.better {
+    background-color: #b9e4b9;
+}
+
+.worse {
+    background-color: #e8b9b9;
+}
+
 .cdi-header-wrapper {
     background: url(../images/home-hero.png);
     background-size: cover;

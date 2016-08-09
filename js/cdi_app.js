@@ -1,7 +1,59 @@
 /**
  * The main APP for the new CDI section.
  */
+
+/* NEW CODE
+implicitWeight is product of the one-over-standard-deviation for the indicator and a constant that 
+was used to calculate overall country scores. used here to recalculate country scores when 
+the user adjusts weights
+ */
+
+ var userWeights = {
+	   CDI_AID: {
+		  value: 1,
+		  unlocked: true,
+		  implicitWeight: 1.053251156178860
+	   },
+	   CDI_INV: {
+		  value: 1,
+		  unlocked: true,
+		  implicitWeight: 1.705258345246140
+	   },
+	   CDI_TEC: {
+		  value: 1,
+		  unlocked: true,
+		  implicitWeight: 0.798422233412404
+	   },
+	   CDI_ENV: {
+		  value: 1,
+		  unlocked: true,
+		  implicitWeight: 0.894036763570826
+	   },
+	   CDI_TRA: {
+		  value: 1,
+		  unlocked: true,
+		  implicitWeight: 1.1855207237
+	   },
+	   CDI_SEC: {
+		  value: 1,
+		  unlocked: true,
+		  implicitWeight: 0.701892181000000
+	   },
+	   CDI_MIG: {
+		  value: 1,
+		  unlocked: true,
+		  implicitWeight: 0.661618574916134
+	   }
+   };
+   
+   /* end new code - jo */
+
 var cdiApp = Backbone.View.extend({
+
+  
+
+
+  
     /**
      * The main indicators order.
      *
@@ -68,6 +120,7 @@ var cdiApp = Backbone.View.extend({
         $('#html5_wrapper').css('display','block');
 
         // Get the data file.
+
         $.get(options.url).done(function(data){
             that.data = data;
             var countryCodes = that.getCountryCodes();
@@ -86,10 +139,13 @@ var cdiApp = Backbone.View.extend({
      * the hierarchy from the data object.
      */
     flattenData: function() {
+
         var that = this;
         this.flatIndicators = {};
+
         flattenIndicators(this.data.indicators);
         function flattenIndicators(indicators) {
+
             for (var i in indicators) {
                 that.flatIndicators[i] = JSON.parse(JSON.stringify(indicators[i]));
 
@@ -97,13 +153,29 @@ var cdiApp = Backbone.View.extend({
                     flattenIndicators(indicators[i].children);
                     if (i === 'CDI') {
                         that.flatIndicators[i].children = that.indicatorsOrder;
+
                     }
                     else {
                         that.flatIndicators[i].children = Object.keys(that.flatIndicators[i].children);
                     }
                 }
+           
             }
+
         }
+/*
+new code : adds object 'original' to main indicators and copies data to it so that the values can be manipulated by user-initiated weighting without losing the original values
+*/
+
+        for (var ind in that.flatIndicators){
+            if (ind.indexOf('CDI') != -1){
+
+              that.flatIndicators[ind].original = $.extend(true,{},that.flatIndicators[ind]); //using jquery extend method to clone object without  setting up persistent equivalency (newObj = oldObj). later changes in one would be made in the other, which is exactly not the point	 
+            }
+        };
+
+/* end new */        
+
     },
 
     /**
@@ -144,6 +216,7 @@ var cdiApp = Backbone.View.extend({
 	    weighted.push(weighted_value);
 
 	    total_val+= weighted_value;
+	
         });
 	
         var model = new BarChartModel({
@@ -252,14 +325,14 @@ var cdiApp = Backbone.View.extend({
     },
 
     reload: function(indicator) {
-        console.log('Reloading main app with selected indicator: ' + indicator);
+
         var viewName = indicator.toLowerCase() + 'View';
         if (indicator === 'CDI') { //this[viewName]) {
-            console.log('View found, showing indicator: ' + indicator);
+
             this[viewName].show();
         }
         else {
-            console.log('View not found, loading indicator: ' + indicator);
+
             this.loadIndicator(indicator);
         }
     },
@@ -267,7 +340,7 @@ var cdiApp = Backbone.View.extend({
     hideIndicator: function(indicator) {
         var indicator = indicator.toLowerCase();
         var viewName =  (indicator === 'cdi' ? 'cdi' : 'indicator') + 'View';
-        console.log('Hiding view: ' + viewName);
+
         if (this[viewName]) {
             this[viewName].hide();
         }
@@ -289,11 +362,121 @@ var cdiApp = Backbone.View.extend({
         });
         return indicatorsLabels;
     },
+events: {
+        'mousedown div.chart-holder div' : 'increaseWeight'
+       
+    },
+    changeIncrement: 0.6, //0.6 so that other six weights changed by 0.1 to keep total weighting constant
+    increaseWeight:function(e){
+      this.selectWeight(e); // finds which indicator has been changed
+      if (e.which === 1){  // if left click
+           for (var ind in userWeights){
+              if (ind == changedIndicator){
+                 userWeights[ind].value += this.changeIncrement;  // increase changed indicator weight by 0.6
+              } else {
+                 userWeights[ind].value -= this.changeIncrement / 6; // decrease all others by 0.6
+                 }
+           } 
+         }
+      else if (e.which === 3){ // right click
+       
+           for (var ind in userWeights){
+              if (ind == changedIndicator){    // inverse of above
+                 userWeights[ind].value -= this.changeIncrement;
+              } else {
+                 userWeights[ind].value += this.changeIncrement / 6;
+                 }
+           } 
+         
+ 
+      }
+ 
+      this.changeWeight(e);
+    },
+    selectWeight: function(e){
+       regex = /(^.+)-bg/
+       changedIndicator = e.currentTarget.className.match(regex)[1];
 
+
+    },
+    totalWeightsFn: function(){
+      var totalWeights = 0;
+      for (var weight in userWeights){
+          totalWeights += userWeights[weight].value;
+      }
+      return totalWeights;
+    },
+    changeWeight: function(e){
+       
+
+
+     
+     for (var ind in this.flatIndicators){
+
+        if (ind.indexOf('CDI_') != -1){
+         for (var c in this.flatIndicators[ind].weighted){
+/*           if (ind == 'CDI_AID' && c == 'DNK'){
+             console.log('original display value: ' + this.flatIndicators[ind].values[c]);
+             console.log('implicit weight: ' + userWeights[ind].implicitWeight);
+             console.log('user weight: ' + userWeights[ind].value);
+           }*/
+          
+           this.flatIndicators[ind].weighted[c] = this.flatIndicators[ind].original.weighted[c] * userWeights[ind].value;  // changes weighted 
+           this.flatIndicators[ind].values[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].value;
+           // user_friendly_values governs what shows in the tooltip on the main graph
+           this.flatIndicators[ind].user_friendly_values[c] = this.flatIndicators[ind].original.user_friendly_values[c] * userWeights[ind].value;
+           // below: create object to make implicit weighted values that make up overall country scores explicit
+           this.flatIndicators[ind].weighted_values_for_avg = this.flatIndicators[ind].weighted_values_for_avg ? this.flatIndicators[ind].weighted_values_for_avg : {};
+           this.flatIndicators[ind].weighted_values_for_avg[c] = this.flatIndicators[ind].weighted_values_for_avg[c] ? this.flatIndicators[ind].weighted_values_for_avg[c] : {};
+           this.flatIndicators[ind].weighted_values_for_avg[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].value * userWeights[ind].implicitWeight;
+   /*        
+            if (ind == 'CDI_AID' && c == 'DNK'){
+             console.log('new display value: ' + this.flatIndicators[ind].values[c]);
+             console.log('new weighted value: ' + this.flatIndicators[ind].weighted_values_for_avg[c]);
+             
+           }
+     */      
+         }
+        }
+        
+     }
+ 
+    this.changeOverallScores(e); 
+    },
+    changeOverallScores: function(e){
+    
+console.log(this.flatIndicators);    
+
+
+
+    for (var c in this.flatIndicators.CDI.values){
+ 
+       var runningTotal = 0;
+       for (var ind in this.flatIndicators){
+          if (ind.indexOf('CDI_') != -1){
+             runningTotal += this.flatIndicators[ind].weighted_values_for_avg[c]
+          }
+       }
+       this.flatIndicators.CDI.values[c] = runningTotal / 7;
+       console.log('Country: ' + c +'; New average: ' + this.flatIndicators.CDI.values[c]);
+       newScore = this.flatIndicators.CDI.values[c];
+       oldScore = this.flatIndicators.CDI.original.values[c];
+       if (newScore.toFixed(1) > oldScore.toFixed(1)){
+          console.log('Better');          
+       } else if (newScore.toFixed(1) < oldScore.toFixed(1)){
+          console.log('Worse');
+       } else {console.log('Same');}
+    }
+/**
+     * load CDI results is accurate country averages but the order of the countries is not changing
+     rank function works properly except that the countries are in the wrong order.
+     */
+     this.startApp(true);
+    },
     /**
      * Create main nav and load the Overall tab.
      */
-    startApp: function() {
+    startApp: function(weighted) {
         // Create main nav.
         var mainNavModel = new cdiApp.mainNav.Model({
             items: this.indicators,
@@ -304,20 +487,27 @@ var cdiApp = Backbone.View.extend({
             className: 'mainNav',
             tagName: 'ul'
         });
+        $('#new_cdi .mainNav').remove();  // NEW code to keep from duplicating main CDI navbar
         $('#new_cdi').prepend(this.mainNavView.$el);
-
-        this.loadCDI();
+        this.loadCDI(weighted);
     },
 
     /**
      * Load the Overall tab.
      */
-    loadCDI: function() {
+    loadCDI: function(userWeighted) {
+
+
+
+    if (userWeighted == true){
+console.log('user weighted');
+    };
         var cdiModel = new cdiApp.CDI.Model({
             indicator: this.flatIndicators['CDI'],
             countries: this.countries,
             app: this
         });
+    
         this.cdiView = new cdiApp.CDI.View({
             model: cdiModel,
             el: '#home-cdi'
@@ -347,7 +537,9 @@ var cdiApp = Backbone.View.extend({
     },
 
     loadCountry: function(args) {
-        console.log('country: ' + args.countryCodes);
+
+    
+
         var that = this;
         var cssSelector = '';
         var $indicatorElement;
@@ -364,6 +556,7 @@ var cdiApp = Backbone.View.extend({
             $rank.html('Rank: ' + that.getRank(countryCode, 'CDI'));
             var $avg = $indicatorElement.find('.avg');
             $avg.html(that.flatIndicators['CDI'].values[countryCode].toFixed(2));
+
 
             for (var i in that.indicators) {
                 var data = [];
@@ -419,6 +612,7 @@ var cdiApp = Backbone.View.extend({
                             $content.append($chart);
                             indicators = [child.children[k]];
 			    all_data = that.flatIndicators[child.children[k]];
+			
                             that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                         }
                     } else {
@@ -428,6 +622,7 @@ var cdiApp = Backbone.View.extend({
                         $content.append($label);
                         $content.append($chart);
 			all_data = that.flatIndicators[children[j]];
+						
                         that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
                     }
                 }
@@ -437,7 +632,7 @@ var cdiApp = Backbone.View.extend({
             e.preventDefault();
             $target = $(e.target);
             var indicatorCode = $target.data('indicator');
-            console.log('Indicator: ' + indicatorCode + ': ' + that.flatIndicators[indicatorCode].description);
+
             var modalModel = new cdiApp.Modal.Model({
                 app: that,
                 indicatorName: that.flatIndicators[indicatorCode].label,
@@ -504,7 +699,7 @@ var cdiApp = Backbone.View.extend({
      */
 
 function scaleTables() {
-	 console.log ('scaling tables');
+	
 	var cdiDiv = document.getElementById('new_cdi');
     var tbls = cdiDiv.querySelectorAll('table');
     w = window.innerWidth;
@@ -558,7 +753,7 @@ jQuery(function($) {
 
     scaleTables();
 	$(window).resize(function(){
-       console.log('resized');
+
 	   windowResized();
     });
 });

@@ -10,10 +10,24 @@ cdiApp.CDI.Model = Backbone.Model.extend({
 	this.groupedValues = [];
 	var rank = 1, correlative = 1, prev_value=0, tie_word = false, previous_rank=0, previous_object;
 	for (var i in this.indicator.values) {
+/*
+NEW line below sets user_friendly_values to be rounded to one decimal. previously the 
+rounding was happening in the import from the XML file, which was influencing later 
+calculations on the overall scores
+*/	
+
+	this.indicator.user_friendly_values[i] = this.indicator.values[i].toFixed(1); 
+	
+
+	
             if (this.indicator.values.hasOwnProperty(i)) {
-		if( this.indicator.values[i] != prev_value){
+/* 
+NEW line below compares each countries trimmed value to determine ties since those values
+are now brought in untrimmed form the XML
+*/            currentTrimmed = parseFloat(this.indicator.values[i].toFixed(1)); 
+		if( currentTrimmed != prev_value){
                    rank = correlative;
-		   prev_value = this.indicator.values[i];
+		   prev_value = currentTrimmed;
                    tie_word = false;
                 } else {
                    tie_word = true;
@@ -35,6 +49,7 @@ cdiApp.CDI.Model = Backbone.Model.extend({
 		previous_object = values_object;
 
 		this.groupedValues.push(values_object);
+		
 	    }
 	}
     }
@@ -49,6 +64,7 @@ cdiApp.CDI.View = Backbone.View.extend({
 	this.propName = "";
 	this.sortAsc = false;
     },
+    
     render: function() {
         var that = this;
         this.collapsibleViews = {};
@@ -81,6 +97,13 @@ cdiApp.CDI.View = Backbone.View.extend({
 
                 var $chartHolder = $('<div class="chart-holder"></div>');
                 var $row = $('<tr id="' + item.index + '-master" class="master-row"></tr>');
+/*NEW CODE*/    if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.original.values[item.index].toFixed(1)){
+                  $row.addClass('better');
+                }
+                else if (this.model.indicator.values[item.index].toFixed(1) < this.model.indicator.original.values[item.index].toFixed(1)){
+                  $row.addClass('worse');
+                }
+/* END */                
                 $row.html('<td>' + item.rank_label + '</td>' +
                     '<td><a href="cdi-2015/country/' + item.index + '"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td>' + item.value_label + '</td>' +

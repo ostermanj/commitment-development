@@ -16,9 +16,13 @@ var BarChartModel = Backbone.Model.extend({
 var BarChartView = Backbone.View.extend({
     initialize: function(options) {
         this.includeValueOnChart = options.includeValueOnChart;
+     
+      
         this.render();
     },
+    
     render: function() {
+   
         var data = this.model.data;
         var that = this;
 
@@ -81,6 +85,7 @@ var BarChartItemModel = Backbone.Model.extend({
     }
 });
 
+//var user_weight = user_weight || 1; // testing user weight. see line 134
 var BarChartItemView = Backbone.View.extend({
     initialize: function(options) {
         this.includeValue = options.includeValue;
@@ -88,8 +93,10 @@ var BarChartItemView = Backbone.View.extend({
     },
     render: function() {
         var data = this.model.data;
-	var left = 0;
-	if(this.model.numElements==1){
+       
+       
+        var left = 0;
+	if(this.model.numElements==1){ // if single indicator chart
 	  var range_space = this.model.max-this.model.min;
 	  if(this.model.min > 0){
 	 	var range_value = data-this.model.min;
@@ -99,34 +106,56 @@ var BarChartItemView = Backbone.View.extend({
 
 	  var percent_value = range_value/range_space;
 	  var width = percent_value * 100;
+	
 	  
 	  if(this.model.min<0){
-	//  console.log('min is less than zero');
+	
 	  	var range_space = this.model.max-this.model.min;
-	  //	console.log('range_space is ' + range_space);
+	  //	
           	var negative_number_space = Math.abs(this.model.min)/range_space;
-        //  	console.log('negative_number_space is ' + negative_number_space);
+        //  	
           	var zero_position = negative_number_space*100;//this.model.holderWidth;
-          //	console.log('zero_position ' + zero_position);
+          //	
 
 		//left = zero_position;
 		left = 0;
 		
 		if(data<0){
-		    //console.log('data is < 0');
+		    
 		    
 			width = zero_position - width;
 		} 
 		else {
 		   width += zero_position;
 		}
-		//console.log('width is ' + width);
-		//console.log('left is ' + left);
+		
+		
 	  }
 
-	} else {
-	  var availableSpace = this.model.max;
+	} else { // if main 7-indicator chart
+
+/* new code
+*  width of the bar segments now based on an available width calculation that depends on 
+   the total amount of user weighting applied. so if one or more indicators is given greater
+   weight the others shrink relatively so that bars stay within their original holders
+   - JO 7/30/16 (is that right?) 
+ */	
+
+	var totalWeights = 0;
+      for (var weight in userWeights){
+          totalWeights += userWeights[weight].value;
+      }
+       var availableSpace = totalWeights;
+
+/* end new */  
+
+	//  var availableSpace = this.model.max;
+	  
 	  var percent_width = this.model.weighted / availableSpace;
+//	
+//	
+	
+   
 	  var width = percent_width * 100;//this.model.holderWidth;
         }
 
