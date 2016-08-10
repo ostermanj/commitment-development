@@ -85,7 +85,6 @@ var BarChartItemModel = Backbone.Model.extend({
     }
 });
 
-//var user_weight = user_weight || 1; // testing user weight. see line 134
 var BarChartItemView = Backbone.View.extend({
     initialize: function(options) {
         this.includeValue = options.includeValue;
@@ -111,17 +110,12 @@ var BarChartItemView = Backbone.View.extend({
 	  if(this.model.min<0){
 	
 	  	var range_space = this.model.max-this.model.min;
-	  //	
-          	var negative_number_space = Math.abs(this.model.min)/range_space;
-        //  	
-          	var zero_position = negative_number_space*100;//this.model.holderWidth;
-          //	
-
-		//left = zero_position;
+	    var negative_number_space = Math.abs(this.model.min)/range_space;
+        var zero_position = negative_number_space*100;//this.model.holderWidth;
+        
 		left = 0;
 		
 		if(data<0){
-		    
 		    
 			width = zero_position - width;
 		} 
@@ -134,36 +128,12 @@ var BarChartItemView = Backbone.View.extend({
 
 	} else { // if main 7-indicator chart
 
-/* new code
-*  width of the bar segments now based on an available width calculation that depends on 
-   the total amount of user weighting applied. so if one or more indicators is given greater
-   weight the others shrink relatively so that bars stay within their original holders
-   - JO 7/30/16 (is that right?) 
- */	
-
-/*	var totalWeights = 0;
-      for (var ind in userWeights){
-          if (userWeights[ind].totalWeight){
-          totalWeights += userWeights[ind].totalWeight;
-          }
-          else {
-              totalWeights = 7;
-          }
-      }
-       var availableSpace = totalWeights;
-        console.log(availableSpace);*/
-
-/* end new */  
-
 	 var availableSpace = this.model.max;
 	  
-	  var percent_width = this.model.weighted / availableSpace;
-//	
-//	
-	
+     var percent_width = this.model.weighted / availableSpace;	
    
-	  var width = percent_width * 100;//this.model.holderWidth;
-        }
+     var width = percent_width * 100;//this.model.holderWidth;
+    }
 
 	this.$el.css({
             width: width + '%',

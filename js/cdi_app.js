@@ -3,9 +3,9 @@
  */
 
 /* NEW CODE
-invSTD is one-over-standard-deviation for the range of scores in the component. original values of flatIndicators[indicator].original.weighted[country] were calculated as the sum of the products of raw component scores
-(flatIndicator[indicator].original.values[country]) and userWeights[indicator].invSTD divided by the sum of all invSTDs.
-this calculation has to be reproduced to faithfully allow users adjust weight. 
+invSTD is one-over-standard-deviation for the range of scores in the component. original overall country scores ( flatIndicators.CDI.original.values[country] ) were calculated as the sum of the products of raw component scores
+( flatIndicator[indicator].original.values[country] ) and userWeights[indicator].invSTD divided by the sum of all invSTDs.
+this calculation has to be reproduced to allow users to adjust weights and return valid results. 
  */
 
  var userWeights = {
@@ -46,14 +46,10 @@ this calculation has to be reproduced to faithfully allow users adjust weight.
 	   }
    };
    
-   /* end new code - jo */
+/* end new code - jo */
 
 var cdiApp = Backbone.View.extend({
 
-  
-
-
-  
     /**
      * The main indicators order.
      *
@@ -362,23 +358,17 @@ new code : adds object 'original' to main indicators and copies data to it so th
         });
         return indicatorsLabels;
     },
-events: {
+    events: {
         'mousedown div.chart-holder div' : 'increaseWeight'
-       
     },
     changeFactor: 2, 
     increaseWeight:function(e){
       this.selectWeight(e); // finds which indicator has been changed
-        console.log(changedIndicator);
       if (e.which === 1){  // if left click
-          
-                 userWeights[changedIndicator].value = userWeights[changedIndicator].value * this.changeFactor;  // increase changed indicator weight by 0.6
-           
-           } 
-         
+         userWeights[changedIndicator].value = userWeights[changedIndicator].value * this.changeFactor;  // increase changed indicator weight by 0.6
+      } 
       else if (e.which === 3){ // right click
-       
-               userWeights[changedIndicator].value = userWeights[changedIndicator].value / this.changeFactor;     
+                userWeights[changedIndicator].value = userWeights[changedIndicator].value / this.changeFactor;     
       }
       for (var ind in userWeights){   
           
@@ -390,8 +380,6 @@ events: {
     selectWeight: function(e){
        regex = /(^.+)-bg/
        changedIndicator = e.currentTarget.className.match(regex)[1];
-
-
     },
     totalWeightsFn: function(){
       var totalWeights = 0;
@@ -407,43 +395,30 @@ events: {
      for (var ind in this.flatIndicators){
 
         if (ind.indexOf('CDI_') != -1){
-         for (var c in this.flatIndicators[ind].weighted){
-/*           if (ind == 'CDI_AID' && c == 'DNK'){
-             console.log('original display value: ' + this.flatIndicators[ind].values[c]);
-             console.log('implicit weight: ' + userWeights[ind].implicitWeight);
-             console.log('user weight: ' + userWeights[ind].value);
-           }*/
+           for (var c in this.flatIndicators[ind].weighted){
           
-           this.flatIndicators[ind].weighted[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].totalWeight / sumTotalWeights;  // changes value that informs width of bar segment according to new weighting
+              this.flatIndicators[ind].weighted[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].totalWeight / sumTotalWeights;  // changes value that informs width of bar segment according to new weighting
             
-             // 8-10-16 no need to adjust other aspects below. makes most sense not to adjust the displayed scores
-           
-           
-         }
+           }
         }
-        
      }
-        
-        
-
     this.changeOverallScores(e); 
     },
     changeOverallScores: function(e){
     
         for (var c in this.flatIndicators.CDI.values){
-                    var sumProduct = 0;
+            var sumProduct = 0;
 
-                    for (var ind in this.flatIndicators){
-                       if (ind.indexOf('CDI_') != -1){
-                           product = this.flatIndicators[ind].values[c] * userWeights[ind].totalWeight;
-                           sumProduct += product;
-
-                       }
-                    }
-                    this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights;
+            for (var ind in this.flatIndicators){
+               if (ind.indexOf('CDI_') != -1){
+                   product = this.flatIndicators[ind].values[c] * userWeights[ind].totalWeight;
+                   sumProduct += product;
                 }
-                console.log(this.flatIndicators)
-     this.startApp(true);
+            }
+            this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights;
+        }
+        console.log(this.flatIndicators)
+        this.startApp(true);
     },
     /**
      * Create main nav and load the Overall tab.
