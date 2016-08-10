@@ -141,15 +141,21 @@ var BarChartItemView = Backbone.View.extend({
    - JO 7/30/16 (is that right?) 
  */	
 
-	var totalWeights = 0;
-      for (var weight in userWeights){
-          totalWeights += userWeights[weight].value;
+/*	var totalWeights = 0;
+      for (var ind in userWeights){
+          if (userWeights[ind].totalWeight){
+          totalWeights += userWeights[ind].totalWeight;
+          }
+          else {
+              totalWeights = 7;
+          }
       }
        var availableSpace = totalWeights;
+        console.log(availableSpace);*/
 
 /* end new */  
 
-	//  var availableSpace = this.model.max;
+	 var availableSpace = this.model.max;
 	  
 	  var percent_width = this.model.weighted / availableSpace;
 //	

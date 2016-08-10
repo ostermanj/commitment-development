@@ -3,46 +3,46 @@
  */
 
 /* NEW CODE
-implicitWeight is product of the one-over-standard-deviation for the indicator and a constant that 
-was used to calculate overall country scores. used here to recalculate country scores when 
-the user adjusts weights
+invSTD is one-over-standard-deviation for the range of scores in the component. original values of flatIndicators[indicator].original.weighted[country] were calculated as the sum of the products of raw component scores
+(flatIndicator[indicator].original.values[country]) and userWeights[indicator].invSTD divided by the sum of all invSTDs.
+this calculation has to be reproduced to faithfully allow users adjust weight. 
  */
 
  var userWeights = {
 	   CDI_AID: {
 		  value: 1,
 		  unlocked: true,
-		  implicitWeight: 1.053251156178860
+		  invSTD: 1.205188013          
 	   },
 	   CDI_INV: {
 		  value: 1,
 		  unlocked: true,
-		  implicitWeight: 1.705258345246140
+		  invSTD: 1.95125084
 	   },
 	   CDI_TEC: {
 		  value: 1,
 		  unlocked: true,
-		  implicitWeight: 0.798422233412404
+		  invSTD: 0.913599031
 	   },
 	   CDI_ENV: {
 		  value: 1,
 		  unlocked: true,
-		  implicitWeight: 0.894036763570826
+		  invSTD: 1.023006239
 	   },
 	   CDI_TRA: {
 		  value: 1,
 		  unlocked: true,
-		  implicitWeight: 1.1855207237
+		  invSTD: 1.356537167
 	   },
 	   CDI_SEC: {
 		  value: 1,
 		  unlocked: true,
-		  implicitWeight: 0.701892181000000
+		  invSTD: 0.803143505
 	   },
 	   CDI_MIG: {
 		  value: 1,
 		  unlocked: true,
-		  implicitWeight: 0.661618574916134
+		  invSTD: 0.757060201
 	   }
    };
    
@@ -366,31 +366,25 @@ events: {
         'mousedown div.chart-holder div' : 'increaseWeight'
        
     },
-    changeIncrement: 0.6, //0.6 so that other six weights changed by 0.1 to keep total weighting constant
+    changeFactor: 2, 
     increaseWeight:function(e){
       this.selectWeight(e); // finds which indicator has been changed
+        console.log(changedIndicator);
       if (e.which === 1){  // if left click
-           for (var ind in userWeights){
-              if (ind == changedIndicator){
-                 userWeights[ind].value += this.changeIncrement;  // increase changed indicator weight by 0.6
-              } else {
-                 userWeights[ind].value -= this.changeIncrement / 6; // decrease all others by 0.6
-                 }
-           } 
-         }
-      else if (e.which === 3){ // right click
-       
-           for (var ind in userWeights){
-              if (ind == changedIndicator){    // inverse of above
-                 userWeights[ind].value -= this.changeIncrement;
-              } else {
-                 userWeights[ind].value += this.changeIncrement / 6;
-                 }
+          
+                 userWeights[changedIndicator].value = userWeights[changedIndicator].value * this.changeFactor;  // increase changed indicator weight by 0.6
+           
            } 
          
- 
+      else if (e.which === 3){ // right click
+       
+               userWeights[changedIndicator].value = userWeights[changedIndicator].value / this.changeFactor;     
       }
- 
+      for (var ind in userWeights){   
+          
+          userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD;
+      }
+      console.log(userWeights);
       this.changeWeight(e);
     },
     selectWeight: function(e){
@@ -401,15 +395,14 @@ events: {
     },
     totalWeightsFn: function(){
       var totalWeights = 0;
-      for (var weight in userWeights){
-          totalWeights += userWeights[weight].value;
+      for (var ind in userWeights){
+          totalWeights += userWeights[ind].totalWeight;
       }
       return totalWeights;
     },
     changeWeight: function(e){
        
-
-
+     sumTotalWeights = this.totalWeightsFn();
      
      for (var ind in this.flatIndicators){
 
@@ -421,56 +414,35 @@ events: {
              console.log('user weight: ' + userWeights[ind].value);
            }*/
           
-           this.flatIndicators[ind].weighted[c] = this.flatIndicators[ind].original.weighted[c] * userWeights[ind].value;  // changes weighted 
-           this.flatIndicators[ind].values[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].value;
-           // user_friendly_values governs what shows in the tooltip on the main graph
-           this.flatIndicators[ind].user_friendly_values[c] = this.flatIndicators[ind].original.user_friendly_values[c] * userWeights[ind].value;
-           // below: create object to make implicit weighted values that make up overall country scores explicit
-           this.flatIndicators[ind].weighted_values_for_avg = this.flatIndicators[ind].weighted_values_for_avg ? this.flatIndicators[ind].weighted_values_for_avg : {};
-           this.flatIndicators[ind].weighted_values_for_avg[c] = this.flatIndicators[ind].weighted_values_for_avg[c] ? this.flatIndicators[ind].weighted_values_for_avg[c] : {};
-           this.flatIndicators[ind].weighted_values_for_avg[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].value * userWeights[ind].implicitWeight;
-   /*        
-            if (ind == 'CDI_AID' && c == 'DNK'){
-             console.log('new display value: ' + this.flatIndicators[ind].values[c]);
-             console.log('new weighted value: ' + this.flatIndicators[ind].weighted_values_for_avg[c]);
-             
-           }
-     */      
+           this.flatIndicators[ind].weighted[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].totalWeight / sumTotalWeights;  // changes value that informs width of bar segment according to new weighting
+            
+             // 8-10-16 no need to adjust other aspects below. makes most sense not to adjust the displayed scores
+           
+           
          }
         }
         
      }
- 
+        
+        
+
     this.changeOverallScores(e); 
     },
     changeOverallScores: function(e){
     
-console.log(this.flatIndicators);    
+        for (var c in this.flatIndicators.CDI.values){
+                    var sumProduct = 0;
 
+                    for (var ind in this.flatIndicators){
+                       if (ind.indexOf('CDI_') != -1){
+                           product = this.flatIndicators[ind].values[c] * userWeights[ind].totalWeight;
+                           sumProduct += product;
 
-
-    for (var c in this.flatIndicators.CDI.values){
- 
-       var runningTotal = 0;
-       for (var ind in this.flatIndicators){
-          if (ind.indexOf('CDI_') != -1){
-             runningTotal += this.flatIndicators[ind].weighted_values_for_avg[c]
-          }
-       }
-       this.flatIndicators.CDI.values[c] = runningTotal / 7;
-       console.log('Country: ' + c +'; New average: ' + this.flatIndicators.CDI.values[c]);
-       newScore = this.flatIndicators.CDI.values[c];
-       oldScore = this.flatIndicators.CDI.original.values[c];
-       if (newScore.toFixed(1) > oldScore.toFixed(1)){
-          console.log('Better');          
-       } else if (newScore.toFixed(1) < oldScore.toFixed(1)){
-          console.log('Worse');
-       } else {console.log('Same');}
-    }
-/**
-     * load CDI results is accurate country averages but the order of the countries is not changing
-     rank function works properly except that the countries are in the wrong order.
-     */
+                       }
+                    }
+                    this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights;
+                }
+                console.log(this.flatIndicators)
      this.startApp(true);
     },
     /**
