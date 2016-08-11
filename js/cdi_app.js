@@ -417,7 +417,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             }
             this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights;
         }
-        console.log(this.flatIndicators)
+       
         this.startApp(true);
     },
     /**
@@ -559,6 +559,7 @@ console.log('user weighted');
                             $content.append($chart);
                             indicators = [child.children[k]];
 			    all_data = that.flatIndicators[child.children[k]];
+                            console.log(all_data);
 			
                             that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                         }
@@ -569,6 +570,7 @@ console.log('user weighted');
                         $content.append($label);
                         $content.append($chart);
 			all_data = that.flatIndicators[children[j]];
+                        console.log(all_data);
 						
                         that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
                     }

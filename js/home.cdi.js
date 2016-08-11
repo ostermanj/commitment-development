@@ -9,7 +9,27 @@ cdiApp.CDI.Model = Backbone.Model.extend({
         this.app = args.app;
 	this.groupedValues = [];
 	var rank = 1, correlative = 1, prev_value=0, tie_word = false, previous_rank=0, previous_object;
-	for (var i in this.indicator.values) {
+	console.log(this.indicator.values);
+/*
+*  pushing values from object to an array so that the order can be sorted by value
+  the tool previously relied on the order of key-value pairs in an object, which cannot be
+  guaranteed. the order of an array can be guaranteed
+*/
+    var sortable = []; 
+    for (var country in this.indicator.values){
+        var obj = {};
+        obj.country = country;
+        obj.value = this.indicator.values[country];
+        sortable.push(obj);
+    }
+        sortable.sort(function(a,b){ 
+        return b.value - a.value;
+    });
+        console.log(sortable);   
+//        for (var i in this.indicator.values) { REPLACE WITH ORDER OF COUNTRIES FROM SORTABLE ARRAY
+        for (j = 0; j < sortable.length; j++){    
+        i = sortable[j].country;
+        console.log(i);
 /*
 NEW line below sets user_friendly_values to be rounded to one decimal. previously the 
 rounding was happening in the import from the XML file, which was influencing later 
@@ -49,7 +69,7 @@ are now brought in untrimmed form the XML
 		previous_object = values_object;
 
 		this.groupedValues.push(values_object);
-		
+		console.log(values_object);
 	    }
 	}
     }
@@ -61,16 +81,20 @@ cdiApp.CDI.View = Backbone.View.extend({
         this.countries = this.model.countries;
         this.app = this.model.app;
 	this.groupedValues = this.model.groupedValues;
-	this.propName = "";
+	this.propName = "";    
 	this.sortAsc = false;
     },
     
     render: function() {
+        console.log('cdiView.render');
         var that = this;
         this.collapsibleViews = {};
         var rank = 0;
 	this.$el.find('tbody').html('');
-
+    this.groupedValues.sort(function(a,b){ //this successfully reordered the array but it's in the wrong place: after the ranking's been done
+        return b.value - a.value;
+    });
+        console.log(this.groupedValues);
         for (var i in this.groupedValues) {
             if (this.groupedValues.hasOwnProperty(i)) {
 		var item = this.groupedValues[i];
