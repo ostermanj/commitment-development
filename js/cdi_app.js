@@ -423,7 +423,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     /**
      * Create main nav and load the Overall tab.
      */
-    startApp: function(weighted) {
+    startApp: function(weighted) { // still in var cdiApp = Backbone.View.extend
         // Create main nav.
         var mainNavModel = new cdiApp.mainNav.Model({
             items: this.indicators,
@@ -432,7 +432,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
         this.mainNavView = new cdiApp.mainNav.View({
             model: mainNavModel,
             className: 'mainNav',
-            tagName: 'ul'
+            tagName: 'div'
         });
         $('#new_cdi .mainNav').remove();  // NEW code to keep from duplicating main CDI navbar
         $('#new_cdi').prepend(this.mainNavView.$el);

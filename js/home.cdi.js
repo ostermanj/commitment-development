@@ -265,7 +265,7 @@ cdiApp.mainNav.Model = Backbone.Model.extend({
         }
     },
     addOverallItem: function() {
-        this.items.unshift({
+        this.items.unshift({ //unshift() method adds items to beginning of an array
             code: 'CDI',
             label: 'Overall',
             active: true
@@ -280,7 +280,28 @@ cdiApp.mainNav.View = Backbone.View.extend({
         var items = this.model.items;
         var that = this;
         items.forEach(function(item) {
-            that.$el.append('<li><a href="#' + item.code + '" data-indicator="' + item.code + '" class="' + item.code + '-bg ' + (item.active ? 'active' : '') + '">' + item.label + '</a></li>');
+           // that.$el.append('<li><a href="#' + item.code + '" data-indicator="' + item.code + '" class="' + item.code + '-bg ' + (item.active ? 'active' : '') + '">' + item.label + '</a></li>');
+            weightToggle = document.createElement('div');
+            weightToggle.setAttribute('data-indicator', item.code);
+            weightToggle.className = 'weight-toggle ' + item.code + '-bg ' + (item.active ? 'active' : '');
+            nameSpan = document.createElement('span');
+            nameSpan.innerHTML = '<a class="' + (item.active ? 'active' : '') + '" href="#' + item.code + '" data-indicator="' + item.code + '">' + item.label + '</a>';
+            weightToggle.appendChild(nameSpan);
+            if (item.code !== 'CDI'){
+                sliderDiv = document.createElement('div');
+                sliderDiv.className = 'slider';
+                for (i = 0; i < 7; i++){
+                    sliderNotch = document.createElement('div');
+                    sliderNotch.className = 'slider-notches notch-' + i;
+                    sliderDiv.appendChild(sliderNotch);
+                }
+                sliderSelector = document.createElement('div');
+                sliderSelector.className = 'slider-selector';
+                sliderDiv.appendChild(sliderSelector);
+                
+                weightToggle.appendChild(sliderDiv);
+            }
+            that.$el.append(weightToggle);
         });
     },
     events: {
@@ -289,14 +310,33 @@ cdiApp.mainNav.View = Backbone.View.extend({
     menuItemClicked: function(event) {
         event.preventDefault();
 	var st = jQuery(document).scrollTop();
-        var $activeItem = this.$el.find('a.active');
+        var $activeItem = this.$el.find('div.active');
         var activeIndicator = $activeItem.data('indicator');
         $activeItem.removeClass('active');
         var $target = $(event.target);
-        $target.addClass('active');
+        console.log($target);
+        $target.parent().parent().addClass('active');
         cgdCdi.hideIndicator(activeIndicator);
+        this.toggleSliders($target.data('indicator'));
         cgdCdi.reload($target.data('indicator'));
+        
 	jQuery(document).scrollTop(st);
+    },
+    toggleSliders: function(indicator){
+        if (indicator !== 'CDI'){
+            $('.slider').addClass('hide-slider');
+            window.setTimeout(function(){
+                $('.slider').css('display', 'none');
+            }, 500);
+        }
+        else {
+            $('.slider').css('display', 'block');
+            window.setTimeout(function(){
+                $('.slider').removeClass('hide-slider');
+            }, 100);
+            
+            
+        }
     }
 });
 
