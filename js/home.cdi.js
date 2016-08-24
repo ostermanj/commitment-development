@@ -277,10 +277,10 @@ cdiApp.mainNav.View = Backbone.View.extend({
         this.render();
     },
     render: function() {
+       
         var items = this.model.items;
         var that = this;
-        items.forEach(function(item) {
-           // that.$el.append('<li><a href="#' + item.code + '" data-indicator="' + item.code + '" class="' + item.code + '-bg ' + (item.active ? 'active' : '') + '">' + item.label + '</a></li>');
+        items.forEach(function(item, j) {
             weightToggle = document.createElement('div');
             weightToggle.setAttribute('data-indicator', item.code);
             weightToggle.className = 'weight-toggle ' + item.code + '-bg ' + (item.active ? 'active' : '');
@@ -295,14 +295,89 @@ cdiApp.mainNav.View = Backbone.View.extend({
                     sliderNotch.className = 'slider-notches notch-' + i;
                     sliderDiv.appendChild(sliderNotch);
                 }
+                that.attachSliderEvents(sliderDiv, j);
                 sliderSelector = document.createElement('div');
                 sliderSelector.className = 'slider-selector';
                 sliderDiv.appendChild(sliderSelector);
+                that.attachSelectorEvents(sliderSelector, j);
                 
                 weightToggle.appendChild(sliderDiv);
             }
             that.$el.append(weightToggle);
+            
         });
+    },
+    attachSliderEvents: function(el, j){
+        var that = this;
+        var i = j - 1;
+        $(el).click(function(e){
+            sliderSelector =  $('.slider-selector').eq(i);
+            sliderSelector.addClass('active-selector jump-selector');
+            sliderPosition = $(this).offset(); //page position object of the slider
+            position = that.getXOffset(e); // page position x off the click / touch event in the slider
+            newPosition = position - sliderPosition.left - 9;
+            e.data = that;
+           
+           that.selectorStop(e);
+        });
+    },
+    attachSelectorEvents: function(el, j){
+        var that = this;
+        var i = j - 1; // j count includes overall; selectors start on index 1. i below passes as e.data
+        $(el).on('mousedown touchstart', null, i, function(e){
+            e.stopPropagation();
+            e.preventDefault();
+           e.xStartOffset = that.getXOffset(e); //get offset position of the mouse click or touch, so passing `e` as event
+           e.startPosition = $(this).position();
+           that.selectorStart(e);
+       
+       });
+      
+    },
+    selectorStart: function(e){
+        
+        sliderIndex = e.data;
+        $(e.currentTarget).addClass('active-selector');
+        $('body').on('mousemove touchmove', null, {i:sliderIndex,ev:e,that:this}, this.selectorMove); // in selectorMove function, `this` becomes the $('body'); passing the current `this` (the view) as part of the new e.data
+        $('body').on('mouseup touchend', null, this, this.selectorStop);
+        
+    },
+    selectorMove: function(e){
+      
+        e.preventDefault();
+        xCurrentOffset = e.data.that.getXOffset(e);
+        xDistance = xCurrentOffset - e.data.ev.xStartOffset;
+        newPosition = e.data.ev.startPosition.left + xDistance;
+        e.data.that.limitPosition();
+        sliderSelector = $('.slider-selector').eq(e.data.i);
+        sliderSelector.css('left', newPosition);
+    },
+    limitPosition: function(){
+         if (newPosition < 0){
+            newPosition = 0;
+        } else if (newPosition > 82){
+            newPosition = 82;
+        }  
+    },
+    selectorStop: function(e){
+     // `this` is body
+          delay = e.currentTarget.className == 'slider' ? 400 : 0;
+        window.setTimeout(function(){
+            $('.slider-selector').removeClass('active-selector jump-selector');
+        }, delay);
+        roundedPosition = Math.round(newPosition / 13.6666) * 13.6666;
+        sliderSelector.css('left', roundedPosition);
+        $('body').off('mouseup touchend', e.data.selectorStop);
+        $('body').off('mousemove touchmove', e.data.selectorMove);
+    },
+    getXOffset: function(e){
+         if(e.type === 'touchstart' || e.type === 'touchmove'){
+               var touch = e.originalEvent.touches[0];
+               return touch.pageX;
+           } else if (e.type === 'mousedown' || e.type === 'mousemove' || e.type === 'click'){
+               return e.pageX;
+           }
+        
     },
     events: {
         'click a': 'menuItemClicked'
