@@ -122,11 +122,12 @@ cdiApp.CDI.View = Backbone.View.extend({
                 var $chartHolder = $('<div class="chart-holder"></div>');
                 var $row = $('<tr id="' + item.index + '-master" class="master-row"></tr>');
 /*NEW CODE*/    if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.original.values[item.index].toFixed(1)){
-                  $row.addClass('better');
+                  $row.addClass('better');                   
                 }
                 else if (this.model.indicator.values[item.index].toFixed(1) < this.model.indicator.original.values[item.index].toFixed(1)){
                   $row.addClass('worse');
                 }
+               
 /* END */                
                 $row.html('<td>' + item.rank_label + '</td>' +
                     '<td><a href="cdi-2015/country/' + item.index + '"><span class="country-label">' + item.country + '</span></a></td>' +
@@ -148,6 +149,12 @@ cdiApp.CDI.View = Backbone.View.extend({
                 this.$el.find('tbody').append(trendView.$el);
             }
         }
+        $('.master-row.better').addClass('better-processed');
+        $('.master-row.worse').addClass('worse-processed');
+        window.setTimeout(function(){
+            $('.master-row').removeClass('better-processed worse-processed');
+        }, 800);
+       
     },
     events: {
         'click a.show-info, a.show-trend': 'showCollapsed',

@@ -119,12 +119,12 @@
     background: black;
 }
 
-.better {
-    background-color: #b9e4b9;
+.better-processed {
+    border-bottom-color: #b9e4b9 !important;
 }
 
-.worse {
-    background-color: #e8b9b9;
+.worse-processed {
+    border-bottom-color: #e8b9b9 !important;
 }
 
 .cdi-header-wrapper {
@@ -166,7 +166,8 @@
   width: 92px;
 }
 #new_cdi table tr.master-row {
-  border-top: 1px solid #DDD;
+  border-bottom: 2px solid #f3f3f3;
+  background-color:#f3f3f3;    
 }
 #new_cdi table thead tr,
 #new_cdi table#home-cdi tr.master-row:nth-last-child(3),
