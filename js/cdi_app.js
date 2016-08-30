@@ -112,6 +112,7 @@ var cdiApp = Backbone.View.extend({
      *    - url: the url of the data file to download.
      */
     initialize: function(options) {
+        Backbone.pubSub.on('selectorStopped', this.testEvent, this); //subscribe this view to 'selectorStopped' event published in cdiApp.mainNav.view (home.cdi.js)
         var that = this;
         $('#html5_wrapper').css('display','block');
 
@@ -128,6 +129,23 @@ var cdiApp = Backbone.View.extend({
                 that[options.onLoad](options.args);
             }
         });
+    },
+    testEvent: function(args){
+      console.log('testEvent fired');
+        whichInd = this.indicatorsOrder[args.data.i];
+        console.log(args.data.i);
+        console.log(whichInd);
+        console.log(userWeights[whichInd]);
+        userWeights[whichInd].value = args.data.notch > 0 ? args.data.notch * this.changeFactor : args.data.notch < 0 ? Math.abs(1 / (args.data.notch * this.changeFactor)) : 1;
+        for (var ind in userWeights){    
+          
+          userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD; // creates a total weight obj for each
+        
+        }
+        console.log(userWeights[whichInd]);
+        this.changeWeight();
+        
+        
     },
 
     /**
@@ -359,27 +377,27 @@ new code : adds object 'original' to main indicators and copies data to it so th
         return indicatorsLabels;
     },
     events: {
-        'mousedown div.chart-holder div' : 'increaseWeight'
+        'mousedown div.chart-holder div' : 'increaseWeight' // 1. click on bar calls #2 
     },
     changeFactor: 2, 
-    increaseWeight:function(e){
-      this.selectWeight(e); // finds which indicator has been changed
-      if (e.which === 1){  // if left click
+    increaseWeight:function(e){ // 2. e = event 
+      this.selectWeight(e); // finds which indicator has been changed in #3
+      if (e.which === 1){  // if left click // 4. back from #3
          userWeights[changedIndicator].value = userWeights[changedIndicator].value * this.changeFactor;  // increase changed indicator weight by 0.6
       } 
       else if (e.which === 3){ // right click
                 userWeights[changedIndicator].value = userWeights[changedIndicator].value / this.changeFactor;     
       }
-      for (var ind in userWeights){   
+      for (var ind in userWeights){   //5. 
           
-          userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD;
+          userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD; // creates a total weight obj for each
       }
       console.log(userWeights);
       this.changeWeight(e);
     },
-    selectWeight: function(e){
+    selectWeight: function(e){ // 3.
        regex = /(^.+)-bg/
-       changedIndicator = e.currentTarget.className.match(regex)[1];
+       changedIndicator = e.currentTarget.className.match(regex)[1]; //changedIndicator
     },
     totalWeightsFn: function(){
       var totalWeights = 0;
@@ -391,10 +409,13 @@ new code : adds object 'original' to main indicators and copies data to it so th
     changeWeight: function(e){
        
      sumTotalWeights = this.totalWeightsFn();
+        console.log('total weights');
+        console.log(sumTotalWeights);
      
      for (var ind in this.flatIndicators){
 
         if (ind.indexOf('CDI_') != -1){
+            console.log(ind);
            for (var c in this.flatIndicators[ind].weighted){
           
               this.flatIndicators[ind].weighted[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].totalWeight / sumTotalWeights;  // changes value that informs width of bar segment according to new weighting
@@ -418,7 +439,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights;
         }
        
-        this.startApp(true);
+        this.loadCDI(true);
     },
     /**
      * Create main nav and load the Overall tab.

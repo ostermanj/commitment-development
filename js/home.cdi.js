@@ -316,7 +316,11 @@ cdiApp.mainNav.View = Backbone.View.extend({
             sliderPosition = $(this).offset(); //page position object of the slider
             position = that.getXOffset(e); // page position x off the click / touch event in the slider
             newPosition = position - sliderPosition.left - 9;
-            e.data = that;
+            that.limitPosition();
+            e.data = {};
+            e.data.that = that;
+            e.data.ev = e;
+            e.data.i = i;
            
            that.selectorStop(e);
         });
@@ -329,6 +333,8 @@ cdiApp.mainNav.View = Backbone.View.extend({
             e.preventDefault();
            e.xStartOffset = that.getXOffset(e); //get offset position of the mouse click or touch, so passing `e` as event
            e.startPosition = $(this).position();
+            
+            
            that.selectorStart(e);
        
        });
@@ -339,11 +345,11 @@ cdiApp.mainNav.View = Backbone.View.extend({
         sliderIndex = e.data;
         $(e.currentTarget).addClass('active-selector');
         $('body').on('mousemove touchmove', null, {i:sliderIndex,ev:e,that:this}, this.selectorMove); // in selectorMove function, `this` becomes the $('body'); passing the current `this` (the view) as part of the new e.data
-        $('body').on('mouseup touchend', null, this, this.selectorStop);
+        $('body').on('mouseup touchend', null, {i:sliderIndex,ev:e,that:this}, this.selectorStop);
         
     },
     selectorMove: function(e){
-      
+    
         e.preventDefault();
         xCurrentOffset = e.data.that.getXOffset(e);
         xDistance = xCurrentOffset - e.data.ev.xStartOffset;
@@ -360,15 +366,20 @@ cdiApp.mainNav.View = Backbone.View.extend({
         }  
     },
     selectorStop: function(e){
-     // `this` is body
-          delay = e.currentTarget.className == 'slider' ? 400 : 0;
+      
+        delay = e.data.ev.currentTarget.className == 'slider' ? 400 : 0;
         window.setTimeout(function(){
             $('.slider-selector').removeClass('active-selector jump-selector');
         }, delay);
         roundedPosition = Math.round(newPosition / 13.6666) * 13.6666;
+        e.data.notch = Math.round(newPosition / 13.6666) - 3;
         sliderSelector.css('left', roundedPosition);
-        $('body').off('mouseup touchend', e.data.selectorStop);
-        $('body').off('mousemove touchmove', e.data.selectorMove);
+        $('body').off('mouseup touchend', e.data.that.selectorStop);
+        $('body').off('mousemove touchmove', e.data.that.selectorMove);
+        window.setTimeout(function(){ // setTimeout to allow transitions to complete before redrawing the graph
+            Backbone.pubSub.trigger('selectorStopped', e); //publish event to global mechanism
+        }, 400);
+        
     },
     getXOffset: function(e){
          if(e.type === 'touchstart' || e.type === 'touchmove'){

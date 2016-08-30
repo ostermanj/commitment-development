@@ -1,3 +1,5 @@
+Backbone.pubSub = _.extend({}, Backbone.Events); //creates a global mechanism to subscribe views to events published in others
+
 var BarChartModel = Backbone.Model.extend({
     initialize: function(attributes) {
 	this.level = attributes.level;
