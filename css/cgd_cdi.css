@@ -127,6 +127,14 @@
     border-bottom-color: #e8b9b9 !important;
 }
 
+.better-rank td:first-child {
+    background-color: #b9e4b9;
+}
+
+.worse-rank td:first-child {
+    background-color: #e8b9b9;
+}
+
 .cdi-header-wrapper {
     background: url(../images/home-hero.png);
     background-size: cover;

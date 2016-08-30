@@ -7,9 +7,12 @@ cdiApp.CDI.Model = Backbone.Model.extend({
         this.indicator = args.indicator;
         this.countries = args.countries;
         this.app = args.app;
+        this.reload = args.reload;
+       
 	this.groupedValues = [];
+       
 	var rank = 1, correlative = 1, prev_value=0, tie_word = false, previous_rank=0, previous_object;
-	console.log(this.indicator.values);
+
 /*
 *  pushing values from object to an array so that the order can be sorted by value
   the tool previously relied on the order of key-value pairs in an object, which cannot be
@@ -25,11 +28,11 @@ cdiApp.CDI.Model = Backbone.Model.extend({
         sortable.sort(function(a,b){ 
         return b.value - a.value;
     });
-        console.log(sortable);   
+
 //        for (var i in this.indicator.values) { REPLACE WITH ORDER OF COUNTRIES FROM SORTABLE ARRAY
         for (j = 0; j < sortable.length; j++){    
         i = sortable[j].country;
-        console.log(i);
+
 /*
 NEW line below sets user_friendly_values to be rounded to one decimal. previously the 
 rounding was happening in the import from the XML file, which was influencing later 
@@ -57,22 +60,31 @@ are now brought in untrimmed form the XML
 		if(tie_word){
 		  previous_object.rank_label = previous_rank+'*';
 		}
+              
 		var values_object = {
+                        
                         rank            : correlative,
                         rank_label      : rank+ (tie_word?'*':''),
                         country         : this.countries[i],
                         value           : this.indicator.values[i],
                         value_label     : this.indicator.user_friendly_values[i],
                         index           : i
+                       
                 };
 		previous_rank = rank;
 		previous_object = values_object;
-
+        if (!this.reload){
+            console.log('first load');
+            
+            originalRanks[values_object.country] = values_object.rank_label;
+        }
 		this.groupedValues.push(values_object);
-		console.log(values_object);
+
 	    }
-	}
+	  }
+       console.log(originalRanks);  
     }
+   
 });
 
 cdiApp.CDI.View = Backbone.View.extend({
@@ -85,8 +97,8 @@ cdiApp.CDI.View = Backbone.View.extend({
 	this.sortAsc = false;
     },
     
-    render: function() {
-        console.log('cdiView.render');
+    render: function(u,s) {
+console.log(this.model);
         var that = this;
         this.collapsibleViews = {};
         var rank = 0;
@@ -94,7 +106,7 @@ cdiApp.CDI.View = Backbone.View.extend({
     this.groupedValues.sort(function(a,b){ //this successfully reordered the array but it's in the wrong place: after the ranking's been done
         return b.value - a.value;
     });
-        console.log(this.groupedValues);
+
         for (var i in this.groupedValues) {
             if (this.groupedValues.hasOwnProperty(i)) {
 		var item = this.groupedValues[i];
@@ -121,13 +133,24 @@ cdiApp.CDI.View = Backbone.View.extend({
 
                 var $chartHolder = $('<div class="chart-holder"></div>');
                 var $row = $('<tr id="' + item.index + '-master" class="master-row"></tr>');
-/*NEW CODE*/    if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.original.values[item.index].toFixed(1)){
+/*NEW CODE*/    if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.previous.values[item.index].toFixed(1)){
                   $row.addClass('better');                   
                 }
-                else if (this.model.indicator.values[item.index].toFixed(1) < this.model.indicator.original.values[item.index].toFixed(1)){
+                else if (this.model.indicator.values[item.index].toFixed(1) < this.model.indicator.previous.values[item.index].toFixed(1)){
                   $row.addClass('worse');
                 }
-               
+                console.log(item.rank_label);
+                console.log(item.country);
+                console.log(originalRanks);
+                if (parseInt(item.rank_label) < parseInt(originalRanks[item.country])){
+                  $row.addClass('better-rank');                   
+                }
+                else if (parseInt(item.rank_label) > parseInt(originalRanks[item.country])){
+                  $row.addClass('worse-rank');                   
+                }
+                
+                
+             
 /* END */                
                 $row.html('<td>' + item.rank_label + '</td>' +
                     '<td><a href="cdi-2015/country/' + item.index + '"><span class="country-label">' + item.country + '</span></a></td>' +
@@ -154,7 +177,9 @@ cdiApp.CDI.View = Backbone.View.extend({
         window.setTimeout(function(){
             $('.master-row').removeClass('better-processed worse-processed');
         }, 800);
-       
+       if (u === true){
+           $(window).scrollTop(s);
+       }
     },
     events: {
         'click a.show-info, a.show-trend': 'showCollapsed',
@@ -407,7 +432,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         var activeIndicator = $activeItem.data('indicator');
         $activeItem.removeClass('active');
         var $target = $(event.target);
-        console.log($target);
+
         $target.parent().parent().addClass('active');
         cgdCdi.hideIndicator(activeIndicator);
         this.toggleSliders($target.data('indicator'));

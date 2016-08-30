@@ -179,9 +179,11 @@ new code : adds object 'original' to main indicators and copies data to it so th
         for (var ind in that.flatIndicators){
             if (ind.indexOf('CDI') != -1){
 
-              that.flatIndicators[ind].original = $.extend(true,{},that.flatIndicators[ind]); //using jquery extend method to clone object without  setting up persistent equivalency (newObj = oldObj). later changes in one would be made in the other, which is exactly not the point	 
+              that.flatIndicators[ind].original = $.extend(true,{},that.flatIndicators[ind]); //using jquery extend method to clone object without  setting up persistent equivalency (newObj = oldObj). later changes in one would be made in the other, which is exactly not the point
             }
         };
+        that.flatIndicators.CDI.previous = that.flatIndicators.CDI.previous ? that.flatIndicators.CDI.previous : $.extend(true,{},that.flatIndicators.CDI);
+        console.log(that.flatIndicators);
 
 /* end new */        
 
@@ -385,13 +387,13 @@ new code : adds object 'original' to main indicators and copies data to it so th
     changeWeight: function(e){
        
      sumTotalWeights = this.totalWeightsFn();
-        console.log('total weights');
-        console.log(sumTotalWeights);
+
+
      
      for (var ind in this.flatIndicators){
 
         if (ind.indexOf('CDI_') != -1){
-            console.log(ind);
+
            for (var c in this.flatIndicators[ind].weighted){
           
               this.flatIndicators[ind].weighted[c] = this.flatIndicators[ind].original.values[c] * userWeights[ind].totalWeight / sumTotalWeights;  // changes value that informs width of bar segment according to new weighting
@@ -402,6 +404,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
     this.changeOverallScores(e); 
     },
     changeOverallScores: function(e){
+        
+        this.flatIndicators.CDI.previous.values = $.extend(true,{},this.flatIndicators.CDI.values);
     
         for (var c in this.flatIndicators.CDI.values){
             var sumProduct = 0;
@@ -410,17 +414,20 @@ new code : adds object 'original' to main indicators and copies data to it so th
                if (ind.indexOf('CDI_') != -1){
                    product = this.flatIndicators[ind].values[c] * userWeights[ind].totalWeight;
                    sumProduct += product;
+                   
                 }
+                
             }
             this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights;
         }
-       
-        this.loadCDI(true);
+        console.log(this.flatIndicators.CDI.previous.values);
+        console.log(this.flatIndicators.CDI.values);
+        this.loadCDI(true, $(window).scrollTop());
     },
     /**
      * Create main nav and load the Overall tab.
      */
-    startApp: function(weighted) { // still in var cdiApp = Backbone.View.extend
+    startApp: function() { // still in var cdiApp = Backbone.View.extend
         // Create main nav.
         var mainNavModel = new cdiApp.mainNav.Model({
             items: this.indicators,
@@ -433,30 +440,29 @@ new code : adds object 'original' to main indicators and copies data to it so th
         });
         $('#new_cdi .mainNav').remove();  // NEW code to keep from duplicating main CDI navbar
         $('#new_cdi').prepend(this.mainNavView.$el);
-        this.loadCDI(weighted);
+        this.loadCDI();
     },
 
     /**
      * Load the Overall tab.
      */
-    loadCDI: function(userWeighted) {
+    loadCDI: function(userWeighted, scroll) {
 
 
 
-    if (userWeighted == true){
-console.log('user weighted');
-    };
+   
         var cdiModel = new cdiApp.CDI.Model({
             indicator: this.flatIndicators['CDI'],
             countries: this.countries,
-            app: this
+            app: this,
+            reload: userWeighted
         });
     
         this.cdiView = new cdiApp.CDI.View({
             model: cdiModel,
             el: '#home-cdi'
         });
-        this.cdiView.render();
+        this.cdiView.render(userWeighted, scroll);
     },
     loadIndicator: function(indicator) {
         var indicatorLowerCase = indicator.toLowerCase();
@@ -556,7 +562,7 @@ console.log('user weighted');
                             $content.append($chart);
                             indicators = [child.children[k]];
 			    all_data = that.flatIndicators[child.children[k]];
-                            console.log(all_data);
+
 			
                             that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                         }
@@ -567,7 +573,7 @@ console.log('user weighted');
                         $content.append($label);
                         $content.append($chart);
 			all_data = that.flatIndicators[children[j]];
-                        console.log(all_data);
+
 						
                         that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
                     }
