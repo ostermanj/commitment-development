@@ -119,21 +119,64 @@
     background: black;
 }
 
-.better-processed {
-    border-bottom-color: #b9e4b9 !important;
+.better-than-previous-processed td:nth-child(3) {
+    background-color: #b9e4b9 !important;
+    
 }
 
-.worse-processed {
-    border-bottom-color: #e8b9b9 !important;
+.worse-than-previous-processed td:nth-child(3) {
+    background-color: #e8b9b9 !important;
 }
 
-.better-rank td:first-child {
-    background-color: #b9e4b9;
+.change-rank td:first-child::before, .better td:nth-child(3)::before, .worse td:nth-child(3)::before {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    transition: color 1s ease-in-out 0.5s;
+    
 }
 
-.worse-rank td:first-child {
-    background-color: #e8b9b9;
+.change-rank td:first-child::before {
+    transition-delay: 1s;
 }
+
+
+
+
+.better-rank td:first-child::before, .better td:nth-child(3)::before {
+    content: '↑';
+    color: transparent;
+}
+
+.better-rank-processed td:first-child::before, .better-processed td:nth-child(3)::before  {
+    color: #41B976;
+}
+
+.worse-rank td:first-child::before, .worse td:nth-child(3)::before {
+    content: '↓';
+    color: transparent;
+    
+}
+
+.worse-rank-processed td:first-child::before, .worse-processed td:nth-child(3)::before {
+  
+    color: #9E142E;
+    
+}
+
+.original-value {
+    color:transparent;
+    transition: color 1s ease-in-out 0.4s;
+}
+
+.original-rank {
+    transition-delay: 1s;
+}
+
+.original-value-processed {
+    
+    color:#aaa;
+} 
 
 .cdi-header-wrapper {
     background: url(../images/home-hero.png);
@@ -282,6 +325,16 @@ table#home-cdi-indicator tr.components {
 }
 #new_cdi table tr.master-row td {
   text-align: center;
+    position: relative;
+}
+
+#new_cdi table tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {
+    text-align: left;
+    padding-left: 20px;
+}
+
+#new_cdi table tr.master-row td:nth-child(3) {
+    width: 69px;
 }
 #new_cdi table tr.master-row a.show-info,
 #home-cdi-indicator .indicator-label a.indicator-info,
@@ -318,7 +371,7 @@ table#home-cdi-indicator tr.components {
   text-indent: 0;
 }
 #new_cdi table tr.master-row .chart-holder {
-  margin: 0 auto;
+  margin: 0;
 }
 #new_cdi table#home-cdi-indicator tr.components .chart-holder {
   margin: 0 auto 20px;

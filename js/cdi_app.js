@@ -134,11 +134,13 @@ var cdiApp = Backbone.View.extend({
       
         whichInd = this.indicatorsOrder[args.data.i];
         userWeights[whichInd].value = args.data.notch > 0 ? args.data.notch * this.changeFactor : args.data.notch < 0 ? Math.abs(1 / (args.data.notch * this.changeFactor)) : 1;
+        var isWeighted = 0;
         for (var ind in userWeights){    
           userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD; // creates a total weight obj for each
+          isWeighted += userWeights[ind].value === 1 ? 0 : 1
         }
-        
-        this.changeWeight();
+        console.log(isWeighted);
+        this.changeWeight(isWeighted);
         
         
     },
@@ -384,7 +386,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
       }
       return totalWeights;
     },
-    changeWeight: function(e){
+    changeWeight: function(a){ //a = isWeighted 1 or 0 ie at least one component's weight has been changed (!0)
        
      sumTotalWeights = this.totalWeightsFn();
 
@@ -401,9 +403,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
            }
         }
      }
-    this.changeOverallScores(e); 
+    this.changeOverallScores(a); 
     },
-    changeOverallScores: function(e){
+    changeOverallScores: function(a){
         
         this.flatIndicators.CDI.previous.values = $.extend(true,{},this.flatIndicators.CDI.values);
     
@@ -422,7 +424,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
         }
         console.log(this.flatIndicators.CDI.previous.values);
         console.log(this.flatIndicators.CDI.values);
-        this.loadCDI(true, $(window).scrollTop());
+        this.loadCDI(a, true, $(window).scrollTop());
     },
     /**
      * Create main nav and load the Overall tab.
@@ -446,7 +448,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     /**
      * Load the Overall tab.
      */
-    loadCDI: function(userWeighted, scroll) {
+    loadCDI: function(a, userWeighted, scroll) {
 
 
 
@@ -462,7 +464,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             model: cdiModel,
             el: '#home-cdi'
         });
-        this.cdiView.render(userWeighted, scroll);
+        this.cdiView.render(a, userWeighted, scroll);
     },
     loadIndicator: function(indicator) {
         var indicatorLowerCase = indicator.toLowerCase();

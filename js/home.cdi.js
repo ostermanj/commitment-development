@@ -97,8 +97,10 @@ cdiApp.CDI.View = Backbone.View.extend({
 	this.sortAsc = false;
     },
     
-    render: function(u,s) {
-console.log(this.model);
+    render: function(isWeighted,u,s) {
+if (isWeighted == 0) {
+ console.log('not weighted');   
+}
         var that = this;
         this.collapsibleViews = {};
         var rank = 0;
@@ -134,21 +136,35 @@ console.log(this.model);
                 var $chartHolder = $('<div class="chart-holder"></div>');
                 var $row = $('<tr id="' + item.index + '-master" class="master-row"></tr>');
 /*NEW CODE*/    if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.previous.values[item.index].toFixed(1)){
-                  $row.addClass('better');                   
+                  $row.addClass('better-than-previous');
                 }
                 else if (this.model.indicator.values[item.index].toFixed(1) < this.model.indicator.previous.values[item.index].toFixed(1)){
-                  $row.addClass('worse');
+                  $row.addClass('worse-than-previous');
+                    }
+                if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.original.values[item.index].toFixed(1)){
+                  $row.addClass('better');
                 }
+                else if (this.model.indicator.values[item.index].toFixed(1) < this.model.indicator.original.values[item.index].toFixed(1)){
+                  $row.addClass('worse');
+                    }
                 console.log(item.rank_label);
                 console.log(item.country);
                 console.log(originalRanks);
                 if (parseInt(item.rank_label) < parseInt(originalRanks[item.country])){
-                  $row.addClass('better-rank');                   
+                  $row.addClass('change-rank better-rank');                   
                 }
                 else if (parseInt(item.rank_label) > parseInt(originalRanks[item.country])){
-                  $row.addClass('worse-rank');                   
+                  $row.addClass('change-rank worse-rank');                   
                 }
-                
+                if (isWeighted > 0){
+                    if (parseInt(item.rank_label) !== parseInt(originalRanks[item.country])){
+                        
+                        item.rank_label = item.rank_label + ' <span class="original-value original-rank">(' + parseInt(originalRanks[item.country]) + ')</span>';
+                    }
+                    if (parseFloat(item.value_label) !== parseFloat(this.model.indicator.original.values[item.index].toFixed(1))){
+                        item.value_label = item.value_label + ' <span class="original-value original-score">(' + this.model.indicator.original.values[item.index].toFixed(1) + ')</span>';
+                    }
+                }
                 
              
 /* END */                
@@ -174,9 +190,14 @@ console.log(this.model);
         }
         $('.master-row.better').addClass('better-processed');
         $('.master-row.worse').addClass('worse-processed');
+        $('.master-row.better-than-previous').addClass('better-than-previous-processed');
+        $('.master-row.worse-than-previous').addClass('worse-than-previous-processed');
+        $('.master-row.worse-rank').addClass('worse-rank-processed');
+        $('.master-row.better-rank').addClass('better-rank-processed');
+        $('.original-value').addClass('original-value-processed');
         window.setTimeout(function(){
-            $('.master-row').removeClass('better-processed worse-processed');
-        }, 800);
+            $('.master-row').removeClass('better-than-previous-processed worse-than-previous-processed');
+        }, 500);
        if (u === true){
            $(window).scrollTop(s);
        }
