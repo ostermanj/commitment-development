@@ -119,14 +119,14 @@
     background: black;
 }
 
-.better-than-previous-processed td:nth-child(3) {
+/*.better-than-previous-processed td:nth-child(3) {
     background-color: #b9e4b9 !important;
     
 }
 
 .worse-than-previous-processed td:nth-child(3) {
     background-color: #e8b9b9 !important;
-}
+}*/
 
 .change-rank td:first-child::before, .better td:nth-child(3)::before, .worse td:nth-child(3)::before {
     position: absolute;
@@ -164,6 +164,11 @@
     
 }
 
+.original-score {
+    position: relative;
+    left: 27px;
+}
+
 .original-value {
     color:transparent;
     transition: color 1s ease-in-out 0.4s;
@@ -177,6 +182,36 @@
     
     color:#aaa;
 } 
+
+span.os, span.ns {
+    position: absolute;
+    left: 20px;
+    transition: top 0.4s linear 0.4s;
+}
+
+.os {
+   top: 10px; 
+}
+
+.ns-better {
+    top: -40px;
+}
+
+.ns-worse {
+    top:40px;
+}
+
+.ns-processed {
+    top: 10px;
+}
+
+.os-worse-processed {
+    top:40px;
+}
+
+.os-better-processed {
+    top:-40px;
+}
 
 .cdi-header-wrapper {
     background: url(../images/home-hero.png);
@@ -335,6 +370,7 @@ table#home-cdi-indicator tr.components {
 
 #new_cdi table tr.master-row td:nth-child(3) {
     width: 69px;
+    overflow-y: hidden;
 }
 #new_cdi table tr.master-row a.show-info,
 #home-cdi-indicator .indicator-label a.indicator-info,

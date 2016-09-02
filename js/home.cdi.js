@@ -135,11 +135,18 @@ if (isWeighted == 0) {
 
                 var $chartHolder = $('<div class="chart-holder"></div>');
                 var $row = $('<tr id="' + item.index + '-master" class="master-row"></tr>');
-/*NEW CODE*/    if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.previous.values[item.index].toFixed(1)){
-                  $row.addClass('better-than-previous');
+/*NEW CODE*/    var oldScoreStr = '';
+                var newScoreClass = '';
+                var originalValueStr = '';
+                if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.previous.values[item.index].toFixed(1)){
+                 // $row.addClass('better-than-previous');
+                  oldScoreStr = '<span class="os os-worse">' + this.model.indicator.previous.values[item.index].toFixed(1) + '</span>';
+                    newScoreClass = 'ns ns-better';
                 }
                 else if (this.model.indicator.values[item.index].toFixed(1) < this.model.indicator.previous.values[item.index].toFixed(1)){
-                  $row.addClass('worse-than-previous');
+                //  $row.addClass('worse-than-previous');
+                    oldScoreStr = '<span class="os os-better">' + this.model.indicator.previous.values[item.index].toFixed(1) + '</span>';
+                    newScoreClass = 'ns ns-worse';
                     }
                 if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.original.values[item.index].toFixed(1)){
                   $row.addClass('better');
@@ -156,13 +163,18 @@ if (isWeighted == 0) {
                 else if (parseInt(item.rank_label) > parseInt(originalRanks[item.country])){
                   $row.addClass('change-rank worse-rank');                   
                 }
+                
+                
                 if (isWeighted > 0){
-                    if (parseInt(item.rank_label) !== parseInt(originalRanks[item.country])){
+                    if (parseInt(item.rank_label) !== parseInt(originalRanks[item.country])){ // if new rank is diff from original rank
                         
                         item.rank_label = item.rank_label + ' <span class="original-value original-rank">(' + parseInt(originalRanks[item.country]) + ')</span>';
                     }
-                    if (parseFloat(item.value_label) !== parseFloat(this.model.indicator.original.values[item.index].toFixed(1))){
-                        item.value_label = item.value_label + ' <span class="original-value original-score">(' + this.model.indicator.original.values[item.index].toFixed(1) + ')</span>';
+                    if (parseFloat(item.value_label) !== parseFloat(this.model.indicator.original.values[item.index].toFixed(1))){ //if new score is diff from original score
+                      //  item.value_label = item.value_label + ' <span class="original-value original-score">(' + this.model.indicator.original.values[item.index].toFixed(1) + ')</span>';
+                    //    $diffIndicator.text('(' + this.model.indicator.original.values[item.index].toFixed(1) + ')')
+                      //  $diffIndicator.addClass('original-value original-score');
+                        originalValueStr = '<span class="original-value original-score">(' + this.model.indicator.original.values[item.index].toFixed(1) + ')</span>'
                     }
                 }
                 
@@ -170,7 +182,7 @@ if (isWeighted == 0) {
 /* END */                
                 $row.html('<td>' + item.rank_label + '</td>' +
                     '<td><a href="cdi-2015/country/' + item.index + '"><span class="country-label">' + item.country + '</span></a></td>' +
-                    '<td>' + item.value_label + '</td>' +
+                    '<td><span class="' + newScoreClass + '">' + item.value_label + '</span> ' + oldScoreStr + originalValueStr + '</td>' +
                     '<td><div class="chart-holder"></div></td>' +
 		    '<td><a href="#" class="show-info" data-c="' + item.index + '">Info</a></td>' +
                     '<td><a href="#" class="show-trend" data-c="' + item.index + '">Trends</a></td>'+	
@@ -190,11 +202,15 @@ if (isWeighted == 0) {
         }
         $('.master-row.better').addClass('better-processed');
         $('.master-row.worse').addClass('worse-processed');
-        $('.master-row.better-than-previous').addClass('better-than-previous-processed');
-        $('.master-row.worse-than-previous').addClass('worse-than-previous-processed');
+      //  $('.master-row.better-than-previous').addClass('better-than-previous-processed');
+    //    $('.master-row.worse-than-previous').addClass('worse-than-previous-processed');
         $('.master-row.worse-rank').addClass('worse-rank-processed');
         $('.master-row.better-rank').addClass('better-rank-processed');
         $('.original-value').addClass('original-value-processed');
+        $('.os-worse').addClass('os-worse-processed');
+        $('.os-better').addClass('os-better-processed');
+        $('.ns').addClass('ns-processed');
+        
         window.setTimeout(function(){
             $('.master-row').removeClass('better-than-previous-processed worse-than-previous-processed');
         }, 500);
