@@ -165,8 +165,9 @@
 }
 
 .original-score {
-    position: relative;
-    left: 27px;
+    position: absolute;
+    left: 47px;
+    top:10px;
 }
 
 .original-value {
@@ -185,32 +186,32 @@
 
 span.os, span.ns {
     position: absolute;
-    left: 20px;
+    
     transition: top 0.4s linear 0.4s;
 }
 
 .os {
-   top: 10px; 
+   top: 0px; 
 }
 
 .ns-better {
-    top: -40px;
+    top: -30px;
 }
 
 .ns-worse {
-    top:40px;
+    top:30px;
 }
 
 .ns-processed {
-    top: 10px;
+    top: 0px;
 }
 
 .os-worse-processed {
-    top:40px;
+    top:30px;
 }
 
 .os-better-processed {
-    top:-40px;
+    top:-30px;
 }
 
 .cdi-header-wrapper {
@@ -370,7 +371,13 @@ table#home-cdi-indicator tr.components {
 
 #new_cdi table tr.master-row td:nth-child(3) {
     width: 69px;
-    overflow-y: hidden;
+   
+}
+
+#new_cdi table tr.master-row td:nth-child(3) div {
+     overflow-y: hidden;
+    height:20px;
+    position: relative;
 }
 #new_cdi table tr.master-row a.show-info,
 #home-cdi-indicator .indicator-label a.indicator-info,

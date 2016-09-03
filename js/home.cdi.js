@@ -182,7 +182,7 @@ if (isWeighted == 0) {
 /* END */                
                 $row.html('<td>' + item.rank_label + '</td>' +
                     '<td><a href="cdi-2015/country/' + item.index + '"><span class="country-label">' + item.country + '</span></a></td>' +
-                    '<td><span class="' + newScoreClass + '">' + item.value_label + '</span> ' + oldScoreStr + originalValueStr + '</td>' +
+                    '<td><div><span class="' + newScoreClass + '">' + item.value_label + '</span> ' + oldScoreStr + '</div>' + originalValueStr + '</td>' +
                     '<td><div class="chart-holder"></div></td>' +
 		    '<td><a href="#" class="show-info" data-c="' + item.index + '">Info</a></td>' +
                     '<td><a href="#" class="show-trend" data-c="' + item.index + '">Trends</a></td>'+	
