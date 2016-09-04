@@ -376,7 +376,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
             
         });
     },
-    attachSliderEvents: function(el, j){
+   attachSliderEvents: function(el, j){
         var that = this;
         var i = j - 1;
         $(el).click(function(e){
@@ -426,6 +426,10 @@ cdiApp.mainNav.View = Backbone.View.extend({
         e.data.that.limitPosition();
         sliderSelector = $('.slider-selector').eq(e.data.i);
         sliderSelector.css('left', newPosition);
+        e.data.notch = newPosition / 13.6666 - 3;
+        e.data.transition = 0;
+        console.log(e.data.notch);
+        Backbone.pubSub.trigger('userInput', e);
     },
     limitPosition: function(){
          if (newPosition < 0){
@@ -442,11 +446,13 @@ cdiApp.mainNav.View = Backbone.View.extend({
         }, delay);
         roundedPosition = Math.round(newPosition / 13.6666) * 13.6666;
         e.data.notch = Math.round(newPosition / 13.6666) - 3;
+        e.data.transition = 1;
+        console.log(e.data.notch);
         sliderSelector.css('left', roundedPosition);
         $('body').off('mouseup touchend', e.data.that.selectorStop);
         $('body').off('mousemove touchmove', e.data.that.selectorMove);
         window.setTimeout(function(){ // setTimeout to allow transitions to complete before redrawing the graph
-            Backbone.pubSub.trigger('selectorStopped', e); //publish event to global mechanism
+            Backbone.pubSub.trigger('userInput', e); //publish event to global mechanism
         }, 400);
         
     },

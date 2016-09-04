@@ -112,7 +112,7 @@ var cdiApp = Backbone.View.extend({
      *    - url: the url of the data file to download.
      */
     initialize: function(options) {
-        Backbone.pubSub.on('selectorStopped', this.userInput, this); //subscribe this view to 'selectorStopped' event published in cdiApp.mainNav.view (home.cdi.js)
+        Backbone.pubSub.on('userInput', this.userInput, this); //subscribe this view to 'selectorStopped' event published in cdiApp.mainNav.view (home.cdi.js)
         var that = this;
         $('#html5_wrapper').css('display','block');
 
@@ -131,16 +131,16 @@ var cdiApp = Backbone.View.extend({
         });
     },
     userInput: function(args){
-      
+        transition = args.data.transition;
         whichInd = this.indicatorsOrder[args.data.i];
-        userWeights[whichInd].value = args.data.notch > 0 ? args.data.notch * this.changeFactor : args.data.notch < 0 ? Math.abs(1 / (args.data.notch * this.changeFactor)) : 1;
+        userWeights[whichInd].value = args.data.notch >= 0 ? 1 + (this.changeFactor - 1) * args.data.notch : 1 / (1 + (this.changeFactor - 1) * Math.abs(args.data.notch));
         var isWeighted = 0;
         for (var ind in userWeights){    
           userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD; // creates a total weight obj for each
           isWeighted += userWeights[ind].value === 1 ? 0 : 1
         }
-        console.log(isWeighted);
-        this.changeWeight(isWeighted);
+  //      console.log(isWeighted);
+        this.changeWeight(isWeighted, transition);
         
         
     },
@@ -386,7 +386,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
       }
       return totalWeights;
     },
-    changeWeight: function(a){ //a = isWeighted 1 or 0 ie at least one component's weight has been changed (!0)
+    changeWeight: function(a,transition){ //a = isWeighted 1 or 0 ie at least one component's weight has been changed (!0)
        
      sumTotalWeights = this.totalWeightsFn();
 
@@ -403,9 +403,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
            }
         }
      }
-    this.changeOverallScores(a); 
+    this.changeOverallScores(a, transition); 
     },
-    changeOverallScores: function(a){
+    changeOverallScores: function(a, transition){
         
         this.flatIndicators.CDI.previous.values = $.extend(true,{},this.flatIndicators.CDI.values);
     
@@ -420,11 +420,37 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 }
                 
             }
-            this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights;
+            this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights; 
         }
-        console.log(this.flatIndicators.CDI.previous.values);
-        console.log(this.flatIndicators.CDI.values);
-        this.loadCDI(a, true, $(window).scrollTop());
+  //      console.log(this.flatIndicators.CDI.previous.values);
+    //    console.log(this.flatIndicators.CDI.values);
+    //    this.loadCDI(a, true, $(window).scrollTop());
+        this.adjustCDI(a, transition);
+    },
+    adjustCDI: function(a, transition){
+     // var $rows = $('#home-cdi .master-row');
+        
+        for (var ind in this.flatIndicators){    
+            
+            if (ind.indexOf('CDI_') != -1){
+          
+                for (var c in this.flatIndicators[ind].weighted){
+          
+                    var segment = $('tr#' + c + '-master div.' + ind + '-bg');
+                    if (transition === 1){
+                        segment.addClass('transition');
+                
+                    } else {
+                        segment.removeClass('transition');
+                    }
+                    segment.attr('data-weighted', this.flatIndicators[ind].weighted[c]);
+                    newWidth = this.flatIndicators[ind].weighted[c] * 100  / 7;
+                    segment.css('width', newWidth + '%')
+                    
+                }
+            }
+            
+        }
     },
     /**
      * Create main nav and load the Overall tab.

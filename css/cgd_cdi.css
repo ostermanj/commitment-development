@@ -315,6 +315,10 @@ table#home-cdi-indicator tr.components {
   max-width: 100%;
   position: relative;
 }
+
+div.chart-holder > div.transition {
+    transition: width 0.8s linear;
+}
 .chart-holder div:not(.tooltip) > .value {
   color: #FFFFFF;
   font-size: 12px;
