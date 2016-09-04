@@ -317,8 +317,13 @@ table#home-cdi-indicator tr.components {
 }
 
 div.chart-holder > div.transition {
-    transition: width 0.8s linear;
+    transition: width 0.8s ease-out;
 }
+
+.initial-load {
+    width:0% !important;
+}
+
 .chart-holder div:not(.tooltip) > .value {
   color: #FFFFFF;
   font-size: 12px;
