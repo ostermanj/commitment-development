@@ -1,0 +1,1 @@
+The existing tool (2015) was created by [Creative Science](http://creativesci.co/) for the [Center for Global Development](http://www.cgdev.org), whose research is made available under the [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/).
