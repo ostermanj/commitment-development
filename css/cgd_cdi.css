@@ -164,25 +164,39 @@
     
 }
 
-.original-score {
+/*.original-score {
     position: absolute;
     left: 47px;
     top:10px;
-}
+}*/
 
-.original-value {
+.original-score {
     color:transparent;
     transition: color 1s ease-in-out 0.4s;
 }
 
 .original-rank {
-    transition-delay: 1s;
+    transition: color 1s ease-in-out 1s;
+    color: #3b342b;
 }
 
-.original-value-processed {
+.new-rank {
+    transition: color 1s ease-in-out 1s;
+    color: transparent;
+    position: absolute;
+    left: 50px;
     
-    color:#aaa;
-} 
+}
+
+.new-rank.processed {
+    color: #3b342b;
+}
+
+.original-rank.processed, .original-value.processed {
+    color: #aaa;
+}
+
+ 
 
 span.os, span.ns {
     position: absolute;

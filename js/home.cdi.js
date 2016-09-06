@@ -4,11 +4,18 @@
 cdiApp.CDI = {};
 cdiApp.CDI.Model = Backbone.Model.extend({
     initialize: function(args) {
+        
+        Backbone.pubSub.on('rankCountries', function(params){this.rankCountries(params);}, this); //subscribe to rankCountries trigger published in cdi_app.js
         this.indicator = args.indicator;
         this.countries = args.countries;
         this.app = args.app;
-        this.reload = args.reload;
-       
+        this.rankCountries([]);
+    },
+    rankCountries: function(params){
+    if (params){
+      console.log(params[0]);
+    }
+    console.log('ranking');    //RANKING BEGINS       
 	this.groupedValues = [];
        
 	var rank = 1, correlative = 1, prev_value=0, tie_word = false, previous_rank=0, previous_object;
@@ -73,16 +80,29 @@ are now brought in untrimmed form the XML
                 };
 		previous_rank = rank;
 		previous_object = values_object;
-        if (!this.reload){
-            console.log('first load');
-            
-            originalRanks[values_object.country] = values_object.rank_label;
-        }
+       
 		this.groupedValues.push(values_object);
+              
 
 	    }
 	  }
-       console.log(originalRanks);  
+        
+        var ranksObj = {};
+        for (i = 0; i < this.groupedValues.length; i++){
+            c = this.groupedValues[i].index;
+            ranksObj[c] = this.groupedValues[i];
+        }
+        console.log('this.groupedValues');console.log(this.groupedValues);
+        console.log('ranksObj');        console.log(ranksObj);
+
+        if (params[0] === true){
+            Backbone.pubSub.trigger('adjustCDI', [params[1], params[2], ranksObj, originalRanksObj]);
+        } else {
+           originalRanksObj = $.extend(true,{},ranksObj);
+            console.log(originalRanksObj);
+        }
+//        return this.groupedValues;
+//RANKING ENDS      
     }
    
 });
@@ -97,10 +117,8 @@ cdiApp.CDI.View = Backbone.View.extend({
 	this.sortAsc = false;
     },
     
-    render: function(isWeighted,u,s) {
-if (isWeighted == 0) {
- console.log('not weighted');   
-}
+    render: function() {
+
         var that = this;
         this.collapsibleViews = {};
         var rank = 0;
@@ -135,7 +153,7 @@ if (isWeighted == 0) {
 
                 var $chartHolder = $('<div class="chart-holder"></div>');
                 var $row = $('<tr id="' + item.index + '-master" class="master-row"></tr>');
-/*NEW CODE*/    var oldScoreStr = '';
+/*NEW CODE*/   /* var oldScoreStr = '';
                 var newScoreClass = '';
                 var originalValueStr = '';
                 if (this.model.indicator.values[item.index].toFixed(1) > this.model.indicator.previous.values[item.index].toFixed(1)){
@@ -154,9 +172,9 @@ if (isWeighted == 0) {
                 else if (this.model.indicator.values[item.index].toFixed(1) < this.model.indicator.original.values[item.index].toFixed(1)){
                   $row.addClass('worse');
                     }
-                console.log(item.rank_label);
-                console.log(item.country);
-                console.log(originalRanks);
+              //  console.log(item.rank_label);
+            //    console.log(item.country);
+              //  console.log(originalRanks); 
                 if (parseInt(item.rank_label) < parseInt(originalRanks[item.country])){
                   $row.addClass('change-rank better-rank');                   
                 }
@@ -179,10 +197,10 @@ if (isWeighted == 0) {
                 }
                 
              
-/* END */                
-                $row.html('<td>' + item.rank_label + '</td>' +
+/* END */               
+                $row.html('<td><span class="original-value original-rank">' + item.rank_label + '</span> <span class="new-value new-rank"></span></td>' +
                     '<td><a href="cdi-2015/country/' + item.index + '"><span class="country-label">' + item.country + '</span></a></td>' +
-                    '<td><div><span class="' + newScoreClass + '">' + item.value_label + '</span> ' + oldScoreStr + '</div>' + originalValueStr + '</td>' +
+                    '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
                     '<td><div class="chart-holder"></div></td>' +
 		    '<td><a href="#" class="show-info" data-c="' + item.index + '">Info</a></td>' +
                     '<td><a href="#" class="show-trend" data-c="' + item.index + '">Trends</a></td>'+	
@@ -200,7 +218,7 @@ if (isWeighted == 0) {
                 this.$el.find('tbody').append(trendView.$el);
             }
         }
-        $('.master-row.better').addClass('better-processed');
+/*        $('.master-row.better').addClass('better-processed');
         $('.master-row.worse').addClass('worse-processed');
       //  $('.master-row.better-than-previous').addClass('better-than-previous-processed');
     //    $('.master-row.worse-than-previous').addClass('worse-than-previous-processed');
@@ -216,7 +234,7 @@ if (isWeighted == 0) {
         }, 500);
        if (u === true){
            $(window).scrollTop(s);
-       }
+       }*/
     },
     events: {
         'click a.show-info, a.show-trend': 'showCollapsed',
@@ -428,7 +446,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         sliderSelector.css('left', newPosition);
         e.data.notch = newPosition / 13.6666 - 3;
         e.data.transition = 0;
-        console.log(e.data.notch);
+    //    console.log(e.data.notch);
         Backbone.pubSub.trigger('userInput', e);
     },
     limitPosition: function(){

@@ -113,6 +113,8 @@ var cdiApp = Backbone.View.extend({
      */
     initialize: function(options) {
         Backbone.pubSub.on('userInput', this.userInput, this); //subscribe this view to 'selectorStopped' event published in cdiApp.mainNav.view (home.cdi.js)
+        Backbone.pubSub.on('adjustCDI', function(params){this.adjustCDI(params);}, this);
+
         var that = this;
         $('#html5_wrapper').css('display','block');
 
@@ -185,6 +187,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             }
         };
         that.flatIndicators.CDI.previous = that.flatIndicators.CDI.previous ? that.flatIndicators.CDI.previous : $.extend(true,{},that.flatIndicators.CDI);
+        console.log('that.flatIndicators');
         console.log(that.flatIndicators);
 
 /* end new */        
@@ -408,7 +411,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     changeOverallScores: function(a, transition){
         
         this.flatIndicators.CDI.previous.values = $.extend(true,{},this.flatIndicators.CDI.values);
-    
+       
         for (var c in this.flatIndicators.CDI.values){
             var sumProduct = 0;
 
@@ -422,13 +425,39 @@ new code : adds object 'original' to main indicators and copies data to it so th
             }
             this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights; 
         }
-  //      console.log(this.flatIndicators.CDI.previous.values);
-    //    console.log(this.flatIndicators.CDI.values);
-    //    this.loadCDI(a, true, $(window).scrollTop());
-        this.adjustCDI(a, transition);
+        console.log('this.flatIndicators.CDI.previous.values');
+        console.log(this.flatIndicators.CDI.previous.values);
+        console.log('this.flatIndicators');
+        console.log(this.flatIndicators);
+        Backbone.pubSub.trigger('rankCountries', [true, a, transition]);
+    
+      //  this.adjustCDI(a, transition);
     },
-    adjustCDI: function(a, transition){
+    adjustCDI: function(params){
      // var $rows = $('#home-cdi .master-row');
+                a = params[0];
+        transition = params[1];
+        ranksObj = params[2];
+        originalRanksObj = params[3];
+        
+       
+        for (var c in ranksObj){
+          if (parseInt(ranksObj[c].rank_label) !== parseInt(originalRanksObj[c].rank_label)){  
+            var newRank = $('tr#' + c + '-master span.new-rank');
+            newRank[0].innerHTML = ranksObj[c].rank_label;
+          }
+        }
+        
+        for (var c in originalRanksObj){
+           
+            var originalRank = $('tr#' + c + '-master span.original-rank');
+            console.log(parseInt(ranksObj[c].rank_label));
+             console.log(parseInt(originalRanksObj[c].rank_label));
+           
+           
+                originalRank[0].innerHTML = originalRanksObj[c].rank_label;
+           
+        }
         
         for (var ind in this.flatIndicators){    
             
@@ -450,6 +479,21 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 }
             }
             
+        }
+        
+       for (var c in this.flatIndicators.CDI.values){
+           var newScore = $('tr#' + c + '-master span.new-score');
+           console.log(newScore);
+           var originalScore = $('tr#' + c + '-master span.original-score');
+           console.log(originalScore);
+           originalScore[0].innerHTML = '(' + this.flatIndicators.CDI.original.values[c].toFixed(1) + ')';
+           newScore[0].innerHTML = this.flatIndicators.CDI.values[c].toFixed(1);
+       }
+        if (a !== 0){
+            $('span.original-value, span.original-rank, span.new-rank').addClass('processed');
+           
+        } else {
+             $('span.original-value, span.original-rank, span.new-rank').removeClass('processed');
         }
     },
     /**
@@ -482,15 +526,15 @@ new code : adds object 'original' to main indicators and copies data to it so th
         var cdiModel = new cdiApp.CDI.Model({
             indicator: this.flatIndicators['CDI'],
             countries: this.countries,
-            app: this,
-            reload: userWeighted
+            app: this
+            //,            reload: userWeighted
         });
     
         this.cdiView = new cdiApp.CDI.View({
             model: cdiModel,
             el: '#home-cdi'
         });
-        this.cdiView.render(a, userWeighted, scroll);
+        this.cdiView.render();
     },
     loadIndicator: function(indicator) {
         var indicatorLowerCase = indicator.toLowerCase();
