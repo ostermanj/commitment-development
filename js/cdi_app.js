@@ -442,9 +442,12 @@ new code : adds object 'original' to main indicators and copies data to it so th
         
        
         for (var c in ranksObj){
-          if (parseInt(ranksObj[c].rank_label) !== parseInt(originalRanksObj[c].rank_label)){  
             var newRank = $('tr#' + c + '-master span.new-rank');
+          if (parseInt(ranksObj[c].rank_label) !== parseInt(originalRanksObj[c].rank_label)){  
+            
             newRank[0].innerHTML = ranksObj[c].rank_label;
+          } else {
+              newRank[0].innerHTML = '';
           }
         }
         
