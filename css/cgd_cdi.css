@@ -196,6 +196,7 @@
     color: #aaa;
 }
 
+
  
 
 span.os, span.ns {
@@ -563,6 +564,12 @@ div.chart-holder > div.transition {
   margin: 0 0 20px 0;
   width:100%;
   display:inline-block;
+}
+
+.mainNav.stick-to-top {
+    position: fixed;
+    top: 49px;
+    z-index: 999;
 }
 /*.mainNav ul {
   list-style: none;
@@ -1043,5 +1050,20 @@ span.country-label {
     .country-details .left-side,
     .country-details .right-side {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1019px) {
+    .mainNav.stick-to-top {
+    
+        top: 44px;
+    
+    }
+}
+@media screen and (max-width: 739px) {
+    .mainNav.stick-to-top {
+    
+        top: 0px;
+    
     }
 }

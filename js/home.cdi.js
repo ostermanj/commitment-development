@@ -15,6 +15,10 @@ cdiApp.CDI.Model = Backbone.Model.extend({
     if (params){
       console.log(params[0]);
     }
+    if (params[3] === 'mousemove' || params[3] === 'touchmovemove'){
+        Backbone.pubSub.trigger('adjustCDI', [params[1], params[2], ranksObj, originalRanksObj, params[3]]);
+        return;
+    }
     console.log('ranking');    //RANKING BEGINS       
 	this.groupedValues = [];
        
@@ -96,7 +100,7 @@ are now brought in untrimmed form the XML
         console.log('ranksObj');        console.log(ranksObj);
 
         if (params[0] === true){
-            Backbone.pubSub.trigger('adjustCDI', [params[1], params[2], ranksObj, originalRanksObj]);
+            Backbone.pubSub.trigger('adjustCDI', [params[1], params[2], ranksObj, originalRanksObj, params[3]]);
         } else {
            originalRanksObj = $.extend(true,{},ranksObj);
             console.log(originalRanksObj);
@@ -392,6 +396,20 @@ cdiApp.mainNav.View = Backbone.View.extend({
             }
             that.$el.append(weightToggle);
             
+        });
+        
+        $(window).scroll(function(){
+            el = document.getElementById('cdi-mainNav');
+            var extra = $('body').width() > 720 ? 31 : 80;
+            var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
+            console.log($('body').scrollTop());
+            console.log(scrollPoint);
+            
+            if($('body').scrollTop() >= scrollPoint){
+                $(el).addClass('stick-to-top');
+            } else {
+                $(el).removeClass('stick-to-top');
+            }
         });
     },
    attachSliderEvents: function(el, j){

@@ -133,6 +133,7 @@ var cdiApp = Backbone.View.extend({
         });
     },
     userInput: function(args){
+        eventType = args.type;
         transition = args.data.transition;
         whichInd = this.indicatorsOrder[args.data.i];
         userWeights[whichInd].value = args.data.notch >= 0 ? 1 + (this.changeFactor - 1) * args.data.notch : 1 / (1 + (this.changeFactor - 1) * Math.abs(args.data.notch));
@@ -142,7 +143,7 @@ var cdiApp = Backbone.View.extend({
           isWeighted += userWeights[ind].value === 1 ? 0 : 1
         }
   //      console.log(isWeighted);
-        this.changeWeight(isWeighted, transition);
+        this.changeWeight(isWeighted, transition, eventType);
         
         
     },
@@ -389,7 +390,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
       }
       return totalWeights;
     },
-    changeWeight: function(a,transition){ //a = isWeighted 1 or 0 ie at least one component's weight has been changed (!0)
+    changeWeight: function(a,transition, et){ //a = isWeighted 1 or 0 ie at least one component's weight has been changed (!0)
        
      sumTotalWeights = this.totalWeightsFn();
 
@@ -406,9 +407,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
            }
         }
      }
-    this.changeOverallScores(a, transition); 
+    this.changeOverallScores(a, transition, et); 
     },
-    changeOverallScores: function(a, transition){
+    changeOverallScores: function(a, transition, et){
         
         this.flatIndicators.CDI.previous.values = $.extend(true,{},this.flatIndicators.CDI.values);
        
@@ -429,38 +430,14 @@ new code : adds object 'original' to main indicators and copies data to it so th
         console.log(this.flatIndicators.CDI.previous.values);
         console.log('this.flatIndicators');
         console.log(this.flatIndicators);
-        Backbone.pubSub.trigger('rankCountries', [true, a, transition]);
+        Backbone.pubSub.trigger('rankCountries', [true, a, transition, et]);
     
       //  this.adjustCDI(a, transition);
     },
     adjustCDI: function(params){
-     // var $rows = $('#home-cdi .master-row');
-                a = params[0];
-        transition = params[1];
-        ranksObj = params[2];
-        originalRanksObj = params[3];
-        
-       
-        for (var c in ranksObj){
-            var newRank = $('tr#' + c + '-master span.new-rank');
-          if (parseInt(ranksObj[c].rank_label) !== parseInt(originalRanksObj[c].rank_label)){  
-            
-            newRank[0].innerHTML = ranksObj[c].rank_label;
-          } else {
-              newRank[0].innerHTML = '';
-          }
-        }
-        
-        for (var c in originalRanksObj){
-           
-            var originalRank = $('tr#' + c + '-master span.original-rank');
-            console.log(parseInt(ranksObj[c].rank_label));
-             console.log(parseInt(originalRanksObj[c].rank_label));
-           
-           
-                originalRank[0].innerHTML = originalRanksObj[c].rank_label;
-           
-        }
+         /*
+         * ADJUST BARS
+         */
         
         for (var ind in this.flatIndicators){    
             
@@ -484,6 +461,50 @@ new code : adds object 'original' to main indicators and copies data to it so th
             
         }
         
+     if (params[4] === 'mousemove' || params[4] === 'touchmove'){
+         return;
+     } else {
+         this.adjustScores(params);
+     }
+        
+
+    },
+    
+    adjustScores: function(params){
+        /*
+        * ADJUST RANKS AND SCORES
+        */
+    
+        
+        a = params[0];
+        transition = params[1];
+        ranksObj = params[2];
+        originalRanksObj = params[3];
+       
+       $('.original-score, .new-rank').removeClass('processed');
+        for (var c in ranksObj){
+            var newRank = $('tr#' + c + '-master span.new-rank');
+          if (parseInt(ranksObj[c].rank_label) !== parseInt(originalRanksObj[c].rank_label)){  
+            
+            newRank[0].innerHTML = ranksObj[c].rank_label;
+          } else {
+              newRank[0].innerHTML = '';
+          }
+        }
+        
+        for (var c in originalRanksObj){
+           
+            var originalRank = $('tr#' + c + '-master span.original-rank');
+            console.log(parseInt(ranksObj[c].rank_label));
+             console.log(parseInt(originalRanksObj[c].rank_label));
+           
+           
+                originalRank[0].innerHTML = originalRanksObj[c].rank_label;
+           
+        }
+        
+        
+        
        for (var c in this.flatIndicators.CDI.values){
            var newScore = $('tr#' + c + '-master span.new-score');
            console.log(newScore);
@@ -493,11 +514,17 @@ new code : adds object 'original' to main indicators and copies data to it so th
            newScore[0].innerHTML = this.flatIndicators.CDI.values[c].toFixed(1);
        }
         if (a !== 0){
-            $('span.original-value, span.original-rank, span.new-rank').addClass('processed');
+            
+            
+                
+                $('span.original-value, span.original-rank, span.new-rank').addClass('processed');
+            
+            
            
         } else {
+            $('.original-score, .new-rank').removeClass('fast'); 
              $('span.original-value, span.original-rank, span.new-rank').removeClass('processed');
-        }
+        }  
     },
     /**
      * Create main nav and load the Overall tab.
@@ -511,7 +538,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
         this.mainNavView = new cdiApp.mainNav.View({
             model: mainNavModel,
             className: 'mainNav',
-            tagName: 'div'
+            tagName: 'div',
+            id:'cdi-mainNav'
         });
         $('#new_cdi .mainNav').remove();  // NEW code to keep from duplicating main CDI navbar
         $('#new_cdi').prepend(this.mainNavView.$el);
