@@ -133,43 +133,40 @@
     background-color: #e8b9b9 !important;
 }*/
 
-.change-rank td:first-child::before, .change-score td:nth-child(3)::before {
+tr.master-row td:first-child::before, tr.master-row td:nth-child(3)::before {
     position: absolute;
-    transition: color 1s ease-in-out 0.5s;
+    transition: color .7s ease-in-out;
     color: transparent;
-    
+    content: ' ';
     left: 0px;
     top: 9px;
     
 }
 
 .change-score td:nth-child(3)::before {
-    left:20px;
+    left:20px !important;
 }
 
-/*.change-rank td:first-child::before {
-    transition-delay: 1s;
-}*/
 
 
 
 
 .better-rank td:first-child::before, .better td:nth-child(3)::before {
-    content: '↑';
+    content: '↑' !important;
     
     
 }
 
-.better-rank.processed td:first-child::before, .better.processed td:nth-child(3)::before  {
+tr.master-row.better-rank.processed td:first-child::before, tr.master-row.better.processed td:nth-child(3)::before  {
     color: #41B976;
 }
 
 .worse-rank td:first-child::before, .worse td:nth-child(3)::before {
-    content: '↓';
+    content: '↓' !important;
       
 }
 
-.worse-rank.processed td:first-child::before, .worse.processed td:nth-child(3)::before {
+tr.master-row.worse-rank.processed td:first-child::before, tr.master-row.worse.processed td:nth-child(3)::before {
   
     color: #9E142E;
     
@@ -195,39 +192,43 @@
 
 .original-score {
     color:transparent;
-    transition: color 1s ease-in-out 0.4s;
+    transition: color .7s ease-in-out;
 }
 
 .original-rank {
-    transition: color 1s ease-in-out 1s;
+    transition: color .7s ease-in-out;
     color: #3b342b;
     position: relative;
     left:30px;
 }
 
 .new-rank {
-    transition: color 1s ease-in-out 1s;
+    transition: color .7s ease-in-out;
     color: transparent;
     position: absolute;
     left: 20px;
     
 }
 
-.new-rank.processed {
+tr.master-row.processed .new-rank {
     color: #3b342b;
 }
 
-.original-rank.processed, .original-value.processed {
+tr.master-row.processed .original-rank, tr.master-row.processed .original-value {
     color: #aaa;
+}
+
+.original-rank.locked {
+    color: #aaa !important;
 }
 
 
  
-
+/*
 span.os, span.ns {
     position: absolute;
     
-    transition: top 0.4s linear 0.4s;
+    transition: top 0.4s linear;
 }
 
 .os {
@@ -253,7 +254,7 @@ span.os, span.ns {
 .os-better-processed {
     top:-30px;
 }
-
+*/
 .cdi-header-wrapper {
     background: url(../images/home-hero.png);
     background-size: cover;

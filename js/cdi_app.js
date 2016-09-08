@@ -480,9 +480,43 @@ new code : adds object 'original' to main indicators and copies data to it so th
         transition = params[1];
         ranksObj = params[2];
         originalRanksObj = params[3];
-       
-       $('.original-score, .new-rank, .better-rank, .worse-rank, .new-rank').removeClass('processed');
+        if (a !== 0){
+            $('.original-rank').addClass('locked');
+        } else {$('.original-rank').removeClass('locked');}
+        
+        $('tr.master-row').removeClass('processed');
+
+        that = this;
+        for (var c in that.flatIndicators.CDI.values){
+           var newScore = $('tr#' + c + '-master span.new-score');
+       //    console.log(newScore);
+           var originalScore = $('tr#' + c + '-master span.original-score');
+    //       console.log(originalScore);
+           originalScore[0].innerHTML = '(' + that.flatIndicators.CDI.original.values[c].toFixed(1) + ')';
+           newScore[0].innerHTML = that.flatIndicators.CDI.values[c].toFixed(1);
+               
+       }
+    window.setTimeout(function(){
+        
+      
         for (var c in ranksObj){
+            if (parseFloat(that.flatIndicators.CDI.values[c].toFixed(1)) > parseFloat(that.flatIndicators.CDI.original.values[c].toFixed(1))){
+               $('tr#' + c + '-master').addClass('change-score better');
+           } else if (parseFloat(that.flatIndicators.CDI.values[c].toFixed(1)) < parseFloat(that.flatIndicators.CDI.original.values[c].toFixed(1))){
+               $('tr#' + c + '-master').addClass('change-score worse');
+           } else {
+                $('tr#' + c + '-master').removeClass('change-score worse better small-score-change medium-score-change large-score-change');
+           }
+           var scoreDiff = Math.abs(Math.round((that.flatIndicators.CDI.values[c] - that.flatIndicators.CDI.original.values[c]) * 10)) / 10;
+          
+           if (scoreDiff >= 0.4){
+               $('tr#' + c +'-master').addClass('large-score-change');
+           } else if (scoreDiff >= 0.2) {
+               $('tr#' + c +'-master').addClass('medium-score-change');
+           } else if (scoreDiff > 0){
+               $('tr#' + c +'-master').addClass('small-score-change');
+           }
+            
             var newRank = $('tr#' + c + '-master span.new-rank');
           if (parseInt(ranksObj[c].rank_label) !== parseInt(originalRanksObj[c].rank_label)){  
             $('tr#' + c +'-master').addClass('change-rank');
@@ -522,47 +556,14 @@ new code : adds object 'original' to main indicators and copies data to it so th
         
         
         
-       for (var c in this.flatIndicators.CDI.values){
-           var newScore = $('tr#' + c + '-master span.new-score');
-       //    console.log(newScore);
-           var originalScore = $('tr#' + c + '-master span.original-score');
-    //       console.log(originalScore);
-           originalScore[0].innerHTML = '(' + this.flatIndicators.CDI.original.values[c].toFixed(1) + ')';
-           newScore[0].innerHTML = this.flatIndicators.CDI.values[c].toFixed(1);
-           if (parseFloat(this.flatIndicators.CDI.values[c].toFixed(1)) > parseFloat(this.flatIndicators.CDI.original.values[c].toFixed(1))){
-               $('tr#' + c + '-master').addClass('change-score better');
-           } else if (parseFloat(this.flatIndicators.CDI.values[c].toFixed(1)) < parseFloat(this.flatIndicators.CDI.original.values[c].toFixed(1))){
-               $('tr#' + c + '-master').addClass('change-score worse');
-           } else {
-                $('tr#' + c + '-master').removeClass('change-score worse better small-score-change medium-score-change large-score-change');
-           }
-           var scoreDiff = Math.abs(Math.round((this.flatIndicators.CDI.values[c] - this.flatIndicators.CDI.original.values[c]) * 10)) / 10;
-          
-           if (scoreDiff >= 0.4){
-               $('tr#' + c +'-master').addClass('large-score-change');
-           } else if (scoreDiff >= 0.2) {
-               $('tr#' + c +'-master').addClass('medium-score-change');
-           } else if (scoreDiff > 0){
-               $('tr#' + c +'-master').addClass('small-score-change');
-           }
+       
+       if (a !== 0){ // if there is user-initiated weight change
+                $('tr.master-row').addClass('processed');
+        }
+            
+    }, 700);   
            
-       }
-        if (a !== 0){
-            
-            
-                
-                $('span.original-value, span.original-rank, span.new-rank').addClass('processed');
-                  setTimeout(function(){
-                    $('.better-rank, .worse-rank, .better, .worse').addClass('processed');
-                },500);
-            
-            
-            
-           
-        } else {
-            $('.original-score, .new-rank').removeClass('fast'); 
-             $('span.original-value, span.original-rank, span.new-rank').removeClass('processed');
-        }  
+       
     },
     /**
      * Create main nav and load the Overall tab.
