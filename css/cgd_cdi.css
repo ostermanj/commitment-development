@@ -1,6 +1,6 @@
 .weight-toggle {
-    width:100%;
-    max-width: 122px;
+    
+    width:122px;
     height: 53px;
     
     display: block;
@@ -25,7 +25,7 @@
 
 .slider {
     display: block;
-    width: 100px;
+    width: 100px;;
     height: 11px;
     background-color: rgba(255,255,255,0.5);
     margin: auto;
@@ -58,40 +58,42 @@
 }
 
 .notch-0 {
-    left:9px;
+    left:9%;
 }
 
 .notch-1 {
-    left:22.6666px;
+    left:22.6666%;
 }
 
 .notch-2 {
-    left:36.3333px;
+    left:36.3333%;
 }
 
 .notch-3 {
-    left:50px;
+    left:50%;
 }
 
 .notch-4 {
-    left:63.6666px;
+    left:63.6666%;
 }
 
 .notch-5 {
-    left:77.3333px;
+    left:77.3333%;
 }
 
 .notch-6 {
-    left:91px;
+    left:91%;
 }
 
 
 .slider-selector {
     display: block;
     height: 16px;
+    
     width: 16px;
+    
     background-color: rgba(0,0,0,0.5);
-    border-radius: 10px;
+    border-radius: 50%;
     border: 2px solid #fff;
     position: relative;
     left: 41px;
@@ -99,6 +101,9 @@
     cursor: ew-resize;
     
 }
+
+
+
 
 .jump-selector {
     
@@ -128,40 +133,58 @@
     background-color: #e8b9b9 !important;
 }*/
 
-.change-rank td:first-child::before, .better td:nth-child(3)::before, .worse td:nth-child(3)::before {
+.change-rank td:first-child::before, .change-score td:nth-child(3)::before {
     position: absolute;
-    left: 5px;
-    top: 8px;
     transition: color 1s ease-in-out 0.5s;
+    color: transparent;
+    
+    left: 0px;
+    top: 9px;
     
 }
 
-.change-rank td:first-child::before {
-    transition-delay: 1s;
+.change-score td:nth-child(3)::before {
+    left:20px;
 }
+
+/*.change-rank td:first-child::before {
+    transition-delay: 1s;
+}*/
 
 
 
 
 .better-rank td:first-child::before, .better td:nth-child(3)::before {
     content: '↑';
-    color: transparent;
+    
+    
 }
 
-.better-rank-processed td:first-child::before, .better-processed td:nth-child(3)::before  {
+.better-rank.processed td:first-child::before, .better.processed td:nth-child(3)::before  {
     color: #41B976;
 }
 
 .worse-rank td:first-child::before, .worse td:nth-child(3)::before {
     content: '↓';
-    color: transparent;
-    
+      
 }
 
-.worse-rank-processed td:first-child::before, .worse-processed td:nth-child(3)::before {
+.worse-rank.processed td:first-child::before, .worse.processed td:nth-child(3)::before {
   
     color: #9E142E;
     
+}
+
+.small-rank-change td:first-child::before, .small-score-change td:nth-child(3)::before  {
+    opacity: 0.5;
+}
+
+.medium-rank-change td:first-child::before, .medium-score-change td:nth-child(3)::before {
+    opacity: 0.75;
+}
+
+.large-rank-change td:first-child::before, .large-score-change td:nth-child(3)::before {
+    opacity: 1;
 }
 
 /*.original-score {
@@ -178,13 +201,15 @@
 .original-rank {
     transition: color 1s ease-in-out 1s;
     color: #3b342b;
+    position: relative;
+    left:30px;
 }
 
 .new-rank {
     transition: color 1s ease-in-out 1s;
     color: transparent;
     position: absolute;
-    left: 50px;
+    left: 20px;
     
 }
 
@@ -395,6 +420,7 @@ div.chart-holder > div.transition {
 
 #new_cdi table tr.master-row td:nth-child(3) {
     width: 69px;
+    padding-left: 40px;
    
 }
 
@@ -570,6 +596,12 @@ div.chart-holder > div.transition {
     position: fixed;
     top: 49px;
     z-index: 999;
+    width: 98%;
+        
+}
+
+.mainNav.stick-to-top .weight-toggle {
+    box-shadow: rgba(0,0,0,0.6) 10px 10px 10px;
 }
 /*.mainNav ul {
   list-style: none;
@@ -621,6 +653,7 @@ div.chart-holder > div.transition {
   background: #8850AC;
 }
 
+/*
 .mainNav div.CDI-bg.active {
   box-shadow: 0 -10px 0 #574D40;
 }
@@ -645,6 +678,7 @@ div.chart-holder > div.transition {
 .mainNav div.CDI_MIG-bg.active {
   box-shadow: 0 -10px 0 #8850AC;
 }
+*/
 
 .show-components {
   position: relative;
@@ -1055,9 +1089,34 @@ span.country-label {
 
 @media screen and (max-width: 1019px) {
     .mainNav.stick-to-top {
-    
+     
         top: 44px;
     
+    }
+    
+    .weight-toggle {
+    
+    width:23.75%;
+    height: 33px;
+    text-align: left;
+    padding: 0 0.25% 0 1%;
+        
+    }
+    
+    .weight-toggle .slider {
+        margin-right: 10px;
+        top: 11px;
+    }
+    
+    .weight-toggle span {
+        font-size:14px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    
+     .weight-toggle {
+         width:48.75%
     }
 }
 @media screen and (max-width: 739px) {

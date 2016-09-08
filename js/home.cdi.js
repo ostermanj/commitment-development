@@ -202,7 +202,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 
              
 /* END */               
-                $row.html('<td><span class="original-value original-rank">' + item.rank_label + '</span> <span class="new-value new-rank"></span></td>' +
+                $row.html('<td><span class="new-value new-rank"></span> <span class="original-value original-rank">' + item.rank_label + '</span></td>' +
                     '<td><a href="cdi-2015/country/' + item.index + '"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
                     '<td><div class="chart-holder"></div></td>' +
@@ -406,9 +406,12 @@ cdiApp.mainNav.View = Backbone.View.extend({
             console.log(scrollPoint);
             
             if($('body').scrollTop() >= scrollPoint){
+                var navHeight = $('#cdi-mainNav').height() + 20;
                 $(el).addClass('stick-to-top');
+                $('#new_cdi').css('padding-top', navHeight);
             } else {
                 $(el).removeClass('stick-to-top');
+                $('#new_cdi').css('padding-top', '');
             }
         });
     },

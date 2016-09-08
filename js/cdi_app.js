@@ -481,15 +481,32 @@ new code : adds object 'original' to main indicators and copies data to it so th
         ranksObj = params[2];
         originalRanksObj = params[3];
        
-       $('.original-score, .new-rank').removeClass('processed');
+       $('.original-score, .new-rank, .better-rank, .worse-rank, .new-rank').removeClass('processed');
         for (var c in ranksObj){
             var newRank = $('tr#' + c + '-master span.new-rank');
           if (parseInt(ranksObj[c].rank_label) !== parseInt(originalRanksObj[c].rank_label)){  
-            
+            $('tr#' + c +'-master').addClass('change-rank');
             newRank[0].innerHTML = ranksObj[c].rank_label;
+              rankDiff = Math.abs((parseInt(ranksObj[c].rank_label)) - parseInt(originalRanksObj[c].rank_label));
+              if (rankDiff <= 2){
+                  $('tr#' + c +'-master').addClass('small-rank-change');
+              } else if (rankDiff <= 4){
+                  $('tr#' + c +'-master').addClass('medium-rank-change');
+              } else {
+                  $('tr#' + c +'-master').addClass('large-rank-change');
+              }
           } else {
               newRank[0].innerHTML = '';
           }
+            if (parseInt(ranksObj[c].rank_label) < parseInt(originalRanksObj[c].rank_label)){  
+            
+            $('tr#' + c +'-master').addClass('better-rank');
+          } else if (parseInt(ranksObj[c].rank_label) > parseInt(originalRanksObj[c].rank_label)){  
+              $('tr#' + c +'-master').addClass('worse-rank');
+          } else {
+              $('tr#' + c +'-master').removeClass('worse-rank better-rank small-rank-change medium-rank-change large-rank-change');
+          }
+            
         }
         
         for (var c in originalRanksObj){
@@ -507,17 +524,38 @@ new code : adds object 'original' to main indicators and copies data to it so th
         
        for (var c in this.flatIndicators.CDI.values){
            var newScore = $('tr#' + c + '-master span.new-score');
-           console.log(newScore);
+       //    console.log(newScore);
            var originalScore = $('tr#' + c + '-master span.original-score');
-           console.log(originalScore);
+    //       console.log(originalScore);
            originalScore[0].innerHTML = '(' + this.flatIndicators.CDI.original.values[c].toFixed(1) + ')';
            newScore[0].innerHTML = this.flatIndicators.CDI.values[c].toFixed(1);
+           if (parseFloat(this.flatIndicators.CDI.values[c].toFixed(1)) > parseFloat(this.flatIndicators.CDI.original.values[c].toFixed(1))){
+               $('tr#' + c + '-master').addClass('change-score better');
+           } else if (parseFloat(this.flatIndicators.CDI.values[c].toFixed(1)) < parseFloat(this.flatIndicators.CDI.original.values[c].toFixed(1))){
+               $('tr#' + c + '-master').addClass('change-score worse');
+           } else {
+                $('tr#' + c + '-master').removeClass('change-score worse better small-score-change medium-score-change large-score-change');
+           }
+           var scoreDiff = Math.abs(Math.round((this.flatIndicators.CDI.values[c] - this.flatIndicators.CDI.original.values[c]) * 10)) / 10;
+          
+           if (scoreDiff >= 0.4){
+               $('tr#' + c +'-master').addClass('large-score-change');
+           } else if (scoreDiff >= 0.2) {
+               $('tr#' + c +'-master').addClass('medium-score-change');
+           } else if (scoreDiff > 0){
+               $('tr#' + c +'-master').addClass('small-score-change');
+           }
+           
        }
         if (a !== 0){
             
             
                 
                 $('span.original-value, span.original-rank, span.new-rank').addClass('processed');
+                  setTimeout(function(){
+                    $('.better-rank, .worse-rank, .better, .worse').addClass('processed');
+                },500);
+            
             
             
            
