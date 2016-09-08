@@ -14,6 +14,8 @@
     
 }
 
+
+
 .weight-toggle span {
     
     margin-top: 3px;
@@ -591,6 +593,17 @@ div.chart-holder > div.transition {
   margin: 0 0 20px 0;
   width:100%;
   display:inline-block;
+    max-width: 976px;
+}
+
+.flexbox .mainNav {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 53px;
 }
 
 .mainNav.stick-to-top {
@@ -1095,6 +1108,10 @@ span.country-label {
     
     }
     
+    .flexbox .mainNav {
+        height:66px;
+    }
+    
     .weight-toggle {
     
     width:23.75%;
@@ -1103,6 +1120,8 @@ span.country-label {
     padding: 0 0.25% 0 1%;
         
     }
+    
+    
     
     .weight-toggle .slider {
         margin-right: 10px;
@@ -1119,6 +1138,10 @@ span.country-label {
      .weight-toggle {
          width:48.75%
     }
+    
+    .flexbox .mainNav {
+        height:132px;
+    }
 }
 @media screen and (max-width: 739px) {
     .mainNav.stick-to-top {
@@ -1126,4 +1149,5 @@ span.country-label {
         top: 0px;
     
     }
+     
 }

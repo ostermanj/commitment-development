@@ -7,6 +7,12 @@ invSTD is one-over-standard-deviation for the range of scores in the component. 
 ( flatIndicator[indicator].original.values[country] ) and userWeights[indicator].invSTD divided by the sum of all invSTDs.
 this calculation has to be reproduced to allow users to adjust weights and return valid results. 
  */
+/*(function($){
+    if (Modernizr.testAllProps('display','flexbox') === true){
+        $('html').addClass('flexbox');
+        console.log('flexbox');
+    }
+});*/
 
  var userWeights = {
 	   CDI_AID: {
