@@ -10,7 +10,7 @@ this calculation has to be reproduced to allow users to adjust weights and retur
 /*(function($){
     if (Modernizr.testAllProps('display','flexbox') === true){
         $('html').addClass('flexbox');
-        console.log('flexbox');
+
     }
 });*/
 
@@ -148,7 +148,7 @@ var cdiApp = Backbone.View.extend({
           userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD; // creates a total weight obj for each
           isWeighted += userWeights[ind].value === 1 ? 0 : 1
         }
-  //      console.log(isWeighted);
+  
         this.changeWeight(isWeighted, transition, eventType);
         
         
@@ -194,8 +194,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
             }
         };
         that.flatIndicators.CDI.previous = that.flatIndicators.CDI.previous ? that.flatIndicators.CDI.previous : $.extend(true,{},that.flatIndicators.CDI);
-        console.log('that.flatIndicators');
-        console.log(that.flatIndicators);
+
+
 
 /* end new */        
 
@@ -432,10 +432,10 @@ new code : adds object 'original' to main indicators and copies data to it so th
             }
             this.flatIndicators.CDI.values[c] = sumProduct / sumTotalWeights; 
         }
-        console.log('this.flatIndicators.CDI.previous.values');
-        console.log(this.flatIndicators.CDI.previous.values);
-        console.log('this.flatIndicators');
-        console.log(this.flatIndicators);
+
+
+
+
         Backbone.pubSub.trigger('rankCountries', [true, a, transition, et]);
     
       //  this.adjustCDI(a, transition);
@@ -443,7 +443,14 @@ new code : adds object 'original' to main indicators and copies data to it so th
     adjustCDI: function(params){
          /*
          * ADJUST BARS
-         */
+    */
+       
+        if (params[4] === 'resorted'){
+            console.log('resorted');
+            this.adjustScores(params);
+            return;
+        }
+        this.isUserWeighted = params[0];
         
         for (var ind in this.flatIndicators){    
             
@@ -481,7 +488,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
         * ADJUST RANKS AND SCORES
         */
     
-        
+        if (params[4] === 'resorted'){
+            console.log(params);
+        }
         a = params[0];
         transition = params[1];
         ranksObj = params[2];
@@ -495,9 +504,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
         that = this;
         for (var c in that.flatIndicators.CDI.values){
            var newScore = $('tr#' + c + '-master span.new-score');
-       //    console.log(newScore);
+       
            var originalScore = $('tr#' + c + '-master span.original-score');
-    //       console.log(originalScore);
+    
            originalScore[0].innerHTML = '(' + that.flatIndicators.CDI.original.values[c].toFixed(1) + ')';
            newScore[0].innerHTML = that.flatIndicators.CDI.values[c].toFixed(1);
                
@@ -552,8 +561,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
         for (var c in originalRanksObj){
            
             var originalRank = $('tr#' + c + '-master span.original-rank');
-            console.log(parseInt(ranksObj[c].rank_label));
-             console.log(parseInt(originalRanksObj[c].rank_label));
+
+
            
            
                 originalRank[0].innerHTML = originalRanksObj[c].rank_label;
