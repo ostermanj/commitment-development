@@ -125,21 +125,34 @@ cdiApp.CDI.View = Backbone.View.extend({
 	this.sortAsc = true;
         
     },
+    sortArray: function(sortAsc,field){ //this successfully reordered the array but it's in the wrong place: after the ranking's been done
+       if (sortAsc == null) {
+           console.log('null');
+           sortAsc = true;
+       } 
+        console.log(this.sortAsc);
+        console.log(sortAsc);
+        console.log(field);
+        var key = field === 'country' ? 'country' : 'value';
+       console.log(key);
+        return function(a,b){
+            if(a[key]<b[key])
+                 return sortAsc ? 1 : -1;
+            if(a[key]>b[key])
+                return sortAsc ? -1 : 1;
+          return 0;
+        };
+           
+    },
     
-    render: function(sortAsc) {
+    render: function(sortAsc, field){
 
+        
         
         this.collapsibleViews = {};
         var rank = 0;
 	this.$el.find('tbody').html('');
-   this.groupedValues.sort(function(a,b){ //this successfully reordered the array but it's in the wrong place: after the ranking's been done
-       if (sortAsc === false){
-           var compareValue = b.value - a.value > 0 ? -1 : b.value - a.value < 0 ? 1 : 0;
-       } else {
-           var compareValue = b.value - a.value < 0 ? -1 : b.value - a.value > 0 ? 1 : 0;
-       }
-        return compareValue;
-    });
+   this.groupedValues.sort(this.sortArray(sortAsc, field));
 
         for (var i in this.groupedValues) {
             if (this.groupedValues.hasOwnProperty(i)) {
@@ -334,7 +347,7 @@ cdiApp.CDI.View = Backbone.View.extend({
 	this.sortAsc = !this.sortAsc;
 
 	//this.sortByField(field, asc);
-        this.render(this.sortAsc);
+        this.render(this.sortAsc, field);
         
     }
 /*   ,
@@ -345,20 +358,14 @@ cdiApp.CDI.View = Backbone.View.extend({
 	this.render();
     },
     sortArray: function(key,asc) {
-       // console.log(key);
-    //    console.log(asc);
+      
   	return function(a,b){
-    //    console.log(a);
-    //    console.log(b);        
+    
 	  if(a[key]<b[key])
-          rt  = asc ? -1 : 1;
-    //    console.log(rt);
+    
 		return asc ? -1 : 1;
 	  if(a[key]>b[key])
-          rt  = asc ? 1 : -1;
-      //  console.log(rt);
-		return asc ? 1 : -1;
-
+    	return asc ? 1 : -1;
 	  return 0;
   	}
     } */
