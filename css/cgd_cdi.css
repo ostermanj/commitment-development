@@ -681,7 +681,7 @@ div.chart-holder > div.transition {
 
 
 .CDI_TEC-bg,
-*[class^="TEC_"][class$="-bg"] {
+*[class^="TEC_"][class*="-bg"] {
   background: #F5C144;
 }
 
@@ -695,7 +695,7 @@ background: repeating-linear-gradient(
 );
 }
 .CDI_INV-bg,
-*[class^="INV_"][class$="-bg"] {
+*[class^="INV_"][class*="-bg"] {
   background: #D77438;
 }
 .CDI_INV-bg.weighted {
@@ -708,7 +708,7 @@ background: repeating-linear-gradient(
 );
 }
 .CDI_AID-bg,
-*[class^="AID_"][class$="-bg"] {
+*[class^="AID_"][class*="-bg"] {
   background: #9E142E
 }
 .CDI_AID-bg.weighted {
@@ -721,7 +721,7 @@ background: repeating-linear-gradient(
 );
 }
 .CDI_ENV-bg,
-*[class^="ENV_"][class$="-bg"] {
+*[class^="ENV_"][class*="-bg"] {
   background: #41B976;
 }
 .CDI_ENV-bg.weighted {
@@ -734,7 +734,7 @@ background: repeating-linear-gradient(
 );
 }
 .CDI_TRA-bg,
-*[class^="TRA_"][class$="-bg"] {
+*[class^="TRA_"][class*="-bg"] {
   background: #21358B;
 }
 .CDI_TRA-bg.weighted {
@@ -747,7 +747,7 @@ background: repeating-linear-gradient(
 );
 }
 .CDI_SEC-bg,
-*[class^="SEC_"][class$="-bg"] {
+*[class^="SEC_"][class*="-bg"] {
   background: #1792C5;
 }
 .CDI_SEC-bg.weighted {
@@ -760,7 +760,7 @@ background: repeating-linear-gradient(
 );
 }
 .CDI_MIG-bg,
-*[class^="MIG_"][class$="-bg"] {
+*[class^="MIG_"][class*="-bg"] {
   background: #8850AC;
 }
 .CDI_MIG-bg.weighted {

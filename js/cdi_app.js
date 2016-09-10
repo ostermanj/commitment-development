@@ -151,10 +151,10 @@ var cdiApp = Backbone.View.extend({
               
             }
             var that = this;
-            window.setTimeout(function(){
+      //      window.setTimeout(function(){
                 console.log('calling changeWeight() with 0,1,"click"')
                 that.changeWeight(0,1,'click');
-            }, 400);
+    //        }, 400);
             return;
         }
         eventType = args.type;
