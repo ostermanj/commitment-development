@@ -12,6 +12,7 @@ cdiApp.CDI.Model = Backbone.Model.extend({
         this.rankCountries([]);
     },
     rankCountries: function(params){
+        console.log(params)
     if (params[1]){
      this.isWeighted = params[1];
     } else {
@@ -104,6 +105,7 @@ are now brought in untrimmed form the XML
 
         if (params[0] === true){
             console.log(params);
+            console.log('triggering adjustCDI');
             Backbone.pubSub.trigger('adjustCDI', [params[1], params[2], this.ranksObj, this.originalRanksObj, params[3]]);
         } else {
            this.originalRanksObj = $.extend(true,{}, this.ranksObj);
@@ -411,10 +413,14 @@ cdiApp.mainNav.View = Backbone.View.extend({
             weightToggle = document.createElement('div');
             weightToggle.setAttribute('data-indicator', item.code);
             weightToggle.className = 'weight-toggle ' + item.code + '-bg ' + (item.active ? 'active' : '');
+            activeIndicator = document.createElement('div');
+            activeIndicator.className = 'active-indicator';
+            weightToggle.appendChild(activeIndicator);
             nameSpan = document.createElement('span');
-            nameSpan.innerHTML = '<a class="' + (item.active ? 'active' : '') + '" href="#' + item.code + '" data-indicator="' + item.code + '">' + item.label + '</a>';
+            nameSpan.innerHTML = '<a class="' + (item.active ? 'active' : '') + ' selectable" href="#' + item.code + '" data-indicator="' + item.code + '">' + item.label + '</a>';
             weightToggle.appendChild(nameSpan);
             if (item.code !== 'CDI'){
+                
                 sliderDiv = document.createElement('div');
                 sliderDiv.className = 'slider';
                 for (i = 0; i < 7; i++){
@@ -429,6 +435,13 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 that.attachSelectorEvents(sliderSelector, j);
                 
                 weightToggle.appendChild(sliderDiv);
+            } else {
+                var resetWeight = document.createElement('a');
+                resetWeight.href = 'javascript:void(0);';
+               // resetWeight.onclick = that.resetWeight;
+                resetWeight.innerHTML = 'Reset weights';
+                resetWeight.className = 'reset-weight';
+                weightToggle.appendChild(resetWeight);
             }
             that.$el.append(weightToggle);
             
@@ -451,6 +464,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
             }
         });
     },
+    
    attachSliderEvents: function(el, j){
         var that = this;
         var i = j - 1;
@@ -465,7 +479,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
             e.data.that = that;
             e.data.ev = e;
             e.data.i = i;
-           
+           console.log(e);
            that.selectorStop(e);
         });
     },
@@ -506,6 +520,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
     
         Backbone.pubSub.trigger('userInput', e);
     },
+    
     limitPosition: function(){
          if (newPosition < 0){
             newPosition = 0;
@@ -514,13 +529,39 @@ cdiApp.mainNav.View = Backbone.View.extend({
         }  
     },
     selectorStop: function(e){
-      
-        delay = e.data.ev.currentTarget.className == 'slider' ? 400 : 0;
+       if (e === 'resetWeight'){
+           console.log(e);
+           window.setTimeout(function(){ 
+               console.log('triggering userInput');
+                Backbone.pubSub.trigger('userInput', e); 
+            }, 400);
+           return;
+       }
+        delay = e.data.ev.currentTarget.className === 'slider' ? 500 : 0;
         window.setTimeout(function(){
             $('.slider-selector').removeClass('active-selector jump-selector');
         }, delay);
         roundedPosition = Math.round(newPosition / 13.6666) * 13.6666;
+        console.log(roundedPosition);
         e.data.notch = Math.round(newPosition / 13.6666) - 3;
+        var eTarget = e.data.ev.currentTarget;
+        console.log(eTarget);
+        if (e.data.notch !== 0){
+            eParent = $(eTarget).parents('.weight-toggle');
+            console.log(eParent);
+            $(eParent).addClass('weighted');
+            $('.reset-weight').css('display','inline');
+            window.setTimeout(function(){
+                $('#cdi-mainNav').addClass('weighted-component');
+            },400);
+        } else {
+            eParent = $(eTarget).parents('.weight-toggle');
+            $(eParent).removeClass('weighted');
+            $('.reset-weight').css('display','inline');
+            window.setTimeout(function(){
+                $('#cdi-mainNav').removeClass('weighted-component');
+            },400);
+        }
         e.data.transition = 1;
 
         sliderSelector.css('left', roundedPosition);
@@ -530,6 +571,19 @@ cdiApp.mainNav.View = Backbone.View.extend({
             Backbone.pubSub.trigger('userInput', e); //publish event to global mechanism
         }, 400);
         
+    },
+    resetWeight: function(){
+      console.log('resetWeight');
+        $('.slider-selector').addClass('jump-selector');
+         $('.slider-selector').css('left','41px');
+        $('.weight-toggle').removeClass('weighted');
+        $('#cdi-mainNav').removeClass('weighted-component');
+        window.setTimeout(function()
+            {$('.slider-selector').removeClass('jump-selector');
+        }, 400);
+        
+       e = 'resetWeight';
+       this.selectorStop(e);
     },
     getXOffset: function(e){
          if(e.type === 'touchstart' || e.type === 'touchmove'){
@@ -541,7 +595,8 @@ cdiApp.mainNav.View = Backbone.View.extend({
         
     },
     events: {
-        'click a': 'menuItemClicked'
+        'click a.selectable': 'menuItemClicked',
+        'click a.reset-weight': 'resetWeight' 
     },
     menuItemClicked: function(event) {
         event.preventDefault();
