@@ -78,8 +78,8 @@ var cdiApp = Backbone.View.extend({
      */
     indicatorColors: {
 	CDI: {
-	    background: '#FFFFFF',
-	    border: '#FFFFFF'
+	    background: '#b5a38b',
+	    border: '#574D40'
 	},
         CDI_TEC: {
             background: '#F5EACF',

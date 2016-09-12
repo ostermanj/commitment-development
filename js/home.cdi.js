@@ -182,7 +182,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 };
 
                 var $chartHolder = $('<div class="chart-holder"></div>');
-                var $row = $('<tr id="' + item.index + '-master" data-c="' + item.index + '" class="master-row"></tr>');
+                var $row = $('<tr tabindex="0" id="' + item.index + '-master" data-v="info" data-c="' + item.index + '" class="master-row"></tr>');
 /*NEW CODE*/   /* var oldScoreStr = '';
                 var newScoreClass = '';
                 var originalValueStr = '';
@@ -229,7 +229,7 @@ cdiApp.CDI.View = Backbone.View.extend({
              
 /* END */               
                 $row.html('<td><span class="new-value new-rank"></span> <span class="original-value original-rank">' + item.rank_label + '</span></td>' +
-                    '<td><a href="cdi-2015/country/' + item.index + '"><span class="country-label">' + item.country + '</span></a></td>' +
+                    '<td><a class="expand-row" href="#" title="Expand row"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
                     '<td><div class="chart-holder"></div></td>');
  
@@ -276,33 +276,44 @@ cdiApp.CDI.View = Backbone.View.extend({
 	'click a.sorting':'sortColumn'
     },
     showCollapsed: function(event) {
+        event.preventDefault();
         
         var $target = $(event.currentTarget);
+       
         console.log($target);
         var countryCode = $target.attr('data-c');
+        var viewType = $target.attr('data-v');
         console.log(countryCode);
         //var viewType = $target.hasClass('show-info') ? 'info' : 'trend'; // do once for info and once for trend
-        
-        
-        for (i = 0; i < 2; i++){
-            var viewType = i == 0 ? 'info' : 'trend';
-            var view = this.collapsibleViews[countryCode][viewType];
-
+        var view = this.collapsibleViews[countryCode][viewType];
+/*
             if($('.active-trend').length){
                previousTrend = $('.active-trend');
                if(countryCode != previousTrend.attr('data-c')){
                 var p_countryCode = previousTrend.attr('data-c');
                     var p_viewType = viewType === 'info' ? 'info' : 'trend';
                     var p_view = this.collapsibleViews[p_countryCode][p_viewType];
-                previousTrend.toggleClass('active').toggleClass('active-trend');
-                p_view.toggle();
+                $('.active-trend .info-wrapper').css('height', 0);
+                window.setTimeout(function(){
+                    previousTrend.toggleClass('active').toggleClass('active-trend');
+                    p_view.toggle();
+               }, 200);
                }
-            }
-
+           }
+*/
+        var delay = 0;
+      if ($target.hasClass('active')){
+          console.log('already active');
+          $('#' + countryCode + '-info .info-wrapper').css('height', 0);
+          delay = 500;
+      }
+        
+        window.setTimeout(function(){
             $target.toggleClass('active').toggleClass('active-trend');
-                view.toggle();
-                event.preventDefault();
-        }
+            view.toggle();
+            event.preventDefault();
+        }, delay);
+        
     },
     countrySelected: function(event) {
         var $target = $(event.target);
@@ -645,10 +656,10 @@ cdiApp.mainNav.View = Backbone.View.extend({
 cdiApp.collapsibleView = Backbone.View.extend({
     loaded: false,
     toggle: function() {
-        this.$el.fadeToggle();
-        if (!this.loaded) {
+       this.$el.fadeToggle(0);
+    //    if (!this.loaded) {
             this.render();
-        }
+    //   }
     },
     hide: function() {
         this.$el.hide();
@@ -665,15 +676,25 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
         this.countryCode = args.countryCode;
     },
     render: function() {
+        console.log(this.loaded);
+        that = this;
         if (!this.loaded) {
-            that = this;
+            
             this.loaded = true;
+            
             $.get('/cdi-2015/overall/' + this.countryCode).done(function(data) {
-                var content = '<td colspan="4">' + data + '</td>';
+                var content = '<td colspan="4" class="info-td"><div class="info-wrapper">' + data + '</div></td>';
+               
                 that.$el.append(content);
+                cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
+                $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
+                
             }).error(function() {
-                that.$el.append('<td colspan="4">Data not available.</td>');
+                that.$el.append('<td colspan="4" class="info-td"><div class="info-wrapper">Data not available.</div></td>');
             });
+        } else {
+            cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
+             $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
         }
     }
 });
@@ -687,7 +708,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
         var that = this;
         this.loaded = true;
         this.$el.append($content);
-        $content.before('<td></td>');
+        
 	var allIndicators = ['CDI'].concat(this.app.indicatorsOrder);
 	that.app.indicators['CDI'] = 'Overall';
 

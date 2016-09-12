@@ -361,6 +361,8 @@ span.os, span.ns {
 }
 #new_cdi table tr.master-row.active {
   border-bottom: none;
+        border-top: 3px outset #ddd;
+    background-color: #fff;
 }
 #new_cdi table tr.master-row td{
   padding: 10px 0;
@@ -368,9 +370,26 @@ span.os, span.ns {
 #new_cdi table tbody tr:not(.master-row) {
   display: none;
 }
+
+#new_cdi table tbody tr.info, #new_cdi table tbody tr.trend {
+    background-color: #fff;
+}
+
+#new_cdi table tbody tr.info > td, #new_cdi table tbody tr.trend > td {
+        padding: 10px 10px 10px 50px;
+}
+
 #new_cdi table tbody tr.info tr{
   display: table-row;
 }
+
+.info-wrapper {
+    overflow: hidden;
+    transition: height 0.5s linear;
+    height: 0;
+    max-width: 650px;
+}
+
 table#home-cdi-indicator.CDI_AID tr.active td:nth-child(2),
 table#home-cdi-indicator.CDI_AID tr.components {
     background: rgba(158, 20, 46, .15);
@@ -407,7 +426,7 @@ table#home-cdi-indicator tr.components {
   height: 20px;
   background: #DFDFDB;
   margin-bottom: 20px;
-  max-width: 100%;
+  max-width: 98%;
   position: relative;
 }
 
@@ -463,6 +482,15 @@ div.chart-holder > div.transition {
     margin-top: -10px;
     font-size: 12px;
 }
+
+.master-row {
+    cursor: pointer;
+}
+
+.master-row:hover {
+    background-color: #fff !important;
+}
+
 #new_cdi table tr.master-row td {
   text-align: center;
     position: relative;
@@ -523,6 +551,7 @@ div.chart-holder > div.transition {
 }
 #new_cdi table#home-cdi-indicator tr.components .chart-holder {
   margin: 0 auto 20px;
+    width:98%;
 }
 .chart-holder div {
   float: left;
@@ -852,19 +881,19 @@ background: repeating-linear-gradient(
   transform:rotate(-45deg);
 }
 .line-chart-wrapper {
-  width: 32%;
+  width: 313px;
   float: left;
   box-sizing: border-box;
   margin-right: 3px;
   margin-bottom: 3px;
   padding: 15px;
-  background: #DDD;
+  
 }
 .line-chart-wrapper .indicator-value {
   float: right;
 }
 .line-chart-wrapper.CDI {
-    background: #817c76;
+ /*   background: #817c76; */
 }
 canvas {
   width: 100%;
@@ -878,25 +907,34 @@ a.compare {
 .cdi-link {
   text-align: center;
 }
+
+.trend .year-results {
+    clear:left;
+        position: relative;
+    bottom: 20px;
+
+}
+
 #home-cdi .year-results a,
 .cdi-link a {
-  display: inline-block;
-  background: #296976;
-  color: #FFF;
-  padding: 7px 30px;
-  border-radius: 5px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-transform: capitalize;
+      display: inline-block;
+    background: #296976;
+    color: #fff;
+    padding: 7px 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    
 }
 .cdi-link a:visited,
 .cdi-link a:link {
   color: #FFF;
 }
-#home-cdi .trend .year-results a {
+/* #home-cdi .trend .year-results a {
   margin-top: 70px;
   margin-left: 50px;
-}
+}*/
 .indicator-label {
   font-weight: bold;
 }
@@ -923,7 +961,7 @@ a.compare {
 }
 .indicator-label.category.CDI,
 .line-chart-header.CDI {
-  color: #FFFFFF;
+  color: #574D40;
 }
 .indicator-label.category.CDI_AID,
 .line-chart-header.CDI_AID {
