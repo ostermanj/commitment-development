@@ -16,30 +16,12 @@
             <td><a href="#" class="sorting" data-field="country">Country</a></td>
             <td>Score</td>
             <td>Policies</td>
-            <td>Info</td>
-            <td>Trend</td>
-            <td>Compare</td>
+            
           </tr>
         </thead>
         <tbody>
         </tbody>
-	<tfoot>
-          <tr>
-                <td  colspan="7" id="overall-explanation">
-<div style="min-width: 920px; clear:both;">
-   <p>
-       <!-- Which wealthy nations are helping poor ones the most? Explore the map above to find out. Each year, the CDI ranks wealthy governments on how well they are living up to their potential to help poor countries. The Index scores seven policy areas that affect the well-being of others around the world: aid, trade, finance, migration, environment, security, and technology. Overall scores are the average of the bunch.-->
-   </p>
-
-   <!--<div class="callout left" style="width:100%">
-        <p><b>Need more info?</b> Read this year's <b><a href="http://www.cgdev.org/publication/commitment-development-index-2014">brief</a></b> and <b><a href="http://www.cgdev.org/sites/default/files/141110-CGD-CDI-Card.pdf">post card</a></b> about the latest edition.  Watch a <b><a href="http://www.youtube.com/watch?v=rJjRQMQl6d8" target="_blank">video</a></b>&nbsp;about using the tool.  Learn about membership in the <b><a href="http://www.cgdev.org/page/cdi-consortium">CDI Consortium</a></b>.
-        </p>
-   </div> -->
-</div>
-
-                </td>
-          </tr>
-        </tfoot>
+	
       </table>
       <table id="home-cdi-indicator" style="display: none">
         <thead>

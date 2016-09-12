@@ -144,13 +144,15 @@
     width: 100%;
     left: 0;
     bottom: 5px;
-    color: #f3f3f3 !important;
-    font-size: 13px;
     transition: opacity 0.5s linear;
     opacity: 0;
     display: none;
 }
 
+.reset-weight a {
+    color: #f3f3f3 !important;
+    font-size: 13px;
+}
 
 
 .weighted-component .reset-weight {
@@ -175,6 +177,16 @@
     background-color: #e8b9b9 !important;
 }*/
 
+#home-cdi tr td:first-child {
+    width:70px;
+}
+
+#home-cdi tr td:nth-child(2) {
+    width:115px;
+}
+
+
+
 tr.master-row td:first-child::before, tr.master-row td:nth-child(3)::before {
     position: absolute;
     transition: color .7s ease-in-out;
@@ -186,7 +198,7 @@ tr.master-row td:first-child::before, tr.master-row td:nth-child(3)::before {
 }
 
 .change-score td:nth-child(3)::before {
-    left:20px !important;
+    left:15px !important;
 }
 
 
@@ -332,9 +344,9 @@ span.os, span.ns {
   color: #006B77;
   text-transform: uppercase;
 }
-#new_cdi table thead td:first-child {
+/*#new_cdi table thead td:first-child {
   width: 92px;
-}
+}*/
 #new_cdi table tr.master-row {
   border-bottom: 2px solid #f3f3f3;
   background-color:#f3f3f3;    
@@ -391,7 +403,7 @@ table#home-cdi-indicator tr.components {
   border-bottom: 1px solid #DDD;
 }
 .chart-holder {
-  width: 400px;
+ 
   height: 20px;
   background: #DFDFDB;
   margin-bottom: 20px;
@@ -463,7 +475,7 @@ div.chart-holder > div.transition {
 
 #new_cdi table tr.master-row td:nth-child(3) {
     width: 69px;
-    padding-left: 40px;
+    padding-left: 30px;
    
 }
 
@@ -1214,6 +1226,19 @@ span.country-label {
     
     }
     
+
+        .reset-weight {
+
+        width: 100%;
+        text-align: right;
+        right: 10px;
+    }
+    
+    .reset-weight a {
+        position: relative;
+        right: 10px;
+    }
+    
     .flexbox .mainNav {
         height:66px;
     }
@@ -1257,3 +1282,38 @@ span.country-label {
     }
      
 }
+
+@media screen and (max-width: 600px) {
+   
+
+    #new_cdi table tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {
+        text-align: left;
+        padding-left: 10px;
+    }
+    #home-cdi {
+        font-size:12px;
+    }
+    
+    #home-cdi tr td:nth-child(2) {
+        width: 90px;
+    }
+    
+    .new-rank {
+        left:10px;
+    }
+    
+    .original-rank {
+        left:21px;
+    }
+    
+    #home-cdi tr td:first-child {
+        width: 45px;
+    }
+    
+    .change-score td:nth-child(3)::before {
+        left: 2px !important;
+    }
+    
+    #new_cdi table tr.master-row td:nth-child(3) {
+        width: 50px;
+    }

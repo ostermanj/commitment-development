@@ -829,7 +829,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
      *
      * 
      */
-
+/*
 function scaleTables() {
 	
 	var cdiDiv = document.getElementById('new_cdi');
@@ -889,5 +889,5 @@ jQuery(function($) {
 	   windowResized();
     });
 });
-
+*/
 
