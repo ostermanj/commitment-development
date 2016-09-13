@@ -305,10 +305,17 @@ cdiApp.CDI.View = Backbone.View.extend({
 */
     
         var delay = 0;
-      if ($target.hasClass('active') && viewType === 'info'){
+      if ($target.hasClass('active')){
           console.log('already active');
-          $('#' + countryCode + '-info .info-wrapper').css('height', 0);
-          delay = 500;
+          if (viewType === 'info'){
+              $('#' + countryCode + '-info .info-wrapper').css('height', 0);
+              delay = 500;
+          }
+          if (viewType === 'trend'){
+            $('#' + countryCode + '-trend .trends-wrapper').css('height', 0);
+              delay = 750;
+          }
+          
       }
         
         window.setTimeout(function(){
@@ -711,47 +718,61 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
         this.app = args.app;
     },
     render: function() {
-        var $content = $('<td colspan="4"></td>');
-        var that = this;
-        this.loaded = true;
-        this.$el.append($content);
-        
-	var allIndicators = ['CDI'].concat(this.app.indicatorsOrder);
-	that.app.indicators['CDI'] = 'Overall';
+         if (!this.loaded) {
 
-        allIndicators.forEach(function(indicator){
-            var data = [];
-            var $canvas = $('<canvas></canvas>');
-            var $canvasWrapper = $('<div class="line-chart-wrapper ' + indicator + '"></div>');
-            var label = that.app.indicators[indicator];
-            var value = that.app.flatIndicators[indicator].values[that.countryCode];
-            $canvasWrapper.append('<div class="line-chart-header ' + indicator + '">' +
-                '<span class="indicator-label">' + label + '</span> ' +
-                '<span class="indicator-value">' + value.toFixed(1) + '</span>' +
-                '</div>');
-            
-            
-            $canvasWrapper.append($canvas);
-           
-            $content.append($canvasWrapper);
+            this.loaded = true;
+             
+            var $content = $('<div class="trends-inner-wrapper"></div>');
+            var $contentWrapper = $('<div class="trends-wrapper"></div>');
+            var $contentTd = $('<td colspan="4"></td>');
+            var that = this;
+            this.loaded = true;
+            $contentWrapper.append($content);
+            $contentTd.append($contentWrapper);
+            this.$el.append($contentTd);
 
-            for (var year in that.app.flatIndicators[indicator].trends[that.countryCode]) {
-                data.push({
-                    year: year,
-                    data: that.app.flatIndicators[indicator].trends[that.countryCode][year]
+
+            var allIndicators = ['CDI'].concat(this.app.indicatorsOrder);
+            that.app.indicators['CDI'] = 'Overall';
+
+            allIndicators.forEach(function(indicator){
+                var data = [];
+                var $canvas = $('<canvas></canvas>');
+                var $canvasWrapper = $('<div class="line-chart-wrapper ' + indicator + '"></div>');
+                var label = that.app.indicators[indicator];
+                var value = that.app.flatIndicators[indicator].values[that.countryCode];
+                $canvasWrapper.append('<div class="line-chart-header ' + indicator + '">' +
+                    '<span class="indicator-label">' + label + '</span> ' +
+                    '<span class="indicator-value">' + value.toFixed(1) + '</span>' +
+                    '</div>');
+
+
+                $canvasWrapper.append($canvas);
+
+                $content.append($canvasWrapper);
+
+                for (var year in that.app.flatIndicators[indicator].trends[that.countryCode]) {
+                    data.push({
+                        year: year,
+                        data: that.app.flatIndicators[indicator].trends[that.countryCode][year]
+                    });
+                }
+                var lineChartModel = new cdiApp.LineChart.Model({
+                    data: data,
+                    indicator: indicator
                 });
-            }
-            var lineChartModel = new cdiApp.LineChart.Model({
-                data: data,
-                indicator: indicator
+                var lineChartView = new cdiApp.LineChart.View({
+                    model: lineChartModel,
+                    el: $canvas
+                });
+                //$content.append(lineChartView.$el);
             });
-            var lineChartView = new cdiApp.LineChart.View({
-                model: lineChartModel,
-                el: $canvas
-            });
-            //$content.append(lineChartView.$el);
-        });
-        $content.append('<div class="year-results"><a href="/cdi-2015/country/' + this.countryCode + '">This year\'s result</a></div>');
-        $('#' + this.countryCode + '-trend > td').css('opacity', 1);
+            $content.append('<div class="year-results"><a href="/cdi-2015/country/' + this.countryCode + '">This year\'s result</a></div>');
+            var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height();
+            $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
+        } else {
+            var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height(); //CAN REWRITE HERE TO AVOID REPETITION
+            $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
+        }
     }
 });

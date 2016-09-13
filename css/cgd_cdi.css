@@ -376,27 +376,36 @@ span.os, span.ns {
 }
 
 #new_cdi table tbody tr.info > td, #new_cdi table tbody tr.trend > td {
-        padding: 10px 10px 10px 50px;
+        padding: 10px;
+}
+
+#new_cdi table tbody tr.info > td {
+    padding-left:50px;
 }
 
 #new_cdi table tbody tr.info tr{
   display: table-row;
 }
 
-.info-wrapper {
+.info-wrapper, .trends-wrapper {
     overflow: hidden;
     transition: height 0.5s linear;
     height: 0;
     max-width: 650px;
 }
 
-tr.trend > td {
+.trends-wrapper {
+    max-width: 100%;
+    transition-duration: 0.75s;
+}
+
+/*tr.trend > td {
  
-    transition: opacity 1s linear;
+    transition: opacity height 0.5s linear;
     
     opacity: 0;
 }
-
+*/
 table#home-cdi-indicator.CDI_AID tr.active td:nth-child(2),
 table#home-cdi-indicator.CDI_AID tr.components {
     background: rgba(158, 20, 46, .15);
