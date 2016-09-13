@@ -915,17 +915,24 @@ a.compare {
 
 }
 
-#home-cdi .year-results a,
-.cdi-link a {
+#home-cdi .year-results a, .cdi-link a, a.load-trends {
       display: inline-block;
-    background: #296976;
-    color: #fff;
-    padding: 7px 30px;
+    background: #fff;
+    color: #296976;
+    padding: 7px 15px;
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    border: 1px solid #296976;
     
+}
+
+a.load-trends {
+    float:left;
+    margin-right: 15px;
+    background: url('../images/trends.png') no-repeat 7px center;
+    background-size: 20px;
+    padding-left: 30px;
 }
 .cdi-link a:visited,
 .cdi-link a:link {

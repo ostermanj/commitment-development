@@ -270,7 +270,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         }
     },
     events: {
-        'click tr.master-row': 'showCollapsed',
+        'click tr.master-row, .load-trends': 'showCollapsed',
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
 	'click a.sorting':'sortColumn'
@@ -285,7 +285,9 @@ cdiApp.CDI.View = Backbone.View.extend({
         var viewType = $target.attr('data-v');
         console.log(countryCode);
         //var viewType = $target.hasClass('show-info') ? 'info' : 'trend'; // do once for info and once for trend
+        console.log(this.collapsibleViews);
         var view = this.collapsibleViews[countryCode][viewType];
+        console.log(view);
 /*
             if($('.active-trend').length){
                previousTrend = $('.active-trend');
@@ -301,8 +303,9 @@ cdiApp.CDI.View = Backbone.View.extend({
                }
            }
 */
+    
         var delay = 0;
-      if ($target.hasClass('active')){
+      if ($target.hasClass('active') && viewType === 'info'){
           console.log('already active');
           $('#' + countryCode + '-info .info-wrapper').css('height', 0);
           delay = 500;
@@ -313,6 +316,7 @@ cdiApp.CDI.View = Backbone.View.extend({
             view.toggle();
             event.preventDefault();
         }, delay);
+    
         
     },
     countrySelected: function(event) {
@@ -687,7 +691,10 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                
                 that.$el.append(content);
                 cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
+                $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Load trends</a>');
                 $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
+                $('#' + that.countryCode + '-info .year-results a').text('Go to country report');
+                
                 
             }).error(function() {
                 that.$el.append('<td colspan="4" class="info-td"><div class="info-wrapper">Data not available.</div></td>');
