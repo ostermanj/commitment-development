@@ -390,6 +390,13 @@ span.os, span.ns {
     max-width: 650px;
 }
 
+tr.trend > td {
+ 
+    transition: opacity 1s linear;
+    
+    opacity: 0;
+}
+
 table#home-cdi-indicator.CDI_AID tr.active td:nth-child(2),
 table#home-cdi-indicator.CDI_AID tr.components {
     background: rgba(158, 20, 46, .15);

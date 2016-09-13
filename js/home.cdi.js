@@ -729,7 +729,10 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                 '<span class="indicator-label">' + label + '</span> ' +
                 '<span class="indicator-value">' + value.toFixed(1) + '</span>' +
                 '</div>');
+            
+            
             $canvasWrapper.append($canvas);
+           
             $content.append($canvasWrapper);
 
             for (var year in that.app.flatIndicators[indicator].trends[that.countryCode]) {
@@ -749,5 +752,6 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
             //$content.append(lineChartView.$el);
         });
         $content.append('<div class="year-results"><a href="/cdi-2015/country/' + this.countryCode + '">This year\'s result</a></div>');
+        $('#' + this.countryCode + '-trend > td').css('opacity', 1);
     }
 });
