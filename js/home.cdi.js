@@ -270,7 +270,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         }
     },
     events: {
-        'click tr.master-row, .load-trends': 'showCollapsed',
+        'click tr.master-row, .load-trends, .close-info': 'showCollapsed',
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
 	'click a.sorting':'sortColumn'
@@ -283,10 +283,13 @@ cdiApp.CDI.View = Backbone.View.extend({
         
         var countryCode = $target.attr('data-c');
         var viewType = $target.attr('data-v');
-        
+        $target = $target.hasClass('close-info') ? $('#' + countryCode + '-master') : $target;
         
         
         var view = this.collapsibleViews[countryCode][viewType];
+        console.log($target);
+        console.log(countryCode);
+        console.log(viewType);
         console.log(view);
         
 
@@ -312,11 +315,13 @@ cdiApp.CDI.View = Backbone.View.extend({
               }
               
               $('#' + countryCode + '-info .info-wrapper').css('height', 0);
+              
               delay = 500;
               this.showCollapsedHelper($target,view,delay,countryCode);
           }
           if (viewType === 'trend'){
             $('#' + countryCode + '-trend .trends-wrapper').css('height', 0);
+            
               delay = 750;
               this.collapseTrends($target,view,delay,countryCode);
              
@@ -338,14 +343,24 @@ cdiApp.CDI.View = Backbone.View.extend({
     },
     showCollapsedHelper: function($target,view,delay,countryCode){
          window.setTimeout(function(){
-            $target.toggleClass('active').toggleClass('active-trend');
+            
+                $target.toggleClass('active').toggleClass('active-trend');
+             
              console.log(view);
              console.log($target);
             if (view.className === 'trend'){
                 if ($target.hasClass('active')){
-                    $target.text('Hide trends');
+                    $target.addClass('fading');
+                    setTimeout(function(){
+                        $target.text('Hide trends');
+                        $target.removeClass('fading');
+                    },250);
                 } else {
-                    $target.text('Show trends');
+                    $target.addClass('fading');
+                    setTimeout(function(){
+                        $target.text('Show trends');
+                        $target.removeClass('fading');
+                    },250);
                 }
             }
           
@@ -721,13 +736,15 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
             $.get('/cdi-2015/overall/' + this.countryCode).done(function(data) {
-                var content = '<td colspan="4" class="info-td"><div class="info-wrapper">' + data + '</div></td>';
+                var content = '<td colspan="4" class="info-td"><div class="info-wrapper">' + data + '<a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
                
                 that.$el.append(content);
+                
                 cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
                 $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Show trends</a>');
                 $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
-                $('#' + that.countryCode + '-info .year-results a').text('Go to country report');
+                 //REWRITE HERE AND BELOW TO AVOID REPETITION
+                $('#' + that.countryCode + '-info .year-results a').text('Go to country report').attr('target', '_blank');
                 
                 
             }).error(function() {
@@ -736,6 +753,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
         } else {
             cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
              $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
+            
         }
     }
 });
@@ -752,6 +770,8 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
              
             var $content = $('<div class="trends-inner-wrapper"></div>');
             var $contentWrapper = $('<div class="trends-wrapper"></div>');
+             
+           
             var $contentTd = $('<td colspan="4"></td>');
             var that = this;
             
@@ -795,7 +815,9 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                 });
                 //$content.append(lineChartView.$el);
             });
-            $content.append('<div class="year-results"><a href="/cdi-2015/country/' + this.countryCode + '">This year\'s result</a></div>');
+             var $buttonWrapper = $('<div style="clear:left">');
+             $buttonWrapper.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Goto country report</a></div>');
+            $content.append($buttonWrapper);
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height();
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
             
@@ -803,6 +825,8 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
            
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height(); //CAN REWRITE HERE TO AVOID REPETITION
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
+            
+           
            
                         
         }

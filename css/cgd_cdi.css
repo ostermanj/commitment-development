@@ -192,8 +192,8 @@ tr.master-row td:first-child::before, tr.master-row td:nth-child(3)::before {
     transition: color .7s ease-in-out;
     color: transparent;
     content: ' ';
-    left: 0px;
-    top: 9px;
+    left: 7px;
+    top: 8px;
     
 }
 
@@ -348,7 +348,9 @@ span.os, span.ns {
   width: 92px;
 }*/
 #new_cdi table tr.master-row {
-  border-bottom: 2px solid #f3f3f3;
+  border-right: 2px solid #f3f3f3;
+    border-left: 2px solid #f3f3f3;
+    
   background-color:#f3f3f3;    
 }
 #new_cdi table thead tr,
@@ -361,7 +363,8 @@ span.os, span.ns {
 }
 #new_cdi table tr.master-row.active {
   border-bottom: none;
-        border-top: 3px outset #ddd;
+    border: 1px solid #bdbdbd;
+    border-bottom-color: #fff;
     background-color: #fff;
 }
 #new_cdi table tr.master-row td{
@@ -375,14 +378,20 @@ span.os, span.ns {
     background-color: #fff;
 }
 
-#new_cdi table tbody tr.info > td, #new_cdi table tbody tr.trend > td {
-        padding: 10px;
+
+tr.trend td, td.info-td {
+    padding:0 !important;
 }
 
-#new_cdi table tbody tr.info > td {
-    padding-left:50px;
+tr.info {
+    background-color: transparent;
+    border: 1px solid #bdbdbd;
 }
 
+tr.trend {
+    border: 1px solid #bdbdbd;
+        border-top: 2px solid transparent;
+}
 #new_cdi table tbody tr.info tr{
   display: table-row;
 }
@@ -391,7 +400,20 @@ span.os, span.ns {
     overflow: hidden;
     transition: height 0.5s linear;
     height: 0;
-    max-width: 650px;
+    padding: 10px 10px 0px 20px;
+   
+   background-color: #fff;
+   
+    /*max-width: 650px;*/
+}
+
+.close-info {
+        position: relative;
+    top: 16px;
+}
+
+.field-name-field-overall {
+    max-width:650px;
 }
 
 .trends-wrapper {
@@ -928,12 +950,12 @@ a.compare {
   text-align: center;
 }
 
-.trend .year-results {
+/*.trend .year-results {
     clear:left;
         position: relative;
     bottom: 20px;
 
-}
+}*/
 
 #home-cdi .year-results a, .cdi-link a, a.load-trends {
       display: inline-block;
@@ -945,6 +967,11 @@ a.compare {
     margin-bottom: 20px;
     border: 1px solid #296976;
     
+    
+}
+
+.info-td .year-results {
+    float:left;
 }
 
 a.load-trends {
@@ -954,6 +981,11 @@ a.load-trends {
     background-size: 20px;
     padding-left: 30px;
     width:90px;
+
+}
+
+a.load-trends.fading {
+    color:#fff;
 }
 
 .year-results a {
@@ -1392,3 +1424,8 @@ span.country-label {
     #new_cdi table tr.master-row td:nth-child(3) {
         width: 50px;
     }
+
+    a.load-trends {
+        width: 68px;
+    }
+}
