@@ -399,6 +399,10 @@ span.os, span.ns {
     transition-duration: 0.75s;
 }
 
+.trends-wrapper.faster-collapse {
+    transition-duration: 0.4s;
+}
+
 /*tr.trend > td {
  
     transition: opacity height 0.5s linear;
@@ -950,6 +954,15 @@ a.load-trends {
     background-size: 20px;
     padding-left: 30px;
 }
+
+.year-results a {
+    margin-right: 15px !important;
+    background: url('../images/external-link.png') no-repeat 7px center !important;
+    background-size: 16px !important;
+    padding-left: 30px !important;
+    
+}
+
 .cdi-link a:visited,
 .cdi-link a:link {
   color: #FFF;

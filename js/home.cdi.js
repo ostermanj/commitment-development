@@ -280,51 +280,66 @@ cdiApp.CDI.View = Backbone.View.extend({
         
         var $target = $(event.currentTarget);
        
-        console.log($target);
+        
         var countryCode = $target.attr('data-c');
         var viewType = $target.attr('data-v');
-        console.log(countryCode);
-        //var viewType = $target.hasClass('show-info') ? 'info' : 'trend'; // do once for info and once for trend
-        console.log(this.collapsibleViews);
+        
+        
+        
         var view = this.collapsibleViews[countryCode][viewType];
         console.log(view);
-/*
-            if($('.active-trend').length){
-               previousTrend = $('.active-trend');
-               if(countryCode != previousTrend.attr('data-c')){
-                var p_countryCode = previousTrend.attr('data-c');
-                    var p_viewType = viewType === 'info' ? 'info' : 'trend';
-                    var p_view = this.collapsibleViews[p_countryCode][p_viewType];
-                $('.active-trend .info-wrapper').css('height', 0);
-                window.setTimeout(function(){
-                    previousTrend.toggleClass('active').toggleClass('active-trend');
-                    p_view.toggle();
-               }, 200);
-               }
-           }
-*/
+        
+
     
         var delay = 0;
       if ($target.hasClass('active')){
           console.log('already active');
           if (viewType === 'info'){
+              var trendButton = $('#' + countryCode + '-info a.load-trends');
+              if (trendButton.hasClass('active-trend')){
+                  console.log('trends is open');
+                  $targetInfo = $target;
+                  $target = trendButton;
+                  viewInfo = view;
+                  view = this.collapsibleViews[countryCode]['trend'];
+                  console.log(view);
+                  $('#' + countryCode + '-trend .trends-wrapper').addClass('faster-collapse');
+                  delay = 500;
+                  this.collapseTrends($target,view,delay,countryCode);
+                  $target = $targetInfo;
+                  view = viewInfo;
+                  
+              }
+              
               $('#' + countryCode + '-info .info-wrapper').css('height', 0);
               delay = 500;
+              this.showCollapsedHelper($target,view,delay,countryCode);
           }
           if (viewType === 'trend'){
             $('#' + countryCode + '-trend .trends-wrapper').css('height', 0);
               delay = 750;
+              this.collapseTrends($target,view,delay,countryCode);
           }
           
+      } else {
+          this.showCollapsedHelper($target,view,delay,countryCode);
       }
         
-        window.setTimeout(function(){
-            $target.toggleClass('active').toggleClass('active-trend');
-            view.toggle();
-            event.preventDefault();
-        }, delay);
+    
     
         
+    },
+    collapseTrends: function($target,view,delay,countryCode){
+        $('#' + countryCode + '-trend .trends-wrapper').css('height', 0);
+        view.visible = false;
+        this.showCollapsedHelper($target,view,delay,countryCode);
+    },
+    showCollapsedHelper: function($target,view,delay,countryCode){
+         window.setTimeout(function(){
+            $target.toggleClass('active').toggleClass('active-trend');
+            view.toggle();
+           $('#' + countryCode + '-trend .trends-wrapper').removeClass('faster-collapse');
+        }, delay);
     },
     countrySelected: function(event) {
         var $target = $(event.target);
@@ -687,7 +702,6 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
         this.countryCode = args.countryCode;
     },
     render: function() {
-        console.log(this.loaded);
         that = this;
         if (!this.loaded) {
             
@@ -719,14 +733,15 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
     },
     render: function() {
          if (!this.loaded) {
-
-            this.loaded = true;
+            console.log('first load');
+             this.loaded = true;
+            
              
             var $content = $('<div class="trends-inner-wrapper"></div>');
             var $contentWrapper = $('<div class="trends-wrapper"></div>');
             var $contentTd = $('<td colspan="4"></td>');
             var that = this;
-            this.loaded = true;
+            
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
@@ -770,9 +785,13 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
             $content.append('<div class="year-results"><a href="/cdi-2015/country/' + this.countryCode + '">This year\'s result</a></div>');
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height();
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
+            
         } else {
+           
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height(); //CAN REWRITE HERE TO AVOID REPETITION
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
+           
+                        
         }
     }
 });
