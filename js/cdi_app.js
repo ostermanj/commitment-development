@@ -372,7 +372,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
         var viewName = indicator.toLowerCase() + 'View';
         if (indicator === 'CDI') { //this[viewName]) {
 
-            this[viewName].show();
+            this[viewName].show(indicator);
+            
         }
         else {
 

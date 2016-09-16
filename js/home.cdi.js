@@ -268,6 +268,8 @@ cdiApp.CDI.View = Backbone.View.extend({
         if (this.model.isWeighted){
             Backbone.pubSub.trigger('adjustCDI', [1, 0, this.model.ranksObj, this.model.originalRanksObj, 'resorted']);
         }
+        $('#home-cdi').addClass('home-processed');
+        console.log('hello');
     },
     events: {
         'click tr.master-row, .load-trends, .close-info': 'showCollapsed',
@@ -400,8 +402,13 @@ cdiApp.CDI.View = Backbone.View.extend({
         var url = '/cdi-2015/compare/' + selected.join('/');
         window.location = url;
     },
-    show: function() {
+    show: function(indicator) {
         this.$el.show();
+        if (indicator === 'CDI'){
+            setTimeout(function(){
+                    $('#home-cdi').addClass('home-processed');
+            }, 200);
+        }
     },
     hide: function() {
         this.$el.hide();
@@ -673,18 +680,27 @@ cdiApp.mainNav.View = Backbone.View.extend({
     },
     menuItemClicked: function(event) {
         event.preventDefault();
-	var st = jQuery(document).scrollTop();
+	//var st = jQuery(document).scrollTop();
         var $activeItem = this.$el.find('div.active');
         var activeIndicator = $activeItem.data('indicator');
         $activeItem.removeClass('active');
         var $target = $(event.target);
-
         $target.parent().parent().addClass('active');
-        cgdCdi.hideIndicator(activeIndicator);
-        this.toggleSliders($target.data('indicator'));
-        cgdCdi.reload($target.data('indicator'));
         
-	jQuery(document).scrollTop(st);
+        this.toggleSliders($target.data('indicator'));
+        if ($target.data('indicator') === 'CDI'){
+            $('#indicator-description-wrapper').removeClass('idw-processed');
+            setTimeout(function(){
+                $('.indicator-description, .indicator-explanation').empty();
+                cgdCdi.hideIndicator(activeIndicator);
+                cgdCdi.reload($target.data('indicator'));                
+            }, 500);
+        } else {
+            cgdCdi.hideIndicator(activeIndicator);
+        cgdCdi.reload($target.data('indicator'));
+        }
+        
+	//jQuery(document).scrollTop(st);
     },
     toggleSliders: function(indicator){
         if (indicator !== 'CDI'){

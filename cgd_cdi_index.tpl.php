@@ -25,28 +25,31 @@
       </table>
       <table id="home-cdi-indicator" style="display: none">
         <thead>
-	  <tr>
+<!--	  <tr>
 		<td  colspan=6 id="indicator-description">
 		</td>
-	  </tr>
+	  </tr>-->
           <tr>
             <td><a href="#" class="sorting asc" data-field="rank">Rank</a></td>
             <td><a href="#" class="sorting" data-field="country">Country</a></td>
             <td>Score</td>
-            <td>Policies</td>
-            <td>Components</td>
-            <td>Compare</td>
+            <td>Indicators</td>
+            
           </tr>
         </thead>
         <tbody>
         </tbody>
-	<tfoot>
+	<!--<tfoot>
 	  <tr>
                 <td  colspan=6 id="indicator-explanation">
                 </td>
           </tr>
-	</tfoot>
+	</tfoot> -->
       </table>
+        <div id="indicator-description-wrapper">
+            <div id="indicator-description"></div>
+            <div id="indicator-explanation"></div>
+        </div>
     </div>
 <div id="twitter_fb" style="margin: 0;display: none;">
     <!--Twitter and Facebook links-->

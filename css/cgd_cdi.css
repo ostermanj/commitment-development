@@ -177,15 +177,26 @@
     background-color: #e8b9b9 !important;
 }*/
 
-#home-cdi tr td:first-child {
+#home-cdi tr td:first-child, #home-cdi-indicator tr td:first-child  {
     width:70px;
 }
 
-#home-cdi tr td:nth-child(2) {
+#home-cdi-indicator tr.master-row td:first-child {
+    padding-left: 50px !important;
+    width: 40px;
+}
+
+#home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2)  {
     width:115px;
 }
 
-
+#home-cdi-indicator {
+    margin-right: 30px;
+    float: left;
+    width: 50%;
+    min-width: 400px;
+    transition: width 0.5s linear;
+}
 
 tr.master-row td:first-child::before, tr.master-row td:nth-child(3)::before {
     position: absolute;
@@ -330,9 +341,14 @@ span.os, span.ns {
     padding: 0 1%;
     margin: 0 auto;
 }
-#new_cdi table {
-  width: 100%;
-  transform-origin: top left;
+#new_cdi #home-cdi {
+  width: 50%;
+    transition: width 0.5s linear;
+  
+}
+
+#new_cdi #home-cdi.home-processed {
+    width: 100%;
 }
 #new_cdi table thead {
   border-bottom: 2px solid #333;
@@ -347,17 +363,16 @@ span.os, span.ns {
 /*#new_cdi table thead td:first-child {
   width: 92px;
 }*/
+
+
+
 #new_cdi table tr.master-row {
   border-right: 2px solid #f3f3f3;
     border-left: 2px solid #f3f3f3;
     
   background-color:#f3f3f3;    
 }
-#new_cdi table thead tr,
-#new_cdi table#home-cdi tr.master-row:nth-last-child(3),
-#new_cdi table#home-cdi-indicator tr.master-row:nth-last-child(2) {
-  border-bottom: 1px solid #DDD;
-}
+
 #new_cdi table tr.master-row:first-child {
   border-top: none;
 }
@@ -504,13 +519,29 @@ div.chart-holder > div.transition {
 .chart-holder div.indicator.zero {
         margin-left: -2px;
 }
-.indicator-description {
+/*.indicator-description {
     text-transform: none;
     color: #000;
     font-weight: 100;
     text-align: left;
-    padding: 10px 0;
+    padding: 20px 0;
+    display: none;
+}*/
+
+#indicator-description-wrapper {
+    margin-top: 75px;
+    opacity: 0;
+    transition: opacity 0.5s linear;
 }
+
+#indicator-description-wrapper.idw-processed {
+    opacity: 1;
+}
+
+#indicator-explanation {
+    margin-top: 20px;
+}
+
 .indicator-description h3 {
     font-family: Lato, Verdana, Arial, sans-serif;
 }
@@ -543,7 +574,7 @@ div.chart-holder > div.transition {
     padding-left: 20px;
 }
 
-#new_cdi table tr.master-row td:nth-child(3) {
+#new_cdi table tr.master-row td:nth-child(3), #home-cdi-indicator tr.master-row td:nth-child(3) {
     width: 69px;
     padding-left: 30px;
    
@@ -1380,6 +1411,8 @@ span.country-label {
     .flexbox .mainNav {
         height:132px;
     }
+    
+   
 }
 @media screen and (max-width: 739px) {
     .mainNav.stick-to-top {
@@ -1387,7 +1420,14 @@ span.country-label {
         top: 0px;
     
     }
-     
+      #home-cdi-indicator {
+        float: none;
+        width: 100%;
+    }
+    
+    #indicator-description-wrapper {
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 600px) {
