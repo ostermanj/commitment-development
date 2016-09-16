@@ -43,13 +43,10 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         this.$el.find('tbody').empty();
 	this.el.className = this.indicator;
         this.collapsibleViews = {};
+        $('#indicator-description-wrapper').removeClass('idw-processed');
+        $('#home-cdi').removeClass('home-processed');
 	
-	this.$el.find('#indicator-description').empty();
-	this.$el.find('#indicator-description').append('<div class="indicator-description">'+this.model.data.description+'</div>');	
-
-	this.$el.find('#indicator-explanation').empty();
-        this.$el.find('#indicator-explanation').append('<div class="indicator-description">'+this.model.data.explanation+'</div>');	
-
+        
         var rank = 0;
             for (var index in this.groupedValues) {
                 if (this.groupedValues.hasOwnProperty(index)) {
@@ -73,37 +70,44 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     };
 
                     var $chartHolder = $('<div class="chart-holder"></div>');
-                    var $row = $('<tr class="' + i + '-master master-row"></tr>');
+                    var $row = $('<tr class="' + i + '-master master-row" data-c="' + i + '"></tr>');
                     $row.html('<td>' + item.rank + '</td>' +
-                        '<td><a href="cdi-2015/country/' + i + '"><span class="country-label">' + item.country + '</a></span></td>' +
+                        '<td><a href="#"><span class="country-label">' + item.country + '</a></span></td>' +
                         '<td>' + item.value_label + '</td>' +
-                        '<td><div class="chart-holder"></div></td>'+
-			'<td><a href="#" class="show-components" data-c="' + i + '"></a></td>'+ 
-                        '<td><input type="checkbox" value="' + i + '" class="compare-input"/><a href="#" class="compare">Compare</a></td>'
-		    );
+                        '<td><div class="chart-holder"></div></td>');
 
                     this.$el.find('tbody').append($row);
                     this.app.createBarChart(2015, i, [this.indicator], $row.find('.chart-holder'), false, item.min, item.max, item.min_label, item.max_label, 2);
 
                     //$('#new_cdi table tbody').append('<tr id="' + data[i].c + '-info" class="info"><td></td><td colspan="5">Info</td></tr>');
+                   
                     this.$el.find('tbody').append(componentsView.$el);
+                    
+                    setTimeout(function(){
+                        $('#indicator-description').empty();
+                        $('#indicator-description').append('<div class="indicator-description">' + that.model.data.description + '</div>');
+                        $('#indicator-explanation').empty();
+                        $('#indicator-explanation').append('<div class="indicator-description">' + that.model.data.explanation + '</div>');
+                        $('#indicator-description-wrapper').addClass('idw-processed');
+                    }, 500);
                 }
             }
     },
     events: {
-        'click a.show-components': 'showComponents',
+        'click tr.master-row': 'showComponents',
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
 	'click a.sorting':'sortColumn'
     },
     showComponents: function(event) {
-        $target = $(event.target);
+        console.log(event);
+        $target = $(event.currentTarget);
         $target.toggleClass('active');
-        var countryCode = $target.data('c');
+        var countryCode = $target.attr('data-c');
         var view = this.collapsibleViews[countryCode]['components'];
-        var $countryRow = this.$el.find('tr.' + countryCode + '-master');
+    //    var $countryRow = this.$el.find('tr.' + countryCode + '-master');
         view.toggle();
-        $countryRow.toggleClass('active');
+        $target.toggleClass('active');
         event.preventDefault();
     },
 
