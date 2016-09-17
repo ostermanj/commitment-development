@@ -696,8 +696,11 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 cgdCdi.reload($target.data('indicator'));                
             }, 500);
         } else {
+            var yPos = $(window).scrollTop();
+            console.log(yPos);
             cgdCdi.hideIndicator(activeIndicator);
-        cgdCdi.reload($target.data('indicator'));
+            cgdCdi.reload($target.data('indicator'));
+            $(window).scrollTop(yPos);
         }
         
 	//jQuery(document).scrollTop(st);

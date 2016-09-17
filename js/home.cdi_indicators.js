@@ -40,8 +40,9 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     render: function() {
         var that = this;
         var indicators = this.indicators;
+       
         this.$el.find('tbody').empty();
-	this.el.className = this.indicator;
+        this.el.className = this.indicator;
         this.collapsibleViews = {};
         $('#indicator-description-wrapper').removeClass('idw-processed');
         $('#home-cdi').removeClass('home-processed');
@@ -92,6 +93,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     }, 500);
                 }
             }
+        
     },
     events: {
         'click tr.master-row': 'showComponents',

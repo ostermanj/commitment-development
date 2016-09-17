@@ -1420,9 +1420,10 @@ span.country-label {
         top: 0px;
     
     }
-      #home-cdi-indicator {
+      #home-cdi-indicator, #home-cdi {
         float: none;
-        width: 100%;
+        width: 100% !important;
+          min-width: 100%;
     }
     
     #indicator-description-wrapper {
@@ -1437,12 +1438,21 @@ span.country-label {
         text-align: left;
         padding-left: 10px;
     }
-    #home-cdi {
+    #home-cdi, #home-cdi-indicator {
         font-size:12px;
     }
     
-    #home-cdi tr td:nth-child(2) {
+    #home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2) {
         width: 90px;
+    }
+    
+    #home-cdi-indicator tr.master-row td:first-child {
+    padding-left: 31px !important;
+        width:24px !important;
+    }
+    
+    tr.master-row td:first-child::before {
+     left: 0;
     }
     
     .new-rank {
@@ -1457,11 +1467,15 @@ span.country-label {
         width: 45px;
     }
     
+     #home-cdi-indicator tr td:first-child {
+      width: 40px;    
+    }
+    
     .change-score td:nth-child(3)::before {
         left: 2px !important;
     }
     
-    #new_cdi table tr.master-row td:nth-child(3) {
+    #new_cdi table tr.master-row td:nth-child(3), #home-cdi-indicator tr.master-row td:nth-child(3) {
         width: 50px;
     }
 
