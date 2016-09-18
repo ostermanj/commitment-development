@@ -402,7 +402,7 @@ tr.trend td, td.info-td {
     padding:0 !important;
 }
 
-tr.info {
+tr.info, tr.components {
     background-color: transparent;
     border: 1px solid #bdbdbd;
 }
@@ -415,7 +415,7 @@ tr.trend {
   display: table-row;
 }
 
-.info-wrapper, .trends-wrapper {
+.info-wrapper, .trends-wrapper, .components-wrapper {
     overflow: hidden;
     transition: height 0.5s linear;
     height: 0;
@@ -450,7 +450,7 @@ tr.trend {
     
     opacity: 0;
 }
-*/
+*//*
 table#home-cdi-indicator.CDI_AID tr.active td:nth-child(2),
 table#home-cdi-indicator.CDI_AID tr.components {
     background: rgba(158, 20, 46, .15);
@@ -481,7 +481,7 @@ table#home-cdi-indicator.CDI_MIG tr.components {
 }
 table#home-cdi-indicator tr.components {
   border-bottom: 1px solid #DDD;
-}
+}*/
 .chart-holder {
  
   height: 20px;

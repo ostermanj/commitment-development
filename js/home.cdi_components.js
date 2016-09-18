@@ -19,10 +19,14 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
     render: function() {
         if (!this.loaded) {
             this.loaded = true;
-            var $content = $('<td></td>');
-            this.$el.append($content);
-            $content.before('<td/><td/><td/>');
-            $content.after('<td/><td/>');
+            var $contentTd = $('<td colspan="4"></td>');
+            var $contentWrapper = $('<div class="components-wrapper"></div>');
+            var $content = $('<div class="components-inner-wrapper"></div>');
+            $contentWrapper.append($content);
+            $contentTd.append($contentWrapper);
+            this.$el.append($contentTd);
+          
+          
             for(var i in this.data) {
                 var $label, $chart;
                 var indicators = [];
@@ -51,6 +55,8 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                 }
             }
         }
+        var cHeight = $('.components-inner-wrapper').height() + 40;
+        $('.components-wrapper').height(cHeight);
     },
     events: {
         'click a.indicator-info': 'showIndicatorInfo'

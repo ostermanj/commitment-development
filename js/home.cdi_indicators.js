@@ -109,7 +109,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         var view = this.collapsibleViews[countryCode]['components'];
     //    var $countryRow = this.$el.find('tr.' + countryCode + '-master');
         view.toggle();
-        $target.toggleClass('active');
+    //    $target.toggleClass('active');
         event.preventDefault();
     },
 
