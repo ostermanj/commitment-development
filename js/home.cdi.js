@@ -518,6 +518,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 resetWeightDiv.className = 'reset-weight';
                 var resetWeight = document.createElement('a');
                 resetWeight.href = 'javascript:void(0);';
+                $(resetWeightDiv).attr('aria-hidden', true);
                
                 resetWeight.innerHTML = 'Reset weights';
                 resetWeightDiv.appendChild(resetWeight);
@@ -662,6 +663,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
             {$('.slider-selector').removeClass('jump-selector');
         }, 400);
         console.log(this);
+        $('.reset-weight').attr('aria-hidden', true);
        e = 'resetWeight';
        this.selectorStop(e);
     },
@@ -701,6 +703,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
             cgdCdi.hideIndicator(activeIndicator);
             cgdCdi.reload($target.data('indicator'));
             $(window).scrollTop(yPos);
+            
         }
         
 	//jQuery(document).scrollTop(st);

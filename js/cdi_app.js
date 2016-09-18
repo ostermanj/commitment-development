@@ -373,7 +373,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
         if (indicator === 'CDI') { //this[viewName]) {
 
             this[viewName].show(indicator);
-            
+            $('.weight-toggle, .reset-weight').removeClass('weighted-override');
+            $('.reset-weight').attr('aria-hidden', false);
         }
         else {
 
@@ -419,7 +420,11 @@ new code : adds object 'original' to main indicators and copies data to it so th
     },
     changeWeight: function(a,transition, et){ //a = isWeighted 1 or 0 ie at least one component's weight has been changed (!0)
       console.log(a); 
-    
+    if (a === 0){
+        $('.reset-weight').attr('aria-hidden', true);
+    } else {
+        $('.reset-weight').attr('aria-hidden', false);
+    }
      sumTotalWeights = this.totalWeightsFn();
 
 
@@ -629,7 +634,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
      */
     loadCDI: function(a, userWeighted, scroll) {
 
-
+        
 
    
         var cdiModel = new cdiApp.CDI.Model({
@@ -646,6 +651,9 @@ console.log('triggerign rankCountries with true, 0, 1, click');
         this.cdiView.render();
     },
     loadIndicator: function(indicator) {
+        
+        $('.weight-toggle, .reset-weight').addClass('weighted-override');
+        $('.reset-weight').attr('aria-hidden', true);
         var indicatorLowerCase = indicator.toLowerCase();
         var data = this.sortScore(indicator, 'score');
         var cdiModel = new cdiApp.CDI_Indicator.Model({

@@ -159,6 +159,10 @@
    opacity:1;
 }
 
+.reset-weight.weighted-override {
+    opacity: 0 !important;
+}
+
 .slider-selector.active-selector {
     background-color: rgba(29,69,76,0.8);
 }
@@ -794,9 +798,13 @@ div.chart-holder > div.transition {
 }
 
 
-.CDI_TEC-bg,
+.CDI_TEC-bg, 
 *[class^="TEC_"][class*="-bg"] {
   background: #F5C144;
+}
+
+.CDI_TEC-bg.weighted-override {
+    background: #F5C144 !important;
 }
 
 .CDI_TEC-bg.weighted {
@@ -812,6 +820,11 @@ background: repeating-linear-gradient(
 *[class^="INV_"][class*="-bg"] {
   background: #D77438;
 }
+
+.CDI_INV-bg.weighted-override {
+    background: #D77438 !important;
+}
+
 .CDI_INV-bg.weighted {
 background: repeating-linear-gradient(
   45deg,
@@ -824,6 +837,10 @@ background: repeating-linear-gradient(
 .CDI_AID-bg,
 *[class^="AID_"][class*="-bg"] {
   background: #9E142E
+}
+
+.CDI_AID-bg.weighted-override {
+    background: #9E142E !important;
 }
 .CDI_AID-bg.weighted {
 background: repeating-linear-gradient(
@@ -838,6 +855,10 @@ background: repeating-linear-gradient(
 *[class^="ENV_"][class*="-bg"] {
   background: #41B976;
 }
+
+.CDI_ENV-bg.weighted-override {
+    background: #41B976 !important;
+}
 .CDI_ENV-bg.weighted {
 background: repeating-linear-gradient(
   45deg,
@@ -851,6 +872,11 @@ background: repeating-linear-gradient(
 *[class^="TRA_"][class*="-bg"] {
   background: #21358B;
 }
+
+.CDI_TRA-bg.weighted-override {
+    background: #21358B !important;
+}
+
 .CDI_TRA-bg.weighted {
 background: repeating-linear-gradient(
   45deg,
@@ -863,6 +889,9 @@ background: repeating-linear-gradient(
 .CDI_SEC-bg,
 *[class^="SEC_"][class*="-bg"] {
   background: #1792C5;
+}
+.CDI_SEC-bg.weighted-override {
+    background: #1792C5 !important;
 }
 .CDI_SEC-bg.weighted {
 background: repeating-linear-gradient(
@@ -877,6 +906,11 @@ background: repeating-linear-gradient(
 *[class^="MIG_"][class*="-bg"] {
   background: #8850AC;
 }
+
+.CDI_MIG-bg.weighted-override {
+    background: #8850AC !important;
+}
+
 .CDI_MIG-bg.weighted {
 background: repeating-linear-gradient(
   45deg,
@@ -1367,9 +1401,10 @@ span.country-label {
 
         .reset-weight {
 
-        width: 100%;
-        text-align: right;
-        right: 10px;
+            width: 80px;
+            text-align: right;
+            right: 10px;
+            left:auto;
     }
     
     .reset-weight a {
