@@ -31,7 +31,6 @@ js/cgd_cdi_country.js
 js/cgd_cdi_country.tpl.php
 js/cgd_cdi_country_comparison.js
 js/cgdev.js
-js/home.cdi_components.js
 js/home.cdi_indicators-new.js
 js/line_chart.js
 modal.tmpl.html
