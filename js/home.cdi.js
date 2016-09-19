@@ -285,7 +285,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         
         var countryCode = $target.attr('data-c');
         var viewType = $target.attr('data-v');
-        $target = $target.hasClass('close-info') ? $('#' + countryCode + '-master') : $target;
+        $target = $target.hasClass('close-info') ? $('#' + countryCode + '-master') : $target.hasClass('close-component') ? $('#home-cdi-indicator .' + countryCode + '-master') : $target;
         
         
         var view = this.collapsibleViews[countryCode][viewType];
@@ -838,7 +838,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                 //$content.append(lineChartView.$el);
             });
              var $buttonWrapper = $('<div style="clear:left">');
-             $buttonWrapper.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Goto country report</a></div>');
+             $buttonWrapper.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Go to country report</a></div>');
             $content.append($buttonWrapper);
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height();
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);

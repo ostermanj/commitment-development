@@ -96,7 +96,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         
     },
     events: {
-        'click tr.master-row': 'showComponents',
+        'click tr.master-row, .close-components': 'showComponents',
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
 	'click a.sorting':'sortColumn'
@@ -104,11 +104,19 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     showComponents: function(event) {
         console.log(event);
         $target = $(event.currentTarget);
-        $target.toggleClass('active');
+        
         var countryCode = $target.attr('data-c');
         var view = this.collapsibleViews[countryCode]['components'];
     //    var $countryRow = this.$el.find('tr.' + countryCode + '-master');
-        view.toggle();
+        delay = 0;
+        if ($target.hasClass('active')){
+            $('.' + countryCode + '-components .components-wrapper').height(0);
+            delay = 500;
+            }
+        setTimeout(function(){
+            $target.toggleClass('active');
+            view.toggle();            
+        }, delay);
     //    $target.toggleClass('active');
         event.preventDefault();
     },

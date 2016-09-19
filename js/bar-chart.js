@@ -58,7 +58,7 @@ var BarChartView = Backbone.View.extend({
 
   	if(this.model.level!=1 && this.model.level!=2){ 	
 	   // MIN and MAX indicators
-	   this.$el.append('<div class="indicator min">' + this.model.min_label + '</div>');
+	   this.$el.append('<div class="indicator min"><span>' + this.model.min_label + '</span></div>');
 	   if(this.model.min<0 && this.model.max!=0){
 	      var range_space = this.model.max-this.model.min;
 	      var negative_number_space = Math.abs(this.model.min)/range_space;
@@ -67,7 +67,7 @@ var BarChartView = Backbone.View.extend({
 	      this.$el.append('<div class="indicator zero" style="left:'+zero_position+'%">0</div>');
 	   }
 
-	   this.$el.append('<div class="indicator max">' + this.model.max_label + '</div>');
+	   this.$el.append('<div class="indicator max"><span>' + this.model.max_label + '</span></div>');
 	}
     }
 });

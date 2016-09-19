@@ -25,7 +25,8 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
-          
+             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Go to country report</a></div>');
+            $content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>')
           
             for(var i in this.data) {
                 var $label, $chart;
@@ -36,7 +37,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent + '">' + this.data[i] + '</div>');
                     $content.append($label);
                     for (var j in this.app.flatIndicators[i].children) {
-                        $label = $('<div class="indicator-label"><a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a>' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + '</div>');
+                        $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         $content.append($label);
                         $content.append($chart);
@@ -46,7 +47,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
 			this.app.createBarChart(2015, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
                     }
                 } else {
-                    var $label = $('<div class="indicator-label"><a href="#info" class="indicator-info" data-indicator="' + i + '">i</a>' + this.data[i] + '</div>');
+                    var $label = $('<div class="indicator-label">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a></div>');
                     var $chart = $('<div class="chart-holder"></div>');
                     indicators = [i];
                     $content.append($label);
@@ -54,9 +55,10 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     this.app.createBarChart(2015, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
                 }
             }
+            $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Go to country report</a></div>');
         }
-        var cHeight = $('.components-inner-wrapper').height() + 40;
-        $('.components-wrapper').height(cHeight);
+        var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 40;
+        $('.' + this.countryCode + '-components .components-wrapper').height(cHeight);
     },
     events: {
         'click a.indicator-info': 'showIndicatorInfo'

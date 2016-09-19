@@ -745,7 +745,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
                     $content.append($label);
                     if (child.children) {
                         for (var k in child.children) {
-                            $label = $('<div class="indicator-label"><a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a>' + that.flatIndicators[child.children[k]].label + '</div>');
+                            $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a></div>');
                             $chart = $('<div class="chart-holder"></div>');
                             $content.append($label);
                             $content.append($chart);
@@ -756,7 +756,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
                             that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                         }
                     } else {
-                        $label = $('<div class="indicator-label"><a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a>' + child.label + '</div>');
+                        $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         indicators = [children[j]];
                         $content.append($label);
