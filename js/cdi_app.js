@@ -626,7 +626,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
         });
         $('#new_cdi .mainNav').remove();  // NEW code to keep from duplicating main CDI navbar
         $('#new_cdi').prepend(this.mainNavView.$el);
-        $('#new_cdi').append('<button class="next-button">Next up: aid</button>');
+        $('#new_cdi').append('<a id="next-button">Next up: aid</a>');
         
         this.loadCDI();
     },

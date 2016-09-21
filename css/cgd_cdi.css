@@ -1037,7 +1037,7 @@ a.compare {
 
 }*/
 
-.year-results a, .cdi-link a, a.load-trends, .next-button {
+.year-results a, .cdi-link a, a.load-trends, #next-button {
       display: inline-block;
     background: #fff;
     color: #296976;
@@ -1051,8 +1051,11 @@ a.compare {
     
 }
 
-.next-button {
+#next-button {
     margin-left: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.5s linear;
 }
 
 .info-td .year-results, .components .year-results {

@@ -699,7 +699,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 cgdCdi.hideIndicator(activeIndicator);
                 cgdCdi.reload($target.data('indicator'));
                 console.log(cgdCdi.indicators);
-                $('.next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]);
+                $('#next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]);
             }, 500);
         } else {
             var yPos = $(window).scrollTop();
@@ -708,12 +708,20 @@ cdiApp.mainNav.View = Backbone.View.extend({
             cgdCdi.reload($target.data('indicator'));
             $(window).scrollTop(yPos);
             var labelIndex = cgdCdi.indicatorsOrder.indexOf($target.data('indicator'));
+            console.log($('#next-button'));
+            $('#next-button').css('opacity',0);
             if (labelIndex < cgdCdi.indicatorsOrder.length - 1){
                 var nextI = labelIndex + 1;
                 var nextLabel = cgdCdi.indicators[cgdCdi.indicatorsOrder[nextI]];
-                $('.next-button').text('Next up: ' + nextLabel);
+                setTimeout(function(){
+                    $('#next-button').text('Next up: ' + nextLabel);
+                    $('#next-button').css('opacity',1);
+                },500);
             } else {
-                $('.next-button').text('Next up: Overall scores');
+                setTimeout(function(){
+                $('#next-button').text('Next up: Overall scores');
+                $('#next-button').css('opacity',1);
+                },500);
             }
             
             
