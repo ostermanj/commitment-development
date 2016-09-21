@@ -6,6 +6,7 @@ cdiApp.CDI.Model = Backbone.Model.extend({
     initialize: function(args) {
         
         Backbone.pubSub.on('rankCountries', function(params){this.rankCountries(params);}, this); //subscribe to rankCountries trigger published in cdi_app.js
+       
         this.indicator = args.indicator;
         this.countries = args.countries;
         this.app = args.app;
@@ -481,6 +482,7 @@ cdiApp.mainNav.Model = Backbone.Model.extend({
 });
 cdiApp.mainNav.View = Backbone.View.extend({
     initialize: function() {
+         Backbone.pubSub.on('triggerNext', function(e){this.menuItemClicked(e);}, this); //subscribe to triggerNext trigger from next buttons
         this.render();
     },
     render: function() {
@@ -681,46 +683,52 @@ cdiApp.mainNav.View = Backbone.View.extend({
         'click .reset-weight a': 'resetWeight' 
     },
     menuItemClicked: function(event) {
+        console.log('click');
         event.preventDefault();
 	//var st = jQuery(document).scrollTop();
         var $activeItem = this.$el.find('div.active');
         var activeIndicator = $activeItem.data('indicator');
         $activeItem.removeClass('active');
-        var $target = $(event.target);
-        $target.parent().parent().addClass('active');
-        console.log($target.data('indicator'));
         
-        this.toggleSliders($target.data('indicator'));
-        if ($target.data('indicator') === 'CDI'){
+        var $target = $(event.target);
+        console.log('original target');
+        console.log($target);
+        $target = $target.hasClass('next-button') ? $('div.' + $target.attr('data-indicator') + '-bg a.selectable') : $target; 
+        $target.parent().parent().addClass('active');
+        console.log($target.attr('data-indicator'));
+        
+        this.toggleSliders($target.attr('data-indicator'));
+        if ($target.attr('data-indicator') === 'CDI'){
             console.log('Overall');
             $('#indicator-description-wrapper').removeClass('idw-processed');
             setTimeout(function(){
                 $('.indicator-description, .indicator-explanation').empty();
                 cgdCdi.hideIndicator(activeIndicator);
-                cgdCdi.reload($target.data('indicator'));
+                cgdCdi.reload($target.attr('data-indicator'));
                 console.log(cgdCdi.indicators);
-                $('#next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]);
+                $('.next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]).attr('data-indicator','CDI_AID');
+                
             }, 500);
         } else {
             var yPos = $(window).scrollTop();
             console.log(yPos);
             cgdCdi.hideIndicator(activeIndicator);
-            cgdCdi.reload($target.data('indicator'));
+            cgdCdi.reload($target.attr('data-indicator'));
             $(window).scrollTop(yPos);
-            var labelIndex = cgdCdi.indicatorsOrder.indexOf($target.data('indicator'));
-            console.log($('#next-button'));
-            $('#next-button').css('opacity',0);
+            var labelIndex = cgdCdi.indicatorsOrder.indexOf($target.attr('data-indicator'));
+            console.log($('.next-button'));
+            $('.next-button').css('opacity',0);
             if (labelIndex < cgdCdi.indicatorsOrder.length - 1){
                 var nextI = labelIndex + 1;
                 var nextLabel = cgdCdi.indicators[cgdCdi.indicatorsOrder[nextI]];
                 setTimeout(function(){
-                    $('#next-button').text('Next up: ' + nextLabel);
-                    $('#next-button').css('opacity',1);
+                    $('.next-button').text('Next up: ' + nextLabel).attr('data-indicator',cgdCdi.indicatorsOrder[nextI]);
+                    $('.next-button').css('opacity',1);
                 },500);
             } else {
                 setTimeout(function(){
-                $('#next-button').text('Next up: Overall scores');
-                $('#next-button').css('opacity',1);
+                $('.next-button').text('Next up: Overall scores').attr('data-indicator','CDI');
+                $('.next-button').css('opacity',1);
                 },500);
             }
             

@@ -626,9 +626,17 @@ console.log('triggerign rankCountries with true, 0, 1, click');
         });
         $('#new_cdi .mainNav').remove();  // NEW code to keep from duplicating main CDI navbar
         $('#new_cdi').prepend(this.mainNavView.$el);
-        $('#new_cdi').append('<a id="next-button">Next up: aid</a>');
+        $('#new_cdi').append('<a href="#" data-indicator="CDI_AID" class="next-button">Next up: aid</a>');
         
         this.loadCDI();
+    },
+    events: {
+      'click a.next-button': 'triggerNext'  
+    },
+    triggerNext: function(e){
+        e.preventDefault();
+        console.log('trigger next')
+        Backbone.pubSub.trigger('triggerNext', e); //using event pubSub to trigger event in another view
     },
 
     /**
