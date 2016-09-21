@@ -57,7 +57,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             }
             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Go to country report</a></div>');
         }
-        var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 40;
+        var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 90;
         $('.' + this.countryCode + '-components .components-wrapper').height(cHeight);
     },
     events: {

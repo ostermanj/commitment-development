@@ -688,14 +688,18 @@ cdiApp.mainNav.View = Backbone.View.extend({
         $activeItem.removeClass('active');
         var $target = $(event.target);
         $target.parent().parent().addClass('active');
+        console.log($target.data('indicator'));
         
         this.toggleSliders($target.data('indicator'));
         if ($target.data('indicator') === 'CDI'){
+            console.log('Overall');
             $('#indicator-description-wrapper').removeClass('idw-processed');
             setTimeout(function(){
                 $('.indicator-description, .indicator-explanation').empty();
                 cgdCdi.hideIndicator(activeIndicator);
-                cgdCdi.reload($target.data('indicator'));                
+                cgdCdi.reload($target.data('indicator'));
+                console.log(cgdCdi.indicators);
+                $('.next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]);
             }, 500);
         } else {
             var yPos = $(window).scrollTop();
@@ -703,8 +707,19 @@ cdiApp.mainNav.View = Backbone.View.extend({
             cgdCdi.hideIndicator(activeIndicator);
             cgdCdi.reload($target.data('indicator'));
             $(window).scrollTop(yPos);
+            var labelIndex = cgdCdi.indicatorsOrder.indexOf($target.data('indicator'));
+            if (labelIndex < cgdCdi.indicatorsOrder.length - 1){
+                var nextI = labelIndex + 1;
+                var nextLabel = cgdCdi.indicators[cgdCdi.indicatorsOrder[nextI]];
+                $('.next-button').text('Next up: ' + nextLabel);
+            } else {
+                $('.next-button').text('Next up: Overall scores');
+            }
+            
             
         }
+        
+        
         
 	//jQuery(document).scrollTop(st);
     },

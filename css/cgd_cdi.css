@@ -426,7 +426,7 @@ tr.trend {
     /*max-width: 650px;*/
 }
 
-.close-info {
+.close-info, .close-components {
         position: relative;
     top: 16px;
 }
@@ -443,6 +443,8 @@ tr.trend {
 .trends-wrapper.faster-collapse {
     transition-duration: 0.4s;
 }
+
+
 
 /*tr.trend > td {
  
@@ -545,13 +547,14 @@ div.chart-holder > div.transition {
 }*/
 
 #indicator-description-wrapper {
-    margin-top: 75px;
+    
     opacity: 0;
     transition: opacity 0.5s linear;
 }
 
 #indicator-description-wrapper.idw-processed {
     opacity: 1;
+    padding-top: 55px;
 }
 
 #indicator-explanation {
@@ -1034,7 +1037,7 @@ a.compare {
 
 }*/
 
-.year-results a, .cdi-link a, a.load-trends {
+.year-results a, .cdi-link a, a.load-trends, .next-button {
       display: inline-block;
     background: #fff;
     color: #296976;
@@ -1045,9 +1048,14 @@ a.compare {
     border: 1px solid #296976;
     
     
+    
 }
 
-.info-td .year-results {
+.next-button {
+    margin-left: 50px;
+}
+
+.info-td .year-results, .components .year-results {
     float:left;
 }
 
@@ -1085,7 +1093,7 @@ a.load-trends.fading {
   font-weight: bold;
 }
 #home-cdi-indicator .indicator-label {
-  margin-top: 40px;
+  margin-top: 50px;
   max-width: 360px;
   position: relative;
 }
@@ -1476,6 +1484,7 @@ span.country-label {
     
     #indicator-description-wrapper {
         margin-top: 20px;
+        padding-top: 0;
     }
 }
 
