@@ -123,9 +123,12 @@ cdiApp.CDI.View = Backbone.View.extend({
         this.indicator = this.model.indicator;
         this.countries = this.model.countries;
         this.app = this.model.app;
-	this.groupedValues = this.model.groupedValues;
-	this.propName = "";    
-	this.sortAsc = true;
+        this.groupedValues = this.model.groupedValues;
+        this.propName = "";    
+        this.sortAsc = true;
+        FB.init({
+          appId: '445215188878009'
+        });
         
     },
     sortArray: function(sortAsc,field){ //this successfully reordered the array but it's in the wrong place: after the ranking's been done
@@ -232,7 +235,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 $row.html('<td><span class="new-value new-rank"></span> <span class="original-value original-rank">' + item.rank_label + '</span></td>' +
                     '<td><a class="expand-row" href="#" title="Expand row"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
-                    '<td><div class="chart-holder"></div></td><td class="facebook-td"><a href="#"></a></td><td class="twitter-td"><a href="#"></a></td>');
+                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a href="https://twitter.com/intent/tweet?original_referer=' + encodeURIComponent(location.href) + '&amp;text=' + item.country.replace(' ','%20') + '%20ranks%20' + item.rank_label.replace('*','%20(tie)') + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
  
                 this.$el.find('tbody').append($row);
                 var indicators = this.indicator.children;
@@ -276,7 +279,27 @@ cdiApp.CDI.View = Backbone.View.extend({
         'click tr.master-row, .load-trends, .close-info': 'showCollapsed',
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
-	'click a.sorting':'sortColumn'
+        'click a.sorting':'sortColumn',
+        'click .facebook-td a': 'facebookShare'
+    },
+    facebookShare: function(event){
+        event.preventDefault();
+        console.log(event.target);
+        console.log(this.flatIndicators);
+        console.log(this.indicators);
+        console.log(this.model.originalRanksObj[$(event.target).attr('data-c')]);
+        var countryData = this.model.originalRanksObj[$(event.target).attr('data-c')];
+        var fbCountry = countryData.country;
+        var fbRank = countryData.rank_label.replace('*',' tie');
+        FB.ui(
+         {
+            method: 'feed',
+            name: fbCountry + ' ranks ' + fbRank + ' out of 27 on the 2015 Commitment to Development Index',
+            caption: 'The Commitment to Development Index: Ranking the Rich',
+            description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit the 5.5 billion people living in poorer nations.',
+            link: 'http://www.cgdev.org' + location.pathname,
+            picture: 'http://www.cgdev.org/sites/default/files/CDI2015/cdi-2015-fb-crop.jpg'
+        });   
     },
     showCollapsed: function(event) {
         event.preventDefault();
@@ -813,7 +836,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
             $.get('/cdi-2015/overall/' + this.countryCode).done(function(data) {
-                var content = '<td colspan="6" class="info-td"><div class="info-wrapper">' + data + '<a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper">' + data + '<a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
                
                 that.$el.append(content);
                 
@@ -825,7 +848,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                 
                 
             }).error(function() {
-                that.$el.append('<td colspan="6" class="info-td"><div class="info-wrapper">Data not available.</div></td>');
+                that.$el.append('<td colspan="7" class="info-td"><div class="info-wrapper">Data not available.</div></td>');
             });
         } else {
             cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
@@ -849,7 +872,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
             var $contentWrapper = $('<div class="trends-wrapper"></div>');
              
            
-            var $contentTd = $('<td colspan="6"></td>');
+            var $contentTd = $('<td colspan="7"></td>');
             var that = this;
             
             $contentWrapper.append($content);

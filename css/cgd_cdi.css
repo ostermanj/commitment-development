@@ -489,7 +489,7 @@ table#home-cdi-indicator tr.components {
   height: 20px;
   background: #DFDFDB;
   margin-bottom: 20px;
-  max-width: 98%;
+  
   position: relative;
 }
 
@@ -589,6 +589,9 @@ div.chart-holder > div.transition {
     background-color: #fff !important;
 }
 
+td.spacer {
+    width:15px;
+}
 .twitter-td, .facebook-td {
     width: 30px;
    
