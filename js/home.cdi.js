@@ -724,7 +724,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 cgdCdi.reload($target.attr('data-indicator'));
                 console.log(cgdCdi.indicators);
                 $('.next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]).attr('data-indicator','CDI_AID');
-                 $('#indicator-description-wrapper').addClass('idw-processed');
+                 $('#indicator-description-wrapper').addClass('idw-processed home');
                 
             }, 500);
         } else {
@@ -733,7 +733,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
             
             console.log(yPos);
           cgdCdi.hideIndicator(activeIndicator)
-           
+           $('#indicator-description-wrapper').removeClass('home');
             cgdCdi.reload($target.attr('data-indicator'));
         
             $(window).scrollTop(yPos);

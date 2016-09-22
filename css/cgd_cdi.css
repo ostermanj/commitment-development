@@ -550,15 +550,21 @@ div.chart-holder > div.transition {
     
     opacity: 0;
     transition: opacity 0.5s linear;
+    padding-top: 55px;
 }
 
 #indicator-description-wrapper.idw-processed {
     opacity: 1;
-    padding-top: 55px;
+    
+}
+
+#indicator-description-wrapper.home {
+  padding-top: 0;   
 }
 
 #indicator-explanation {
     margin-top: 20px;
+    
 }
 
 .indicator-description h3 {
@@ -1052,10 +1058,19 @@ a.compare {
 }
 
 .next-button {
-    margin-left: 50px;
+    margin: 25px auto;
+    
     text-transform: uppercase;
+    
+    
    
     transition: opacity 0.5s linear;
+}
+
+.home .next-button {
+        margin-top: 0;
+    margin-left: 50px;
+
 }
 
 
