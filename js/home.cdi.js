@@ -232,7 +232,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 $row.html('<td><span class="new-value new-rank"></span> <span class="original-value original-rank">' + item.rank_label + '</span></td>' +
                     '<td><a class="expand-row" href="#" title="Expand row"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
-                    '<td><div class="chart-holder"></div></td>');
+                    '<td><div class="chart-holder"></div></td><td class="facebook-td"><a href="#"></a></td><td class="twitter-td"><a href="#"></a></td>');
  
                 this.$el.find('tbody').append($row);
                 var indicators = this.indicator.children;
@@ -813,7 +813,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
             $.get('/cdi-2015/overall/' + this.countryCode).done(function(data) {
-                var content = '<td colspan="4" class="info-td"><div class="info-wrapper">' + data + '<a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+                var content = '<td colspan="6" class="info-td"><div class="info-wrapper">' + data + '<a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
                
                 that.$el.append(content);
                 
@@ -825,7 +825,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                 
                 
             }).error(function() {
-                that.$el.append('<td colspan="4" class="info-td"><div class="info-wrapper">Data not available.</div></td>');
+                that.$el.append('<td colspan="6" class="info-td"><div class="info-wrapper">Data not available.</div></td>');
             });
         } else {
             cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
@@ -849,7 +849,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
             var $contentWrapper = $('<div class="trends-wrapper"></div>');
              
            
-            var $contentTd = $('<td colspan="4"></td>');
+            var $contentTd = $('<td colspan="6"></td>');
             var that = this;
             
             $contentWrapper.append($content);

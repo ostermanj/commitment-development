@@ -589,6 +589,37 @@ div.chart-holder > div.transition {
     background-color: #fff !important;
 }
 
+.twitter-td, .facebook-td {
+    width: 30px;
+   
+}
+.twitter-td a, .facebook-td a {
+ width: 20px;
+ height: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+.facebook-td a {
+    background: url('../images/facebook.svg') no-repeat ;
+    background-size: contain;
+    
+}
+
+.twitter-td a {
+    background: url('../images/twitter.svg') no-repeat ;
+    background-size: contain;
+    
+}
+
+.twitter-td a:hover, .twitter-td a:focus {
+    background-image: url('../images/twitter-hover.svg')
+}
+
+.facebook-td a:hover, .facebook-td a:focus {
+    background-image: url('../images/facebook-hover.svg')
+}
+
 #new_cdi table tr.master-row td {
   text-align: center;
     position: relative;
