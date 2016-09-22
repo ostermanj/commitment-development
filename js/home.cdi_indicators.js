@@ -45,7 +45,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         this.el.className = this.indicator;
         this.collapsibleViews = {};
         $('#indicator-description-wrapper').removeClass('idw-processed');
-        $('#home-cdi').removeClass('home-processed');
+      
 	
         
         var rank = 0;

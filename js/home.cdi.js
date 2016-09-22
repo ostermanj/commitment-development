@@ -683,12 +683,24 @@ cdiApp.mainNav.View = Backbone.View.extend({
         'click .reset-weight a': 'resetWeight' 
     },
     menuItemClicked: function(event) {
-        console.log('click');
         event.preventDefault();
-	//var st = jQuery(document).scrollTop();
         var $activeItem = this.$el.find('div.active');
-        var activeIndicator = $activeItem.data('indicator');
         $activeItem.removeClass('active');
+        var activeIndicator = $activeItem.data('indicator');
+        if (activeIndicator === 'CDI'){
+            console.log('CDI');
+            $('#home-cdi').removeClass('home-processed');
+            that = this;
+            setTimeout(function(){
+                that.menuItemClickedContinued(event, activeIndicator);
+            }, 500);
+        } else {
+            console.log('Not CDI');
+            this.menuItemClickedContinued(event, activeIndicator);
+        }
+    },
+    menuItemClickedContinued: function(event, activeIndicator){
+        that = this;
         
         var $target = $(event.target);
         console.log('original target');
@@ -707,13 +719,18 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 cgdCdi.reload($target.attr('data-indicator'));
                 console.log(cgdCdi.indicators);
                 $('.next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]).attr('data-indicator','CDI_AID');
+                 $('#indicator-description-wrapper').addClass('idw-processed');
                 
             }, 500);
         } else {
             var yPos = $(window).scrollTop();
+          
+            
             console.log(yPos);
-            cgdCdi.hideIndicator(activeIndicator);
+          cgdCdi.hideIndicator(activeIndicator)
+           
             cgdCdi.reload($target.attr('data-indicator'));
+        
             $(window).scrollTop(yPos);
             var labelIndex = cgdCdi.indicatorsOrder.indexOf($target.attr('data-indicator'));
             console.log($('.next-button'));
@@ -732,6 +749,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 },500);
             }
             
+          
             
         }
         
