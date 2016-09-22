@@ -689,6 +689,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         var activeIndicator = $activeItem.data('indicator');
         if (activeIndicator === 'CDI'){
             console.log('CDI');
+            $('#indicator-description-wrapper').removeClass('idw-processed');
             $('#home-cdi').removeClass('home-processed');
             that = this;
             setTimeout(function(){
@@ -704,8 +705,12 @@ cdiApp.mainNav.View = Backbone.View.extend({
         
         var $target = $(event.target);
         console.log('original target');
-        console.log($target);
-        $target = $target.hasClass('next-button') ? $('div.' + $target.attr('data-indicator') + '-bg a.selectable') : $target; 
+        console.log($target)
+        var nexted = false;
+        if ($target.hasClass('next-button')){
+            nexted = true;
+            $target = $('div.' + $target.attr('data-indicator') + '-bg a.selectable');
+        }
         $target.parent().parent().addClass('active');
         console.log($target.attr('data-indicator'));
         
@@ -752,10 +757,11 @@ cdiApp.mainNav.View = Backbone.View.extend({
           
             
         }
-        
-        
-        
-	//jQuery(document).scrollTop(st);
+
+        var extra = $('body').width() > 720 ? 31 : 80;
+        var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
+        if (nexted) $('body').animate({scrollTop: scrollPoint}, 200);
+    
     },
     toggleSliders: function(indicator){
         if (indicator !== 'CDI'){
