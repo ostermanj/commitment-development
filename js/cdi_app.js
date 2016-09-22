@@ -631,7 +631,12 @@ console.log('triggerign rankCountries with true, 0, 1, click');
         this.loadCDI();
     },
     events: {
-      'click a.next-button': 'triggerNext'  
+      'click a.next-button': 'triggerNext',
+        'click .unstack-slider': 'toggleStack' //is this event in the right place?
+    },
+    toggleStack: function(){
+      $('.unstack-slider').toggleClass('off');
+        // do more stuff here
     },
     triggerNext: function(e){
         e.preventDefault();

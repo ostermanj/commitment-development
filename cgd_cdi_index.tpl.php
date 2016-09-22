@@ -17,6 +17,8 @@
             <td><a href="#" class="sorting" data-field="country">Country</a></td>
             <td>Score</td>
             <td>Policies</td>
+            <td class="spacer"></td>
+            <td id="unstack-td" colspan="2"><span>Stack bars</span><div class="unstack-slider"><div class="slider-selector"></div></div></td>  
             
           </tr>
         </thead>
