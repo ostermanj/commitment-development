@@ -468,6 +468,52 @@ console.log('triggerign rankCountries with true, 0, 1, click');
     
       //  this.adjustCDI(a, transition);
     },
+    unstackBars: function(){
+      console.log(this.flatIndicators);
+      console.log(cgdCdi);
+      console.log(cgdCdi.indicators);
+      console.log(cgdCdi.indicatorsOrder);
+        var barSpacing = 0.5; // spacing between bars expressed as percentage of chart-holder width
+        var maxOfAll = function(maxes) {
+            return Math.max.apply(null, maxes);
+        }
+        if (!this.maxes){
+            this.maxes = [];
+            for (var ind in this.flatIndicators){
+                 if (ind.indexOf('CDI_') != -1){
+                     this.maxes.push(this.flatIndicators[ind].original.max)
+                 }
+            }
+            this.maxes.push(maxOfAll(this.maxes)); //push maximum follow of array to be last value of that array
+        }
+        
+         for (var ind in this.flatIndicators){
+             if (ind.indexOf('CDI_') != -1){
+                
+                for (var c in this.flatIndicators[ind].original.values){ //refactor code below. 1 helper function to handle unstackBars and adjustCDI
+                    var segment = $('tr#' + c + '-master div.' + ind + '-bg');
+                    segment.addClass('transition');
+                    if (!segment[0].hasAttribute('data-unweighted')){ // if first time unstacking bars set new data atribute to hold the unweighted value
+                        $(segment).attr('data-unweighted', this.flatIndicators[ind].original.values[c])
+                    }
+                    var barIndex = cgdCdi.indicatorsOrder.indexOf(ind); //get the index of the bar segment
+                    var bWidth = $(segment).attr('data-unweighted') / this.maxes[this.maxes.length - 1] * ( 100 / 7 - barSpacing ) + '%';
+                    $(segment).css({'left': barIndex * 100 / 7 + '%', 'position': 'absolute', 'width': bWidth});
+                    var zeroMark = $('<div class="zero-mark">');
+                    $(zeroMark).css('left', barIndex * 100 / 7 + '%');
+                    $('#' + c + '-master .chart-holder').append(zeroMark);
+                    $('#home-cdi').addClass('unstacked');
+                    
+                    
+                    
+                }
+            }
+         }
+        console.log(this.maxes);
+    },
+    restackBars: function(){
+        console.log('restack');
+    },
     adjustCDI: function(params){ //params = [0, 1, Object, Object, "click"]
          /*
          * ADJUST BARS
@@ -636,7 +682,11 @@ console.log('triggerign rankCountries with true, 0, 1, click');
     },
     toggleStack: function(){
       $('.unstack-slider').toggleClass('off');
-        // do more stuff here
+        if ($('.unstack-slider').hasClass('off')){
+            this.unstackBars();
+        } else {
+            this.restackBars();
+        }
     },
     triggerNext: function(e){
         e.preventDefault();

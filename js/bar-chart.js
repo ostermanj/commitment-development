@@ -148,7 +148,7 @@ var BarChartItemView = Backbone.View.extend({
         });
         this.$el.data('value', data);
 	this.$el.attr('data-weighted', this.model.weighted);
-        this.$el.addClass('initial-load transition');
+        this.$el.addClass('initial-load transition bar-segment');
 
         // If we display the value on the bar we don't need the tooltip.
         if (this.includeValue) {
