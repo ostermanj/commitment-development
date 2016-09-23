@@ -528,7 +528,7 @@ table#home-cdi-indicator tr.components {
   border-bottom: 1px solid #DDD;
 }*/
 .chart-holder {
- 
+  
   height: 20px;
   background: #DFDFDB;
   margin-bottom: 20px;
@@ -664,6 +664,8 @@ td.spacer {
  height: 20px;
     display: block;
     cursor: pointer;
+    position: relative;
+    top: 2px;
 }
 
 .facebook-td a {
