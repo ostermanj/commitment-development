@@ -422,6 +422,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
       console.log(a); 
     if (a === 0){
         $('.reset-weight').attr('aria-hidden', true);
+        //window.setTimeout(function(){
+                $('#cdi-mainNav').removeClass('weighted-component');
+          //  },400);
     } else {
         $('.reset-weight').attr('aria-hidden', false);
     }

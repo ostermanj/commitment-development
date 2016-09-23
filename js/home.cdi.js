@@ -664,9 +664,9 @@ cdiApp.mainNav.View = Backbone.View.extend({
             eParent = $(eTarget).parents('.weight-toggle');
             $(eParent).removeClass('weighted');
             $('.reset-weight').css('display','inline');
-            window.setTimeout(function(){
+      /*      window.setTimeout(function(){
                 $('#cdi-mainNav').removeClass('weighted-component');
-            },400);
+            },400);*/
         }
         e.data.transition = 1;
 
