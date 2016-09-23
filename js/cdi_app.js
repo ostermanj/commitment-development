@@ -496,6 +496,10 @@ console.log('triggerign rankCountries with true, 0, 1, click');
                     if (!segment[0].hasAttribute('data-unweighted')){ // if first time unstacking bars set new data atribute to hold the unweighted value
                         $(segment).attr('data-unweighted', this.flatIndicators[ind].original.values[c])
                     }
+                    var originalWidth = $(segment).attr('style').replace(/width: ?(.[^;]+);.*/,'$1');
+                    
+                                                                       
+                    $(segment).attr('data-stacked-width', originalWidth);
                     var barIndex = cgdCdi.indicatorsOrder.indexOf(ind); //get the index of the bar segment
                     var bWidth = $(segment).attr('data-unweighted') / this.maxes[this.maxes.length - 1] * ( 100 / 7 - barSpacing ) + '%';
                     $(segment).css({'left': barIndex * 100 / 7 + '%', 'position': 'absolute', 'width': bWidth});
@@ -510,9 +514,26 @@ console.log('triggerign rankCountries with true, 0, 1, click');
             }
          }
         console.log(this.maxes);
+        $('.slider').addClass('hide-slider');
+            window.setTimeout(function(){
+                $('.slider, .reset-weight').css('display', 'none');
+        }, 500);
+    //    $('.weight-toggle, .reset-weight').addClass('weighted-override');
+        $('.reset-weight').attr('aria-hidden', true);
     },
     restackBars: function(){
         console.log('restack');
+        $('.reset-weight').css('display', 'inline').attr('aria-hidden', false);
+        $('.slider').css('display', 'block');
+        
+        $('.bar-segment').each(function(){
+            $(this).css({'position': 'relative', 'left': '0%', 'width': $(this).attr('data-stacked-width')})
+         });
+        $('#home-cdi').removeClass('unstacked');
+        setTimeout(function(){
+            $('.slider').removeClass('hide-slider');
+            $('.weight-toggle, .reset-weight').removeClass('weighted-override');
+      },200);
     },
     adjustCDI: function(params){ //params = [0, 1, Object, Object, "click"]
          /*

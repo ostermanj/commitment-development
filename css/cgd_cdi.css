@@ -545,9 +545,13 @@ table#home-cdi-indicator tr.components {
     width: 1px;
     height: 44px;
     top: -10px;
-    opacity: 1;
+    opacity: 0;
     transition: height 0.5s linear, top 0.5s linear;
     background-color: #DFDFDB;
+}
+
+.unstacked .zero-mark {
+    opacity: 1;
 }
 
 

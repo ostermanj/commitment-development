@@ -575,7 +575,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         var that = this;
         var i = j - 1;
         $(el).click(function(e){
-            sliderSelector =  $('.slider-selector').eq(i);
+            sliderSelector =  $('.slider .slider-selector').eq(i);
             sliderSelector.addClass('active-selector jump-selector');
             sliderPosition = $(this).offset(); //page position object of the slider
             position = that.getXOffset(e); // page position x off the click / touch event in the slider
@@ -619,7 +619,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         xDistance = xCurrentOffset - e.data.ev.xStartOffset;
         newPosition = e.data.ev.startPosition.left + xDistance;
         e.data.that.limitPosition();
-        sliderSelector = $('.slider-selector').eq(e.data.i);
+        sliderSelector = $('.slider .slider-selector').eq(e.data.i);
         sliderSelector.css('left', newPosition);
         e.data.notch = newPosition / 13.6666 - 3;
         e.data.transition = 0;
@@ -645,7 +645,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
        }
         delay = e.data.ev.currentTarget.className === 'slider' ? 500 : 0;
         window.setTimeout(function(){
-            $('.slider-selector').removeClass('active-selector jump-selector');
+            $('.slider .slider-selector').removeClass('active-selector jump-selector');
         }, delay);
         roundedPosition = Math.round(newPosition / 13.6666) * 13.6666;
         console.log(roundedPosition);
@@ -680,12 +680,12 @@ cdiApp.mainNav.View = Backbone.View.extend({
     },
     resetWeight: function(){
       console.log('resetWeight');
-        $('.slider-selector').addClass('jump-selector');
-         $('.slider-selector').css('left','41px');
+        $('.slider .slider-selector').addClass('jump-selector');
+         $('.slider .slider-selector').css('left','41px');
         $('.weight-toggle').removeClass('weighted');
         $('#cdi-mainNav').removeClass('weighted-component');
         window.setTimeout(function()
-            {$('.slider-selector').removeClass('jump-selector');
+            {$('.slider .slider-selector').removeClass('jump-selector');
         }, 400);
         console.log(this);
         $('.reset-weight').attr('aria-hidden', true);
@@ -793,15 +793,15 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 $('.slider').css('display', 'none');
             }, 500);
         }
-        else {
-            $('.slider').css('display', 'block');
-            window.setTimeout(function(){
-                $('.slider').removeClass('hide-slider');
-            }, 100);
-            
+        else if (!$('.unstack-slider').hasClass('off')){
+                $('.slider').css('display', 'block');
+                window.setTimeout(function(){
+                    $('.slider').removeClass('hide-slider');
+                }, 100);
+            }
             
         }
-    }
+    
 });
 
 /**
