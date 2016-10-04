@@ -1398,6 +1398,7 @@ a.load-trends.fading {
   float: left;
   box-sizing: border-box;
   border-right: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
   padding: 30px;
   overflow:hidden;
 }
@@ -1534,6 +1535,10 @@ span.country-label {
     
     }
     
+    .cdi-footer .footer-block {
+     width: 50%;   
+    }
+    
 
 }
 @media screen and (max-width: 820px) {
@@ -1635,6 +1640,29 @@ span.country-label {
         margin-top: 20px;
         padding-top: 0;
     }
+    
+    .social {
+        
+        position: inherit;
+        width: 109px;
+        height: 36px;
+        
+    }
+    
+    .social a {
+        float: left;
+        margin: 5px;
+        position: relative;
+    }
+    
+    .social a.facebook {
+        
+        bottom: 2px;
+    }
+    
+    .social a.twitter {
+        left: -3px;
+    }
 }
 
 @media screen and (max-width: 515px) {
@@ -1649,6 +1677,11 @@ span.country-label {
     height: 24px !important;
     top: -9px;
     }
+    
+     .cdi-footer .footer-block {
+     width: 100%;   
+    }
+    
 }
 
 @media screen and (max-width: 600px) {
