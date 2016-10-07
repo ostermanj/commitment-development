@@ -75,7 +75,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     $row.html('<td>' + item.rank + '</td>' +
                         '<td><a href="#"><span class="country-label">' + item.country + '</a></span></td>' +
                         '<td>' + item.value_label + '</td>' +
-                        '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a href="#" data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '"></a></td>');
+                        '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '" href="#"></a></td><td class="twitter-td"><a href="#" data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '"></a></td>');
                     
 
                     this.$el.find('tbody').append($row);
@@ -101,6 +101,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
 	    'click a.sorting':'sortColumn',
+        'click .facebook-td a': 'facebookShare',
         'click .twitter-td a': 'twitterShare'
     },
     twitterShare: function(e){
@@ -110,6 +111,21 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
 'left=20,top=20,width=700,height=400,toolbar=0,resizable=1');
         e.preventDefault();
         e.stopImmediatePropagation();
+        $(e.currentTarget).blur(); //remove focus after click   
+    },
+    facebookShare: function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation();
+       
+        FB.ui(
+         {
+            method: 'feed',
+            name: e.currentTarget.dataset.country + ' ranks ' + e.currentTarget.dataset.rank + ' out of 27 on the ' +  e.currentTarget.dataset.component.toLowerCase() + ' of the 2016 Commitment to Development Index',
+            caption: 'The Commitment to Development Index: Ranking the Rich',
+            description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit the 5.5 billion people living in poorer nations.',
+            link: 'http://www.cgdev.org' + location.pathname,
+            picture: 'http://www.cgdev.org/sites/default/files/CDI2015/cdi-2015-fb-crop.jpg'
+        }); 
         $(e.currentTarget).blur(); //remove focus after click   
     },
     showComponents: function(event) {

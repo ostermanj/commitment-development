@@ -235,7 +235,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 $row.html('<td><span class="new-value new-rank"></span> <span class="original-value original-rank">' + item.rank_label + '</span></td>' +
                     '<td><a class="expand-row" href="#" title="Expand row"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
-                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a href="https://twitter.com/intent/tweet?original_referer=' + encodeURIComponent(location.href) + '&amp;text=' + item.country.replace(' ','%20') + '%20ranks%20' + item.rank_label.replace('*','%20(tie)') + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
+                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a href="#" data-country="' + item.country + '" data-rank="' + item.rank_label.replace('*','%20(tie)') + '"></a></td>');
  
                 this.$el.find('tbody').append($row);
                 var indicators = this.indicator.children;
@@ -280,10 +280,22 @@ cdiApp.CDI.View = Backbone.View.extend({
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
         'click a.sorting':'sortColumn',
-        'click .facebook-td a': 'facebookShare'
+        'click .facebook-td a': 'facebookShare',
+        'click .twitter-td a': 'twitterShare'
     },
+    twitterShare: function(e){
+        console.log(e);
+        var urlString = 'https://twitter.com/intent/tweet?original_referer=' + encodeURIComponent(location.href) + '&amp;text=' + e.currentTarget.dataset.country.replace(' ','%20') + '%20ranks%20' + e.currentTarget.dataset.rank + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev';
+        window.open(urlString, null,
+'left=20,top=20,width=700,height=400,toolbar=0,resizable=1');
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        $(e.currentTarget).blur(); //remove focus after click   
+    },
+   
     facebookShare: function(event){
         event.preventDefault();
+        event.stopImmediatePropagation();
         console.log(event.target);
         console.log(this.flatIndicators);
         console.log(this.indicators);
@@ -294,12 +306,13 @@ cdiApp.CDI.View = Backbone.View.extend({
         FB.ui(
          {
             method: 'feed',
-            name: fbCountry + ' ranks ' + fbRank + ' out of 27 on the 2015 Commitment to Development Index',
+            name: fbCountry + ' ranks ' + fbRank + ' out of 27 on the 2016 Commitment to Development Index',
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit the 5.5 billion people living in poorer nations.',
             link: 'http://www.cgdev.org' + location.pathname,
             picture: 'http://www.cgdev.org/sites/default/files/CDI2015/cdi-2015-fb-crop.jpg'
-        });   
+        }); 
+        $(event.currentTarget).blur(); //remove focus after click   
     },
     showCollapsed: function(event) {
         event.preventDefault();
