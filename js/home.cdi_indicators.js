@@ -120,7 +120,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         FB.ui(
          {
             method: 'feed',
-            name: e.currentTarget.dataset.country + ' ranks ' + e.currentTarget.dataset.rank + ' out of 27 on the ' +  e.currentTarget.dataset.component.toLowerCase() + ' of the 2016 Commitment to Development Index',
+            name: e.currentTarget.dataset.country + ' ranks ' + e.currentTarget.dataset.rank + ' out of 27 on the ' +  e.currentTarget.dataset.component.toLowerCase() + ' component of the 2016 Commitment to Development Index',
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit the 5.5 billion people living in poorer nations.',
             link: 'http://www.cgdev.org' + location.pathname,

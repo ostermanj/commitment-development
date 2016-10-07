@@ -381,13 +381,20 @@ span.os, span.ns {
 .cdi-header-wrapper p {
   font-size: 20px;
 }
-.cdi-header,
-.dev-cdi {
+.cdi-header
+ {
     max-width: 980px;
     width:98%;
     padding: 0 1%;
     margin: 0 auto;
 }
+.dev-cdi {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 #new_cdi #home-cdi {
   width: 50%;
     transition: width 0.5s linear;
@@ -1461,8 +1468,9 @@ a.sorting:hover,  a.sorting:active,  a.sorting:focus, a.sorting:visited {
     text-decoration: none !important;
 }
 .sorting:after {
-    content: "";
-    width: 7px;
+    content: "↓";
+        margin-left:2px;
+    /*width: 7px;
     height: 7px;
     border-left: 2px solid #006b77;
     border-bottom: 2px solid #006b77;
@@ -1471,12 +1479,10 @@ a.sorting:hover,  a.sorting:active,  a.sorting:focus, a.sorting:visited {
     -webkit-transform: rotate(-45deg) translate(-1px,-5px);    
 transform: rotate(-45deg) translate(-1px,-5px);
     margin-left: 10px;
-    margin-top: -4px;
+    margin-top: -4px;*/
 }
 .sorting.asc:after {
-	-ms-transform: rotate(135deg) translate(4px,3px);
-	-webkit-transform: rotate(135deg) translate(4px,3px);
-	transform: rotate(135deg) translate(4px,3px);
+	content: "↑";
 }
 span.country-label {
 	color: #006b77;
@@ -1612,6 +1618,35 @@ span.country-label {
 }
 @media screen and (max-width: 739px) {
     
+    #site-logo {
+        height: 36px !important;
+        background-size: contain !important;
+        position: absolute;
+        bottom: 5px;
+        left: 110px;
+        background-image: url(http://www.cgdev.org/sites/default/files/archive/layout/CGD_logo-knockout-3.png) !important;
+     
+    
+}
+    #zone-branding {
+        padding:0 !important;
+    }
+    #zone-menu-wrapper {
+        border-width: 0 !important;
+    }
+    #block-menu-menu-contribute {
+        display: none;  
+    }
+    
+    .cdi-header-wrapper {
+        padding: 4% 0;
+    }
+    
+    .cdi-header-wrapper h1 {
+        max-width: 100%;
+        font-size: 36px;
+    }
+    
     .chart-holder, .chart-holder div.bar-segment {
         height: 10px;
     }
@@ -1667,12 +1702,7 @@ span.country-label {
 
 @media screen and (max-width: 515px) {
     
-    .chart-holder, .chart-holder div.bar-segment {
-        height: 6px;
-    }
-    .chart-holder {
-        top: 6px !important;
-    }
+    
     .zero-mark {
     height: 24px !important;
     top: -9px;
@@ -1684,7 +1714,33 @@ span.country-label {
     
 }
 
+@media screen and (max-width: 410px) {
+    
+    .slider {
+            transform: scale(0.5, 1) translateX(50%);
+    }
+    
+    .slider .slider-selector {
+            transform: scale(2, 1);
+    }
+}
+
 @media screen and (max-width: 600px) {
+    #unstack-td {
+        position: relative;
+    }
+    
+    #unstack-td span {
+        position: absolute;
+        top: -5px;
+        width: 54px;
+        left: -6px;
+    }
+    
+    .twitter-td, .facebook-td {
+        width: 25px;
+    }
+    
    .chart-holder {
         top: 4px;
     }
@@ -1703,7 +1759,7 @@ span.country-label {
     
     
     #home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2) {
-        width: 90px;
+        width: 86px;
     }
     
     #home-cdi-indicator tr.master-row td:first-child {
@@ -1712,19 +1768,24 @@ span.country-label {
     }
     
     tr.master-row td:first-child::before {
-     left: 0;
+     left: -2px;
+        top:9px;
+    }
+    
+    tr.master-row.active td:first-child::before {
+        opacity: 0;
     }
     
     .new-rank {
-        left:10px;
+        left:5px;
     }
     
     .original-rank {
-        left:21px;
+        left:15px;
     }
     
     #home-cdi tr td:first-child {
-        width: 45px;
+        width: 36px;
     }
     
      #home-cdi-indicator tr td:first-child {
@@ -1732,11 +1793,27 @@ span.country-label {
     }
     
     .change-score td:nth-child(3)::before {
-        left: 2px !important;
+        left: 0px !important;
+            top: 9px !important;
+    }
+    
+    td.spacer {
+        width: 7px;
+    }
+    
+    .original-score {
+        left: 17px;
+        position: absolute;
+        
+    }
+    
+    
+    .twitter-td a, .facebook-td a {
+        top: 0;
     }
     
     #new_cdi table tr.master-row td:nth-child(3), #home-cdi-indicator tr.master-row td:nth-child(3) {
-        width: 50px;
+        width: 41px;
     }
 
     a.load-trends {
