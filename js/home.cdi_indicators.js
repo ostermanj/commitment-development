@@ -75,7 +75,8 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     $row.html('<td>' + item.rank + '</td>' +
                         '<td><a href="#"><span class="country-label">' + item.country + '</a></span></td>' +
                         '<td>' + item.value_label + '</td>' +
-                        '<td><div class="chart-holder"></div></td>');
+                        '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a href="#" data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '"></a></td>');
+                    
 
                     this.$el.find('tbody').append($row);
                     this.app.createBarChart(2015, i, [this.indicator], $row.find('.chart-holder'), false, item.min, item.max, item.min_label, item.max_label, 2);
@@ -99,7 +100,17 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         'click tr.master-row, .close-components': 'showComponents',
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
-	'click a.sorting':'sortColumn'
+	    'click a.sorting':'sortColumn',
+        'click .twitter-td a': 'twitterShare'
+    },
+    twitterShare: function(e){
+        console.log(e);
+        var urlString = 'https://twitter.com/intent/tweet?original_referer=' + encodeURIComponent(location.href) + '&amp;text=' + e.currentTarget.dataset.country.replace(' ','%20') + '%20ranks%20' + e.currentTarget.dataset.rank + '%20of%2027%20on%20the%20' + e.currentTarget.dataset.component.toLowerCase() +  '%20component%20of%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev';
+        window.open(urlString, null,
+'left=20,top=20,width=700,height=400,toolbar=0,resizable=1');
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        $(e.currentTarget).blur(); //remove focus after click   
     },
     showComponents: function(event) {
         console.log(event);

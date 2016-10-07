@@ -19,7 +19,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
     render: function() {
         if (!this.loaded) {
             this.loaded = true;
-            var $contentTd = $('<td colspan="4"></td>');
+            var $contentTd = $('<td colspan="7"></td>');
             var $contentWrapper = $('<div class="components-wrapper"></div>');
             var $content = $('<div class="components-inner-wrapper"></div>');
             $contentWrapper.append($content);
@@ -61,8 +61,10 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
         $('.' + this.countryCode + '-components .components-wrapper').height(cHeight);
     },
     events: {
-        'click a.indicator-info': 'showIndicatorInfo'
+        'click a.indicator-info': 'showIndicatorInfo',
+        
     },
+    
     showIndicatorInfo: function(event) {
         $target = $(event.target);
         var indicatorCode = $target.data('indicator');

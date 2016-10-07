@@ -36,7 +36,7 @@
             <td><a href="#" class="sorting asc" data-field="rank">Rank</a></td>
             <td><a href="#" class="sorting" data-field="country">Country</a></td>
             <td>Score</td>
-            <td>Indicators</td>
+            <td colspan="3">Indicators</td>
             
           </tr>
         </thead>
