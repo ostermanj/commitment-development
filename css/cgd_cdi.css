@@ -390,9 +390,10 @@ span.os, span.ns {
 }
 .dev-cdi {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
     overflow-x: hidden;
+    max-width:  980px;
 }
 
 #new_cdi #home-cdi {
@@ -402,7 +403,7 @@ span.os, span.ns {
 }
 
 #new_cdi #home-cdi.home-processed {
-    width: 100%;
+    width: 99%;
 }
 #new_cdi table thead {
   border-bottom: 2px solid #333;
