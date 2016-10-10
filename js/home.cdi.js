@@ -848,7 +848,8 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             
             this.loaded = true;
             
-            $.get('/cdi-2015/overall/' + this.countryCode).done(function(data) {
+/*
+                        $.get('/cdi-2015/overall/' + this.countryCode).done(function(data) {
                 var content = '<td colspan="7" class="info-td"><div class="info-wrapper">' + data + '<a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
                
                 that.$el.append(content);
@@ -863,8 +864,25 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             }).error(function() {
                 that.$el.append('<td colspan="7" class="info-td"><div class="info-wrapper">Data not available.</div></td>');
             });
+            */
+            
+            $.get('/cdi-2015/overall/' + this.countryCode, function(data,status) {
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper">' + data + '<a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+               
+                that.$el.append(content);
+                
+                cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + 46;
+                $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Trends</a>');
+                $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
+                 //REWRITE HERE AND BELOW TO AVOID REPETITION
+                $('#' + that.countryCode + '-info .year-results a').text('Country report').attr('target', '_blank');
+                
+                
+            }, 'html').error(function() {
+                that.$el.append('<td colspan="7" class="info-td"><div class="info-wrapper">Data not available: ' + status + '</div></td>');
+            });
         } else {
-            cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
+            cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + 46;
              $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
             
         }

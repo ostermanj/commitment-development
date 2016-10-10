@@ -406,6 +406,9 @@ span.os, span.ns {
 
 #new_cdi #home-cdi.home-processed {
     width: 99%;
+    margin: 0 auto;
+    width: -webkit-calc(100% - 7px);
+    width:         calc(100% - 7px);
 }
 #new_cdi table thead {
   border-bottom: 2px solid #333;
@@ -481,7 +484,7 @@ tr.trend {
 
 .close-info, .close-components {
         position: relative;
-    top: 16px;
+    top: 10px;
 }
 
 .field-name-field-overall {
@@ -1160,7 +1163,7 @@ a.compare {
     padding: 7px 15px;
     border-radius: 5px;
     margin-top: 10px;
-    margin-bottom: 20px;
+   
     border: 1px solid #296976;
     
     
@@ -1185,7 +1188,7 @@ a.compare {
 
 
 .info-td .year-results, .components .year-results {
-    float:left;
+  /*  float:left;*/
 }
 
 a.load-trends {
@@ -1194,7 +1197,7 @@ a.load-trends {
     background: url('../images/trends.png') no-repeat 7px center;
     background-size: 20px;
     padding-left: 30px;
-    width:90px;
+    width:45px;
 
 }
 
@@ -1670,8 +1673,8 @@ span.country-label {
     }
       #home-cdi-indicator, #home-cdi {
         float: none;
-        width: 100% !important;
-          min-width: 100%;
+       /* width: 100% !important;
+          min-width: 100%;*/
     }
     
     #indicator-description-wrapper {
@@ -1743,6 +1746,11 @@ span.country-label {
     
     #unstack-td {
         position: relative;
+        right:20px;
+    }
+    
+    .info-wrapper, .trends-wrapper, .components-wrapper {
+        padding: 10px 5px 0 15px;
     }
     
   /*  #unstack-td span {
@@ -1780,8 +1788,8 @@ span.country-label {
        
         position: absolute;
         width: 70%;
-        width: -webkit-calc(100% - 157px);
-        width:         calc(100% - 157px);
+        width: -webkit-calc(100% - 137px);
+        width:         calc(100% - 137px);
         max-width: 439px;
         left: 72px;
     }
@@ -1792,7 +1800,7 @@ span.country-label {
     height: 10px;
     width: 100%;
     
-    top: 35px;
+    top: 39px;
     }
     
     #new_cdi table tr.master-row td{
@@ -1810,13 +1818,12 @@ span.country-label {
         width:24px !important;
     }
     
-    tr.master-row td:first-child::before {
-     left: -2px;
-        top:9px;
-    }
     
-    tr.master-row.active td:first-child::before {
-        opacity: 0;
+    tr.master-row td:first-child::before {
+      
+        left: 5px;
+        top: 27px;
+
     }
     
     .new-rank {
@@ -1836,8 +1843,8 @@ span.country-label {
     }
     
     .change-score td:nth-child(3)::before {
-        left: 0px !important;
-            top: 9px !important;
+        left: 2px !important;
+            top: 8px !important;
     }
     
     td.spacer {
@@ -1845,23 +1852,23 @@ span.country-label {
     }
     
     .original-score {
-        left: 17px;
+        left: 23px;
         position: absolute;
         
     }
     
     #home-cdi thead tr td:nth-child(3) {
-   width: 34px;
+   width: 71px;
         
     }
     
     #unstack-td {
-        width: 68px;
+        width: 53px;
     }
     
     
     .twitter-td a, .facebook-td a {
-        top: 19px;
+        top: 24px;
     }
     
     #new_cdi table tr.master-row td:nth-child(3), #home-cdi-indicator tr.master-row td:nth-child(3) {
