@@ -88,6 +88,7 @@ $unstack-td {
     width: 72px;
     margin-bottom: -21px;
     bottom: 19px;
+    right: 7px;
 }
 
 .hide-slider {
@@ -235,6 +236,7 @@ $unstack-td {
 
 #home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2)  {
     width:115px;
+    text-align: left !important;
 }
 
 #home-cdi-indicator {
@@ -646,7 +648,7 @@ div.chart-holder > div.transition {
     text-align: left;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 7px;
     width: 100%;
     margin-top: -10px;
     font-size: 12px;
@@ -1702,7 +1704,9 @@ span.country-label {
 }
 
 @media screen and (max-width: 515px) {
-    
+    #home-cdi .master-row td:nth-child(4){
+        width: 63%;
+    }
     
     .zero-mark {
     height: 24px !important;
@@ -1717,6 +1721,10 @@ span.country-label {
 
 @media screen and (max-width: 410px) {
     
+    #home-cdi .master-row td:nth-child(4){
+        width: 53%;
+    }
+    
     .slider {
             transform: scale(0.5, 1) translateX(50%);
     }
@@ -1727,19 +1735,25 @@ span.country-label {
 }
 
 @media screen and (max-width: 600px) {
+    
+    #home-cdi {
+        
+        table-layout: fixed;
+    }
+    
     #unstack-td {
         position: relative;
     }
     
-    #unstack-td span {
+  /*  #unstack-td span {
         position: absolute;
         top: -5px;
         width: 54px;
         left: -6px;
-    }
+    }*/
     
     .twitter-td, .facebook-td {
-        width: 25px;
+        width: 4px;
     }
     
    .chart-holder {
@@ -1754,14 +1768,42 @@ span.country-label {
         text-align: left;
         padding-left: 10px;
     }
-    #home-cdi, #home-cdi-indicator, #unstack-td span {
+    /*#home-cdi, #home-cdi-indicator, #unstack-td span {
         font-size:12px;
+    }*/
+    
+    #home-cdi thead tr td:nth-child(4){
+        visibility: hidden;
     }
     
+    #home-cdi .master-row td:nth-child(4){
+       
+        position: absolute;
+        width: 70%;
+        width: -webkit-calc(100% - 157px);
+        width:         calc(100% - 157px);
+        max-width: 439px;
+        left: 72px;
+    }
+    
+    .chart-holder {
+  
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    
+    top: 35px;
+    }
+    
+    #new_cdi table tr.master-row td{
+            padding: 10px 0 20px;
+    }
     
     #home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2) {
-        width: 86px;
+     /*   width: 86px;*/
     }
+    
+    
     
     #home-cdi-indicator tr.master-row td:first-child {
     padding-left: 31px !important;
@@ -1786,7 +1828,7 @@ span.country-label {
     }
     
     #home-cdi tr td:first-child {
-        width: 36px;
+   /*     width: 36px;*/
     }
     
      #home-cdi-indicator tr td:first-child {
@@ -1808,9 +1850,18 @@ span.country-label {
         
     }
     
+    #home-cdi thead tr td:nth-child(3) {
+   width: 34px;
+        
+    }
+    
+    #unstack-td {
+        width: 68px;
+    }
+    
     
     .twitter-td a, .facebook-td a {
-        top: 0;
+        top: 19px;
     }
     
     #new_cdi table tr.master-row td:nth-child(3), #home-cdi-indicator tr.master-row td:nth-child(3) {
