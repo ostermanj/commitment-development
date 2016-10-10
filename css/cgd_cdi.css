@@ -1203,10 +1203,10 @@ a.load-trends.fading {
 }
 
 .year-results a {
-    margin-right: 15px !important;
+    margin-right: 15px;
     background: url('../images/external-link.png') no-repeat 7px center !important;
-    background-size: 16px !important;
-    padding-left: 30px !important;
+    
+    padding-left: 30px;
     
 }
 
@@ -1796,7 +1796,7 @@ span.country-label {
     }
     
     #new_cdi table tr.master-row td{
-            padding: 10px 0 20px;
+            padding: 10px 0 25px;
     }
     
     #home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2) {
@@ -1869,6 +1869,21 @@ span.country-label {
     }
 
     a.load-trends {
-        width: 68px;
+        width: 39px;
+        font-size: 14px;
+        background-size: 15px;
+        padding-left: 23px;
+        margin-right: 10px;
+    }
+    
+    .year-results a {
+        font-size: 14px;
+        background-size: 14px !important;
+        margin-right: 10px;
+        padding-left: 25px;
+    }
+    
+    .close-info {
+        font-size: 13px;
     }
 }

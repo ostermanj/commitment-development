@@ -397,7 +397,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 } else {
                     $target.addClass('fading');
                     setTimeout(function(){
-                        $target.text('Show trends');
+                        $target.text('Trends');
                         $target.removeClass('fading');
                     },250);
                 }
@@ -854,10 +854,10 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                 that.$el.append(content);
                 
                 cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height();
-                $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Show trends</a>');
+                $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Trends</a>');
                 $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
                  //REWRITE HERE AND BELOW TO AVOID REPETITION
-                $('#' + that.countryCode + '-info .year-results a').text('Go to country report').attr('target', '_blank');
+                $('#' + that.countryCode + '-info .year-results a').text('Country report').attr('target', '_blank');
                 
                 
             }).error(function() {
@@ -929,7 +929,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                 //$content.append(lineChartView.$el);
             });
              var $buttonWrapper = $('<div style="clear:left">');
-             $buttonWrapper.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Go to country report</a></div>');
+             $buttonWrapper.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
             $content.append($buttonWrapper);
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height();
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);

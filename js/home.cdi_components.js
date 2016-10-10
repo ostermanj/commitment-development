@@ -25,7 +25,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
-             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Go to country report</a></div>');
+             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
             $content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>')
           
             for(var i in this.data) {
@@ -55,7 +55,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     this.app.createBarChart(2015, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
                 }
             }
-            $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Go to country report</a></div>');
+            $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
         }
         var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 90;
         $('.' + this.countryCode + '-components .components-wrapper').height(cHeight);
