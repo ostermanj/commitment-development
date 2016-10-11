@@ -483,8 +483,8 @@ tr.trend {
 }
 
 .close-info, .close-components {
-        position: relative;
-    top: 10px;
+    position: relative;
+    top: 18px;
 }
 
 .field-name-field-overall {
@@ -1197,7 +1197,7 @@ a.load-trends {
     background: url('../images/trends.png') no-repeat 7px center;
     background-size: 20px;
     padding-left: 30px;
-    width:45px;
+    width:88px;
 
 }
 
@@ -1208,7 +1208,7 @@ a.load-trends.fading {
 .year-results a {
     margin-right: 15px;
     background: url('../images/external-link.png') no-repeat 7px center !important;
-    
+    float: left;
     padding-left: 30px;
     
 }
@@ -1735,6 +1735,14 @@ span.country-label {
     .slider .slider-selector {
             transform: scale(2, 1);
     }
+    
+    .year-results a {
+        float:none;
+    }
+    
+    .close-info {
+        top: 9px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -1876,7 +1884,7 @@ span.country-label {
     }
 
     a.load-trends {
-        width: 39px;
+        width: 78px;
         font-size: 14px;
         background-size: 15px;
         padding-left: 23px;

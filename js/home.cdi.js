@@ -397,7 +397,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 } else {
                     $target.addClass('fading');
                     setTimeout(function(){
-                        $target.text('Trends');
+                        $target.text('Show trends');
                         $target.removeClass('fading');
                     },250);
                 }
@@ -871,8 +871,8 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                
                 that.$el.append(content);
                 
-                cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + 46;
-                $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Trends</a>');
+                cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + 76;
+                $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Show trends</a>');
                 $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
                  //REWRITE HERE AND BELOW TO AVOID REPETITION
                 $('#' + that.countryCode + '-info .year-results a').text('Country report').attr('target', '_blank');
@@ -882,7 +882,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                 that.$el.append('<td colspan="7" class="info-td"><div class="info-wrapper">Data not available: ' + status + '</div></td>');
             });
         } else {
-            cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + 46;
+            cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + 76;
              $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
             
         }
