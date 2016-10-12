@@ -547,8 +547,13 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 that.attachSliderEvents(sliderDiv, j);
                 sliderSelector = document.createElement('div');
                 sliderSelector.className = 'slider-selector';
+                sliderSelectorInner = document.createElement('div');
+                sliderSelectorInner.className = 'slider-selector-inner';
+                sliderSelector.appendChild(sliderSelectorInner);
                 sliderDiv.appendChild(sliderSelector);
                 that.attachSelectorEvents(sliderSelector, j);
+                
+                
                 
                 weightToggle.appendChild(sliderDiv);
             } else {
@@ -591,8 +596,10 @@ cdiApp.mainNav.View = Backbone.View.extend({
             sliderSelector =  $('.slider .slider-selector').eq(i);
             sliderSelector.addClass('active-selector jump-selector');
             sliderPosition = $(this).offset(); //page position object of the slider
+            console.log(sliderPosition);
             position = that.getXOffset(e); // page position x off the click / touch event in the slider
-            newPosition = position - sliderPosition.left - 9;
+            console.log(position);
+            newPosition = position - sliderPosition.left - 13;
             that.limitPosition();
             e.data = {};
             e.data.that = that;
@@ -641,10 +648,10 @@ cdiApp.mainNav.View = Backbone.View.extend({
     },
     
     limitPosition: function(){
-         if (newPosition < 0){
-            newPosition = 0;
-        } else if (newPosition > 82){
-            newPosition = 82;
+         if (newPosition < -8){
+            newPosition = -8;
+        } else if (newPosition > 74){
+            newPosition = 74;
         }  
     },
     selectorStop: function(e){
@@ -694,7 +701,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
     resetWeight: function(){
       console.log('resetWeight');
         $('.slider .slider-selector').addClass('jump-selector');
-         $('.slider .slider-selector').css('left','41px');
+         $('.slider .slider-selector').css('left','33px');
         $('.weight-toggle').removeClass('weighted');
         $('#cdi-mainNav').removeClass('weighted-component');
         window.setTimeout(function()
