@@ -230,8 +230,9 @@ $unstack-td {
 }
 
 #home-cdi-indicator tr.master-row td:first-child {
-    padding-left: 50px !important;
+    padding-left: 50px;
     width: 40px;
+    text-align: left;
 }
 
 #home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2)  {
@@ -241,6 +242,7 @@ $unstack-td {
 
 #home-cdi-indicator {
     margin-right: 30px;
+    margin-left: 4px;
     float: left;
     width: 50%;
     min-width: 400px;
@@ -400,16 +402,19 @@ span.os, span.ns {
 
 #new_cdi #home-cdi {
   width: 50%;
+    margin-left: 4px;
     transition: width 0.5s linear;
   
 }
 
 #new_cdi #home-cdi.home-processed {
     width: 99%;
-    margin: 0 auto;
-    width: -webkit-calc(100% - 7px);
-    width:         calc(100% - 7px);
+    margin-left: 4px;
+    width: -webkit-calc(100% - 8px);
+    width:         calc(100% - 8px);
 }
+
+
 #new_cdi table thead {
   border-bottom: 2px solid #333;
   font-weight: bold;
@@ -706,7 +711,7 @@ td.spacer {
     position: relative;
 }
 
-#new_cdi table tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {
+#home-cdi tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {
     text-align: left;
     padding-left: 20px;
 }
@@ -1747,15 +1752,12 @@ span.country-label {
 
 @media screen and (max-width: 600px) {
     
-    #home-cdi {
+    #home-cdi, #home-cdi-indicator {
         
         table-layout: fixed;
     }
     
-    #unstack-td {
-        position: relative;
-        right:20px;
-    }
+  
     
     .info-wrapper, .trends-wrapper, .components-wrapper {
         padding: 10px 5px 0 15px;
@@ -1780,7 +1782,7 @@ span.country-label {
         height: 40px;
     }
 
-    #new_cdi table tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {
+    #home_cdi tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {
         text-align: left;
         padding-left: 10px;
     }
@@ -1788,11 +1790,11 @@ span.country-label {
         font-size:12px;
     }*/
     
-    #home-cdi thead tr td:nth-child(4){
+    #home-cdi thead tr td:nth-child(4),  #home-cdi-indicator thead tr td:nth-child(4){
         visibility: hidden;
     }
     
-    #home-cdi .master-row td:nth-child(4){
+    #home-cdi .master-row td:nth-child(4), #home-cdi-indicator .master-row td:nth-child(4){
        
         position: absolute;
         width: 70%;
@@ -1802,6 +1804,16 @@ span.country-label {
         left: 72px;
     }
     
+    #home-cdi-indicator {
+        width:99%;
+        width: -webkit-calc(100% - 8px);
+        width:         calc(100% - 8px);
+        min-width: 0;
+    }
+    
+    #home-cdi-indicator tr.master-row td:first-child {
+        padding-left: 35px;
+    }
     .chart-holder {
   
     position: absolute;
@@ -1821,10 +1833,10 @@ span.country-label {
     
     
     
-    #home-cdi-indicator tr.master-row td:first-child {
+/*    #home-cdi-indicator tr.master-row td:first-child {
     padding-left: 31px !important;
         width:24px !important;
-    }
+    }*/
     
     
     tr.master-row td:first-child::before {
@@ -1846,9 +1858,9 @@ span.country-label {
    /*     width: 36px;*/
     }
     
-     #home-cdi-indicator tr td:first-child {
+ /*    #home-cdi-indicator tr td:first-child {
       width: 40px;    
-    }
+    }*/
     
     .change-score td:nth-child(3)::before {
         left: 2px !important;
@@ -1865,13 +1877,17 @@ span.country-label {
         
     }
     
-    #home-cdi thead tr td:nth-child(3) {
+    #home-cdi thead tr td:nth-child(3), #home-cdi-indicator thead tr td:nth-child(3)  {
    width: 71px;
         
     }
     
-    #unstack-td {
+    #unstack-td, .indicator-unstack {
         width: 53px;
+    
+        position: relative;
+        right:20px;
+    
     }
     
     
@@ -1879,7 +1895,7 @@ span.country-label {
         top: 24px;
     }
     
-    #new_cdi table tr.master-row td:nth-child(3), #home-cdi-indicator tr.master-row td:nth-child(3) {
+    #new_cdi table tr.master-row td:nth-child(3) {
         width: 41px;
     }
 

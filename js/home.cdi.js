@@ -844,6 +844,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
     },
     render: function() {
         that = this;
+        var addHeight = window.innerWidth <= 410 ? 36 : 81;
         if (!this.loaded) {
             
             this.loaded = true;
@@ -871,7 +872,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                
                 that.$el.append(content);
                 
-                cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + 76;
+                cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + addHeight;
                 $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Show trends</a>');
                 $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
                  //REWRITE HERE AND BELOW TO AVOID REPETITION
@@ -882,7 +883,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                 that.$el.append('<td colspan="7" class="info-td"><div class="info-wrapper">Data not available: ' + status + '</div></td>');
             });
         } else {
-            cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + 76;
+            cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + addHeight;
              $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
             
         }
