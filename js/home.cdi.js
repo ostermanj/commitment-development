@@ -596,10 +596,14 @@ cdiApp.mainNav.View = Backbone.View.extend({
             sliderSelector =  $('.slider .slider-selector').eq(i);
             sliderSelector.addClass('active-selector jump-selector');
             sliderPosition = $(this).offset(); //page position object of the slider
+            console.log('slider\'s left position');
             console.log(sliderPosition);
             position = that.getXOffset(e); // page position x off the click / touch event in the slider
+            console.log('x position of the click');
             console.log(position);
-            newPosition = position - sliderPosition.left - 13;
+            newPosition = position - sliderPosition.left - 9;
+            console.log('relative position of the click');
+            console.log(newPosition);
             that.limitPosition();
             e.data = {};
             e.data.that = that;
@@ -650,8 +654,8 @@ cdiApp.mainNav.View = Backbone.View.extend({
     limitPosition: function(){
          if (newPosition < -8){
             newPosition = -8;
-        } else if (newPosition > 74){
-            newPosition = 74;
+        } else if (newPosition > 76){
+            newPosition = 76;
         }  
     },
     selectorStop: function(e){
@@ -668,8 +672,10 @@ cdiApp.mainNav.View = Backbone.View.extend({
             $('.slider .slider-selector').removeClass('active-selector jump-selector');
         }, delay);
         roundedPosition = Math.round(newPosition / 13.6666) * 13.6666;
+        console.log('rounded position');
         console.log(roundedPosition);
         e.data.notch = Math.round(newPosition / 13.6666) - 3;
+        console.log(e.data.notch);
         var eTarget = e.data.ev.currentTarget;
         console.log(eTarget);
         if (e.data.notch !== 0){
@@ -689,8 +695,8 @@ cdiApp.mainNav.View = Backbone.View.extend({
             },400);*/
         }
         e.data.transition = 1;
-
-        sliderSelector.css('left', roundedPosition);
+        roundedPosition = roundedPosition < 0 ? 0 : roundedPosition;
+        sliderSelector.css('left', roundedPosition - 8);
         $('body').off('mouseup touchend', e.data.that.selectorStop);
         $('body').off('mousemove touchmove', e.data.that.selectorMove);
         window.setTimeout(function(){ // setTimeout to allow transitions to complete before redrawing the graph
