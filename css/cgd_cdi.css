@@ -58,6 +58,21 @@
     cursor:pointer;
 }
 
+#close-mainNav {
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    text-transform: none;
+    padding: 5px;
+    bottom: -29px;
+        border-radius: 0 0 8px 8px;
+    right: 42.5%;
+    right: -webkit-calc(50% - 45px);
+    right:         calc(50% - 45px);
+    width: 90px;
+    display: none;
+    margin: 0;
+}
+
 .unstack-slider {
     display: block;
     width: 33px;
@@ -904,6 +919,16 @@ td.spacer {
   width:100%;
   display:inline-block;
     max-width: 976px;
+    position: relative;
+    transition: height 0.5s linear;
+}
+
+.mainNav.closed {
+    height: 0 !important;
+}
+
+.mainNav.closed .weight-toggle div, .mainNav.closed .weight-toggle span {
+    display: none;
 }
 
 .flexbox .mainNav {
@@ -1746,20 +1771,22 @@ span.country-label {
         width: 53%;
     }
     
-    .slider {
-            transform: scale(0.5, 1) translateX(50%);
-    }
-    
-    .slider .slider-selector {
-            transform: scale(2, 1);
-    }
-    
+   
     .year-results a {
         float:none;
+    }
+
+    
+    .weight-toggle {
+        width: 100%;
     }
     
     .close-info {
         top: 9px;
+    }
+    
+    .flexbox .mainNav {
+        height: 264px;
     }
 }
 
@@ -1770,7 +1797,9 @@ span.country-label {
         table-layout: fixed;
     }
     
-  
+    #close-mainNav {
+        display: block;
+    }
     
     .info-wrapper, .trends-wrapper, .components-wrapper {
         padding: 10px 5px 0 15px;

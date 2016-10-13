@@ -570,7 +570,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
             that.$el.append(weightToggle);
             
         });
-        
+        this.addMenuCloseButton();
         $(window).scroll(function(){
             el = document.getElementById('cdi-mainNav');
             var extra = $('body').width() > 720 ? 31 : 80;
@@ -587,6 +587,9 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 $('#new_cdi').css('padding-top', '');
             }
         });
+    },
+    addMenuCloseButton: function(){
+        this.$el.append('<button id="close-mainNav">(X) Close</button>');
     },
     
    attachSliderEvents: function(el, j){
@@ -729,7 +732,14 @@ cdiApp.mainNav.View = Backbone.View.extend({
     },
     events: {
         'click a.selectable': 'menuItemClicked',
-        'click .reset-weight a': 'resetWeight' 
+        'click .reset-weight a': 'resetWeight',
+        'click #close-mainNav': 'closeMainNav'
+    },
+    closeMainNav: function(){
+        var closeMainNavText = $('#cdi-mainNav').hasClass('closed') ? '(X) Close' : 'Open menu';
+        $('#cdi-mainNav').toggleClass('closed');        
+        $('#close-mainNav').text(closeMainNavText);
+    
     },
     menuItemClicked: function(event) {
         event.preventDefault();
