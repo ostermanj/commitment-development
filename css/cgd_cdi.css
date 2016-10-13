@@ -73,6 +73,10 @@
     margin: 0;
 }
 
+.closed #close-mainNav {
+    display: block;
+}
+
 .unstack-slider {
     display: block;
     width: 33px;
@@ -120,16 +124,8 @@ $unstack-td {
     top: 5px;
 }
 
-.unstack-slider .slider-selector {
-    left:14px;
-    bottom:2px;
-    cursor: pointer;
-    transition: left 0.2s linear;
-}
 
-.unstack-slider.off .slider-selector {
-    left:-1px;
-}
+
 
 .slider-notches {
     position: absolute;
@@ -171,20 +167,15 @@ $unstack-td {
 .slider-selector {
     display: block;
     height: 18px;
-     background-color: rgba(0,0,0,0.1);
-    width: 36px;
     
-  
-  /*  border-radius: 50%;*/
-/*    border: 2px solid #fff;*/
-    position: relative;
+    width: 36px;position: relative;
     left: 33px;
     bottom: 3px;
     cursor: ew-resize;
     
 }
 
-.slider-selector-inner {
+.slider-selector-inner, .unstack-slider .slider-selector {
     display: block;
     position: absolute;
     left: 8px;
@@ -198,6 +189,17 @@ $unstack-td {
     
 }
 
+.unstack-slider .slider-selector {
+    left:14px;
+    bottom:-2px ;
+    cursor: pointer;
+    transition: left 0.2s linear;
+}
+
+
+.unstack-slider.off .slider-selector {
+    left:-1px;
+}
 
 
 .jump-selector {
@@ -265,7 +267,7 @@ $unstack-td {
 
 #home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2)  {
     width:115px;
-    text-align: left !important;
+    
 }
 
 #home-cdi-indicator {
@@ -615,6 +617,8 @@ div.chart-holder > div.transition {
   font-size: 12px;
   line-height: 20px;
   margin-left: 10px;
+    position: absolute;
+    right: 10px;
 }
 .chart-holder div.indicator {
     position: absolute;
@@ -1271,6 +1275,7 @@ a.load-trends.fading {
   margin-top: 50px;
   max-width: 360px;
   position: relative;
+  margin-bottom: 10px;
 }
 #home-cdi-indicator .indicator-label:first-child {
   margin-top: 20px;
@@ -1594,6 +1599,9 @@ span.country-label {
      width: 50%;   
     }
     
+    .chart-holder div:not(.tooltip) > .value {
+        bottom:-3px;
+    }
 
 }
 @media screen and (max-width: 820px) {
@@ -1720,6 +1728,13 @@ span.country-label {
           min-width: 100%;*/
     }
     
+    #home-cdi-indicator {
+        width:99%;
+        width: -webkit-calc(100% - 8px);
+        width:         calc(100% - 8px);
+        min-width: 0;
+    }
+    
     #indicator-description-wrapper {
         margin-top: 20px;
         padding-top: 0;
@@ -1746,6 +1761,12 @@ span.country-label {
     
     .social a.twitter {
         left: -3px;
+    }
+    
+        .chart-holder div:not(.tooltip) > .value {
+        bottom:8px;
+        right: -8px;
+        color: #000;
     }
 }
 
@@ -1816,14 +1837,18 @@ span.country-label {
         width: 4px;
     }
     
-   .chart-holder {
-        top: 4px;
-    }
+  
     
     .zero-mark {
         height: 40px;
     }
 
+    .chart-holder div:not(.tooltip) > .value {
+        bottom:8px;
+        right: -8px;
+        color: #000;
+    }
+    
     #home_cdi tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {
         text-align: left;
         padding-left: 10px;
@@ -1846,23 +1871,18 @@ span.country-label {
         left: 72px;
     }
     
-    #home-cdi-indicator {
-        width:99%;
-        width: -webkit-calc(100% - 8px);
-        width:         calc(100% - 8px);
-        min-width: 0;
-    }
+
     
     #home-cdi-indicator tr.master-row td:first-child {
         padding-left: 35px;
     }
-    .chart-holder {
-  
-    position: absolute;
-    height: 10px;
-    width: 100%;
     
-    top: 39px;
+    .master-row .chart-holder {
+  
+        position: absolute;
+        height: 10px;
+        width: 100%;
+        top: 39px;
     }
     
     #new_cdi table tr.master-row td{
@@ -1870,7 +1890,7 @@ span.country-label {
     }
     
     #home-cdi tr td:nth-child(2), #home-cdi-indicator tr td:nth-child(2) {
-     /*   width: 86px;*/
+     text-align: left !important;
     }
     
     
