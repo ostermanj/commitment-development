@@ -579,7 +579,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         this.addMenuCloseButton();
         $(window).scroll(function(){
             el = document.getElementById('cdi-mainNav');
-            var extra = $('body').width() > 720 ? 31 : 80;
+            var extra = $('body').width() > 739 ? 31 : $('body').width() > 739 ? 36 : $('body').width() > 539 ? 58 : 35;
             var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
 
 
@@ -825,9 +825,9 @@ cdiApp.mainNav.View = Backbone.View.extend({
             
         }
 
-        var extra = $('body').width() > 720 ? 0 : 80;
+        var extra = $('body').width() > 720 ? 30 : 70;
         var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
-        $('body').animate({scrollTop: scrollPoint}, 200);
+        if ($('#cdi-mainNav').hasClass('stick-to-top')) $('body').animate({scrollTop: scrollPoint}, 200);
     
     },
     toggleSliders: function(indicator){

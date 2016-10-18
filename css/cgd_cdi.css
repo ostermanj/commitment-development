@@ -987,7 +987,7 @@ td.spacer {
     position: fixed;
     top: 49px;
     z-index: 999;
-    width: 98%;
+    
         
 }
 
@@ -1764,6 +1764,14 @@ span.country-label {
         top: 0px;
     
     }
+    
+    #new_cdi #home-cdi {
+        width: 99%;
+        margin-left: 4px;
+        width: -webkit-calc(100% - 8px);
+        width: calc(100% - 8px);
+    }
+    
       #home-cdi-indicator, #home-cdi {
         float: none;
        /* width: 100% !important;
