@@ -210,10 +210,31 @@ $unstack-td {
 
 .weight-toggle span a {
     color: #fff;
+    text-decoration: underline;
+    
+}
+
+.weight-toggle span a:hover, .weight-toggle.active span a {
+    text-decoration: none;
+    
+}
+.weight-toggle.active span a {
+    cursor: default;
+}
+
+.weights-instruct {
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    bottom: 4px;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.5s linear;
     
 }
 
 .reset-weight {
+    text-decoration: underline; 
     position: absolute;
     width: 100%;
     left: 0;
@@ -226,11 +247,21 @@ $unstack-td {
 .reset-weight a {
     color: #f3f3f3 !important;
     font-size: 13px;
+    cursor:default;
+    
+    
 }
 
 
 .weighted-component .reset-weight {
    opacity:1;
+ 
+}
+.weighted-component .reset-weight a {
+       cursor: pointer;
+}
+.weighted-component .weights-instruct, .weighted-override .weights-instruct {
+    opacity: 0;
 }
 
 .reset-weight.weighted-override {
@@ -664,6 +695,13 @@ div.chart-holder > div.transition {
     opacity: 0;
     transition: opacity 0.5s linear;
     padding-top: 55px;
+    width: 99%;
+    width: -webkit-calc(100% - 8px);
+    width:         calc(100% - 8px);
+    margin-left: auto;
+    margin-right: auto;
+        
+        
 }
 
 #indicator-description-wrapper.idw-processed {
@@ -1169,12 +1207,12 @@ background: repeating-linear-gradient(
   transform:rotate(-45deg);
 }
 .line-chart-wrapper {
-  width: 313px;
+  width: 285px;
   float: left;
   box-sizing: border-box;
-  margin-right: 3px;
+  margin-right: 28px;
   margin-bottom: 3px;
-  padding: 15px;
+ 
   
 }
 .line-chart-wrapper .indicator-value {
@@ -1634,6 +1672,10 @@ span.country-label {
     .reset-weight a {
         position: relative;
         right: 10px;
+    }
+    .weights-instruct {
+        width: auto;
+        right: 7px; 
     }
     
     .flexbox .mainNav {

@@ -557,6 +557,12 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 
                 weightToggle.appendChild(sliderDiv);
             } else {
+                var weightsInstruct = document.createElement('div');
+                weightsInstruct.className = 'weights-instruct';
+                $(weightsInstruct).attr('aria-hidden', false);
+                weightsInstruct.innerText = 'Sliders adjust weights';
+                weightToggle.appendChild(weightsInstruct);
+                
                 var resetWeightDiv = document.createElement('div');
                 resetWeightDiv.className = 'reset-weight';
                 var resetWeight = document.createElement('a');
@@ -743,6 +749,8 @@ cdiApp.mainNav.View = Backbone.View.extend({
     },
     menuItemClicked: function(event) {
         event.preventDefault();
+        if ($(event.currentTarget).parent().parent().hasClass('active'))
+            return;
         var $activeItem = this.$el.find('div.active');
         $activeItem.removeClass('active');
         var activeIndicator = $activeItem.data('indicator');
@@ -765,9 +773,9 @@ cdiApp.mainNav.View = Backbone.View.extend({
         var $target = $(event.target);
         console.log('original target');
         console.log($target)
-        var nexted = false;
+       
         if ($target.hasClass('next-button')){
-            nexted = true;
+       
             $target = $('div.' + $target.attr('data-indicator') + '-bg a.selectable');
         }
         $target.parent().parent().addClass('active');
@@ -817,9 +825,9 @@ cdiApp.mainNav.View = Backbone.View.extend({
             
         }
 
-        var extra = $('body').width() > 720 ? 31 : 80;
+        var extra = $('body').width() > 720 ? 0 : 80;
         var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
-        if (nexted) $('body').animate({scrollTop: scrollPoint}, 200);
+        $('body').animate({scrollTop: scrollPoint}, 200);
     
     },
     toggleSliders: function(indicator){
