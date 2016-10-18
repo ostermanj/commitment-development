@@ -167,11 +167,16 @@ $unstack-td {
 .slider-selector {
     display: block;
     height: 18px;
-    
+    background: none;
     width: 36px;position: relative;
-    left: 33px;
+left: 33px;
     bottom: 3px;
     cursor: ew-resize;
+    
+}
+
+.slider-selector:focus, .slider-selector:hover, .slider-selector:active {
+    background: none;
     
 }
 
@@ -210,16 +215,23 @@ $unstack-td {
 
 .weight-toggle span a {
     color: #fff;
-    text-decoration: underline;
+   border-bottom: 2px solid rgba(255,255,255,0.5);
     
 }
 
-.weight-toggle span a:hover, .weight-toggle.active span a {
+.weight-toggle span a:hover, .weight-toggle span a:focus {
+    border-bottom-color: #fff;
     text-decoration: none;
     
 }
+
+.weight-toggle span a:focus {
+    font-weight: bold;
+}
+
 .weight-toggle.active span a {
     cursor: default;
+    border-bottom-width: 0;
 }
 
 .weights-instruct {
@@ -268,7 +280,7 @@ $unstack-td {
     opacity: 0 !important;
 }
 
-.slider-selector.active-selector .slider-selector-inner {
+.slider-selector.active-selector .slider-selector-inner, .slider-selector:focus .slider-selector-inner {
     background-color: rgba(29,69,76,0.8);
 }
 

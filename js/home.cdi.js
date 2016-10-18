@@ -545,7 +545,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
                     sliderDiv.appendChild(sliderNotch);
                 }
                 that.attachSliderEvents(sliderDiv, j);
-                sliderSelector = document.createElement('div');
+                sliderSelector = document.createElement('button');
                 sliderSelector.className = 'slider-selector';
                 sliderSelectorInner = document.createElement('div');
                 sliderSelectorInner.className = 'slider-selector-inner';
@@ -635,7 +635,32 @@ cdiApp.mainNav.View = Backbone.View.extend({
            that.selectorStart(e);
        
        });
+        $(el).on('keyup', null, i, function(e){
+          that.keyedWeight(e);
+        });
       
+    },
+    keyedWeight: function(e){
+      
+       
+        
+  
+        if (e.keyCode === 37 || e.keyCode === 39){
+            console.log('old position');
+            console.log($(e.currentTarget).css('left'));
+            if (e.keyCode === 37){
+                var newPos = e.currentTarget.offsetLeft - 13.6666 < -7 ? -8 : parseFloat($(e.currentTarget).css('left')) - 13.6666;
+                console.log('new position');
+                console.log(newPos);
+               
+            } else if (e.keyCode === 39) {
+                var newPos = e.currentTarget.offsetLeft + 13.6666 > 73 ? 74 : parseFloat($(e.currentTarget).css('left')) + 13.6666;
+                console.log('new position');
+                console.log(newPos);
+            }
+            
+            $(e.currentTarget).css('left', newPos);
+        }
     },
     selectorStart: function(e){
         
