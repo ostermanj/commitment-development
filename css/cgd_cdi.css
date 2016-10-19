@@ -570,6 +570,18 @@ tr.trend {
     top: 18px;
 }
 
+.components-report-bottom {
+    margin-top:20px !important;
+}
+
+.close-bottom {
+    top:27px;
+}
+
+.close-bottom-trends {
+    top:16px !important;
+}
+
 .field-name-field-overall {
     max-width:650px;
 }
@@ -1876,7 +1888,7 @@ span.country-label {
     }
     
    
-    .year-results a {
+    .info-wrapper .year-results a {
         float:none;
     }
 
@@ -2059,7 +2071,7 @@ span.country-label {
         padding-left: 25px;
     }
     
-    .close-info {
+    .close-info, .close-components {
         font-size: 13px;
     }
 }

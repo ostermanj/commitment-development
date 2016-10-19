@@ -1022,21 +1022,21 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                 //$content.append(lineChartView.$el);
             });
              var $buttonWrapper = $('<div style="clear:left">');
-             $buttonWrapper.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
+             $buttonWrapper.append('<div class="year-results hello"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
             $content.append($buttonWrapper);
-            var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height();
+            var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 80;
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
             
         } else {
            
-            var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height(); //CAN REWRITE HERE TO AVOID REPETITION
+            var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 50; //CAN REWRITE HERE TO AVOID REPETITION
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
             
            
            
                         
         }
-        
+        $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
        // $('#' + this.countryCode + '-info .load-trends').text('Hide trends');
     }
 });

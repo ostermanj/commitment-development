@@ -55,9 +55,10 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     this.app.createBarChart(2015, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
                 }
             }
-            $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
+            $content.append('<div class="year-results"><a class="components-report-bottom" target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
+            $content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>')
         }
-        var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 90;
+        var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 50;
         $('.' + this.countryCode + '-components .components-wrapper').height(cHeight);
     },
     events: {
