@@ -199,6 +199,7 @@ left: 33px;
     bottom:-2px ;
     cursor: pointer;
     transition: left 0.2s linear;
+    padding: 8px;
 }
 
 
@@ -269,6 +270,10 @@ left: 33px;
    opacity:1;
  
 }
+
+.reset-weight a:focus {
+    font-weight: bold;
+} 
 .weighted-component .reset-weight a {
        cursor: pointer;
 }
@@ -1571,9 +1576,23 @@ a.sorting:hover,  a.sorting:active,  a.sorting:focus, a.sorting:visited {
     color: #006b77 !important;
     text-decoration: none !important;
 }
+
+a.sorting {
+    border-bottom: 2px solid #B3D3D6;
+}
+
+a.sorting:hover, a.sorting:focus {
+    border-bottom-color: #006D75;
+}
+
+ a.sorting:focus {
+     font-weight: bold;
+}
+
 .sorting:after {
     content: "↓";
         margin-left:2px;
+    border-bottom: 2px solid #f3f3f3;
     /*width: 7px;
     height: 7px;
     border-left: 2px solid #006b77;
