@@ -24,7 +24,7 @@
 
 .weight-toggle span {
     
-    margin-top: 3px;
+    margin-top: 0px;
     display: block;
     position: absolute;
     width: 100%;
@@ -1672,6 +1672,7 @@ span.country-label {
     
     }
     
+    
 
         .reset-weight {
 
@@ -1712,6 +1713,7 @@ span.country-label {
     
     .weight-toggle span {
         font-size:14px;
+        margin-top: 3px;
     }
 }
 

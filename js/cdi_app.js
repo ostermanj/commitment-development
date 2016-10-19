@@ -140,11 +140,11 @@ var cdiApp = Backbone.View.extend({
     },
     userInput: function(args){
         if (args === 'resetWeight'){
-            console.log('userInput with args = e = resetWeight');
+
             for (var ind in userWeights){ 
               userWeights[ind].value = 1;
             }
-            console.log('userWeights');console.log(userWeights);
+
             var isWeighted = 0;
             for (var ind in userWeights){    
               userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD; // creates a total weight obj for each
@@ -152,14 +152,19 @@ var cdiApp = Backbone.View.extend({
             }
             var that = this;
       //      window.setTimeout(function(){
-                console.log('calling changeWeight() with 0,1,"click"')
+
                 that.changeWeight(0,1,'click');
     //        }, 400);
             return;
         }
         eventType = args.type;
         transition = args.data.transition;
-        whichInd = this.indicatorsOrder[args.data.i];
+
+        if (eventType !== 'keyup'){
+            whichInd = this.indicatorsOrder[args.data.i];            
+        } else {
+            whichInd = args.data.i;            
+        }
         userWeights[whichInd].value = args.data.notch >= 0 ? 1 + (this.changeFactor - 1) * args.data.notch : 1 / (1 + (this.changeFactor - 1) * Math.abs(args.data.notch));
         var isWeighted = 0;
         for (var ind in userWeights){    
@@ -419,7 +424,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
       return totalWeights;
     },
     changeWeight: function(a,transition, et){ //a = isWeighted 1 or 0 ie at least one component's weight has been changed (!0)
-      console.log(a); 
+
     if (a === 0){
         $('.reset-weight').attr('aria-hidden', true);
       
@@ -446,7 +451,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
            }
         }
      }
-        console.log('calling changeOverallScores')
+
     this.changeOverallScores(a, transition, et); 
     },
     changeOverallScores: function(a, transition, et){
@@ -469,16 +474,16 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
 
 
-console.log('triggerign rankCountries with true, 0, 1, click');
+
         Backbone.pubSub.trigger('rankCountries', [true, a, transition, et]);
     
       //  this.adjustCDI(a, transition);
     },
     unstackBars: function(){
-      console.log(this.flatIndicators);
-      console.log(cgdCdi);
-      console.log(cgdCdi.indicators);
-      console.log(cgdCdi.indicatorsOrder);
+
+
+
+
         var barSpacing = 0.5; // spacing between bars expressed as percentage of chart-holder width
         var maxOfAll = function(maxes) {
             return Math.max.apply(null, maxes);
@@ -519,7 +524,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
                 }
             }
          }
-        console.log(this.maxes);
+
         $('.slider').addClass('hide-slider');
             window.setTimeout(function(){
                 $('.slider, .reset-weight').css('display', 'none');
@@ -528,7 +533,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
         $('.reset-weight').attr('aria-hidden', true);
     },
     restackBars: function(){
-        console.log('restack');
+
         $('.reset-weight').css('display', 'inline').attr('aria-hidden', false);
         $('.slider').css('display', 'block');
         
@@ -545,14 +550,14 @@ console.log('triggerign rankCountries with true, 0, 1, click');
          /*
          * ADJUST BARS
     */
-       console.log(params);
+
         if (params[4] === 'resorted'){
-            console.log('resorted');
+
             this.adjustScores(params);
             return;
         }
         this.isUserWeighted = params[0];
-        console.log(this.flatIndicators);
+
         for (var ind in this.flatIndicators){    
             
             if (ind.indexOf('CDI_') != -1){
@@ -578,7 +583,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
      if (params[4] === 'mousemove' || params[4] === 'touchmove'){
          return;
      } else {
-         console.log('calling adjustScores');
+
          this.adjustScores(params);
      }
         
@@ -591,7 +596,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
         */
     
         if (params[4] === 'resorted'){
-            console.log(params);
+
         }
         a = params[0];
         transition = params[1];
@@ -717,7 +722,7 @@ console.log('triggerign rankCountries with true, 0, 1, click');
     },
     triggerNext: function(e){
         e.preventDefault();
-        console.log('trigger next')
+
         Backbone.pubSub.trigger('triggerNext', e); //using event pubSub to trigger event in another view
     },
 

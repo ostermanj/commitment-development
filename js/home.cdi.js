@@ -13,13 +13,13 @@ cdiApp.CDI.Model = Backbone.Model.extend({
         this.rankCountries([]);
     },
     rankCountries: function(params){
-        console.log(params)
+
     if (params[1]){
      this.isWeighted = params[1];
     } else {
         this.isWeighted = 0;
     }
-        console.log(this.isWeighted);
+
     if (params[3] === 'mousemove' || params[3] === 'touchmovemove'){
         Backbone.pubSub.trigger('adjustCDI', [params[1], params[2], this.ranksObj, this.originalRanksObj, params[3]]);
         return;
@@ -105,8 +105,8 @@ are now brought in untrimmed form the XML
 
 
         if (params[0] === true){
-            console.log(params);
-            console.log('triggering adjustCDI');
+
+
             Backbone.pubSub.trigger('adjustCDI', [params[1], params[2], this.ranksObj, this.originalRanksObj, params[3]]);
         } else {
            this.originalRanksObj = $.extend(true,{}, this.ranksObj);
@@ -133,14 +133,14 @@ cdiApp.CDI.View = Backbone.View.extend({
     },
     sortArray: function(sortAsc,field){ //this successfully reordered the array but it's in the wrong place: after the ranking's been done
        if (sortAsc == null) {
-           console.log('null');
+
            sortAsc = true;
        } 
-        console.log(this.sortAsc);
-        console.log(sortAsc);
-        console.log(field);
+
+
+
         var key = field === 'country' ? 'country' : 'value';
-       console.log(key);
+
         return function(a,b){
             if(a[key]<b[key])
                  return sortAsc ? 1 : -1;
@@ -273,7 +273,7 @@ cdiApp.CDI.View = Backbone.View.extend({
             Backbone.pubSub.trigger('adjustCDI', [1, 0, this.model.ranksObj, this.model.originalRanksObj, 'resorted']);
         }
         $('#home-cdi').addClass('home-processed');
-        console.log('hello');
+
     },
     events: {
         'click tr.master-row, .load-trends, .close-info': 'showCollapsed',
@@ -284,7 +284,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         'click .twitter-td a': 'twitterShare'
     },
     twitterShare: function(e){
-        console.log(e);
+
         var urlString = 'https://twitter.com/intent/tweet?original_referer=' + encodeURIComponent(location.href) + '&amp;text=' + e.currentTarget.dataset.country.replace(' ','%20') + '%20ranks%20' + e.currentTarget.dataset.rank + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev';
         window.open(urlString, null,
 'left=20,top=20,width=700,height=400,toolbar=0,resizable=1');
@@ -296,10 +296,10 @@ cdiApp.CDI.View = Backbone.View.extend({
     facebookShare: function(event){
         event.preventDefault();
         event.stopImmediatePropagation();
-        console.log(event.target);
-        console.log(this.flatIndicators);
-        console.log(this.indicators);
-        console.log(this.model.originalRanksObj[$(event.target).attr('data-c')]);
+
+
+
+
         var countryData = this.model.originalRanksObj[$(event.target).attr('data-c')];
         var fbCountry = countryData.country;
         var fbRank = countryData.rank_label.replace('*',' tie');
@@ -326,25 +326,25 @@ cdiApp.CDI.View = Backbone.View.extend({
         
         
         var view = this.collapsibleViews[countryCode][viewType];
-        console.log($target);
-        console.log(countryCode);
-        console.log(viewType);
-        console.log(view);
+
+
+
+
         
 
     
         var delay = 0;
       if ($target.hasClass('active')){
-          console.log('already active');
+
           if (viewType === 'info'){
               var trendButton = $('#' + countryCode + '-info a.load-trends');
               if (trendButton.hasClass('active-trend')){
-                  console.log('trends is open');
+
                   $targetInfo = $target;
                   $target = trendButton;
                   viewInfo = view;
                   view = this.collapsibleViews[countryCode]['trend'];
-                  console.log(view);
+
                   $('#' + countryCode + '-trend .trends-wrapper').addClass('faster-collapse');
                   delay = 500;
                   this.collapseTrends($target,view,delay,countryCode);
@@ -385,8 +385,8 @@ cdiApp.CDI.View = Backbone.View.extend({
             
                 $target.toggleClass('active').toggleClass('active-trend');
              
-             console.log(view);
-             console.log($target);
+
+
             if (view.className === 'trend'){
                 if ($target.hasClass('active')){
                     $target.addClass('fading');
@@ -605,20 +605,24 @@ cdiApp.mainNav.View = Backbone.View.extend({
             sliderSelector =  $('.slider .slider-selector').eq(i);
             sliderSelector.addClass('active-selector jump-selector');
             sliderPosition = $(this).offset(); //page position object of the slider
-            console.log('slider\'s left position');
-            console.log(sliderPosition);
+            console.log('page position of slider channel');
+            console.log(sliderPosition.left);
+
+
             position = that.getXOffset(e); // page position x off the click / touch event in the slider
-            console.log('x position of the click');
-            console.log(position);
-            newPosition = position - sliderPosition.left - 9;
-            console.log('relative position of the click');
-            console.log(newPosition);
+console.log('page position of the click');
+            console.log(position)
+
+            newPosition = position - sliderPosition.left - 18;
+console.log(newPosition);
+
+
             that.limitPosition();
             e.data = {};
             e.data.that = that;
             e.data.ev = e;
             e.data.i = i;
-           console.log(e);
+
            that.selectorStop(e);
         });
     },
@@ -646,20 +650,28 @@ cdiApp.mainNav.View = Backbone.View.extend({
         
   
         if (e.keyCode === 37 || e.keyCode === 39){
-            console.log('old position');
-            console.log($(e.currentTarget).css('left'));
+
+
             if (e.keyCode === 37){
-                var newPos = e.currentTarget.offsetLeft - 13.6666 < -7 ? -8 : parseFloat($(e.currentTarget).css('left')) - 13.6666;
-                console.log('new position');
-                console.log(newPos);
+                newPosition = e.currentTarget.offsetLeft - 13.6666 < -7 ? -8 : parseFloat($(e.currentTarget).css('left')) - 13.6666;
+
+
                
             } else if (e.keyCode === 39) {
-                var newPos = e.currentTarget.offsetLeft + 13.6666 > 73 ? 74 : parseFloat($(e.currentTarget).css('left')) + 13.6666;
-                console.log('new position');
-                console.log(newPos);
+                newPosition = e.currentTarget.offsetLeft + 13.6666 > 73 ? 74 : parseFloat($(e.currentTarget).css('left')) + 13.6666;
+
+
             }
             
-            $(e.currentTarget).css('left', newPos);
+            $(e.currentTarget).css('left', Math.round(newPosition * 3) / 3);
+            e.data = {
+                ev: {
+                    currentTarget: e.currentTarget
+                 },
+                i: $(e.currentTarget).parent().parent().attr('data-indicator')
+            };
+
+            this.selectorStop(e);
         }
     },
     selectorStart: function(e){
@@ -679,7 +691,8 @@ cdiApp.mainNav.View = Backbone.View.extend({
         e.data.that.limitPosition();
         sliderSelector = $('.slider .slider-selector').eq(e.data.i);
         sliderSelector.css('left', newPosition);
-        e.data.notch = newPosition / 13.6666 - 3;
+        e.data.notch = (newPosition + 8) / 13.6666 - 3;
+        console.log(e.data.notch);  
         e.data.transition = 0;
     
         Backbone.pubSub.trigger('userInput', e);
@@ -693,10 +706,13 @@ cdiApp.mainNav.View = Backbone.View.extend({
         }  
     },
     selectorStop: function(e){
+
+
+        
        if (e === 'resetWeight'){
-           console.log(e);
+
            window.setTimeout(function(){ 
-               console.log('triggering userInput');
+
                 Backbone.pubSub.trigger('userInput', e); 
             }, 400);
            return;
@@ -705,16 +721,16 @@ cdiApp.mainNav.View = Backbone.View.extend({
         window.setTimeout(function(){
             $('.slider .slider-selector').removeClass('active-selector jump-selector');
         }, delay);
-        roundedPosition = Math.round(newPosition / 13.6666) * 13.6666;
-        console.log('rounded position');
-        console.log(roundedPosition);
-        e.data.notch = Math.round(newPosition / 13.6666) - 3;
-        console.log(e.data.notch);
+        roundedPosition = Math.round((newPosition + 8) / 13.6666) * 13.6666;
+
+
+        e.data.notch = Math.round((newPosition + 8) / 13.6666) - 3;
+console.log(e.data.notch);
         var eTarget = e.data.ev.currentTarget;
-        console.log(eTarget);
+
         if (e.data.notch !== 0){
             eParent = $(eTarget).parents('.weight-toggle');
-            console.log(eParent);
+
             $(eParent).addClass('weighted');
             $('.reset-weight').css('display','inline');
             window.setTimeout(function(){
@@ -729,17 +745,19 @@ cdiApp.mainNav.View = Backbone.View.extend({
             },400);*/
         }
         e.data.transition = 1;
-        roundedPosition = roundedPosition < 0 ? 0 : roundedPosition;
-        sliderSelector.css('left', roundedPosition - 8);
-        $('body').off('mouseup touchend', e.data.that.selectorStop);
-        $('body').off('mousemove touchmove', e.data.that.selectorMove);
+        if (e.type !== 'keyup') {
+            roundedPosition = roundedPosition < 0 ? 0 : roundedPosition;
+            sliderSelector.css('left', roundedPosition - 8);
+            $('body').off('mouseup touchend', e.data.that.selectorStop);
+            $('body').off('mousemove touchmove', e.data.that.selectorMove);
+        }
         window.setTimeout(function(){ // setTimeout to allow transitions to complete before redrawing the graph
             Backbone.pubSub.trigger('userInput', e); //publish event to global mechanism
         }, 400);
         
     },
     resetWeight: function(){
-      console.log('resetWeight');
+
         $('.slider .slider-selector').addClass('jump-selector');
          $('.slider .slider-selector').css('left','33px');
         $('.weight-toggle').removeClass('weighted');
@@ -747,7 +765,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         window.setTimeout(function()
             {$('.slider .slider-selector').removeClass('jump-selector');
         }, 400);
-        console.log(this);
+
         $('.reset-weight').attr('aria-hidden', true);
        e = 'resetWeight';
        this.selectorStop(e);
@@ -780,7 +798,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         $activeItem.removeClass('active');
         var activeIndicator = $activeItem.data('indicator');
         if (activeIndicator === 'CDI'){
-            console.log('CDI');
+
             $('#indicator-description-wrapper').removeClass('idw-processed');
             $('#home-cdi').removeClass('home-processed');
             that = this;
@@ -788,7 +806,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 that.menuItemClickedContinued(event, activeIndicator);
             }, 500);
         } else {
-            console.log('Not CDI');
+
             this.menuItemClickedContinued(event, activeIndicator);
         }
     },
@@ -796,25 +814,25 @@ cdiApp.mainNav.View = Backbone.View.extend({
         that = this;
         
         var $target = $(event.target);
-        console.log('original target');
-        console.log($target)
+
+
        
         if ($target.hasClass('next-button')){
        
             $target = $('div.' + $target.attr('data-indicator') + '-bg a.selectable');
         }
         $target.parent().parent().addClass('active');
-        console.log($target.attr('data-indicator'));
+
         
         this.toggleSliders($target.attr('data-indicator'));
         if ($target.attr('data-indicator') === 'CDI'){
-            console.log('Overall');
+
             $('#indicator-description-wrapper').removeClass('idw-processed');
             setTimeout(function(){
                 $('.indicator-description, .indicator-explanation').empty();
                 cgdCdi.hideIndicator(activeIndicator);
                 cgdCdi.reload($target.attr('data-indicator'));
-                console.log(cgdCdi.indicators);
+
                 $('.next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]).attr('data-indicator','CDI_AID');
                  $('#indicator-description-wrapper').addClass('idw-processed home');
                 
@@ -823,14 +841,14 @@ cdiApp.mainNav.View = Backbone.View.extend({
             var yPos = $(window).scrollTop();
           
             
-            console.log(yPos);
+
           cgdCdi.hideIndicator(activeIndicator)
            $('#indicator-description-wrapper').removeClass('home');
             cgdCdi.reload($target.attr('data-indicator'));
         
             $(window).scrollTop(yPos);
             var labelIndex = cgdCdi.indicatorsOrder.indexOf($target.attr('data-indicator'));
-            console.log($('.next-button'));
+
             $('.next-button').css('opacity',0);
             if (labelIndex < cgdCdi.indicatorsOrder.length - 1){
                 var nextI = labelIndex + 1;
@@ -952,7 +970,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
     },
     render: function() {
          if (!this.loaded) {
-            console.log('first load');
+
              this.loaded = true;
             
              
