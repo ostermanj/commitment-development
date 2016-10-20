@@ -140,15 +140,24 @@ cdiApp.CDI.View = Backbone.View.extend({
 
 
         var key = field === 'country' ? 'country' : 'value';
+        if (key === 'value'){
+            return function(a,b){
+                if(a[key]<b[key])
+                     return sortAsc ? 1 : -1;
+                if(a[key]>b[key])
+                    return sortAsc ? -1 : 1;
+              return 0;
+            };
+        } else {
+            return function(a,b){
+                if(a[key]<b[key])
+                     return sortAsc ? -1 : 1;
+                if(a[key]>b[key])
+                    return sortAsc ? 1 : -1;
+              return 0;
+            };            
+        }
 
-        return function(a,b){
-            if(a[key]<b[key])
-                 return sortAsc ? 1 : -1;
-            if(a[key]>b[key])
-                return sortAsc ? -1 : 1;
-          return 0;
-        };
-           
     },
     
     render: function(sortAsc, field){
@@ -318,7 +327,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         event.preventDefault();
         
         var $target = $(event.currentTarget);
-       
+        var bottom = $target.hasClass('close-bottom-trends') ? true : false;
         
         var countryCode = $target.attr('data-c');
         var viewType = $target.attr('data-v');
@@ -347,7 +356,8 @@ cdiApp.CDI.View = Backbone.View.extend({
 
                   $('#' + countryCode + '-trend .trends-wrapper').addClass('faster-collapse');
                   delay = 500;
-                  this.collapseTrends($target,view,delay,countryCode);
+                  console.log($target);
+                  this.collapseTrends($target,view,delay,countryCode, bottom);
                   $target = $targetInfo;
                   view = viewInfo;
                   
@@ -375,9 +385,15 @@ cdiApp.CDI.View = Backbone.View.extend({
     
         
     },
-    collapseTrends: function($target,view,delay,countryCode){
+    collapseTrends: function($target,view,delay,countryCode, bottom){
         $('#' + countryCode + '-trend .trends-wrapper').css('height', 0);
         this.showCollapsedHelper($target,view,delay,countryCode);
+        if (bottom) {
+            var $scrollTarget = $target.parent();
+             $('html, body').animate({
+                    scrollTop: $scrollTarget.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height() - $('tr#' + countryCode + '-master').height()
+                }, 500);
+        }
         
     },
     showCollapsedHelper: function($target,view,delay,countryCode){
@@ -455,11 +471,13 @@ cdiApp.CDI.View = Backbone.View.extend({
 	var $target = $(event.target);
 	this.sortAsc = $target.hasClass('asc');
 	var field = $target.data('field');
-
+    $('.sorting').removeClass('asc des');
 	if(this.sortAsc){
-	   $target.removeClass('asc');
+	  
+        $target.addClass('des');
 	} else {
 	   $target.addClass('asc');
+      
 	}
 	this.sortAsc = !this.sortAsc;
 
@@ -918,7 +936,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
     },
     render: function() {
         that = this;
-        var addHeight = window.innerWidth <= 410 ? 36 : 81;
+        var addHeight = window.innerWidth <= 410 ? 42 : 81;
         if (!this.loaded) {
             
             this.loaded = true;
@@ -1024,6 +1042,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
              var $buttonWrapper = $('<div style="clear:left">');
              $buttonWrapper.append('<div class="year-results hello"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
             $content.append($buttonWrapper);
+            $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 80;
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
             
@@ -1036,7 +1055,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
            
                         
         }
-        $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
+       
        // $('#' + this.countryCode + '-info .load-trends').text('Hide trends');
     }
 });

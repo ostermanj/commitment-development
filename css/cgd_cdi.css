@@ -747,9 +747,7 @@ div.chart-holder > div.transition {
     
 }
 
-.indicator-description h3 {
-    font-family: Lato, Verdana, Arial, sans-serif;
-}
+
 .tie-notation {
     color: #888;
     text-align: left;
@@ -1602,7 +1600,7 @@ a.sorting:hover, a.sorting:focus {
 }
 
 .sorting:after {
-    content: "↓";
+    content: " ";
         margin-left:2px;
     border-bottom: 2px solid #f3f3f3;
     /*width: 7px;
@@ -1619,6 +1617,11 @@ transform: rotate(-45deg) translate(-1px,-5px);
 .sorting.asc:after {
 	content: "↑";
 }
+
+.sorting.des:after {
+    content:"↓";
+}
+
 span.country-label {
 	color: #006b77;
 }
@@ -1703,7 +1706,10 @@ span.country-label {
     
     }
     
-    
+    .weight-toggle .active-indicator {
+        width: 2px;
+        height: 29px;
+    }    
 
         .reset-weight {
 
@@ -1728,10 +1734,10 @@ span.country-label {
     
     .weight-toggle {
     
-    width:23.75%;
+    width:22.75%;
     height: 33px;
     text-align: left;
-    padding: 0 0.25% 0 1%;
+    padding: 0 0.25% 0 2%;
         
     }
     
@@ -1751,7 +1757,7 @@ span.country-label {
 @media screen and (max-width: 799px) {
     
      .weight-toggle {
-         width:48.75%
+         width:47.75%
     }
     
     .flexbox .mainNav {
@@ -1894,7 +1900,7 @@ span.country-label {
 
     
     .weight-toggle {
-        width: 100%;
+        width: 97.75%;
     }
     
     .close-info {

@@ -131,7 +131,8 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     showComponents: function(event) {
         console.log(event);
         $target = $(event.currentTarget);
-        
+        console.log($target);
+        var bottom = $target.hasClass('close-bottom') ? true : false;
         var countryCode = $target.attr('data-c');
         var view = this.collapsibleViews[countryCode]['components'];
         $target = $target.hasClass('close-components') ? $('.' + countryCode + '-master') : $target;
@@ -139,6 +140,12 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         delay = 0;
         if ($target.hasClass('active')){
             $('.' + countryCode + '-components .components-wrapper').height(0);
+            if (bottom){
+                console.log('bottom');
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height()
+                }, 500);
+            }
             delay = 500;
             }
         setTimeout(function(){
