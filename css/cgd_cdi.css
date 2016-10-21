@@ -1582,16 +1582,16 @@ a.load-trends.fading {
   transform:rotate(45deg);
 }
 /* SORTING COLUMNS STYLE*/
-a.sorting:hover,  a.sorting:active,  a.sorting:focus, a.sorting:visited {
+a.sorting,  a.expand-row {
     color: #006b77 !important;
     text-decoration: none !important;
 }
 
-a.sorting {
+a.sorting, a.expand-row {
     border-bottom: 2px solid #B3D3D6;
 }
 
-a.sorting:hover, a.sorting:focus {
+a.sorting:hover, a.sorting:focus, a.expand-row:hover, a.expand-row:focus {
     border-bottom-color: #006D75;
 }
 

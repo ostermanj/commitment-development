@@ -285,12 +285,20 @@ cdiApp.CDI.View = Backbone.View.extend({
 
     },
     events: {
+        'mouseup .active .bar-segment': 'barSegmentClicked',
         'click tr.master-row, .load-trends, .close-info': 'showCollapsed',
         'click a.compare': 'compare',
         'click input.compare-input': 'countrySelected',
         'click a.sorting':'sortColumn',
         'click .facebook-td a': 'facebookShare',
         'click .twitter-td a': 'twitterShare'
+        
+    },
+    barSegmentClicked: function(e){
+        e.preventDefault();
+        console.log(e.currentTarget.className.match(/CDI_\w{3}/)[0]);  
+        Backbone.pubSub.trigger('triggerNext', e);
+        e.stopImmediatePropagation();
     },
     twitterShare: function(e){
 
@@ -325,8 +333,13 @@ cdiApp.CDI.View = Backbone.View.extend({
     },
     showCollapsed: function(event) {
         event.preventDefault();
-        
+        var $originalTarget = $(event.target);
         var $target = $(event.currentTarget);
+        console.log($originalTarget);
+        if ($originalTarget.hasClass('bar-segment') && $originalTarget.parent().parent().parent().hasClass('active')){
+            console.log('bar segment of active row');
+            return;
+        }
         var bottom = $target.hasClass('close-bottom-trends') ? true : false;
         
         var countryCode = $target.attr('data-c');
@@ -537,6 +550,7 @@ cdiApp.mainNav.Model = Backbone.Model.extend({
 cdiApp.mainNav.View = Backbone.View.extend({
     initialize: function() {
          Backbone.pubSub.on('triggerNext', function(e){this.menuItemClicked(e);}, this); //subscribe to triggerNext trigger from next buttons
+        Backbone.pubSub.on('barSegClickContinued', function(e){this.menuItemClickedContinued(e);}, this);
         this.render();
     },
     render: function() {
@@ -801,44 +815,35 @@ console.log(e.data.notch);
         'click a.selectable': 'menuItemClicked',
         'click .reset-weight a': 'resetWeight',
         'click #close-mainNav': 'closeMainNav'
+        
     },
+    
     closeMainNav: function(){
         var closeMainNavText = $('#cdi-mainNav').hasClass('closed') ? '(X) Close' : 'Open menu';
         $('#cdi-mainNav').toggleClass('closed');        
         $('#close-mainNav').text(closeMainNavText);
     
     },
-    menuItemClicked: function(event) {
-        event.preventDefault();
-        if ($(event.currentTarget).parent().parent().hasClass('active'))
-            return;
-        var $activeItem = this.$el.find('div.active');
-        $activeItem.removeClass('active');
-        var activeIndicator = $activeItem.data('indicator');
-        if (activeIndicator === 'CDI'){
-
-            $('#indicator-description-wrapper').removeClass('idw-processed');
-            $('#home-cdi').removeClass('home-processed');
-            that = this;
-            setTimeout(function(){
-                that.menuItemClickedContinued(event, activeIndicator);
-            }, 500);
-        } else {
-
-            this.menuItemClickedContinued(event, activeIndicator);
-        }
-    },
     menuItemClickedContinued: function(event, activeIndicator){
         that = this;
         
         var $target = $(event.target);
-
+        var country = null;
+;
 
        
         if ($target.hasClass('next-button')){
        
             $target = $('div.' + $target.attr('data-indicator') + '-bg a.selectable');
         }
+        if ($target.hasClass('bar-segment')){
+            country = $target.parent().parent().parent().attr('data-c');
+            $target = $('div.' + $target[0].className.match(/CDI_\w{3}/) + '-bg a.selectable');
+            activeIndicator = 'CDI';
+            console.log($target);
+            
+        }
+        console.log(country);
         $target.parent().parent().addClass('active');
 
         
@@ -856,15 +861,15 @@ console.log(e.data.notch);
                 
             }, 500);
         } else {
-            var yPos = $(window).scrollTop();
+           // var yPos = $(window).scrollTop();
           
             
 
           cgdCdi.hideIndicator(activeIndicator)
            $('#indicator-description-wrapper').removeClass('home');
-            cgdCdi.reload($target.attr('data-indicator'));
+            cgdCdi.reload($target.attr('data-indicator'), country);
         
-            $(window).scrollTop(yPos);
+         //   $(window).scrollTop(yPos);
             var labelIndex = cgdCdi.indicatorsOrder.indexOf($target.attr('data-indicator'));
 
             $('.next-button').css('opacity',0);
@@ -888,9 +893,41 @@ console.log(e.data.notch);
 
         var extra = $('body').width() > 720 ? 30 : 70;
         var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
-        if ($('#cdi-mainNav').hasClass('stick-to-top')) $('body').animate({scrollTop: scrollPoint}, 200);
+        
+        if ($('#cdi-mainNav').hasClass('stick-to-top') && country == null) $('body').animate({scrollTop: scrollPoint}, 200);
     
     },
+    menuItemClicked: function(event) {
+        
+        event.preventDefault();
+        if ($(event.currentTarget).parent().parent().hasClass('active'))
+            return;
+        var $activeItem = this.$el.find('div.active');
+        $activeItem.removeClass('active');
+        var activeIndicator = $activeItem.data('indicator');
+        console.log(this.menuItemClickedContinued);  
+        if (activeIndicator === 'CDI'){
+            
+
+            $('#indicator-description-wrapper').removeClass('idw-processed');
+            $('#home-cdi').removeClass('home-processed');
+            that = this;
+            if (event.type === 'mouseup') {
+               console.log('bar-segment');
+                setTimeout(function(){
+                     Backbone.pubSub.trigger('barSegClickContinued', event);
+                }, 500);
+               return;
+            }
+            setTimeout(function(){
+                that.menuItemClickedContinued(event, activeIndicator);
+            }, 500);
+        } else {
+
+            this.menuItemClickedContinued(event, activeIndicator);
+        }
+    },
+    
     toggleSliders: function(indicator){
         if (indicator !== 'CDI'){
             $('.slider').addClass('hide-slider');

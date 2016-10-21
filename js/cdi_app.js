@@ -372,7 +372,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
         }
     },
 
-    reload: function(indicator) {
+    reload: function(indicator, country) {
 
         var viewName = indicator.toLowerCase() + 'View';
         if (indicator === 'CDI') { //this[viewName]) {
@@ -383,11 +383,12 @@ new code : adds object 'original' to main indicators and copies data to it so th
         }
         else {
 
-            this.loadIndicator(indicator);
+            this.loadIndicator(indicator, country);
         }
     },
 
     hideIndicator: function(indicator) {
+        console.log(indicator);
         var indicator = indicator.toLowerCase();
         var viewName =  (indicator === 'cdi' ? 'cdi' : 'indicator') + 'View';
 
@@ -747,7 +748,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
         });
         this.cdiView.render();
     },
-    loadIndicator: function(indicator) {
+    loadIndicator: function(indicator, country) {
         
         $('.weight-toggle, .reset-weight').addClass('weighted-override');
         $('.reset-weight, .weights-instruct').attr('aria-hidden', true);
@@ -769,7 +770,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
             this.indicatorView.initialize();
         }
         this.indicatorView.render();
-        this.indicatorView.show();
+        console.log(country);
+        this.indicatorView.show(country);
     },
 
     loadCountry: function(args) {

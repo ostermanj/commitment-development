@@ -142,9 +142,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
             $('.' + countryCode + '-components .components-wrapper').height(0);
             if (bottom){
                 console.log('bottom');
-                $('html, body').animate({
-                    scrollTop: $target.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height()
-                }, 500);
+                this.scrollToTarget($target);
             }
             delay = 500;
             }
@@ -153,7 +151,17 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
             view.toggle();            
         }, delay);
     //    $target.toggleClass('active');
+        if (event.barSegment) {
+            console.log('calling scrool to target');
+            this.scrollToTarget($target);
+        } else {
         event.preventDefault();
+        }
+    },
+    scrollToTarget: function($target){
+      $('html, body').animate({
+                    scrollTop: $target.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height()
+                }, 500);  
     },
 
     countrySelected: function(event) {
@@ -188,8 +196,16 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         var url = '/cdi-2015/compare/' + selected.join('/');
         window.location = url;
     },
-    show: function() {
+    show: function(country) {
         this.$el.show();
+        console.log(country);
+        if (country != null) {
+                var event = {};
+            event.currentTarget = $('tr.' + country + '-master.master-row');
+            event.barSegment = true;
+            this.showComponents(event);
+            
+        }
     },
     hide: function() {
         this.$el.hide();
