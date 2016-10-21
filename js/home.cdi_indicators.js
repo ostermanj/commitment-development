@@ -159,8 +159,9 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         }
     },
     scrollToTarget: function($target, ex){
+        var extra = ex != null ? ex : 0;
       $('html, body').animate({
-                    scrollTop: $target.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height() - ex
+                    scrollTop: $target.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height() - extra
                 }, 500);  
     },
 
