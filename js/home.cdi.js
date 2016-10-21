@@ -891,7 +891,7 @@ console.log(e.data.notch);
             
         }
 
-        var extra = $('body').width() > 720 ? 30 : 70;
+        var extra = $('body').width() > 720 ? 50 : 70;
         var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
         
         if ($('#cdi-mainNav').hasClass('stick-to-top') && country == null) $('body').animate({scrollTop: scrollPoint}, 200);

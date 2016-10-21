@@ -153,14 +153,14 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     //    $target.toggleClass('active');
         if (event.barSegment) {
             console.log('calling scrool to target');
-            this.scrollToTarget($target);
+            this.scrollToTarget($target, 10);
         } else {
         event.preventDefault();
         }
     },
-    scrollToTarget: function($target){
+    scrollToTarget: function($target, ex){
       $('html, body').animate({
-                    scrollTop: $target.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height()
+                    scrollTop: $target.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height() - ex
                 }, 500);  
     },
 
