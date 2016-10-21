@@ -380,6 +380,14 @@ new code : adds object 'original' to main indicators and copies data to it so th
             this[viewName].show(indicator);
             $('.weight-toggle, .reset-weight').removeClass('weighted-override');
             $('.reset-weight, .weights-instruct').attr('aria-hidden', false);
+            if (country != null) {
+                $mainRow = $('tr#' + country + '-master');
+                console.log($mainRow);
+                console.log($mainRow.offset().top);
+                $('html, body').animate({                 
+                        scrollTop: $mainRow.offset().top - $('#main-menu').height() - $('#cdi-mainNav').height() - 20
+                    }, 500); 
+            }
         }
         else {
 

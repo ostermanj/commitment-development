@@ -292,6 +292,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         'click a.sorting':'sortColumn',
         'click .facebook-td a': 'facebookShare',
         'click .twitter-td a': 'twitterShare'
+       
         
     },
     barSegmentClicked: function(e){
@@ -815,8 +816,11 @@ console.log(e.data.notch);
         'click a.selectable': 'menuItemClicked',
         'click .reset-weight a': 'resetWeight',
         'click #close-mainNav': 'closeMainNav'
+      
         
     },
+    
+
     
     closeMainNav: function(){
         var closeMainNavText = $('#cdi-mainNav').hasClass('closed') ? '(X) Close' : 'Open menu';
@@ -825,10 +829,13 @@ console.log(e.data.notch);
     
     },
     menuItemClickedContinued: function(event, activeIndicator){
+        
         that = this;
         
         var $target = $(event.target);
-        var country = null;
+        var country = null
+
+//            returnMain = false;
 ;
 
        
@@ -843,6 +850,11 @@ console.log(e.data.notch);
             console.log($target);
             
         }
+        if ($target.hasClass('return-to-main')){
+            country = $target.attr('data-c');
+            returnMain = true;
+            $target = $('div.CDI-bg a.selectable'); // nned to pass indicator somehow
+        }
         console.log(country);
         $target.parent().parent().addClass('active');
 
@@ -854,7 +866,7 @@ console.log(e.data.notch);
             setTimeout(function(){
                 $('.indicator-description, .indicator-explanation').empty();
                 cgdCdi.hideIndicator(activeIndicator);
-                cgdCdi.reload($target.attr('data-indicator'));
+                cgdCdi.reload($target.attr('data-indicator'), country);
 
                 $('.next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]).attr('data-indicator','CDI_AID');
                  $('#indicator-description-wrapper').addClass('idw-processed home');
@@ -895,13 +907,22 @@ console.log(e.data.notch);
         var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
         
         if ($('#cdi-mainNav').hasClass('stick-to-top') && country == null) $('body').animate({scrollTop: scrollPoint}, 200);
+      /*  if (returnMain){
+            console.log('should now scroll back to country\'s row');
+            $mainRow = $('tr#' + country + '-master');
+            console.log($mainRow);
+            console.log($mainRow.offset().top);
+            $('html, body').animate({                 
+                    scrollTop: $mainRow.offset().top// - $('#main-menu').height() - $('#cdi-mainNav').height() - 20
+                }, 5000); 
+        }*/
     
     },
     menuItemClicked: function(event) {
-        
         event.preventDefault();
         if ($(event.currentTarget).parent().parent().hasClass('active'))
             return;
+        $('.show-return').removeClass('show-return'); // removes show-return class after user changes views
         var $activeItem = this.$el.find('div.active');
         $activeItem.removeClass('active');
         var activeIndicator = $activeItem.data('indicator');
@@ -951,10 +972,11 @@ console.log(e.data.notch);
  */
 cdiApp.collapsibleView = Backbone.View.extend({
     loaded: false,
-    toggle: function() {
+    toggle: function(barSegment) {
        this.$el.fadeToggle(0);
+        var bs = barSegment ? true : false;
     //    if (!this.loaded) {
-            this.render();
+            this.render(bs);
     //   }
     },
     hide: function() {

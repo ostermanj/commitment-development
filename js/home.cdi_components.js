@@ -16,17 +16,22 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
         this.data = this.model.data;
         this.app = this.model.app;
     },
-    render: function() {
+    render: function(bs) {
         if (!this.loaded) {
+            $('.show-return').removeClass('show-return'); // removes show return class from expanded components after another is opened
             this.loaded = true;
             var $contentTd = $('<td colspan="7"></td>');
             var $contentWrapper = $('<div class="components-wrapper"></div>');
+            if (bs) $contentWrapper.addClass('show-return');
             var $content = $('<div class="components-inner-wrapper"></div>');
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
-             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
-            $content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>')
+             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
+            //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>');
+            //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
+            
+            
           
             for(var i in this.data) {
                 var $label, $chart;
@@ -55,8 +60,8 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     this.app.createBarChart(2015, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
                 }
             }
-            $content.append('<div class="year-results"><a class="components-report-bottom" target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
-            $content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>')
+            $content.append('<div class="year-results"><a class="components-report-bottom" target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
+            //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>')
         }
         var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 50;
         $('.' + this.countryCode + '-components .components-wrapper').height(cHeight);

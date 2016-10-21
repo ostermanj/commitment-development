@@ -102,7 +102,13 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         'click input.compare-input': 'countrySelected',
 	    'click a.sorting':'sortColumn',
         'click .facebook-td a': 'facebookShare',
-        'click .twitter-td a': 'twitterShare'
+        'click .twitter-td a': 'twitterShare',
+        'click .return-to-main': 'returnToMain'
+    },
+    returnToMain: function(e){
+        e.preventDefault();
+        console.log('reutr to main');
+        Backbone.pubSub.trigger('triggerNext', e); // triggers menuItemClicked in home.cdi.js
     },
     twitterShare: function(e){
         console.log(e);
@@ -148,7 +154,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
             }
         setTimeout(function(){
             $target.toggleClass('active');
-            view.toggle();            
+            view.toggle(event.barSegment); //passes true if clicking on the bar segment was the trigger            
         }, delay);
     //    $target.toggleClass('active');
         if (event.barSegment) {

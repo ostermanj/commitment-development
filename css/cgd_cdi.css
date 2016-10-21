@@ -565,9 +565,19 @@ tr.trend {
     /*max-width: 650px;*/
 }
 
-.close-info, .close-components {
+.close-info, .close-components, .return-to-main {
     position: relative;
     top: 18px;
+}
+
+.return-to-main {
+    left:15px;
+    display: none;
+}
+
+.show-return .return-to-main {
+    
+    display: inline;
 }
 
 .components-report-bottom {
@@ -2077,7 +2087,7 @@ span.country-label {
         padding-left: 25px;
     }
     
-    .close-info, .close-components {
+    .close-info, .close-components, .return-to-main {
         font-size: 13px;
     }
 }
