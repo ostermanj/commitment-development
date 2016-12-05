@@ -867,18 +867,21 @@ cdiApp.collapsibleView = Backbone.View.extend({
 });
 cdiApp.infoView = cdiApp.collapsibleView.extend({
     initialize: function(args) {
+        
         this.countryCode = args.countryCode;
     },
     render: function() {
         that = this;
+        console.log(that);
         var addHeight = window.innerWidth <= 410 ? 42 : 81;
         if (!this.loaded) {
             
             this.loaded = true;
             
-            $.get('/cdi-2015/overall/' + this.countryCode, function(data,status) {
-                var content = '<td colspan="7" class="info-td"><div class="info-wrapper">' + data + '<a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
-               
+        
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a href="/cdi-2015/country/SWE" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+ 
+ 
                 that.$el.append(content);
                 
                 cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + addHeight;
@@ -888,9 +891,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                 $('#' + that.countryCode + '-info .year-results a').text('Country report').attr('target', '_blank');
                 
                 
-            }, 'html').error(function() {
-                that.$el.append('<td colspan="7" class="info-td"><div class="info-wrapper">Data not available: ' + status + '</div></td>');
-            });
+         
         } else {
             cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + addHeight;
              $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
