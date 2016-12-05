@@ -31,6 +31,35 @@
    <country code='USA' lang='EN'><![CDATA[United States]]></country>
    <country code='EU' lang='EN'><![CDATA[Europe]]></country>
    <region code='LMY' lang='EN'><![CDATA[All developing countries]]></region>
+    
+   <summary code='AUT' lang='EN'><![CDATA[Austria ranks 13th on the Commitment to Development Index. Its best performance is in the technology and migration components.]]></summary>
+   <summary code='AUS' lang='EN'><![CDATA[Australia ranks 10th on the Commitment to Development Index with good performance across all components, especially migration and trade.]]></summary>
+   <summary code='BEL' lang='EN'><![CDATA[Belgium ranks 13th (tie) on the Commitment to Development Index. Its best performance is in the finance and environment components.]]></summary>
+   <summary code='CAN' lang='EN'><![CDATA[Canada ranks 10th (tie) on the Commitment to Development Index. Its best performance is in the finance, migration, and aid components.]]></summary>
+   <summary code='CZE' lang='EN'><![CDATA[The Czech Republic ranks 18th (tie) on the Commitment to Development Index. Its best performance is in the environment and finance components.]]></summary>
+   <summary code='DNK' lang='EN'><![CDATA[Denmark ranks first on the Commitment to Development Index with strong performance across all policy areas. It does not score below average on any of the seven components.]]></summary>
+   <summary code='FIN' lang='EN'><![CDATA[Finland ranks fourth on the Commitment to Development Index with strong performance especially in the finance and environment components.]]></summary>
+   <summary code='FRA' lang='EN'><![CDATA[France ranks sixth (tie) on the Commitment to Development Index with strong performance across all policy areas. It does not score below average on any of the seven components.]]></summary>
+   <summary code='DEU' lang='EN'><![CDATA[Germany ranks 12th on the Commitment to Development Index. Its best performance is in the migration, trade, and technology components.]]></summary>
+   <summary code='GRC' lang='EN'><![CDATA[Greece ranks 25th on the Commitment to Development Index. Its best performance is in the environment and security components.]]></summary>
+   <summary code='HUN' lang='EN'><![CDATA[Hungary ranks 18th (tie) on the Commitment to Development Index. Its best performance is in the environment and technology components.]]></summary>
+   <summary code='IRL' lang='EN'><![CDATA[Ireland ranks 13th (tie) on the Commitment to Development Index. Its best performance is in the finance and environment components.]]></summary>
+   <summary code='ITA' lang='EN'><![CDATA[Italy ranks 17th on the Commitment to Development Index. Its best performance is in the finance and environment components.]]></summary>
+   <summary code='JPN' lang='EN'><![CDATA[Japan ranks 27th on the Commitment to Development Index. It ranks near the bottom of many components, but it performs well on technology.]]></summary>
+   <summary code='LUX' lang='EN'><![CDATA[Luxembourg ranks 18th on the Commitment to Development Index. Its best performance is in the aid, trade, and migration components.]]></summary>
+   <summary code='NLD' lang='EN'><![CDATA[The Netherlands ranks fourth (tie) on the Commitment to Development Index with strong performance especially in the trade and aid components.]]></summary>
+   <summary code='NZL' lang='EN'><![CDATA[New Zealand ranks eighth on the Commitment to Development Index with strong performance especially in the trade, security, and migration components.]]></summary>
+   <summary code='NOR' lang='EN'><![CDATA[Norway ranks third on the Commitment to Development Index with strong performance across most policy areas. It ranks at the top on three of the seven components.]]></summary>
+   <summary code='POL' lang='EN'><![CDATA[Poland ranks 22nd on the Commitment to Development Index. Its best performance is in the finance and environment components.]]></summary>
+   <summary code='PRT' lang='EN'><![CDATA[Portugal ranks eighth (tie) on the Commitment to Development Index with strong performance especially in the technology and environment components]]></summary>
+   <summary code='SVK' lang='EN'><![CDATA[Slovakia ranks 22nd (tie) on the Commitment to Development Index. Its best performance is in the environment component.]]></summary>
+   <summary code='KOR' lang='EN'><![CDATA[South Korea ranks 26th on the Commitment to Development Index. It ranks at the bottom of many components, but at the top of technology.]]></summary>
+   <summary code='ESP' lang='EN'><![CDATA[Spain ranks 13th (tie) on the Commitment to Development Index. Its best performance is in the finance and environment components.]]></summary>
+   <summary code='SWE' lang='EN'><![CDATA[Sweden ranks second on the Commitment to Development Index. Like Denmark, it does not score below average on any of the seven components.]]></summary>
+   <summary code='CHE' lang='EN'><![CDATA[Switzerland ranks 22nd (tie) on the Commitment to Development Index. Its best performance is in the aid, technology, and migration components.]]></summary>
+   <summary code='GBR' lang='EN'><![CDATA[The United Kingdom ranks sixth on the Commitment to Development Index with strong performance across most components, especially aid, trade, and security.]]></summary>
+   <summary code='USA' lang='EN'><![CDATA[The United States ranks 18th (tie) on the Commitment to Development Index. Its best performance is in the trade and security components.]]></summary>
+   
    <hierarchy>
       <indicator code='CDI' level='1'>
          <label lang='EN'><![CDATA[Overall]]></label>

@@ -128,6 +128,7 @@ var cdiApp = Backbone.View.extend({
 
         $.get(options.url).done(function(data){
             that.data = data;
+            console.log(data);
             var countryCodes = that.getCountryCodes();
             that.getCountryNames(countryCodes);
             that.getMainIndicators();
@@ -137,6 +138,7 @@ var cdiApp = Backbone.View.extend({
                 that[options.onLoad](options.args);
             }
         });
+        
     },
     userInput: function(args){
         if (args === 'resetWeight'){

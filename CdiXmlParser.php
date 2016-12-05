@@ -68,11 +68,13 @@ class CdiXmlParser {
         foreach ($this->xml->xpath('/data/country') as $country) {
             $this->countryList[$country['code']] = (string) $country;
         }
+       
         unset($this->countryList['EU']);
         return $this->countryList;
+        
     }
-
-    protected function loadIndicatorsValues() {
+    
+   protected function loadIndicatorsValues() {
         if (false !== $this->indicatorsValues)
             return $this->indicatorsValues;
 
@@ -80,6 +82,12 @@ class CdiXmlParser {
         $this->indicatorsValues = array();
         $this->weightedList = array();
         $this->userFriendlyList = array();
+        $this->summaries = array();
+        
+        foreach ($this->xml->xpath('/data/summary') as $summary) {
+            $this->summaries[(string) $summary['code']] = (string) $summary;
+        }
+     
         foreach ($this->xml->xpath('//vs') as $value) {
             $indicator = (string) $value['i'];
             $year = intval($value['y']);
@@ -199,7 +207,12 @@ class CdiXmlParser {
                 'max' => $max,
                 'user_friendly_min' => $friendlyMin,
                 'user_friendly_max' => $friendlyMax,
+                
             );
+            
+            if ($code === 'CDI'){
+                $indicators[$code]['summaries'] = $this->summaries;
+            }
             if (isset($this->weightedList[$code][$year])) {
                 $indicators[$code]['weighted'] = $this->weightedList[$code][$year];
             }
@@ -215,6 +228,8 @@ class CdiXmlParser {
                 $this->indicatorsList[$code]['children'] = array_keys($indicators[$code]['children']);
             }
         }
+      
+            
 
         return $indicators;
     }

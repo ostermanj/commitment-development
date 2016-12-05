@@ -38,6 +38,7 @@ cdiApp.CDI.Model = Backbone.Model.extend({
  *  the tool previously relied on the order of key-value pairs in an object, which cannot be
  *  guaranteed. the order of an array can be guaranteed.
  */
+        console.log(this.indicator);
     var sortable = []; 
     for (var country in this.indicator.values){
         var obj = {};
@@ -168,7 +169,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         var rank = 0;
         this.$el.find('tbody').html('');
         this.groupedValues.sort(this.sortArray(sortAsc, field));
-
+console.log(this.groupedValues);
         for (var i in this.groupedValues) {
      
             if (this.groupedValues.hasOwnProperty(i)) {
@@ -319,7 +320,7 @@ cdiApp.CDI.View = Backbone.View.extend({
           this.showCollapsedHelper($target,view,delay,countryCode);
       }
   
-    },
+    },  
     collapseTrends: function($target,view,delay,countryCode, bottom){
         $('#' + countryCode + '-trend .trends-wrapper').css('height', 0);
         this.showCollapsedHelper($target,view,delay,countryCode);
