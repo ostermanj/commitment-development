@@ -27,7 +27,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
-             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
+             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
             //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>');
             //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
             
@@ -49,7 +49,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         indicators = [this.app.flatIndicators[i].children[j]];
 			parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
 
-			this.app.createBarChart(2015, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
+			this.app.createBarChart(2016, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
                     }
                 } else {
                     var $label = $('<div class="indicator-label">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a></div>');
@@ -57,10 +57,10 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     indicators = [i];
                     $content.append($label);
                     $content.append($chart);
-                    this.app.createBarChart(2015, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
+                    this.app.createBarChart(2016, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
                 }
             }
-            $content.append('<div class="year-results"><a class="components-report-bottom" target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
+            $content.append('<div class="year-results"><a class="components-report-bottom" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
             //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>')
         }
         var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 50;

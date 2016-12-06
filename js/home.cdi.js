@@ -222,8 +222,6 @@ console.log(this.groupedValues);
     events: {
         'mouseup .active .bar-segment': 'barSegmentClicked',
         'click tr.master-row, .load-trends, .close-info': 'showCollapsed',
-        'click a.compare': 'compare',
-        'click input.compare-input': 'countrySelected',
         'click a.sorting':'sortColumn',
         'click .facebook-td a': 'facebookShare',
         'click .twitter-td a': 'twitterShare'
@@ -358,37 +356,7 @@ console.log(this.groupedValues);
             
         }, delay);
     },
-    countrySelected: function(event) {
-        var $target = $(event.target);
-        var $selected = this.$el.find('input.compare-input:checked');
-
-	if (!$target.is(':checked')) {
-            $target.find('+ a.compare').hide();
-        }
-
-	if($selected.length==2){
-           this.$el.find('input.compare-input').not('input.compare-input:checked').attr('disabled','true');
-        } else {
-           this.$el.find('input.compare-input').not('input.compare-input:checked').removeAttr('disabled');
-        }
-	
-        if ($selected.length > 1 && $selected.length < 3) {
-            this.$el.find('input.compare-input:checked + a.compare').show();
-        } else {
-            this.$el.find('input.compare-input + a.compare').hide();
-        }
-    },
-    compare: function(event) {
-        var $selected = this.$el.find('input.compare-input:checked');
-        var selected = [];
-        event.preventDefault();
-
-        $selected.each(function(index, element) {
-            selected.push($(element).val());
-        });
-        var url = '/cdi-2015/compare/' + selected.join('/');
-        window.location = url;
-    },
+   
     show: function(indicator) {
         this.$el.show();
         if (indicator === 'CDI'){
@@ -879,7 +847,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
         
-                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a href="/cdi-2015/country/SWE" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a href="/cdi-2016/country/SWE" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
  
  
                 that.$el.append(content);
@@ -949,7 +917,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                
             });
              var $buttonWrapper = $('<div style="clear:left">');
-             $buttonWrapper.append('<div class="year-results hello"><a target="_blank" href="/cdi-2015/country/' + this.countryCode + '">Country report</a></div>');
+             $buttonWrapper.append('<div class="year-results hello"><a target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>');
             $content.append($buttonWrapper);
             $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 80;

@@ -79,7 +79,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     
 
                     this.$el.find('tbody').append($row);
-                    this.app.createBarChart(2015, i, [this.indicator], $row.find('.chart-holder'), false, item.min, item.max, item.min_label, item.max_label, 2);
+                    this.app.createBarChart(2016, i, [this.indicator], $row.find('.chart-holder'), false, item.min, item.max, item.min_label, item.max_label, 2);
 
                     //$('#new_cdi table tbody').append('<tr id="' + data[i].c + '-info" class="info"><td></td><td colspan="5">Info</td></tr>');
                    
@@ -98,9 +98,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     },
     events: {
         'click tr.master-row, .close-components': 'showComponents',
-        'click a.compare': 'compare',
-        'click input.compare-input': 'countrySelected',
-	    'click a.sorting':'sortColumn',
+        'click a.sorting':'sortColumn',
         'click .facebook-td a': 'facebookShare',
         'click .twitter-td a': 'twitterShare',
         'click .return-to-main': 'returnToMain'
@@ -171,38 +169,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                 }, 500);  
     },
 
-    countrySelected: function(event) {
-        var $target = $(event.target);
-        var $selected = this.$el.find('input.compare-input:checked');
-	
-	if (!$target.is(':checked')) {
-            $target.find('+ a.compare').hide();
-        }
-        if($selected.length==2){
-	   this.$el.find('input.compare-input').not('input.compare-input:checked').attr('disabled','true');
-	} else {
-	   this.$el.find('input.compare-input').not('input.compare-input:checked').removeAttr('disabled');
-	}
-	
-        if ($selected.length > 1 && $selected.length < 3) {
-            this.$el.find('input.compare-input:checked + a.compare').show();
-        } else {
-            this.$el.find('input.compare-input + a.compare').hide();
-        }
-	console.log($selected.length);
-
-    },
-    compare: function(event) {
-        var $selected = this.$el.find('input.compare-input:checked');
-        var selected = [];
-        event.preventDefault();
-
-        $selected.each(function(index, element) {
-            selected.push($(element).val());
-        });
-        var url = '/cdi-2015/compare/' + selected.join('/');
-        window.location = url;
-    },
+    
     show: function(country) {
         this.$el.show();
         console.log(country);
