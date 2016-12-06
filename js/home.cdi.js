@@ -206,7 +206,7 @@ console.log(this.groupedValues);
                 this.$el.find('tbody').append($row);
                 var indicators = this.indicator.children;
 
-                this.app.createBarChart(2015, item.index, indicators, $row.find('.chart-holder'), false, this.indicator.min, this.indicator.max, "0", this.indicator.user_friendly_max, 1);
+                this.app.createBarChart(2016, item.index, indicators, $row.find('.chart-holder'), false, this.indicator.min, this.indicator.max, "0", this.indicator.user_friendly_max, 1);
                 this.$el.find('tbody').append(infoView.$el);
                 // Add charts row.
                 this.$el.find('tbody').append(trendView.$el);

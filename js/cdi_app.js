@@ -862,7 +862,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
 			    all_data = that.flatIndicators[child.children[k]];
 
 			
-                            that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
+                            that.createBarChart(2016, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                         }
                     } else {
                         $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
@@ -873,7 +873,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
 			all_data = that.flatIndicators[children[j]];
 
 						
-                        that.createBarChart(2015, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
+                        that.createBarChart(2016, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
                     }
                 }
             }
