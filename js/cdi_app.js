@@ -311,18 +311,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
      *   The countries to get the names.
      */
     getCountryNames:function(countryCodes) {
-       /* if (countryCodes.length && false) {
-            $.ajax({
-                type: 'GET',
-                url: '/cdi-2015/country-codes',
-                data: {
-                    countryCodes: countryCodes
-                },
-                context: this
-            }).done(function(data) {
-                this.countries = data;
-            });
-        } */
+       
         this.countries = {
             AUS: "Australia",
             AUT: "Austria",

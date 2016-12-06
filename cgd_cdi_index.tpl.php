@@ -2,7 +2,7 @@
 <div class="cdi-header-wrapper">
     <div class="cdi-header">
         <h1>The Commitment to Development Index</h1>
-        <p>The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect the more than five billion people living in poorer nations. Explore the 2015 results below. A brief is available <a style="color:#fff !important;" href="/publication/ft/commitment-development-index-2015">here</a>.</p>
+        <p>The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect the more than five billion people living in poorer nations. Explore the 2016 results below.</p>
     </div>
 </div>
 <div class="dev-cdi">

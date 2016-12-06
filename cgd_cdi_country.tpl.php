@@ -51,10 +51,10 @@
     } ?>
 <div class="clearfix"></div>
 <div class="cdi-link">
-    <?php print l(t('Go back to Overall'), 'cdi-2015');?>
+    <?php print l(t('Go back to overall'), 'commitment-development-index-2016');?>
 </div>
 <div class="more-info">
-    <?php print l(t('Need more info'), 'cdi-2015');?>
+    <?php print l(t('Need more info'), 'commitment-development-index-2016');?>
 </div>
 </div>
 <?php
@@ -66,6 +66,6 @@
 ?>
 <div class="social">
     <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $GLOBALS['base_url'].'/'.current_path();?>" class="facebook" target="fb "title="Share on Facebook">Facebook</a>
-    <a href="http://twitter.com/share?text=Denmark%20takes%20first%20place%20on%20the%202015%20Commitment%20to%20Development%20Index.%20US%20is%20%2021st%20and%20UK%20is%2012th.&url=<?php echo $GLOBALS['base_url'].'/'.current_path();?>&via=cgdev" class="twitter" target="tw" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/share?text=Denmark%20takes%20first%20place%20on%20the%202016%20Commitment%20to%20Development%20Index.%20US%20is%20%2021st%20and%20UK%20is%2012th.&url=<?php echo $GLOBALS['base_url'].'/'.current_path();?>&via=cgdev" class="twitter" target="tw" title="Share on Twitter">Twitter</a>
     <a href="mailto:?subject=Commitment%20to%20Development%20Index%20-%20<?php print $title_encoded;?>&body=<?php print $description_overall_encoded;?>%0A%0A<?php echo $GLOBALS['base_url'].'/'.current_path();?>" target="em" class="email" title="Share by email">Email</a>
 </div>
