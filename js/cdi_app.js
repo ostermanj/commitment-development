@@ -12,7 +12,7 @@ this calculation has to be reproduced to allow users to adjust weights and retur
         $('html').addClass('flexbox');
 
     }
-});*/
+});   */
 
  var userWeights = {
 	   CDI_AID: {
