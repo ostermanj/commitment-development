@@ -55,7 +55,7 @@ function cgd_cdi_index_page() {
   drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js');
   drupal_add_js(drupal_get_path('module', 'cgd_cdi') . '/js/cdi_app.combined.js');
   drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js');
-  drupal_add_js(drupal_get_path('module', 'cgd_cdi') . '/js/cgd_cdi_modal_country.combined.js');
+  drupal_add_js(drupal_get_path('module', 'cgd_cdi') . '/js/cgd_cdi_modal.combined.js');
   drupal_add_js(array('cgd_cdi' => array('pathToModule' => drupal_get_path('module', 'cgd_cdi'))), 'setting');
 
   drupal_set_title(t('Commitment to Development Index 2016'));
@@ -134,7 +134,8 @@ function cgd_cdi_country_page($country_code) {
   drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js');
   drupal_add_js(drupal_get_path('module', 'cgd_cdi') . '/js/cdi_app.combined.js');
   drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js');
-  drupal_add_js(drupal_get_path('module', 'cgd_cdi') . '/js/cgd_cdi_modal_country.combined.js');
+  drupal_add_js(drupal_get_path('module', 'cgd_cdi') . '/js/cgd_cdi_modal.combined.js');
+  drupal_add_js(drupal_get_path('module', 'cgd_cdi') . '/js/cgd_cdi_country.js');
   drupal_add_js(array('cgd_cdi' => array('pathToModule' => drupal_get_path('module', 'cgd_cdi'))), 'setting');
 
   drupal_set_title(t('Commitment to Development Index - ' . $country->title));
