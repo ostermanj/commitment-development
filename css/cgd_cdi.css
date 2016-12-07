@@ -450,10 +450,12 @@ span.os, span.ns {
 }
 */
 .cdi-header-wrapper {
-    background: url(../images/home-hero.png);
+    background: url(../images/home-hero-2016_4.jpg);
     background-size: cover;
     padding: 40px 0;
     color: #FFF;
+    background-position-y: -115px;
+    margin-top:-1px;
 }
 .cdi-header-wrapper h1 {
   font-size: 44px;
@@ -1708,6 +1710,11 @@ span.country-label {
 }
 
 @media screen and (max-width: 1019px) {
+    .cdi-header-wrapper {
+      background-position-y: 0px;
+      margin-top: -6px; 
+    }
+
     .mainNav.stick-to-top {
      
         top: 44px;
@@ -1775,7 +1782,10 @@ span.country-label {
    
 }
 @media screen and (max-width: 739px) {
-    
+
+    .cdi-header-wrapper {
+      margin-top:0;
+    }  
     #site-logo {
         height: 36px !important;
         background-size: contain !important;
