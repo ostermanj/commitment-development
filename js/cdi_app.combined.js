@@ -207,37 +207,37 @@ this calculation has to be reproduced to allow users to adjust weights and retur
        CDI_AID: {
           value: 1,
           unlocked: true,
-          invSTD: 1.205188013          
-       },
-       CDI_INV: {
-          value: 1,
-          unlocked: true,
-          invSTD: 1.95125084
-       },
-       CDI_TEC: {
-          value: 1,
-          unlocked: true,
-          invSTD: 0.913599031
-       },
-       CDI_ENV: {
-          value: 1,
-          unlocked: true,
-          invSTD: 1.023006239
+          invSTD: 1.273950935          
        },
        CDI_TRA: {
           value: 1,
           unlocked: true,
-          invSTD: 1.356537167
+          invSTD: 1.686829298
        },
-       CDI_SEC: {
+       CDI_INV: {
           value: 1,
           unlocked: true,
-          invSTD: 0.803143505
+          invSTD: 1.961240567
        },
        CDI_MIG: {
           value: 1,
           unlocked: true,
-          invSTD: 0.757060201
+          invSTD: 1.589465703
+       },
+        CDI_ENV: {
+          value: 1,
+          unlocked: true,
+          invSTD: 1.516385285
+       },
+        CDI_SEC: {
+          value: 1,
+          unlocked: true,
+          invSTD: 1.271794225
+       },
+       CDI_TEC: {
+          value: 1,
+          unlocked: true,
+          invSTD: 0.944431458
        }
    };
    
@@ -900,7 +900,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
     events: {
       'click a.next-button': 'triggerNext',
         'click #unstack-td': 'toggleStack' //is this event in the right place?
+        
     },
+   
     toggleStack: function(){
       $('.unstack-slider').toggleClass('off');
         if ($('.unstack-slider').hasClass('off')){
@@ -919,8 +921,48 @@ new code : adds object 'original' to main indicators and copies data to it so th
      * Load the Overall tab.
      */
     loadCDI: function(a, userWeighted, scroll) {
+        var introIndicator = document.getElementById('carousel-indicator'),
+            intros = document.querySelectorAll('.cdi-carousel'),
+            introIndex = 0;
+            
 
+        function nextIntro(){
+              console.log('next intro');
+              console.log(introIndex);
+              $(intros).eq(introIndex).css('opacity','0');
+              $(indicatorItems).eq(introIndex).removeClass('active-intro');
+              introIndex = introIndex + 1 < intros.length ? introIndex + 1 : 0;
+              $(intros).eq(introIndex).css({'visibility':'visible','opacity': '1'});
+              $(indicatorItems).eq(introIndex).addClass('active-intro');
+
+            };
         
+       
+            introHeight = 0;
+
+            for (intro of intros){
+              /*
+               *
+               * the various intro text <p>s are of various heights. all but the first are positioned absolute when loaded,
+               * so containing div only takes the height of the one positioned relative. this code finds the height of the 
+               * tallest intro <p> and sets the containing <div>s height to match
+              */
+              introHeight = intro.offsetHeight > introHeight ? intro.offsetHeight : introHeight; 
+              
+              var indicItem = document.createElement('div');
+              indicItem.className = 'carousel-indicator-item';
+              introIndicator.appendChild(indicItem);
+            }
+            var indicatorItems = document.querySelectorAll('.carousel-indicator-item');
+            document.getElementById('cdi-carousel-wrapper').style.height = introHeight + 'px';
+            intros[0].style.position = 'absolute';  
+            indicatorItems[0].className += ' active-intro';
+            var introNext = document.createElement('button');
+            introNext.id = 'intro-next';
+            introNext.innerText = 'next';
+            introNext.onclick = nextIntro;
+            var introWrapper = document.querySelector('#carousel-indicator-wrapper');
+            document.querySelector('#carousel-indicator-wrapper').appendChild(introNext);
 
    
         var cdiModel = new cdiApp.CDI.Model({

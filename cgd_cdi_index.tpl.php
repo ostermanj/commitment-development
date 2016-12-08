@@ -2,7 +2,18 @@
 <div class="cdi-header-wrapper">
     <div class="cdi-header">
         <h1>The Commitment to Development Index</h1>
-        <p>The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect the more than five billion people living in poorer nations. Explore the 2016 results below.</p>
+        <div id="cdi-carousel-wrapper">
+          
+            <p id="cdi-carousel-0" class="cdi-carousel" style="position: relative;">The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect people living in poorer nations.</p>
+            <p id="cdi-carousel-1" class="cdi-carousel" style="visibility: hidden; opacity:0">Denmark, Sweden, and Finland are tied for first place in 2016. Denmark finishes strong in all components without topping any. Sweden scores relatively low on <em>security</em> but makes up for it on <em>migration</em>. A strong score on <em>investment</em> keeps Finland at the top.</p>
+            <p id="cdi-carousel-2" class="cdi-carousel" style="visibility: hidden; opacity:0">The United Kingdom is tied for sixth place with strengths in <em>aid</em> and <em>trade</em>. The United States, tied for 20th place, has its strongest showing in <em>trade</em>. Low scores on <em>environment</em> and <em>security</em> bring it down.</p>
+            <p id="cdi-carousel-3" class="cdi-carousel" style="visibility: hidden; opacity:0">South Korea performs the worst with poor showings across the board except for <em>migration</em> and a commanding lead in <em>technology</em>.</p>
+            <p id="cdi-carousel-4" class="cdi-carousel" style="visibility: hidden; opacity:0">Explore the results below. Adjust the weights to see how changes would affect overall scores and ranks. Unstack the bars for easier comparison across components. Select countries for year-on-year trends and country reports. Select components to drill down into the details.</p>
+            
+        </div>
+        <div id="carousel-indicator-wrapper">
+          <div id="carousel-indicator"></div>
+        </div>
     </div>
 </div>
 <div class="dev-cdi">

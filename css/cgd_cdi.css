@@ -471,7 +471,76 @@ span.os, span.ns {
     width:98%;
     padding: 0 1%;
     margin: 0 auto;
+    overflow: hidden;
 }
+
+#cdi-carousel-wrapper {
+  position: relative;
+}
+
+
+.cdi-carousel {
+  max-width: 800px;
+  width: 100%;
+  position: absolute;
+  transition: opacity .25s linear;
+}
+
+#carousel-indicator-wrapper {
+  width: 98%;
+  height: 30px;
+  position: relative;
+  max-width: 800px;
+  padding: 0 1%;
+}
+
+#carousel-indicator {
+
+    margin: auto;
+    padding-left: 0;
+    position: relative;
+    height: 10px;
+    width: 85px;
+    top: 10px;
+}
+
+.carousel-indicator-item {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    float: left;
+    margin-right: 5px;
+    background-color: transparent;
+
+}
+
+.carousel-indicator-item.active-intro {
+  background-color: #ffbb36;
+}
+
+#intro-next {
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    float: left;
+    border: 1px solid #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 2px;
+    right: 1%;
+    position: absolute;
+}
+
+#intro-next:hover, #intro-next:focus {
+  background-color: #ffbb36;
+  color:#000;
+}
+
+
+
 .dev-cdi {
     padding: 0;
     margin: 0 auto;
