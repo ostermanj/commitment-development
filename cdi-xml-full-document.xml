@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf8" ?>
+  <?xml version='1.0' encoding='utf8' ?>
 <data year='2016'>
 
    <label code='EU_COUNTRIES' lang='EN'><![CDATA[AUT, BEL, CHE, CZE,DNK,FIN,FRA,DEU,GRC,HUN,IRL,ITA, LUX,NLD, NOR, POL,PRT,SVK, ESP,SWE, GBR]]></label>
@@ -76,14 +76,13 @@
                <shortlabel lang='EN'><![CDATA[Aid]]></shortlabel>
                <description lang='EN'>
                   <![CDATA[
-             Aid remains an important source of finance for some of the poorest countries. The aid component of the CDI is composed of one subcomponent that assesses the quantity of aid of each donor country and another that assesses the quality of that aid. Each subcomponent includes a number of different indicators. Click on the components drill-down to see how countries score on each indicator and to learn about the methodology.
-           ]]>
+                   <p>The aid component is composed of two subcomponents which assess the quantity of aid of each donor country and the quality of that aid. Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
                </description>	
                <explanation lang='EN'>
                   <![CDATA[
-<h3>Why is aid important for development?</h3>
-          Although only a handful of countries meet the internationally accepted target of spending 0.7 percent of gross national income on aid, foreign assistance remains  an important source of development finance for some of the poorest countries. The <a href="http://www.oecd.org/dac/governance-peace/conflictandfragility/docs/FSR-2014.pdf">OECD report on fragile states</a> concludes that aid has been the largest and most reliable financial source for the least developed fragile states over the past decade. <br /><br /><br /><br />
-          Through multiple international summits, aid donors and recipients have  established key principles for improving the effectiveness of development assistance. Today, country ownership, donor harmonization, and mutual accountability are hallmarks of effective development assistance.
+                  <h3>Why is aid important for development?</h3>
+                    <p>Although only a handful of countries meet the internationally accepted target of spending 0.7 percent of gross national income on aid, foreign assistance remains an important source of development finance for some of the poorest countries. The <a href="http://www.oecd.org/dac/governance-peace/conflictandfragility/docs/FSR-2014.pdf">OECD report on Fragile States</a> concludes that aid has been the largest and most reliable financial source for the least developed fragile states over the past decade. In 1969, the <a href="http://www.oecd.org/dac/stats/the07odagnitarget-ahistory.htm">Pearson Commission</a> proposed that rich countries should spend 0.7 percent of their Gross National Income on foreign aid. Almost fifty years later, only a handful of countries are meeting this target.</p>
+                    <p>Quantity is not the only aspect that matters in the provision of aid. How aid is provided can have a significant impact on achieving development results. This has been acknowledged by donors in a <a href="http://www.oecd.org/dac/effectiveness/thehighlevelforaonaideffectivenessahistory.htm">High-Level Meetings on Aid Effectiveness</a>, the last one taking place in Busan in 2011. These fora contributed to establishing key principles for improving the effectiveness of development assistance. Today, ownership, harmonization, managing for development results, and mutual accountability are standard criteria on which donors and recipients implement development assistance interventions.</p>
                   ]]>
                </explanation>
                <unit lang='EN'><![CDATA[Score]]></unit>
@@ -95,7 +94,8 @@
                      <shortlabel lang='EN'><![CDATA[Aid Quantity]]></shortlabel>
                      <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                      <description lang='EN'>
-                        <![CDATA[The Commitment to Development Index measures the contibution each country relative to its size. In 1969, the <a href="http://web.worldbank.org/WBSITE/EXTERNAL/EXTABOUTUS/EXTARCHIVES/0,,contentMDK:20121526~pagePK:36726~piPK:36092~theSitePK:29506,00.html">Pearson Commission</a> proposed that donors should spend 0.7% of Gross National Product on foreign aid, for which the definition of <a href="http://www.oecd.org/dac/stats/officialdevelopmentassistancedefinitionandcoverage.htm">official development assistance</a> (ODA) was provided by the <a href="http://www.oecd.org/dac/stats/officialdevelopmentassistancedefinitionandcoverage.htm">Development Assistance Committee of the OECD</a> in the same year.  This 0.7% target was enshrined in a UN resolution on October 24, 1970.  In 1993, following the revision to the UN System of National Accounts, GNI replaced GNP as denominator for the target.  Given that there is a widely (though not universally) accepted target for ODA as a share of GNI, we use this ratio in the Commitment to Development Index as our measure of aid quantity.]]>
+                        <![CDATA[
+                        <p>The Commitment to Development Index measures the effort of each country&mdash;that is, the contribution countries make relative to their size. In 1969, the <a href="http://www.oecd.org/dac/stats/the07odagnitarget-ahistory.htm">Pearson Commission</a> proposed that donors should spend 0.7 percent of Gross National Product on foreign aid, for which the definition of <a href="http://www.oecd.org/dac/stats/officialdevelopmentassistancedefinitionandcoverage.htm">official development assistance</a> (ODA) was provided by the <a href="http://www.oecd.org/dac/stats/officialdevelopmentassistancedefinitionandcoverage.htm">Development Assistance Committee of the OECD</a> in the same year. This 0.7 percent target was enshrined in a UN resolution on October 24, 1970. In 1993, following the revision to the UN System of National Accounts, GNI replaced GNP as denominator for the target. Given that there is a widely (though not universally) accepted target for <a href="http://stats.oecd.org/viewhtml.aspx?datasetcode=TABLE1&amp;lang=en">ODA as a share of GNI</a>, we use this ratio in the Commitment to Development Index as our measure of aid quantity. The weight of this indicator in the aid component is 50 percent.</p>]]>
                      </description>
                      <unit lang='EN'><![CDATA[score]]></unit>
                   </indicator>
@@ -108,38 +108,38 @@
                            <label lang='EN'><![CDATA[Maximizing efficiency]]></label>
                            <shortlabel lang='EN'><![CDATA[Maximizing efficiency]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This category of indicators emphasizes the effect of development assistance on poverty reduction. While donors have their own objectives in giving aid, this measure of aid quality aims to assess each donor’s aid against a global standard of how to best achieve sustainable growth. <br /><br />
-                The category includes eight indicators:</p>
-              <ul>
-                <li>Share of allocation to poor countries</li>
-                <li>Share of allocation to well-governed countries </li>
-                <li>Low unit administrative costs </li>
-                <li>High country-programmable aid share</li>
-                <li>Focus/specialization by recipient country</li>
-                <li>Focus/specialization by sector</li>
-                <li>Support of select global public goods facilities</li>
-                <li>Share of untied aid</li>
-              </ul>
-              <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/publication/quality-official-development-assistance-quoda-third-edition-0">QuODA report</a>. ]]>
+                              <![CDATA[<p>This category of indicators&nbsp;emphasizes the effect of development assistance on poverty reduction. While donors have their own objectives in giving aid, this measure of aid quality aims to assess each donor&rsquo;s aid against a global standard of how to best achieve sustainable growth.</p>
+                              <p>The category includes eight indicators:</p>
+                              <ol>
+                              <li>Share of allocation to poor countries</li>
+                              <li>Share of allocation to well-governed countries</li>
+                              <li>Low unit administrative costs</li>
+                              <li>High country programmable aid share</li>
+                              <li>Focus/specialization by recipient country</li>
+                              <li>Focus/specialization by sector</li>
+                              <li>Support of select global public goods facilities</li>
+                              <li>Share of untied aid</li>
+                              </ol>
+                              <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                            </description>
                         </indicator>
                         <indicator code='AID_QLT_FST' level='4'>
                            <label lang='EN'><![CDATA[Fostering institutions]]></label>
                            <shortlabel lang='EN'><![CDATA[Fostering institutions]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[Fostering local institutions is essential for any intervention aiming to achieve long-term impact. When aid passes through partner-country institutions, it is more likely to be &quot;owned&quot; by the partner, and development is more likely to be sustainable. The fostering institutions dimension highlights the importance of institutions in achieving growth and poverty reduction. <br />
-              The category includes eight indicators: </p>
-              <ul>
-                <li>Share of aid to recipients&rsquo; top development priorities</li>
-                <li>Avoidance of project implementation units </li>
-                <li>Share of aid recorded in recipient budgets </li>
-                <li>Share of aid to partners with good operational strategies </li>
-                <li>Use of recipient country systems </li>
-                <li>Share of scheduled aid recorded as received by recipients </li>
-                <li>Coordination of technical cooperation </li>
-                <li>Coverage of forward spending plans / Aid predictability </li>
-              </ul>
-              <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/publication/quality-official-development-assistance-quoda-third-edition-0">QuODA report</a>. ]]>
+                              <![CDATA[<p>Fostering local institutions is essential for any intervention aiming to achieve long-term impact. When aid passes through partner country institutions, it is more likely to be &ldquo;owned&rdquo; by the partner and development is more likely to be sustainable. The&nbsp;fostering institutions&nbsp;dimension highlights the importance of institutions in achieving growth and poverty reduction.</p>
+                              <p>The category includes eight indicators:</p>
+                              <ol>
+                              <li>Share of aid to recipients&rsquo; top development priorities</li>
+                              <li>Avoidance of project implementation units</li>
+                              <li>Share of aid recorded in recipient budgets</li>
+                              <li>Share of aid to partners with good operational strategies</li>
+                              <li>Use of recipient country systems</li>
+                              <li>Share of scheduled aid recorded as received by recipients</li>
+                              <li>Coordination of technical cooperation</li>
+                              <li>Coverage of forward spending plans/Aid predictability</li>
+                              </ol>
+                              <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                            </description>
                         </indicator>
 
@@ -147,37 +147,37 @@
                            <label lang='EN'><![CDATA[Reducing the burden on recipients]]></label>
                            <shortlabel lang='EN'><![CDATA[Reducing the burden on recipients]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[Reducing burden recognizes that the administrative burdens placed on partner countries make aid less effective. Having a high number of projects or projects of small size creates burdens partner governments with increased reporting and monitoring requirements.<br />
-                The category includes seven indicators: </p>
-              <ul>
-                <li>Significance of aid relationships </li>
-                <li>Fragmentation across donor agencies </li>
-                <li>Median project size </li>
-                <li>Contribution to multilaterals </li>
-                <li>Coordinated missions</li>
-                <li>Use of programmatic aid</li>
-                <li>Coordinated analytical work</li>
-              </ul>
-              <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/publication/quality-official-development-assistance-quoda-third-edition-0">QuODA report</a>. ]]>
+                              <![CDATA[<p>Reducing Burden&nbsp;recognizes that the administrative burdens placed on partner countries make aid less effective. A high number of projects and small project sizes create a burden of increased reporting and monitoring requirements on partner governments.</p>
+                              <p>The category includes seven indicators:</p>
+                              <ol>
+                              <li>Significance of aid relationships</li>
+                              <li>Fragmentation across donor agencies</li>
+                              <li>Median project size</li>
+                              <li>Contribution to multilaterals</li>
+                              <li>Coordinated missions</li>
+                              <li>Use of programmatic aid</li>
+                              <li>Coordinated analytical work</li>
+                              </ol>
+                              <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                            </description>
                         </indicator>
                         <indicator code='AID_QLT_TRA' level='4'>
                            <label lang='EN'><![CDATA[Transparency and learning]]></label>
                            <shortlabel lang='EN'><![CDATA[Transparency and learning]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[Transparency and learning reflects the importance of providing timely and comparable information about aid spending. Sharing timely information enables donors to coordinate better with other donors and with recipient countries, to improve their planning, and to learn from actual experience.<br /><br />
-              The category includes eight indicators: </p>
-              <ul>
-              <li>Signatory of International Aid Transparency Initiative (IATI)</li>
-              <li>Implementation of IATI data reporting standards</li>
-              <li>Recording of project title and description</li>
-              <li>Detail of project description</li>
-              <li>Reporting of aid delivery channel</li>
-              <li>Quality of main agency evaluation policy</li>
-              <li>Completeness of project level commitment data</li>
-              <li>Aid to partners with good monitoring &amp; evaluation frameworks</li>
-              </ul>
-              <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/publication/quality-official-development-assistance-quoda-third-edition-0">QuODA report</a>.  ]]>
+                              <![CDATA[<p>Transparency and learning&nbsp;reflects the importance of providing timely and comparative information about aid spending. Sharing timely information enables donors to coordinate better with other donors and with recipient countries, to improve their planning, and to learn from actual experience.</p>
+                              <p>The category includes eight indicators:</p>
+                              <ol>
+                              <li>Signatory of International Aid Transparency Initiative (IATI)</li>
+                              <li>Implementation of IATI data reporting standards</li>
+                              <li>Recording of project title and description</li>
+                              <li>Detail of project description</li>
+                              <li>Reporting of aid delivery channel</li>
+                              <li>Quality of main agency evaluation policy</li>
+                              <li>Completeness of project level commitment data</li>
+                              <li>Aid to partners with good monitoring &amp; evaluation frameworks</li>
+                              </ol>
+                              <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p>]]>
                            </description>
                         </indicator>
                      </hierarchy>
@@ -190,15 +190,13 @@
                <shortlabel lang='EN'><![CDATA[Finance]]></shortlabel>
                <description lang='EN'>
                   <![CDATA[
-      Investment in the developing world can benefit everyone. The CDI rewards investment-promotion policies that are good for development, such as political risk insurance. Policies that allow for financial secrecy, in contrast, are penalized. The two subcomponents (investment and financial secrecy) include a number of different indicators. Click on the components drill-down to see how countries score on each indicator and to learn about the methodology.
-      ]]>
+                  <p>Investment in the developing world can benefit everyone. The CDI rewards investment-promotion policies that are good for development, such as political risk insurance. Policies that allow for financial secrecy, in contrast, are penalized. The two subcomponents (investment and financial secrecy) include a number of different indicators. Select a country to see how it scores on each indicator and to learn about the methodology.</p> ]]>
                </description>
                <explanation lang='EN'>
                   <![CDATA[
-<h3>Why is financial transparency and support to investment important for development?</h3>
-      Illicit financial outflows affecting developing countries have been estimated to be as much as 1 trillion dollars. The exact amount may be in dispute, but there is consensus that international illicit flows do damage to development finance and international security and governance. Hidden  financial flows enable tax evasion, money laundering, and corruption. Eliminating policies in rich countries that allow for financial secrecy in banking institutions could increase domestic revenue and GDP of developing countries substantially.<br /><br />
-      Foreign direct investment is the largest source of financing for many developing countries. Rich countries that support or impede investment beyond their borders can have a substantive effect on the well-being citizens in poorer countries. Foreign investment contributes to the development of infrastructure, housing, transport, energy supply, and many other areas. The quantity of investment, however, is not the only important aspect of promoting investment in developing countries. It is important that safeguards are in place which ensure that the environment and the general welfare of those affected are properly protected.
-      ]]>
+                  <h3>Why is financial transparency and support to investment important for development?</h3>
+                  <p>Illicit financial outflows affecting developing countries have been estimated to as much as one trillion dollars. These estimations may not be generally endorsed, but there seems to be consensus on the negative effect of international illicit flows on international security and governance, and on development finance. When financial flows are hidden from relevant authorities they implicitly enable tax evasion, money laundering as well as corruption. Policies of rich countries which make banking secrecy of financial institutions possible significantly contribute to facilitating illicit transfers. Eliminating financial secrecy of rich countries&rsquo; banking institutions could increase domestic revenue and GDP of developing countries substantially.</p>
+                  <p>Foreign direct investment is the largest source of financing for many developing countries. Rich countries policies that support or impede investment beyond their borders can have a substantive effect on the well-being of many of their citizens. Foreign investment contributes to the development of infrastructure, housing, transport, energy supply and many other areas. However, quantity of investment is not the only important aspect of promoting investment in developing countries. It is important that safeguards are in place which ensure that environment, as well as general welfare of those affected by the investment is properly secured.</p>]]>
                </explanation>
                <unit lang='EN'><![CDATA[Score]]></unit>
                <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
@@ -209,30 +207,30 @@
                      <unit lang='EN'><![CDATA[Score]]></unit>
                      <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                      <hierarchy>
-                        <indicator code='INV_POL' level='4'>
-                           <label lang='EN'><![CDATA[Political risk insurance]]></label>
+                        <indicator code='INV_COM' level='4'>
+                           <label lang='EN'><![CDATA[Internation]]></label>
                            <shortlabel lang='EN'><![CDATA[Political risk insurance]]></shortlabel>
                            <description lang='EN'>
                               <![CDATA[<h4>Is the country a member of MIGA (+5), IFC (+3), or regional development banks (+2)?</h4>
-              <p>The <a href="https://www.miga.org">Multilateral Investment Guarantee Agency</a> (MIGA) is a part of the World Bank Group. It provides political risk insurance guarantees to private-sector investors and lenders with the aim to support foreign direct investment (FDI) into developing countries to help reduce poverty and improve people&rsquo;s lives. A list of all MIGA member countries can be found <a href="https://www.miga.org/who-we-are/member-countries">here</a>.<br /><br />
-                The <a href="http://www.ifc.org">International Finance Corporation</a> (IFC) is also part of the World Bank Group. It is the largest global development institution focused exclusively on the private sector in developing countries. A list of all IFC member countries can be found <a href="http://www.worldbank.org/en/about/leadership/members#3">here</a>. You can read a CGD brief on the IFC <a href="http://www.cgdev.org/publication/international-finance-corporation-abcs-ifis-brief">here</a>.<br /><br />
-                The <a href="http://www.cgdev.org/publication/regional-development-banks-abcs-ifis-brief">regional development banks</a> (RDBs) are multilateral financial institutions that provide financial and technical assistance for development in low- and middle-income countries within their regions. RDBs are owned by member governments, including countries both in the region and beyond. Follow the links below for lists of member countries of four RDBs:<br /><br />
+              <p>The <a href='https://www.miga.org'>Multilateral Investment Guarantee Agency</a> (MIGA) is a part of the World Bank Group. It provides political risk insurance guarantees to private-sector investors and lenders with the aim to support foreign direct investment (FDI) into developing countries to help reduce poverty and improve people&rsquo;s lives. A list of all MIGA member countries can be found <a href='https://www.miga.org/who-we-are/member-countries'>here</a>.<br /><br />
+                The <a href='http://www.ifc.org'>International Finance Corporation</a> (IFC) is also part of the World Bank Group. It is the largest global development institution focused exclusively on the private sector in developing countries. A list of all IFC member countries can be found <a href='http://www.worldbank.org/en/about/leadership/members#3'>here</a>. You can read a CGD brief on the IFC <a href='http://www.cgdev.org/publication/international-finance-corporation-abcs-ifis-brief'>here</a>.<br /><br />
+                The <a href='http://www.cgdev.org/publication/regional-development-banks-abcs-ifis-brief'>regional development banks</a> (RDBs) are multilateral financial institutions that provide financial and technical assistance for development in low- and middle-income countries within their regions. RDBs are owned by member governments, including countries both in the region and beyond. Follow the links below for lists of member countries of four RDBs:<br /><br />
                 <ul>
-				<li><a href="http://www.afdb.org/en/about-us/members/">African Development Bank (AfDB)</a></li>
-                <li><a href="http://www.adb.org/about/members">Asian Development Bank (ADB)</a> </li>
-                <li><a href="http://www.ebrd.com/who-we-are/our-donors.html">European Bank for Reconstruction and Development (EBRD)</a></li>
-                <li><a href="http://www.iadb.org/en/about-us/how-the-inter-american-development-bank-is-organized,5998.html">Inter-American Development Bank (IDB)</a></li></ul></p>
+				<li><a href='http://www.afdb.org/en/about-us/members/'>African Development Bank (AfDB)</a></li>
+                <li><a href='http://www.adb.org/about/members'>Asian Development Bank (ADB)</a> </li>
+                <li><a href='http://www.ebrd.com/who-we-are/our-donors.html'>European Bank for Reconstruction and Development (EBRD)</a></li>
+                <li><a href='http://www.iadb.org/en/about-us/how-the-inter-american-development-bank-is-organized,5998.html'>Inter-American Development Bank (IDB)</a></li></ul></p>
               <h4>Does the country have an official political risk insurance agency? (+15)</h4>
-              <p>Providing political risk insurance is considered to have a positive influence on development finance as it enables the private sector to invest in countries they would otherwise find risky to get engaged in.  Most CDI countries provide such services through an official guarantee agency. The majority of these institutions are members of the Berne union, which is the leading association of investment insurers and export credit agencies. A list of Berne Union members can be found <a href="http://www.berneunion.org/about-the-berne-union/berne-union-members/">here</a>.</p>
+              <p>Providing political risk insurance is considered to have a positive influence on development finance as it enables the private sector to invest in countries they would otherwise find risky to get engaged in.  Most CDI countries provide such services through an official guarantee agency. The majority of these institutions are members of the Berne union, which is the leading association of investment insurers and export credit agencies. A list of Berne Union members can be found <a href='http://www.berneunion.org/about-the-berne-union/berne-union-members/'>here</a>.</p>
               <h4>Does it monitor environmental, labor, and human rights? (-4)</h4>
-              <p>It is important to have proper safeguards in place which ensure that the interests of local communities, and environment are properly protected in investment ventures supported by developed countries. The OECD regularly monitors what procedures are in place based on <a href="http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=tad/ecg(2012)5&amp;doclanguage=en">recommendations</a> defined by the OECD working party on export credits and credit guarantees. Surveys of OECD members are available <a href="http://www.oecd.org/tad/xcred/ess-2013-responses.htm">here</a>. </p>
+              <p>It is important to have proper safeguards in place which ensure that the interests of local communities, and environment are properly protected in investment ventures supported by developed countries. The OECD regularly monitors what procedures are in place based on <a href='http://www.oecd.org/officialdocuments/publicdisplaydocumentpdf/?cote=tad/ecg(2012)5&amp;doclanguage=en'>recommendations</a> defined by the OECD working party on export credits and credit guarantees. Surveys of OECD members are available <a href='http://www.oecd.org/tad/xcred/ess-2013-responses.htm'>here</a>. </p>
               <h4>Are investors in all sectors eligible to receive insurance? (-2)</h4>
-              <p>This assessment measure is based on the premise that some national insurers limit support to outward investment to &ldquo;sensitive sectors&rdquo; of the home economy, for example textiles, car industry and others. As <a href="http://www.cgdev.org/doc/CDI%202012/Investment_2012.pdf">Theodore Moran explains (PDF)</a>, this is because the national insurers are asking the wrong questions, such as &ldquo;would this outward investment result in any job loss [in the home country]?&rdquo; rather than asking &ldquo;what would happen in the home country if the investment did not take place?&rdquo;. Moran explains that in vast majority of cases the answer to the latter question is that without outward investment the home economy would be worse off. </p>
+              <p>This assessment measure is based on the premise that some national insurers limit support to outward investment to &ldquo;sensitive sectors&rdquo; of the home economy, for example textiles, car industry and others. As <a href='http://www.cgdev.org/doc/CDI%202012/Investment_2012.pdf'>Theodore Moran explains (PDF)</a>, this is because the national insurers are asking the wrong questions, such as &ldquo;would this outward investment result in any job loss [in the home country]?&rdquo; rather than asking &ldquo;what would happen in the home country if the investment did not take place?&rdquo;. Moran explains that in vast majority of cases the answer to the latter question is that without outward investment the home economy would be worse off. </p>
               <h4>Does the country pursue inappropriate national economic interests rather than pro-development measures? (-2)</h4>
-              <p>Restrictions on outward investments based on their contributions to the home economy are inappropriately restrictive, as <a href="http://www.cgdev.org/doc/CDI%202012/Investment_2012.pdf">explained by Theodore Moran (PDF)</a>. 
+              <p>Restrictions on outward investments based on their contributions to the home economy are inappropriately restrictive, as <a href='http://www.cgdev.org/doc/CDI%202012/Investment_2012.pdf'>explained by Theodore Moran (PDF)</a>. 
 			  <!--, because the national insurers are asking the wrong questions, such as &ldquo;would this outward investment result in any job loss [in the home country]?&rdquo; rather than asking &ldquo;what would happen in the home country if the investment did not take place?&rdquo;. Moran explains that in vast majority of cases the answer to the latter question is that without outward investment the home economy would be worse off. --></p>
               <h4>Is eligibility for the provision of services limited to nationally owned firms? (-2)</h4>
-              <p>The provision of services that aim to foster sustainable development and prosperity in developing countries should not be limited on the basis of  the nationality of the service provider. As Theodore Moran explains <a href="http://www.cgdev.org/doc/CDI%202012/Investment_2012.pdf">here (PDF)</a>, restricting national political risk coverage to firms that are wholly owned by home-country nationals does not maximize the benefit for the home country or for the developing world.  ]]>
+              <p>The provision of services that aim to foster sustainable development and prosperity in developing countries should not be limited on the basis of  the nationality of the service provider. As Theodore Moran explains <a href='http://www.cgdev.org/doc/CDI%202012/Investment_2012.pdf'>here (PDF)</a>, restricting national political risk coverage to firms that are wholly owned by home-country nationals does not maximize the benefit for the home country or for the developing world.  ]]>
                            </description>
                         </indicator>
 
@@ -242,23 +240,23 @@
                            <shortlabel lang='EN'><![CDATA[Prevention of bribery and corrupt practices]]></shortlabel>
                            <description lang='EN'>
                               <![CDATA[To what extent does the country take part in the OECD antibribery convention? (+10)   </h4>
-              <p>The <a href="http://www.oecd.org/corruption/oecdantibriberyconvention.htm">OECD Convention on Combating Bribery of Foreign Public Officials in International Business Transactions</a> is a legally binding agreement that defines bribery of foreign public officials in international business transactions as a crime. It is the first and only international anticorruption instrument focused on the &lsquo;supply side&rsquo; of the bribery transaction. The implementation of the convention is regularly monitored through a peer-review approach and it is carried out by the OECD Working Group on Bribery. All CDI countries have now completed Phase 3 and receive 10 points (six points for previously completing Phase 2). </p>
+              <p>The <a href='http://www.oecd.org/corruption/oecdantibriberyconvention.htm'>OECD Convention on Combating Bribery of Foreign Public Officials in International Business Transactions</a> is a legally binding agreement that defines bribery of foreign public officials in international business transactions as a crime. It is the first and only international anticorruption instrument focused on the &lsquo;supply side&rsquo; of the bribery transaction. The implementation of the convention is regularly monitored through a peer-review approach and it is carried out by the OECD Working Group on Bribery. All CDI countries have now completed Phase 3 and receive 10 points (six points for previously completing Phase 2). </p>
               <h4>Has the country introduced procedures to limit loopholes in the antibribery convention? (-2)</h4>
-              <p>There is evidence that some corporations <a href="http://www.cgdev.org/publication/cracking-down-rich-world-bribe-payers">use loopholes in the convention</a> in order to pay bribes and receive preferential treatment without the fear of prosecution. The CDI takes into account whether a country has introduced procedures which eliminate such loopholes. </p>
+              <p>There is evidence that some corporations <a href='http://www.cgdev.org/publication/cracking-down-rich-world-bribe-payers'>use loopholes in the convention</a> in order to pay bribes and receive preferential treatment without the fear of prosecution. The CDI takes into account whether a country has introduced procedures which eliminate such loopholes. </p>
               <h4>Is a country a member of MDTF (+3), EITI (+1), KPCS (+1), or ITTO? (+1)</h4>
-              <p>The <a href="http://www.eiti.org">Extractive Industries Transparency Initiative</a> (EITI) promotes transparency in the management of natural resources.  If a country participates in EITI, its companies are required to publish what they pay to governments, and governments are obliged to disclose what they receive from companies. A multistakeholder group monitors the process in each participating country. A list of participating countries and institutions can be found <a href="https://eiti.org/supporters/countries">here</a>.         <br /><br />
-              The <a href="http://www.worldbank.org/en/programs/eitimdtf">EITI Multi-Donor Trust Fund</a> (MDTF) provides grants and technical assistance to countries that implement EITI. It is administered by the World Bank and supported by partner countries and institutions. Their list is available <a href="http://www.worldbank.org/en/programs/eitimdtf#5">here</a>.<br /><br />
-              The <a href="http://www.kimberleyprocess.com">Kimberley Process Certification Scheme</a> (KPCS) is a joint initiative of governments, industry, and civil society that aims to eliminate the trade of conflict diamonds. Conflict diamonds are those whose sales contribute to funding an armed conflict. A full list of participating countries is available <a href="http://www.kimberleyprocess.com/en/participants">here</a>.<br /><br />
-              The <a href="http://www.itto.int/">International Tropical Timber Organization</a> (ITTO) is an intergovernmental organization established in 1986 with the aim of promoting conservation and sustainable management, use, and trade of tropical forest resources. A full list of participating countries is available <a href="http://www.itto.int/itto_members/">here</a>.</p>
+              <p>The <a href='http://www.eiti.org'>Extractive Industries Transparency Initiative</a> (EITI) promotes transparency in the management of natural resources.  If a country participates in EITI, its companies are required to publish what they pay to governments, and governments are obliged to disclose what they receive from companies. A multistakeholder group monitors the process in each participating country. A list of participating countries and institutions can be found <a href='https://eiti.org/supporters/countries'>here</a>.         <br /><br />
+              The <a href='http://www.worldbank.org/en/programs/eitimdtf'>EITI Multi-Donor Trust Fund</a> (MDTF) provides grants and technical assistance to countries that implement EITI. It is administered by the World Bank and supported by partner countries and institutions. Their list is available <a href='http://www.worldbank.org/en/programs/eitimdtf#5'>here</a>.<br /><br />
+              The <a href='http://www.kimberleyprocess.com'>Kimberley Process Certification Scheme</a> (KPCS) is a joint initiative of governments, industry, and civil society that aims to eliminate the trade of conflict diamonds. Conflict diamonds are those whose sales contribute to funding an armed conflict. A full list of participating countries is available <a href='http://www.kimberleyprocess.com/en/participants'>here</a>.<br /><br />
+              The <a href='http://www.itto.int/'>International Tropical Timber Organization</a> (ITTO) is an intergovernmental organization established in 1986 with the aim of promoting conservation and sustainable management, use, and trade of tropical forest resources. A full list of participating countries is available <a href='http://www.itto.int/itto_members/'>here</a>.</p>
               <h4>Is a country a leader on extractive industry issues? (+6)</h4>
               <p>The CDI considers a country to be a leader to the extent that it meets the following criteria:</p>
               <ul>
-                <li>Has individual membership in <a href="http://www.worldbank.org/en/programs/eitimdtf#5">EITI</a></li>
-                <li>Provides funding to the EITI MDTF (see recent <a href="http://documents.worldbank.org/curated/en/2014/12/23038624/extractive-industries-transparency-initiative-multi-donor-trust-fund-eiti-mdtf-annual-report-2014">annual report</a>)</li>
-                <li>Actively participates in <a href="http://www.kimberleyprocess.com/en/working-groups-and-committees">working groups</a> of the Kimberly process</li>
+                <li>Has individual membership in <a href='http://www.worldbank.org/en/programs/eitimdtf#5'>EITI</a></li>
+                <li>Provides funding to the EITI MDTF (see recent <a href='http://documents.worldbank.org/curated/en/2014/12/23038624/extractive-industries-transparency-initiative-multi-donor-trust-fund-eiti-mdtf-annual-report-2014'>annual report</a>)</li>
+                <li>Actively participates in <a href='http://www.kimberleyprocess.com/en/working-groups-and-committees'>working groups</a> of the Kimberly process</li>
               </ul>
               <h4>How does a country rank on the Bribe Payers Index? (+4)</h4>
-              <p>The <a href="http://www.transparency.org/research/bpi/overview">Bribe Payers Index</a>, published by Transparency International, assesses the world&rsquo;s richest countries on the basis of how likely their firms are to pay bribes abroad. The index is based on the views of thousands of senior business executives from developed and developing countries. In the CDI, a country receives four points if it scores in the top quarter, three points if in second quarter, two points if in third quarter, and 0 points if in the bottom quarter. Countries that are not included in the BPI receive the same as those in third quarter. For more information on the index and detailed results, please visit the <a href="http://www.transparency.org/research/bpi/overview">Transparency international</a> website.</p>
+              <p>The <a href='http://www.transparency.org/research/bpi/overview'>Bribe Payers Index</a>, published by Transparency International, assesses the world&rsquo;s richest countries on the basis of how likely their firms are to pay bribes abroad. The index is based on the views of thousands of senior business executives from developed and developing countries. In the CDI, a country receives four points if it scores in the top quarter, three points if in second quarter, two points if in third quarter, and 0 points if in the bottom quarter. Countries that are not included in the BPI receive the same as those in third quarter. For more information on the index and detailed results, please visit the <a href='http://www.transparency.org/research/bpi/overview'>Transparency international</a> website.</p>
               <h4>Does the country take vigorous action to punish home-country bribe payers? (+4)    </h4>
               <p>This CDI indicator is based on information in the country reports of the OECD Convention on Combating Bribery of Foreign Public Officials in International Business Transactions about countries&rsquo; approaches to punishing home-country bribe payers.</p>
               <h4>Is the country negligent in identifying bribery and corrupt practices? (-4)</h4>
@@ -270,7 +268,7 @@
                            <shortlabel lang='EN'><![CDATA[Identify investment opportunities]]></shortlabel>
                            <description lang='EN'>
                               <![CDATA[Does the country train and use foreign or commercial service to identify investment opportunities? (+5)</h4>
-                <p>Developed countries which offer various support for identifying exporting, marketing, and investment opportunities contribute to expanding corporations&rsquo; activities in the developing countries, as well as in their home economies. Such activities turn into job creation and economic growth. As <a href="http://www.cgdev.org/doc/CDI%202012/Investment_2012.pdf">Theodore Moran explains (PDF)</a>, a well-trained and up-to-date staff of a investment promotion agency can play a key role in attracting new investment projects. ]]>
+                <p>Developed countries which offer various support for identifying exporting, marketing, and investment opportunities contribute to expanding corporations&rsquo; activities in the developing countries, as well as in their home economies. Such activities turn into job creation and economic growth. As <a href='http://www.cgdev.org/doc/CDI%202012/Investment_2012.pdf'>Theodore Moran explains (PDF)</a>, a well-trained and up-to-date staff of a investment promotion agency can play a key role in attracting new investment projects. ]]>
                            </description>
                         </indicator>
                         <indicator code='INV_FAC' level='4'>
@@ -309,7 +307,7 @@
                            <label lang='EN'><![CDATA[Recorded company ownership]]></label>
                            <shortlabel lang='EN'><![CDATA[Recorded company ownership]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator assesses whether a country requires all available types of companies to submit beneficial ownership information upon incorporation to a governmental authority, and whether it requires this information to be updated upon any event or action which changes beneficial ownership information, regardless of whether or not this information is made available on public record. To receive full credit on this indicator, registered ownership information must comply with minimum requirements (listing the names, country of residence, and a clear identifier such as full address, or date and place of birth, or Taxpayer Identification Number of each owner holding at least 10% ownership in the entity). Countries subject to the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:JOL_2015_141_R_0003&amp;from=EN">4th EU Directive on Anti–Money Laundering</a> receive 0.25 credits. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
+                              <![CDATA[This indicator assesses whether a country requires all available types of companies to submit beneficial ownership information upon incorporation to a governmental authority, and whether it requires this information to be updated upon any event or action which changes beneficial ownership information, regardless of whether or not this information is made available on public record. To receive full credit on this indicator, registered ownership information must comply with minimum requirements (listing the names, country of residence, and a clear identifier such as full address, or date and place of birth, or Taxpayer Identification Number of each owner holding at least 10% ownership in the entity). Countries subject to the <a href='http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:JOL_2015_141_R_0003&amp;from=EN'>4th EU Directive on Anti–Money Laundering</a> receive 0.25 credits. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
                            </description>
                         </indicator>
                         <indicator code='INV_SEC_PCO' level='4'>
@@ -330,7 +328,7 @@
                            <label lang='EN'><![CDATA[ Country-by-country reporting]]></label>
                            <shortlabel lang='EN'><![CDATA[ Country-by-country Reporting]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator measures whether the companies listed on the stock exchanges or incorporated in a given country are required to publish worldwide financial reporting data on a <a href="http://www.taxresearch.org.uk/Documents/CBC2012.pdf">country-by-country reporting (PDF)</a>  basis, and if the data is accessible to the public. Full credit is awarded when country-by-country reporting is required by all companies. A 25% credit is awarded if a country requires limited, but periodic worldwide country-by-country reporting for specific economic sectors, namely banking or extractive industries. Country-by-country reporting for financial institutions was adopted by EU member states in 2015. The EU-CBCR rules for banks include annual disclosure of turnover, number of employees, profit or loss before tax, tax on profit or loss, and public subsidies received. On this ground, a quarter of a transparency credit (0.25 credits) has been awarded to all EU member states. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
+                              <![CDATA[This indicator measures whether the companies listed on the stock exchanges or incorporated in a given country are required to publish worldwide financial reporting data on a <a href='http://www.taxresearch.org.uk/Documents/CBC2012.pdf'>country-by-country reporting (PDF)</a>  basis, and if the data is accessible to the public. Full credit is awarded when country-by-country reporting is required by all companies. A 25% credit is awarded if a country requires limited, but periodic worldwide country-by-country reporting for specific economic sectors, namely banking or extractive industries. Country-by-country reporting for financial institutions was adopted by EU member states in 2015. The EU-CBCR rules for banks include annual disclosure of turnover, number of employees, profit or loss before tax, tax on profit or loss, and public subsidies received. On this ground, a quarter of a transparency credit (0.25 credits) has been awarded to all EU member states. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
                            </description>
                         </indicator>
                         <indicator code='INV_SEC_FIE' level='4'>
@@ -358,28 +356,28 @@
                            <label lang='EN'><![CDATA[Harmful legal vehicles]]></label>
                            <shortlabel lang='EN'><![CDATA[Harmful legal vehicles]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator assesses to what extent countries enable secrecy in companies. First, it looks at whether a jurisdiction allows the creation of series limited liability companies (Series LLCs) or protected cell companies (PCCs) in its territory. Second, it measures whether the administration of trusts with flee clauses is prohibited. Protected cell companies are a rare type of corporate entity found almost exclusively in secrecy jurisdictions. Essentially a PCC is a legal entity that contains within itself, but not legally distinct from it, a number of cells which behave as if they are companies in their own right, but are not. Series LLCs serve the same purpose as PCCs and are available in <a href="http://www.delawarellc.com/learning/Series-LLC.htm">Delaware</a> and other parts of the United States. A flee clause enables trusts to change its location if a disadvantageous event, such as the breakdown of law and order or the imposition of taxation in the place where they are located occurs. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
+                              <![CDATA[This indicator assesses to what extent countries enable secrecy in companies. First, it looks at whether a jurisdiction allows the creation of series limited liability companies (Series LLCs) or protected cell companies (PCCs) in its territory. Second, it measures whether the administration of trusts with flee clauses is prohibited. Protected cell companies are a rare type of corporate entity found almost exclusively in secrecy jurisdictions. Essentially a PCC is a legal entity that contains within itself, but not legally distinct from it, a number of cells which behave as if they are companies in their own right, but are not. Series LLCs serve the same purpose as PCCs and are available in <a href='http://www.delawarellc.com/learning/Series-LLC.htm'>Delaware</a> and other parts of the United States. A flee clause enables trusts to change its location if a disadvantageous event, such as the breakdown of law and order or the imposition of taxation in the place where they are located occurs. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
                            </description>
                         </indicator>
                         <indicator code='INV_SEC_AML' level='4'>
                            <label lang='EN'><![CDATA[Anti–money laundering]]></label>
                            <shortlabel lang='EN'><![CDATA[Anti–money laundering]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator examines the extent to which the anti–money laundering regime of a country is considered effective by the <a href="http://www.fatf-gafi.org/">Financial Action Task Force (FATF)</a>, the international body dedicated to tackle money laundering. The assessment is based on peer-reviews evaluating the implementation of <a href="http://www.fatf-gafi.org/publications/fatfrecommendations/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)">FATF recommendations</a> concerning the laws, institutional structures, and policies deemed necessary to counter money laundering and terrorist financing. Peer reviews are carried out in five-year cycles. The third round of <a href="http://www.fatf-gafi.org/publications/mutualevaluations/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)">mutual evaluations</a> was completed in 2012. This indicator evaluates countries&rsquo; compliance with FATF recommendations. Each recommendation is given an equal weight; a 100% rating indicates full compliance, whereas a 0% rating indicates a country is deemed wholly noncompliant. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015.]]>
+                              <![CDATA[This indicator examines the extent to which the anti–money laundering regime of a country is considered effective by the <a href='http://www.fatf-gafi.org/'>Financial Action Task Force (FATF)</a>, the international body dedicated to tackle money laundering. The assessment is based on peer-reviews evaluating the implementation of <a href='http://www.fatf-gafi.org/publications/fatfrecommendations/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)'>FATF recommendations</a> concerning the laws, institutional structures, and policies deemed necessary to counter money laundering and terrorist financing. Peer reviews are carried out in five-year cycles. The third round of <a href='http://www.fatf-gafi.org/publications/mutualevaluations/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)'>mutual evaluations</a> was completed in 2012. This indicator evaluates countries&rsquo; compliance with FATF recommendations. Each recommendation is given an equal weight; a 100% rating indicates full compliance, whereas a 0% rating indicates a country is deemed wholly noncompliant. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015.]]>
                            </description>
                         </indicator>
                         <indicator code='INV_SEC_AIE' level='4'>
                            <label lang='EN'><![CDATA[ Automatic information exchange]]></label>
                            <shortlabel lang='EN'><![CDATA[ Automatic information exchange]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator assesses whether a country has signed the <a href="http://www.oecd.org/tax/exchange-of-tax-information/multilateral-competent-authority-agreement.htm">Multilateral Competent Authority Agreement</a> (MCAA) which provides the legal framework to engage in automatic exchange of information. and in what year it has  committed to begin the exchange information. Automatic exchange of information involves the source country sharing relevant taxpayer information with the residence country. A score of 1 is given if a country has signed the MCAA and committed to start exchanging information in 2017. A 0.5 score is given if a country has signed the MCAA and committed to start exchanging information in 2018. A 0.25 credit is given if a country has not yet signed the MCAA but has committed to start exchanging information in 2017. A 0.10 score is awarded if a country has not signed the MCAA but has committed to start exchanging information in 2018. No score is awarded if a country has neither signed the MCAA nor committed to start exchanging information. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015.]]>
+                              <![CDATA[This indicator assesses whether a country has signed the <a href='http://www.oecd.org/tax/exchange-of-tax-information/multilateral-competent-authority-agreement.htm'>Multilateral Competent Authority Agreement</a> (MCAA) which provides the legal framework to engage in automatic exchange of information. and in what year it has  committed to begin the exchange information. Automatic exchange of information involves the source country sharing relevant taxpayer information with the residence country. A score of 1 is given if a country has signed the MCAA and committed to start exchanging information in 2017. A 0.5 score is given if a country has signed the MCAA and committed to start exchanging information in 2018. A 0.25 credit is given if a country has not yet signed the MCAA but has committed to start exchanging information in 2017. A 0.10 score is awarded if a country has not signed the MCAA but has committed to start exchanging information in 2018. No score is awarded if a country has neither signed the MCAA nor committed to start exchanging information. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015.]]>
                            </description>
                         </indicator>
                         <indicator code='INV_SEC_BIT' level='4'>
                            <label lang='EN'><![CDATA[ Bilateral treaties]]></label>
                            <shortlabel lang='EN'><![CDATA[ Bilateral treaties]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator assesses the extent to which a jurisdiction has signed and ratified bilateral treaties conforming to the &lsquo;upon request&rsquo; information exchange standard developed by the OECD and the Global Forum with 53 other countries, or whether the jurisdiction has signed and ratified the Amended Council of Europe / OECD Convention on Mutual Administrative Assistance in Tax Matters. The &lsquo;upon request&rsquo; provisions can either be <a href="http://www.oecd.org/tax/exchange-of-tax-information/taxinformationexchangeagreementstieas.htm">tax information exchange agreements</a> (TIEAs) or full <a href="http://www.icaew.com/en/library/key-resources/double-tax-treaties">double taxation agreements</a> (DTAs) whose scope extends far beyond information exchange. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
+                              <![CDATA[This indicator assesses the extent to which a jurisdiction has signed and ratified bilateral treaties conforming to the &lsquo;upon request&rsquo; information exchange standard developed by the OECD and the Global Forum with 53 other countries, or whether the jurisdiction has signed and ratified the Amended Council of Europe / OECD Convention on Mutual Administrative Assistance in Tax Matters. The &lsquo;upon request&rsquo; provisions can either be <a href='http://www.oecd.org/tax/exchange-of-tax-information/taxinformationexchangeagreementstieas.htm'>tax information exchange agreements</a> (TIEAs) or full <a href='http://www.icaew.com/en/library/key-resources/double-tax-treaties'>double taxation agreements</a> (DTAs) whose scope extends far beyond information exchange. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
                            </description>
                         </indicator>
                         <indicator code='INV_SEC_ITC' level='4'>
@@ -388,11 +386,11 @@
                            <description lang='EN'>
                               <![CDATA[This indicator measures the extent to which a jurisdiction has taken on international transparency commitments. Participation in five international conventions is assessed and a score of 0.2 points is awarded for each of the conventions adhered to by a jurisdiction. These five conventions are:</p>
               <ul>
-                <li>The <a href="http://www.oecd.org/tax/exchange-of-tax-information/conventiononmutualadministrativeassistanceintaxmatters.htm">Amended Council of Europe / OECD Convention on Mutual Administrative Assistance in Tax Matters </a> </li>
-                <li>The <a href="http://www.unodc.org/unodc/en/treaties/CAC/index.html">2003 UN Convention against Corruption</a></li>
-                <li>The <a href="http://www.unodc.org/unodc/en/treaties/illicit-trafficking.html">1988 UN Convention against Illicit Traffic in Narcotic Drugs and Psychotropic Substances</a></li>
-                <li>The <a href="http://www.un.org/law/cod/finterr.htm">1999 UN International Convention for the Suppression of the Financing of Terrorism</a></li>
-                <li>The <a href="http://polis.osce.org/portals/orgcrime/index/details?doc_id=3210&amp;lang_tag=&amp;qs">2000 UN Convention against Transnational Organised Crime</a></li>
+                <li>The <a href='http://www.oecd.org/tax/exchange-of-tax-information/conventiononmutualadministrativeassistanceintaxmatters.htm'>Amended Council of Europe / OECD Convention on Mutual Administrative Assistance in Tax Matters </a> </li>
+                <li>The <a href='http://www.unodc.org/unodc/en/treaties/CAC/index.html'>2003 UN Convention against Corruption</a></li>
+                <li>The <a href='http://www.unodc.org/unodc/en/treaties/illicit-trafficking.html'>1988 UN Convention against Illicit Traffic in Narcotic Drugs and Psychotropic Substances</a></li>
+                <li>The <a href='http://www.un.org/law/cod/finterr.htm'>1999 UN International Convention for the Suppression of the Financing of Terrorism</a></li>
+                <li>The <a href='http://polis.osce.org/portals/orgcrime/index/details?doc_id=3210&amp;lang_tag=&amp;qs'>2000 UN Convention against Transnational Organised Crime</a></li>
               </ul>
               <p>For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015.]]>
                            </description>
@@ -401,7 +399,7 @@
                            <label lang='EN'><![CDATA[International judicial cooperation]]></label>
                            <shortlabel lang='EN'><![CDATA[International judicial cooperation]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator measures the degree to which a country engages in international judicial cooperation on money laundering and other criminal matters. The indicator assesses the level of country&rsquo;s compliance with the Financial Action Task Force recommendations. The <a href="http://www.fatf-gafi.org/">Financial Action Task Force</a> (FATF) is the international body dedicated to counter money laundering. In 2003, the FATF established its <a href="http://www.fatf-gafi.org/media/fatf/documents/recommendations/pdfs/FATF%20Recommendations%202003.pdf">Forty recommendations</a> concerning the laws, institutional structures, and policies considered necessary to address money laundering and terrorist financing. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
+                              <![CDATA[This indicator measures the degree to which a country engages in international judicial cooperation on money laundering and other criminal matters. The indicator assesses the level of country&rsquo;s compliance with the Financial Action Task Force recommendations. The <a href='http://www.fatf-gafi.org/'>Financial Action Task Force</a> (FATF) is the international body dedicated to counter money laundering. In 2003, the FATF established its <a href='http://www.fatf-gafi.org/media/fatf/documents/recommendations/pdfs/FATF%20Recommendations%202003.pdf'>Forty recommendations</a> concerning the laws, institutional structures, and policies considered necessary to address money laundering and terrorist financing. For further details on this indicator, please consult the Financial Secrecy Index Methodology 2015. ]]>
                            </description>
                         </indicator>
                         <indicator code='INV_SEC_ASC' level='4'>
@@ -426,8 +424,8 @@
                   <![CDATA[
 <h3>Why is technology creation and access to it important for development?</h3>
       Technology is an essential factor in economic and human development. Advances in medicines, information and communication technology, sustainable energy, and essentially in most areas contribute to improving the lives of all of us. Rich countries have an important role to play—the internet, mobile phones, vaccines, and high-yielding grains were all invented by rich-country researchers and exported elsewhere, where they have improved, and saved, many lives. Accessing knowledge is one way poor countries can catch up with the wealthy ones. Donor countries can contribute to technological development and diffusion of knowledge and innovation by publicly funding research and development activities.
-      Very often the outcomes of research are protected by <a href="https://www.wto.org/english/tratop_e/trips_e/intel1_e.htm">intellectual property rights</a>. These rights protect the innovation of the developer for a specified period of time with the aim to incentivize investment into research and development activities. However, it is important that the system sufficiently enables others to make use of these outcomes, and contributes to the advancement of human knowledge further. <br /><br />
-      For more information on intellectual property rights, please consult our <a href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf">paper (PDF)</a>.
+      Very often the outcomes of research are protected by <a href='https://www.wto.org/english/tratop_e/trips_e/intel1_e.htm'>intellectual property rights</a>. These rights protect the innovation of the developer for a specified period of time with the aim to incentivize investment into research and development activities. However, it is important that the system sufficiently enables others to make use of these outcomes, and contributes to the advancement of human knowledge further. <br /><br />
+      For more information on intellectual property rights, please consult our <a href='http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf'>paper (PDF)</a>.
       ]]>
                </explanation>
                <unit lang='EN'><![CDATA[Score]]></unit>
@@ -443,14 +441,14 @@
                            <label lang='EN'><![CDATA[Government R&D share of GDP]]></label>
                            <shortlabel lang='EN'><![CDATA[Government R&D share of GDP]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator takes into account government expenditures on research and development. The following areas of development as <a href="http://stats.oecd.org/Index.aspx?DataSetCode=GBAORD_NABS2007">reported to the OECD</a> are included: agriculture, environment, defense (discounted 50%), exploration and exploitation of earth and space, general advancement of knowledge, industrial production and technology, energy, health, education, culture, political and social systems. The indicators discounts government R&amp;D in defense by 50% because not all defense research and development has development benefits. The R&amp;D expenditures are expressed as a share of GDP.  ]]>
+                              <![CDATA[This indicator takes into account government expenditures on research and development. The following areas of development as <a href='http://stats.oecd.org/Index.aspx?DataSetCode=GBAORD_NABS2007'>reported to the OECD</a> are included: agriculture, environment, defense (discounted 50%), exploration and exploitation of earth and space, general advancement of knowledge, industrial production and technology, energy, health, education, culture, political and social systems. The indicators discounts government R&amp;D in defense by 50% because not all defense research and development has development benefits. The R&amp;D expenditures are expressed as a share of GDP.  ]]>
                            </description>
                         </indicator>
                         <indicator code='TEC_GOV_TAX' level='4' format='percentage'>
                            <label lang='EN'><![CDATA[Tax incentives]]></label>
                            <shortlabel lang='EN'><![CDATA[Tax incentives]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator measures the level of government support for private research and development. This is expressed by the B-index, published by the OECD. As explained by the <a href="http://www.oecd.org/sti/b-index.pdf">OECD</a>, the B-index is a measure of the level of pre-tax profit a &ldquo;representative&rdquo; company needs to generate to break even on a marginal, unitary outlay on R&amp;D, taking into account provisions in the tax system that allow for special treatment of R&amp;D expenditures. The indicator takes business R&amp;D expenditures expressed as share of GDP and multiplies this by the level of tax subsidies for small and large enterprises. The result is then weighted by 25%, which is a discount applied on the premise that all private R&amp;D is assumed to be commercially related.  ]]>
+                              <![CDATA[This indicator measures the level of government support for private research and development. This is expressed by the B-index, published by the OECD. As explained by the <a href='http://www.oecd.org/sti/b-index.pdf'>OECD</a>, the B-index is a measure of the level of pre-tax profit a &ldquo;representative&rdquo; company needs to generate to break even on a marginal, unitary outlay on R&amp;D, taking into account provisions in the tax system that allow for special treatment of R&amp;D expenditures. The indicator takes business R&amp;D expenditures expressed as share of GDP and multiplies this by the level of tax subsidies for small and large enterprises. The result is then weighted by 25%, which is a discount applied on the premise that all private R&amp;D is assumed to be commercially related.  ]]>
                            </description>
                         </indicator>
                      </hierarchy>
@@ -464,21 +462,21 @@
                            <label lang='EN'><![CDATA[Patent coverage]]></label>
                            <shortlabel lang='EN'><![CDATA[Patent coverage]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator takes into account countries policies countries&rsquo; policies on patenting plant and animal varieties and software. As explained by <a href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf">Walter Park et al. (PDF)</a>: patents give the manufacturer the power to charge higher prices than would otherwise exist under free competition. The patenting of plant and animal varieties can significantly affect people&rsquo;s access to goods such as medicines and innovations in agriculture. Similarly the patenting of software limits poor countries&rsquo; access to and usage of new technologies. If a country&rsquo;s patent coverage policy enables others, to access and make use of such knowledge, it scores 0 points. If, on the other hand, a country enables such patenting, i.e. their policies are too restrictive, it receives 2 points. The weight of the indicator in intellectual property rights subcomponent is 20%. ]]>
+                              <![CDATA[This indicator takes into account countries policies countries&rsquo; policies on patenting plant and animal varieties and software. As explained by <a href='http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf'>Walter Park et al. (PDF)</a>: patents give the manufacturer the power to charge higher prices than would otherwise exist under free competition. The patenting of plant and animal varieties can significantly affect people&rsquo;s access to goods such as medicines and innovations in agriculture. Similarly the patenting of software limits poor countries&rsquo; access to and usage of new technologies. If a country&rsquo;s patent coverage policy enables others, to access and make use of such knowledge, it scores 0 points. If, on the other hand, a country enables such patenting, i.e. their policies are too restrictive, it receives 2 points. The weight of the indicator in intellectual property rights subcomponent is 20%. ]]>
                            </description>
                         </indicator>
                         <indicator code='TEC_INT_TRI' level='4'>
-                           <label lang='EN'><![CDATA["TRIPS+", anti-circumvention rules, database protection]]></label>
-                           <shortlabel lang='EN'><![CDATA["TRIPS+", anti-circumvention rules, database protection]]></shortlabel>
+                           <label lang='EN'><![CDATA['TRIPS+', anti-circumvention rules, database protection]]></label>
+                           <shortlabel lang='EN'><![CDATA['TRIPS+', anti-circumvention rules, database protection]]></shortlabel>
                            <description lang='EN'>
-								  <![CDATA[This indicator combines an assessment of rich countries’ intellectual property rights provision which go beyond the Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS), countries&rsquo; anti-circumvention rules, and database protection. As explained by <a href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf">Walter Park et al. (PDF)</a>: Developed countries often enter into agreements with developing-country partners which go beyond TRIPS. These provisions sometimes result in the developing economies adopting an IPR system that is stronger than one that is appropriate for them at their stage of economic development, which can negatively affect foreign direct investment as well as local innovators. Second, while anti-circumvention rules against tampering with technology protection measures protect IPR owners against piracy, it is important that the rules and penalties should not be so harsh that they inappropriately interfere with learning and imitation. Anti-circumvention rules can prevent reverse engineering and opportunities for learning by doing. Last, some developed economies have granted patent-like protection to compilers of databases, even if the data were already in the public domain or created with public funds. Strong database protections reduce the flow of useful, public knowledge to developing economies. If a country applies stringent policies in all three areas it receives 3 points, whereas if its policies facilitate knowledge sharing it scores 0. The weight of the indicator in Intellectual Property Rights subcomponent is 50%.  ]]>
+								  <![CDATA[This indicator combines an assessment of rich countries’ intellectual property rights provision which go beyond the Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS), countries&rsquo; anti-circumvention rules, and database protection. As explained by <a href='http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf'>Walter Park et al. (PDF)</a>: Developed countries often enter into agreements with developing-country partners which go beyond TRIPS. These provisions sometimes result in the developing economies adopting an IPR system that is stronger than one that is appropriate for them at their stage of economic development, which can negatively affect foreign direct investment as well as local innovators. Second, while anti-circumvention rules against tampering with technology protection measures protect IPR owners against piracy, it is important that the rules and penalties should not be so harsh that they inappropriately interfere with learning and imitation. Anti-circumvention rules can prevent reverse engineering and opportunities for learning by doing. Last, some developed economies have granted patent-like protection to compilers of databases, even if the data were already in the public domain or created with public funds. Strong database protections reduce the flow of useful, public knowledge to developing economies. If a country applies stringent policies in all three areas it receives 3 points, whereas if its policies facilitate knowledge sharing it scores 0. The weight of the indicator in Intellectual Property Rights subcomponent is 50%.  ]]>
                            </description>
                         </indicator>
                         <indicator code='TEC_INT_COP' level='4'>
                            <label lang='EN'><![CDATA[Rights loss provisions]]></label>
                            <shortlabel lang='EN'><![CDATA[Rights loss provisions]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator combines an assessment of rich countries’ intellectual property rights provisions which relate to compulsory licensing, patent revoking and opposition system, and exceptions for research or defense purposes. As explained by <a href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf">Walter Park et al. (PDF)</a>: Compulsory licensing refers to the situation in which a government compels a patent or copyright holder to license the invention or work to a third party. This a useful option for a government that wishes to respond to a lack of suppliers (or unwilling suppliers) for serving a specific market need, such as vaccines. Governments can also revoke a patent if the holder is not exploiting it or has never exploited it, but is simply hoarding the right. A patent opposition system enables third parties can challenge the validity of a patent grant (within a given time limit) which helps to ensure that invalid patents are not issued, which could otherwise tie up the supply of a good or innovation. Research exemptions allow firms to &lsquo;infringe&rsquo; a patent for research and experimental purposes, and help prevent patent rights from inhibiting follow-on innovations. If a country applies stringent policies in all 4 areas it receives 4 points, whereas if its policies facilitate knowledge sharing it scores 0. The weight of the indicator in Intellectual Property Rights subcomponent is 30%.  ]]>
+                              <![CDATA[This indicator combines an assessment of rich countries’ intellectual property rights provisions which relate to compulsory licensing, patent revoking and opposition system, and exceptions for research or defense purposes. As explained by <a href='http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf'>Walter Park et al. (PDF)</a>: Compulsory licensing refers to the situation in which a government compels a patent or copyright holder to license the invention or work to a third party. This a useful option for a government that wishes to respond to a lack of suppliers (or unwilling suppliers) for serving a specific market need, such as vaccines. Governments can also revoke a patent if the holder is not exploiting it or has never exploited it, but is simply hoarding the right. A patent opposition system enables third parties can challenge the validity of a patent grant (within a given time limit) which helps to ensure that invalid patents are not issued, which could otherwise tie up the supply of a good or innovation. Research exemptions allow firms to &lsquo;infringe&rsquo; a patent for research and experimental purposes, and help prevent patent rights from inhibiting follow-on innovations. If a country applies stringent policies in all 4 areas it receives 4 points, whereas if its policies facilitate knowledge sharing it scores 0. The weight of the indicator in Intellectual Property Rights subcomponent is 30%.  ]]>
                            </description>
                         </indicator>
                      </hierarchy>
@@ -494,17 +492,14 @@
                <label lang='EN'><![CDATA[Environment]]></label>
                <shortlabel lang='EN'><![CDATA[Environment]]></shortlabel>
                <description lang='EN'>
-                  <![CDATA[
-      Rich countries are most responsible for anthropogenic climate change, but poor countries will suffer the most because they are more susceptible geographically and have less money and capacity to deal with the effects. The environment component of the CDI is composed of three subcomponents which assess countries’ environmental policies on global climate, sustainable fisheries, and biodiversity and ecosystems. Click on the components drill-down to see how countries score on each indicator and to learn about the methodology.
-      ]]>
+                  <![CDATA[<p>Rich countries are most responsible for anthropogenic climate change, but poor countries will suffer the most because they are more susceptible geographically and have less money and capacity to deal with the effects. The environment component of the CDI is composed of three subcomponents which assess countries’ environmental policies on global climate, sustainable fisheries, and biodiversity and ecosystems. Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
                </description>
                <explanation lang='EN'>
                   <![CDATA[
-<h3>Why is protection of the environment important for development, and for all of us?</h3>
-          A healthy environment is a necessity for all: poor countries as well as the wealthy ones. While rich countries bear the most responsibility for creating anthropogenic climate change, it is the poor countries for which the impact will be much more damaging because many are located in regions where the impacts of climate change will demonstrate themselves most. <br /><br />
-     Much of the world&rsquo;s poor depend on their surrounding environment to meet their daily needs. Healthy ecosystems are source of clean water and energy, they provide income opportunities and shelter, they are a source of treatment and protection, and biodiversity plays a central role for sustaining food security. Logging as well as increasing demand for arable land are among the main causes of deforestation. In recent <a href="http://www.cgdev.org/publication/future-forests-emissions-tropical-deforestation-carbon-price">paper</a>, CGD experts estimate that by 2050 an area of tropical forest the size of India will have been cleared if countries do not change their current behavior and policies. <br /><br />
-      For more information on why rich countries policies matter for the environment, please see our <a href="http://www.cgdev.org/sites/default/files/ebaconsultation_environment_online.pdf">paper with the Ecologic institute (PDF)</a>.
-            ]]>
+                  <h3>Why is protection of the environment important for development, and for all of us?</h3>
+                  <p>A healthy environment is a necessity for all: poor countries as well as the wealthy ones. While rich countries bear the most responsibility for creating anthropogenic climate change, it is the poor countries for which the impact will be much more damaging because many are located in regions where the impacts of climate change will demonstrate themselves most.</p>
+                  <p>Much of the world&rsquo;s poor depend on their surrounding environment to meet their daily needs. Healthy ecosystems are source of clean water and energy, they provide income opportunities and shelter, they are a source of treatment and protection, and biodiversity plays a central role for sustaining food security. Logging as well as increasing demand for arable land are among the main causes of deforestation. In recent <a href='http://www.cgdev.org/publication/future-forests-emissions-tropical-deforestation-carbon-price'>paper</a>, CGD experts estimate that by 2050 an area of tropical forest the size of India will have been cleared if countries do not change their current behavior and policies.</p>
+                  <p>For more information on why rich countries policies matter for the environment, please see our <a href='http://www.cgdev.org/sites/default/files/ebaconsultation_environment_online.pdf'>paper with the Ecologic Institute (PDF)</a>.</p>]]>
                </explanation>
                <unit lang='EN'><![CDATA[Score]]></unit>
                <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
@@ -520,7 +515,8 @@
                            <label lang='EN'><![CDATA[Greenhouse gas emissions]]></label>
                            <shortlabel lang='EN'><![CDATA[Greenhouse gas emissions]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator assesses the level of greenhouse gas emissions per capita of a country. Data come from <a href="http://unfccc.int/ghg_data/ghg_data_unfccc/items/4146.php">UNFCCC Greenhouse Gas Inventory Data</a>. ]]>
+                              <![CDATA[
+                              <p>This indicator assesses the level of greenhouse gas emissions per capita of a country. Data come from <a href='http://unfccc.int/ghg_data/ghg_data_unfccc/items/4146.php'>UNFCCC Greenhouse Gas Inventory Data</a>. The weight of this indicator in the environment component is 10 percent.</p>]]>
                            </description>
                         </indicator>
 
@@ -528,7 +524,8 @@
                            <label lang='EN'><![CDATA[Fossil fuel production ]]></label>
                            <shortlabel lang='EN'><![CDATA[Fossil fuel production ]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator takes into account the fact that responsibility for greenhouse gas emissions lies not only with the consumers, but also with the producers. The indicator penalizes those countries which extract fossil fuels, namely oil, gas, and coal. Volumes of production are <a href="http://content.ces.ncsu.edu/conversion-factors-for-bioenergy.pdf">converted</a> to CO2 emissions equivalent and are calculated per capita of each country. Data on production come from <a href="http://www.bp.com/">BP Statistical Review of World Energy</a>. ]]>
+                              <![CDATA[
+                              <p>This indicator takes into account the fact that responsibility for greenhouse gas emissions lies not only with the consumers, but also with the producers. The indicator penalizes those countries which extract fossil fuels, namely oil, gas, and coal. Volumes of production are <a href='http://content.ces.ncsu.edu/conversion-factors-for-bioenergy.pdf'>converted</a> to CO2 emissions equivalent and are calculated per capita of each country. Data on production come from <a href='http://www.bp.com/'>BP Statistical Review of World Energy</a>. The weight of this indicator in the environment component is 5 percent.</p>]]>
                            </description>
                         </indicator>
 
@@ -537,7 +534,8 @@
                            <label lang='EN'><![CDATA[Change in greenhouse gas emissions]]></label>
                            <shortlabel lang='EN'><![CDATA[Change in greenhouse gas emissions]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator assesses the level of intensity of greenhouse gas emissions per unit of GDP over time. Data come from <a href="http://unfccc.int/ghg_data/ghg_data_unfccc/items/4146.php">UNFCCC Greenhouse Gas Inventory Data</a>.]]>
+                              <![CDATA[
+                              <p>This indicator assesses the level of intensity of greenhouse gas emissions per unit of GDP over time. Data come from <a href='http://unfccc.int/ghg_data/ghg_data_unfccc/items/4146.php'>UNFCCC Greenhouse Gas Inventory Data</a>. The weight of this indicator in the environment component is 15 percent.</p>]]>
                            </description>
                         </indicator>
 
@@ -546,24 +544,23 @@
                            <label lang='EN'><![CDATA[Gasoline taxes]]></label>
                            <shortlabel lang='EN'><![CDATA[Gasoline taxes]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator assesses the level of tax burden on gas prices. Specifically premium unleaded (RON 95) tax level is taken into consideration. Data come from the OECD publication <a href="http://www.oecd-ilibrary.org/energy/energy-prices-and-taxes/volume-2015/issue-1_energy_tax-v2015-1-en">Energy prices and Taxes</a>.]]>
+                              <![CDATA[
+                              <p>This indicator assesses the level of tax burden on gas prices. Specifically premium unleaded (RON 95) tax level is taken into consideration. Data come from the OECD publication <a href='http://www.oecd-ilibrary.org/energy/energy-prices-and-taxes/volume-2015/issue-1_energy_tax-v2015-1-en'>Energy prices and Taxes</a>. The weight of this indicator in the environment component is 15 percent.</p>]]>
                            </description>
                         </indicator>
                         <indicator code='ENV_USE' level='4'>
                            <label lang='EN'><![CDATA[Consumption of ozone-depleting substances]]></label>
                            <shortlabel lang='EN'><![CDATA[Consumption of ozone-depleting substances]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[Two international agreements, the Vienna Convention (1985) and Montreal Protocol (1987), address the reduction of consumption of ozone depleting substances. Both agreements have been universally ratified. The indicator looks at per capita consumption of ozone depleting substances. Data come from <a href="http://ozone.unep.org/en/data-reporting/data-centre">UNEP Data center</a>.  ]]>
+                              <![CDATA[
+                              <p>Two international agreements, the Vienna Convention (1985) and Montreal Protocol (1987), address the reduction of consumption of ozone depleting substances. Both agreements have been universally ratified. The indicator looks at per capita consumption of ozone depleting substances. Data come from <a href='http://ozone.unep.org/en/data-reporting/data-centre'>UNEP Data Center</a>. The weight of this indicator in the environment component is 10 percent.</p>]]>
                            </description>
                         </indicator>
-
-
-
-                        <indicator code='ENV_KYO' level='4'>
-                           <label lang='EN'><![CDATA[Kyoto Protocol ratification]]></label>
-                           <shortlabel lang='EN'><![CDATA[Kyoto Protocol ratification]]></shortlabel>
+                        <indicator code='ENV_PAR' level='4'>
+                           <label lang='EN'><![CDATA[Paris Agreement]]></label>
+                           <shortlabel lang='EN'><![CDATA[Paris Agreement]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[The Protocol to the United Nations Framework Convention on Climate Change, more commonly known as the Kyoto Protocol, was adopted by the <a href="http://unfccc.int/cop3/">Conference of the Parties</a> in Kyoto, Japan, in 1997. It is the most ambitious international climate change agreement to date in which countries agreed to a specific targets for the reduction of GHG emission. The indicator assesses whether a country ratified the agreement. The list of all signatories is available <a href="http://unfccc.int/kyoto_protocol/status_of_ratification/items/2613.php">here</a>.  ]]>
+                              <![CDATA[The Paris Agreement, which was adopted in December 2015, succeeds the Kyoto Protocol as the most ambitious climate change agreement to date. The agreement was negotiated within the <a href="https://en.wikipedia.org/wiki/United_Nations_Framework_Convention_on_Climate_Change">United Nations Framework Convention on Climate Change</a> (UNFCCC). The Paris Agreement is the first comprehensive climate agreement and its main aim is to hold the increase of the global temperature below 2 &deg;C above pre-industrial levels. The agreement entered into force in November 2016. A list of all countries which have ratified the agreement can be found <a href="http://unfccc.int/paris_agreement/items/9444.php">here</a>. The weight of this indicator in the environment component is 5 percent.]]>
                            </description>
                         </indicator>
                      </hierarchy>
@@ -579,14 +576,16 @@
                            <label lang='EN'><![CDATA[Fishing subsidies]]></label>
                            <shortlabel lang='EN'><![CDATA[Fishing subsidies]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[Fishing subsidies often result in overfishing, which depletes fishing stocks and can have a negative impact on the livelihoods of communities dependent on these resources. Fishing subsidies data come from <a href="http://www.keepeek.com/Digital-Asset-Management/oecd/agriculture-and-food/oecd-review-of-fisheries-country-statistics-2014_rev_fish_stat_en-2014-en#page1">OECD Review of Fisheries</a> and are calculated per capita. ]]>
+                              <![CDATA[
+                              <p>Fishing subsidies often result in overfishing, which depletes fishing stocks and can have a negative impact on the livelihoods of communities dependent on these resources. Fishing subsidies data come from <a href='http://www.oecd-ilibrary.org/agriculture-and-food/oecd-review-of-fisheries-country-statistics_rev_fish_stat'>OECD Review of Fisheries</a> and are calculated per capita. The weight of this indicator in the environment component is 5 percent.</p>]]>
                            </description>
                         </indicator>
                         <indicator code='ENV_UNI' level='4'>
                            <label lang='EN'><![CDATA[Ratification of UN Fisheries Agreement]]></label>
                            <shortlabel lang='EN'><![CDATA[Ratification of UN Fisheries Agreement]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[The UN agreement for the Implementation of the Provisions of UNCLOS relating to the Conservation and Management of Straddling Fish Stocks and Highly Migratory Fish Stocks (UNFSA)</a> aims to establish principles for the conservation and management of these fish stocks through enhanced cooperation among countries while recognizing the special requirements those countries whose economic livelihoods to great extent depend on fisheries resources. Full list of signatories is available <a href="http://www.un.org/Depts/los/reference_files/chronological_lists_of_ratifications.htm">here</a>. ]]>
+                              <![CDATA[
+                              <p><a href="http://www.un.org/Depts/los/convention_agreements/convention_overview_fish_stocks.htm">The UN agreement for the Implementation of the Provisions of UNCLOS relating to the Conservation and Management of Straddling Fish Stocks and Highly Migratory Fish Stocks (UNFSA)</a> aims to establish principles for the conservation and management of these fish stocks through enhanced cooperation among countries while recognizing the special requirements those countries whose economic livelihoods to great extent depend on fisheries resources. Full list of signatories is available <a href='http://www.un.org/Depts/los/reference_files/chronological_lists_of_ratifications.htm'>here</a>. The weight of this indicator in the environment component is 5 percent.</p>]]>
                            </description>
                         </indicator>
                      </hierarchy>
@@ -601,19 +600,22 @@
                            <label lang='EN'><![CDATA[Biodiversity treaties participation]]></label>
                            <shortlabel lang='EN'><![CDATA[Biodiversity treaties participation]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator evaluates how countries fulfill their monitoring and reporting requirements of key international biodiversity agreements. Four biodiversity agreements are taken into account:<br /><br />
-              <a href="https://www.cbd.int/">Convention on Biological Diversity</a> (CBD) <br /><br />
-              <a href="https://www.cites.org/">Convention on International Trade in Endangered Species of Wild Fauna and Flora</a> (CITES) <br /><br />
-              <a href="http://www.ramsar.org/">Ramsar Convention on Wetlands of International Importance</a> <br /><br />
-              <a href="http://www.cms.int/">Convention on Migratory Species</a> (CMS)                <br /><br />
-              Countries receive 2 points if a report is submitted without errors and on time, 1 point if it is late or with errors, and no points if the country fails to submit a report. ]]>
+                              <![CDATA[<p>The indicator evaluates how countries fulfill their monitoring and reporting requirements of key international biodiversity agreements. Four biodiversity agreements are considered:</p>
+                              <ol>
+                              <li><a href="https://www.cbd.int/reports">Convention on Biological Diversity</a> (CBD)</li>
+                              <li><a href="https://cites.org/sites/default/files/annual_reports.pdf">Convention on International Trade in Endangered Species of Wild Fauna and Flora</a> (CITES)</li>
+                              <li><a href="http://www.ramsar.org/search?f%5B0%5D=type%3Adocument#search-documents">Ramsar Convention on Wetlands of International Importance </a></li>
+                              <li><a href="http://www.cms.int/en/documents/national-reports">Convention on Migratory Species</a> (CMS)</li>
+                              </ol>
+                              <p>Countries receive two points if a report is submitted without errors and on time, one point if it is late or with errors, and no points if the country fails to submit a report. The weight of this indicator in the environment component is 15 percent.</p> ]]>
                            </description>
                         </indicator>
                         <indicator code='ENV_TRO' level='4' lessIsBetter='1' format='currency'>
                            <label lang='EN'><![CDATA[Tropical wood imports]]></label>
                            <shortlabel lang='EN'><![CDATA[Tropical wood imports]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[Tropical timber imports per capita are an indicator of countries&rsquo; indirect support to illegal logging, as majority of tropical timber imports stem from illegal practices and have negative environmental and social impacts.  Data come from <a href="http://comtrade.un.org/db/">UN comtrade</a> database. ]]>
+                              <![CDATA[
+                              <p>Tropical timber imports per capita are an indicator of countries&rsquo; indirect support to illegal logging, as the majority of tropical timber imports stem from illegal practices and have negative environmental and social impacts. Data come from <a href="http://comtrade.un.org/db/">UN comtrade</a> database. The weight of this indicator in the environment component is 15 percent.</p> ]]>
                            </description>
                         </indicator>
                      </hierarchy>
@@ -640,8 +642,8 @@
                      <label lang='EN'><![CDATA[Market protection]]></label>
                      <shortlabel lang='EN'><![CDATA[Market protection]]></shortlabel>
                      <description lang='EN'>
-                        <![CDATA[This subcomponent includes two areas of rich countries&rsquo; policies aimed at market protection. First, agricultural subsidies are taken into account. The data for EU countries come from the <a href="http://eur-lex.europa.eu/resource.html?uri=cellar:03ae5e2b-6384-11e5-9317-01aa75ed71a1.0023.02/DOC_2&amp;format=PDF">European Commission</a>, and for non-EU countries from the <a href="http://stats.oecd.org/Index.aspx?DataSetCode=MON2012TSE">OECD</a>.<br /><br />
-          Secondly, the indicator assesses ad valorem equivalent of duties on imports from developing countries. The data by importer and exporter at the Harmonized System 6-digit level are from the <a href="http://www.cepii.fr/anglaisgraph/bdd/macmap.htm">Market Access database</a> of CEPII. Definitions of major product categories such as rice and clothing come from the <a href="https://www.gtap.agecon.purdue.edu/databases/v8/default.asp">Global Trade Analysis Project</a> database. <br /><br />
+                        <![CDATA[This subcomponent includes two areas of rich countries&rsquo; policies aimed at market protection. First, agricultural subsidies are taken into account. The data for EU countries come from the <a href='http://eur-lex.europa.eu/resource.html?uri=cellar:03ae5e2b-6384-11e5-9317-01aa75ed71a1.0023.02/DOC_2&amp;format=PDF'>European Commission</a>, and for non-EU countries from the <a href='http://stats.oecd.org/Index.aspx?DataSetCode=MON2012TSE'>OECD</a>.<br /><br />
+          Secondly, the indicator assesses ad valorem equivalent of duties on imports from developing countries. The data by importer and exporter at the Harmonized System 6-digit level are from the <a href='http://www.cepii.fr/anglaisgraph/bdd/macmap.htm'>Market Access database</a> of CEPII. Definitions of major product categories such as rice and clothing come from the <a href='https://www.gtap.agecon.purdue.edu/databases/v8/default.asp'>Global Trade Analysis Project</a> database. <br /><br />
           This indicator has 50% weight. ]]>
                      </description>
                   </indicator>
@@ -649,14 +651,14 @@
                      <label lang='EN'><![CDATA[Impediments to imports]]></label>
                      <shortlabel lang='EN'><![CDATA[Impediments to imports]]></shortlabel>
                      <description lang='EN'>
-                        <![CDATA[This indicator assesses countries&rsquo; level of restrictiveness for trade in services. It is based on the <a href="http://stats.oecd.org/Index.aspx?DataSetCode=STRI">Services Trade Restrictiveness Index</a> published by the OECD. The indicator is the average of restrictiveness in all sectors. The indicator has 25% weight.]]>
+                        <![CDATA[This indicator assesses countries&rsquo; level of restrictiveness for trade in services. It is based on the <a href='http://stats.oecd.org/Index.aspx?DataSetCode=STRI'>Services Trade Restrictiveness Index</a> published by the OECD. The indicator is the average of restrictiveness in all sectors. The indicator has 25% weight.]]>
                      </description>
                   </indicator>
                   <indicator code='TRA_SRV' level='3'>
                      <label lang='EN'><![CDATA[Restrictions in services]]></label>
                      <shortlabel lang='EN'><![CDATA[Restrictions in services]]></shortlabel>
                      <description lang='EN'>
-                        <![CDATA[This indicator assesses countries&rsquo; red tape on imports. Three indicators from the <a href="http://www.doingbusiness.org/">Doing Business Database</a> published by the World Bank are included: number of documents a country requires to import a container, number of days it takes to import a container and costs for importing a container. The indicator has 25% weight.]]>
+                        <![CDATA[This indicator assesses countries&rsquo; red tape on imports. Three indicators from the <a href='http://www.doingbusiness.org/'>Doing Business Database</a> published by the World Bank are included: number of documents a country requires to import a container, number of days it takes to import a container and costs for importing a container. The indicator has 25% weight.]]>
                      </description>
                   </indicator>
                </hierarchy>
@@ -688,7 +690,7 @@
                            <label lang='EN'><![CDATA[Peacekeeping & humanitarian interventions]]></label>
                            <shortlabel lang='EN'><![CDATA[Peacekeeping & humanitarian interventions]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator takes into account countries&rsquo; personnel and financial contributions to peacekeeping, including financial contributions to the UN peacekeeping budget, personnel contributions UN operations&rsquo; and other (non-UN) internationally approved operations. Data come from <a href="http://www.un.org/en/peacekeeping/resources/statistics/contributors_archive.shtml">UN Department of Peace Keeping Operations</a> and <a href="http://www.iiss.org/en/publications/military%20balance/issues/the-military-balance-2015-5ea6">International Institute for Strategic Studies</a>. ]]>
+                              <![CDATA[This indicator takes into account countries&rsquo; personnel and financial contributions to peacekeeping, including financial contributions to the UN peacekeeping budget, personnel contributions UN operations&rsquo; and other (non-UN) internationally approved operations. Data come from <a href='http://www.un.org/en/peacekeeping/resources/statistics/contributors_archive.shtml'>UN Department of Peace Keeping Operations</a> and <a href='http://www.iiss.org/en/publications/military%20balance/issues/the-military-balance-2015-5ea6'>International Institute for Strategic Studies</a>. ]]>
                            </description>
                         </indicator>
                         <indicator code='SEC_PEA_SLP' level='4' format='percentage'>
@@ -705,7 +707,7 @@
                            <label lang='EN'><![CDATA[Arms exports]]></label>
                            <shortlabel lang='EN'><![CDATA[Arms exports]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[The arms exports indicator takes into account that countries also affect peace and security beyond their borders if they supply arms to other countries. This might be especially detrimental for development if the government of the recipient country does not rule according to democratic principles. The arms exports indicator is therefore weighted by the level of democracy (measured by <a href="http://info.worldbank.org/governance/wgi/index.aspx#home">World Governance Indicators</a>) and level of poverty (GDP per capita). The indicator is expressed as a share of GDP. The data on arms exports is collected by Mark Stoker using publically available data. Countries are rewarder for making such data publically available. This subcomponent has a 15% weight. ]]>
+                              <![CDATA[The arms exports indicator takes into account that countries also affect peace and security beyond their borders if they supply arms to other countries. This might be especially detrimental for development if the government of the recipient country does not rule according to democratic principles. The arms exports indicator is therefore weighted by the level of democracy (measured by <a href='http://info.worldbank.org/governance/wgi/index.aspx#home'>World Governance Indicators</a>) and level of poverty (GDP per capita). The indicator is expressed as a share of GDP. The data on arms exports is collected by Mark Stoker using publically available data. Countries are rewarder for making such data publically available. This subcomponent has a 15% weight. ]]>
                            </description>
                         </indicator>
                         <indicator code='SEC_RAT' level='4'>
@@ -714,14 +716,14 @@
                            <description lang='EN'>
                               <![CDATA[This indicator assesses the level of countries&rsquo; participation in important international security regimes. Countries receive 1 point for ratifying each of the following 8 treaties. No points are awarded if the country only signed, but not ratified the agreement. Follow the links to access the list of signatories for each treaty. This subcomponent has a 30% weight.</p>
               <ul>
-                <li><a href="http://disarmament.un.org/treaties/t/npt">Treaty on the Non-Proliferation of Nuclear Weapons</a></li>
-                <li><a href="https://www.ctbto.org/the-treaty/status-of-signature-and-ratification/">Comprehensive Nuclear-Test-Ban Treaty</a></li>
-                <li><a href="https://www.opcw.org/fileadmin/OPCW/S_series/2015/en/s-1304-2015_e_.pdf">Chemical Weapons Convention</a></li>
-                <li><a href="http://www.opbw.org/">The Biological and Toxin Weapons Convention</a></li>
-                <li><a href="http://www.apminebanconvention.org/states-parties-to-the-convention/">Mine Ban Treaty</a></li>
-                <li><a href="http://www.unog.ch/__80256ee600585943.nsf/(httpPages)/3ce7cfc0aa4a7548c12571c00039cb0c?OpenDocument&amp;ExpandSection=1%2C2#_Section1">Convention on Certain Chemical Weapons</a></li>
-                <li><a href="http://www.clusterconvention.org/the-convention/convention-status/">Convention on Cluster Munitions</a></li>
-                <li><a href="http://www.icc-cpi.int/en_menus/asp/states%20parties/Pages/states%20parties%20_%20chronological%20list.aspx">Rome Statute of the International Criminal Court</a>]]>
+                <li><a href='http://disarmament.un.org/treaties/t/npt'>Treaty on the Non-Proliferation of Nuclear Weapons</a></li>
+                <li><a href='https://www.ctbto.org/the-treaty/status-of-signature-and-ratification/'>Comprehensive Nuclear-Test-Ban Treaty</a></li>
+                <li><a href='https://www.opcw.org/fileadmin/OPCW/S_series/2015/en/s-1304-2015_e_.pdf'>Chemical Weapons Convention</a></li>
+                <li><a href='http://www.opbw.org/'>The Biological and Toxin Weapons Convention</a></li>
+                <li><a href='http://www.apminebanconvention.org/states-parties-to-the-convention/'>Mine Ban Treaty</a></li>
+                <li><a href='http://www.unog.ch/__80256ee600585943.nsf/(httpPages)/3ce7cfc0aa4a7548c12571c00039cb0c?OpenDocument&amp;ExpandSection=1%2C2#_Section1'>Convention on Certain Chemical Weapons</a></li>
+                <li><a href='http://www.clusterconvention.org/the-convention/convention-status/'>Convention on Cluster Munitions</a></li>
+                <li><a href='http://www.icc-cpi.int/en_menus/asp/states%20parties/Pages/states%20parties%20_%20chronological%20list.aspx'>Rome Statute of the International Criminal Court</a>]]>
                            </description>
                         </indicator>
                      </hierarchy>
@@ -740,7 +742,7 @@
                   <![CDATA[
 <h3>Why is migration important for development?</h3>
         International mobility of workers is potentially the most powerful tool for poverty reduction and income redistribution, and migration policies of rich countries therefore greatly affect citizens of poor countries. Workers who have migrated from poor to rich countries broadened their opportunities to earn higher incomes, access knowledge and gain valuable skills. These worker in turn send billions of dollars back to their countries each year. Immigrants from developing countries, especially students, who return bring their new knowledge and skills which they can employ by opening businesses, and enhance the knowledge base of the country. There is very little evidence that skilled migration hurts the sending countries. On the contrary, migrants can strengthen and build trade networks, transfer technologies, and provide investment resources for their home economies among other benefits. <br /><br />
-       For more information on the impact of migration, please visit CGD&rsquo;s work on <a href="http://www.cgdev.org/topics/migration">migration and development</a>.
+       For more information on the impact of migration, please visit CGD&rsquo;s work on <a href='http://www.cgdev.org/topics/migration'>migration and development</a>.
                ]]>
                </explanation>
                <unit lang='EN'><![CDATA[Score]]></unit>
@@ -752,9 +754,9 @@
                      <description lang='EN'>
                         <![CDATA[This indicator assesses to what extent have countries signed up to international conventions which aim to protect migrants. Three conventions are considered:</p>
            <ul>
-             <li><a href="http://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312242">1949 Convention concerning Migration for Employment (No. 97)</a></li>
-             <li><a href="https://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312288">1975 Convention concerning Migrations in Abusive Conditions and the Promotion of Equality of Opportunity and Treatment of Migrant Workers (No. 143)</a></li>
-             <li><a href="https://www.unodc.org/unodc/en/treaties/CTOC/countrylist-traffickingprotocol.html">2000 Protocol to Prevent, Suppress and Punish Trafficking in Persons, Especially Women and Children</a></li>
+             <li><a href='http://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312242'>1949 Convention concerning Migration for Employment (No. 97)</a></li>
+             <li><a href='https://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312288'>1975 Convention concerning Migrations in Abusive Conditions and the Promotion of Equality of Opportunity and Treatment of Migrant Workers (No. 143)</a></li>
+             <li><a href='https://www.unodc.org/unodc/en/treaties/CTOC/countrylist-traffickingprotocol.html'>2000 Protocol to Prevent, Suppress and Punish Trafficking in Persons, Especially Women and Children</a></li>
            </ul>
            <p>Countries receive 10 points for ratifying each treaty. The overall weight of the subcomponent is 10%. ]]>
                      </description>
@@ -763,7 +765,7 @@
                      <label lang='EN'><![CDATA[Implementation of policies domestically]]></label>
                      <shortlabel lang='EN'><![CDATA[Implementation of policies domestically]]></shortlabel>
                      <description lang='EN'>
-                        <![CDATA[This indicator uses the data from the <a href="http://www.mipex.eu/">Migrant Integration Policy Index</a> (MIPEX) which assesses policies to integrate migrants. MIPEX consists of eight categories, which together assess 167 policy indicators. MIPEX is the only comprehensive assessment tool for the integration of migrants in rich countries. The eight dimensions of MIPEX are the following:</p>
+                        <![CDATA[This indicator uses the data from the <a href='http://www.mipex.eu/'>Migrant Integration Policy Index</a> (MIPEX) which assesses policies to integrate migrants. MIPEX consists of eight categories, which together assess 167 policy indicators. MIPEX is the only comprehensive assessment tool for the integration of migrants in rich countries. The eight dimensions of MIPEX are the following:</p>
                           <ul>
                             <li>Labor market mobility</li>
                             <li>Education</li>
@@ -786,14 +788,14 @@
                            <label lang='EN'><![CDATA[Share of students from developing countries]]></label>
                            <shortlabel lang='EN'><![CDATA[Share of students from developing countries]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[This indicator evaluates how many students from developing countries are enrolled in tertiary education in CDI countries. Two indicators are considered: students from countries eligible for ODA divided by total foreign students and from students from countries eligible for ODA divided by total students. Data come from the <a href="http://stats.oecd.org/Index.aspx?DatasetCode=RFOREIGN">OECD Education and Skills database</a>.]]>
+                              <![CDATA[This indicator evaluates how many students from developing countries are enrolled in tertiary education in CDI countries. Two indicators are considered: students from countries eligible for ODA divided by total foreign students and from students from countries eligible for ODA divided by total students. Data come from the <a href='http://stats.oecd.org/Index.aspx?DatasetCode=RFOREIGN'>OECD Education and Skills database</a>.]]>
                            </description>
                         </indicator>
                         <indicator code='MIG_BDN_INM' level='4'>
                            <label lang='EN'><![CDATA[Immigrant inflow]]></label>
                            <shortlabel lang='EN'><![CDATA[Immigrant inflow]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[The indicator looks at inflow of immigrants to rich countries, and it is weighted by a selectivity factor based on countries of origin. That is, countries are more rewarded for accepting migrants from poor countries, rather than relatively rich countries. Data come from the <a href="http://stats.oecd.org/Index.aspx?DatasetCode=MIG">OECD migration database</a>.]]>
+                              <![CDATA[The indicator looks at inflow of immigrants to rich countries, and it is weighted by a selectivity factor based on countries of origin. That is, countries are more rewarded for accepting migrants from poor countries, rather than relatively rich countries. Data come from the <a href='http://stats.oecd.org/Index.aspx?DatasetCode=MIG'>OECD migration database</a>.]]>
                            </description>
                         </indicator>
                         <indicator code='MIG_BDN_ASY' level='4'>
@@ -801,14 +803,14 @@
                            <shortlabel lang='EN'><![CDATA[Asylum-seekers burden sharing ]]></shortlabel>
                            <description lang='EN'>
                               <![CDATA[An asylum-seeker is someone who claims they are a refugee, but whose claims have not yet been definitively evaluated. The 1951 Refugee Convention defines a refugee as someone &quot;who owing to a well-founded fear of being persecuted for reasons of race, religion, nationality, membership of a particular social group or political opinion is outside the country of his nationality and is unable or, owing to such fear, is unwilling to avail himself of the protection of that country; or who, not having a nationality and being outside the country of his former habitual residence as a result of such events, is unable or, owing to such fear, is unwilling to return to it.&quot;</p>
-                    <p>The indicator takes into account the number of asylum seekers total as share population of recipient country, and the number asylums granted as a share of total asylum applications. The data come from the <a href="http://www.unhcr.org/statistics.html">UNHCR statistical yearbook</a>.]]>
+                    <p>The indicator takes into account the number of asylum seekers total as share population of recipient country, and the number asylums granted as a share of total asylum applications. The data come from the <a href='http://www.unhcr.org/statistics.html'>UNHCR statistical yearbook</a>.]]>
                            </description>
                         </indicator>
                         <indicator code='MIG_BDN_REF' level='4'>
                            <label lang='EN'><![CDATA[Refugee burden sharing]]></label>
                            <shortlabel lang='EN'><![CDATA[Refugee burden sharing]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[The 1951 Refugee Convention defines a refugee as someone &quot;who owing to a well-founded fear of being persecuted for reasons of race, religion, nationality, membership of a particular social group or political opinion is outside the country of his nationality and is unable or, owing to such fear, is unwilling to avail himself of the protection of that country; or who, not having a nationality and being outside the country of his former habitual residence as a result of such events, is unable or, owing to such fear, is unwilling to return to it.&quot;</p><p>The indicator takes into account the three aspects: total refugees/recipient country GDP, total refugees/recipient country population, total refugees/recipient country area. The data come from the <a href="http://www.unhcr.org/statistics.html">UNHCR statistical yearbook</a>.]]>
+                              <![CDATA[The 1951 Refugee Convention defines a refugee as someone &quot;who owing to a well-founded fear of being persecuted for reasons of race, religion, nationality, membership of a particular social group or political opinion is outside the country of his nationality and is unable or, owing to such fear, is unwilling to avail himself of the protection of that country; or who, not having a nationality and being outside the country of his former habitual residence as a result of such events, is unable or, owing to such fear, is unwilling to return to it.&quot;</p><p>The indicator takes into account the three aspects: total refugees/recipient country GDP, total refugees/recipient country population, total refugees/recipient country area. The data come from the <a href='http://www.unhcr.org/statistics.html'>UNHCR statistical yearbook</a>.]]>
                            </description>
                         </indicator>
                      </hierarchy>
@@ -3446,33 +3448,33 @@
 
    <!-- AID -->
    <vs y='2016' r='LMY' i='AID_QNT'>
-      <v c='AUS' value='0.33'/>
-      <v c='AUT' value='0.27'/>
-      <v c='BEL' value='0.45'/>
-      <v c='CAN' value='0.28'/>
+      <v c='AUS' value='0.31'/>
+      <v c='AUT' value='0.28'/>
+      <v c='BEL' value='0.46'/>
+      <v c='CAN' value='0.24'/>
       <v c='CZE' value='0.11'/>
-      <v c='DNK' value='0.85'/>
-      <v c='FIN' value='0.54'/>
-      <v c='FRA' value='0.41'/>
-      <v c='DEU' value='0.38'/>
-      <v c='GRC' value='0.1'/>
-      <v c='HUN' value='0.1'/>
-      <v c='IRL' value='0.46'/>
-      <v c='ITA' value='0.17'/>
-      <v c='JPN' value='0.23'/>
-      <v c='LUX' value='1'/>
-      <v c='NLD' value='0.67'/>
-      <v c='NZL' value='0.26'/>
-      <v c='NOR' value='1.07'/>
-      <v c='POL' value='0.1'/>
-      <v c='PRT' value='0.23'/>
+      <v c='DNK' value='0.86'/>
+      <v c='FIN' value='0.59'/>
+      <v c='FRA' value='0.37'/>
+      <v c='DEU' value='0.42'/>
+      <v c='GRC' value='0.11'/>
+      <v c='HUN' value='0.11'/>
+      <v c='IRL' value='0.38'/>
+      <v c='ITA' value='0.19'/>
+      <v c='JPN' value='0.19'/>
+      <v c='LUX' value='1.06'/>
+      <v c='NLD' value='0.64'/>
+      <v c='NZL' value='0.27'/>
+      <v c='NOR' value='1'/>
+      <v c='POL' value='0.09'/>
+      <v c='PRT' value='0.19'/>
       <v c='SVK' value='0.09'/>
       <v c='KOR' value='0.13'/>
-      <v c='ESP' value='0.18'/>
-      <v c='SWE' value='1.01'/>
-      <v c='CHE' value='0.45'/>
-      <v c='GBR' value='0.71'/>
-      <v c='USA' value='0.18'/>
+      <v c='ESP' value='0.13'/>
+      <v c='SWE' value='1.09'/>
+      <v c='CHE' value='0.5'/>
+      <v c='GBR' value='0.7'/>
+      <v c='USA' value='0.19'/>
    </vs>
    <vs y='2016' r='LMY' i='AID_QLT_EFF'>
       <v c='AUS' value='-0.260255868'/>
@@ -3592,62 +3594,62 @@
    </vs>
    <!-- TECHNOLOGY -->
    <vs y='2016' r='LMY' i='TEC_GOV_GOV' format='percentage'>
-      <v c='AUS' value='0.0044'/>
-      <v c='AUT' value='0.008'/>
-      <v c='BEL' value='0.0064'/>
-      <v c='CAN' value='0.0047'/>
-      <v c='CZE' value='0.0065'/>
-      <v c='DNK' value='0.0103'/>
-      <v c='FIN' value='0.0099'/>
-      <v c='FRA' value='0.0064'/>
-      <v c='DEU' value='0.0089'/>
-      <v c='GRC' value='0.0047'/>
-      <v c='HUN' value='0.0066'/>
-      <v c='IRL' value='0.0042'/>
-      <v c='ITA' value='0.0052'/>
-      <v c='JPN' value='0.0073'/>
-      <v c='LUX' value='0.0068'/>
-      <v c='NLD' value='0.0074'/>
-      <v c='NZL' value='0.0048'/>
-      <v c='NOR' value='0.0078'/>
-      <v c='POL' value='0.0035'/>
-      <v c='PRT' value='0.0093'/>
-      <v c='SVK' value='0.0039'/>
-      <v c='KOR' value='0.0082'/>
-      <v c='ESP' value='0.0054'/>
-      <v c='SWE' value='0.008'/>
-      <v c='CHE' value='0.0084'/>
-      <v c='GBR' value='0.0052'/>
-      <v c='USA' value='0.0058'/>
+      <v c='AUS' value='0.004457132'/>
+      <v c='AUT' value='0.008039853'/>
+      <v c='BEL' value='0.006810481'/>
+      <v c='CAN' value='0.004963456'/>
+      <v c='CZE' value='0.006403388'/>
+      <v c='DNK' value='0.010214127'/>
+      <v c='FIN' value='0.009751157'/>
+      <v c='FRA' value='0.006948912'/>
+      <v c='DEU' value='0.008699092'/>
+      <v c='GRC' value='0.004401683'/>
+      <v c='HUN' value='0.002825045'/>
+      <v c='IRL' value='0.003844568'/>
+      <v c='ITA' value='0.005242558'/>
+      <v c='JPN' value='0.007498521'/>
+      <v c='LUX' value='0.007194299'/>
+      <v c='NLD' value='0.007353692'/>
+      <v c='NZL' value='0.005267345'/>
+      <v c='NOR' value='0.008540891'/>
+      <v c='POL' value='0.004302661'/>
+      <v c='PRT' value='0.00937484'/>
+      <v c='SVK' value='0.003828055'/>
+      <v c='KOR' value='0.011963871'/>
+      <v c='ESP' value='0.005548296'/>
+      <v c='SWE' value='0.008389313'/>
+      <v c='CHE' value='0.008884306'/>
+      <v c='GBR' value='0.00560049'/>
+      <v c='USA' value='0.007848653'/>
    </vs>
    <vs y='2016' r='LMY' i='TEC_GOV_TAX' format='percentage'>
-      <v c='AUS' value='0.14'/>
-      <v c='AUT' value='0.12'/>
-      <v c='BEL' value='0.14'/>
-      <v c='CAN' value='0.255'/>
-      <v c='CZE' value='0.2'/>
-      <v c='DNK' value='0.29'/>
-      <v c='FIN' value='-0.01'/>
-      <v c='FRA' value='0.385'/>
-      <v c='DEU' value='-0.02'/>
-      <v c='GRC' value='0.01'/>
-      <v c='HUN' value='0.22'/>
-      <v c='IRL' value='0.13'/>
-      <v c='ITA' value='0.12'/>
-      <v c='JPN' value='0.145'/>
-      <v c='LUX' value='-0.01'/>
-      <v c='NLD' value='0.235'/>
-      <v c='NZL' value='-0.02'/>
-      <v c='NOR' value='0.235'/>
-      <v c='POL' value='-0.01'/>
-      <v c='PRT' value='0.41'/>
-      <v c='SVK' value='-0.01'/>
-      <v c='KOR' value='0.18'/>
-      <v c='ESP' value='0.35'/>
-      <v c='SWE' value='-0.01'/>
-      <v c='CHE' value='-0.01'/>
-      <v c='GBR' value='0.195'/>
-      <v c='USA' value='0.06'/>
+     <v c='AUS' value='0.0016605'/>
+      <v c='AUT' value='0.002436'/>
+      <v c='BEL' value='0.001659'/>
+      <v c='CAN' value='0.001681'/>
+      <v c='CZE' value='0.00208'/>
+      <v c='DNK' value='-0.0002'/>
+      <v c='FIN' value='-0.000114'/>
+      <v c='FRA' value='0.004824'/>
+      <v c='DEU' value='-0.000382'/>
+      <v c='GRC' value='0.000216'/>
+      <v c='HUN' value='0.0016415'/>
+      <v c='IRL' value='0.002964'/>
+      <v c='ITA' value='0.000068'/>
+      <v c='JPN' value='0.00165'/>
+      <v c='LUX' value='-0.000071'/>
+      <v c='NLD' value='0.00198'/>
+      <v c='NZL' value='-0.000108'/>
+      <v c='NOR' value='0.00102225'/>
+      <v c='POL' value='0'/>
+      <v c='PRT' value='0.0021125'/>
+      <v c='SVK' value='0.00038'/>
+      <v c='KOR' value='0.004401'/>
+      <v c='ESP' value='0.002178'/>
+      <v c='SWE' value='0.00114'/>
+      <v c='CHE' value='-0.000205'/>
+      <v c='GBR' value='0.0020475'/>
+      <v c='USA' value='0.000672'/>
    </vs>
    <vs y='2016' r='LMY' i='TEC_INT_LIM'>
       <v c='AUS' value='2'/>
@@ -3736,151 +3738,93 @@
       <v c='GBR' value='2.5'/>
       <v c='USA' value='3'/>
    </vs>
-   <!-- FINANCE -->
-   <vs y='2016' r='LMY' i='INV_SUP'>
-      <v c='AUS' value='73'/>
-      <v c='AUT' value='65'/>
-      <v c='BEL' value='71'/>
-      <v c='CAN' value='80'/>
-      <v c='CZE' value='63'/>
-      <v c='DNK' value='64'/>
-      <v c='FIN' value='68'/>
-      <v c='FRA' value='68'/>
-      <v c='DEU' value='75'/>
-      <v c='GRC' value='47'/>
-      <v c='HUN' value='53'/>
-      <v c='IRL' value='41'/>
-      <v c='ITA' value='67'/>
-      <v c='JPN' value='62'/>
-      <v c='LUX' value='61'/>
-      <v c='NLD' value='72'/>
-      <v c='NZL' value='65'/>
-      <v c='NOR' value='76'/>
-      <v c='POL' value='66'/>
-      <v c='PRT' value='66'/>
-      <v c='SVK' value='57'/>
-      <v c='KOR' value='69'/>
-      <v c='ESP' value='64'/>
-      <v c='SWE' value='65'/>
-      <v c='CHE' value='76'/>
-      <v c='GBR' value='75'/>
-      <v c='USA' value='61'/>
-   </vs>
-   <vs y='2016' r='LMY' i='INV_POL'>
-      <v c='AUS' value='25'/>
-      <v c='AUT' value='25'/>
-      <v c='BEL' value='25'/>
-      <v c='CAN' value='25'/>
-      <v c='CZE' value='25'/>
-      <v c='DNK' value='23'/>
-      <v c='FIN' value='23'/>
-      <v c='FRA' value='23'/>
-      <v c='DEU' value='25'/>
-      <v c='GRC' value='23'/>
-      <v c='HUN' value='17'/>
-      <v c='IRL' value='10'/>
-      <v c='ITA' value='25'/>
-      <v c='JPN' value='25'/>
-      <v c='LUX' value='25'/>
-      <v c='NLD' value='25'/>
-      <v c='NZL' value='23'/>
-      <v c='NOR' value='25'/>
-      <v c='POL' value='25'/>
-      <v c='PRT' value='23'/>
-      <v c='SVK' value='23'/>
-      <v c='KOR' value='25'/>
-      <v c='ESP' value='23'/>
-      <v c='SWE' value='24'/>
-      <v c='CHE' value='25'/>
-      <v c='GBR' value='23'/>
-      <v c='USA' value='17'/>
-   </vs>
-   <vs y='2016' r='LMY' i='INV_BRB'>
-      <v c='AUS' value='28'/>
-      <v c='AUT' value='18'/>
-      <v c='BEL' value='24'/>
-      <v c='CAN' value='30'/>
-      <v c='CZE' value='18'/>
-      <v c='DNK' value='21'/>
-      <v c='FIN' value='20'/>
-      <v c='FRA' value='20'/>
-      <v c='DEU' value='30'/>
-      <v c='GRC' value='14'/>
-      <v c='HUN' value='16'/>
-      <v c='IRL' value='16'/>
-      <v c='ITA' value='22'/>
-      <v c='JPN' value='17'/>
-      <v c='LUX' value='16'/>
-      <v c='NLD' value='22'/>
-      <v c='NZL' value='17'/>
-      <v c='NOR' value='26'/>
-      <v c='POL' value='16'/>
-      <v c='PRT' value='18'/>
-      <v c='SVK' value='14'/>
-      <v c='KOR' value='19'/>
-      <v c='ESP' value='21'/>
-      <v c='SWE' value='16'/>
-      <v c='CHE' value='26'/>
-      <v c='GBR' value='27'/>
-      <v c='USA' value='27'/>
-   </vs>
-   <vs y='2016' r='LMY' i='INV_IVO'>
-      <v c='AUS' value='5'/>
-      <v c='AUT' value='5'/>
-      <v c='BEL' value='2'/>
-      <v c='CAN' value='5'/>
-      <v c='CZE' value='5'/>
-      <v c='DNK' value='5'/>
-      <v c='FIN' value='5'/>
-      <v c='FRA' value='5'/>
-      <v c='DEU' value='5'/>
-      <v c='GRC' value='5'/>
-      <v c='HUN' value='5'/>
-      <v c='IRL' value='0'/>
-      <v c='ITA' value='5'/>
-      <v c='JPN' value='5'/>
-      <v c='LUX' value='5'/>
-      <v c='NLD' value='5'/>
-      <v c='NZL' value='5'/>
-      <v c='NOR' value='5'/>
-      <v c='POL' value='5'/>
-      <v c='PRT' value='5'/>
-      <v c='SVK' value='5'/>
-      <v c='KOR' value='5'/>
-      <v c='ESP' value='5'/>
-      <v c='SWE' value='5'/>
-      <v c='CHE' value='5'/>
-      <v c='GBR' value='5'/>
-      <v c='USA' value='5'/>
-   </vs>
-   <vs y='2016' r='LMY' i='INV_FAC'>
-      <v c='AUS' value='15'/>
-      <v c='AUT' value='17'/>
-      <v c='BEL' value='20'/>
-      <v c='CAN' value='20'/>
-      <v c='CZE' value='15'/>
+   <!-- FINANCE --> <!-- 2016 has three indicators instead of four for the investment component of FINANCE -->
+   <vs y='2016' r='LMY' i='INV_COM'><!-- International Commitments -->
+      <v c='AUS' value='12'/>
+      <v c='AUT' value='9'/>
+      <v c='BEL' value='13'/>
+      <v c='CAN' value='12'/>
+      <v c='CZE' value='11'/>
       <v c='DNK' value='15'/>
-      <v c='FIN' value='20'/>
-      <v c='FRA' value='20'/>
-      <v c='DEU' value='15'/>
-      <v c='GRC' value='5'/>
-      <v c='HUN' value='15'/>
-      <v c='IRL' value='15'/>
+      <v c='FIN' value='16'/>
+      <v c='FRA' value='14'/>
+      <v c='DEU' value='14'/>
+      <v c='GRC' value='8'/>
+      <v c='HUN' value='13'/>
+      <v c='IRL' value='11'/>
       <v c='ITA' value='15'/>
-      <v c='JPN' value='15'/>
-      <v c='LUX' value='15'/>
-      <v c='NLD' value='20'/>
-      <v c='NZL' value='20'/>
-      <v c='NOR' value='20'/>
-      <v c='POL' value='20'/>
-      <v c='PRT' value='20'/>
-      <v c='SVK' value='15'/>
-      <v c='KOR' value='20'/>
-      <v c='ESP' value='15'/>
-      <v c='SWE' value='20'/>
-      <v c='CHE' value='20'/>
-      <v c='GBR' value='20'/>
-      <v c='USA' value='12'/>
+      <v c='JPN' value='13'/>
+      <v c='LUX' value='14'/>
+      <v c='NLD' value='16'/>
+      <v c='NZL' value='7'/>
+      <v c='NOR' value='16'/>
+      <v c='POL' value='12'/>
+      <v c='PRT' value='13'/>
+      <v c='SVK' value='11'/>
+      <v c='KOR' value='8'/>
+      <v c='ESP' value='14'/>
+      <v c='SWE' value='15'/>
+      <v c='CHE' value='16'/>
+      <v c='GBR' value='15'/>
+      <v c='USA' value='15'/>
+   </vs>
+   <vs y='2016' r='LMY' i='INV_IIA'> <!-- INTERNATIONAL INVESTMENT AGREEMENTS -->
+      <v c='AUS' value='5.51'/>
+      <v c='AUT' value='5.34'/>
+      <v c='BEL' value='5.34'/>
+      <v c='CAN' value='7.4'/>
+      <v c='CZE' value='4.66'/>
+      <v c='DNK' value='3.97'/>
+      <v c='FIN' value='6.03'/>
+      <v c='FRA' value='5'/>
+      <v c='DEU' value='3.97'/>
+      <v c='GRC' value='3.97'/>
+      <v c='HUN' value='3.97'/>
+      <v c='IRL' value='0'/>
+      <v c='ITA' value='4.31'/>
+      <v c='JPN' value='6.71'/>
+      <v c='LUX' value='4.66'/>
+      <v c='NLD' value='4.31'/>
+      <v c='NZL' value='6.37'/>
+      <v c='NOR' value='4.36'/>
+      <v c='POL' value='4.31'/>
+      <v c='PRT' value='3.97'/>
+      <v c='SVK' value='3.97'/>
+      <v c='KOR' value='5.68'/>
+      <v c='ESP' value='4.31'/>
+      <v c='SWE' value='4.36'/>
+      <v c='CHE' value='5.13'/>
+      <v c='GBR' value='5.68'/>
+      <v c='USA' value='7.05'/>
+   </vs>
+   <vs y='2016' r='LMY' i='INV_OOF' format='percentage'> <!-- OTHER OFFICIAL FLOWS / GDP -->
+     <v c='AUS' value='0.0001'/>
+      <v c='AUT' value='0.0003'/>
+      <v c='BEL' value='-0.0001'/>
+      <v c='CAN' value='0.0011'/>
+      <v c='CZE' value='0'/>
+      <v c='DNK' value='-0.0003'/>
+      <v c='FIN' value='0'/>
+      <v c='FRA' value='0.0002'/>
+      <v c='DEU' value='0.0001'/>
+      <v c='GRC' value='0'/>
+      <v c='HUN' value='0'/>
+      <v c='IRL' value='0'/>
+      <v c='ITA' value='0'/>
+      <v c='JPN' value='-0.0002'/>
+      <v c='LUX' value='0'/>
+      <v c='NLD' value='0'/>
+      <v c='NZL' value='0.0001'/>
+      <v c='NOR' value='-0.0001'/>
+      <v c='POL' value='0'/>
+      <v c='PRT' value='0'/>
+      <v c='SVK' value='0'/>
+      <v c='KOR' value='0.0015'/>
+      <v c='ESP' value='0'/>
+      <v c='SWE' value='-0.0001'/>
+      <v c='CHE' value='0'/>
+      <v c='GBR' value='0'/>
+      <v c='USA' value='0'/>
    </vs>
    <vs y='2016' r='LMY' i='INV_SEC_BNK'>
       <v c='AUS' value='0.8'/>
@@ -4377,127 +4321,127 @@
       <v c='USA' value='17.8'/>
    </vs>
    <vs y='2016' r='LMY' i='ENV_FFP' lessIsBetter='1'>
-      <v c='AUS' value='54.76'/>
+      <v c='AUS' value='58.22'/>
       <v c='AUT' value='0'/>
       <v c='BEL' value='0'/>
-      <v c='CAN' value='30.67'/>
-      <v c='CZE' value='6.89'/>
-      <v c='DNK' value='6.58'/>
+      <v c='CAN' value='32.59'/>
+      <v c='CZE' value='6.65'/>
+      <v c='DNK' value='6.17'/>
       <v c='FIN' value='0'/>
-      <v c='FRA' value='0'/>
-      <v c='DEU' value='2.27'/>
-      <v c='GRC' value='2.51'/>
+      <v c='FRA' value='0.01'/>
+      <v c='DEU' value='2.29'/>
+      <v c='GRC' value='2.3'/>
       <v c='HUN' value='0.77'/>
       <v c='IRL' value='0'/>
       <v c='ITA' value='0.51'/>
       <v c='JPN' value='0.02'/>
       <v c='LUX' value='0'/>
-      <v c='NLD' value='8.22'/>
-      <v c='NZL' value='2.58'/>
-      <v c='NOR' value='100.54'/>
-      <v c='POL' value='6.07'/>
+      <v c='NLD' value='6.68'/>
+      <v c='NZL' value='2.24'/>
+      <v c='NOR' value='102.14'/>
+      <v c='POL' value='5.81'/>
       <v c='PRT' value='0'/>
       <v c='SVK' value='0'/>
-      <v c='KOR' value='0.07'/>
-      <v c='ESP' value='0.14'/>
+      <v c='KOR' value='0.06'/>
+      <v c='ESP' value='0.13'/>
       <v c='SWE' value='0'/>
       <v c='CHE' value='0'/>
-      <v c='GBR' value='3.63'/>
-      <v c='USA' value='15.15'/>
+      <v c='GBR' value='3.54'/>
+      <v c='USA' value='16.26'/>
    </vs>
    <vs y='2016' r='LMY' i='ENV_CGE'>
-      <v c='AUS' value='7.6'/>
-      <v c='AUT' value='6.8'/>
-      <v c='BEL' value='7.9'/>
-      <v c='CAN' value='5.5'/>
-      <v c='CZE' value='9.8'/>
-      <v c='DNK' value='9.9'/>
-      <v c='FIN' value='11.7'/>
-      <v c='FRA' value='5.5'/>
-      <v c='DEU' value='4.6'/>
-      <v c='GRC' value='7'/>
-      <v c='HUN' value='9.5'/>
-      <v c='IRL' value='8.5'/>
-      <v c='ITA' value='5.4'/>
-      <v c='JPN' value='1.7'/>
-      <v c='LUX' value='6.3'/>
-      <v c='NLD' value='5.1'/>
-      <v c='NZL' value='4.5'/>
-      <v c='NOR' value='6.1'/>
-      <v c='POL' value='8.8'/>
-      <v c='PRT' value='9.9'/>
-      <v c='SVK' value='13.6'/>
-      <v c='KOR' value='3.1'/>
-      <v c='ESP' value='9.6'/>
-      <v c='SWE' value='15.6'/>
-      <v c='CHE' value='4'/>
-      <v c='GBR' value='6.7'/>
-      <v c='USA' value='5.3'/>
+      <v c='AUS' value='5.13'/>
+      <v c='AUT' value='4.57'/>
+      <v c='BEL' value='5.36'/>
+      <v c='CAN' value='3.7'/>
+      <v c='CZE' value='6.64'/>
+      <v c='DNK' value='6.67'/>
+      <v c='FIN' value='7.92'/>
+      <v c='FRA' value='3.7'/>
+      <v c='DEU' value='3.11'/>
+      <v c='GRC' value='4.73'/>
+      <v c='HUN' value='6.4'/>
+      <v c='IRL' value='5.73'/>
+      <v c='ITA' value='3.62'/>
+      <v c='JPN' value='1.15'/>
+      <v c='LUX' value='4.25'/>
+      <v c='NLD' value='3.43'/>
+      <v c='NZL' value='3.07'/>
+      <v c='NOR' value='4.16'/>
+      <v c='POL' value='5.92'/>
+      <v c='PRT' value='6.72'/>
+      <v c='SVK' value='9.19'/>
+      <v c='KOR' value='2.08'/>
+      <v c='ESP' value='6.48'/>
+      <v c='SWE' value='10.52'/>
+      <v c='CHE' value='2.68'/>
+      <v c='GBR' value='4.52'/>
+      <v c='USA' value='3.58'/>
    </vs>
    <vs y='2016' r='LMY' i='ENV_GAS' format='currency'>
-      <v c='AUS' value='0.35'/>
-      <v c='AUT' value='0.89'/>
-      <v c='BEL' value='1.11'/>
+      <v c='AUS' value='0.36'/>
+      <v c='AUT' value='0.85'/>
+      <v c='BEL' value='1.06'/>
       <v c='CAN' value='0.32'/>
-      <v c='CZE' value='1.44'/>
-      <v c='DNK' value='0.94'/>
-      <v c='FIN' value='1.1'/>
-      <v c='FRA' value='1.06'/>
-      <v c='DEU' value='1.2'/>
-      <v c='GRC' value='1.55'/>
-      <v c='HUN' value='1.69'/>
-      <v c='IRL' value='1.13'/>
-      <v c='ITA' value='1.41'/>
+      <v c='CZE' value='1.41'/>
+      <v c='DNK' value='0.9'/>
+      <v c='FIN' value='1.04'/>
+      <v c='FRA' value='1.04'/>
+      <v c='DEU' value='1.12'/>
+      <v c='GRC' value='1.59'/>
+      <v c='HUN' value='1.53'/>
+      <v c='IRL' value='0.99'/>
+      <v c='ITA' value='1.35'/>
       <v c='JPN' value='0.63'/>
-      <v c='LUX' value='0.71'/>
-      <v c='NLD' value='1.31'/>
-      <v c='NZL' value='1.25'/>
-      <v c='NOR' value='0.99'/>
-      <v c='POL' value='1.53'/>
-      <v c='PRT' value='1.49'/>
-      <v c='SVK' value='1.49'/>
-      <v c='KOR' value='1.18'/>
-      <v c='ESP' value='1.07'/>
-      <v c='SWE' value='0.96'/>
-      <v c='CHE' value='0.66'/>
-      <v c='GBR' value='1.2'/>
+      <v c='LUX' value='0.69'/>
+      <v c='NLD' value='1.28'/>
+      <v c='NZL' value='0.64'/>
+      <v c='NOR' value='0.93'/>
+      <v c='POL' value='1.43'/>
+      <v c='PRT' value='1.52'/>
+      <v c='SVK' value='1.5'/>
+      <v c='KOR' value='1.07'/>
+      <v c='ESP' value='1.02'/>
+      <v c='SWE' value='0.91'/>
+      <v c='CHE' value='0.67'/>
+      <v c='GBR' value='1.09'/>
       <v c='USA' value='0.14'/>
    </vs>
    <vs y='2016' r='LMY' i='ENV_USE'>
-      <v c='AUS' value='6.9'/>
-      <v c='AUT' value='7.2'/>
-      <v c='BEL' value='7.2'/>
-      <v c='CAN' value='6.9'/>
-      <v c='CZE' value='7.2'/>
-      <v c='DNK' value='7.2'/>
-      <v c='FIN' value='7.2'/>
-      <v c='FRA' value='7.2'/>
-      <v c='DEU' value='7.2'/>
-      <v c='GRC' value='7.2'/>
-      <v c='HUN' value='7.2'/>
-      <v c='IRL' value='7.2'/>
-      <v c='ITA' value='7.2'/>
-      <v c='JPN' value='7'/>
-      <v c='LUX' value='7.2'/>
-      <v c='NLD' value='7.2'/>
-      <v c='NZL' value='6.9'/>
-      <v c='NOR' value='7'/>
-      <v c='POL' value='7.2'/>
-      <v c='PRT' value='7.2'/>
-      <v c='SVK' value='7.2'/>
-      <v c='KOR' value='4.3'/>
-      <v c='ESP' value='7.2'/>
-      <v c='SWE' value='7.2'/>
-      <v c='CHE' value='7'/>
-      <v c='GBR' value='7.2'/>
-      <v c='USA' value='6.8'/>
+      <v c='AUS' value='4.91'/>
+      <v c='AUT' value='5.32'/>
+      <v c='BEL' value='5.32'/>
+      <v c='CAN' value='4.76'/>
+      <v c='CZE' value='5.32'/>
+      <v c='DNK' value='5.32'/>
+      <v c='FIN' value='5.32'/>
+      <v c='FRA' value='5.32'/>
+      <v c='DEU' value='5.32'/>
+      <v c='GRC' value='5.32'/>
+      <v c='HUN' value='5.32'/>
+      <v c='IRL' value='5.32'/>
+      <v c='ITA' value='5.32'/>
+      <v c='JPN' value='4.94'/>
+      <v c='LUX' value='5.32'/>
+      <v c='NLD' value='5.32'/>
+      <v c='NZL' value='4.79'/>
+      <v c='NOR' value='4.97'/>
+      <v c='POL' value='5.32'/>
+      <v c='PRT' value='5.32'/>
+      <v c='SVK' value='5.32'/>
+      <v c='KOR' value='0.03'/>
+      <v c='ESP' value='5.32'/>
+      <v c='SWE' value='5.32'/>
+      <v c='CHE' value='4.97'/>
+      <v c='GBR' value='5.32'/>
+      <v c='USA' value='4.55'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_KYO'>
+   <vs y='2016' r='LMY' i='ENV_PAR'> <!-- ratification of Paris agreement (changed from Kyoto) -->
       <v c='AUS' value='10'/>
       <v c='AUT' value='10'/>
-      <v c='BEL' value='10'/>
-      <v c='CAN' value='0'/>
-      <v c='CZE' value='10'/>
+      <v c='BEL' value='0'/>
+      <v c='CAN' value='10'/>
+      <v c='CZE' value='0'/>
       <v c='DNK' value='10'/>
       <v c='FIN' value='10'/>
       <v c='FRA' value='10'/>
@@ -4508,46 +4452,46 @@
       <v c='ITA' value='10'/>
       <v c='JPN' value='10'/>
       <v c='LUX' value='10'/>
-      <v c='NLD' value='10'/>
+      <v c='NLD' value='0'/>
       <v c='NZL' value='10'/>
       <v c='NOR' value='10'/>
       <v c='POL' value='10'/>
       <v c='PRT' value='10'/>
       <v c='SVK' value='10'/>
       <v c='KOR' value='10'/>
-      <v c='ESP' value='10'/>
+      <v c='ESP' value='0'/>
       <v c='SWE' value='10'/>
-      <v c='CHE' value='10'/>
+      <v c='CHE' value='0'/>
       <v c='GBR' value='10'/>
-      <v c='USA' value='0'/>
+      <v c='USA' value='10'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_SUB' lessIsBetter='1'>
+   <vs y='2016' r='LMY' i='ENV_SUB' lessIsBetter='1' format='currency'> <!-- added currency format -->
       <v c='AUS' value='0'/>
       <v c='AUT' value='0'/>
-      <v c='BEL' value='0.09'/>
+      <v c='BEL' value='0.1'/>
       <v c='CAN' value='6.83'/>
       <v c='CZE' value='0'/>
-      <v c='DNK' value='0.44'/>
-      <v c='FIN' value='0.76'/>
-      <v c='FRA' value='4.08'/>
-      <v c='DEU' value='0.03'/>
-      <v c='GRC' value='1.63'/>
+      <v c='DNK' value='1.27'/>
+      <v c='FIN' value='0.93'/>
+      <v c='FRA' value='4.64'/>
+      <v c='DEU' value='0.04'/>
+      <v c='GRC' value='1.4'/>
       <v c='HUN' value='0'/>
-      <v c='IRL' value='5.64'/>
-      <v c='ITA' value='2.66'/>
-      <v c='JPN' value='0.02'/>
+      <v c='IRL' value='0.29'/>
+      <v c='ITA' value='7.18'/>
+      <v c='JPN' value='0.24'/>
       <v c='LUX' value='0'/>
       <v c='NLD' value='0.33'/>
       <v c='NZL' value='0'/>
-      <v c='NOR' value='7.87'/>
-      <v c='POL' value='0.46'/>
-      <v c='PRT' value='0.72'/>
+      <v c='NOR' value='15.47'/>
+      <v c='POL' value='0.26'/>
+      <v c='PRT' value='3.55'/>
       <v c='SVK' value='0'/>
-      <v c='KOR' value='0.21'/>
-      <v c='ESP' value='1.55'/>
-      <v c='SWE' value='0.15'/>
+      <v c='KOR' value='1.69'/>
+      <v c='ESP' value='3.31'/>
+      <v c='SWE' value='0.19'/>
       <v c='CHE' value='0'/>
-      <v c='GBR' value='0.05'/>
+      <v c='GBR' value='0.06'/>
       <v c='USA' value='0.01'/>
    </vs>
    <vs y='2016' r='LMY' i='ENV_UNI'>
@@ -4580,33 +4524,33 @@
       <v c='USA' value='10'/>
    </vs>
    <vs y='2016' r='LMY' i='ENV_MEA'>
-      <v c='AUS' value='4.9'/>
-      <v c='AUT' value='5.8'/>
-      <v c='BEL' value='5.9'/>
-      <v c='CAN' value='3.8'/>
-      <v c='CZE' value='5'/>
-      <v c='DNK' value='6.9'/>
-      <v c='FIN' value='5'/>
+      <v c='AUS' value='4.84'/>
+      <v c='AUT' value='5.73'/>
+      <v c='BEL' value='5.53'/>
+      <v c='CAN' value='4.01'/>
+      <v c='CZE' value='5.1'/>
+      <v c='DNK' value='6.58'/>
+      <v c='FIN' value='5.18'/>
       <v c='FRA' value='5.2'/>
-      <v c='DEU' value='6.3'/>
-      <v c='GRC' value='2.1'/>
-      <v c='HUN' value='5.4'/>
-      <v c='IRL' value='2.7'/>
-      <v c='ITA' value='5.8'/>
-      <v c='JPN' value='4.4'/>
-      <v c='LUX' value='2.8'/>
-      <v c='NLD' value='6.1'/>
-      <v c='NZL' value='6'/>
-      <v c='NOR' value='6'/>
-      <v c='POL' value='5.7'/>
-      <v c='PRT' value='4.7'/>
-      <v c='SVK' value='6.3'/>
-      <v c='KOR' value='2.9'/>
-      <v c='ESP' value='6.1'/>
-      <v c='SWE' value='5.1'/>
-      <v c='CHE' value='5.1'/>
-      <v c='GBR' value='5.2'/>
-      <v c='USA' value='3.6'/>
+      <v c='DEU' value='6.06'/>
+      <v c='GRC' value='2.76'/>
+      <v c='HUN' value='5.21'/>
+      <v c='IRL' value='2.99'/>
+      <v c='ITA' value='5.77'/>
+      <v c='JPN' value='4.75'/>
+      <v c='LUX' value='3.04'/>
+      <v c='NLD' value='5.63'/>
+      <v c='NZL' value='5.59'/>
+      <v c='NOR' value='5.62'/>
+      <v c='POL' value='5.62'/>
+      <v c='PRT' value='4.84'/>
+      <v c='SVK' value='6.09'/>
+      <v c='KOR' value='3.29'/>
+      <v c='ESP' value='5.97'/>
+      <v c='SWE' value='5.18'/>
+      <v c='CHE' value='5.28'/>
+      <v c='GBR' value='5.21'/>
+      <v c='USA' value='3.94'/>
    </vs>
    <vs y='2016' r='LMY' i='ENV_TRO' format='currency' lessIsBetter='1'>
       <v c='AUS' value='18.78'/>
@@ -4639,208 +4583,208 @@
    </vs>
    <!-- SECURITY -->
    <vs y='2016' r='LMY' i='SEC_PEA_PHI' format='percentage'>
-      <v c='AUS' value='0.00139'/>
-      <v c='AUT' value='0.00114'/>
-      <v c='BEL' value='0.00072'/>
-      <v c='CAN' value='0.00075'/>
-      <v c='CZE' value='0.00053'/>
-      <v c='DNK' value='0.00135'/>
-      <v c='FIN' value='0.00121'/>
-      <v c='FRA' value='0.00135'/>
-      <v c='DEU' value='0.00062'/>
-      <v c='GRC' value='0.00084'/>
-      <v c='HUN' value='0.0007'/>
-      <v c='IRL' value='0.0012'/>
-      <v c='ITA' value='0.00093'/>
-      <v c='JPN' value='0.00022'/>
-      <v c='LUX' value='0.00041'/>
-      <v c='NLD' value='0.00097'/>
-      <v c='NZL' value='0.00126'/>
-      <v c='NOR' value='0.00147'/>
-      <v c='POL' value='0.00046'/>
-      <v c='PRT' value='0.00088'/>
-      <v c='SVK' value='0.00095'/>
-      <v c='KOR' value='0.00009'/>
-      <v c='ESP' value='0.00049'/>
-      <v c='SWE' value='0.00088'/>
-      <v c='CHE' value='0.00065'/>
-      <v c='GBR' value='0.00133'/>
-      <v c='USA' value='0.00077'/>
+      <v c='AUS' value='0.0008'/>
+      <v c='AUT' value='0.00412'/>
+      <v c='BEL' value='0.00119'/>
+      <v c='CAN' value='0.00092'/>
+      <v c='CZE' value='0.00089'/>
+      <v c='DNK' value='0.00123'/>
+      <v c='FIN' value='0.00242'/>
+      <v c='FRA' value='0.00436'/>
+      <v c='DEU' value='0.00142'/>
+      <v c='GRC' value='0.00186'/>
+      <v c='HUN' value='0.00175'/>
+      <v c='IRL' value='0.00293'/>
+      <v c='ITA' value='0.002'/>
+      <v c='JPN' value='0.00084'/>
+      <v c='LUX' value='0.00108'/>
+      <v c='NLD' value='0.00099'/>
+      <v c='NZL' value='0.00094'/>
+      <v c='NOR' value='0.00106'/>
+      <v c='POL' value='0.00059'/>
+      <v c='PRT' value='0.00143'/>
+      <v c='SVK' value='0.00167'/>
+      <v c='KOR' value='0.00094'/>
+      <v c='ESP' value='0.00199'/>
+      <v c='SWE' value='0.0011'/>
+      <v c='CHE' value='0.00135'/>
+      <v c='GBR' value='0.00118'/>
+      <v c='USA' value='0.00093'/>
    </vs>
    <vs y='2016' r='LMY' i='SEC_PEA_SLP'  format='percentage'>
-      <v c='AUS' value='0.00003'/>
+      <v c='AUS' value='0.00004'/>
       <v c='AUT' value='0'/>
-      <v c='BEL' value='0.00002'/>
+      <v c='BEL' value='0.00003'/>
       <v c='CAN' value='0.00002'/>
       <v c='CZE' value='0'/>
-      <v c='DNK' value='0.0001'/>
+      <v c='DNK' value='0.00008'/>
       <v c='FIN' value='0'/>
-      <v c='FRA' value='0.00018'/>
-      <v c='DEU' value='0.00009'/>
-      <v c='GRC' value='0.00001'/>
+      <v c='FRA' value='0.00019'/>
+      <v c='DEU' value='0.00006'/>
+      <v c='GRC' value='0.00005'/>
       <v c='HUN' value='0'/>
       <v c='IRL' value='0'/>
-      <v c='ITA' value='0.00005'/>
-      <v c='JPN' value='0.00001'/>
+      <v c='ITA' value='0.00002'/>
+      <v c='JPN' value='0.00002'/>
       <v c='LUX' value='0'/>
-      <v c='NLD' value='0.00026'/>
-      <v c='NZL' value='0.00013'/>
-      <v c='NOR' value='0.00006'/>
-      <v c='POL' value='0.00004'/>
+      <v c='NLD' value='0.00013'/>
+      <v c='NZL' value='0'/>
+      <v c='NOR' value='0.00003'/>
+      <v c='POL' value='0'/>
       <v c='PRT' value='0.00003'/>
       <v c='SVK' value='0'/>
-      <v c='KOR' value='0.00003'/>
-      <v c='ESP' value='0.00002'/>
-      <v c='SWE' value='0.00002'/>
+      <v c='KOR' value='0.00001'/>
+      <v c='ESP' value='0.00005'/>
+      <v c='SWE' value='0'/>
       <v c='CHE' value='0'/>
-      <v c='GBR' value='0.00013'/>
-      <v c='USA' value='0.00079'/>
+      <v c='GBR' value='0.00022'/>
+      <v c='USA' value='0.00094'/>
    </vs>
    <vs y='2016' r='LMY' i='SEC_ARM' format='percentage'>
       <v c='AUS' value='0'/>
-      <v c='AUT' value='-0.00113'/>
-      <v c='BEL' value='-0.00326'/>
-      <v c='CAN' value='-0.0002'/>
-      <v c='CZE' value='-0.00438'/>
-      <v c='DNK' value='-0.00062'/>
-      <v c='FIN' value='-0.00022'/>
-      <v c='FRA' value='-0.00853'/>
-      <v c='DEU' value='-0.00445'/>
-      <v c='GRC' value='-0.00032'/>
-      <v c='HUN' value='-0.00018'/>
-      <v c='IRL' value='-0.00001'/>
-      <v c='ITA' value='-0.00184'/>
+      <v c='AUT' value='-0.00333'/>
+      <v c='BEL' value='-0.00371'/>
+      <v c='CAN' value='-0.00017'/>
+      <v c='CZE' value='-0.00718'/>
+      <v c='DNK' value='-0.00077'/>
+      <v c='FIN' value='-0.00041'/>
+      <v c='FRA' value='-0.0084'/>
+      <v c='DEU' value='-0.00563'/>
+      <v c='GRC' value='-0.00029'/>
+      <v c='HUN' value='-0.00017'/>
+      <v c='IRL' value='0'/>
+      <v c='ITA' value='-0.00417'/>
       <v c='JPN' value='0'/>
       <v c='LUX' value='-0.00002'/>
-      <v c='NLD' value='-0.00168'/>
+      <v c='NLD' value='-0.00076'/>
       <v c='NZL' value='0'/>
-      <v c='NOR' value='-0.00049'/>
-      <v c='POL' value='-0.00127'/>
-      <v c='PRT' value='-0.00051'/>
+      <v c='NOR' value='-0.00055'/>
+      <v c='POL' value='-0.00119'/>
+      <v c='PRT' value='-0.0005'/>
       <v c='SVK' value='-0.00079'/>
       <v c='KOR' value='0'/>
-      <v c='ESP' value='-0.00302'/>
-      <v c='SWE' value='-0.01105'/>
-      <v c='CHE' value='-0.00071'/>
-      <v c='GBR' value='-0.00386'/>
+      <v c='ESP' value='-0.00285'/>
+      <v c='SWE' value='-0.01064'/>
+      <v c='CHE' value='-0.00048'/>
+      <v c='GBR' value='-0.00228'/>
       <v c='USA' value='-0.00346'/>
    </vs>
    <vs y='2016' r='LMY' i='SEC_RAT'>
-      <v c='AUS' value='8'/>
-      <v c='AUT' value='8'/>
-      <v c='BEL' value='8'/>
+      <v c='AUS' value='9'/>
+      <v c='AUT' value='9'/>
+      <v c='BEL' value='9'/>
       <v c='CAN' value='8'/>
-      <v c='CZE' value='8'/>
-      <v c='DNK' value='8'/>
-      <v c='FIN' value='7'/>
-      <v c='FRA' value='8'/>
-      <v c='DEU' value='8'/>
-      <v c='GRC' value='7'/>
-      <v c='HUN' value='8'/>
-      <v c='IRL' value='8'/>
-      <v c='ITA' value='8'/>
-      <v c='JPN' value='8'/>
-      <v c='LUX' value='8'/>
-      <v c='NLD' value='8'/>
-      <v c='NZL' value='8'/>
-      <v c='NOR' value='8'/>
-      <v c='POL' value='7'/>
-      <v c='PRT' value='8'/>
-      <v c='SVK' value='8'/>
+      <v c='CZE' value='9'/>
+      <v c='DNK' value='9'/>
+      <v c='FIN' value='8'/>
+      <v c='FRA' value='9'/>
+      <v c='DEU' value='9'/>
+      <v c='GRC' value='8'/>
+      <v c='HUN' value='9'/>
+      <v c='IRL' value='9'/>
+      <v c='ITA' value='9'/>
+      <v c='JPN' value='9'/>
+      <v c='LUX' value='9'/>
+      <v c='NLD' value='9'/>
+      <v c='NZL' value='9'/>
+      <v c='NOR' value='9'/>
+      <v c='POL' value='8'/>
+      <v c='PRT' value='9'/>
+      <v c='SVK' value='9'/>
       <v c='KOR' value='6'/>
-      <v c='ESP' value='8'/>
-      <v c='SWE' value='8'/>
-      <v c='CHE' value='8'/>
-      <v c='GBR' value='8'/>
+      <v c='ESP' value='9'/>
+      <v c='SWE' value='9'/>
+      <v c='CHE' value='9'/>
+      <v c='GBR' value='9'/>
       <v c='USA' value='4'/>
    </vs>
    <!-- Trade -->
    <vs y='2016' r='LMY' i='TRA_PRO'>
-      <v c='AUS' value='6.00402954'/>
-      <v c='AUT' value='5.03181432'/>
-      <v c='BEL' value='5.01707177'/>
-      <v c='CAN' value='5.35519123'/>
-      <v c='CZE' value='4.98866231'/>
-      <v c='DNK' value='4.9773914'/>
-      <v c='FIN' value='5.08391904'/>
-      <v c='FRA' value='4.99768548'/>
-      <v c='DEU' value='5.00108681'/>
-      <v c='GRC' value='4.96781863'/>
-      <v c='HUN' value='4.97584193'/>
-      <v c='IRL' value='4.95586236'/>
-      <v c='ITA' value='5.07651177'/>
-      <v c='JPN' value='2.20072158'/>
-      <v c='LUX' value='4.9867499'/>
-      <v c='NLD' value='5.15830457'/>
-      <v c='NZL' value='5.98840279'/>
-      <v c='NOR' value='3.71578096'/>
-      <v c='POL' value='4.98896947'/>
-      <v c='PRT' value='5.02581905'/>
-      <v c='SVK' value='5.05797546'/>
-      <v c='KOR' value='0.55325726'/>
-      <v c='ESP' value='5.01790114'/>
-      <v c='SWE' value='5.06093082'/>
-      <v c='CHE' value='3.17564326'/>
-      <v c='GBR' value='5.00034077'/>
-      <v c='USA' value='5.92810503'/>
+      <v c='AUS' value='6'/>
+      <v c='AUT' value='5.3'/>
+      <v c='BEL' value='5.2'/>
+      <v c='CAN' value='5.5'/>
+      <v c='CZE' value='5.2'/>
+      <v c='DNK' value='5.2'/>
+      <v c='FIN' value='5.3'/>
+      <v c='FRA' value='5.2'/>
+      <v c='DEU' value='5.2'/>
+      <v c='GRC' value='5.2'/>
+      <v c='HUN' value='5.2'/>
+      <v c='IRL' value='5.2'/>
+      <v c='ITA' value='5.3'/>
+      <v c='JPN' value='2.7'/>
+      <v c='LUX' value='5.2'/>
+      <v c='NLD' value='5.4'/>
+      <v c='NZL' value='6'/>
+      <v c='NOR' value='4'/>
+      <v c='POL' value='5.2'/>
+      <v c='PRT' value='5.3'/>
+      <v c='SVK' value='5.4'/>
+      <v c='KOR' value='1.3'/>
+      <v c='ESP' value='5.2'/>
+      <v c='SWE' value='5.3'/>
+      <v c='CHE' value='3.6'/>
+      <v c='GBR' value='5.2'/>
+      <v c='USA' value='6'/>
    </vs>
    <vs y='2016' r='LMY' i='TRA_IMP'>
-      <v c='AUS' value='4.6'/>
-      <v c='AUT' value='5.7'/>
-      <v c='BEL' value='5.3'/>
-      <v c='CAN' value='4.9'/>
-      <v c='CZE' value='3.5'/>
-      <v c='DNK' value='7.1'/>
-      <v c='FIN' value='6.3'/>
-      <v c='FRA' value='5.4'/>
-      <v c='DEU' value='6.1'/>
-      <v c='GRC' value='3.9'/>
-      <v c='HUN' value='3.7'/>
-      <v c='IRL' value='6.1'/>
-      <v c='ITA' value='4.4'/>
-      <v c='JPN' value='5.1'/>
-      <v c='LUX' value='5.4'/>
-      <v c='NLD' value='6.2'/>
-      <v c='NZL' value='5.3'/>
-      <v c='NOR' value='5.5'/>
-      <v c='POL' value='4.9'/>
-      <v c='PRT' value='5.2'/>
-      <v c='SVK' value='3.2'/>
-      <v c='KOR' value='6.8'/>
-      <v c='ESP' value='5.2'/>
-      <v c='SWE' value='6.9'/>
-      <v c='CHE' value='5.2'/>
-      <v c='GBR' value='6.1'/>
-      <v c='USA' value='5.5'/>
+      <v c='AUS' value='4.4'/>
+      <v c='AUT' value='5.2'/>
+      <v c='BEL' value='4.9'/>
+      <v c='CAN' value='4.6'/>
+      <v c='CZE' value='3.9'/>
+      <v c='DNK' value='6.2'/>
+      <v c='FIN' value='5.7'/>
+      <v c='FRA' value='5.1'/>
+      <v c='DEU' value='5.5'/>
+      <v c='GRC' value='4.1'/>
+      <v c='HUN' value='4.1'/>
+      <v c='IRL' value='5.6'/>
+      <v c='ITA' value='4.6'/>
+      <v c='JPN' value='4.9'/>
+      <v c='LUX' value='4.9'/>
+      <v c='NLD' value='5.6'/>
+      <v c='NZL' value='5'/>
+      <v c='NOR' value='5.1'/>
+      <v c='POL' value='4.8'/>
+      <v c='PRT' value='5'/>
+      <v c='SVK' value='3.6'/>
+      <v c='KOR' value='6.1'/>
+      <v c='ESP' value='4.8'/>
+      <v c='SWE' value='6.1'/>
+      <v c='CHE' value='4.8'/>
+      <v c='GBR' value='5.5'/>
+      <v c='USA' value='5'/>
    </vs>
    <vs y='2016' r='LMY' i='TRA_SRV'>
-      <v c='AUS' value='4.5'/>
-      <v c='AUT' value='2.8'/>
-      <v c='BEL' value='4.5'/>
-      <v c='CAN' value='3.3'/>
-      <v c='CZE' value='4.8'/>
-      <v c='DNK' value='5.2'/>
-      <v c='FIN' value='3.3'/>
-      <v c='FRA' value='5.4'/>
-      <v c='DEU' value='4.9'/>
-      <v c='GRC' value='3'/>
-      <v c='HUN' value='5.3'/>
-      <v c='IRL' value='4.8'/>
-      <v c='ITA' value='3.4'/>
-      <v c='JPN' value='3.2'/>
-      <v c='LUX' value='5.7'/>
-      <v c='NLD' value='7'/>
-      <v c='NZL' value='4.4'/>
-      <v c='NOR' value='3.1'/>
-      <v c='POL' value='2.3'/>
-      <v c='PRT' value='4'/>
-      <v c='SVK' value='3.8'/>
-      <v c='KOR' value='3.6'/>
+      <v c='AUS' value='5.8'/>
+      <v c='AUT' value='3.9'/>
+      <v c='BEL' value='5.9'/>
+      <v c='CAN' value='4.3'/>
+      <v c='CZE' value='5.4'/>
+      <v c='DNK' value='5.9'/>
+      <v c='FIN' value='4.1'/>
+      <v c='FRA' value='5.6'/>
+      <v c='DEU' value='5.2'/>
+      <v c='GRC' value='4.6'/>
+      <v c='HUN' value='6.2'/>
+      <v c='IRL' value='6'/>
+      <v c='ITA' value='4.3'/>
+      <v c='JPN' value='6.4'/>
+      <v c='LUX' value='4.8'/>
+      <v c='NLD' value='6.9'/>
+      <v c='NZL' value='5.9'/>
+      <v c='NOR' value='3.8'/>
+      <v c='POL' value='3'/>
+      <v c='PRT' value='5.2'/>
+      <v c='SVK' value='4.5'/>
+      <v c='KOR' value='4.5'/>
       <v c='ESP' value='4.6'/>
-      <v c='SWE' value='4.6'/>
-      <v c='CHE' value='2.1'/>
-      <v c='GBR' value='5.8'/>
-      <v c='USA' value='3.7'/>
+      <v c='SWE' value='5.4'/>
+      <v c='CHE' value='2.7'/>
+      <v c='GBR' value='5.7'/>
+      <v c='USA' value='4.4'/>
    </vs>
    <!-- Migration -->
    <vs y='2016' r='LMY' i='MIG_CON'>
@@ -4902,121 +4846,122 @@
       <v c='USA' value='62'/>
    </vs>
    <vs y='2016' r='LMY' i='MIG_BDN_INM'>
-      <v c='AUS' value='8.9'/>
-      <v c='AUT' value='6'/>
-      <v c='BEL' value='3.4'/>
-      <v c='CAN' value='7.6'/>
-      <v c='CZE' value='1.4'/>
-      <v c='DNK' value='3.7'/>
-      <v c='FIN' value='2.3'/>
-      <v c='FRA' value='3.1'/>
+      <v c='AUS' value='7'/>
+      <v c='AUT' value='5.8'/>
+      <v c='BEL' value='4.7'/>
+      <v c='CAN' value='6.4'/>
+      <v c='CZE' value='3.9'/>
+      <v c='DNK' value='4.8'/>
+      <v c='FIN' value='4.3'/>
+      <v c='FRA' value='4.6'/>
       <v c='DEU' value='5.6'/>
-      <v c='GRC' value='2.2'/>
-      <v c='HUN' value='0.8'/>
-      <v c='IRL' value='3.7'/>
-      <v c='ITA' value='3.2'/>
-      <v c='JPN' value='2.2'/>
-      <v c='LUX' value='6.4'/>
-      <v c='NLD' value='3'/>
-      <v c='NZL' value='8.9'/>
-      <v c='NOR' value='7.5'/>
-      <v c='POL' value='1'/>
-      <v c='PRT' value='2.3'/>
-      <v c='SVK' value='0.2'/>
-      <v c='KOR' value='7.5'/>
-      <v c='ESP' value='4.6'/>
-      <v c='SWE' value='5.5'/>
-      <v c='CHE' value='4.5'/>
-      <v c='GBR' value='2.5'/>
-      <v c='USA' value='3.3'/>
+      <v c='GRC' value='4.2'/>
+      <v c='HUN' value='3.6'/>
+      <v c='IRL' value='4.8'/>
+      <v c='ITA' value='4.6'/>
+      <v c='JPN' value='4.2'/>
+      <v c='LUX' value='5.9'/>
+      <v c='NLD' value='4.5'/>
+      <v c='NZL' value='7'/>
+      <v c='NOR' value='6.4'/>
+      <v c='POL' value='3.7'/>
+      <v c='PRT' value='4.2'/>
+      <v c='SVK' value='3.4'/>
+      <v c='KOR' value='6.4'/>
+      <v c='ESP' value='5.2'/>
+      <v c='SWE' value='5.6'/>
+      <v c='CHE' value='5.2'/>
+      <v c='GBR' value='4.3'/>
+      <v c='USA' value='4.6'/>
    </vs>
    <vs y='2016' r='LMY' i='MIG_BDN_SHA'>
       <v c='AUS' value='6.6'/>
-      <v c='AUT' value='4.4'/>
+      <v c='AUT' value='4.5'/>
       <v c='BEL' value='4.5'/>
-      <v c='CAN' value='5.9'/>
+      <v c='CAN' value='5.8'/>
       <v c='CZE' value='4'/>
-      <v c='DNK' value='4.2'/>
+      <v c='DNK' value='4.1'/>
       <v c='FIN' value='5.1'/>
       <v c='FRA' value='6'/>
-      <v c='DEU' value='5.1'/>
+      <v c='DEU' value='5.3'/>
       <v c='GRC' value='4.5'/>
-      <v c='HUN' value='4.1'/>
-      <v c='IRL' value='4.9'/>
+      <v c='HUN' value='4.3'/>
+      <v c='IRL' value='4.8'/>
       <v c='ITA' value='5.2'/>
       <v c='JPN' value='5.6'/>
       <v c='LUX' value='4.7'/>
       <v c='NLD' value='4.1'/>
-      <v c='NZL' value='7.1'/>
+      <v c='NZL' value='7'/>
       <v c='NOR' value='4.4'/>
-      <v c='POL' value='4.7'/>
-      <v c='PRT' value='5.5'/>
+      <v c='POL' value='4.8'/>
+      <v c='PRT' value='5.4'/>
       <v c='SVK' value='3.6'/>
       <v c='KOR' value='5.7'/>
       <v c='ESP' value='5.2'/>
-      <v c='SWE' value='4.8'/>
+      <v c='SWE' value='4.7'/>
       <v c='CHE' value='4.6'/>
       <v c='GBR' value='6'/>
       <v c='USA' value='5.2'/>
    </vs>
+
    <vs y='2016' r='LMY' i='MIG_BDN_ASY'>
-      <v c='AUS' value='5.1'/>
-      <v c='AUT' value='5.7'/>
-      <v c='BEL' value='5.5'/>
-      <v c='CAN' value='6.3'/>
-      <v c='CZE' value='5.4'/>
-      <v c='DNK' value='5.6'/>
-      <v c='FIN' value='5.8'/>
+      <v c='AUS' value='4.3'/>
+      <v c='AUT' value='5.8'/>
+      <v c='BEL' value='5.3'/>
+      <v c='CAN' value='5.2'/>
+      <v c='CZE' value='4.9'/>
+      <v c='DNK' value='5.7'/>
+      <v c='FIN' value='5.1'/>
       <v c='FRA' value='4.8'/>
-      <v c='DEU' value='4.9'/>
-      <v c='GRC' value='4.6'/>
+      <v c='DEU' value='5'/>
+      <v c='GRC' value='5'/>
       <v c='HUN' value='4.6'/>
       <v c='IRL' value='4.3'/>
-      <v c='ITA' value='5.7'/>
-      <v c='JPN' value='3.9'/>
-      <v c='LUX' value='5.3'/>
-      <v c='NLD' value='6.2'/>
-      <v c='NZL' value='4.6'/>
-      <v c='NOR' value='6.5'/>
-      <v c='POL' value='4.1'/>
-      <v c='PRT' value='4.6'/>
-      <v c='SVK' value='4.1'/>
-      <v c='KOR' value='3.9'/>
-      <v c='ESP' value='4.2'/>
-      <v c='SWE' value='7.9'/>
-      <v c='CHE' value='6'/>
-      <v c='GBR' value='4.9'/>
-      <v c='USA' value='4.8'/>
+      <v c='ITA' value='5.1'/>
+      <v c='JPN' value='3.8'/>
+      <v c='LUX' value='5.2'/>
+      <v c='NLD' value='6.4'/>
+      <v c='NZL' value='4.7'/>
+      <v c='NOR' value='5.5'/>
+      <v c='POL' value='4'/>
+      <v c='PRT' value='4.5'/>
+      <v c='SVK' value='4.8'/>
+      <v c='KOR' value='4.3'/>
+      <v c='ESP' value='4.5'/>
+      <v c='SWE' value='7.1'/>
+      <v c='CHE' value='6.1'/>
+      <v c='GBR' value='4.7'/>
+      <v c='USA' value='4.3'/>
    </vs>
    <vs y='2016' r='LMY' i='MIG_BDN_REF'>
-      <v c='AUS' value='1.7'/>
-      <v c='AUT' value='8.2'/>
-      <v c='BEL' value='5.8'/>
-      <v c='CAN' value='6.1'/>
-      <v c='CZE' value='0.4'/>
-      <v c='DNK' value='3.1'/>
-      <v c='FIN' value='1.7'/>
-      <v c='FRA' value='9.9'/>
-      <v c='DEU' value='8'/>
-      <v c='GRC' value='0.4'/>
-      <v c='HUN' value='0.4'/>
-      <v c='IRL' value='1.3'/>
-      <v c='ITA' value='4.2'/>
-      <v c='JPN' value='0.1'/>
-      <v c='LUX' value='2.7'/>
-      <v c='NLD' value='13.9'/>
-      <v c='NZL' value='0.3'/>
-      <v c='NOR' value='7.1'/>
-      <v c='POL' value='1.2'/>
-      <v c='PRT' value='0.1'/>
-      <v c='SVK' value='0.2'/>
-      <v c='KOR' value='0'/>
-      <v c='ESP' value='0.2'/>
-      <v c='SWE' value='11'/>
-      <v c='CHE' value='10.8'/>
-      <v c='GBR' value='6.5'/>
-      <v c='USA' value='5'/>
-   </vs>
+      <v c='AUS' value='4.6'/>
+      <v c='AUT' value='5.7'/>
+      <v c='BEL' value='5.2'/>
+      <v c='CAN' value='5.3'/>
+      <v c='CZE' value='4.3'/>
+      <v c='DNK' value='4.9'/>
+      <v c='FIN' value='4.5'/>
+      <v c='FRA' value='6.1'/>
+      <v c='DEU' value='5.8'/>
+      <v c='GRC' value='4.5'/>
+      <v c='HUN' value='4.3'/>
+      <v c='IRL' value='4.5'/>
+      <v c='ITA' value='5.1'/>
+      <v c='JPN' value='4.3'/>
+      <v c='LUX' value='4.7'/>
+      <v c='NLD' value='6.5'/>
+      <v c='NZL' value='4.3'/>
+      <v c='NOR' value='5.4'/>
+      <v c='POL' value='4.5'/>
+      <v c='PRT' value='4.3'/>
+      <v c='SVK' value='4.3'/>
+      <v c='KOR' value='4.3'/>
+      <v c='ESP' value='4.3'/>
+      <v c='SWE' value='6.5'/>
+      <v c='CHE' value='6.2'/>
+      <v c='GBR' value='5.3'/>
+      <v c='USA' value='5.3'/>
+ </vs>
    <!-- main components -->
    <vs y='2016' r='LMY' i='CDI_AID'>
   <v c='AUS' score='4.70711759' weighted='0.585374834'/>
