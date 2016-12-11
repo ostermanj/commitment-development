@@ -84,9 +84,10 @@
     background-color: #41B976;
     margin: auto;
     position: relative;
-    border-radius: 7px;
+    border-radius: 9px;
     cursor: pointer;
     bottom: -3px;
+    border: 1px solid rgba(0,0,0,0.2);
 }
 .unstack-slider.off {
      background-color: #9E142E;
@@ -480,7 +481,7 @@ span.os, span.ns {
 
 
 .cdi-carousel {
-  max-width: 800px;
+  max-width: 732px;
   width: 100%;
   position: absolute;
   transition: opacity .25s linear;
@@ -490,7 +491,7 @@ span.os, span.ns {
   width: 98%;
   height: 30px;
   position: relative;
-  max-width: 800px;
+  max-width: 718px;
   padding: 0 1%;
 }
 
@@ -500,7 +501,7 @@ span.os, span.ns {
     padding-left: 0;
     position: relative;
     height: 10px;
-    width: 85px;
+    width: 102px;
     top: 10px;
 }
 
@@ -1661,16 +1662,16 @@ a.load-trends.fading {
   transform:rotate(45deg);
 }
 /* SORTING COLUMNS STYLE*/
-a.sorting,  a.expand-row {
+a.sorting,  a.expand-row, #indicator-explanation a, .cdi-modal-content a {
     color: #006b77 !important;
     text-decoration: none !important;
 }
 
-a.sorting, a.expand-row {
+a.sorting,  a.expand-row, #indicator-explanation a, .cdi-modal-content a {
     border-bottom: 2px solid #B3D3D6;
 }
 
-a.sorting:hover, a.sorting:focus, a.expand-row:hover, a.expand-row:focus {
+a.sorting:hover, a.sorting:focus, a.expand-row:hover, a.expand-row:focus, #indicator-explanation a:hover, .cdi-modal-content a:hover, #indicator-explanation a:focus, .cdi-modal-content a:focus {
     border-bottom-color: #006D75;
 }
 
@@ -1682,16 +1683,7 @@ a.sorting:hover, a.sorting:focus, a.expand-row:hover, a.expand-row:focus {
     content: " ";
         margin-left:2px;
     border-bottom: 2px solid #f3f3f3;
-    /*width: 7px;
-    height: 7px;
-    border-left: 2px solid #006b77;
-    border-bottom: 2px solid #006b77;
-    display: inline-block;
--ms-transform: rotate(-45deg) translate(-1px,-5px);
-    -webkit-transform: rotate(-45deg) translate(-1px,-5px);    
-transform: rotate(-45deg) translate(-1px,-5px);
-    margin-left: 10px;
-    margin-top: -4px;*/
+    
 }
 .sorting.asc:after {
 	content: "↑";
