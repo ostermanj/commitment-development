@@ -153,17 +153,6 @@ function cgd_cdi_country_page($country_code) {
   );
   drupal_add_html_head($fbDescription, 'facebook_meta_description');
 
-  /* TEMPORARY HEAD TAG TO HIDE FROM INDEXERS */
-
-  $robotNoFollow = array(
-      '#tag' => 'meta',
-      '#attributes' => array(
-         'name' => 'robots',
-         'content' => 'noindex',
-      ),
-    )
-
-  drupal_add_html_head($robotNoFollow, 'robot_no_follow');
 
   $fbImage = array(
     '#tag' => 'meta',
