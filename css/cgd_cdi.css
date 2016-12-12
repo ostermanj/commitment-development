@@ -1339,6 +1339,7 @@ canvas {
 
 .cdi-link {
   text-align: center;
+
 }
 
 /*.trend .year-results {
@@ -1360,6 +1361,10 @@ canvas {
     
     
     
+}
+
+.cdi-link a {
+    color: #296976 !important;
 }
 
 .next-button {

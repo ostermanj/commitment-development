@@ -51,6 +51,9 @@
         <?php
     } ?>
 <div class="clearfix"></div>
+<div class="cdi-link">
+    <?php print l(t('Go back to main CDI'), 'commitment-development-index-2016');?>
+</div>
 
 </div>
 <?php
