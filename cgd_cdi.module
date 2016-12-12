@@ -64,7 +64,7 @@ function cgd_cdi_index_page() {
     '#tag' => 'meta',
     '#attributes' => array(
        'property' => 'og:description',
-       'content' => 'The Commitment to Development Index ranks 27 of the richest countries on their dedication to policies that benefit poorer nations. Denmark takes first in 2016. The UK is tied for sixth while the United States is 21st. Japan takes last of 27.',
+       'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark, Sweden, and Finland take first place in a three-way tie. The UK is tied for sixth while the United States is tied for 20th.',
     ),
   );
   drupal_add_html_head($fbDescription, 'facebook_meta_description');
@@ -73,16 +73,25 @@ function cgd_cdi_index_page() {
     '#tag' => 'meta',
     '#attributes' => array(
        'property' => 'og:image',
-       'content' => 'http://www.cgdev.org/sites/default/files/cdi-image-share.jpeg',
+       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share.png',
     ),
   );
   drupal_add_html_head($fbImage, 'facebook_meta_image');
+
+  $twitterCard = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+       'name' => 'twitter:card',
+       'content' => 'summary_large_image',
+    ),
+  );
+  drupal_add_html_head($twitterCard, 'twitter_meta_card');
   
   $twitterImage = array(
     '#tag' => 'meta',
     '#attributes' => array(
        'name' => 'twitter:image',
-       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016.jpg',
+       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share.png',
     ),
   );
   drupal_add_html_head($twitterImage, 'twitter_meta_image');
@@ -102,7 +111,7 @@ function cgd_cdi_index_page() {
     '#tag' => 'meta',
     '#attributes' => array(
        'name' => 'twitter:description',
-       'content' => 'The Commitment to Development Index ranks 27 of the richest countries on their dedication to policies that benefit poorer nations. Denmark takes first in 2016. The UK is tied for sixth while the United States is 21st. Japan takes last of 27.',
+       'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark, Sweden, and Finland take first place in a three-way tie. The UK is tied for sixth while the United States is tied for 20th.',
     ),
   );
   drupal_add_html_head($twitterDescription, 'twitter_meta_description');
@@ -158,16 +167,25 @@ function cgd_cdi_country_page($country_code) {
     '#tag' => 'meta',
     '#attributes' => array(
        'property' => 'og:image',
-       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2015.jpg',
+       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share.png',
     ),
   );
   drupal_add_html_head($fbImage, 'facebook_meta_image');
+
+   $twitterCard = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+       'name' => 'twitter:card',
+       'content' => 'summary_large_image',
+    ),
+  );
+  drupal_add_html_head($twitterCard, 'twitter_meta_card');
   
    $twitterImage = array(
     '#tag' => 'meta',
     '#attributes' => array(
        'name' => 'twitter:image',
-       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2015.jpg',
+       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share.png',
     ),
   );
   drupal_add_html_head($twitterImage, 'twitter_meta_image');

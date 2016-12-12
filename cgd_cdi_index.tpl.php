@@ -4,7 +4,7 @@
         <h1>The Commitment to Development Index</h1>
         <div id="cdi-carousel-wrapper">
           
-            <p id="cdi-carousel-0" class="cdi-carousel" style="position: relative;">The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect people living in poorer nations.</p>
+            <p id="cdi-carousel-0" class="cdi-carousel" style="position: relative;">The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations.</p>
             <p id="cdi-carousel-1" class="cdi-carousel" style="visibility: hidden; opacity:0">The CDI adjusts for size and economic weight to measure countries according to their potential to help. </p>
             <p id="cdi-carousel-2" class="cdi-carousel" style="visibility: hidden; opacity:0">Denmark, Sweden, and Finland take first place in a three-way tie. Portugal and France complete the top five.</p>
             <p id="cdi-carousel-3" class="cdi-carousel" style="visibility: hidden; opacity:0">The United Kingdom is tied for sixth place with strengths in <em>aid</em> and <em>trade</em>. The United States is tied for 20th place, with low scores on <em>environment</em> and <em>security</em>.</p>

@@ -715,7 +715,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             }
          }
 
-        $('.slider').addClass('hide-slider');
+        $('.slider, .reset-weight, .weights-instruct').addClass('hide-slider');
             window.setTimeout(function(){
                 $('.slider, .reset-weight').css('display', 'none');
         }, 500);
@@ -732,7 +732,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
          });
         $('#home-cdi').removeClass('unstacked');
         setTimeout(function(){
-            $('.slider').removeClass('hide-slider');
+            $('.slider, .reset-weight, .weights-instruct').removeClass('hide-slider');
             $('.weight-toggle, .reset-weight').removeClass('weighted-override');
       },200);
     },
@@ -923,47 +923,48 @@ new code : adds object 'original' to main indicators and copies data to it so th
      */
     loadCDI: function(a, userWeighted, scroll) {
         var introIndicator = document.getElementById('carousel-indicator'),
-            intros = document.querySelectorAll('.cdi-carousel'),
-            introIndex = 0;
-            
-
-        function nextIntro(){
-              console.log('next intro');
-              console.log(introIndex);
-              $(intros).eq(introIndex).css('opacity','0');
-              $(indicatorItems).eq(introIndex).removeClass('active-intro');
-              introIndex = introIndex + 1 < intros.length ? introIndex + 1 : 0;
-              $(intros).eq(introIndex).css({'visibility':'visible','opacity': '1'});
-              $(indicatorItems).eq(introIndex).addClass('active-intro');
-
-            };
-        
-       
-            introHeight = 0;
-
-            for (i = 0; i < intros.length; i++){
-              /*
-               *
-               * the various intro text <p>s are of various heights. all but the first are positioned absolute when loaded,
-               * so containing div only takes the height of the one positioned relative. this code finds the height of the 
-               * tallest intro <p> and sets the containing <div>s height to match
-              */
-              introHeight = intros[i].offsetHeight > introHeight ? intros[i].offsetHeight : introHeight; 
-              
-              var indicItem = document.createElement('div');
-              indicItem.className = 'carousel-indicator-item';
-              introIndicator.appendChild(indicItem);
-            }
-            var indicatorItems = document.querySelectorAll('.carousel-indicator-item');
-            document.getElementById('cdi-carousel-wrapper').style.height = introHeight + 'px';
-            intros[0].style.position = 'absolute';  
-            indicatorItems[0].className += ' active-intro';
-            var introNext = document.createElement('button');
-            introNext.id = 'intro-next';
-            introNext.innerText = 'next';
-            introNext.onclick = nextIntro;
-            var introWrapper = document.querySelector('#carousel-indicator-wrapper');
-            document.querySelector('#carousel-indicator-wrapper').appendChild(introNext);
+                intros = document.querySelectorAll('.cdi-carousel'),
+                introIndex = 0;
+                      
+          if (introIndicator) {
+                  function nextIntro(){
+                        console.log('next intro');
+                        console.log(introIndex);
+                        $(intros).eq(introIndex).css('opacity','0');
+                        $(indicatorItems).eq(introIndex).removeClass('active-intro');
+                        introIndex = introIndex + 1 < intros.length ? introIndex + 1 : 0;
+                        $(intros).eq(introIndex).css({'visibility':'visible','opacity': '1'});
+                        $(indicatorItems).eq(introIndex).addClass('active-intro');
+          
+                      };
+                  
+                 
+                      introHeight = 0;
+          
+                      for (i = 0; i < intros.length; i++){
+                        /*
+                         *
+                         * the various intro text <p>s are of various heights. all but the first are positioned absolute when loaded,
+                         * so containing div only takes the height of the one positioned relative. this code finds the height of the 
+                         * tallest intro <p> and sets the containing <div>s height to match
+                        */
+                        introHeight = intros[i].offsetHeight > introHeight ? intros[i].offsetHeight : introHeight; 
+                        
+                        var indicItem = document.createElement('div');
+                        indicItem.className = 'carousel-indicator-item';
+                        introIndicator.appendChild(indicItem);
+                      }
+                      var indicatorItems = document.querySelectorAll('.carousel-indicator-item');
+                      document.getElementById('cdi-carousel-wrapper').style.height = introHeight + 'px';
+                      intros[0].style.position = 'absolute';  
+                      indicatorItems[0].className += ' active-intro';
+                      var introNext = document.createElement('button');
+                      introNext.id = 'intro-next';
+                      introNext.innerText = 'next';
+                      introNext.onclick = nextIntro;
+                      var introWrapper = document.querySelector('#carousel-indicator-wrapper');
+                      document.querySelector('#carousel-indicator-wrapper').appendChild(introNext);
+                    }
 
    
         var cdiModel = new cdiApp.CDI.Model({
@@ -1152,7 +1153,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     getTemplate: function(templateName) {
         var template = '';
         $.ajax({
-            url: Drupal.settings.basePath + Drupal.settings.cgd_cdi.pathToModule + '/templates/' + templateName + '.tmpl.html',
+            url: Drupal.settings.basePath + Drupal.settings.temp_cgd_cdi.pathToModule + '/templates/' + templateName + '.tmpl.html',
             method: 'GET',
             async: false
         }).done(function(data) {
@@ -1293,9 +1294,11 @@ cdiApp.CDI.View = Backbone.View.extend({
         this.groupedValues = this.model.groupedValues;
         this.propName = "";    
         this.sortAsc = true;
-        FB.init({
-          appId: '445215188878009'
-        });
+        if (typeof FB !== 'undefined'){
+                FB.init({
+                  appId: '445215188878009'
+                });
+              }
         
     },
     sortArray: function(sortAsc,field){ //this successfully reordered the array but it's in the wrong place: after the ranking's been done
@@ -1413,15 +1416,15 @@ console.log(this.groupedValues);
         event.stopImmediatePropagation();
         var countryData = this.model.originalRanksObj[$(event.target).attr('data-c')];
         var fbCountry = countryData.country;
-        var fbRank = countryData.rank_label.replace('*',' tie');
+        var fbRank = countryData.rank_label.replace('*',' (tie)');
         FB.ui(
          {
             method: 'feed',
             name: fbCountry + ' ranks ' + fbRank + ' out of 27 on the 2016 Commitment to Development Index',
             caption: 'The Commitment to Development Index: Ranking the Rich',
-            description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit the 5.5 billion people living in poorer nations.',
+            description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
             link: 'http://www.cgdev.org' + location.pathname,
-            picture: 'http://www.cgdev.org/sites/default/files/CDI2015/cdi-2015-fb-crop.jpg'
+            picture: 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share.png'
         }); 
         $(event.currentTarget).blur(); //remove focus after click   
     },

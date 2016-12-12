@@ -112,7 +112,7 @@ $unstack-td {
 }
 
 .hide-slider {
-    opacity: 0;
+    opacity: 0 !important;
 }
 
 .slider-center {
@@ -242,7 +242,7 @@ left: 33px;
     font-size: 12px;
     bottom: 4px;
     width: 100%;
-    opacity: 1;
+  /*  opacity: 1;*/
     transition: opacity 0.5s linear;
     
 }
@@ -268,7 +268,7 @@ left: 33px;
 
 
 .weighted-component .reset-weight {
-   opacity:1;
+  opacity:1;
  
 }
 
@@ -1794,7 +1794,7 @@ span.country-label {
 
         .reset-weight {
 
-            width: 80px;
+            width: 85px;
             text-align: right;
             right: 10px;
             left:auto;
