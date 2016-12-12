@@ -309,6 +309,7 @@ var cdiApp = Backbone.View.extend({
     initialize: function(options) {
         Backbone.pubSub.on('userInput', this.userInput, this); //subscribe this view to 'selectorStopped' event published in cdiApp.mainNav.view (home.cdi.js)
         Backbone.pubSub.on('adjustCDI', function(params){this.adjustCDI(params);}, this);
+        Backbone.pubSub.on('wasUnstacked', this.unstackBars, this);
 
         var that = this;
         $('#html5_wrapper').css('display','block');
@@ -940,14 +941,14 @@ new code : adds object 'original' to main indicators and copies data to it so th
        
             introHeight = 0;
 
-            for (intro of intros){
+            for (i = 0; i < intros.length; i++){
               /*
                *
                * the various intro text <p>s are of various heights. all but the first are positioned absolute when loaded,
                * so containing div only takes the height of the one positioned relative. this code finds the height of the 
                * tallest intro <p> and sets the containing <div>s height to match
               */
-              introHeight = intro.offsetHeight > introHeight ? intro.offsetHeight : introHeight; 
+              introHeight = intros[i].offsetHeight > introHeight ? intros[i].offsetHeight : introHeight; 
               
               var indicItem = document.createElement('div');
               indicItem.className = 'carousel-indicator-item';
@@ -1547,8 +1548,14 @@ console.log(this.groupedValues);
     this.sortAsc = !this.sortAsc;
 
     this.render(this.sortAsc, field);
+
+    if ($('#unstack-td .unstack-slider').hasClass('off')){
+      Backbone.pubSub.trigger('wasUnstacked');
+    }
         
     }
+
+
 
 });
 
@@ -2010,7 +2017,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
         
-                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a href="/cdi-2016/country/SWE" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a href="/cdi-2016/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
  
  
                 that.$el.append(content);

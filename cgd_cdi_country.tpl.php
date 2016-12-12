@@ -16,7 +16,7 @@
             }
         ?>
         <div class="country-title" style="<?php print $style;?>">
-            <h2><?php print t($node->title);?></h2>
+            <h2><?php print t($node->title);?>—Commitment to Development Index</h2>
         </div>
         <?php } ?>
         <div class="country-wrapper">
@@ -25,9 +25,10 @@
                     $image_url = file_create_url($node->field_hero_image['und'][0]['uri']);
                 ?>
                 <div class="country-title" style="<?php print $style;?>">
-                    <h2><?php print t($node->title);?></h2>
+                    <h2><?php print t($node->title);?>—Commitment to Development Index</h2>
                 </div>
                 <?php } ?>
+                <p>The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect people living in poorer nations. The CDI adjusts for size and economic weight to measure countries according to their potential to help. This is the country report for <?php print t($node->title);?>. For results of all countries, visit <a href="/commitment-development-index-2016">the main CDI page</a>.</p>
                 <?php foreach ($indicators as $indicator => $field) { ?>
                 <div class="indicator <?php print $indicator;?>">
                     <div class="indicator-title">
@@ -39,7 +40,7 @@
                         <div class="line-chart"></div>
                     </div>
                     <div class="right-side">
-                        <div class="average">AVERAGE: <span class="avg"></span></div>
+                        <div class="average">SCORE: <span class="avg"></span></div>
                         <div class="bar-charts"></div>
                     </div>
                     <div class="clearfix"></div>
@@ -50,12 +51,7 @@
         <?php
     } ?>
 <div class="clearfix"></div>
-<div class="cdi-link">
-    <?php print l(t('Go back to overall'), 'commitment-development-index-2016');?>
-</div>
-<div class="more-info">
-    <?php print l(t('Need more info'), 'commitment-development-index-2016');?>
-</div>
+
 </div>
 <?php
     $node = $countries[0];
