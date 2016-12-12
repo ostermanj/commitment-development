@@ -926,6 +926,12 @@ td.spacer {
   margin: 0 auto;
   position: relative;
 }
+
+.right-side a.indicator-info {
+        bottom: 10px;
+    right: 5px;
+}
+
 #new_cdi table tr.master-row a.show-trend.active {
   background: none;
 }
@@ -1339,7 +1345,7 @@ canvas {
 
 .cdi-link {
   text-align: center;
-
+margin-bottom: 20px;
 }
 
 /*.trend .year-results {
@@ -1442,7 +1448,8 @@ a.load-trends.fading {
 }
 .indicator-label.category {
   text-transform: uppercase;
-    margin-bottom: -20px;
+  margin: 35px 0 10px;
+
 }
 .indicator-label.category.CDI,
 .line-chart-header.CDI {
@@ -1539,9 +1546,20 @@ a.load-trends.fading {
 .country-details .right-side {
   box-sizing: border-box;
   width: 50%;
-  padding:10px;
+  
   float: left;
 }
+
+.country-details .left-side {
+
+    padding: 10px 20px 10px 0;
+}
+
+.country-details .right-side {
+
+    padding: 10px 0px 10px 20px;
+}
+
 .comparison .country-details .left-side,
 .comparison .country-details .right-side {
   width: 100%;
@@ -1667,16 +1685,16 @@ a.load-trends.fading {
   transform:rotate(45deg);
 }
 /* SORTING COLUMNS STYLE*/
-a.sorting,  a.expand-row, #indicator-explanation a, .cdi-modal-content a {
+a.sorting,  a.expand-row, #indicator-explanation a, .cdi-modal-content a, .country-details p a {
     color: #006b77 !important;
     text-decoration: none !important;
 }
 
-a.sorting,  a.expand-row, #indicator-explanation a, .cdi-modal-content a {
+a.sorting,  a.expand-row, #indicator-explanation a, .cdi-modal-content a, .country-details p a {
     border-bottom: 2px solid #B3D3D6;
 }
 
-a.sorting:hover, a.sorting:focus, a.expand-row:hover, a.expand-row:focus, #indicator-explanation a:hover, .cdi-modal-content a:hover, #indicator-explanation a:focus, .cdi-modal-content a:focus {
+a.sorting:hover, a.sorting:focus, a.expand-row:hover, a.expand-row:focus, #indicator-explanation a:hover, .cdi-modal-content a:hover, #indicator-explanation a:focus, .cdi-modal-content a:focus, .country-details p a:hover, .country-details p a:focus {
     border-bottom-color: #006D75;
 }
 
