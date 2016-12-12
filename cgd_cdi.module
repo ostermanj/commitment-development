@@ -138,7 +138,7 @@ function cgd_cdi_country_page($country_code) {
   drupal_add_js(drupal_get_path('module', 'cgd_cdi') . '/js/cgd_cdi_country.js');
   drupal_add_js(array('cgd_cdi' => array('pathToModule' => drupal_get_path('module', 'cgd_cdi'))), 'setting');
 
-  drupal_set_title(t('Commitment to Development Index - ' . $country->title));
+  drupal_set_title(t('Commitment to Development Index 2016 - ' . $country->title));
   
   
   $content = node_view($country, 'teaser');
@@ -152,6 +152,18 @@ function cgd_cdi_country_page($country_code) {
     ),
   );
   drupal_add_html_head($fbDescription, 'facebook_meta_description');
+
+  /* TEMPORARY HEAD TAG TO HIDE FROM INDEXERS */
+
+  $robotNoFollow = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+         'name' => 'robots',
+         'content' => 'noindex',
+      ),
+    )
+
+  drupal_add_html_head($robotNoFollow, 'robot_no_follow');
 
   $fbImage = array(
     '#tag' => 'meta',
