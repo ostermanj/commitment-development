@@ -925,46 +925,55 @@ new code : adds object 'original' to main indicators and copies data to it so th
         var introIndicator = document.getElementById('carousel-indicator'),
                 intros = document.querySelectorAll('.cdi-carousel'),
                 introIndex = 0;
+                
                       
           if (introIndicator) {
                   function nextIntro(){
                         console.log('next intro');
                         console.log(introIndex);
-                        $(intros).eq(introIndex).css('opacity','0');
+                        $(intros).eq(introIndex).css({'opacity':'0','position':'absolute'});
                         $(indicatorItems).eq(introIndex).removeClass('active-intro');
                         introIndex = introIndex + 1 < intros.length ? introIndex + 1 : 0;
-                        $(intros).eq(introIndex).css({'visibility':'visible','opacity': '1'});
-                        $(indicatorItems).eq(introIndex).addClass('active-intro');
+                        setTimeout(function introTimer(){
+                          $(intros).eq(introIndex).css({'visibility':'visible','opacity': '1','position': 'relative'});
+                          $(indicatorItems).eq(introIndex).addClass('active-intro');
+                        },250);
+                        checkIntroHeights();
           
                       };
                   
                  
-                      introHeight = 0;
-          
-                      for (i = 0; i < intros.length; i++){
-                        /*
-                         *
-                         * the various intro text <p>s are of various heights. all but the first are positioned absolute when loaded,
-                         * so containing div only takes the height of the one positioned relative. this code finds the height of the 
-                         * tallest intro <p> and sets the containing <div>s height to match
-                        */
-                        introHeight = intros[i].offsetHeight > introHeight ? intros[i].offsetHeight : introHeight; 
-                        
-                        var indicItem = document.createElement('div');
-                        indicItem.className = 'carousel-indicator-item';
-                        introIndicator.appendChild(indicItem);
-                      }
-                      var indicatorItems = document.querySelectorAll('.carousel-indicator-item');
-                      document.getElementById('cdi-carousel-wrapper').style.height = introHeight + 'px';
-                      intros[0].style.position = 'absolute';  
-                      indicatorItems[0].className += ' active-intro';
-                      var introNext = document.createElement('button');
-                      introNext.id = 'intro-next';
-                      introNext.innerText = 'next';
-                      introNext.onclick = nextIntro;
-                      var introWrapper = document.querySelector('#carousel-indicator-wrapper');
-                      document.querySelector('#carousel-indicator-wrapper').appendChild(introNext);
-                    }
+               function checkIntroHeights(load){  
+                  var introHeight = 0;       
+                 for (i = 0; i < intros.length; i++){
+                   /*
+                    *
+                    * the various intro text <p>s are of various heights. all but the first are positioned absolute when loaded,
+                    * so containing div only takes the height of the one positioned relative. this code finds the height of the 
+                    * tallest intro <p> and sets the containing <div>s height to match
+                   */
+                   introHeight = intros[i].offsetHeight > introHeight ? intros[i].offsetHeight : introHeight; 
+                   if (load === true){
+                    var indicItem = document.createElement('div');
+                    indicItem.className = 'carousel-indicator-item';
+                    introIndicator.appendChild(indicItem);
+                   }
+                 }
+                 document.getElementById('cdi-carousel-wrapper').style.minHeight = introHeight + 'px';
+               }
+               
+              checkIntroHeights(true);
+              
+              var indicatorItems = document.querySelectorAll('.carousel-indicator-item');
+              
+              indicatorItems[0].className += ' active-intro';
+              var introNext = document.createElement('button');
+              introNext.id = 'intro-next';
+              introNext.innerText = 'next';
+              introNext.onclick = nextIntro;
+              var introWrapper = document.querySelector('#carousel-indicator-wrapper');
+              document.querySelector('#carousel-indicator-wrapper').appendChild(introNext);
+            }
 
    
         var cdiModel = new cdiApp.CDI.Model({

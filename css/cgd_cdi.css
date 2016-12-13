@@ -485,6 +485,7 @@ span.os, span.ns {
   width: 100%;
   position: absolute;
   transition: opacity .25s linear;
+  margin-bottom: 0;
 }
 
 #carousel-indicator-wrapper {
@@ -493,6 +494,7 @@ span.os, span.ns {
   position: relative;
   max-width: 718px;
   padding: 0 1%;
+  
 }
 
 #carousel-indicator {
