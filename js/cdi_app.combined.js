@@ -1424,7 +1424,7 @@ console.log(this.groupedValues);
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
             link: 'http://www.cgdev.org' + location.pathname,
-            picture: 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share.png'
+            picture: 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png'
         }); 
         $(event.currentTarget).blur(); //remove focus after click   
     },
