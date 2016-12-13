@@ -1162,7 +1162,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     getTemplate: function(templateName) {
         var template = '';
         $.ajax({
-            url: Drupal.settings.basePath + Drupal.settings.temp_cgd_cdi.pathToModule + '/templates/' + templateName + '.tmpl.html',
+            url: Drupal.settings.basePath + Drupal.settings.cgd_cdi.pathToModule + '/templates/' + templateName + '.tmpl.html',
             method: 'GET',
             async: false
         }).done(function(data) {
