@@ -1,4 +1,4 @@
-<script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js"></script>
+<!--<script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js"></script> -->
 <div class="cdi-header-wrapper">
     <div class="cdi-header">
         <h1>The Commitment to Development Index</h1>
