@@ -69,12 +69,6 @@
             <div id="indicator-explanation"></div>
         </div>
     </div>
-<div id="twitter_fb" style="margin: 0;display: none;">
-    <!--Twitter and Facebook links-->
-    <div style="float:right;padding: 4px 0 2px 0;text-align: right;">
-        <p style="margin: 0; padding: 2px;"><span id="span_share_text">Share this map</span></p>
-        <a href="http://www.cgdev.org/section/initiatives/_active/cdi/" id="a_link_to_this" style="color: #035781;font-size: 18px;" target="_new">Link</a> &nbsp;<a href="http://twitter.com/home?status=From%20@CGDev%20http://bit.ly/cf29Ay%20CDI%20-%20Commitment%20to%20Development%20Index.%20Which%20rich%20countries%20are%20doing%20the%20most%20to%20help%20poor%20ones?" id="a_link_to_this_tweet" target="_new"><img border="0" src="/layout/tweet_this_blue.png" style="margin-bottom: -4px;" /></a> &nbsp;&nbsp;<a href="http://www.facebook.com/sharer.php?u=http://www.cgdev.org/section/initiatives/_active/cdi/&amp;t=CDI%20-%20Commitment%20to%20Development%20Index.%20Which%20rich%20countries%20are%20doing%20the%20most%20to%20help%20poor%20ones?" id="a_link_to_this_fb" target="_newfb"><img border="0" src="/layout/facebook_share_taller.png" style="margin-bottom: -4px;" /></a></div>
-</div>
 <!--Title for country details section-->
 <div id="div_new_title" style="font-size: 24px;margin: 0 0 16px 0;min-width:920px;"></div>
 <div class="clear"></div>
@@ -83,8 +77,9 @@
 <!-- /Details Section -->
 <p>
 </div>
+<?php $url_encoded = rawurlencode($GLOBALS['base_url'].'/'.current_path()); ?>
 <div class="social">
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.cgdev.org/cdi-2015" class="facebook" target="fb "title="Share on Facebook">Facebook</a>
-    <a href="http://twitter.com/share?text=Denmark%20takes%20first%20place%20on%20the%202015%20Commitment%20to%20Development%20Index.%20US%20is%20%2021st%20and%20UK%20is%2012th.&url=http%3A%2F%2Fwww.cgdev.org%2Fcdi&via=cgdev" class="twitter" target="tw" title="Share on Twitter">Twitter</a>
-     <a href="mailto:?subject=Commitment%20to%20Development%20Index&body=The%20Commitment%20to%20Development%20Index%20ranks%2027%20of%20the%20world%E2%80%99s%20richest%20countries%20on%20policies%20that%20affect%20the%20more%20than%20five%20billion%20people%20living%20in%20poorer%20nations.%0A%0Ahttp%3A%2F%2Fwww.cgdev.org%2Fcdi-2015" target="em" class="email" title="Share by email">Email</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php print $url_encoded; ?>" class="facebook" target="fb" title="Share on Facebook">Facebook</a>
+    <a href="http://twitter.com/share?text=Denmark%2C%20Sweden%2C%20and%20Finland%20take%201st%20place%20on%20the%20Commitment%20to%20Development%20Index&url=<?php print $url_encoded; ?>&via=cgdev" class="twitter" target="tw" title="Share on Twitter">Twitter</a>
+     <a href="mailto:?subject=Commitment%20to%20Development%20Index&body=The%20Commitment%20to%20Development%20Index%20ranks%2027%20of%20the%20world%E2%80%99s%20richest%20countries%20on%20policies%20that%20affect%20the%20more%20than%20five%20billion%20people%20living%20in%20poorer%20nations.%0A%0A<?php echo $GLOBALS['base_url'].'/'.current_path();?>" target="em" class="email" title="Share by email">Email</a>
 </div>

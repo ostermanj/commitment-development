@@ -60,11 +60,12 @@
     $node = $countries[0];
     $content = node_view($node, 'teaser');
     $description_overall = strip_tags(drupal_render($content['field_overall']));
-    $description_overall_encoded = rawurldecode($description_overall);
-    $title_encoded = rawurldecode($node->title);
+    $description_overall_encoded = rawurlencode($description_overall);
+    $title_encoded = rawurlencode($node->title);
+    $url_encoded = rawurlencode($GLOBALS['base_url'].'/'.current_path());
 ?>
 <div class="social">
-    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $GLOBALS['base_url'].'/'.current_path();?>" class="facebook" target="fb "title="Share on Facebook">Facebook</a>
-    <a href="http://twitter.com/share?text=Denmark%20takes%20first%20place%20on%20the%202016%20Commitment%20to%20Development%20Index.%20US%20is%20%2021st%20and%20UK%20is%2012th.&url=<?php echo $GLOBALS['base_url'].'/'.current_path();?>&via=cgdev" class="twitter" target="tw" title="Share on Twitter">Twitter</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=<?php print $url_encoded;?>" class="facebook" target="fb "title="Share on Facebook">Facebook</a>
+    <a href="http://twitter.com/share?text=<?php print $description_overall_encoded;?>&url=<?php print $url_encoded;?>&via=cgdev" class="twitter" target="tw" title="Share on Twitter">Twitter</a>
     <a href="mailto:?subject=Commitment%20to%20Development%20Index%20-%20<?php print $title_encoded;?>&body=<?php print $description_overall_encoded;?>%0A%0A<?php echo $GLOBALS['base_url'].'/'.current_path();?>" target="em" class="email" title="Share by email">Email</a>
 </div>
