@@ -1082,8 +1082,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 console.log(children);
                 for (var j in children) {
                     var child = that.flatIndicators[children[j]];
-                    console.log(child);
-                    $label = $('<div class="indicator-label category ' + i + '">' + child.label + '<a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a></div>');
+                    $label = $('<div class="indicator-label category ' + i + '">' + child.label + '</div>');
                     $content.append($label);
                     if (child.children) {
                         for (var k in child.children) {
