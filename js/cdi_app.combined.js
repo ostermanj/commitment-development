@@ -1078,10 +1078,12 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 var $label, $chart;
                 var indicators = [];
                 $content = $indicatorElement.find('.bar-charts');
-                var children = that.flatIndicators[i].children;
+                var children = that.flatIndicators[i].children;// ["AID_QNT", "AID_QLT"], for example
+                console.log(children);
                 for (var j in children) {
                     var child = that.flatIndicators[children[j]];
-                    $label = $('<div class="indicator-label category ' + i + '">' + child.label + '</div>');
+                    console.log(child);
+                    $label = $('<div class="indicator-label category ' + i + '">' + child.label + '<a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a></div>');
                     $content.append($label);
                     if (child.children) {
                         for (var k in child.children) {
@@ -1377,7 +1379,7 @@ console.log(this.groupedValues);
                 $row.html('<td><span class="new-value new-rank"></span> <span class="original-value original-rank">' + item.rank_label + '</span></td>' +
                     '<td><a class="expand-row" href="#" title="Expand row"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
-                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a href="#" data-country="' + item.country + '" data-rank="' + item.rank_label.replace('*','%20(tie)') + '"></a></td>');
+                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a class="twitter-share-row" href="https://twitter.com/intent/tweet?text=' +  encodeURIComponent(item.country) + '%20ranks%20' + item.rank_label.replace('*','%20(tie)') + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
  
                 this.$el.find('tbody').append($row);
                 var indicators = this.indicator.children;
@@ -1411,13 +1413,9 @@ console.log(this.groupedValues);
         e.stopImmediatePropagation();
     },
     twitterShare: function(e){
-
-        var urlString = 'https://twitter.com/intent/tweet?original_referer=' + encodeURIComponent(location.href) + '&amp;text=' + e.currentTarget.dataset.country.replace(' ','%20') + '%20ranks%20' + e.currentTarget.dataset.rank + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev';
-        window.open(urlString, null,
-'left=20,top=20,width=700,height=400,toolbar=0,resizable=1');
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        $(e.currentTarget).blur(); //remove focus after click   
+       
+    //    e.stopImmediatePropagation();
+        
     },
    
     facebookShare: function(event){
@@ -1438,6 +1436,11 @@ console.log(this.groupedValues);
         $(event.currentTarget).blur(); //remove focus after click   
     },
     showCollapsed: function(event) {
+      console.log(event);
+      if (event.target.className === 'twitter-share-row') {
+        console.log('twitter-share-row');
+        return;
+      }
         event.preventDefault();
         var $originalTarget = $(event.target);
         var $target = $(event.currentTarget);
@@ -2258,7 +2261,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     $row.html('<td>' + item.rank + '</td>' +
                         '<td><a href="#"><span class="country-label">' + item.country + '</a></span></td>' +
                         '<td>' + item.value_label + '</td>' +
-                        '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '" href="#"></a></td><td class="twitter-td"><a href="#" data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '"></a></td>');
+                        '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '" href="#"></a></td><td class="twitter-td"><a class="twitter-share-row" href="http://twitter.com/intent/tweet?text=' + item.country + '%20ranks%20' + item.rank + '%20of%2027%20on%20the%20' + this.app.indicators[this.indicator].toLowerCase() + '%20component%20of%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
                     
 
                     this.$el.find('tbody').append($row);
@@ -2292,13 +2295,9 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         Backbone.pubSub.trigger('triggerNext', e); // triggers menuItemClicked in home.cdi.js
     },
     twitterShare: function(e){
-        console.log(e);
-        var urlString = 'https://twitter.com/intent/tweet?original_referer=' + encodeURIComponent(location.href) + '&amp;text=' + e.currentTarget.dataset.country.replace(' ','%20') + '%20ranks%20' + e.currentTarget.dataset.rank + '%20of%2027%20on%20the%20' + e.currentTarget.dataset.component.toLowerCase() +  '%20component%20of%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev';
-        window.open(urlString, null,
-'left=20,top=20,width=700,height=400,toolbar=0,resizable=1');
-        e.preventDefault();
-        e.stopImmediatePropagation();
-        $(e.currentTarget).blur(); //remove focus after click   
+       
+   //     e.stopImmediatePropagation();
+       
     },
     facebookShare: function(e){
         e.preventDefault();
@@ -2317,6 +2316,10 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     },
     showComponents: function(event) {
         console.log(event);
+        if (event.target.className === 'twitter-share-row') {
+          console.log('twitter-share-row');
+          return;
+        }
         $target = $(event.currentTarget);
         console.log($target);
         var bottom = $target.hasClass('close-bottom') ? true : false;
