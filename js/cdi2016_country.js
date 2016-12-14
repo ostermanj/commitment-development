@@ -1,9 +1,9 @@
 (function ($) {
-  Drupal.behaviors.cgd_cdi_country = {
+  Drupal.behaviors.cdi2016_country = {
     attach: function (context, settings) {
       window.cgdCdi = new cdiApp({
         el: '#new_cdi',
-        url: '/sites/all/modules/custom/cgd_cdi/ParserTest.php',
+        url: '/sites/all/modules/custom/cdi2016/ParserTest.php',
         onLoad: 'loadCountry',
         args: {countryCodes: countryCodes}
       });

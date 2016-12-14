@@ -188,7 +188,7 @@ var BarChartTooltipView = Backbone.View.extend({
 });
 
 /**
- * The main APP for the new CDI section. was cdi_app.js
+ * The main APP for the new CDI section. was cdi2016_app.js
  */
 
 /* NEW CODE
@@ -1163,7 +1163,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     getTemplate: function(templateName) {
         var template = '';
         $.ajax({
-            url: Drupal.settings.basePath + Drupal.settings.cgd_cdi.pathToModule + '/templates/' + templateName + '.tmpl.html',
+            url: Drupal.settings.basePath + Drupal.settings.cdi2016.pathToModule + '/templates/' + templateName + '.tmpl.html',
             method: 'GET',
             async: false
         }).done(function(data) {
@@ -1185,7 +1185,7 @@ cdiApp.CDI.Model = Backbone.Model.extend({
          * there's a better way, but this solution works, adds needed flexibility
          */
         
-        Backbone.pubSub.on('rankCountries', function(params){this.rankCountries(params);}, this); //subscribe to rankCountries trigger published in cdi_app.js
+        Backbone.pubSub.on('rankCountries', function(params){this.rankCountries(params);}, this); //subscribe to rankCountries trigger published in cdi2016_app.js
         this.indicator = args.indicator;
         this.countries = args.countries;
         this.app = args.app;
@@ -2307,9 +2307,9 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
             method: 'feed',
             name: e.currentTarget.dataset.country + ' ranks ' + e.currentTarget.dataset.rank + ' out of 27 on the ' +  e.currentTarget.dataset.component.toLowerCase() + ' component of the 2016 Commitment to Development Index',
             caption: 'The Commitment to Development Index: Ranking the Rich',
-            description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit the 5.5 billion people living in poorer nations.',
+            description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
             link: 'http://www.cgdev.org' + location.pathname,
-            picture: 'http://www.cgdev.org/sites/default/files/CDI2015/cdi-2015-fb-crop.jpg'
+            picture: 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png'
         }); 
         $(e.currentTarget).blur(); //remove focus after click   
     },

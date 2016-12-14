@@ -1,0 +1,4 @@
+name = Commitment to Development Index
+description = 2016 Commitment to Development Index
+core = 7.x
+package = CGD
