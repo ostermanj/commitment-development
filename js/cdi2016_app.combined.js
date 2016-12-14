@@ -102,6 +102,7 @@ var BarChartItemView = Backbone.View.extend({
        
        
         var left = 0;
+        
 	if(this.model.numElements==1){ // if single indicator chart
 	  var range_space = this.model.max-this.model.min;
 	  if(this.model.min > 0){
@@ -147,13 +148,15 @@ var BarChartItemView = Backbone.View.extend({
 	    left: left+'%'
         });
         this.$el.data('value', data);
-	this.$el.attr('data-weighted', this.model.weighted);
+      	this.$el.attr('data-weighted', this.model.weighted);
         this.$el.addClass('initial-load transition bar-segment');
 
         // If we display the value on the bar we don't need the tooltip.
+        
         if (this.includeValue) {
             this.$el.append('<div class="value">' + this.model.data_label + '</div>');
-        } else {
+        } else if (typeof cgdCdi.indicators !== 'undefined'){ // added typeof check because country pages were sending CDI_AID as param for some reason. workaround
+
             var tooltipModel = new BarChartTooltipModel({
                 trend: cgdCdi.indicators[this.model.trend],
                 value: this.model.data_label
@@ -163,7 +166,7 @@ var BarChartItemView = Backbone.View.extend({
                 className: 'tooltip'
             });
             this.$el.append(tooltip.$el);
-        }
+        } 
     }
 });
 
@@ -318,7 +321,7 @@ var cdiApp = Backbone.View.extend({
 
         $.get(options.url).done(function(data){
             that.data = data;
-            console.log(data);
+            
             var countryCodes = that.getCountryCodes();
             that.getCountryNames(countryCodes);
             that.getMainIndicators();
@@ -1079,7 +1082,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 var indicators = [];
                 $content = $indicatorElement.find('.bar-charts');
                 var children = that.flatIndicators[i].children;// ["AID_QNT", "AID_QLT"], for example
-                console.log(children);
+              
                 for (var j in children) {
                     var child = that.flatIndicators[children[j]];
                     $label = $('<div class="indicator-label category ' + i + '">' + child.label + '</div>');
@@ -1213,7 +1216,7 @@ cdiApp.CDI.Model = Backbone.Model.extend({
  *  the tool previously relied on the order of key-value pairs in an object, which cannot be
  *  guaranteed. the order of an array can be guaranteed.
  */
-        console.log(this.indicator);
+   
     var sortable = []; 
     for (var country in this.indicator.values){
         var obj = {};
@@ -1346,7 +1349,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         var rank = 0;
         this.$el.find('tbody').html('');
         this.groupedValues.sort(this.sortArray(sortAsc, field));
-console.log(this.groupedValues);
+
         for (var i in this.groupedValues) {
      
             if (this.groupedValues.hasOwnProperty(i)) {
@@ -2491,71 +2494,3 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
         event.preventDefault();
     },
 });
-
-/*
-*
-* was line_chart.js
-*/
-
-cdiApp.LineChart = {};
-cdiApp.LineChart.Model = Backbone.Model.extend({
-    initialize: function(args) {
-    var item = cgdCdi.indicatorColors[args.indicator];
-    var border_color = item.border;
-    var background_color = item.background;
-    var scaleLineColor = "rgba(0,0,0,.1)";
-    var scaleFontColor = "#666";
-/*  if(border_color=="#FFFFFF"){
-        scaleLineColor = "rgba(255,255,255,.1)";
-        scaleFontColor = "#ffffff";
-    }*/
-
-        this.data = {
-            labels: [],
-            datasets: [{
-                data: [],
-                fillColor: 'rgba(0,0,0,0)',
-                pointStrokeCol: border_color,
-                strokeColor: border_color,
-                pointColor: border_color,
-            }]
-        };
-        var that = this;
-        args.data.forEach(function(value) {
-            that.data.labels.push(value.year);
-            that.data.datasets[0].data.push(parseFloat(value.data).toFixed(2));
-        });
-        this.options = {
-            
-            
-           scaleOverride: true,
-           
-            scaleSteps: 6,
-            scaleStepWidth: 2,
-            scaleStartValue: 0,         
-            scaleShowGridLines: false,
-            tooltipTemplate: "<%= value %>",
-            tooltipFillColor: background_color,
-            tooltipFontColor: '#706E69',
-            tooltipXPadding: 10,
-        scaleLineColor: scaleLineColor,
-                scaleFontColor: scaleFontColor,
-            pointDotRadius: 2,
-        percentageInnerCutout : 70,
-            pointHitDetectionRadius: 4
-        };
-    } 
-});
-
-cdiApp.LineChart.View = Backbone.View.extend({
-    initialize: function() {
-        this.data = this.model.data;
-        this.options = this.model.options;
-        this.render();
-    },
-    render: function() {
-        var chartHolder = this.el.getContext('2d');
-        var myLineChart = new Chart(chartHolder).Line(this.data, this.options);
-    }
-});
-
