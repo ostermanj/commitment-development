@@ -1379,7 +1379,7 @@ console.log(this.groupedValues);
                 $row.html('<td><span class="new-value new-rank"></span> <span class="original-value original-rank">' + item.rank_label + '</span></td>' +
                     '<td><a class="expand-row" href="#" title="Expand row"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
-                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a class="twitter-share-row" href="https://twitter.com/intent/tweet?text=' +  encodeURIComponent(item.country) + '%20ranks%20' + item.rank_label.replace('*','%20(tie)') + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
+                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a class="twitter-share-row" href="http://twitter.com/intent/tweet?text=' +  encodeURIComponent(item.country) + '%20ranks%20' + item.rank_label.replace('*','%20(tie)') + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
  
                 this.$el.find('tbody').append($row);
                 var indicators = this.indicator.children;
