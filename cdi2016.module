@@ -10,7 +10,7 @@
  */
 function cdi2016_menu() {
     $items = array();
-    $items['commitment-development-index-2016'] = array(
+    $items['commitment-development-index'] = array(
         'page callback' => 'cdi2016_index_page',
         'access callback' => TRUE,
         'type' => MENU_CALLBACK,
