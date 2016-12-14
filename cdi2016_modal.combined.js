@@ -1,9 +1,9 @@
 (function ($) {
-  Drupal.behaviors.cgd_cdi = {
+  Drupal.behaviors.cdi2016 = {
     attach: function (context, settings) {
       window.cgdCdi = new cdiApp({
         el: '#new_cdi',
-        url: '/sites/all/modules/custom/temp_cgd_cdi/ParserTest.php',
+        url: '/sites/all/modules/custom/temp_cdi2016/ParserTest.php',
         onLoad: 'startApp'
       });
 
@@ -29,7 +29,7 @@
 })(jQuery);
 
 /**
- * Modal expanded Model and View. was cgd_cdi.modal.js
+ * Modal expanded Model and View. was cdi2016.modal.js
  */
 cdiApp.Modal = {};
 cdiApp.Modal.Model = Backbone.Model.extend({

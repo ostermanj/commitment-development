@@ -188,7 +188,7 @@ var BarChartTooltipView = Backbone.View.extend({
 });
 
 /**
- * The main APP for the new CDI section. was cdi_app.js
+ * The main APP for the new CDI section. was cdi2016_app.js
  */
 
 /* NEW CODE
@@ -1164,7 +1164,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     getTemplate: function(templateName) {
         var template = '';
         $.ajax({
-            url: Drupal.settings.basePath + Drupal.settings.cgd_cdi.pathToModule + '/templates/' + templateName + '.tmpl.html',
+            url: Drupal.settings.basePath + Drupal.settings.cdi2016.pathToModule + '/templates/' + templateName + '.tmpl.html',
             method: 'GET',
             async: false
         }).done(function(data) {
@@ -1186,7 +1186,7 @@ cdiApp.CDI.Model = Backbone.Model.extend({
          * there's a better way, but this solution works, adds needed flexibility
          */
         
-        Backbone.pubSub.on('rankCountries', function(params){this.rankCountries(params);}, this); //subscribe to rankCountries trigger published in cdi_app.js
+        Backbone.pubSub.on('rankCountries', function(params){this.rankCountries(params);}, this); //subscribe to rankCountries trigger published in cdi2016_app.js
         this.indicator = args.indicator;
         this.countries = args.countries;
         this.app = args.app;
