@@ -3,7 +3,7 @@
     attach: function (context, settings) {
       window.cgdCdi = new cdiApp({
         el: '#new_cdi',
-        url: '/sites/all/modules/custom/temp_cdi2016/ParserTest.php',
+        url: '/sites/all/modules/custom/cdi2016/ParserTest.php',
         onLoad: 'startApp'
       });
 

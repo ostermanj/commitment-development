@@ -111,10 +111,11 @@ function cdi2016_country_page($country_code) {
 
   drupal_set_title(t('Commitment to Development Index 2016 - ' . $country->title));
   
-  /*
+  
   $content = node_view($country, 'teaser');
   $description_overall = strip_tags(drupal_render($content['field_overall']));
   
+  /*
   $fbDescription = array(
     '#tag' => 'meta',
     '#attributes' => array(
