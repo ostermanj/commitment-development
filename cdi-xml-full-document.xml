@@ -4939,238 +4939,238 @@
       <v c='USA' value='5.3'/>
  </vs>
    <!-- main components -->
-   <vs y='2016' r='LMY' i='CDI_AID'>
-  <v c='AUS' score='4.70711759' weighted='0.585374834'/>
-  <v c='AUT' score='4.547480846' weighted='0.565522487'/>
-  <v c='BEL' score='4.305988233' weighted='0.535490584'/>
-  <v c='CAN' score='5.277825417' weighted='0.656347779'/>
-  <v c='CZE' score='4.217910498' weighted='0.52453728'/>
-  <v c='DNK' score='6.575731722' weighted='0.81775477'/>
-  <v c='FIN' score='5.537397194' weighted='0.688627998'/>
-  <v c='FRA' score='4.95204813' weighted='0.615834276'/>
-  <v c='DEU' score='4.994780986' weighted='0.621148513'/>
-  <v c='GRC' score='4.121195808' weighted='0.512509888'/>
-  <v c='HUN' score='4.178282637' weighted='0.519609179'/>
-  <v c='IRL' score='6.385721551' weighted='0.794125199'/>
-  <v c='ITA' score='4.274461372' weighted='0.531569919'/>
-  <v c='JPN' score='5.027480257' weighted='0.625214978'/>
-  <v c='LUX' score='5.583306544' weighted='0.694337262'/>
-  <v c='NLD' score='5.513489055' weighted='0.685654794'/>
-  <v c='NZL' score='5.150663747' weighted='0.640534016'/>
-  <v c='NOR' score='5.853987158' weighted='0.727998971'/>
-  <v c='POL' score='4.098982281' weighted='0.509747425'/>
-  <v c='PRT' score='4.834573716' weighted='0.601225215'/>
-  <v c='SVK' score='4.101293612' weighted='0.510034861'/>
-  <v c='KOR' score='3.973201755' weighted='0.494105421'/>
-  <v c='ESP' score='4.28356774' weighted='0.532702382'/>
-  <v c='SWE' score='6.62114' weighted='0.8234'/>
-  <v c='CHE' score='4.611417082' weighted='0.573473566'/>
-  <v c='GBR' score='6.053349971' weighted='0.752791632'/>
-  <v c='USA' score='5.217609528' weighted='0.648859361'/>
+  
+<vs y='2016' r='LMY' i='CDI_AID'>
+  <v c='AUS' score='4.70711759' weighted='0.564570591'/>
+  <v c='AUT' score='4.547480846' weighted='0.545423797'/>
+  <v c='BEL' score='4.305988233' weighted='0.516459229'/>
+  <v c='CAN' score='5.277825417' weighted='0.633021155'/>
+  <v c='CZE' score='4.217910498' weighted='0.505895206'/>
+  <v c='DNK' score='6.575731722' weighted='0.788691736'/>
+  <v c='FIN' score='5.537397194' weighted='0.664154134'/>
+  <v c='FRA' score='4.95204813' weighted='0.593947503'/>
+  <v c='DEU' score='4.994780986' weighted='0.599072872'/>
+  <v c='GRC' score='4.121195808' weighted='0.494295269'/>
+  <v c='HUN' score='4.178282637' weighted='0.50114225'/>
+  <v c='IRL' score='6.385721551' weighted='0.765901961'/>
+  <v c='ITA' score='4.274461372' weighted='0.512677905'/>
+  <v c='JPN' score='5.027480257' weighted='0.602994815'/>
+  <v c='LUX' score='5.583306544' weighted='0.669660491'/>
+  <v c='NLD' score='5.513489055' weighted='0.661286598'/>
+  <v c='NZL' score='5.150663747' weighted='0.617769414'/>
+  <v c='NOR' score='5.853987158' weighted='0.702125861'/>
+  <v c='POL' score='4.098982281' weighted='0.491630983'/>
+  <v c='PRT' score='4.834573716' weighted='0.579857649'/>
+  <v c='SVK' score='4.101293612' weighted='0.491908204'/>
+  <v c='KOR' score='3.973201755' weighted='0.476544896'/>
+  <v c='ESP' score='4.28356774' weighted='0.513770121'/>
+  <v c='SWE' score='6.62114' weighted='0.794137464'/>
+  <v c='CHE' score='4.611417082' weighted='0.553092294'/>
+  <v c='GBR' score='6.053349971' weighted='0.72603739'/>
+  <v c='USA' score='5.217609528' weighted='0.625798876'/>
 </vs>
 <vs y='2016' r='LMY' i='CDI_TRA'>
-  <v c='AUS' score='5.575327226' weighted='0.918053088'/>
-  <v c='AUT' score='4.914747468' weighted='0.80927969'/>
-  <v c='BEL' score='5.310685968' weighted='0.874476323'/>
-  <v c='CAN' score='4.955500158' weighted='0.815990172'/>
-  <v c='CZE' score='4.929560216' weighted='0.811718809'/>
-  <v c='DNK' score='5.645154458' weighted='0.929551086'/>
-  <v c='FIN' score='5.123335935' weighted='0.843626604'/>
-  <v c='FRA' score='5.285509352' weighted='0.870330652'/>
-  <v c='DEU' score='5.274316018' weighted='0.868487518'/>
-  <v c='GRC' score='4.760659443' weighted='0.783907011'/>
-  <v c='HUN' score='5.189338843' weighted='0.854494876'/>
-  <v c='IRL' score='5.46825999' weighted='0.900423018'/>
-  <v c='ITA' score='4.890255928' weighted='0.805246826'/>
-  <v c='JPN' score='4.165895863' weighted='0.685971138'/>
-  <v c='LUX' score='5.034902456' weighted='0.829064835'/>
-  <v c='NLD' score='5.810656912' weighted='0.956803305'/>
-  <v c='NZL' score='5.724447118' weighted='0.942607696'/>
-  <v c='NOR' score='4.235084437' weighted='0.697363973'/>
-  <v c='POL' score='4.574261753' weighted='0.753214108'/>
-  <v c='PRT' score='5.203585507' weighted='0.856840782'/>
-  <v c='SVK' score='4.738997068' weighted='0.780340008'/>
-  <v c='KOR' score='3.267616942' weighted='0.538057355'/>
-  <v c='ESP' score='4.990095197' weighted='0.821686713'/>
-  <v c='SWE' score='5.52656' weighted='0.91002'/>
-  <v c='CHE' score='3.652623223' weighted='0.60145385'/>
-  <v c='GBR' score='5.412544997' weighted='0.89124879'/>
-  <v c='USA' score='5.340074797' weighted='0.879315591'/>
+  <v c='AUS' score='5.575327226' weighted='0.885425448'/>
+  <v c='AUT' score='4.914747468' weighted='0.78051786'/>
+  <v c='BEL' score='5.310685968' weighted='0.843397403'/>
+  <v c='CAN' score='4.955500158' weighted='0.786989852'/>
+  <v c='CZE' score='4.929560216' weighted='0.782870294'/>
+  <v c='DNK' score='5.645154458' weighted='0.896514807'/>
+  <v c='FIN' score='5.123335935' weighted='0.813644084'/>
+  <v c='FRA' score='5.285509352' weighted='0.839399069'/>
+  <v c='DEU' score='5.274316018' weighted='0.837621441'/>
+  <v c='GRC' score='4.760659443' weighted='0.756046928'/>
+  <v c='HUN' score='5.189338843' weighted='0.824126098'/>
+  <v c='IRL' score='5.46825999' weighted='0.868421952'/>
+  <v c='ITA' score='4.890255928' weighted='0.776628325'/>
+  <v c='JPN' score='4.165895863' weighted='0.661591699'/>
+  <v c='LUX' score='5.034902456' weighted='0.799599841'/>
+  <v c='NLD' score='5.810656912' weighted='0.922798482'/>
+  <v c='NZL' score='5.724447118' weighted='0.909107385'/>
+  <v c='NOR' score='4.235084437' weighted='0.672579632'/>
+  <v c='POL' score='4.574261753' weighted='0.726444852'/>
+  <v c='PRT' score='5.203585507' weighted='0.82638863'/>
+  <v c='SVK' score='4.738997068' weighted='0.752606696'/>
+  <v c='KOR' score='3.267616942' weighted='0.518934778'/>
+  <v c='ESP' score='4.990095197' weighted='0.792483938'/>
+  <v c='SWE' score='5.52656' weighted='0.877681091'/>
+  <v c='CHE' score='3.652623223' weighted='0.580078159'/>
+  <v c='GBR' score='5.412544997' weighted='0.859573776'/>
+  <v c='USA' score='5.340074797' weighted='0.848064683'/>
 </vs>
 <vs y='2016' r='LMY' i='CDI_INV'>
-  <v c='AUS' score='5.089524442' weighted='0.974393482'/>
-  <v c='AUT' score='4.384960034' weighted='0.839504068'/>
-  <v c='BEL' score='5.203898016' weighted='0.996290393'/>
-  <v c='CAN' score='5.623080075' weighted='1.07654313'/>
-  <v c='CZE' score='5.211832086' weighted='0.997809377'/>
-  <v c='DNK' score='5.50112931' weighted='1.053195559'/>
-  <v c='FIN' score='6.060935578' weighted='1.160370912'/>
-  <v c='FRA' score='5.222919934' weighted='0.999932154'/>
-  <v c='DEU' score='4.318788494' weighted='0.826835474'/>
-  <v c='GRC' score='4.774890135' weighted='0.914156495'/>
-  <v c='HUN' score='5.187968997' weighted='0.99324077'/>
-  <v c='IRL' score='4.0271604' weighted='0.771003045'/>
-  <v c='ITA' score='5.469544605' weighted='1.047148642'/>
-  <v c='JPN' score='4.659938157' weighted='0.892148847'/>
-  <v c='LUX' score='4.493217762' weighted='0.860230096'/>
-  <v c='NLD' score='4.578948687' weighted='0.876643349'/>
-  <v c='NZL' score='4.722391331' weighted='0.904105557'/>
-  <v c='NOR' score='5.353592113' weighted='1.024949446'/>
-  <v c='POL' score='5.161444638' weighted='0.98816266'/>
-  <v c='PRT' score='5.025698924' weighted='0.962174036'/>
-  <v c='SVK' score='4.35884393' weighted='0.834504119'/>
-  <v c='KOR' score='5.175012492' weighted='0.990760236'/>
-  <v c='ESP' score='5.489384645' weighted='1.050947034'/>
-  <v c='SWE' score='5.40307' weighted='1.03442'/>
-  <v c='CHE' score='3.922525482' weighted='0.750970607'/>
-  <v c='GBR' score='5.141759707' weighted='0.984393964'/>
-  <v c='USA' score='4.506078052' weighted='0.862692208'/>
+  <v c='AUS' score='5.089524442' weighted='0.939763502'/>
+  <v c='AUT' score='4.384960034' weighted='0.809668063'/>
+  <v c='BEL' score='5.203898016' weighted='0.960882196'/>
+  <v c='CAN' score='5.623080075' weighted='1.038282748'/>
+  <v c='CZE' score='5.211832086' weighted='0.962347196'/>
+  <v c='DNK' score='5.50112931' weighted='1.015764951'/>
+  <v c='FIN' score='6.060935578' weighted='1.119131288'/>
+  <v c='FRA' score='5.222919934' weighted='0.964394529'/>
+  <v c='DEU' score='4.318788494' weighted='0.797449712'/>
+  <v c='GRC' score='4.774890135' weighted='0.88166734'/>
+  <v c='HUN' score='5.187968997' weighted='0.957940957'/>
+  <v c='IRL' score='4.0271604' weighted='0.743601569'/>
+  <v c='ITA' score='5.469544605' weighted='1.009932942'/>
+  <v c='JPN' score='4.659938157' weighted='0.860441845'/>
+  <v c='LUX' score='4.493217762' weighted='0.829657487'/>
+  <v c='NLD' score='4.578948687' weighted='0.845487413'/>
+  <v c='NZL' score='4.722391331' weighted='0.871973613'/>
+  <v c='NOR' score='5.353592113' weighted='0.988522706'/>
+  <v c='POL' score='5.161444638' weighted='0.953043324'/>
+  <v c='PRT' score='5.025698924' weighted='0.927978336'/>
+  <v c='SVK' score='4.35884393' weighted='0.804845813'/>
+  <v c='KOR' score='5.175012492' weighted='0.955548582'/>
+  <v c='ESP' score='5.489384645' weighted='1.013596338'/>
+  <v c='SWE' score='5.40307' weighted='0.997657914'/>
+  <v c='CHE' score='3.922525482' weighted='0.724281085'/>
+  <v c='GBR' score='5.141759707' weighted='0.949408567'/>
+  <v c='USA' score='4.506078052' weighted='0.832032096'/>
 </vs>
 <vs y='2016' r='LMY' i='CDI_MIG'>
-  <v c='AUS' score='5.845145248' weighted='0.906927909'/>
-  <v c='AUT' score='5.018479312' weighted='0.778663105'/>
-  <v c='BEL' score='5.231512011' weighted='0.811717083'/>
-  <v c='CAN' score='5.808341112' weighted='0.90121741'/>
-  <v c='CZE' score='4.086980468' weighted='0.634132514'/>
-  <v c='DNK' score='4.848642068' weighted='0.752311299'/>
-  <v c='FIN' score='4.988324762' weighted='0.77398435'/>
-  <v c='FRA' score='5.032105888' weighted='0.780777393'/>
-  <v c='DEU' score='5.492495125' weighted='0.852211007'/>
-  <v c='GRC' score='4.323416922' weighted='0.670817799'/>
-  <v c='HUN' score='4.052375561' weighted='0.628763245'/>
-  <v c='IRL' score='4.577750199' weighted='0.71027994'/>
-  <v c='ITA' score='5.144610274' weighted='0.798233481'/>
-  <v c='JPN' score='4.135673811' weighted='0.641687733'/>
-  <v c='LUX' score='5.210142846' weighted='0.808401461'/>
-  <v c='NLD' score='5.165442998' weighted='0.801465869'/>
-  <v c='NZL' score='6.065922065' weighted='0.941183458'/>
-  <v c='NOR' score='5.867820117' weighted='0.910446123'/>
-  <v c='POL' score='4.041753342' weighted='0.62711511'/>
-  <v c='PRT' score='5.41370181' weighted='0.839985502'/>
-  <v c='SVK' score='3.714905515' weighted='0.576401671'/>
-  <v c='KOR' score='5.127111434' weighted='0.795518376'/>
-  <v c='ESP' score='5.115493152' weighted='0.793715693'/>
-  <v c='SWE' score='6.05195' weighted='0.93902'/>
-  <v c='CHE' score='4.896912164' weighted='0.759800847'/>
-  <v c='GBR' score='4.910492601' weighted='0.761907976'/>
-  <v c='USA' score='4.915813239' weighted='0.762733522'/>
+  <v c='AUS' score='5.845145248' weighted='0.874695659'/>
+  <v c='AUT' score='5.018479312' weighted='0.75098939'/>
+  <v c='BEL' score='5.231512011' weighted='0.782868629'/>
+  <v c='CAN' score='5.808341112' weighted='0.869188111'/>
+  <v c='CZE' score='4.086980468' weighted='0.611595422'/>
+  <v c='DNK' score='4.848642068' weighted='0.725574128'/>
+  <v c='FIN' score='4.988324762' weighted='0.746476919'/>
+  <v c='FRA' score='5.032105888' weighted='0.753028537'/>
+  <v c='DEU' score='5.492495125' weighted='0.821923397'/>
+  <v c='GRC' score='4.323416922' weighted='0.64697691'/>
+  <v c='HUN' score='4.052375561' weighted='0.606416977'/>
+  <v c='IRL' score='4.577750199' weighted='0.685036565'/>
+  <v c='ITA' score='5.144610274' weighted='0.769864234'/>
+  <v c='JPN' score='4.135673811' weighted='0.618882128'/>
+  <v c='LUX' score='5.210142846' weighted='0.779670844'/>
+  <v c='NLD' score='5.165442998' weighted='0.772981744'/>
+  <v c='NZL' score='6.065922065' weighted='0.907733764'/>
+  <v c='NOR' score='5.867820117' weighted='0.878088835'/>
+  <v c='POL' score='4.041753342' weighted='0.604827417'/>
+  <v c='PRT' score='5.41370181' weighted='0.810132387'/>
+  <v c='SVK' score='3.714905515' weighted='0.555916335'/>
+  <v c='KOR' score='5.127111434' weighted='0.767245624'/>
+  <v c='ESP' score='5.115493152' weighted='0.765507008'/>
+  <v c='SWE' score='6.05195' weighted='0.905643417'/>
+  <v c='CHE' score='4.896912164' weighted='0.732797498'/>
+  <v c='GBR' score='4.910492601' weighted='0.734829739'/>
+  <v c='USA' score='4.915813239' weighted='0.735625945'/>
 </vs>
 <vs y='2016' r='LMY' i='CDI_ENV'>
-  <v c='AUS' score='3.912149891' weighted='0.57909704'/>
-  <v c='AUT' score='5.22124915' weighted='0.772876811'/>
-  <v c='BEL' score='5.049240299' weighted='0.747415154'/>
-  <v c='CAN' score='4.005453876' weighted='0.592908388'/>
-  <v c='CZE' score='5.287243624' weighted='0.78264566'/>
-  <v c='DNK' score='5.533751155' weighted='0.819135004'/>
-  <v c='FIN' score='5.528880115' weighted='0.818413967'/>
-  <v c='FRA' score='5.171557658' weighted='0.765521214'/>
-  <v c='DEU' score='5.332164712' weighted='0.789295116'/>
-  <v c='GRC' score='5.172333209' weighted='0.765636015'/>
-  <v c='HUN' score='5.817449821' weighted='0.861129575'/>
-  <v c='IRL' score='4.829526793' weighted='0.714892003'/>
-  <v c='ITA' score='5.460278044' weighted='0.808259127'/>
-  <v c='JPN' score='3.879303863' weighted='0.574234998'/>
-  <v c='LUX' score='4.316816592' weighted='0.638997938'/>
-  <v c='NLD' score='5.067806938' weighted='0.750163486'/>
-  <v c='NZL' score='4.751876453' weighted='0.703397791'/>
-  <v c='NOR' score='4.800515686' weighted='0.710597626'/>
-  <v c='POL' score='5.702831581' weighted='0.844163179'/>
-  <v c='PRT' score='5.718653469' weighted='0.846505219'/>
-  <v c='SVK' score='6.1556962' weighted='0.911198587'/>
-  <v c='KOR' score='3.779352645' weighted='0.559439692'/>
-  <v c='ESP' score='5.217772933' weighted='0.772362243'/>
-  <v c='SWE' score='5.70543' weighted='0.84455'/>
-  <v c='CHE' score='4.306158205' weighted='0.637420227'/>
-  <v c='GBR' score='5.286148455' weighted='0.782483548'/>
-  <v c='USA' score='3.990358576' weighted='0.590673902'/>
+  <v c='AUS' score='3.912149891' weighted='0.558515911'/>
+  <v c='AUT' score='5.22124915' weighted='0.745408741'/>
+  <v c='BEL' score='5.049240299' weighted='0.720851993'/>
+  <v c='CAN' score='4.005453876' weighted='0.571836403'/>
+  <v c='CZE' score='5.287243624' weighted='0.754830405'/>
+  <v c='DNK' score='5.533751155' weighted='0.790022916'/>
+  <v c='FIN' score='5.528880115' weighted='0.789327505'/>
+  <v c='FRA' score='5.171557658' weighted='0.738314563'/>
+  <v c='DEU' score='5.332164712' weighted='0.76124354'/>
+  <v c='GRC' score='5.172333209' weighted='0.738425284'/>
+  <v c='HUN' score='5.817449821' weighted='0.830524999'/>
+  <v c='IRL' score='4.829526793' weighted='0.689484716'/>
+  <v c='ITA' score='5.460278044' weighted='0.779533569'/>
+  <v c='JPN' score='3.879303863' weighted='0.553826666'/>
+  <v c='LUX' score='4.316816592' weighted='0.616287928'/>
+  <v c='NLD' score='5.067806938' weighted='0.723502649'/>
+  <v c='NZL' score='4.751876453' weighted='0.678399008'/>
+  <v c='NOR' score='4.800515686' weighted='0.685342961'/>
+  <v c='POL' score='5.702831581' weighted='0.81416159'/>
+  <v c='PRT' score='5.718653469' weighted='0.816420393'/>
+  <v c='SVK' score='6.1556962' weighted='0.878814556'/>
+  <v c='KOR' score='3.779352645' weighted='0.539557186'/>
+  <v c='ESP' score='5.217772933' weighted='0.744912461'/>
+  <v c='SWE' score='5.70543' weighted='0.81453256'/>
+  <v c='CHE' score='4.306158205' weighted='0.614766289'/>
+  <v c='GBR' score='5.286148455' weighted='0.754674054'/>
+  <v c='USA' score='3.990358576' weighted='0.56968133'/>
 </vs>
 <vs y='2016' r='LMY' i='CDI_SEC'>
-  <v c='AUS' score='3.092465876' weighted='0.383926476'/>
-  <v c='AUT' score='6.430174035' weighted='0.798299531'/>
-  <v c='BEL' score='4.670958015' weighted='0.579894661'/>
-  <v c='CAN' score='4.746548653' weighted='0.589279161'/>
-  <v c='CZE' score='4.115513301' weighted='0.510936768'/>
-  <v c='DNK' score='5.036171208' weighted='0.625235505'/>
-  <v c='FIN' score='5.594203837' weighted='0.694514685'/>
-  <v c='FRA' score='6.152893528' weighted='0.763875439'/>
-  <v c='DEU' score='4.626000024' weighted='0.574313172'/>
-  <v c='GRC' score='5.300304858' weighted='0.658027428'/>
-  <v c='HUN' score='5.355975111' weighted='0.664938833'/>
-  <v c='IRL' score='6.070504208' weighted='0.753646889'/>
-  <v c='ITA' score='5.100575301' weighted='0.633231207'/>
-  <v c='JPN' score='4.847554026' weighted='0.601818875'/>
-  <v c='LUX' score='4.977350478' weighted='0.617932972'/>
-  <v c='NLD' score='4.926679508' weighted='0.611642223'/>
-  <v c='NZL' score='4.897248527' weighted='0.607988396'/>
-  <v c='NOR' score='4.925123026' weighted='0.611448987'/>
-  <v c='POL' score='4.42916553' weighted='0.549876371'/>
-  <v c='PRT' score='5.157285608' weighted='0.640271734'/>
-  <v c='SVK' score='5.245450679' weighted='0.651217338'/>
-  <v c='KOR' score='2.754663977' weighted='0.341988716'/>
-  <v c='ESP' score='5.248713519' weighted='0.651622416'/>
-  <v c='SWE' score='3.87868' weighted='0.48153'/>
-  <v c='CHE' score='5.089347805' weighted='0.631837325'/>
-  <v c='GBR' score='4.931515975' weighted='0.612242665'/>
-  <v c='USA' score='4.398936347' weighted='0.546123449'/>
+  <v c='AUS' score='4.292465876' weighted='0.666520169'/>
+  <v c='AUT' score='6.430174035' weighted='0.998456553'/>
+  <v c='BEL' score='4.670958015' weighted='0.725291199'/>
+  <v c='CAN' score='4.746548653' weighted='0.737028668'/>
+  <v c='CZE' score='4.115513301' weighted='0.639043547'/>
+  <v c='DNK' score='5.036171208' weighted='0.782000319'/>
+  <v c='FIN' score='5.594203837' weighted='0.868649814'/>
+  <v c='FRA' score='6.152893528' weighted='0.955401336'/>
+  <v c='DEU' score='4.626000024' weighted='0.718310269'/>
+  <v c='GRC' score='5.300304858' weighted='0.823014134'/>
+  <v c='HUN' score='5.355975111' weighted='0.831658431'/>
+  <v c='IRL' score='6.070504208' weighted='0.94260819'/>
+  <v c='ITA' score='5.100575301' weighted='0.792000777'/>
+  <v c='JPN' score='4.847554026' weighted='0.752712455'/>
+  <v c='LUX' score='4.977350478' weighted='0.772866827'/>
+  <v c='NLD' score='4.926679508' weighted='0.764998803'/>
+  <v c='NZL' score='4.897248527' weighted='0.760428856'/>
+  <v c='NOR' score='4.925123026' weighted='0.764757117'/>
+  <v c='POL' score='4.42916553' weighted='0.687746447'/>
+  <v c='PRT' score='5.157285608' weighted='0.80080657'/>
+  <v c='SVK' score='5.245450679' weighted='0.814496556'/>
+  <v c='KOR' score='3.954663977' weighted='0.614067386'/>
+  <v c='ESP' score='5.248713519' weighted='0.815003199'/>
+  <v c='SWE' score='3.87868' weighted='0.602268381'/>
+  <v c='CHE' score='5.089347805' weighted='0.790257408'/>
+  <v c='GBR' score='4.931515975' weighted='0.765749794'/>
+  <v c='USA' score='4.398936347' weighted='0.683052558'/>
 </vs>
 <vs y='2016' r='LMY' i='CDI_TEC'>
-  <v c='AUS' score='4.600858123' weighted='0.424165736'/>
-  <v c='AUT' score='6.07313701' weighted='0.559899167'/>
-  <v c='BEL' score='5.147184812' weighted='0.474533093'/>
-  <v c='CAN' score='4.781769529' weighted='0.440844455'/>
-  <v c='CZE' score='5.103357854' weighted='0.470492566'/>
-  <v c='DNK' score='5.84479746' weighted='0.538847918'/>
-  <v c='FIN' score='5.809796812' weighted='0.535621112'/>
-  <v c='FRA' score='5.912517407' weighted='0.545091205'/>
-  <v c='DEU' score='5.106495854' weighted='0.470781866'/>
-  <v c='GRC' score='3.575989952' weighted='0.329680327'/>
-  <v c='HUN' score='3.373486868' weighted='0.311011012'/>
-  <v c='IRL' score='4.166869292' weighted='0.384155115'/>
-  <v c='ITA' score='3.818098916' weighted='0.352001017'/>
-  <v c='JPN' score='5.494392931' weighted='0.506543162'/>
-  <v c='LUX' score='4.61259422' weighted='0.425247719'/>
-  <v c='NLD' score='5.473466484' weighted='0.504613896'/>
-  <v c='NZL' score='4.594991265' weighted='0.423624855'/>
-  <v c='NOR' score='5.769127169' weighted='0.531871666'/>
-  <v c='POL' score='3.370556422' weighted='0.310740846'/>
-  <v c='PRT' score='6.686681672' weighted='0.616463533'/>
-  <v c='SVK' score='3.410178577' weighted='0.314393721'/>
-  <v c='KOR' score='7.992516625' weighted='0.736852041'/>
-  <v c='ESP' score='5.024274024' weighted='0.46320161'/>
-  <v c='SWE' score='5.25761' weighted='0.48471'/>
-  <v c='CHE' score='5.536992324' weighted='0.510470517'/>
-  <v c='GBR' score='4.292016368' weighted='0.395692767'/>
-  <v c='USA' score='4.170240697' weighted='0.384465934'/>
+  <v c='AUS' score='4.600858123' weighted='0.409090871'/>
+  <v c='AUT' score='6.07313701' weighted='0.540000331'/>
+  <v c='BEL' score='5.147184812' weighted='0.45766817'/>
+  <v c='CAN' score='4.781769529' weighted='0.425176827'/>
+  <v c='CZE' score='5.103357854' weighted='0.453771243'/>
+  <v c='DNK' score='5.84479746' weighted='0.519697243'/>
+  <v c='FIN' score='5.809796812' weighted='0.516585118'/>
+  <v c='FRA' score='5.912517407' weighted='0.525718644'/>
+  <v c='DEU' score='5.106495854' weighted='0.454050262'/>
+  <v c='GRC' score='3.575989952' weighted='0.317963476'/>
+  <v c='HUN' score='3.373486868' weighted='0.29995767'/>
+  <v c='IRL' score='4.166869292' weighted='0.370502228'/>
+  <v c='ITA' score='3.818098916' weighted='0.339490888'/>
+  <v c='JPN' score='5.494392931' weighted='0.4885406'/>
+  <v c='LUX' score='4.61259422' weighted='0.4101344'/>
+  <v c='NLD' score='5.473466484' weighted='0.4866799'/>
+  <v c='NZL' score='4.594991265' weighted='0.408569212'/>
+  <v c='NOR' score='5.769127169' weighted='0.512968928'/>
+  <v c='POL' score='3.370556422' weighted='0.299697105'/>
+  <v c='PRT' score='6.686681672' weighted='0.594554397'/>
+  <v c='SVK' score='3.410178577' weighted='0.303220157'/>
+  <v c='KOR' score='7.992516625' weighted='0.710664293'/>
+  <v c='ESP' score='5.024274024' weighted='0.446739408'/>
+  <v c='SWE' score='5.25761' weighted='0.467486878'/>
+  <v c='CHE' score='5.536992324' weighted='0.492328377'/>
+  <v c='GBR' score='4.292016368' weighted='0.381629832'/>
+  <v c='USA' score='4.170240697' weighted='0.370802001'/>
 </vs>
-<!-- OVERALL -->
 <vs y='2016' r='LMY' i='CDI'>
-  <v c='AUS' score='4.771938565'/>
-  <v c='AUT' score='5.124044858'/>
-  <v c='BEL' score='5.01981729'/>
-  <v c='CAN' score='5.073130495'/>
-  <v c='CZE' score='4.732272973'/>
-  <v c='DNK' score='5.536031141'/>
-  <v c='FIN' score='5.515159628'/>
-  <v c='FRA' score='5.341362334'/>
-  <v c='DEU' score='5.003072667'/>
-  <v c='GRC' score='4.634734963'/>
-  <v c='HUN' score='4.833187489'/>
-  <v c='IRL' score='5.02852521'/>
-  <v c='ITA' score='4.97569022'/>
-  <v c='JPN' score='4.527619731'/>
-  <v c='LUX' score='4.874212282'/>
-  <v c='NLD' score='5.186986922'/>
-  <v c='NZL' score='5.163441769'/>
-  <v c='NOR' score='5.214676791'/>
-  <v c='POL' score='4.583019701'/>
-  <v c='PRT' score='5.363466021'/>
-  <v c='SVK' score='4.578090305'/>
-  <v c='KOR' score='4.456721837'/>
-  <v c='ESP' score='5.08623809'/>
-  <v c='SWE' score='5.517657116'/>
-  <v c='CHE' score='4.46542694'/>
-  <v c='GBR' score='5.180761343'/>
-  <v c='USA' score='4.674863967'/>
+  <v c='AUS' score='4.89858215'/>
+  <v c='AUT' score='5.170464736'/>
+  <v c='BEL' score='5.007418819'/>
+  <v c='CAN' score='5.061523764'/>
+  <v c='CZE' score='4.710353312'/>
+  <v c='DNK' score='5.518266101'/>
+  <v c='FIN' score='5.517968862'/>
+  <v c='FRA' score='5.370204181'/>
+  <v c='DEU' score='4.989671492'/>
+  <v c='GRC' score='4.658389341'/>
+  <v c='HUN' score='4.85176738'/>
+  <v c='IRL' score='5.065557181'/>
+  <v c='ITA' score='4.98012864'/>
+  <v c='JPN' score='4.538990208'/>
+  <v c='LUX' score='4.877877818'/>
+  <v c='NLD' score='5.177735587'/>
+  <v c='NZL' score='5.153981251'/>
+  <v c='NOR' score='5.20438604'/>
+  <v c='POL' score='4.577551718'/>
+  <v c='PRT' score='5.356138361'/>
+  <v c='SVK' score='4.601808317'/>
+  <v c='KOR' score='4.582562745'/>
+  <v c='ESP' score='5.092012473'/>
+  <v c='SWE' score='5.459407705'/>
+  <v c='CHE' score='4.48760111'/>
+  <v c='GBR' score='5.171903154'/>
+  <v c='USA' score='4.66505749'/>
 </vs>
 
 </data>

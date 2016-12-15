@@ -235,7 +235,7 @@ this calculation has to be reproduced to allow users to adjust weights and retur
         CDI_SEC: {
           value: 1,
           unlocked: true,
-          invSTD: 1.271794225
+          invSTD: 1.649285884
        },
        CDI_TEC: {
           value: 1,

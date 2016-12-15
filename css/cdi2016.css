@@ -13,6 +13,20 @@
     
     
 }
+
+/* weight-toggle divs in main nav do not dissapear when the menu is close (mobile) if flexbox is not supported
+ * this hides them
+ */
+
+.closed .weight-toggle {  
+    visibility: hidden;
+}
+
+/* this keeps them from being hidden when flexbox is supported so that they remain visible during animate close of men */
+
+.flexbox .weight-toggle {
+    visibility: visible !important;
+}
 /*
 .weight-toggle.active {
     
