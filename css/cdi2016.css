@@ -912,7 +912,7 @@ td.spacer {
 }
 
 #new_cdi table tr.master-row td:nth-child(3), #home-cdi-indicator tr.master-row td:nth-child(3) {
-    width: 69px;
+    width: 80px;
     padding-left: 30px;
    
 }
@@ -2153,13 +2153,12 @@ span.country-label {
     }
     
     .original-score {
-        left: 23px;
-        position: absolute;
-        
+        left: 34px;
+        position: absolute;        
     }
     
     #home-cdi thead tr td:nth-child(3), #home-cdi-indicator thead tr td:nth-child(3)  {
-   width: 71px;
+   width: 85px;
         
     }
     
