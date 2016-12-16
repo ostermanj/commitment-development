@@ -1,3 +1,9 @@
+body {
+    -webkit-font-smoothing: subpixel-antialiased; 
+}
+
+/* ^ fixes font-rendering inconsistency in safari, perhaps others. text in menus looked thin without */
+
 .weight-toggle {
     width:122px;
     height: 53px;
@@ -401,16 +407,22 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
     overflow-x: hidden;
     max-width:  980px;
 }
-#new_cdi #home-cdi {
+#home-cdi {
   width: 50%;
     margin-left: 4px;
     -webkit-transition:width 0.5s linear;
     transition: width 0.5s linear;
 }
-#new_cdi #home-cdi.home-processed {
-    width: 99%;
+#home-cdi.home-processed {
+
     margin-left: 4px;
+    width: 99%;
+    width: -webkit-calc(100% - 8px);
     width:         calc(100% - 8px);
+}
+
+.lte9 #home-cdi {
+    width: 99% !important; /* workaround for lte9 IE tablenot transitioning to full width */
 }
 #new_cdi table thead {
   border-bottom: 2px solid #333;
@@ -649,6 +661,11 @@ td.spacer {
 #home-cdi-indicator .indicator-label a.indicator-info,
 .bar-charts .indicator-label a.indicator-info {
   background: url(../images/info.png) center center no-repeat;
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering:   -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 }
 #new_cdi table tr.master-row a.show-trend {
   background: url(../images/trends.png) center center no-repeat;
@@ -1184,6 +1201,7 @@ a.load-trends.fading {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
+  background-color: #fff;
 }
 .country-wrapper {
   max-width:980px;
@@ -1201,9 +1219,7 @@ a.load-trends.fading {
   box-sizing: border-box;
   font-size: 36px;
 }
-.comparison .country-title h2 {
-  padding: 40px;
-}
+
 .country-details {
   box-sizing: border-box;
   display: block;
@@ -1250,21 +1266,7 @@ a.load-trends.fading {
 .country-details .right-side {
     padding: 10px 0px 10px 20px;
 }
-.comparison .country-details .left-side,
-.comparison .country-details .right-side {
-  width: 100%;
-}
-.country-comparison .country-info {
-  width: 50%;
-  float: left;
-}
-.country-comparison .country-info.country-title {
-  padding: 10px;
-  box-sizing: border-box;
-}
-.country-comparison .country-info.country-title:first-child {
-  border-right: 1px solid #FFF;
-}
+
 .more-info {
   text-align: center;
   background: #ffbb36;

@@ -972,7 +972,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
               indicatorItems[0].className += ' active-intro';
               var introNext = document.createElement('button');
               introNext.id = 'intro-next';
-              introNext.innerText = 'next';
+              introNext.innerHTML  = 'next';
               introNext.onclick = nextIntro;
               var introWrapper = document.querySelector('#carousel-indicator-wrapper');
               document.querySelector('#carousel-indicator-wrapper').appendChild(introNext);
@@ -1396,8 +1396,8 @@ cdiApp.CDI.View = Backbone.View.extend({
         if (this.model.isWeighted){
             Backbone.pubSub.trigger('adjustCDI', [1, 0, this.model.ranksObj, this.model.originalRanksObj, 'resorted']);
         }
-        $('#home-cdi').addClass('home-processed');
-
+        $('#home-cdi').addClass('home-processed');        
+        
     },
     events: {
         'mouseup .active .bar-segment': 'barSegmentClicked',
@@ -1667,13 +1667,15 @@ cdiApp.mainNav.View = Backbone.View.extend({
         });
         this.addMenuCloseButton();
         $(window).scroll(function(){
+
             el = document.getElementById('cdi-mainNav');
             var extra = $('body').width() > 739 ? 31 : $('body').width() > 739 ? 36 : $('body').width() > 539 ? 58 : 35;
             var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
 
 
             
-            if($('body').scrollTop() >= scrollPoint){
+            if($(document).scrollTop() >= scrollPoint){
+                
                 var navHeight = $('#cdi-mainNav').height() + 20;
                 $(el).addClass('stick-to-top');
                 $('#new_cdi').css('padding-top', navHeight);
