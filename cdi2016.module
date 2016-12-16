@@ -52,7 +52,7 @@ $fbDescription = array(
   '#tag' => 'meta',
   '#attributes' => array(
      'property' => 'og:description',
-     'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark, Sweden, and Finland take first place in a three-way tie. The UK is tied for sixth while the United States is tied for 20th.',
+     'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark and Finland take first place in a tie. The UK is tied for eight while the United States takes 21st.',
   ),
 );
 drupal_add_html_head($fbDescription, 'metatag_og:description_0');
@@ -83,7 +83,7 @@ drupal_add_html_head($twitterDescription, 'metatag_twitter:description_0');
 
 function cdi2016_html_head_alter(&$head_elements) {
   $getTitle = drupal_get_title();
-  $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark, Sweden, and Finland take first place in a three-way tie. The UK is tied for sixth while the United States is tied for 20th.';
+  $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark and Finland take first place in a tie. The UK is tied for eight while the United States takes 21st.';
   
   $cdiImageURL = 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png'; 
     
@@ -99,36 +99,6 @@ function cdi2016_html_head_alter(&$head_elements) {
  
  } 
 
-
-
-
-
-/*  $head_elements['metatag_og:image_0'] = array(
-    '#theme' => 'metatag_property',
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#id' => 'metatag_og:image_0',
-    '#name' => 'og:image',
-    '#value' => $cdiImageURL,
-    '#weight' => 30,
-    );*/
-/*$fbDescription = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'property' => 'og:description',
-       'content' => $longDescription,
-    ),
-  );
-  drupal_add_html_head($fbDescription, 'facebook_meta_description');
-  $fbImage = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'property' => 'og:image',
-       'content' => $cdiImageURL,
-    ),
-  );
-  drupal_add_html_head($fbImage, 'facebook_meta_image');
-*/
 /**
  * Gets the content of the Country page.
  *
@@ -145,7 +115,7 @@ function cdi2016_index_page() {
   drupal_add_js(drupal_get_path('module', 'cdi2016') . '/js/cdi2016_modal.combined.js');
   drupal_add_js(array('cdi2016' => array('pathToModule' => drupal_get_path('module', 'cdi2016'))), 'setting');
 
-  drupal_set_title(t('Commitment to Development Index 2016')); 
+  drupal_set_title(t('Commitment to Development Index')); 
   
   return theme('cdi2016_index') . theme('cdi2016_footer');
 }
@@ -168,80 +138,13 @@ function cdi2016_country_page($country_code) {
   drupal_add_js(drupal_get_path('module', 'cdi2016') . '/js/cdi2016_country.js');
   drupal_add_js(array('cdi2016' => array('pathToModule' => drupal_get_path('module', 'cdi2016'))), 'setting');
 
-  drupal_set_title(t('Commitment to Development Index 2016 - ' . $country->title));
+  drupal_set_title(t('Commitment to Development Index - ' . $country->title));
   
   
   $content = node_view($country, 'teaser');
   $description_overall = strip_tags(drupal_render($content['field_overall']));
   
-  /*
-  $fbDescription = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'property' => 'og:description',
-       'content' => $description_overall,
-    ),
-  );
-  drupal_add_html_head($fbDescription, 'facebook_meta_description');
 
-
-  $fbImage = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'property' => 'og:image',
-       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png',
-    ),
-  );
-  drupal_add_html_head($fbImage, 'facebook_meta_image');
-
-   $twitterCard = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'name' => 'twitter:card',
-       'content' => 'summary_large_image',
-    ),
-  );
-  drupal_add_html_head($twitterCard, 'twitter_meta_card');
-  
-   $twitterImage = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'name' => 'twitter:image',
-       'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png',
-    ),
-  );
-  drupal_add_html_head($twitterImage, 'twitter_meta_image');
-  
-    
-  $twitterCreator = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'name' => 'twitter:creator',
-       'content' => '@cgdev',
-    ),
-  );
-  drupal_add_html_head($twitterCreator, 'twitter_meta_creator');
-  
-      
-  $twitterDescription = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'name' => 'twitter:description',
-       'content' => $description_overall,
-    ),
-  );
-  drupal_add_html_head($twitterDescription, 'twitter_meta_description');
-  
-        
-  $twitterTitle = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-       'name' => 'twitter:title',
-       'content' => 'The Commitment to Development Index',
-    ),
-  );
-  drupal_add_html_head($twitterTitle, 'twitter_meta_title');
-*/
   $indicators = array(
     'cdi' => 'field_overall',
     'cdi_aid' => 'field_aid',

@@ -5,9 +5,9 @@
           
             <p id="cdi-carousel-0" class="cdi-carousel" style="position: relative;">The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations.</p>
             <p id="cdi-carousel-1" class="cdi-carousel" style="visibility: hidden; opacity:0">The CDI adjusts for size and economic weight to measure countries according to their potential to help. </p>
-            <p id="cdi-carousel-2" class="cdi-carousel" style="visibility: hidden; opacity:0">Denmark, Sweden, and Finland take first place in a three-way tie. Portugal and France complete the top five.</p>
-            <p id="cdi-carousel-3" class="cdi-carousel" style="visibility: hidden; opacity:0">The United Kingdom is tied for sixth place with strengths in <em>aid</em> and <em>trade</em>. The United States is tied for 20th place, with low scores on <em>environment</em> and <em>security</em>.</p>
-            <p id="cdi-carousel-4" class="cdi-carousel" style="visibility: hidden; opacity:0">South Korea comes in last with poor showings across the board except for <em>migration</em> and a commanding lead in <em>technology</em>.</p>
+            <p id="cdi-carousel-2" class="cdi-carousel" style="visibility: hidden; opacity:0">Denmark and Finland take first place in a tie. Sweden, France, and Portugal complete the top five.</p>
+            <p id="cdi-carousel-3" class="cdi-carousel" style="visibility: hidden; opacity:0">The United Kingdom is tied for eighth place with strengths in <em>aid</em> and <em>trade</em>. The United States takes 21st place, with low scores on <em>environment</em> and <em>security</em>.</p>
+            <p id="cdi-carousel-4" class="cdi-carousel" style="visibility: hidden; opacity:0">Switzerland comes in last with poor showings in <em>finance</em>, <em>environment</em>, and <em>trade</em>.</p>
             <p id="cdi-carousel-5" class="cdi-carousel" style="visibility: hidden; opacity:0">Explore all the results below. Adjust weights to see the effect on scores. Unstack the graph to make easier comparisons. Select countries for trends and components for more details.</p>
             
         </div>

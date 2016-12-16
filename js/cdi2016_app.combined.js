@@ -1381,7 +1381,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 $row.html('<td><span class="new-value new-rank"></span> <span class="original-value original-rank">' + item.rank_label + '</span></td>' +
                     '<td><a class="expand-row" href="#" title="Expand row"><span class="country-label">' + item.country + '</span></a></td>' +
                     '<td><div><span class="new-value new-score">' + item.value_label + '</span> <span class="original-value original-score"></span></td>' +
-                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a class="twitter-share-row" href="http://twitter.com/intent/tweet?text=' +  encodeURIComponent(item.country) + '%20ranks%20' + item.rank_label.replace('*','%20(tie)') + '%20of%2027%20on%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
+                    '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-c="' + item.index + '" href="#"></a></td><td class="twitter-td"><a class="twitter-share-row" href="http://twitter.com/intent/tweet?text=' +  encodeURIComponent(item.country) + '%20ranks%20' + item.rank_label.replace('*','%20(tie)') + '%20of%2027%20on%20the%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
  
                 this.$el.find('tbody').append($row);
                 var indicators = this.indicator.children;
@@ -1429,7 +1429,7 @@ cdiApp.CDI.View = Backbone.View.extend({
         FB.ui(
          {
             method: 'feed',
-            name: fbCountry + ' ranks ' + fbRank + ' out of 27 on the 2016 Commitment to Development Index',
+            name: fbCountry + ' ranks ' + fbRank + ' out of 27 on the Commitment to Development Index',
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
             link: 'http://www.cgdev.org' + location.pathname,
@@ -2263,7 +2263,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     $row.html('<td>' + item.rank + '</td>' +
                         '<td><a href="#"><span class="country-label">' + item.country + '</a></span></td>' +
                         '<td>' + item.value_label + '</td>' +
-                        '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '" href="#"></a></td><td class="twitter-td"><a class="twitter-share-row" href="http://twitter.com/intent/tweet?text=' + item.country + '%20ranks%20' + item.rank + '%20of%2027%20on%20the%20' + this.app.indicators[this.indicator].toLowerCase() + '%20component%20of%20the%202016%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
+                        '<td><div class="chart-holder"></div></td><td class="spacer"></td><td class="facebook-td"><a data-country="' + item.country + '" data-rank="' + item.rank + '" data-component="' + this.app.indicators[this.indicator] + '" href="#"></a></td><td class="twitter-td"><a class="twitter-share-row" href="http://twitter.com/intent/tweet?text=' + item.country + '%20ranks%20' + item.rank + '%20of%2027%20on%20the%20' + this.app.indicators[this.indicator].toLowerCase() + '%20component%20of%20the%20Commitment%20to%20Development%20Index&amp;url=' + encodeURIComponent(location.href) + '&amp;via=CGDev"></a></td>');
                     
 
                     this.$el.find('tbody').append($row);
@@ -2308,7 +2308,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         FB.ui(
          {
             method: 'feed',
-            name: e.currentTarget.dataset.country + ' ranks ' + e.currentTarget.dataset.rank + ' out of 27 on the ' +  e.currentTarget.dataset.component.toLowerCase() + ' component of the 2016 Commitment to Development Index',
+            name: e.currentTarget.dataset.country + ' ranks ' + e.currentTarget.dataset.rank + ' out of 27 on the ' +  e.currentTarget.dataset.component.toLowerCase() + ' component of the Commitment to Development Index',
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
             link: 'http://www.cgdev.org' + location.pathname,
