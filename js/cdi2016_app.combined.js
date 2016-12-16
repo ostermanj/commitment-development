@@ -2318,7 +2318,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     },
     showComponents: function(event) {
         console.log(event);
-        if (event.target.className === 'twitter-share-row') {
+        if (event.target && event.target.className === 'twitter-share-row') {
           console.log('twitter-share-row');
           return;
         }
