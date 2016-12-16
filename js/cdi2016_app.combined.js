@@ -807,17 +807,17 @@ new code : adds object 'original' to main indicators and copies data to it so th
        
            var originalScore = $('tr#' + c + '-master span.original-score');
     
-           originalScore[0].innerHTML = '(' + that.flatIndicators.CDI.original.values[c].toFixed(1) + ')';
-           newScore[0].innerHTML = that.flatIndicators.CDI.values[c].toFixed(1);
+           originalScore[0].innerHTML = '(' + that.flatIndicators.CDI.original.values[c].toFixed(2) + ')';
+           newScore[0].innerHTML = that.flatIndicators.CDI.values[c].toFixed(2);
                
        }
     window.setTimeout(function(){
         
       
         for (var c in ranksObj){
-            if (parseFloat(that.flatIndicators.CDI.values[c].toFixed(1)) > parseFloat(that.flatIndicators.CDI.original.values[c].toFixed(1))){
+            if (parseFloat(that.flatIndicators.CDI.values[c].toFixed(2)) > parseFloat(that.flatIndicators.CDI.original.values[c].toFixed(2))){
                $('tr#' + c + '-master').addClass('change-score better');
-           } else if (parseFloat(that.flatIndicators.CDI.values[c].toFixed(1)) < parseFloat(that.flatIndicators.CDI.original.values[c].toFixed(1))){
+           } else if (parseFloat(that.flatIndicators.CDI.values[c].toFixed(2)) < parseFloat(that.flatIndicators.CDI.original.values[c].toFixed(2))){
                $('tr#' + c + '-master').addClass('change-score worse');
            } else {
                 $('tr#' + c + '-master').removeClass('change-score worse better small-score-change medium-score-change large-score-change');
@@ -1237,14 +1237,14 @@ rounding was happening in the import from the XML file, which was influencing la
 calculations on the overall scores. new feature require client-side recalculations
 */  
 
-    this.indicator.user_friendly_values[i] = this.indicator.values[i].toFixed(1); 
+    this.indicator.user_friendly_values[i] = this.indicator.values[i].toFixed(2); 
 
     if (this.indicator.values.hasOwnProperty(i)) {
 /* 
 below now compares each countries trimmed value to determine ties since those values
 are now brought in untrimmed form the XML
 */            
-        currentTrimmed = parseFloat(this.indicator.values[i].toFixed(1)); 
+        currentTrimmed = parseFloat(this.indicator.values[i].toFixed(2)); 
         if( currentTrimmed != prev_value){
                    rank = correlative;
            prev_value = currentTrimmed;
