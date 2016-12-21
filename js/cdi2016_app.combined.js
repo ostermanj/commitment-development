@@ -235,7 +235,7 @@ this calculation has to be reproduced to allow users to adjust weights and retur
         CDI_SEC: {
           value: 1,
           unlocked: true,
-          invSTD: 1.649285884
+          invSTD: 0.593957004
        },
        CDI_TEC: {
           value: 1,
@@ -2445,7 +2445,9 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                 var indicators = [];
         var parent = this.app.flatIndicators[i];
 
+
                 if (this.app.flatIndicators[i].children) {
+                  console.log(this.app.flatIndicators);
                     $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent + '">' + this.data[i] + '</div>');
                     $content.append($label);
                     for (var j in this.app.flatIndicators[i].children) {
@@ -2454,16 +2456,19 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         $content.append($label);
                         $content.append($chart);
                         indicators = [this.app.flatIndicators[i].children[j]];
-            parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
-
-            this.app.createBarChart(2016, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
+                        parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
+                        if (parent.values[this.countryCode] === null){
+                          $chart.addClass('null-value');
+                        }
+                        this.app.createBarChart(2016, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
                     }
                 } else {
                     var $label = $('<div class="indicator-label">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a></div>');
-                    var $chart = $('<div class="chart-holder"></div>');
+                    var $chart = $('<div class="chart-holder"></div>');                   
                     indicators = [i];
                     $content.append($label);
                     $content.append($chart);
+
                     this.app.createBarChart(2016, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
                 }
             }

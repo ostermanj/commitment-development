@@ -6,6 +6,11 @@
  * Date: 5/11/2015
  * Time: 3:50 PM
  */
+/* REMOVE THIS BEFORE DEPLOYMENT */
+include 'ChromePhp.php';
+
+/* END */
+
 class CdiXmlParser {
 
     const ROOT_INDICATOR = 'CDI';
@@ -88,10 +93,10 @@ class CdiXmlParser {
             $this->summaries[(string) $summary['code']] = (string) $summary;
         }
      
-        foreach ($this->xml->xpath('//vs') as $value) {
-            $indicator = (string) $value['i'];
-            $year = intval($value['y']);
-            $format = isset($value['format']) ? (string) $value['format'] : 'score';
+        foreach ($this->xml->xpath('//vs') as $value) { // for each <vs> tag in the XML
+            $indicator = (string) $value['i'];  // for example 'SEC_ARM'
+            $year = intval($value['y']); // for example 2016
+            $format = isset($value['format']) ? (string) $value['format'] : 'score'; // if format is specified, use that. if not use 'score'. for example: 'percentage'
 
             switch ($format) {
                 case 'percentage' :
@@ -112,8 +117,7 @@ class CdiXmlParser {
                 $country = (string) $entry['c'];
                 if ($country == 'EU')
                     continue;
-                
-                $floatValue = floatval(isset($entry['score']) ? $entry['score'] : $entry['value']);
+                $floatValue = (string) $entry['value'] === 'null' ? null : floatval(isset($entry['score']) ? $entry['score'] : $entry['value']); // added ternary here preserve 'null' values from xml
                 $this->indicatorsValues[$indicator][$year][$country] = isset($value['precision']) ? round($floatValue,intval($value['precision'])) : $floatValue;
                 $printedValue = '';
                 if ('currency' === $format) {

@@ -524,6 +524,20 @@ tr.trend {
 .unstacked .chart-holder {
     background-color: transparent;
 }
+
+.chart-holder.null-value {
+    background: -webkit-repeating-linear-gradient( 45deg, #fff, #fff 5px, #dfdfdb 5px, #dfdfdb 10px );
+    background: repeating-linear-gradient( 45deg, #fff, #fff 5px, #dfdfdb 5px, #dfdfdb 10px );
+}
+
+.chart-holder.null-value:before {
+    content: 'no data';
+    position: absolute;
+    right: 0px;
+    bottom: 15px;
+    color: #dfdfdb;
+
+}
 .zero-mark {
     position: absolute;
     width: 1px;
