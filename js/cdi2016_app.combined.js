@@ -137,7 +137,7 @@ var BarChartItemView = Backbone.View.extend({
 	} else { // if main 7-indicator chart
 
 	 var availableSpace = this.model.max;
-	  
+	  console.log('model max', this.model.max);
      var percent_width = this.model.weighted / availableSpace;	
    
      var width = percent_width * 100;//this.model.holderWidth;
@@ -677,7 +677,12 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
 
 
-        var barSpacing = 0.5; // spacing between bars expressed as percentage of chart-holder width
+        var barSpacing = 1; // spacing between unstacked bars expressed as percentage of chart-holder width     
+        /*
+         * barStretch is factor by which to lengthen unstacked bar segments so that they take up available space. 
+         * depends on how the years specific data looks. 0 is none; 1 is a little; 10 a lot
+         */
+        var barStretch = 4; 
         var maxOfAll = function(maxes) {
             return Math.max.apply(null, maxes);
         }
@@ -705,10 +710,10 @@ new code : adds object 'original' to main indicators and copies data to it so th
                                                                        
                     $(segment).attr('data-stacked-width', originalWidth);
                     var barIndex = cgdCdi.indicatorsOrder.indexOf(ind); //get the index of the bar segment
-                    var bWidth = $(segment).attr('data-unweighted') / this.maxes[this.maxes.length - 1] * ( 100 / 7 - barSpacing ) + '%';
-                    $(segment).css({'left': barIndex * 100 / 7 + '%', 'position': 'absolute', 'width': bWidth});
+                    var bWidth = $(segment).attr('data-unweighted') / this.maxes[this.maxes.length - 1] * ( 100 / (7 - barStretch / 10) - barSpacing ) + '%';
+                    $(segment).css({'left': barIndex * 100 / (7 - barStretch / 10) + '%', 'position': 'absolute', 'width': bWidth});
                     var zeroMark = $('<div class="zero-mark">');
-                    $(zeroMark).css('left', barIndex * 100 / 7 + '%');
+                    $(zeroMark).css('left', barIndex * 100 / (7 - barStretch / 10) + '%');
                     $('#' + c + '-master .chart-holder').append(zeroMark);
                     $('#home-cdi').addClass('unstacked');
                     
@@ -743,7 +748,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
          /*
          * ADJUST BARS
     */
-
+console.log(this);
         if (params[4] === 'resorted'){
 
             this.adjustScores(params);
@@ -765,8 +770,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
                         segment.removeClass('transition');
                     }
                     segment.attr('data-weighted', this.flatIndicators[ind].weighted[c]);
-                    newWidth = this.flatIndicators[ind].weighted[c] * 100  / 7;
-                    segment.css('width', newWidth + '%')
+                    newWidth = this.flatIndicators[ind].weighted[c] * 100  / this.data.indicators.CDI.max;
+                    segment.css('width', newWidth + '%');
+
                     
                 }
             }
