@@ -1100,12 +1100,13 @@ console.log(this);
                             $content.append($label);
                             $content.append($chart);
                             indicators = [child.children[k]];
-                all_data = that.flatIndicators[child.children[k]];
-
-            
+                            all_data = that.flatIndicators[child.children[k]];
+                            if (all_data.values[countryCode] === null) {
+                              $chart.addClass('null-value');
+                            }
                             that.createBarChart(2016, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
-                        }
-                    } else {
+                                    }
+                                } else {
                         $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         indicators = [children[j]];

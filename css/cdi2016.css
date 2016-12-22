@@ -530,6 +530,10 @@ tr.trend {
     background: repeating-linear-gradient( 45deg, #fff, #fff 5px, #dfdfdb 5px, #dfdfdb 10px );
 }
 
+.null-value .value {
+    display:none;
+}
+
 .chart-holder.null-value:before {
     content: 'no data';
     position: absolute;
@@ -564,13 +568,14 @@ div.chart-holder > div.transition {
   line-height: 20px;
   margin-left: 10px;
     position: absolute;
-    right: 10px;
+    
 }
 .chart-holder div.indicator {
     position: absolute;
     font-size: 10px;
-    bottom: -21px;
+    bottom: -14px;
     left: 0;
+    color:#dfdfdb;
 }
 .chart-holder div.indicator span {
     position: relative;
@@ -717,7 +722,7 @@ td.spacer {
 #new_cdi table tr.master-row .chart-holder {
   margin: 0;
 }
-#new_cdi table#home-cdi-indicator tr.components .chart-holder {
+.chart-holder {
   margin: 0 auto 20px;
     width:98%;
 }
@@ -1535,7 +1540,12 @@ span.country-label {
 @media screen and (max-width: 739px) {
     .cdi-header-wrapper {
       margin-top:0;
-    }  
+    } 
+
+    .country-details .indicator-label {
+        margin-bottom: 7px;
+    } 
+
     #site-logo {
         height: 36px !important;
         background-size: contain !important;
@@ -1609,7 +1619,7 @@ span.country-label {
     }
         .chart-holder div:not(.tooltip) > .value {
         bottom:8px;
-        right: -8px;
+        
         color: #000;
     }
 }
@@ -1657,11 +1667,12 @@ span.country-label {
         width: 4px;
     }
     .zero-mark {
-        height: 40px;
+        height: 20px;
+        top: -4px;
     }
     .chart-holder div:not(.tooltip) > .value {
         bottom:8px;
-        right: -8px;
+        
         color: #000;
     }
     #home_cdi tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {

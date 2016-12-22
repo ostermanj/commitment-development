@@ -28,7 +28,7 @@
                     <h2><?php print t($node->title);?>—Commitment to Development Index</h2>
                 </div>
                 <?php } ?>
-                <p>The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect people living in poorer nations. The CDI adjusts for size and economic weight to measure countries according to their potential to help. This is the country report for <?php print t($node->title);?>. For results of all countries, visit <a href="/commitment-development-index-2016">the main CDI page</a>.</p>
+                <p>The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect people living in poorer nations. The CDI adjusts for size and economic weight to measure countries according to their potential to help. This is the country report for <?php print t($node->title);?>. For results of all countries, visit <a href="/commitment-development-index">the main CDI page</a>.</p>
                 <?php foreach ($indicators as $indicator => $field) { ?>
                 <div class="indicator <?php print $indicator;?>">
                     <div class="indicator-title">
