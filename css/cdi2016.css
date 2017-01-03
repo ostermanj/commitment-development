@@ -472,6 +472,12 @@ tr.trend {
 #new_cdi table tbody tr.info tr{
   display: table-row;
 }
+
+.tfooter {
+    color: #888;
+    font-size: 12px;
+}
+
 .info-wrapper, .trends-wrapper, .components-wrapper {
     overflow: hidden;
     -webkit-transition:height 0.5s linear;

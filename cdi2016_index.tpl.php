@@ -19,6 +19,12 @@
 <div class="dev-cdi">
     <div id="new_cdi">
       <table id="home-cdi">
+        <tfoot>
+          <tr>
+          <td colspan="1"></td>
+            <td class="tfooter" colspan="5">Note: Overall scores are calculated such that each component contributes equally regardless of the range of scores in the component. The length of each stacked bar segment reflects that adjustment. Unstacked bar segments are not adjusted.</td>
+          </tr>
+          </tfoot>
         <thead>
           <tr>
             <td style="position:relative;">
@@ -33,9 +39,11 @@
             
           </tr>
         </thead>
+
+        
         <tbody>
         </tbody>
-	
+      	
       </table>
       <table id="home-cdi-indicator" style="display: none">
         <thead>
