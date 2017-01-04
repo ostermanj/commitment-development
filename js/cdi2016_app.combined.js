@@ -1673,6 +1673,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
             
         });
         this.addMenuCloseButton();
+        this.addWeightsNote();
         $(window).scroll(function(){
 
             el = document.getElementById('cdi-mainNav');
@@ -1694,6 +1695,9 @@ cdiApp.mainNav.View = Backbone.View.extend({
     },
     addMenuCloseButton: function(){
         this.$el.append('<button id="close-mainNav">(X) Close</button>');
+    },
+    addWeightsNote: function(){
+       this.$el.append('<div id="weights-note"><div class="slider"><div class="notch-key notch-even notch-0">1/4x</div><div class="notch-key notch-odd notch-1">1/3x</div><div class="notch-key notch-even notch-2">1/2x</div><div class="notch-key notch-odd notch-3">1x</div><div class="notch-key notch-even notch-4">2x</div><div class="notch-key notch-odd notch-5">3x</div><div class="notch-key notch-even notch-6">4x</div><div class="slider-notches even notch-0"></div><div class="slider-notches odd notch-1"></div><div class="slider-notches even notch-2"></div><div class="slider-notches odd notch-3"></div><div class="slider-notches even notch-4"></div><div class="slider-notches odd notch-5"></div><div class="slider-notches even notch-6"></div></div></div>');
     },
     
    attachSliderEvents: function(el, j){

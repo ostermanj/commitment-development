@@ -192,7 +192,7 @@ body {
     cursor: default;
     border-bottom-width: 0;
 }
-.weights-instruct {
+.weights-instruct, #weights-note {
     position: absolute;
     color: #fff;
     font-size: 12px;
@@ -201,6 +201,48 @@ body {
     -webkit-transition:opacity 0.5s linear;
     transition: opacity 0.5s linear;
 }
+#weights-note {
+    top: -30px;
+    height: 19px;
+    padding: 0 3px;
+}
+
+#weights-note .slider {
+    top: -14px;
+    margin: 0;
+}
+
+.notch-key {
+    position: absolute;
+    margin-left: -3%;
+    opacity: 0.8;
+}
+
+ .notch-key.notch-1, .notch-key.notch-2 {
+    margin-left: -9%;
+}
+
+.notch-key.notch-0 {
+    margin-left: -14%;
+}
+
+#weights-note .slider-notches {
+    height: 15px;
+}
+
+#weights-note .slider-notches.odd {
+    top:-4px;
+}
+
+
+.notch-even {
+     top: 15px;
+}
+
+.notch-odd {
+    bottom:13px;
+}
+
 .reset-weight {
     text-decoration: underline; 
     position: absolute;
@@ -404,7 +446,7 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
     padding: 0;
     margin: 0 auto;
     width: 100%;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     max-width:  980px;
 }
 #home-cdi {
