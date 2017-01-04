@@ -202,14 +202,52 @@ body {
     transition: opacity 0.5s linear;
 }
 #weights-note {
-    top: -30px;
-    height: 19px;
+    top: 53px;
+    height: 66px;
     padding: 0 3px;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    width: 238px;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 9999;
+}
+
+.stick-to-top #weights-note {
+    box-shadow: rgba(0,0,0,0.6) 10px 10px 10px;
+}
+
+#weights-note span {
+    position: absolute;
+    bottom: 28px;
+    left: 38px; 
+}
+
+#weights-note.show-note{
+    opacity: 1;
+}
+
+#show-weights-note {
+    background: transparent;
+    padding: 0;
+    text-transform: none;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: inherit;
+    font-family: inherit;
+    display: inline;
+    height: 19px;
+    border-bottom: 1px dotted rgba(255,255,255,0.7);
+}
+
+
+#show-weights-note:hover {
+    border-bottom-color: #fff;
 }
 
 #weights-note .slider {
-    top: -14px;
+    top: 24px;
     margin: 0;
+    left: 130px;
 }
 
 .notch-key {
@@ -446,7 +484,7 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
     padding: 0;
     margin: 0 auto;
     width: 100%;
-    /*overflow-x: hidden;*/
+    overflow-x: hidden;
     max-width:  980px;
 }
 #home-cdi {
@@ -1534,6 +1572,9 @@ span.country-label {
    
 }
 @media screen and (max-width: 1019px) {
+    #weights-note {
+        top: 66px;
+    }
     .cdi-header-wrapper {
       background-position-y: 0px;
       margin-top: -6px; 
@@ -1578,6 +1619,9 @@ span.country-label {
     }
 }
 @media screen and (max-width: 799px) {
+    .stick-to-top #weights-note {
+        box-shadow: none;
+    }
      .weight-toggle {
          width:47.75%
     }
@@ -1586,6 +1630,20 @@ span.country-label {
     }
 }
 @media screen and (max-width: 739px) {
+
+    #weights-note span {
+        left: 6px;
+
+    }
+
+    #weights-note .slider {
+        left: 94px;
+    }
+
+    #weights-note {
+        width: 200px;
+    }
+    
     .cdi-header-wrapper {
       margin-top:0;
     } 
@@ -1684,6 +1742,11 @@ span.country-label {
     }
 }
 @media screen and (max-width: 410px) {
+
+    #weights-note {
+        top:0;
+    }
+
     #home-cdi .master-row td:nth-child(4){
         width: 53%;
     }
@@ -1701,6 +1764,10 @@ span.country-label {
     }
 }
 @media screen and (max-width: 600px) {
+
+    #weights-note {
+            background-color: rgba(0,0,0,0.8);
+    }
     #home-cdi, #home-cdi-indicator {
         table-layout: fixed;
     }

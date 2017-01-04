@@ -620,13 +620,15 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
     if (a === 0){
         $('.reset-weight').attr('aria-hidden', true);
-      
-        //window.setTimeout(function(){
-                $('#cdi-mainNav').removeClass('weighted-component');
+        window.setTimeout(function(){
+           $('.reset-weight').css('visibility', 'hidden');
+        },400);
+            $('#cdi-mainNav').removeClass('weighted-component');
             $('.weights-component, .weights-instruct').attr('aria-hidden', false);
-          //  },400);
+      
     } else {
-        $('.reset-weight').attr('aria-hidden', false);
+        $('.reset-weight').attr('aria-hidden', false).css('visibility', 'visible');
+       
         $('.weights-component, .weights-instruct').attr('aria-hidden', true);
     }
      sumTotalWeights = this.totalWeightsFn();
@@ -1642,6 +1644,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 }
                 that.attachSliderEvents(sliderDiv, j);
                 sliderSelector = document.createElement('button');
+                sliderSelector.setAttribute('aria-label', item.label + ' weight adjuster');
                 sliderSelector.className = 'slider-selector';
                 sliderSelectorInner = document.createElement('div');
                 sliderSelectorInner.className = 'slider-selector-inner';
@@ -1656,7 +1659,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
                 var weightsInstruct = document.createElement('div');
                 weightsInstruct.className = 'weights-instruct';
                 $(weightsInstruct).attr('aria-hidden', false);
-                weightsInstruct.innerText = 'Sliders adjust weights';
+                weightsInstruct.innerHTML = 'Sliders adjust <button aria-label="Move component weights to adjust scores" id="show-weights-note">weights</button>';
                 weightToggle.appendChild(weightsInstruct);
                 
                 var resetWeightDiv = document.createElement('div');
@@ -1697,7 +1700,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         this.$el.append('<button id="close-mainNav">(X) Close</button>');
     },
     addWeightsNote: function(){
-       this.$el.append('<div id="weights-note"><div class="slider"><div class="notch-key notch-even notch-0">1/4x</div><div class="notch-key notch-odd notch-1">1/3x</div><div class="notch-key notch-even notch-2">1/2x</div><div class="notch-key notch-odd notch-3">1x</div><div class="notch-key notch-even notch-4">2x</div><div class="notch-key notch-odd notch-5">3x</div><div class="notch-key notch-even notch-6">4x</div><div class="slider-notches even notch-0"></div><div class="slider-notches odd notch-1"></div><div class="slider-notches even notch-2"></div><div class="slider-notches odd notch-3"></div><div class="slider-notches even notch-4"></div><div class="slider-notches odd notch-5"></div><div class="slider-notches even notch-6"></div></div></div>');
+       this.$el.append('<div id="weights-note"><span>Custom weights: </span><div class="slider"><div class="notch-key notch-even notch-0">1/4x</div><div class="notch-key notch-odd notch-1">1/3x</div><div class="notch-key notch-even notch-2">1/2x</div><div class="notch-key notch-odd notch-3">1x</div><div class="notch-key notch-even notch-4">2x</div><div class="notch-key notch-odd notch-5">3x</div><div class="notch-key notch-even notch-6">4x</div><div class="slider-notches even notch-0"></div><div class="slider-notches odd notch-1"></div><div class="slider-notches even notch-2"></div><div class="slider-notches odd notch-3"></div><div class="slider-notches even notch-4"></div><div class="slider-notches odd notch-5"></div><div class="slider-notches even notch-6"></div></div></div>');
     },
     
    attachSliderEvents: function(el, j){
@@ -1878,9 +1881,19 @@ console.log(e.data.notch);
     events: {
         'click a.selectable': 'menuItemClicked',
         'click .reset-weight a': 'resetWeight',
-        'click #close-mainNav': 'closeMainNav'
+        'click #close-mainNav': 'closeMainNav',
+        'mouseover #show-weights-note': 'showWeightsNote',
+        'mouseout #show-weights-note': 'showWeightsNote',
+        'click #show-weights-note': 'showWeightsNote'
       
         
+    },
+
+    showWeightsNote: function(e){
+        if (e.type === 'mouseover') $('#weights-note').addClass('show-note');
+        if (e.type === 'mouseout') $('#weights-note').removeClass('show-note');
+        if (e.type === 'click') $('#weights-note').toggleClass('show-note');
+        console.log(e.type);
     },
     
     closeMainNav: function(){

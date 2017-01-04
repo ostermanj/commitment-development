@@ -22,7 +22,7 @@
         <tfoot>
           <tr>
           <td colspan="1"></td>
-            <td class="tfooter" colspan="5">Note: Each component's contribution to the overall score is adjusted to account for the range of scoress in the component. The length of each stacked bar segment reflects that adjustment. Unstacked bar segments are not adjusted.</td>
+            <td class="tfooter" colspan="5">Note: Each component's contribution to the overall score is adjusted according to the range of scores in the component. The length of each stacked bar segment reflects that adjustment. Unstacked bar segments are not adjusted.</td>
           </tr>
           </tfoot>
         <thead>
