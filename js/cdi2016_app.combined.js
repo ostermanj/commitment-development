@@ -1893,11 +1893,19 @@ console.log(e.data.notch);
     toggleWeightsNote: function(e){
       console.log(e);
       if (e.type === 'click' && e.screenX !== 0) return; // this disables clicks that are not made by keyboard so that touch devices don't double fire on "mouseover" and click
-        if ($('#weights-note').hasClass('show-note')){
+      if (e.type === 'mouseout'){
           this.hideWeightsNote();
-        } else {
+          return;
+      }
+      if (e.type === 'mouseover'){
           this.showWeightsNote();
-        }
+          return;
+      }
+      if ($('#weights-note').hasClass('show-note')) { // only keyboard clicks left
+        this.hideWeightsNote();
+        return;
+      }
+      this.showWeightsNote(); //only keyboard clicks without 'show-note' class left
     },
 
     showWeightsNote: function(){
