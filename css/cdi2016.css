@@ -210,6 +210,7 @@ body {
     width: 238px;
     background-color: rgba(0,0,0,0.8);
     z-index: 9999;
+    
 }
 
 .stick-to-top #weights-note {
@@ -219,11 +220,12 @@ body {
 #weights-note span {
     position: absolute;
     bottom: 28px;
-    left: 38px; 
+    left: 35px; 
 }
 
 #weights-note.show-note{
     opacity: 1;
+    visibility: visible;
 }
 
 #show-weights-note {
@@ -248,6 +250,7 @@ body {
     top: 24px;
     margin: 0;
     left: 130px;
+    cursor: default;
 }
 
 .notch-key {
@@ -758,7 +761,7 @@ td.spacer {
     padding-left: 30px;
 }
 #new_cdi table tr.master-row td:nth-child(3) div {
-     overflow-y: hidden;
+     
     height:20px;
     position: relative;
 }
@@ -1637,11 +1640,11 @@ span.country-label {
     }
 
     #weights-note .slider {
-        left: 94px;
+        left: 101px;
     }
 
     #weights-note {
-        width: 200px;
+        width: 202px;
     }
     
     .cdi-header-wrapper {
@@ -1847,7 +1850,7 @@ span.country-label {
         position: absolute;        
     }
     #home-cdi thead tr td:nth-child(3), #home-cdi-indicator thead tr td:nth-child(3)  {
-   width: 85px;
+       width: 75px;
     }
     #unstack-td, .indicator-unstack {
         width: 53px;

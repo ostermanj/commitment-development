@@ -1700,7 +1700,7 @@ cdiApp.mainNav.View = Backbone.View.extend({
         this.$el.append('<button id="close-mainNav">(X) Close</button>');
     },
     addWeightsNote: function(){
-       this.$el.append('<div id="weights-note"><span>Custom weights: </span><div class="slider"><div class="notch-key notch-even notch-0">1/4x</div><div class="notch-key notch-odd notch-1">1/3x</div><div class="notch-key notch-even notch-2">1/2x</div><div class="notch-key notch-odd notch-3">1x</div><div class="notch-key notch-even notch-4">2x</div><div class="notch-key notch-odd notch-5">3x</div><div class="notch-key notch-even notch-6">4x</div><div class="slider-notches even notch-0"></div><div class="slider-notches odd notch-1"></div><div class="slider-notches even notch-2"></div><div class="slider-notches odd notch-3"></div><div class="slider-notches even notch-4"></div><div class="slider-notches odd notch-5"></div><div class="slider-notches even notch-6"></div></div></div>');
+       this.$el.append('<div id="weights-note"><span>Custom weights X</span><div class="slider"><div class="notch-key notch-even notch-0">1/4</div><div class="notch-key notch-odd notch-1">1/3</div><div class="notch-key notch-even notch-2">1/2</div><div class="notch-key notch-odd notch-3">1</div><div class="notch-key notch-even notch-4">2</div><div class="notch-key notch-odd notch-5">3</div><div class="notch-key notch-even notch-6">4</div><div class="slider-notches even notch-0"></div><div class="slider-notches odd notch-1"></div><div class="slider-notches even notch-2"></div><div class="slider-notches odd notch-3"></div><div class="slider-notches even notch-4"></div><div class="slider-notches odd notch-5"></div><div class="slider-notches even notch-6"></div></div></div>');
     },
     
    attachSliderEvents: function(el, j){
@@ -1882,24 +1882,41 @@ console.log(e.data.notch);
         'click a.selectable': 'menuItemClicked',
         'click .reset-weight a': 'resetWeight',
         'click #close-mainNav': 'closeMainNav',
-        'mouseover #show-weights-note': 'showWeightsNote',
-        'mouseout #show-weights-note': 'showWeightsNote',
-        'click #show-weights-note': 'showWeightsNote'
+        'mouseover #show-weights-note': 'toggleWeightsNote',
+        'mouseout #show-weights-note': 'toggleWeightsNote',
+        'click #show-weights-note': 'toggleWeightsNote'
+        
       
         
     },
 
-    showWeightsNote: function(e){
-        if (e.type === 'mouseover') $('#weights-note').addClass('show-note');
-        if (e.type === 'mouseout') $('#weights-note').removeClass('show-note');
-        if (e.type === 'click') $('#weights-note').toggleClass('show-note');
-        console.log(e.type);
+    toggleWeightsNote: function(e){
+      console.log(e);
+      if (e.type === 'click' && e.screenX !== 0) return; // this disables clicks that are not made by keyboard so that touch devices don't double fire on "mouseover" and click
+        if ($('#weights-note').hasClass('show-note')){
+          this.hideWeightsNote();
+        } else {
+          this.showWeightsNote();
+        }
+    },
+
+    showWeightsNote: function(){
+        $('#weights-note').css('visibility','visible');
+        $('#weights-note').addClass('show-note');
+    },
+
+    hideWeightsNote: function(){
+       $('#weights-note').removeClass('show-note');
+        window.setTimeout(function(){
+          $('#weights-note').css('visibility','hidden');
+        }, 500);
     },
     
     closeMainNav: function(){
         var closeMainNavText = $('#cdi-mainNav').hasClass('closed') ? '(X) Close' : 'Open menu';
         $('#cdi-mainNav').toggleClass('closed');        
         $('#close-mainNav').text(closeMainNavText);
+        this.hideWeightsNote();
     
     },
     menuItemClickedContinued: function(event, activeIndicator){
