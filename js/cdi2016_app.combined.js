@@ -728,6 +728,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
         $('.slider, .reset-weight, .weights-instruct').addClass('hide-slider');
             window.setTimeout(function(){
                 $('.slider, .reset-weight').css('display', 'none');
+                $('.weights-instruct').css('visibility', 'hidden');
         }, 500);
     //    $('.weight-toggle, .reset-weight').addClass('weighted-override');
         $('.reset-weight').attr('aria-hidden', true);
@@ -741,6 +742,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             $(this).css({'position': 'relative', 'left': '0%', 'width': $(this).attr('data-stacked-width')})
          });
         $('#home-cdi').removeClass('unstacked');
+        $('.weights-instruct').css('visibility', 'visible');
         setTimeout(function(){
             $('.slider, .reset-weight, .weights-instruct').removeClass('hide-slider');
             $('.weight-toggle, .reset-weight').removeClass('weighted-override');
