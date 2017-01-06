@@ -1201,7 +1201,7 @@ canvas {
 margin-bottom: 20px;
 }
 
-.year-results a, .cdi-link a, a.load-trends, .next-button {
+.year-results a, .cdi-link a, a.load-trends, .cdi-next-button {
       display: inline-block;
     background: #fff;
     color: #296976;
@@ -1213,13 +1213,13 @@ margin-bottom: 20px;
 .cdi-link a {
     color: #296976 !important;
 }
-.next-button {
+.cdi-next-button {
     margin: 25px auto;
     text-transform: uppercase;
     -webkit-transition:opacity 0.5s linear;
     transition: opacity 0.5s linear;
 }
-.home .next-button {
+.home .cdi-next-button {
         margin-top: 0;
     margin-left: 50px;
 }

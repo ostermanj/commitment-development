@@ -913,12 +913,12 @@ console.log(this);
         });
         $('#new_cdi .mainNav').remove();  // NEW code to keep from duplicating main CDI navbar
         $('#new_cdi').prepend(this.mainNavView.$el);
-        $('#indicator-description-wrapper').addClass('idw-processed home').append('<a href="#" data-indicator="CDI_AID" class="next-button">Next up: aid</a>');
+        $('#indicator-description-wrapper').addClass('idw-processed home').append('<a href="#" data-indicator="CDI_AID" class="cdi-next-button">Next up: aid</a>');
         
         this.loadCDI();
     },
     events: {
-      'click a.next-button': 'triggerNext',
+      'click a.cdi-next-button': 'triggerNext',
         'click #unstack-td': 'toggleStack' //is this event in the right place?
         
     },
@@ -1432,7 +1432,9 @@ cdiApp.CDI.View = Backbone.View.extend({
         e.stopImmediatePropagation();
     },
     twitterShare: function(e){
-       
+      var c = e.currentTarget.parentNode.parentNode.getAttribute('data-c');
+       dataLayer.push({event:'cdiTweet', label: c + '-overall'});
+
     //    e.stopImmediatePropagation();
         
     },
@@ -1453,6 +1455,7 @@ cdiApp.CDI.View = Backbone.View.extend({
             picture: 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png'
         }); 
         $(event.currentTarget).blur(); //remove focus after click   
+        dataLayer.push({event: 'cdiFacebook', label: fbCountry + '-overall'});
     },
     showCollapsed: function(event) {
       console.log(event);
@@ -1950,7 +1953,7 @@ console.log(e.data.notch);
     ;
 
        
-        if ($target.hasClass('next-button')){
+        if ($target.hasClass('cdi-next-button')){
        
             $target = $('div.' + $target.attr('data-indicator') + '-bg a.selectable');
         }
@@ -1979,7 +1982,7 @@ console.log(e.data.notch);
                 cgdCdi.hideIndicator(activeIndicator);
                 cgdCdi.reload($target.attr('data-indicator'), country);
 
-                $('.next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]).attr('data-indicator','CDI_AID');
+                $('.cdi-next-button').text('Next up: ' + cgdCdi.indicators[cgdCdi.indicatorsOrder[0]]).attr('data-indicator','CDI_AID');
                  $('#indicator-description-wrapper').addClass('idw-processed home');
                 
             }, 500);
@@ -1991,18 +1994,18 @@ console.log(e.data.notch);
         
             var labelIndex = cgdCdi.indicatorsOrder.indexOf($target.attr('data-indicator'));
 
-            $('.next-button').css('opacity',0);
+            $('.cdi-next-button').css('opacity',0);
             if (labelIndex < cgdCdi.indicatorsOrder.length - 1){
                 var nextI = labelIndex + 1;
                 var nextLabel = cgdCdi.indicators[cgdCdi.indicatorsOrder[nextI]];
                 setTimeout(function(){
-                    $('.next-button').text('Next up: ' + nextLabel).attr('data-indicator',cgdCdi.indicatorsOrder[nextI]);
-                    $('.next-button').css('opacity',1);
+                    $('.cdi-next-button').text('Next up: ' + nextLabel).attr('data-indicator',cgdCdi.indicatorsOrder[nextI]);
+                    $('.cdi-next-button').css('opacity',1);
                 },500);
             } else {
                 setTimeout(function(){
-                $('.next-button').text('Next up: Overall scores').attr('data-indicator','CDI');
-                $('.next-button').css('opacity',1);
+                $('.cdi-next-button').text('Next up: Overall scores').attr('data-indicator','CDI');
+                $('.cdi-next-button').css('opacity',1);
                 },500);
             }
             
@@ -2362,7 +2365,8 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         Backbone.pubSub.trigger('triggerNext', e); // triggers menuItemClicked in home.cdi.js
     },
     twitterShare: function(e){
-       
+       var c = e.currentTarget.parentNode.parentNode.getAttribute('data-c');
+       dataLayer.push({event:'cdiTweet', label: c + '-' + e.delegateTarget.className});
    //     e.stopImmediatePropagation();
        
     },
@@ -2379,6 +2383,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
             link: 'http://www.cgdev.org' + location.pathname,
             picture: 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png'
         }); 
+        dataLayer.push({event: 'cdiFacebook', label: e.currentTarget.dataset.country + '-' + e.currentTarget.dataset.component.toLowerCase()});
         $(e.currentTarget).blur(); //remove focus after click   
     },
     showComponents: function(event) {
