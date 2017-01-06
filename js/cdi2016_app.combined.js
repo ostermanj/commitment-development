@@ -350,6 +350,7 @@ var cdiApp = Backbone.View.extend({
 
                 that.changeWeight(0,1,'click');
     //        }, 400);
+             dataLayer.push({event:'cdiResetWeight'}); // for GA event tracking
             return;
         }
         eventType = args.type;
@@ -366,7 +367,7 @@ var cdiApp = Backbone.View.extend({
           userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD; // creates a total weight obj for each
           isWeighted += userWeights[ind].value === 1 ? 0 : 1
         }
-  
+        dataLayer.push({event: 'cdiAdjustWeight', componentNotch: whichInd + '-' + args.data.notch });
        
     
         this.changeWeight(isWeighted, transition, eventType);
@@ -735,6 +736,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
         }, 500);
     //    $('.weight-toggle, .reset-weight').addClass('weighted-override');
         $('.reset-weight').attr('aria-hidden', true);
+        dataLayer.push({event:'Unstack'}); // for GA event tracking
     },
     restackBars: function(){
 
@@ -750,6 +752,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             $('.slider, .reset-weight, .weights-instruct').removeClass('hide-slider');
             $('.weight-toggle, .reset-weight').removeClass('weighted-override');
       },200);
+        dataLayer.push({event:'Restack'}); // for GA event tracking
     },
     adjustCDI: function(params){ //params = [0, 1, Object, Object, "click"]
          /*
@@ -1529,8 +1532,14 @@ cdiApp.CDI.View = Backbone.View.extend({
          window.setTimeout(function(){
             
                 $target.toggleClass('active').toggleClass('active-trend');
-    
+                
+                var action = $target.hasClass('active') ? 'open' : 'close';
+                if (view.className === 'info') {              
+                  dataLayer.push({event: 'cdiToggleRow', rowAction: countryCode + '-overall-' + action });
+                }
+                
             if (view.className === 'trend'){
+               dataLayer.push({event: 'cdiToggleTrends', rowAction: countryCode + '-' + action }); 
                 if ($target.hasClass('active')){
                     $target.addClass('fading');
                     setTimeout(function(){
@@ -2090,7 +2099,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
         
-                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a href="/cdi-2016/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a class="cdi-country-report" href="/cdi-2016/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
  
  
                 that.$el.append(content);
@@ -2160,7 +2169,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                
             });
              var $buttonWrapper = $('<div style="clear:left">');
-             $buttonWrapper.append('<div class="year-results hello"><a target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>');
+             $buttonWrapper.append('<div class="year-results hello"><a class="cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>');
             $content.append($buttonWrapper);
             $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 80;
@@ -2349,7 +2358,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     },
     returnToMain: function(e){
         e.preventDefault();
-        console.log('reutr to main');
+        dataLayer.push({event: 'cdiReturnMain', from: e.target.dataset.c + '-' + $('#home-cdi-indicator').attr('class') });
         Backbone.pubSub.trigger('triggerNext', e); // triggers menuItemClicked in home.cdi.js
     },
     twitterShare: function(e){
@@ -2394,10 +2403,15 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
             }
             delay = 500;
             }
+        var action = $target.hasClass('active') ? 'close' : 'open';
+        var direct = event.barSegment ? '-direct' : '';
+        dataLayer.push({event: 'cdiToggleRow', rowAction: countryCode + '-' + $('#home-cdi-indicator').attr('class') + '-' + action + direct })
         setTimeout(function(){
             $target.toggleClass('active');
             view.toggle(event.barSegment); //passes true if clicking on the bar segment was the trigger            
         }, delay);
+        
+        
     //    $target.toggleClass('active');
         if (event.barSegment) {
             console.log('calling scrool to target');
@@ -2488,7 +2502,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
-             $content.append('<div class="year-results"><a target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
+             $content.append('<div class="year-results"><a class="cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
             //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>');
             //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
             
@@ -2526,7 +2540,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     this.app.createBarChart(2016, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
                 }
             }
-            $content.append('<div class="year-results"><a class="components-report-bottom" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
+            $content.append('<div class="year-results"><a class="components-report-bottom cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
             //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>')
         }
         var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 50;
