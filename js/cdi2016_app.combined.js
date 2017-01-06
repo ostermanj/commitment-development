@@ -707,7 +707,10 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     if (!segment[0].hasAttribute('data-unweighted')){ // if first time unstacking bars set new data atribute to hold the unweighted value
                         $(segment).attr('data-unweighted', this.flatIndicators[ind].original.values[c])
                     }
-                    var originalWidth = $(segment).attr('style').replace(/width: ?(.[^;]+);.*/,'$1');
+                   // var originalWidth = $(segment).attr('style').replace(/width: ?(.[^;]+);.*/,'$1'); // .css() returns pixel value
+                    var originalWidth = (parseInt($(segment).css('width')) / parseInt($(segment).parent().css('width')) * 100).toFixed(2) + '%';
+                    console.log(originalWidth);
+                    
                     
                                                                        
                     $(segment).attr('data-stacked-width', originalWidth);
