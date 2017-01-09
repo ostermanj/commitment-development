@@ -4,6 +4,11 @@ body {
 
 /* ^ fixes font-rendering inconsistency in safari, perhaps others. text in menus looked thin without */
 
+#mobile-hat {
+    height: 47px !important;
+}
+
+
 .weight-toggle {
     width:122px;
     height: 53px;
@@ -692,8 +697,8 @@ div.chart-holder > div.transition {
     -webkit-transition:opacity 0.5s linear;
     transition: opacity 0.5s linear;
     padding-top: 55px;
-    width: 99%;
-    width:         calc(100% - 8px);
+    width: 96%;
+    width:         calc(100% - 24px);
     margin-left: auto;
     margin-right: auto;
 }
