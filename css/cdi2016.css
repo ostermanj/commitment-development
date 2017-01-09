@@ -1312,7 +1312,7 @@ a.load-trends.fading {
 }
 .countries {
   max-width: 100%;
-  margin: 0 auto;
+  margin: -1px auto 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #fff;
@@ -1324,6 +1324,8 @@ a.load-trends.fading {
 .country-title {
   background: #666 center center url(../images/home-hero-2016_4.jpg);
   background-size: cover;
+  width: 98%;
+  padding: 0 1%;
 }
 .country-title h2 {
   margin: 0 auto;
@@ -1579,10 +1581,27 @@ span.country-label {
     .country-details .left-side,
     .country-details .right-side {
         width: 100%;
+        padding: 10px 0;
     }
+
+    .country-details .right-side .bar-charts, .country-details .left-side .line-chart {
+        max-width: 500px;
+    }
+
+    .country-details  {
+        max-width: 650px;
+        margin: 0 auto;
+        float: none;
+
+    } 
    
 }
 @media screen and (max-width: 1019px) {
+
+    div.countries {
+        margin-top: -6px
+    }
+
     #weights-note {
         top: 66px;
     }
