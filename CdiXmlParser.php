@@ -6,10 +6,6 @@
  * Date: 5/11/2015
  * Time: 3:50 PM
  */
-/* REMOVE THIS BEFORE DEPLOYMENT */
-include 'ChromePhp.php';
-
-/* END */
 
 class CdiXmlParser {
 

@@ -47,10 +47,6 @@
       </table>
       <table id="home-cdi-indicator" style="display: none">
         <thead>
-<!--	  <tr>
-		<td  colspan=6 id="indicator-description">
-		</td>
-	  </tr>-->
           <tr>
             <td><a href="#" class="sorting asc" data-field="rank">Rank</a></td>
             <td><a href="#" class="sorting" data-field="country">Country</a></td>
@@ -64,12 +60,7 @@
         </thead>
         <tbody>
         </tbody>
-	<!--<tfoot>
-	  <tr>
-                <td  colspan=6 id="indicator-explanation">
-                </td>
-          </tr>
-	</tfoot> -->
+	
       </table>
         <div id="indicator-description-wrapper">
             <div id="indicator-description"></div>

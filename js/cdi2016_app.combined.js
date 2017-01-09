@@ -199,12 +199,6 @@ invSTD is one-over-standard-deviation for the range of scores in the component. 
 ( flatIndicator[indicator].original.values[country] ) and userWeights[indicator].invSTD divided by the sum of all invSTDs.
 this calculation has to be reproduced to allow users to adjust weights and return valid results. 
  */
-/*(function($){
-    if (Modernizr.testAllProps('display','flexbox') === true){
-        $('html').addClass('flexbox');
-
-    }
-});   */
 
  var userWeights = {
        CDI_AID: {
@@ -346,10 +340,10 @@ var cdiApp = Backbone.View.extend({
               
             }
             var that = this;
-      //      window.setTimeout(function(){
+      
 
                 that.changeWeight(0,1,'click');
-    //        }, 400);
+    
              dataLayer.push({event:'cdiResetWeight'}); // for GA event tracking
             return;
         }
@@ -702,13 +696,13 @@ new code : adds object 'original' to main indicators and copies data to it so th
          for (var ind in this.flatIndicators){
              if (ind.indexOf('CDI_') != -1){
                 
-                for (var c in this.flatIndicators[ind].original.values){ //refactor code below. 1 helper function to handle unstackBars and adjustCDI
+                for (var c in this.flatIndicators[ind].original.values){ 
                     var segment = $('tr#' + c + '-master div.' + ind + '-bg');
                     segment.addClass('transition');
                     if (!segment[0].hasAttribute('data-unweighted')){ // if first time unstacking bars set new data atribute to hold the unweighted value
                         $(segment).attr('data-unweighted', this.flatIndicators[ind].original.values[c])
                     }
-                   // var originalWidth = $(segment).attr('style').replace(/width: ?(.[^;]+);.*/,'$1'); // .css() returns pixel value
+                   
                     var originalWidth = (parseInt($(segment).css('width')) / parseInt($(segment).parent().css('width')) * 100).toFixed(2) + '%';
                     console.log(originalWidth);
                     
@@ -734,7 +728,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 $('.slider, .reset-weight').css('display', 'none');
                 $('.weights-instruct').css('visibility', 'hidden');
         }, 500);
-    //    $('.weight-toggle, .reset-weight').addClass('weighted-override');
+  
         $('.reset-weight').attr('aria-hidden', true);
         dataLayer.push({event:'Unstack'}); // for GA event tracking
     },
@@ -999,7 +993,7 @@ console.log(this);
             indicator: this.flatIndicators['CDI'],
             countries: this.countries,
             app: this
-            //,            reload: userWeighted
+           
         });
     
         this.cdiView = new cdiApp.CDI.View({
@@ -2200,10 +2194,6 @@ cdiApp.LineChart.Model = Backbone.Model.extend({
     var background_color = item.background;
     var scaleLineColor = "rgba(0,0,0,.1)";
     var scaleFontColor = "#666";
-/*  if(border_color=="#FFFFFF"){
-        scaleLineColor = "rgba(255,255,255,.1)";
-        scaleFontColor = "#ffffff";
-    }*/
 
         this.data = {
             labels: [],
@@ -2367,7 +2357,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
     twitterShare: function(e){
        var c = e.currentTarget.parentNode.parentNode.getAttribute('data-c');
        dataLayer.push({event:'cdiTweet', label: c + '-' + e.delegateTarget.className});
-   //     e.stopImmediatePropagation();
+  
        
     },
     facebookShare: function(e){
@@ -2398,7 +2388,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         var countryCode = $target.attr('data-c');
         var view = this.collapsibleViews[countryCode]['components'];
         $target = $target.hasClass('close-components') ? $('.' + countryCode + '-master') : $target;
-    //    var $countryRow = this.$el.find('tr.' + countryCode + '-master');
+
         delay = 0;
         if ($target.hasClass('active')){
             $('.' + countryCode + '-components .components-wrapper').height(0);
@@ -2417,7 +2407,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         }, delay);
         
         
-    //    $target.toggleClass('active');
+    
         if (event.barSegment) {
             console.log('calling scrool to target');
             this.scrollToTarget($target, 10);
@@ -2508,8 +2498,6 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
              $content.append('<div class="year-results"><a class="cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
-            //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>');
-            //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
             
             
           
@@ -2546,7 +2534,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                 }
             }
             $content.append('<div class="year-results"><a class="components-report-bottom cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
-            //$content.append('<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>')
+           
         }
         var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 50;
         $('.' + this.countryCode + '-components .components-wrapper').height(cHeight);
