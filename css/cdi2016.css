@@ -205,6 +205,7 @@ body {
     top: 53px;
     height: 66px;
     padding: 0 3px;
+    -webkit-transition: opacity 0.5s linear;
     transition: opacity 0.5s linear;
     opacity: 0;
     width: 238px;
@@ -502,7 +503,6 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
 
     margin-left: 4px;
     width: 99%;
-    width: -webkit-calc(100% - 8px);
     width:         calc(100% - 8px);
 }
 
@@ -1159,12 +1159,14 @@ background: repeating-linear-gradient(
 .show-components:before {
   left: 7px;
   -webkit-transform:rotate(-45deg);
-          transform:rotate(-45deg);  
+          -ms-transform:rotate(-45deg);
+      transform:rotate(-45deg);  
 }
 .show-components:after {
   right: 6px;
   -webkit-transform:rotate(45deg);
-          transform:rotate(45deg);
+          -ms-transform:rotate(45deg);
+      transform:rotate(45deg);
 }
 .show-components.active:before,
 .show-components.active:after {
@@ -1172,11 +1174,13 @@ background: repeating-linear-gradient(
 }
 .show-components.active:before {
   -webkit-transform:rotate(45deg);
-          transform:rotate(45deg);
+          -ms-transform:rotate(45deg);
+      transform:rotate(45deg);
 }
 .show-components.active:after {
   -webkit-transform:rotate(-45deg);
-          transform:rotate(-45deg);
+          -ms-transform:rotate(-45deg);
+      transform:rotate(-45deg);
 }
 .line-chart-wrapper {
   width: 285px;
@@ -1481,12 +1485,14 @@ a.load-trends.fading {
 .cdi-footer .footer-block .cdi-footer-link:before {
   top: 5px;
   -webkit-transform:rotate(-45deg);
-          transform:rotate(-45deg);
+          -ms-transform:rotate(-45deg);
+      transform:rotate(-45deg);
 }
 .cdi-footer .footer-block .cdi-footer-link:after {
   top: 12px;
   -webkit-transform:rotate(45deg);
-          transform:rotate(45deg);
+          -ms-transform:rotate(45deg);
+      transform:rotate(45deg);
 }
 /* SORTING COLUMNS STYLE*/
 a.sorting,  a.expand-row, #indicator-explanation a, .cdi-modal-content a, .country-details p a {
