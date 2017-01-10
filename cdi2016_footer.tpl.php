@@ -1,16 +1,16 @@
 <div class="cdi-footer-wrapper">
     <div class="cdi-footer">
-        <div class="footer-block brief">
+        <!--<div class="footer-block brief">
             <div class="cdi-icon"></div>
             <div class="title"><?php print t('Read');?></div>
             <div class="description"><?php print t('This year\'s brief');?></div>
             <a href="http://www.cgdev.org/publication/commitment-development-index-2015" class="cdi-footer-link"></a>
-        </div>
+        </div>-->
         <div class="footer-block postcard">
             <div class="cdi-icon"></div>
             <div class="title"><?php print t('Read');?></div>
             <div class="description"><?php print t('The postcard (PDF)');?></div>
-            <a href="http://www.cgdev.org/sites/default/files/cdi-2015-postcard.pdf" class="cdi-footer-link"></a>
+            <a href="http://www.cgdev.org/sites/default/files/cdi-postcard-2016.pdf" class="cdi-footer-link"></a>
         </div>
         <div class="footer-block video">
             <div class="cdi-icon"></div>

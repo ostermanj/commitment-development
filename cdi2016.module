@@ -83,10 +83,10 @@ drupal_add_html_head($twitterDescription, 'metatag_twitter:description_0');
 
 function cdi2016_html_head_alter(&$head_elements) {
   $getTitle = drupal_get_title();
-  $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark and Finland take first place in a tie. The UK is tied for eight while the United States takes 21st.';
+  $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland take first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.';
   
-  $cdiImageURL = 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png'; 
-    
+  $cdiImageURL = 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png'; 
+  
   $head_elements['metatag_description_0']['#value'] = $longDescription;
   $head_elements['metatag_twitter:card_0']['#value'] = 'summary_large_image';
   $head_elements['metatag_twitter:title_0']['#value'] = $getTitle;
