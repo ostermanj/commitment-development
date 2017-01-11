@@ -52,7 +52,7 @@ $fbDescription = array(
   '#tag' => 'meta',
   '#attributes' => array(
      'property' => 'og:description',
-     'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark and Finland take first place in a tie. The UK is tied for eight while the United States takes 21st.',
+     'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland takes first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.'  ,
   ),
 );
 drupal_add_html_head($fbDescription, 'metatag_og:description_0');
@@ -61,7 +61,7 @@ $fbImage = array(
   '#tag' => 'meta',
   '#attributes' => array(
      'property' => 'og:image',
-     'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_r.png',
+     'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png',
   ),
 );
 drupal_add_html_head($fbImage, 'metatag_og:image_0');
@@ -83,7 +83,7 @@ drupal_add_html_head($twitterDescription, 'metatag_twitter:description_0');
 
 function cdi2016_html_head_alter(&$head_elements) {
   $getTitle = drupal_get_title();
-  $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland take first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.';
+  $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland takes first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.';
   
   $cdiImageURL = 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png'; 
   
