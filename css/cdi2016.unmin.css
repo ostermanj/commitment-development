@@ -630,6 +630,10 @@ tr.trend {
     display:none;
 }
 
+.chart-holder.null-value .bar-segment {
+    display: none;
+}
+
 .chart-holder.null-value:before {
     content: 'no data';
     position: absolute;

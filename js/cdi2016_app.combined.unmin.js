@@ -1105,9 +1105,11 @@ new code : adds object 'original' to main indicators and copies data to it so th
                             $content.append($chart);
                             indicators = [child.children[k]];
                             all_data = that.flatIndicators[child.children[k]];
-                            if (all_data.values[countryCode] === null) {
+                            
+                            if (all_data.user_friendly_values[countryCode] === 'null') {
                               $chart.addClass('null-value');
                             }
+                            // null-value class is now function of the printed value, not the value itself. see parser line 128
                             that.createBarChart(2016, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                                     }
                                 } else {

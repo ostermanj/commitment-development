@@ -113,15 +113,25 @@ class CdiXmlParser {
                 $country = (string) $entry['c'];
                 if ($country == 'EU')
                     continue;
-                $floatValue = (string) $entry['value'] === 'null' ? null : floatval(isset($entry['score']) ? $entry['score'] : $entry['value']); // added ternary here preserve 'null' values from xml
+                $floatValue = floatval(isset($entry['score']) ? $entry['score'] : $entry['value']); 
                 $this->indicatorsValues[$indicator][$year][$country] = isset($value['precision']) ? round($floatValue,intval($value['precision'])) : $floatValue;
+             
                 $printedValue = '';
                 if ('currency' === $format) {
                     $printedValue = $formatter->formatCurrency($this->indicatorsValues[$indicator][$year][$country], 'USD');
                 } else {
                     $printedValue = $formatter->format($this->indicatorsValues[$indicator][$year][$country]);
                 }
+                if (isset($entry['isNull'])){
+                    $printedValue = 'null';
+                } 
+                // xml data now puts empty value instead of "null" and adds isNull attribute instead
+                // is isNull is set, changes printedvalue. value is parse d as zero. null value was
+                // messing up the calculation of min and max, which was returning zero because of the
+                // mixed types
+               
                 $this->userFriendlyList[$indicator][$year][$country] = $printedValue;
+
                 if (isset($entry['weighted']) && floatval($entry['weighted'])) {
 
 
