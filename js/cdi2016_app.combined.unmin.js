@@ -1156,15 +1156,22 @@ new code : adds object 'original' to main indicators and copies data to it so th
      *   The rank of the given country in the given indicator.
      */
     getRank: function(countryCode, indicator) {
-        var indicatorData = this.flatIndicators[indicator];
-        var rank = 0;
-        for (var i in indicatorData.values) {
-            rank++;
-            if (i === countryCode) {
-                break;
-            }
+       if (indicator === 'CDI') {
+         var rank = originalRanks[countryCode]['rank_label'].replace('*',' (tie)');
+         return rank;
+       } else { 
+       
+          var indicatorData = this.flatIndicators[indicator];
+          
+          var rank = 0;
+          for (var i in indicatorData.values) {
+              rank++;
+              if (i === countryCode) {
+                  break;
+              }
+          }
+          return rank;
         }
-        return rank;
     },
 
     /**
@@ -1304,6 +1311,8 @@ are now brought in untrimmed form the XML
             Backbone.pubSub.trigger('adjustCDI', [params[1], params[2], this.ranksObj, this.originalRanksObj, params[3]]);
         } else {
            this.originalRanksObj = $.extend(true,{}, this.ranksObj);
+           originalRanks = this.originalRanksObj;
+
 
         }
 
