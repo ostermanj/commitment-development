@@ -48,7 +48,7 @@ function cdi2016_theme() {
  * using hook_html_head_alter instead (once for both index and country pages)
  */
 
-$fbDescription = array(
+/*$fbDescription = array(
   '#tag' => 'meta',
   '#attributes' => array(
      'property' => 'og:description',
@@ -75,12 +75,12 @@ $twitterDescription = array(
 );  
 drupal_add_html_head($twitterDescription, 'metatag_twitter:description_0');
 
- 
+*/ 
 
 /*
  * Implements hook_html_head_alter
  */
-
+/*
 function cdi2016_html_head_alter(&$head_elements) {
   $getTitle = drupal_get_title();
   $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland takes first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.';
@@ -98,7 +98,7 @@ function cdi2016_html_head_alter(&$head_elements) {
   $head_elements['metatag_twitter:description_0']['#weight'] = 30;
  
  } 
-
+*/
 /**
  * Gets the content of the Country page.
  *
