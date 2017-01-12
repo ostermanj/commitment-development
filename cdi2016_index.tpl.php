@@ -78,6 +78,6 @@
 <?php $url_encoded = rawurlencode($GLOBALS['base_url'].'/'.current_path()); ?>
 <div class="social">
     <a href="https://www.facebook.com/sharer/sharer.php?u=<?php print $url_encoded; ?>" class="facebook" target="fb" title="Share on Facebook">Facebook</a>
-    <a href="http://twitter.com/share?text=Denmark%2C%20Sweden%2C%20and%20Finland%20take%201st%20place%20on%20the%20Commitment%20to%20Development%20Index&url=<?php print $url_encoded; ?>&via=cgdev" class="twitter" target="tw" title="Share on Twitter">Twitter</a>
+    <a href="http://twitter.com/share?text=Finland%20takes%201st%20place%20on%20the%20Commitment%20to%20Development%20Index.%20Denmark%20and%20Sweden%20are%20runners-up.&url=<?php print $url_encoded; ?>&via=cgdev" class="twitter" target="tw" title="Share on Twitter">Twitter</a>
      <a href="mailto:?subject=Commitment%20to%20Development%20Index&body=The%20Commitment%20to%20Development%20Index%20ranks%2027%20of%20the%20world%E2%80%99s%20richest%20countries%20on%20policies%20that%20affect%20the%20more%20than%20five%20billion%20people%20living%20in%20poorer%20nations.%0A%0A<?php echo $GLOBALS['base_url'].'/'.current_path();?>" target="em" class="email" title="Share by email">Email</a>
 </div>
