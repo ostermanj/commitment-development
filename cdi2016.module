@@ -43,62 +43,68 @@ function cdi2016_theme() {
   );
 }
 
-/*
- * module had been using drupal_add_html_head to add metatags to the head but many of those metatags already existed
- * using hook_html_head_alter instead (once for both index and country pages)
- */
 
-/*$fbDescription = array(
-  '#tag' => 'meta',
-  '#attributes' => array(
-     'property' => 'og:description',
-     'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland takes first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.'  ,
-  ),
-);
-drupal_add_html_head($fbDescription, 'metatag_og:description_0');
+/* function below is being called on and altering ALL pages; execute only when requested path matches for CDI pages*/
 
-$fbImage = array(
-  '#tag' => 'meta',
-  '#attributes' => array(
-     'property' => 'og:image',
-     'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png',
-  ),
-);
-drupal_add_html_head($fbImage, 'metatag_og:image_0');
+  function cdi2016_html_head_alter(&$head_elements) {
 
-$twitterDescription = array(
-  '#tag' => 'meta',
-  '#attributes' => array(
-     'name' => 'twitter:description',
-     'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations.',
-  ),
-);  
-drupal_add_html_head($twitterDescription, 'metatag_twitter:description_0');
 
-*/ 
+    if (preg_match('/^\/commitment-development-index$/', strtok($_SERVER['REQUEST_URI'],'?')) || preg_match('/^\/cdi-2016\/country/', $_SERVER['REQUEST_URI'])){
+          
+      $getTitle = drupal_get_title();
+      $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland takes first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.';
+      
+      $cdiImageURL = 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png'; 
+      
+      $head_elements['metatag_description_0']['#value'] = $longDescription;
+      $head_elements['metatag_twitter:card_0']['#value'] = 'summary_large_image';
+      $head_elements['metatag_twitter:title_0']['#value'] = $getTitle;
+      $head_elements['metatag_twitter:image:src_0']['#value'] = $cdiImageURL;
+      $head_elements['metatag_twitter:image_0']['#value'] = $cdiImageURL;
+      $head_elements['metatag_og:image:url_0']['#value'] = $cdiImageURL;
+      $head_elements['metatag_og:image_0']['#weight'] = 30;
+      $head_elements['metatag_og:description_0']['#weight'] = 30;
+      $head_elements['metatag_twitter:description_0']['#weight'] = 30;
+     
+    }
+  } 
 
-/*
- * Implements hook_html_head_alter
- */
-/*
-function cdi2016_html_head_alter(&$head_elements) {
-  $getTitle = drupal_get_title();
-  $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland takes first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.';
+function addHeadElements(){
   
-  $cdiImageURL = 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png'; 
+  $fbDescription = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+         'property' => 'og:description',
+         'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Finland takes first place with Denmark and Sweden as runners-up. The UK is ninth while the United States takes 20th.'  ,
+      ),
+    );
+    drupal_add_html_head($fbDescription, 'metatag_og:description_0');
+
+    $fbImage = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+         'property' => 'og:image',
+         'content' => 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png',
+      ),
+    );
+    drupal_add_html_head($fbImage, 'metatag_og:image_0');
+
+    $twitterDescription = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+         'name' => 'twitter:description',
+         'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations.',
+      ),
+    );  
+    drupal_add_html_head($twitterDescription, 'metatag_twitter:description_0'); 
+
+    
   
-  $head_elements['metatag_description_0']['#value'] = $longDescription;
-  $head_elements['metatag_twitter:card_0']['#value'] = 'summary_large_image';
-  $head_elements['metatag_twitter:title_0']['#value'] = $getTitle;
-  $head_elements['metatag_twitter:image:src_0']['#value'] = $cdiImageURL;
-  $head_elements['metatag_twitter:image_0']['#value'] = $cdiImageURL;
-  $head_elements['metatag_og:image:url_0']['#value'] = $cdiImageURL;
-  $head_elements['metatag_og:image_0']['#weight'] = 30;
-  $head_elements['metatag_og:description_0']['#weight'] = 30;
-  $head_elements['metatag_twitter:description_0']['#weight'] = 30;
- 
- } 
-*/
+
+
+}
+
+
 /**
  * Gets the content of the Country page.
  *
@@ -116,6 +122,8 @@ function cdi2016_index_page() {
   drupal_add_js(array('cdi2016' => array('pathToModule' => drupal_get_path('module', 'cdi2016'))), 'setting');
 
   drupal_set_title(t('Commitment to Development Index')); 
+
+  addHeadElements();
   
   return theme('cdi2016_index') . theme('cdi2016_footer');
 }
@@ -160,7 +168,7 @@ function cdi2016_country_page($country_code) {
     'countries' => array($country),
     'indicators' => $indicators,
   );
-
+  addHeadElements();
   return theme('cdi2016_country', $args) . theme('cdi2016_footer');
 }
 
