@@ -361,10 +361,9 @@ var cdiApp = Backbone.View.extend({
           userWeights[ind].totalWeight = userWeights[ind].value * userWeights[ind].invSTD; // creates a total weight obj for each
           isWeighted += userWeights[ind].value === 1 ? 0 : 1
         }
-        dataLayer.push({event: 'cdiAdjustWeight', componentNotch: whichInd + '-' + args.data.notch });
+        if (eventType === 'click' || eventType === 'touchend' || eventType === 'keyup') dataLayer.push({event: 'cdiAdjustWeight', componentNotch: whichInd + '-' + args.data.notch });
        
-    
-        this.changeWeight(isWeighted, transition, eventType);
+          this.changeWeight(isWeighted, transition, eventType);
         
         
     },
@@ -626,6 +625,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
        
         $('.weights-component, .weights-instruct').attr('aria-hidden', true);
     }
+    
      sumTotalWeights = this.totalWeightsFn();
 
 
@@ -1829,8 +1829,6 @@ cdiApp.mainNav.View = Backbone.View.extend({
         }  
     },
     selectorStop: function(e){
-
-
         
        if (e === 'resetWeight'){
 
