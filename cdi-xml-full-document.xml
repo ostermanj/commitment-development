@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8' ?>
-<data year='2016'>
+<data year='2017'>
 
    <label code='EU_COUNTRIES' lang='EN'><![CDATA[AUT, BEL, CHE, CZE,DNK,FIN,FRA,DEU,GRC,HUN,IRL,ITA, LUX,NLD, NOR, POL,PRT,SVK, ESP,SWE, GBR]]></label>
    <country code='AUT' lang='EN'><![CDATA[Austria]]></country>
@@ -793,6 +793,242 @@
   </indicator>
    </hierarchy>
  <!-- beginning of trends -->  
+
+ <!-- placeholder for 2017 -->
+<vs y='2017' r='LMY' i='CDI_AID'>
+  <v c='AUS' score='4.70711759'/>
+  <v c='AUT' score='4.547480846'/>
+  <v c='BEL' score='4.305988233'/>
+  <v c='CAN' score='5.277825417'/>
+  <v c='CZE' score='4.217910498'/>
+  <v c='DNK' score='6.575731722'/>
+  <v c='FIN' score='5.537397194'/>
+  <v c='FRA' score='4.95204813'/>
+  <v c='DEU' score='4.994780986'/>
+  <v c='GRC' score='4.121195808'/>
+  <v c='HUN' score='4.178282637'/>
+  <v c='IRL' score='6.385721551'/>
+  <v c='ITA' score='4.274461372'/>
+  <v c='JPN' score='5.027480257'/>
+  <v c='LUX' score='5.583306544'/>
+  <v c='NLD' score='5.513489055'/>
+  <v c='NZL' score='5.150663747'/>
+  <v c='NOR' score='5.853987158'/>
+  <v c='POL' score='4.098982281'/>
+  <v c='PRT' score='4.834573716'/>
+  <v c='SVK' score='4.101293612'/>
+  <v c='KOR' score='3.973201755'/>
+  <v c='ESP' score='4.28356774'/>
+  <v c='SWE' score='6.621135571'/>
+  <v c='CHE' score='4.611417082'/>
+  <v c='GBR' score='6.053349971'/>
+  <v c='USA' score='5.217609528'/>
+</vs>
+<vs y='2017' r='LMY' i='CDI_TRA'>
+  <v c='AUS' score='5.575327226'/>
+  <v c='AUT' score='4.914747468'/>
+  <v c='BEL' score='5.310685968'/>
+  <v c='CAN' score='4.955500158'/>
+  <v c='CZE' score='4.929560216'/>
+  <v c='DNK' score='5.645154458'/>
+  <v c='FIN' score='5.123335935'/>
+  <v c='FRA' score='5.285509352'/>
+  <v c='DEU' score='5.274316018'/>
+  <v c='GRC' score='4.760659443'/>
+  <v c='HUN' score='5.189338843'/>
+  <v c='IRL' score='5.46825999'/>
+  <v c='ITA' score='4.890255928'/>
+  <v c='JPN' score='4.165895863'/>
+  <v c='LUX' score='5.034902456'/>
+  <v c='NLD' score='5.810656912'/>
+  <v c='NZL' score='5.724447118'/>
+  <v c='NOR' score='4.235084437'/>
+  <v c='POL' score='4.574261753'/>
+  <v c='PRT' score='5.203585507'/>
+  <v c='SVK' score='4.738997068'/>
+  <v c='KOR' score='3.267616942'/>
+  <v c='ESP' score='4.990095197'/>
+  <v c='SWE' score='5.52656273'/>
+  <v c='CHE' score='3.652623223'/>
+  <v c='GBR' score='5.412544997'/>
+  <v c='USA' score='5.340074797'/>
+</vs>
+<vs y='2017' r='LMY' i='CDI_INV'>
+  <v c='AUS' score='5.089524442'/>
+  <v c='AUT' score='4.384960034'/>
+  <v c='BEL' score='5.203898016'/>
+  <v c='CAN' score='5.623080075'/>
+  <v c='CZE' score='5.211832086'/>
+  <v c='DNK' score='5.50112931'/>
+  <v c='FIN' score='6.060935578'/>
+  <v c='FRA' score='5.222919934'/>
+  <v c='DEU' score='4.318788494'/>
+  <v c='GRC' score='4.774890135'/>
+  <v c='HUN' score='5.187968997'/>
+  <v c='IRL' score='4.0271604'/>
+  <v c='ITA' score='5.469544605'/>
+  <v c='JPN' score='4.659938157'/>
+  <v c='LUX' score='4.493217762'/>
+  <v c='NLD' score='4.578948687'/>
+  <v c='NZL' score='4.722391331'/>
+  <v c='NOR' score='5.353592113'/>
+  <v c='POL' score='5.161444638'/>
+  <v c='PRT' score='5.025698924'/>
+  <v c='SVK' score='4.35884393'/>
+  <v c='KOR' score='5.175012492'/>
+  <v c='ESP' score='5.489384645'/>
+  <v c='SWE' score='5.403066118'/>
+  <v c='CHE' score='3.922525482'/>
+  <v c='GBR' score='5.141759707'/>
+  <v c='USA' score='4.506078052'/>
+</vs>
+<vs y='2017' r='LMY' i='CDI_MIG'>
+  <v c='AUS' score='5.845145248'/>
+  <v c='AUT' score='5.018479312'/>
+  <v c='BEL' score='5.231512011'/>
+  <v c='CAN' score='5.808341112'/>
+  <v c='CZE' score='4.086980468'/>
+  <v c='DNK' score='4.848642068'/>
+  <v c='FIN' score='4.988324762'/>
+  <v c='FRA' score='5.032105888'/>
+  <v c='DEU' score='5.492495125'/>
+  <v c='GRC' score='4.323416922'/>
+  <v c='HUN' score='4.052375561'/>
+  <v c='IRL' score='4.577750199'/>
+  <v c='ITA' score='5.144610274'/>
+  <v c='JPN' score='4.135673811'/>
+  <v c='LUX' score='5.210142846'/>
+  <v c='NLD' score='5.165442998'/>
+  <v c='NZL' score='6.065922065'/>
+  <v c='NOR' score='5.867820117'/>
+  <v c='POL' score='4.041753342'/>
+  <v c='PRT' score='5.41370181'/>
+  <v c='SVK' score='3.714905515'/>
+  <v c='KOR' score='5.127111434'/>
+  <v c='ESP' score='5.115493152'/>
+  <v c='SWE' score='6.051953346'/>
+  <v c='CHE' score='4.896912164'/>
+  <v c='GBR' score='4.910492601'/>
+  <v c='USA' score='4.915813239'/>
+</vs>
+<vs y='2017' r='LMY' i='CDI_ENV'>
+  <v c='AUS' score='3.912149891'/>
+  <v c='AUT' score='5.22124915'/>
+  <v c='BEL' score='5.049240299'/>
+  <v c='CAN' score='4.005453876'/>
+  <v c='CZE' score='5.287243624'/>
+  <v c='DNK' score='5.533751155'/>
+  <v c='FIN' score='5.528880115'/>
+  <v c='FRA' score='5.171557658'/>
+  <v c='DEU' score='5.332164712'/>
+  <v c='GRC' score='5.172333209'/>
+  <v c='HUN' score='5.817449821'/>
+  <v c='IRL' score='4.829526793'/>
+  <v c='ITA' score='5.460278044'/>
+  <v c='JPN' score='3.879303863'/>
+  <v c='LUX' score='4.316816592'/>
+  <v c='NLD' score='5.067806938'/>
+  <v c='NZL' score='4.751876453'/>
+  <v c='NOR' score='4.800515686'/>
+  <v c='POL' score='5.702831581'/>
+  <v c='PRT' score='5.718653469'/>
+  <v c='SVK' score='6.1556962'/>
+  <v c='KOR' score='3.779352645'/>
+  <v c='ESP' score='5.217772933'/>
+  <v c='SWE' score='5.705430059'/>
+  <v c='CHE' score='4.306158205'/>
+  <v c='GBR' score='5.286148455'/>
+  <v c='USA' score='3.990358576'/>
+</vs>
+<vs y='2017' r='LMY' i='CDI_SEC'>
+  <v c='AUS' score='2.987246397'/>
+  <v c='AUT' score='8.974814495'/>
+  <v c='BEL' score='3.927276214'/>
+  <v c='CAN' score='4.447067479'/>
+  <v c='CZE' score='2.250050355'/>
+  <v c='DNK' score='5.046205062'/>
+  <v c='FIN' score='6.868698561'/>
+  <v c='FRA' score='8.054206557'/>
+  <v c='DEU' score='3.750571711'/>
+  <v c='GRC' score='6.029806883'/>
+  <v c='HUN' score='5.977194084'/>
+  <v c='IRL' score='8.027591488'/>
+  <v c='ITA' score='5.146006754'/>
+  <v c='JPN' score='4.525346059'/>
+  <v c='LUX' score='4.896511948'/>
+  <v c='NLD' score='4.732950037'/>
+  <v c='NZL' score='4.667661908'/>
+  <v c='NOR' score='4.733714547'/>
+  <v c='POL' score='3.512778033'/>
+  <v c='PRT' score='5.399998743'/>
+  <v c='SVK' score='5.645073224'/>
+  <v c='KOR' score='2.66549067'/>
+  <v c='ESP' score='5.603137004'/>
+  <v c='SWE' score='1.485430628'/>
+  <v c='CHE' score='5.205767861'/>
+  <v c='GBR' score='4.708902082'/>
+  <v c='USA' score='4.230501217'/>
+</vs>
+<vs y='2017' r='LMY' i='CDI_TEC'>
+  <v c='AUS' score='4.600858123'/>
+  <v c='AUT' score='6.07313701'/>
+  <v c='BEL' score='5.147184812'/>
+  <v c='CAN' score='4.781769529'/>
+  <v c='CZE' score='5.103357854'/>
+  <v c='DNK' score='5.84479746'/>
+  <v c='FIN' score='5.809796812'/>
+  <v c='FRA' score='5.912517407'/>
+  <v c='DEU' score='5.106495854'/>
+  <v c='GRC' score='3.575989952'/>
+  <v c='HUN' score='3.373486868'/>
+  <v c='IRL' score='4.166869292'/>
+  <v c='ITA' score='3.818098916'/>
+  <v c='JPN' score='5.494392931'/>
+  <v c='LUX' score='4.61259422'/>
+  <v c='NLD' score='5.473466484'/>
+  <v c='NZL' score='4.594991265'/>
+  <v c='NOR' score='5.769127169'/>
+  <v c='POL' score='3.370556422'/>
+  <v c='PRT' score='6.686681672'/>
+  <v c='SVK' score='3.410178577'/>
+  <v c='KOR' score='7.992516625'/>
+  <v c='ESP' score='5.024274024'/>
+  <v c='SWE' score='5.257611335'/>
+  <v c='CHE' score='5.536992324'/>
+  <v c='GBR' score='4.292016368'/>
+  <v c='USA' score='4.170240697'/>
+</vs>
+<vs y='2017' r='LMY' i='CDI'>
+  <v c='AUS' score='4.884408143'/>
+  <v c='AUT' score='5.189489874'/>
+  <v c='BEL' score='4.998362175'/>
+  <v c='CAN' score='5.077676721'/>
+  <v c='CZE' score='4.660150524'/>
+  <v c='DNK' score='5.572072744'/>
+  <v c='FIN' score='5.588690553'/>
+  <v c='FRA' score='5.401909729'/>
+  <v c='DEU' score='4.975436695'/>
+  <v c='GRC' score='4.632868485'/>
+  <v c='HUN' score='4.834714988'/>
+  <v c='IRL' score='5.0762067'/>
+  <v c='ITA' score='4.96966201'/>
+  <v c='JPN' score='4.484944638'/>
+  <v c='LUX' score='4.861885049'/>
+  <v c='NLD' score='5.193403126'/>
+  <v c='NZL' score='5.1680487'/>
+  <v c='NOR' score='5.223309414'/>
+  <v c='POL' score='4.537024016'/>
+  <v c='PRT' score='5.393145113'/>
+  <v c='SVK' score='4.55561516'/>
+  <v c='KOR' score='4.571788021'/>
+  <v c='ESP' score='5.096731263'/>
+  <v c='SWE' score='5.485196806'/>
+  <v c='CHE' score='4.428446107'/>
+  <v c='GBR' score='5.184600326'/>
+  <v c='USA' score='4.683957467'/>
+</vs>
+ <!-- end 2017 placeholder -->
+
 
 <vs y='2016' r='LMY' i='CDI_AID'>
   <v c='AUS' score='4.70711759'/>
@@ -3651,9 +3887,9 @@
   HERE BEGINS THE CURRENT YEAR'S DATA
 ###############################################################################
    -->
-
+<!-- PLACEHOLDER -->
    <!-- AID -->
-   <vs y='2016' r='LMY' i='AID_QNT'>
+   <vs y='2017' r='LMY' i='AID_QNT'>
   <v c='AUS' value='0.31'/>
   <v c='AUT' value='0.28'/>
   <v c='BEL' value='0.46'/>
@@ -3682,7 +3918,7 @@
   <v c='GBR' value='0.7'/>
   <v c='USA' value='0.19'/>
    </vs>
-   <vs y='2016' r='LMY' i='AID_QLT_EFF'>
+   <vs y='2017' r='LMY' i='AID_QLT_EFF'>
   <v c='AUS' value='-0.260255868'/>
   <v c='AUT' value='-0.229182348'/>
   <v c='BEL' value='0.101754743'/>
@@ -3711,7 +3947,7 @@
   <v c='GBR' value='0.268580434'/>
   <v c='USA' value='-0.087607626'/>
    </vs>
-   <vs y='2016' r='LMY' i='AID_QLT_FST'>
+   <vs y='2017' r='LMY' i='AID_QLT_FST'>
   <v c='AUS' value='-0.327795478'/>
   <v c='AUT' value='-0.795122674'/>
   <v c='BEL' value='-0.692829197'/>
@@ -3740,7 +3976,7 @@
   <v c='GBR' value='0.446904027'/>
   <v c='USA' value='-0.199915851'/>
    </vs>
-   <vs y='2016' r='LMY' i='AID_QLT_BRD'>
+   <vs y='2017' r='LMY' i='AID_QLT_BRD'>
   <v c='AUS' value='-0.058475629'/>
   <v c='AUT' value='-0.048912921'/>
   <v c='BEL' value='-0.557981704'/>
@@ -3769,7 +4005,7 @@
   <v c='GBR' value='0.356346317'/>
   <v c='USA' value='-0.682761389'/>
    </vs>
-   <vs y='2016' r='LMY' i='AID_QLT_TRA'>
+   <vs y='2017' r='LMY' i='AID_QLT_TRA'>
   <v c='AUS' value='0.499'/>
   <v c='AUT' value='-0.139'/>
   <v c='BEL' value='-0.541'/>
@@ -3799,7 +4035,7 @@
   <v c='USA' value='0.267'/>
    </vs>
    <!-- TECHNOLOGY -->
-   <vs y='2016' r='LMY' i='TEC_GOV_GOV' format='percentage'>
+   <vs y='2017' r='LMY' i='TEC_GOV_GOV' format='percentage'>
   <v c='AUS' value='0.004457132'/>
   <v c='AUT' value='0.008039853'/>
   <v c='BEL' value='0.006810481'/>
@@ -3828,7 +4064,7 @@
   <v c='GBR' value='0.00560049'/>
   <v c='USA' value='0.007848653'/>
    </vs>
-   <vs y='2016' r='LMY' i='TEC_GOV_TAX' format='percentage'>
+   <vs y='2017' r='LMY' i='TEC_GOV_TAX' format='percentage'>
    <v c='AUS' value='0.0016605'/>
   <v c='AUT' value='0.002436'/>
   <v c='BEL' value='0.001659'/>
@@ -3857,7 +4093,7 @@
   <v c='GBR' value='0.0020475'/>
   <v c='USA' value='0.000672'/>
    </vs>
-   <vs y='2016' r='LMY' i='TEC_INT_LIM'>
+   <vs y='2017' r='LMY' i='TEC_INT_LIM'>
   <v c='AUS' value='2'/>
   <v c='AUT' value='1.4'/>
   <v c='BEL' value='1.4'/>
@@ -3886,7 +4122,7 @@
   <v c='GBR' value='1.5'/>
   <v c='USA' value='2'/>
    </vs>
-   <vs y='2016' r='LMY' i='TEC_INT_TRI'>
+   <vs y='2017' r='LMY' i='TEC_INT_TRI'>
   <v c='AUS' value='1.65'/>
   <v c='AUT' value='2.8'/>
   <v c='BEL' value='2.4'/>
@@ -3915,7 +4151,7 @@
   <v c='GBR' value='2.65'/>
   <v c='USA' value='1.9'/>
    </vs>
-   <vs y='2016' r='LMY' i='TEC_INT_COP'>
+   <vs y='2017' r='LMY' i='TEC_INT_COP'>
   <v c='AUS' value='0.5'/>
   <v c='AUT' value='1'/>
   <v c='BEL' value='2'/>
@@ -3945,7 +4181,7 @@
   <v c='USA' value='3'/>
    </vs>
    <!-- FINANCE --> <!-- 2016 has three indicators instead of four for the investment component of FINANCE -->
-   <vs y='2016' r='LMY' i='INV_COM'><!-- International Commitments -->
+   <vs y='2017' r='LMY' i='INV_COM'><!-- International Commitments -->
   <v c='AUS' value='12'/>
   <v c='AUT' value='9'/>
   <v c='BEL' value='13'/>
@@ -3974,7 +4210,7 @@
   <v c='GBR' value='15'/>
   <v c='USA' value='15'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_IIA'> <!-- INTERNATIONAL INVESTMENT AGREEMENTS -->
+   <vs y='2017' r='LMY' i='INV_IIA'> <!-- INTERNATIONAL INVESTMENT AGREEMENTS -->
   <v c='AUS' value='5.51'/>
   <v c='AUT' value='5.34'/>
   <v c='BEL' value='5.34'/>
@@ -4003,7 +4239,7 @@
   <v c='GBR' value='5.68'/>
   <v c='USA' value='7.05'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_OOF' format='percentage'> <!-- OTHER OFFICIAL FLOWS / GDP -->
+   <vs y='2017' r='LMY' i='INV_OOF' format='percentage'> <!-- OTHER OFFICIAL FLOWS / GDP -->
    <v c='AUS' value='0.0001'/>
   <v c='AUT' value='0.0003'/>
   <v c='BEL' value='-0.0001'/>
@@ -4032,7 +4268,7 @@
   <v c='GBR' value='0'/>
   <v c='USA' value='0'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_BNK'>
+   <vs y='2017' r='LMY' i='INV_SEC_BNK'>
   <v c='AUS' value='0.8'/>
   <v c='AUT' value='0.47'/>
   <v c='BEL' value='0.93'/>
@@ -4061,7 +4297,7 @@
   <v c='GBR' value='0.67'/>
   <v c='USA' value='0.6'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_TFR'>
+   <vs y='2017' r='LMY' i='INV_SEC_TFR'>
   <v c='AUS' value='0.5'/>
   <v c='AUT' value='0.25'/>
   <v c='BEL' value='0.25'/>
@@ -4090,7 +4326,7 @@
   <v c='GBR' value='0.5'/>
   <v c='USA' value='0.5'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_RCO'>
+   <vs y='2017' r='LMY' i='INV_SEC_RCO'>
   <v c='AUS' value='0'/>
   <v c='AUT' value='0.25'/>
   <v c='BEL' value='0.25'/>
@@ -4119,7 +4355,7 @@
   <v c='GBR' value='0.25'/>
   <v c='USA' value='0'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_PCO'>
+   <vs y='2017' r='LMY' i='INV_SEC_PCO'>
   <v c='AUS' value='0.1'/>
   <v c='AUT' value='0'/>
   <v c='BEL' value='0'/>
@@ -4148,7 +4384,7 @@
   <v c='GBR' value='0'/>
   <v c='USA' value='0'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_PCA'>
+   <vs y='2017' r='LMY' i='INV_SEC_PCA'>
   <v c='AUS' value='0'/>
   <v c='AUT' value='0.5'/>
   <v c='BEL' value='1'/>
@@ -4177,7 +4413,7 @@
   <v c='GBR' value='1'/>
   <v c='USA' value='0'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_CCR'>
+   <vs y='2017' r='LMY' i='INV_SEC_CCR'>
   <v c='AUS' value='0'/>
   <v c='AUT' value='0.5'/>
   <v c='BEL' value='0.5'/>
@@ -4206,7 +4442,7 @@
   <v c='GBR' value='0.5'/>
   <v c='USA' value='0'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_FIE'>
+   <vs y='2017' r='LMY' i='INV_SEC_FIE'>
   <v c='AUS' value='1'/>
   <v c='AUT' value='0'/>
   <v c='BEL' value='0'/>
@@ -4235,7 +4471,7 @@
   <v c='GBR' value='0'/>
   <v c='USA' value='0'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_ETA'>
+   <vs y='2017' r='LMY' i='INV_SEC_ETA'>
   <v c='AUS' value='1'/>
   <v c='AUT' value='0.2'/>
   <v c='BEL' value='0.6'/>
@@ -4264,7 +4500,7 @@
   <v c='GBR' value='0.6'/>
   <v c='USA' value='1'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_AVO'>
+   <vs y='2017' r='LMY' i='INV_SEC_AVO'>
   <v c='AUS' value='0.5'/>
   <v c='AUT' value='0.7'/>
   <v c='BEL' value='0.5'/>
@@ -4293,7 +4529,7 @@
   <v c='GBR' value='0.2'/>
   <v c='USA' value='0.6'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_HLV'>
+   <vs y='2017' r='LMY' i='INV_SEC_HLV'>
   <v c='AUS' value='0.5'/>
   <v c='AUT' value='0.5'/>
   <v c='BEL' value='0.5'/>
@@ -4322,7 +4558,7 @@
   <v c='GBR' value='0.5'/>
   <v c='USA' value='0'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_AML'>
+   <vs y='2017' r='LMY' i='INV_SEC_AML'>
   <v c='AUS' value='0.58'/>
   <v c='AUT' value='0.54'/>
   <v c='BEL' value='0.67'/>
@@ -4351,7 +4587,7 @@
   <v c='GBR' value='0.72'/>
   <v c='USA' value='0.7'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_AIE'>
+   <vs y='2017' r='LMY' i='INV_SEC_AIE'>
   <v c='AUS' value='0.5'/>
   <v c='AUT' value='0.5'/>
   <v c='BEL' value='1'/>
@@ -4380,7 +4616,7 @@
   <v c='GBR' value='1'/>
   <v c='USA' value='0'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_BIT'>
+   <vs y='2017' r='LMY' i='INV_SEC_BIT'>
   <v c='AUS' value='1'/>
   <v c='AUT' value='1'/>
   <v c='BEL' value='1'/>
@@ -4409,7 +4645,7 @@
   <v c='GBR' value='1'/>
   <v c='USA' value='1'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_ITC'>
+   <vs y='2017' r='LMY' i='INV_SEC_ITC'>
   <v c='AUS' value='1'/>
   <v c='AUT' value='1'/>
   <v c='BEL' value='1'/>
@@ -4438,7 +4674,7 @@
   <v c='GBR' value='1'/>
   <v c='USA' value='0.8'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_IJC'>
+   <vs y='2017' r='LMY' i='INV_SEC_IJC'>
   <v c='AUS' value='1'/>
   <v c='AUT' value='0.533333333'/>
   <v c='BEL' value='0.666666667'/>
@@ -4467,7 +4703,7 @@
   <v c='GBR' value='0.933333333'/>
   <v c='USA' value='0.8'/>
    </vs>
-   <vs y='2016' r='LMY' i='INV_SEC_ASC'>
+   <vs y='2017' r='LMY' i='INV_SEC_ASC'>
   <v c='AUS' value='1'/>
   <v c='AUT' value='1'/>
   <v c='BEL' value='1'/>
@@ -4497,7 +4733,7 @@
   <v c='USA' value='0'/>
    </vs>
    <!-- ENVIRONMENT -->
-   <vs y='2016' r='LMY' i='ENV_GRE' lessIsBetter='1'>
+   <vs y='2017' r='LMY' i='ENV_GRE' lessIsBetter='1'>
   <v c='AUS' value='25.7'/>
   <v c='AUT' value='9.3'/>
   <v c='BEL' value='11'/>
@@ -4526,7 +4762,7 @@
   <v c='GBR' value='9.2'/>
   <v c='USA' value='17.8'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_FFP' lessIsBetter='1'>
+   <vs y='2017' r='LMY' i='ENV_FFP' lessIsBetter='1'>
   <v c='AUS' value='58.22'/>
   <v c='AUT' value='0'/>
   <v c='BEL' value='0'/>
@@ -4555,7 +4791,7 @@
   <v c='GBR' value='3.54'/>
   <v c='USA' value='16.26'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_CGE'>
+   <vs y='2017' r='LMY' i='ENV_CGE'>
   <v c='AUS' value='5.13'/>
   <v c='AUT' value='4.57'/>
   <v c='BEL' value='5.36'/>
@@ -4584,7 +4820,7 @@
   <v c='GBR' value='4.52'/>
   <v c='USA' value='3.58'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_GAS' format='currency'>
+   <vs y='2017' r='LMY' i='ENV_GAS' format='currency'>
   <v c='AUS' value='0.36'/>
   <v c='AUT' value='0.85'/>
   <v c='BEL' value='1.06'/>
@@ -4613,7 +4849,7 @@
   <v c='GBR' value='1.09'/>
   <v c='USA' value='0.14'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_USE'>
+   <vs y='2017' r='LMY' i='ENV_USE'>
   <v c='AUS' value='4.91'/>
   <v c='AUT' value='5.32'/>
   <v c='BEL' value='5.32'/>
@@ -4642,7 +4878,7 @@
   <v c='GBR' value='5.32'/>
   <v c='USA' value='4.55'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_PAR'> <!-- ratification of Paris agreement (changed from Kyoto) -->
+   <vs y='2017' r='LMY' i='ENV_PAR'> <!-- ratification of Paris agreement (changed from Kyoto) -->
   <v c='AUS' value='10'/>
   <v c='AUT' value='10'/>
   <v c='BEL' value='0'/>
@@ -4671,7 +4907,7 @@
   <v c='GBR' value='10'/>
   <v c='USA' value='10'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_SUB' lessIsBetter='1' format='currency'> <!-- added currency format -->
+   <vs y='2017' r='LMY' i='ENV_SUB' lessIsBetter='1' format='currency'> <!-- added currency format -->
   <v c='AUS' value='0'/>
   <v c='AUT' value='0'/>
   <v c='BEL' value='0.1'/>
@@ -4700,7 +4936,7 @@
   <v c='GBR' value='0.06'/>
   <v c='USA' value='0.01'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_UNI'>
+   <vs y='2017' r='LMY' i='ENV_UNI'>
   <v c='AUS' value='10'/>
   <v c='AUT' value='10'/>
   <v c='BEL' value='10'/>
@@ -4729,7 +4965,7 @@
   <v c='GBR' value='10'/>
   <v c='USA' value='10'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_MEA'>
+   <vs y='2017' r='LMY' i='ENV_MEA'>
   <v c='AUS' value='4.84'/>
   <v c='AUT' value='5.73'/>
   <v c='BEL' value='5.53'/>
@@ -4758,7 +4994,7 @@
   <v c='GBR' value='5.21'/>
   <v c='USA' value='3.94'/>
    </vs>
-   <vs y='2016' r='LMY' i='ENV_TRO' format='currency' lessIsBetter='1'>
+   <vs y='2017' r='LMY' i='ENV_TRO' format='currency' lessIsBetter='1'>
   <v c='AUS' value='18.78'/>
   <v c='AUT' value='5.77'/>
   <v c='BEL' value='5.77'/>
@@ -4788,7 +5024,7 @@
   <v c='USA' value='6.31'/>
    </vs>
    <!-- SECURITY -->
-   <vs y='2016' r='LMY' i='SEC_PEA_PHI' format='percentage'>
+   <vs y='2017' r='LMY' i='SEC_PEA_PHI' format='percentage'>
   <v c='AUS' value='0.0008'/>
   <v c='AUT' value='0.00412'/>
   <v c='BEL' value='0.00119'/>
@@ -4817,7 +5053,7 @@
   <v c='GBR' value='0.00118'/>
   <v c='USA' value='0.00093'/>
    </vs>
-   <vs y='2016' r='LMY' i='SEC_PEA_SLP'  format='percentage'>
+   <vs y='2017' r='LMY' i='SEC_PEA_SLP'  format='percentage'>
   <v c='AUS' value='0.00004'/>
   <v c='AUT' value='0'/>
   <v c='BEL' value='0.00003'/>
@@ -4846,7 +5082,7 @@
   <v c='GBR' value='0.00022'/>
   <v c='USA' value='0.00094'/>
    </vs>
-   <vs y='2016' r='LMY' i='SEC_ARM' format='percentage'>
+   <vs y='2017' r='LMY' i='SEC_ARM' format='percentage'>
   <v c='AUS' value='' isNull='true'/>
   <v c='AUT' value='-0.00333'/>
   <v c='BEL' value='-0.00371'/>
@@ -4875,7 +5111,7 @@
   <v c='GBR' value='-0.00228'/>
   <v c='USA' value='-0.00346'/>
    </vs>
-   <vs y='2016' r='LMY' i='SEC_RAT'>
+   <vs y='2017' r='LMY' i='SEC_RAT'>
   <v c='AUS' value='9'/>
   <v c='AUT' value='9'/>
   <v c='BEL' value='9'/>
@@ -4905,7 +5141,7 @@
   <v c='USA' value='4'/>
    </vs>
    <!-- Trade -->
-   <vs y='2016' r='LMY' i='TRA_PRO'>
+   <vs y='2017' r='LMY' i='TRA_PRO'>
   <v c='AUS' value='6'/>
   <v c='AUT' value='5.3'/>
   <v c='BEL' value='5.2'/>
@@ -4934,7 +5170,7 @@
   <v c='GBR' value='5.2'/>
   <v c='USA' value='6'/>
    </vs>
-   <vs y='2016' r='LMY' i='TRA_IMP'>
+   <vs y='2017' r='LMY' i='TRA_IMP'>
   <v c='AUS' value='4.4'/>
   <v c='AUT' value='5.2'/>
   <v c='BEL' value='4.9'/>
@@ -4963,7 +5199,7 @@
   <v c='GBR' value='5.5'/>
   <v c='USA' value='5'/>
    </vs>
-   <vs y='2016' r='LMY' i='TRA_SRV'>
+   <vs y='2017' r='LMY' i='TRA_SRV'>
   <v c='AUS' value='5.8'/>
   <v c='AUT' value='3.9'/>
   <v c='BEL' value='5.9'/>
@@ -4993,7 +5229,7 @@
   <v c='USA' value='4.4'/>
    </vs>
    <!-- Migration -->
-   <vs y='2016' r='LMY' i='MIG_CON'>
+   <vs y='2017' r='LMY' i='MIG_CON'>
   <v c='AUS' value='10'/>
   <v c='AUT' value='10'/>
   <v c='BEL' value='20'/>
@@ -5022,7 +5258,7 @@
   <v c='GBR' value='15'/>
   <v c='USA' value='10'/>
    </vs>
-   <vs y='2016' r='LMY' i='MIG_MIP'>
+   <vs y='2017' r='LMY' i='MIG_MIP'>
   <v c='AUS' value='66'/>
   <v c='AUT' value='48'/>
   <v c='BEL' value='70'/>
@@ -5051,7 +5287,7 @@
   <v c='GBR' value='56'/>
   <v c='USA' value='62'/>
    </vs>
-   <vs y='2016' r='LMY' i='MIG_BDN_INM'>
+   <vs y='2017' r='LMY' i='MIG_BDN_INM'>
   <v c='AUS' value='7'/>
   <v c='AUT' value='5.8'/>
   <v c='BEL' value='4.7'/>
@@ -5080,7 +5316,7 @@
   <v c='GBR' value='4.3'/>
   <v c='USA' value='4.6'/>
    </vs>
-   <vs y='2016' r='LMY' i='MIG_BDN_SHA'>
+   <vs y='2017' r='LMY' i='MIG_BDN_SHA'>
   <v c='AUS' value='6.6'/>
   <v c='AUT' value='4.5'/>
   <v c='BEL' value='4.5'/>
@@ -5110,7 +5346,7 @@
   <v c='USA' value='5.2'/>
    </vs>
 
-   <vs y='2016' r='LMY' i='MIG_BDN_ASY'>
+   <vs y='2017' r='LMY' i='MIG_BDN_ASY'>
   <v c='AUS' value='4.3'/>
   <v c='AUT' value='5.8'/>
   <v c='BEL' value='5.3'/>
@@ -5139,7 +5375,7 @@
   <v c='GBR' value='4.7'/>
   <v c='USA' value='4.3'/>
    </vs>
-   <vs y='2016' r='LMY' i='MIG_BDN_REF'>
+   <vs y='2017' r='LMY' i='MIG_BDN_REF'>
   <v c='AUS' value='4.6'/>
   <v c='AUT' value='5.7'/>
   <v c='BEL' value='5.2'/>
@@ -5171,7 +5407,7 @@
    <!-- main components -->
   
 
-<vs y='2016' r='LMY' i='CDI_AID'>
+<vs y='2017' r='LMY' i='CDI_AID'>
   <v c='AUS' score='4.70711759' weighted='0.626852782'/>
   <v c='AUT' score='4.547480846' weighted='0.605593756'/>
   <v c='BEL' score='4.305988233' weighted='0.57343388'/>
@@ -5200,7 +5436,7 @@
   <v c='GBR' score='6.053349971' weighted='0.806132245'/>
   <v c='USA' score='5.217609528' weighted='0.694835637'/>
 </vs>
-<vs y='2016' r='LMY' i='CDI_TRA'>
+<vs y='2017' r='LMY' i='CDI_TRA'>
   <v c='AUS' score='5.575327226' weighted='0.983103644'/>
   <v c='AUT' score='4.914747468' weighted='0.866622882'/>
   <v c='BEL' score='5.310685968' weighted='0.936439157'/>
@@ -5229,7 +5465,7 @@
   <v c='GBR' score='5.412544997' weighted='0.954400073'/>
   <v c='USA' score='5.340074797' weighted='0.941621322'/>
 </vs>
-<vs y='2016' r='LMY' i='CDI_INV'>
+<vs y='2017' r='LMY' i='CDI_INV'>
   <v c='AUS' score='5.089524442' weighted='1.043436154'/>
   <v c='AUT' score='4.384960034' weighted='0.898988871'/>
   <v c='BEL' score='5.203898016' weighted='1.066884616'/>
@@ -5258,7 +5494,7 @@
   <v c='GBR' score='5.141759707' weighted='1.054145241'/>
   <v c='USA' score='4.506078052' weighted='0.923820055'/>
 </vs>
-<vs y='2016' r='LMY' i='CDI_MIG'>
+<vs y='2017' r='LMY' i='CDI_MIG'>
   <v c='AUS' score='5.845145248' weighted='0.971190168'/>
   <v c='AUT' score='5.018479312' weighted='0.833836895'/>
   <v c='BEL' score='5.231512011' weighted='0.869232981'/>
@@ -5287,7 +5523,7 @@
   <v c='GBR' score='4.910492601' weighted='0.815894547'/>
   <v c='USA' score='4.915813239' weighted='0.816778589'/>
 </vs>
-<vs y='2016' r='LMY' i='CDI_ENV'>
+<vs y='2017' r='LMY' i='CDI_ENV'>
   <v c='AUS' score='3.912149891' weighted='0.620130163'/>
   <v c='AUT' score='5.22124915' weighted='0.827640601'/>
   <v c='BEL' score='5.049240299' weighted='0.800374806'/>
@@ -5316,7 +5552,7 @@
   <v c='GBR' score='5.286148455' weighted='0.837928043'/>
   <v c='USA' score='3.990358576' weighted='0.632527327'/>
 </vs>
-<vs y='2016' r='LMY' i='CDI_SEC'>
+<vs y='2017' r='LMY' i='CDI_SEC'>
   <v c='AUS' score='2.987246397' weighted='0.185474352'/>
   <v c='AUT' score='8.974814495' weighted='0.557234885'/>
   <v c='BEL' score='3.927276214' weighted='0.243839615'/>
@@ -5345,7 +5581,7 @@
   <v c='GBR' score='4.708902082' weighted='0.292369776'/>
   <v c='USA' score='4.230501217' weighted='0.262666472'/>
 </vs>
-<vs y='2016' r='LMY' i='CDI_TEC'>
+<vs y='2017' r='LMY' i='CDI_TEC'>
   <v c='AUS' score='4.600858123' weighted='0.45422088'/>
   <v c='AUT' score='6.07313701' weighted='0.599571985'/>
   <v c='BEL' score='5.147184812' weighted='0.50815712'/>
@@ -5374,7 +5610,7 @@
   <v c='GBR' score='4.292016368' weighted='0.4237304'/>
   <v c='USA' score='4.170240697' weighted='0.411708066'/>
 </vs>
-<vs y='2016' r='LMY' i='CDI'>
+<vs y='2017' r='LMY' i='CDI'>
   <v c='AUS' score='4.884408143'/>
   <v c='AUT' score='5.189489874'/>
   <v c='BEL' score='4.998362175'/>
