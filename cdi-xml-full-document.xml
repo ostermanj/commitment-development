@@ -73,14 +73,46 @@
            <description lang='EN'>
               <![CDATA[
                <h2>Aid</h2>
-               <p>Aid remains an important source of development finance for some of the poorest countries. The aid component of the CDI comprises two subcomponents, one that assesses the quantity of aid of each donor country and another that assesses the quality of that aid.</p>
+               <p>The aid component is composed of two subcomponents which assess the quantity of aid of each donor country and the quality of that aid.</p>
                <p>Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
            </description>	
            <explanation lang='EN'>
               <![CDATA[
               <h3>Why is aid important for development?</h3>
-                <p>Although only a handful of countries meet the internationally accepted target of spending 0.7 percent of gross national income on aid, foreign assistance remains an important source of development finance for some of the poorest countries. The <a href="http://www.oecd.org/dac/governance-peace/conflictandfragility/docs/FSR-2014.pdf">OECD report on Fragile States</a> concludes that aid has been the largest and most reliable financial source for the least developed fragile states over the past decade. In 1969, the <a href="http://www.oecd.org/dac/stats/the07odagnitarget-ahistory.htm">Pearson Commission</a> proposed that rich countries should spend 0.7 percent of their Gross National Income on foreign aid. Almost fifty years later, only a handful of countries are meeting this target.</p>
-                <p>Quantity is not the only aspect that matters in the provision of aid. How aid is provided can have a significant impact on achieving development results. This has been acknowledged by donors in a <a href="http://www.oecd.org/dac/effectiveness/thehighlevelforaonaideffectivenessahistory.htm">High-Level Meetings on Aid Effectiveness</a>, the last one taking place in Busan in 2011. These fora contributed to establishing key principles for improving the effectiveness of development assistance. Today, ownership, harmonization, managing for development results, and mutual accountability are standard criteria on which donors and recipients implement development assistance interventions.</p>
+                <p>
+                    Aid is likely the first policy that comes to mind when considering how rich
+                    countries help development beyond their borders. Aid remains to be an
+                    important source of development finance for many developing countries. The
+                    <a
+                        href="http://www.oecd.org/dac/governance-peace/conflictandfragility/docs/FSR-2014.pdf"
+                    >
+                        OECD report on Fragile States
+                    </a>
+                    concludes that aid has been the largest and most reliable financial source
+                    for the least developed fragile states over the past decade. In 1969, the
+                    <a href="http://www.oecd.org/dac/stats/the07odagnitarget-ahistory.htm">
+                        Pearson Commission
+                    </a>
+                    proposed that rich countries should spend 0.7% of their Gross National
+                    Income on foreign aid. Almost fifty years later, only a handful of
+                    countries are meeting this target.
+                </p>
+                <p>
+                    Quantity is not the only aspect that matters in the provision of aid. How
+                    aid is provided can have a significant impact on achieving development
+                    results. This has been acknowledged by donors in a
+                    <a
+                        href="http://www.oecd.org/dac/effectiveness/thehighlevelforaonaideffectivenessahistory.htm"
+                    >
+                        series of High Level Meetings
+                    </a>
+                    on Aid Effectiveness, the last one taking place in Busan in 2011. These
+                    fora contributed to establishing key principles for improving the
+                    effectiveness of development assistance. Today, ownership, harmonization,
+                    managing for development results, and mutual accountability are standard
+                    criteria based on which donors and recipients implement development
+                    assistance interventions.
+                </p>
                 <p><strong>Related CGD work:</strong> <a href='/topics/aid_effectiveness'>Aid effectiveness</a>.</p>
               ]]>
            </explanation>
@@ -94,30 +126,96 @@
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <description lang='EN'>
                     <![CDATA[
-                    <p>The Commitment to Development Index measures the effort of each country&mdash;that is, the contribution countries make relative to their size. In 1969, the <a href="http://www.oecd.org/dac/stats/the07odagnitarget-ahistory.htm">Pearson Commission</a> proposed that donors should spend 0.7 percent of Gross National Product on foreign aid, for which the definition of <a href="http://www.oecd.org/dac/stats/officialdevelopmentassistancedefinitionandcoverage.htm">official development assistance</a> (ODA) was provided by the <a href="http://www.oecd.org/dac/stats/officialdevelopmentassistancedefinitionandcoverage.htm">Development Assistance Committee of the OECD</a> in the same year. This 0.7 percent target was enshrined in a UN resolution on October 24, 1970. In 1993, following the revision to the UN System of National Accounts, GNI replaced GNP as denominator for the target. Given that there is a widely (though not universally) accepted target for <a href="http://stats.oecd.org/viewhtml.aspx?datasetcode=TABLE1&amp;lang=en">ODA as a share of GNI</a>, we use this ratio in the Commitment to Development Index as our measure of aid quantity. The weight of this indicator in the aid component is 50 percent.</p>]]>
+                    <p>
+                      The Commitment to Development Index is intended to measure the effort of
+                      each country – that is, the contribution countries make relative to their
+                      size. In 1969, the
+                      <a href="http://www.oecd.org/dac/stats/the07odagnitarget-ahistory.htm">
+                          Pearson Commission
+                      </a>
+                      proposed that donors should spend 0.7% of Gross National Product on foreign
+                      aid, for which the definition of
+                      <a
+                          href="http://www.oecd.org/dac/stats/officialdevelopmentassistancedefinitionandcoverage.htm"
+                      >
+                          official development assistance
+                      </a>
+                      (ODA) was provided by the Development Assistance Committee (DAC) of the
+                      OECD in the same year. This 0.7% target was enshrined in a UN resolution on
+                      October 24, 1970. In 1993, following the revision to the UN System of
+                      National Accounts, GNI replaced GNP as denominator for the target. Given
+                      that there is a widely (though not universally) accepted target for
+                      <a
+                          href="http://stats.oecd.org/viewhtml.aspx?datasetcode=TABLE1&amp;lang=en"
+                      >
+                          ODA as a share of GNI
+                      </a>
+                      , we use this ratio in the Commitment to Development Index as our measure
+                      of aid quantity. The weight of this indicator in the aid component is 50%.
+                  </p>]]>
                  </description>
                  <unit lang='EN'><![CDATA[score]]></unit>
               </indicator>
               <indicator code='AID_QLT' level='3'>
                  <label lang='EN'><![CDATA[Aid quality]]></label>
+                 <shortlabel lang='EN'><![CDATA[Aid Quality]]></shortlabel>
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
+                 <description lang='EN'><![CDATA[
+                  <p>
+                      The quality of foreign aid is hard to define and therefore hard to measure
+                      – donors and recipients have distinct understandings of what comprises
+                      “good” aid, and researchers have struggled to find common ground amidst
+                      these competing definitions. There are several reasons why assessing the
+                      quality of aid is a challenging exercise, and you can read more about it in
+                      <a href="http://www.cgdev.org/sites/default/files/eba_role_of_aid.pdf">
+                          our paper
+                      </a>
+                      . The CDI uses the
+                      <a href="http://www.cgdev.org/page/quality-oda-quoda?callout=4-5">
+                          Quality of Official Development Assistance
+                      </a>
+                      (QuODA) to evaluate the qualitative aspects of countries’ ODA programmes.
+                      The weight of this indicator in the aid component is 50%.
+                  </p>
+                  ]]></description>
                  <hierarchy>
                     <indicator code='AID_QLT_EFF' level='4'>
                        <label lang='EN'><![CDATA[Maximizing efficiency]]></label>
                        <shortlabel lang='EN'><![CDATA[Maximizing efficiency]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>This category of indicators&nbsp;emphasizes the effect of development assistance on poverty reduction. While donors have their own objectives in giving aid, this measure of aid quality aims to assess each donor&rsquo;s aid against a global standard of how to best achieve sustainable growth.</p>
+                          <![CDATA[<p>
+                              This category of indicators emphasizes the effect of development assistance
+                              on poverty reduction. While donors have their own objectives in giving aid,
+                              this measure of aid quality aims to assess each donor's aid against a
+                              global standard of how to best achieve sustainable growth.
+                          </p>
                           <p>The category includes eight indicators:</p>
                           <ol>
-                          <li>Share of allocation to poor countries</li>
-                          <li>Share of allocation to well-governed countries</li>
-                          <li>Low unit administrative costs</li>
-                          <li>High country programmable aid share</li>
-                          <li>Focus/specialization by recipient country</li>
-                          <li>Focus/specialization by sector</li>
-                          <li>Support of select global public goods facilities</li>
-                          <li>Share of untied aid</li>
+                          <li>
+                              Share of allocation to poor countries
+                          </li>
+                          <li>
+                              Share of allocation to well-governed countries
+                          </li>
+                          <li>
+                              Low unit administrative costs
+                          </li>
+                          <li>
+                              High country programmable aid share
+                          </li>
+                          <li>
+                              Focus/specialization by recipient country
+                          </li>
+                          <li>
+                              Focus/specialization by sector
+                          </li>
+                          <li>
+                              Support of select global public goods facilities
+                          </li>
+                          <li>
+                              Share of untied aid
+                          </li>
                           </ol>
                           <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                        </description>
@@ -126,17 +224,38 @@
                        <label lang='EN'><![CDATA[Fostering institutions]]></label>
                        <shortlabel lang='EN'><![CDATA[Fostering institutions]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>Fostering local institutions is essential for any intervention aiming to achieve long-term impact. When aid passes through partner country institutions, it is more likely to be &ldquo;owned&rdquo; by the partner and development is more likely to be sustainable. The&nbsp;fostering institutions&nbsp;dimension highlights the importance of institutions in achieving growth and poverty reduction.</p>
+                          <![CDATA[<p> Fostering local institutions is essential for any intervention aiming to
+                          achieve long-term impact. When aid passes through partner country
+                          institutions, it is more likely to be "owned" by the partner and
+                          development is more likely to be sustainable. The fostering institutions
+                          dimension highlights the importance of institutions in achieving growth and
+                          poverty reduction.</p>
                           <p>The category includes eight indicators:</p>
                           <ol>
-                          <li>Share of aid to recipients&rsquo; top development priorities</li>
-                          <li>Avoidance of project implementation units</li>
-                          <li>Share of aid recorded in recipient budgets</li>
-                          <li>Share of aid to partners with good operational strategies</li>
-                          <li>Use of recipient country systems</li>
-                          <li>Share of scheduled aid recorded as received by recipients</li>
-                          <li>Coordination of technical cooperation</li>
-                          <li>Coverage of forward spending plans/Aid predictability</li>
+                          <li>
+                              Share of aid to recipients’ top development priorities
+                          </li>
+                          <li>
+                              Avoidance of project implementation units
+                          </li>
+                          <li>
+                              Share of aid recorded in recipient budgets
+                          </li>
+                          <li>
+                              Share of aid to partners with good operational strategies
+                          </li>
+                          <li>
+                              Use of recipient country systems
+                          </li>
+                          <li>
+                              Share of scheduled aid recorded as received by recipients
+                          </li>
+                          <li>
+                              Coordination of technical cooperation
+                          </li>
+                          <li>
+                              Coverage of forward spending plans/Aid predictability
+                          </li>
                           </ol>
                           <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                        </description>
@@ -146,16 +265,33 @@
                        <label lang='EN'><![CDATA[Reducing the burden on recipients]]></label>
                        <shortlabel lang='EN'><![CDATA[Reducing the burden on recipients]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>Reducing Burden&nbsp;recognizes that the administrative burdens placed on partner countries make aid less effective. A high number of projects and small project sizes create a burden of increased reporting and monitoring requirements on partner governments.</p>
+                          <![CDATA[<p>Reducing Burden recognizes that the administrative burdens placed on
+                          partner countries make aid less effective. A high number of projects and
+                          small project sizes create a burden of increased reporting and monitoring
+                          requirements on partner governments.</p>
                           <p>The category includes seven indicators:</p>
                           <ol>
-                          <li>Significance of aid relationships</li>
-                          <li>Fragmentation across donor agencies</li>
-                          <li>Median project size</li>
-                          <li>Contribution to multilaterals</li>
-                          <li>Coordinated missions</li>
-                          <li>Use of programmatic aid</li>
-                          <li>Coordinated analytical work</li>
+                          <li>
+                              Significance of aid relationships
+                          </li>
+                          <li>
+                              Fragmentation across donor agencies
+                          </li>
+                          <li>
+                              Median project size
+                          </li>
+                          <li>
+                              Contribution to multilaterals
+                          </li>
+                          <li>
+                              Coordinated missions
+                          </li>
+                          <li>
+                              Use of programmatic aid
+                          </li>
+                          <li>
+                              Coordinated analytical work
+                          </li>
                           </ol>
                           <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                        </description>
@@ -164,17 +300,36 @@
                        <label lang='EN'><![CDATA[Transparency and learning]]></label>
                        <shortlabel lang='EN'><![CDATA[Transparency and learning]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>Transparency and learning&nbsp;reflects the importance of providing timely and comparative information about aid spending. Sharing timely information enables donors to coordinate better with other donors and with recipient countries, to improve their planning, and to learn from actual experience.</p>
+                            <![CDATA[<p>Transparency and Learning reflects the importance of providing timely and
+                          comparative information about aid spending. Sharing timely information
+                          enables donors to coordinate better with other donors and with recipient
+                          countries, to improve their planning, and to learn from actual experience.</p>
                           <p>The category includes eight indicators:</p>
                           <ol>
-                          <li>Signatory of International Aid Transparency Initiative (IATI)</li>
-                          <li>Implementation of IATI data reporting standards</li>
-                          <li>Recording of project title and description</li>
-                          <li>Detail of project description</li>
-                          <li>Reporting of aid delivery channel</li>
-                          <li>Quality of main agency evaluation policy</li>
-                          <li>Completeness of project level commitment data</li>
-                          <li>Aid to partners with good monitoring &amp; evaluation frameworks</li>
+                          <li>
+                              Signatory of International Aid Transparency Initiative (IATI)
+                          </li>
+                          <li>
+                              Implementation of IATI data reporting standards
+                          </li>
+                          <li>
+                              Recording of project title and description
+                          </li>
+                          <li>
+                              Detail of project description
+                          </li>
+                          <li>
+                              Reporting of aid delivery channel
+                          </li>
+                          <li>
+                              Quality of main agency evaluation policy
+                          </li>
+                          <li>
+                              Completeness of project level commitment data
+                          </li>
+                          <li>
+                              Aid to partners with good monitoring &amp; evaluation frameworks
+                          </li>
                           </ol>
                           <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p>]]>
                        </description>
@@ -190,14 +345,42 @@
            <description lang='EN'>
               <![CDATA[
               <h2>Finance</h2>
-              <p>Investment in the developing world can benefit everyone. The CDI rewards investment-promotion policies that are good for development, such as sustainable international investment agreements accounting for the public policy interests of developing countries. It also awards countries that fully commit to the international framework promoting fair investments. Policies that allow for financial secrecy, in contrast, are penalized. The two subcomponents (investment and financial secrecy) include a number of different indicators.</p>
+               <p>
+                The finance component is composed of two subcomponents which assess
+                countries’ transparency in the finance sector, and their efforts to support
+                investment in the developing world. Both sub-components have an equal
+                weight in the overall finance component. Each subcomponent includes a
+                number of different indicators.
+            </p>
               <p>Select a country to see how it scores on each indicator and to learn about the methodology.</p> ]]>
            </description>
            <explanation lang='EN'>
               <![CDATA[
               <h3>Why is financial transparency and support to investment important for development?</h3>
-              <p>Illicit financial outflows affecting developing countries have been estimated to as much as one trillion dollars. These estimations may not be generally endorsed, but there seems to be consensus on the negative effect of international illicit flows on international security and governance, and on development finance. When financial flows are hidden from relevant authorities they implicitly enable tax evasion, money laundering as well as corruption. Policies of rich countries which make banking secrecy of financial institutions possible significantly contribute to facilitating illicit transfers. Eliminating financial secrecy of rich countries&rsquo; banking institutions could increase domestic revenue and GDP of developing countries substantially.</p>
-              <p>Foreign direct investment is the largest source of financing for many developing countries. Rich countries policies that support or impede investment beyond their borders can have a substantive effect on the well-being of many of their citizens. Foreign investment contributes to the development of infrastructure, housing, transport, energy supply and many other areas. However, quantity of investment is not the only important aspect of promoting investment in developing countries. It is important that safeguards are in place which ensure that environment, as well as general welfare of those affected by the investment is properly secured.</p>
+              <p>
+                  Illicit financial outflows affecting developing countries have been
+                  estimated to as much as one trillion dollars. These estimates may not be
+                  generally endorsed, but there seems to be consensus on the negative effect
+                  of international illicit flows on international security and governance,
+                  and on development finance. When financial flows are hidden from relevant
+                  authorities they implicitly enable tax evasion, money laundering as well as
+                  corruption. Policies of rich countries which make banking secrecy of
+                  financial institutions possible significantly contribute to facilitating
+                  illicit transfers. Eliminating financial secrecy of rich countries’ banking
+                  institutions could increase domestic revenue and GDP of developing
+                  countries substantially.
+              </p>
+              <p>
+                  Foreign direct investment is the largest source of financing for many
+                  developing countries. Rich countries policies that support or impede
+                  investment beyond their borders can have a substantive effect on the
+                  wellbeing of many of their citizens. Foreign investment contributes to the
+                  development of infrastructure, housing, transport, energy supply and many
+                  other areas. However, quantity of investment is not the only important
+                  aspect of promoting investment in developing countries. It is important
+                  that safeguards are in place which ensure that environment, as well as
+                  general welfare of those affected by the investment is properly secured.
+              </p>
               <p><strong>Related CGD work:</strong> <a href='/topics/finance'>Finance and investment</a>.</p>]]>
            </explanation>
            <unit lang='EN'><![CDATA[Score]]></unit>
@@ -206,20 +389,85 @@
               <!-- Subindicators -->
               <indicator code='INV_INV' level='3'>
                  <label lang='EN'><![CDATA[Investment]]></label>
+                 <shortlabel lang='EN'><![CDATA[Investment]]></shortlabel>
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
+                 <description lang='EN'><![CDATA[
+                  <p>
+                      The investment subcomponent is based on three parts: policy inputs, policy
+                      implementation and policy outcomes.
+                  </p>]]>
+                </description>
                  <hierarchy>
                     <indicator code='INV_COM' level='4'>
                        <label lang='EN'><![CDATA[International commitments]]></label>
                        <shortlabel lang='EN'><![CDATA[International commitments]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>Policy inputs are measured by the international commitments a developed country takes on. It asks if a CDI-country takes part in the <a href="http://www.oecd.org/corruption/oecdantibriberyconvention.htm">OECD antibribery convention</a> and how a country deals with the <a href="http://mneguidelines.oecd.org/">OECD Guidelines on Multinational Enterprises.</a> A <a href="http://mneguidelines.oecd.org/ncps/">national focal point</a> should be set up and a National Action Plan on business and human rights put in place. Furthermore, a country scores higher on this subcomponent if it is a member of MDTF (+3 points), EITI (+1), KPCS (+1), or ITTO (+1).</p>
-                          <p>The <a href="http://www.eiti.org/">Extractive Industries Transparency Initiative</a> (EITI) promotes transparency in the management of natural resources.&nbsp; If a country participates in EITI, its companies are required to publish what they pay to governments, and governments are obliged to disclose what they receive from companies. A multistakeholder group monitors the process in each participating country. A list of participating countries and institutions can be found <a href="https://eiti.org/supporters/countries">here</a>.</p>
-                          <p>The <a href="http://www.worldbank.org/en/programs/eitimdtf">EITI Multi-Donor Trust Fund</a> (MDTF) provides grants and technical assistance to countries that implement EITI. It is administered by the World Bank and supported by partner countries and institutions. Their list is available <a href="http://www.worldbank.org/en/programs/eitimdtf#5">here</a>.</p>
-                          <p>The <a href="http://www.kimberleyprocess.com/">Kimberley Process Certification Scheme</a> (KPCS) is a joint initiative of governments, industry, and civil society that aims to eliminate the trade of conflict diamonds. Conflict diamonds are those whose sales contribute to funding an armed conflict. A full list of participating countries is available <a href="http://www.kimberleyprocess.com/en/participants">here</a>.</p>
-                          <p>The <a href="http://www.itto.int/">International Tropical Timber Organization</a> (ITTO) is an intergovernmental organization established in 1986 with the aim of promoting conservation and sustainable management, use, and trade of tropical forest resources. A full list of participating countries is available <a href="http://www.itto.int/itto_members/">here</a>.</p>
-                          <p>The weight of this indicator in the finance component is 20 percent.</p>]]>
+                          <p>
+                            Policy inputs are measured by the international commitments a developed
+                            country takes on. It asks if a CDI-country takes part in the
+                            <a href="http://www.oecd.org/corruption/oecdantibriberyconvention.htm">
+                                OECD anti-bribery convention
+                            </a>
+                            and how a country deals with the
+                            <a href="http://mneguidelines.oecd.org/">
+                                OECD Guidelines on Multinational Enterprises
+                            </a>
+                            <a href="http://mneguidelines.oecd.org/">.</a>
+                            A <a href="http://mneguidelines.oecd.org/ncps/">national focal point</a>
+                            should be set up and a National Action Plan on business and human rights
+                            put in place. Furthermore, a country scores higher on this subcomponent if
+                            it is a member of EGPS (+3), EITI (+1), KPCS (+1), or ITTO? (+1)
+                            (CDI-Scores in brackets).
+                        </p>
+                        <p>
+                            The
+                            <a href="http://www.eiti.org/">
+                                Extractive Industries Transparency Initiative
+                            </a>
+                            (EITI) promotes transparency in the management of natural resources. If a
+                            country participates in EITI, its companies are required to publish what
+                            they pay to governments, and governments are obliged to disclose what they
+                            receive from companies. A multi stakeholder group monitors the process in
+                            each participating country. A list of participating countries and
+                        institutions can be found    <a href="https://eiti.org/supporters/countries">here</a>.
+                            </p>
+                            <p>
+                            The
+                            <a href="http://www.worldbank.org/en/programs/egps#1">
+                                Extractives Global Programmatic Support (EGPS)
+                            </a>
+                            Multi-Donor Trust Fund provides grants and technical assistance to
+                            developing countries in the governance of their natural resources. They
+                            therefore encourage resource-rich countries to use their resources
+                            sustainably and transparently for poverty reduction and long-term economic
+                            growth. The Fund is administered by the World Bank and supported by partner
+                        countries and institutions. Their list is available    <a href="http://www.worldbank.org/en/programs/egps#4">here</a>.
+                            </p>
+                            <p>
+                            The
+                            <a href="http://www.kimberleyprocess.com/">
+                                Kimberley Process Certification Scheme
+                            </a>
+                            (KPCS) is a joint initiative of governments, industry, and civil society
+                            that aims to eliminate the trade of conflict diamonds. Conflict diamonds
+                            are those whose sales contribute to funding an armed conflict. A full list
+                        of participating countries is available    <a href="http://www.kimberleyprocess.com/en/participants">here</a>.
+                            </p>
+                            <p>
+                            The
+                            <a href="http://www.itto.int/">
+                                International Tropical Timber Organization
+                            </a>
+                            (ITTO) is an intergovernmental organization established in 1986 with the
+                            aim of promoting conservation and sustainable management, use, and trade of
+                            tropical forest resources. A full list of participating countries is
+                            available <a href="http://www.itto.int/itto_members/">here</a>.
+                        </p>
+                        <p>
+                            The weight of this indicator in the finance component is 20%.
+                        </p>]]>
                        </description>
                     </indicator>
 
@@ -229,10 +477,52 @@
                        <shortlabel lang='EN'><![CDATA[International investment agreements]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>Policy implementation of investments are measured by International Investment Agreements (IIA). IIAs include measures designed to protect the investments made by investors of a state party in the territory of another state party under international law. To attract and facilitate foreign direct investments (FDI), IIAs therefore offer foreign investors legal security and protection against most of the risks that may occur. However, there are concerns that these agreements protect the interest of the investors as opposed to the general interests of the recipient countries such as human rights or the protection of the environment. Therefore, IIAs need to find an equilibrium between ensuring that countries retain their right to regulate for pursuing public policy interests (including sustainable development objectives) while contributing to a favorable investment climate and protecting foreign investors from unjustified discrimination measures by the host state.</p>
-                          <p>Data on IIA was analyzed by <a href="http://unmundosalvadorsoler.org/ciecode/elciecode.aspx">CIECODE</a>. The IIAs analyzed are those in which the parties are, on one side, one of the CDI countries and, on the other, a developing country (according to the <a href="http://www.oecd.org/dac/stats/documentupload/DAC%20List%20of%20ODA%20Recipients%202014%20final.pdf">OECD&rsquo;s list of ODA recipient countries</a>). For each of the 27 CDI countries, the analysis includes the latest three IIAs that fulfill the criteria. When analyzing regional agreements, the score is extended to all the parties involved as if it was a BIT.</p>
-                          <p>For assessing the &ldquo;sustainable quality&rdquo; of the IIA, the preamble, the Fair and Equitable Treatment (FET) clause, and the investor-state dispute settlement system (ISDS) were analyzed. Any other general clause in the Treaty that extends its application to these three clauses was also analyzed. Each of the three dispositions analyzed was given a score ranging from 0 to 2 depending on how much their content contributes to the capacity of the agreement to promote sustainable development and foreign investments. It also asked if the IIA protects the state&rsquo;s right to regulate for pursuing legitimate sustainable development objectives.</p>
-                          <p>The weight of this indicator in the finance component is 20 percent.</p> ]]>
+                          <p>
+                            Policy implementation of investments is measured by the quality of
+                            International Investment Agreements (IIA) a CDI-country has signed. IIAs
+                            include measures designed to protect the investments made by investors of a
+                            state party in the territory of another state party under international
+                            law. To attract and facilitate foreign direct investments (FDI), IIAs
+                            therefore offer foreign investors legal security and protection against
+                            most of the risks that may occur. However, there are concerns that these
+                            agreements protect the interest of the investors as opposed to the general
+                            interests of the recipient countries such as human rights or the protection
+                            of the environment. Therefore, IIAs need to find an equilibrium between
+                            ensuring that countries retain their right to regulate for pursuing public
+                            policy interests (including sustainable development objectives) while
+                            contributing to a favorable investment climate and protecting foreign
+                            investors from unjustified discrimination measures by the host state.
+                        </p>
+                        <p>
+                            Data on IIA was analyzed by
+                            <a href="http://unmundosalvadorsoler.org/ciecode/elciecode.aspx">
+                                CIECODE
+                            </a>
+                            . The IIAs analyzed are those in which the parties are, on one side, one of
+                            the CDI countries and, on the other, a developing country (according to the
+                            <a
+                                href="http://www.oecd.org/dac/stats/documentupload/DAC%20List%20of%20ODA%20Recipients%202014%20final.pdf"
+                            >
+                                OECD’s list of ODA recipient countries
+                            </a>
+                            ). For each of the 27 CDI countries, the analysis includes the latest three
+                            IIAs that fulfill the criteria. When analyzing regional agreements, the
+                            score is extended to all the parties involved as if it was a BIT.
+                        </p>
+                        <p>
+                            For assessing the ‘sustainable quality’ of the IIA, the preamble, the Fair
+                            and Equitable Treatment (FET) clause and the investor-state dispute
+                            settlement system (ISDS) were analyzed. Any other general clause in the
+                            Treaty that extends its application to these three clauses was also
+                            analyzed. Each of the three dispositions analyzed was given a score ranging
+                            from 0 to 2 depending on how much their content contributes to the capacity
+                            of the agreement to promote sustainable development and foreign
+                            investments. It also asked if the IIA protects the State’s right to
+                            regulate for pursuing legitimate sustainable development objectives.
+                        </p>
+                        <p>
+                            The weight of this indicator in the finance component is 20%.
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_OOF' level='4'>
@@ -240,135 +530,496 @@
                        <shortlabel lang='EN'><![CDATA[Other offical flows]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>This indicator measures policy outputs through transactions from official sectors of CDI countries to countries on the OECD <a href="http://www.oecd.org/dac/stats/documentupload/DAC%20List%20of%20ODA%20Recipients%202014%20final.pdf">List of Aid Recipients</a> which do not meet the conditions for eligibility as Official Development Assistance (ODA). This is either because they are not primarily aimed at development, or because they have a grant element of less than 25 percent. Therefore, these financial flows are reported as part of the investment subcomponent. Data derives from the <a href="http://www.oecd-ilibrary.org/development/data/oecd-international-development-statistics/other-official-flows-oof_data-00075-en">OECD Aid Statistics</a>. The weight of this indicator in the finance component is 10 percent.</p>]]>
+                          <p>
+                              This indicator measures policy outputs through transactions from official
+                              sectors of CDI countries to countries on the OECD
+                              <a
+                                  href="http://www.oecd.org/dac/stats/documentupload/DAC%20List%20of%20ODA%20Recipients%202014%20final.pdf"
+                              >
+                                  List of Aid Recipients
+                              </a>
+                              which do not meet the conditions for eligibility as Official Development
+                              Assistance (ODA). This is either because they are not primarily aimed at
+                              development, or because they have a grant element of less than 25 percent.
+                              Therefore, these financial flows are reported as part of the investment
+                              subcomponent. Data derives from the
+                              <a
+                                  href="http://www.oecd-ilibrary.org/development/data/oecd-international-development-statistics/other-official-flows-oof_data-00075-en"
+                              >
+                                  OECD Aid Statistics
+                              </a>
+                              and is expressed in percentage of GNI.
+                          </p>
+                          <p>
+                              The weight of this indicator in the finance component is 10%.
+                          </p>]]>
                        </description>
                     </indicator>
                    </hierarchy>
               </indicator>
               <indicator code='INV_SEC' level='3'>
                  <label lang='EN'><![CDATA[Financial secrecy]]></label>
+                 <shortlabel lang='EN'><![CDATA[Financial secrecy]]></shortlabel>
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
+                 <description><![CDATA[
+                  <p>
+                    The Financial Secrecy subcomponent of the CDI is based on the Financial
+                    Secrecy Index (FSI). The FSI is published biannually by Tax Justice
+                    Network. It uses a combination of qualitative and quantitative data to
+                    create a measure of each country’s contribution to the global problem of
+                    financial secrecy. The Qualitative data is based on laws, regulations,
+                    cooperation with information exchange processes and other verifiable data
+                    sources, and it is used to calculate a secrecy score<strong> </strong>for
+                    each country. Countries with the lowest secrecy scores are more opaque in
+                    the operations they host, less engaged in information sharing with other
+                    national authorities and less compliant with international norms relating
+                    to combating money-laundering. Lack of transparency and unwillingness to
+                    engage in effective information exchange makes a secrecy jurisdiction a
+                    more attractive location for routing illicit financial flows and for
+                    concealing criminal and corrupt activities. Even though the FSI includes
+                    also quantitative assessment of countries’ contributions to illicit
+                    financial flows which is estimated based on its share of offshore financial
+                    services activity in the global total, the CDI only includes the secrecy
+                    score which evaluates countries’ policy efforts. The FSI assesses a wide
+                    range of countries’ policies which can be divided into 4 categories:
+                    Knowledge of beneficial ownership, Key aspects of corporate transparency
+                    regulation, Efficiency of tax and financial regulation, International
+                    standards and cooperation.
+                </p>
+                <p>
+                    For more information on the Financial Secrecy Index, please visit
+                    <a href="http://www.financialsecrecyindex.com/">
+                        http://www.financialsecrecyindex.com/
+                    </a>. 
+                    The weight of the following 16 indicators together in the finance component
+                    is 50%.
+                </p>]]>
+                </description>
                  <hierarchy>
 
                     <indicator code='INV_SEC_BNK' level='4'>
                        <label lang='EN'><![CDATA[Banking secrecy]]></label>
                        <shortlabel lang='EN'><![CDATA[Banking secrecy]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>This indicator assesses whether a jurisdiction enables banking secrecy; absence or inaccessibility of banking information is considered a form of banking secrecy. For a country to obtain a full score on this indicator, the jurisdiction must ensure that banking data exists, and that it has effective access to this data. Effective access entails that tax authorities can obtain account information without the need for separate authorisation, for example, from a court, and there are no undue notification requirements or appeal rights against obtaining or sharing such information. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[This indicator assesses whether a jurisdiction enables banking secrecy;
+                              absence or inaccessibility of banking information is considered a form of
+                              banking secrecy. For a country to obtain a full score on this indicator,
+                              the jurisdiction must ensure that banking data exists, and that it has
+                              effective access to this data. Effective access entails that tax
+                              authorities can obtain account information without the need for separate
+                              authorisation, for example, from a court, and there are no undue
+                              notification requirements or appeal rights against obtaining or sharing
+                              such information. For further details on this indicator, please consult the
+                              <a href="http://www.financialsecrecyindex.com/methodology">
+                                  Financial Secrecy Index Methodology
+                              </a>
+                              .
+                          </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_TFR' level='4'>
                        <label lang='EN'><![CDATA[Trust and foundations register]]></label>
                        <shortlabel lang='EN'><![CDATA[Trust and foundations register]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator looks at whether a country has a central register all trusts (domestic as well as international with connections to the country), and all private foundations. The register should be publicly accessible via the internet at a cost not exceeding 10 euros or US dollars. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                            The indicator looks at whether a country has a central register all trusts
+                            (domestic as well as international with connections to the country), and
+                            all private foundations. The register should be publicly accessible via the
+                            internet at a cost not exceeding 10 €/US$. For further details on this
+                            indicator, please consult the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_RCO' level='4'>
                        <label lang='EN'><![CDATA[Recorded company ownership]]></label>
                        <shortlabel lang='EN'><![CDATA[Recorded company ownership]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>This indicator assesses whether a country requires all available types of companies to submit beneficial ownership information upon incorporation to a governmental authority, and whether it requires this information to be updated upon any event or action which changes beneficial ownership information, regardless of if this information is made available on public record. To receive a full credit on this indicator, registered ownership information must comply with minimum requirements (listing the names, country of residence, and a clear identifier such as full address, date and place of birth, or Taxpayer Identification Number of each owner holding at least 10 percent ownership in the entity). Countries subject to the <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:JOL_2015_141_R_0003&amp;from=EN">Fourth EU Directive on Anti-Money Laundering</a> receive 0.25 credits. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                            This indicator assesses whether a country requires all available types of
+                            companies to submit beneficial ownership information upon incorporation to
+                            a governmental authority, and whether it requires this information to be
+                            updated upon any event or action which changes beneficial ownership
+                            information, regardless of if this information is made available on public
+                            record. To receive a full credit on this indicator, registered ownership
+                            information must comply with minimum requirements (listing the names,
+                            country of residence and a clear identifier such as full address, and/or
+                            date and place of birth, and/or Taxpayer Identification Number of each
+                            owner holding at least 10% ownership in the entity). Countries subject to
+                            the
+                            <a
+                                href="http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:JOL_2015_141_R_0003&amp;from=EN"
+                            >
+                                4th EU Directive on Anti-Money Laundering
+                            </a>
+                            receive 0.25 credits. For further details on this indicator, please consult
+                            the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_PCO' level='4'>
                        <label lang='EN'><![CDATA[ Public company ownership]]></label>
                        <shortlabel lang='EN'><![CDATA[ Public company ownership]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator considers whether a country requires all available types of company with limited liability to publish updated beneficial ownership or legal ownership information on public records accessible for free via the internet. If beneficial ownership information is published for free, a full transparency credit is awarded. If there is a fixed cost for accessing the data not exceeding 10 euros, pounds, or US dollars, only half the credit (0.5) is awarded. If only legal ownership information is available for all types of company for free, a 0.2 transparency credit is awarded. If access to legal ownership data entails a cost not exceeding 10 euros, pounds, or US dollars, a 0.1 credit is awarded. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p> ]]>
+                          <![CDATA[<p>
+                            The indicator considers whether a country requires all available types of
+                            company with limited liability to publish updated beneficial ownership or
+                            legal ownership information on public records accessible for free via the
+                            internet. If beneficial ownership information is published for free, a full
+                            transparency credit is awarded. If there is a fixed cost for accessing the
+                            data not exceeding US$10, €10 or £10, only half the credit (0.5) is
+                            awarded. If only legal ownership information is available for all types of
+                            company for free, a 0.2 transparency credit is awarded. If access to legal
+                            ownership data entails a cost not exceeding US$10, €10 or £10, a 0.1 credit
+                            is awarded. For further details on this indicator, please consult the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p> ]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_PCA' level='4'>
                        <label lang='EN'><![CDATA[Public company accounts]]></label>
                        <shortlabel lang='EN'><![CDATA[Public company accounts]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator assesses whether a country requires all types of companies with limited liability to file their annual accounts and makes them readily accessible online via the internet for free (full credit) or at a maximum cost of 10 euros, pounds, or US dollars (0.5 credit). For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                            The indicator assesses whether a country requires all types of companies
+                            with limited liability to file their annual accounts and makes them readily
+                            accessible online via the internet for free (full credit) or at a maximum
+                            cost of US$ 10, €10 or £10 (0.5 credit). For further details on this
+                            indicator, please consult the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_CCR' level='4'>
                        <label lang='EN'><![CDATA[ Country-by-country reporting]]></label>
                        <shortlabel lang='EN'><![CDATA[ Country-by-country Reporting]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator measures whether the companies listed on the stock exchanges or incorporated in a given country are required to publish worldwide financial reporting data on a <a href="http://www.taxresearch.org.uk/Documents/CBC2012.pdf">country-by-country reporting</a> (CBCR) basis, and if the data is accessible to the public. A full credit is awarded when country-by-country reporting is required by all companies. A 25 percent credit is awarded if a country requires limited but periodic worldwide country-by-country reporting for specific economic sectors, namely banking or extractive industries. Country-by-country reporting for financial institutions was adopted by EU member states in 2015. The EU-CBCR rules for banks include annual disclosure of turnover, number of employees, profit or loss before tax, tax on profit or loss, and public subsidies received. On this ground, one-quarter of a transparency credit (0.25 credits) has been awarded to all EU member states. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                          The indicator measures whether the companies listed on the stock exchanges
+                          or incorporated in a given country are required to publish worldwide
+                          financial reporting data on a
+                          <a href="http://www.taxresearch.org.uk/Documents/CBC2012.pdf">
+                              country-by-country reporting
+                          </a>
+                          (CBCR) basis, and if the data is accessible to the public. A full credit is
+                          awarded when country-by-country reporting is required by all companies. A
+                          25% credit is awarded if a country requires limited, but periodic worldwide
+                          country-by-country reporting for specific economic sectors, namely banking
+                          or extractive industries. Country-by-country reporting for financial
+                          institutions was adopted by EU member states in 2015. The EU-CBCR rules for
+                          banks include annual disclosure of turnover, number of employees, profit or
+                          loss before tax, tax on profit or loss, and public subsidies received. On
+                          this ground, a quarter of a transparency credit (0.25 credits) has been
+                          awarded to all EU member states. For further details on this indicator,
+                          please consult the
+                          <a href="http://www.financialsecrecyindex.com/methodology">
+                              Financial Secrecy Index Methodology
+                          </a>
+                          .
+                      </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_FIE' level='4'>
                        <label lang='EN'><![CDATA[Fit for information exchange]]></label>
                        <shortlabel lang='EN'><![CDATA[Fit for information exchange]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>This indicator assesses whether resident paying agents (such as joint stock companies and financial institutions) are required to report to the domestic tax administration information on all payments (of dividends and interest) to all non-residents, without exceptions. Scoring is established as follows: 0 points for no reporting, 0.5 point for reporting dividends or interest, 1 point for reporting both interest and dividends. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                            This indicator assesses whether resident paying agents (such as joint stock
+                            companies and financial institutions) are required to report to the
+                            domestic tax administration information on all payments (of dividends and
+                            interest) to all non-residents, without exceptions. Scoring is established
+                            as follows: 0 points for no reporting, 0.5 point for reporting dividends or
+                            interest, 1 point for reporting both interest and dividends. For further
+                            details on this indicator, please consult the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_ETA' level='4'>
                        <label lang='EN'><![CDATA[Efficiency of tax administration]]></label>
                        <shortlabel lang='EN'><![CDATA[Efficiency of tax administration]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>This indicator looks at whether the tax administration of a given country uses taxpayer identifiers for efficiently analyzing information, and whether the tax administration has a dedicated unit for large taxpayers. Specifically, the indicator assesses whether the tax administration makes use of taxpayer identifiers for matching information reported by a) financial institutions on interest payments and b) by companies on dividend payments. In each case, where the tax administration uses taxpayer identifiers for information matching, it receives 0.4 credit points. A further 0.2 credit is awarded when the tax authority is equipped with a large taxpayer unit. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                          This indicator looks at whether the tax administration of a given country
+                          uses taxpayer identifiers for efficiently analyzing information, and
+                          whether the tax administration has a dedicated unit for large taxpayers.
+                          Specifically, the indicator assesses whether the tax administration makes
+                          use of taxpayer identifiers for matching information reported by a)
+                          financial institutions on interest payments and b) by companies on dividend
+                          payments. In each case, where the tax administration uses taxpayer
+                          identifiers for information matching, it receives 0.4 credit points. A
+                          further 0.2 credit is awarded when the tax authority is equipped with a
+                          large taxpayer unit. For further details on this indicator, please consult
+                          the
+                          <a href="http://www.financialsecrecyindex.com/methodology">
+                              Financial Secrecy Index Methodology
+                          </a>
+                          .
+                      </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_AVO' level='4'>
                        <label lang='EN'><![CDATA[Avoids promoting tax evasion]]></label>
                        <shortlabel lang='EN'><![CDATA[Avoids promoting tax evasion]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator evaluates whether a country includes worldwide capital income in its income tax base and if it grants unilateral tax credits for foreign tax paid on certain foreign capital income. The types of capital income included are interest and dividend payments. Three different payment scenarios are considered. First, payments received by an independent legal person. Second, payments received by a related party legal person. Third, payments received by a natural person. A 50 percent transparency score is awarded for jurisdictions which grant unilateral tax credits for all payment scenarios for one type of payment (dividend or interest). If unilateral tax credits are granted only in some payment scenarios, for each single payment scenario with a tax credit, a 10 percent transparency score is awarded. No points are awarded where a jurisdiction effectively exempts foreign income from domestic taxation. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[
+                          <p>
+                              The indicator evaluates whether a country includes worldwide capital income
+                              in its income tax base and if it grants unilateral tax credits for foreign
+                              tax paid on certain foreign capital income. The types of capital income
+                              included are interest and dividend payments. Three different payment
+                              scenarios are considered. First, payments received by an independent legal
+                              person. Second, payments received by a related party legal person. Third,
+                              payments received by a natural person. A 50% transparency score is awarded
+                              for jurisdictions which grant unilateral tax credits for all payment
+                              scenarios for one type of payment (dividend or interest). If unilateral tax
+                              credits are granted only in some payment scenarios, for each single payment
+                              scenario with a tax credit, a 10% transparency score is awarded. No points
+                              are awarded where a jurisdiction effectively exempts foreign income from
+                              domestic taxation. For further details on this indicator, please consult
+                              the
+                              <a href="http://www.financialsecrecyindex.com/methodology">
+                                  Financial Secrecy Index Methodology
+                              </a>
+                              .
+                          </p>
+                          ]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_HLV' level='4'>
                        <label lang='EN'><![CDATA[Harmful legal vehicles]]></label>
                        <shortlabel lang='EN'><![CDATA[Harmful legal vehicles]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[<p>This indicator assesses to what extent countries enable secrecy within companies. First, it looks at whether a jurisdiction allows the creation of &ldquo;series limited liability companies (Series LLCs)&rdquo; or &ldquo;protected cell companies&rdquo; (PCC) in its territory. Second, it measures whether the administration of trusts with flee clauses is prohibited. Protected Cell Companies are a rare type of corporate entity found almost exclusively in secrecy jurisdictions. Essentially a PCC is a legal entity that contains within itself, but not legally distinct from it, several cells which behave as if they are companies in their own right, but are not. Series LLCs serve the same purpose as PCCs and are available in <a href="http://www.delawarellc.com/learning/Series-LLC.htm">Delaware</a> and other parts of the United States. A flee clause enables trusts to change its location if a disadvantageous event, such as the breakdown of law and order or the imposition of taxation in the place where they are located occurs. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
-                       </description>
+                       <description lang='EN'><![CDATA[<p>
+                        This indicator assesses to what extent countries enable secrecy within
+                        companies. Firstly, it looks at whether a jurisdiction allows the creation
+                        of “series limited liability companies (Series LLCs)” and/or “protected
+                        cell companies” (PCC) in its territory. Secondly, it measures whether the
+                        administration of trusts with flee clauses is prohibited. Protected Cell
+                        Companies are a rare type of corporate entity found almost exclusively in
+                        secrecy jurisdictions. Essentially a PCC is a legal entity that contains
+                        within itself, but not legally distinct from it, several cells which behave
+                        as if they are companies in their own right, but are not. Series LLCs serve
+                        the same purpose as PCCs. A flee clause enables trusts to change its
+                        location if a disadvantageous event, such as the breakdown of law and order
+                        and/or the imposition of taxation in the place where they are located
+                        occurs. For further details on this indicator, please consult the
+                        <a href="http://www.financialsecrecyindex.com/methodology">
+                            Financial Secrecy Index Methodology
+                        </a>
+                        .
+                        </p>]]>
+                      </description>
                     </indicator>
                     <indicator code='INV_SEC_AML' level='4'>
                        <label lang='EN'><![CDATA[Anti–money laundering]]></label>
                        <shortlabel lang='EN'><![CDATA[Anti–money laundering]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[<p>This indicator examines the extent to which the anti&ndash;money laundering regime of a country is considered effective by the <a href="http://www.fatf-gafi.org/">Financial Action Task Force (FATF)</a>, the international body dedicated to tackle money laundering. The assessment is based on peer-reviews evaluating the implementation of <a href="http://www.fatf-gafi.org/publications/fatfrecommendations/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)">FATF recommendations</a> concerning the laws, institutional structures, and policies deemed necessary to counter money laundering and terrorist financing. Peer reviews are carried out in five-year cycles; the third round of <a href="http://www.fatf-gafi.org/publications/mutualevaluations/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)">mutual evaluations</a> was completed in 2012. This indicator evaluates countries&rsquo; compliance with FATF recommendations. Each recommendation is given an equal weight, a 100 percent rating indicates full compliance, whereas a zero pecent rating indicates a country is deemed wholly noncompliant. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
-                       </description>
+                        <description lang='EN'>
+                        <![CDATA[<p>
+                            This indicator examines the extent to which the anti-money laundering
+                        regime of a country is considered effective by the    <a href="http://www.fatf-gafi.org/">Financial Action Task Force (FATF)</a>,
+                            the international body dedicated to tackle money laundering. The assessment
+                            is based on peer-reviews evaluating the implementation of
+                            <a
+                                href="http://www.fatf-gafi.org/publications/fatfrecommendations/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)"
+                            >
+                                FATF recommendations
+                            </a>
+                            concerning the laws, institutional structures, and policies deemed
+                            necessary to counter money laundering and terrorist financing. Peer reviews
+                            are carried out in five-year cycles, third round of
+                            <a
+                                href="http://www.fatf-gafi.org/publications/mutualevaluations/?hf=10&amp;b=0&amp;s=desc(fatf_releasedate)"
+                            >
+                                mutual evaluations
+                            </a>
+                            was completed in 2012. This indicator evaluates countries’ compliance with
+                            FATF recommendations. Each recommendation is given an equal weight, a 100%
+                            rating indicates full compliance, whereas a 0% rating indicates a country
+                            is deemed wholly non-compliant. For further details on this indicator,
+                            please consult the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p>]]>
+                    </description>
                     </indicator>
                     <indicator code='INV_SEC_AIE' level='4'>
                        <label lang='EN'><![CDATA[Automatic information exchange]]></label>
                        <shortlabel lang='EN'><![CDATA[Automatic information exchange]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator assesses whether a country signed the <a href="http://www.oecd.org/tax/exchange-of-tax-information/multilateral-competent-authority-agreement.htm">Multilateral Competent Authority Agreement</a> (MCAA) which provides the legal framework to engage in automatic exchange of information, and in what year it committed to begin the exchange information. Automatic exchange of information involves the source country sharing relevant tax-payer information with the residence country. A score of one is given if a country has signed the MCAA and committed to start exchanging information in 2017. A 0.5 score is given if a country has signed the MCAA and committed to start exchanging information in 2018. A 0.25 credit is given if a country has not yet signed the MCAA but has committed to start exchanging information in 2017. A 0.10 score is awarded if a country has not signed the MCAA but has committed to start exchanging information in 2018. No score is awarded if a country has neither signed the MCAA nor committed to start exchanging information. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                            The indicator assesses whether a country signed the
+                            <a
+                                href="http://www.oecd.org/tax/exchange-of-tax-information/multilateral-competent-authority-agreement.htm"
+                            >
+                                Multilateral Competent Authority Agreement
+                            </a>
+                            (MCAA) which provides the legal framework to engage in automatic exchange
+                            of information, and in what it committed to begin the exchange information.
+                            Automatic exchange of information involves the source country sharing
+                            relevant tax-payer information with the residence country. A score of 1 is
+                            given if a country has signed the MCAA and committed to start exchanging
+                            information in 2017. A 0.5 score is given if a country has signed the MCAA
+                            and committed to start exchanging information in 2018. A 0.25 credit is
+                            given if a country has not yet signed the MCAA but has committed to start
+                            exchanging information in 2017. A 0.10 score is awarded if a country has
+                            not signed the MCAA but has committed to start exchanging information in
+                            2018. No score is awarded if a country has neither signed the MCAA nor
+                            committed to start exchanging information. For further details on this
+                            indicator, please consult the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_BIT' level='4'>
                        <label lang='EN'><![CDATA[ Bilateral treaties]]></label>
                        <shortlabel lang='EN'><![CDATA[ Bilateral treaties]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator assesses the extent to which a jurisdiction has signed and ratified bilateral treaties conforming to the &ldquo;upon request&rdquo; information exchange standard developed by the OECD and the Global Forum with 53 other countries or whether the jurisdiction has signed and ratified the Amended Council of Europe / OECD Convention on Mutual Administrative Assistance in Tax Matters. The &ldquo;upon request&rdquo; provisions can either be <a href="http://www.oecd.org/tax/exchange-of-tax-information/taxinformationexchangeagreementstieas.htm">tax information exchange agreements</a> (TIEAs) or full <a href="http://www.icaew.com/en/library/key-resources/double-tax-treaties">double taxation agreements</a> (DTAs) whose scope extends far beyond information exchange. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                            The indicator assesses the extent to which a jurisdiction has signed and
+                            ratified bilateral treaties conforming to the ‘upon request’ information
+                            exchange standard developed by the OECD and the Global Forum with 53 other
+                            countries, and/or whether the jurisdiction has signed and ratified the
+                            Amended Council of Europe / OECD Convention on Mutual Administrative
+                            Assistance in Tax Matters. The ‘upon request’ provisions can either be
+                            <a
+                                href="http://www.oecd.org/tax/exchange-of-tax-information/taxinformationexchangeagreementstieas.htm"
+                            >
+                                tax information exchange agreements
+                            </a>
+                            (TIEAs) or full
+                            <a href="http://www.icaew.com/en/library/key-resources/double-tax-treaties">
+                                double taxation agreements
+                            </a>
+                            (DTAs) whose scope extends far beyond information exchange. For further
+                            details on this indicator, please consult the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_ITC' level='4'>
                        <label lang='EN'><![CDATA[International transparency commitments]]></label>
                        <shortlabel lang='EN'><![CDATA[International transparency commitments]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator measures the extent to which a jurisdiction has taken on international transparency commitments. Participation in five international conventions is assessed and a score of 0.2 points is awarded for each of the conventions adhered to by a jurisdiction. The five conventions are:</p>
+                          <![CDATA[<p>
+                              The indicator measures the extent to which a jurisdiction has taken on
+                              international transparency commitments. Participation in five international
+                              conventions is assessed and a score of 0.2 points is awarded for each of
+                              the conventions adhered to by a jurisdiction. These five conventions are:
+                          </p>
                           <ol>
-                          <li><a href="http://www.oecd.org/tax/exchange-of-tax-information/conventiononmutualadministrativeassistanceintaxmatters.htm">Amended Council of Europe / OECD Convention on Mutual Administrative Assistance in Tax Matters </a></li>
-                          <li><a href="http://www.unodc.org/unodc/en/treaties/CAC/index.html">2003 UN Convention against Corruption</a></li>
-                          <li><a href="http://www.unodc.org/unodc/en/treaties/illicit-trafficking.html">1988 UN Convention against Illicit Traffic in Narcotic Drugs and Psychotropic Substances</a></li>
-                          <li><a href="http://www.un.org/law/cod/finterr.htm">1999 UN International Convention for the Suppression of the Financing of Terrorism</a></li>
-                          <li><a href="http://polis.osce.org/portals/orgcrime/index/details?doc_id=3210&amp;lang_tag=&amp;qs">2000 UN Convention against Transnational Organised Crime</a></li>
+                          <li>
+                              
+                              <a
+                                  href="http://www.oecd.org/tax/exchange-of-tax-information/conventiononmutualadministrativeassistanceintaxmatters.htm"
+                              >
+                                  Amended Council of Europe / OECD Convention on Mutual Administrative
+                                  Assistance in Tax Matters
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a href="http://www.unodc.org/unodc/en/treaties/CAC/index.html">
+                                  2003 UN Convention against Corruption
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a href="http://www.unodc.org/unodc/en/treaties/illicit-trafficking.html">
+                                  1988 UN Convention against Illicit Traffic in Narcotic Drugs and
+                                  Psychotropic Substances
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a href="http://www.un.org/law/cod/finterr.htm">
+                                  1999 UN International Convention for the Suppression of the Financing
+                                  of Terrorism
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a
+                                  href="https://www.unodc.org/documents/middleeastandnorthafrica/organised-crime/UNITED_NATIONS_CONVENTION_AGAINST_TRANSNATIONAL_ORGANIZED_CRIME_AND_THE_PROTOCOLS_THERETO.pdf"
+                              >
+                                  2000 UN Convention against Transnational Organised Crime
+                              </a>
+                          </li>
+                          <p>
+                              For further details on this indicator, please consult the
+                              <a href="http://www.financialsecrecyindex.com/methodology">
+                                  Financial Secrecy Index Methodology
+                              </a>
+                              .
+                          </p>
                           </ol>
-                          <p>For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                         ]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_IJC' level='4'>
                        <label lang='EN'><![CDATA[International judicial cooperation]]></label>
                        <shortlabel lang='EN'><![CDATA[International judicial cooperation]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator measures the degree to which a country engages in international judicial cooperation on money laundering and other criminal matters. The indicator assesses the level of country&rsquo;s compliance with the Financial Action Task Force recommendations. The <a href="http://www.fatf-gafi.org/">Financial Action Task Force</a> (FATF) is the international body dedicated to counter money laundering. In 2003, the FATF established its <a href="http://www.fatf-gafi.org/media/fatf/documents/recommendations/pdfs/FATF%20Recommendations%202003.pdf">40 recommendations</a> concerning the laws, institutional structures, and policies considered necessary to address money laundering and terrorist financing. For further details on this indicator, please consult the <a href="http://www.financialsecrecyindex.com/methodology">Financial Secrecy Index Methodology</a>.</p>]]>
+                          <![CDATA[<p>
+                            The indicator measures the degree to which a country engages in
+                            international judicial cooperation on money laundering and other criminal
+                            matters. The indicator assesses the level of country’s compliance with the
+                        Financial Action Task Force recommendations. The    <a href="http://www.fatf-gafi.org/">Financial Action Task Force</a> (FATF)
+                            is the international body dedicated to counter money laundering. In 2003,
+                            the FATF established its
+                            <a
+                                href="http://www.fatf-gafi.org/media/fatf/documents/recommendations/pdfs/FATF%20Recommendations%202003.pdf"
+                            >
+                                Forty recommendations
+                            </a>
+                            concerning the laws, institutional structures, and policies considered
+                            necessary to address money laundering and terrorist financing. For further
+                            details on this indicator, please consult the
+                            <a href="http://www.financialsecrecyindex.com/methodology">
+                                Financial Secrecy Index Methodology
+                            </a>
+                            .
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_ASC' level='4'>
                        <label lang='EN'><![CDATA[ Allowing secrecy within a country sphere of influence]]></label>
                        <shortlabel lang='EN'><![CDATA[ Allowing secrecy within a country sphere of influence]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>This indicator takes into account whether a country contributes to enabling financial secrecy indirectly, via jurisdictions which are within a country&rsquo;s sphere of influence. For example, the UK crown dependencies and the Dutch constituent countries all score poorly on the financial secrecy index, so does the US Virgin Islands. Countries receive one point if no such jurisdictions exist within their sphere of influence and zero points if they do.</p>]]>
+                          <![CDATA[<p>
+                            This indicator takes into account whether a country contributes to enabling
+                            financial secrecy indirectly, via jurisdictions which are within a
+                            country’s sphere of influence. For example, the UK crown dependencies and
+                            the Dutch constituent countries all score poorly on the financial secrecy
+                            index, so does the US Virgin Islands. Countries receive 1 point if no such
+                            jurisdictions exist within their sphere of influence and 0 points if they
+                            do. This indicator was developed by CGD in cooperation with the Tax Justice
+                            Network and is not part of the FSI.
+                        </p>]]>
                        </description>
                     </indicator>
                  </hierarchy>
@@ -381,16 +1032,48 @@
            <description lang='EN'>
               <![CDATA[
               <h2>Technology</h2>
-              <p>The technology component is composed of two subcomponents which assess countries&rsquo; efforts on technology creation and knowledge sharing. Countries&rsquo; efforts in research and development are assigned two-thirds of the weight, and their openness to share and give access to technology and innovation is assigned one-third. Each subcomponent includes a different set of indicators.</p>
+                            <p>
+                  The technology component is composed of two subcomponents which assess
+                  countries’ efforts to technology creation and knowledge sharing. Countries’
+                  efforts in research and development are assigned two thirds of the weight,
+                  and their openness to share and give access to technology and innovation is
+                  assigned one third. Each subcomponent includes a different set of
+                  indicators.
+              </p>
               <p>Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
            </description>
            <explanation lang='EN'>
               <![CDATA[
               <h3>Why is technology creation and access to it important for development?</h3>
-              <p>Technology is an essential factor in economic and human development, not just for the poor. Advances in medicines, information and communication technology, sustainable energy, and many other areas contribute to improving the lives of all of us. Rich countries have an important role to play&mdash;the internet, mobile phones, vaccines, and high-yielding grains were all invented by rich-country researchers and exported elsewhere, where they have improved&mdash;and saved&mdash;many lives. Accessing knowledge is one way in which poor countries can catch up with the wealthy ones. Donor countries can contribute to technological development and diffusion of knowledge and innovation by publicly funding research and development activities.</p>
-              <p>Very often the outcomes of research are protected by <a href="https://www.wto.org/english/tratop_e/trips_e/intel1_e.htm">intellectual property rights</a>. These rights protect the innovation of the developer for a specified period of time with the aim to incentivize investment into research and development activities. However, it is important that the system sufficiently enables others to make use of these outcomes, and contributes to the advancement of human knowledge further.</p>
-              <p>For more information on intellectual property rights, please consult our <a href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf">paper</a>.</p>
-              <p><strong>Related CGD work:</strong> <a href='/topics/technology'>Data and technology</a>.</p>]]>
+              <p>
+                  Technology is an essential factor in economic and human development, not
+                  just for the poor. Advances in medicines, information and communication
+                  technology, sustainable energy, and essentially in most areas contribute to
+                  improving the lives of all of us. Rich countries have an important role to
+                  play - the internet, mobile phones, vaccines, and high-yielding grains were
+                  all invented by rich-country researchers and exported elsewhere, where they
+                  have improved—and saved—many lives. Accessing knowledge is one way in which
+                  poor countries can catch up with the wealthy ones. Donor countries can
+                  contribute to technological development and diffusion of knowledge and
+                  innovation by publicly funding research and development activities.
+              </p>
+              <p>
+                  Very often the outcomes of research are protected by intellectual property
+                  rights. These rights protect the innovation of the developer for a
+                  specified period of time with the aim to incentivize investment into
+                  research and development activities. However, it is important that the
+                  system sufficiently enables others to make use of these outcomes, and
+                  contributes to the advancement of human knowledge further.
+              </p>
+              <p>
+                  For more information on intellectual property rights, please consult our
+                  <a
+                      href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
+                  >
+                      paper
+                  </a>
+                  .
+              </p>]]>
            </explanation>
            <unit lang='EN'><![CDATA[Score]]></unit>
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
@@ -398,21 +1081,58 @@
               <!-- Subindicators -->
               <indicator code='TEC_GOV' level='3'>
                  <label lang='EN'><![CDATA[Government support to research and development]]></label>
+                 <shortlabel lang='EN'><![CDATA[Government support to R&amp;D]]></shortlabel>
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
+                 <description lang='EN'><![CDATA[
+                  <p>
+                      The two following indicators combined and equally weighted account for
+                      two-thirds of the weight in the technology component.
+                  </p>
+                  ]]></description>
                  <hierarchy>
                     <indicator code='TEC_GOV_GOV' level='4' format='percentage'>
-                       <label lang='EN'><![CDATA[Government R&D share of GDP]]></label>
-                       <shortlabel lang='EN'><![CDATA[Government R&D share of GDP]]></shortlabel>
+                       <label lang='EN'><![CDATA[Government expenditures on research and development]]></label>
+                       <shortlabel lang='EN'><![CDATA[Government expenditures on R&amp;D]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>This indicator considers government expenditures on research and development. The following areas of development as <a href="http://stats.oecd.org/Index.aspx?DataSetCode=GBAORD_NABS2007">reported to the OECD</a> are included: agriculture, environment, defense (discounted 50 percent), exploration and exploitation of earth and space, general advancement of knowledge, industrial production, and technology, energy, health, education, culture, political and social systems. The indicator discounts government R&amp;D in defense by 50 percent because not all defense research and development has development benefits. The R&amp;D expenditures are expressed as a share of GDP, in PPP dollars.</p>]]>
+                          <![CDATA[
+                          <p>
+                              The indicator considers government expenditures on research and
+                              development. The following areas of development as
+                              <a href="http://stats.oecd.org/Index.aspx?DataSetCode=GBAORD_NABS2007">
+                                  reported to the OECD
+                              </a>
+                              are included: Agriculture, Environment, Defence (discounted 50%),
+                              Exploration and Exploitation of Earth and Space, General Advancement of
+                              Knowledge, Industrial Production and Technology, Energy, Health, Education,
+                              Culture, Political and Social Systems. The indicators discounts government
+                              R&amp;D in defence by 50%, because not all defence research and development
+                              has development benefits. The R&amp;D expenditures are expressed as a share
+                              of GDP and in PPP dollars.
+                          </p>
+                          ]]>
                        </description>
                     </indicator>
                     <indicator code='TEC_GOV_TAX' level='4' format='percentage'>
-                       <label lang='EN'><![CDATA[Tax incentives]]></label>
-                       <shortlabel lang='EN'><![CDATA[Tax incentives]]></shortlabel>
+                       <label lang='EN'><![CDATA[Tax incentives for private R&amp;D]]></label>
+                       <shortlabel lang='EN'><![CDATA[Tax incentives for private R&amp;D]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator measures the level of government support for private research and development. This is expressed by the <a href="http://www.oecd.org/sti/b-index.pdf">B-index</a>, published by the OECD. As explained by the OECD, the B-index is a measure of the level of pre-tax profit a &ldquo;representative&rdquo; company needs to generate to break even on a marginal, unitary outlay on R&amp;D, considering provisions in the tax system that allow for special treatment of R&amp;D expenditures. The indicator takes business R&amp;D expenditures expressed as share of GDP and multiplies this by the level of tax subsidies for small and large enterprises. The result is then weighted by 25 percent, which is a discount applied on the premise that all private R&amp;D is assumed to be commercially related.</p>
+                          <![CDATA[<p>
+                              The indicator measures the level of government support for private research
+                              and development. This is expressed by the
+                              <a href="http://www.oecd.org/sti/RDTaxIncentives-DesignSubsidyRates.pdf">
+                                  B-index
+                              </a>
+                              , published by the OECD. As explained by the OECD, the B-index is a measure
+                              of the level of pre-tax profit a “representative” company needs to generate
+                              to break even on a marginal, unitary outlay on R&amp;D, considering
+                              provisions in the tax system that allow for special treatment of R&amp;D
+                              expenditures. The indicator takes business R&amp;D expenditures expressed
+                              as share of GDP and multiplies this by the average level of tax subsidies
+                              for profitable small and large enterprises. The result is then weighted by
+                              25%, which is a discount applied on the premise that all private R&amp;D is
+                              assumed to be commercially-related.
+                          </p>
                           <p>The two R&amp;D indicators combined account for two-thirds of the weight in the technology component.</p>]]>
                        </description>
                     </indicator>
@@ -427,21 +1147,105 @@
                        <label lang='EN'><![CDATA[Patent coverage]]></label>
                        <shortlabel lang='EN'><![CDATA[Patent coverage]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator takes into account countries policies countries&rsquo; policies on patenting plant and animal varieties and software. As explained by <a href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf">Walter Park et al</a>.: patents give the manufacturer the power to charge higher prices than would otherwise exist under free competition. The patenting of plant and animal varieties can significantly affect people&rsquo;s access to goods such as medicines and innovations in agriculture. Similarly, the patenting of software limits poor countries&rsquo; access to and usage of new technologies. If a country&rsquo;s patent coverage policy enables others to access and make use of such knowledge, it scores 0 points. If, on the other hand a country enables such patenting, i.e., their policies are too restrictive it receives 2 points. The weight of the indicator in Intellectual Property Rights subcomponent is 20 percent.</p>]]>
+                          <![CDATA[
+                          <p>
+                              The indicator takes into account countries policies countries’ policies on
+                              patenting plant and animal varieties and software. As explained by
+                              <a
+                                  href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
+                              >
+                                  Walter Park et al
+                              </a>
+                              : patents give the manufacturer the power to charge higher prices than
+                              would otherwise exist under free competition. The patenting of plant and
+                              animal varieties can significantly affect people’s access to goods such as
+                              medicines, and innovations in agriculture. Similarly, the patenting of
+                              software limits poor countries’ access to and usage of new technologies. If
+                              a country’s patent coverage policy enables others, to access and make use
+                              of such knowledge, it scores 0 points. If, on the other hand a country
+                              enables such patenting, i.e. their policies are too restrictive it receives
+                              2 points. The evaluation is done by Walter Park et al and the two
+                              categories are weighted equally: a country can be penalized with a score of
+                              max. 1 for patents on plant and animal varieties and with a score of max. 1
+                              for patents on software. Scaling is done in tenths.
+                          </p>
+                          <p>
+                              The weight of the indicator in Intellectual Property Rights subcomponent is
+                              20%.
+                          </p>
+                          ]]>
                        </description>
                     </indicator>
                     <indicator code='TEC_INT_TRI' level='4'>
                        <label lang='EN'><![CDATA['TRIPS+', anti-circumvention rules, database protection]]></label>
                        <shortlabel lang='EN'><![CDATA['TRIPS+', anti-circumvention rules, database protection]]></shortlabel>
                        <description lang='EN'>
-    								  <![CDATA[<p>This indicator combines an assessment of rich countries&rsquo; intellectual property right (IPR) provisions which go beyond the Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS), countries&rsquo; anticircumvention rules, and database protection. As explained by <a href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf">Walter Park et al</a>.: developed countries often enter into agreements with developing-country partners which go beyond TRIPS. These provisions sometimes result in the developing economies adopting an IPR system that is stronger than one that is appropriate for them at their stage of economic development, which can negatively affect foreign direct investment as well as local innovators. Secondly, while anticircumvention rules against tampering with technology protection measures protect IPR owners against piracy, it is important that the rules and penalties are not be so harsh that they inappropriately interfere with learning and imitation. Anticircumvention rules can prevent reverse engineering and opportunities for learning by doing. Lastly, some developed economies have granted patent-like protection to compilers of databases, even if the data were already in the public domain or created with public funds. Strong database protections reduce the flow of useful, public knowledge to developing economies. If a country applies stringent policies in all 3 areas it receives 3 points, whereas if its policies facilitate knowledge sharing it scores 0. The weight of the indicator in Intellectual Property Rights subcomponent is 50 percent.</p>]]>
+    								  <![CDATA[<p>
+                          This indicator combines an assessment of rich countries IPRs provision
+                          which go beyond Agreement on Trade-Related Aspects of Intellectual Property
+                          Rights (TRIPS), countries’ anti-circumvention rules and database
+                          protection. As explained by
+                          <a
+                              href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
+                          >
+                              Walter Park et al
+                          </a>
+                          : developed countries often enter into agreements with developing country
+                          partners which go beyond TRIPS. These provisions sometimes result in the
+                          developing economies adopting an IPR system that is stronger than one that
+                          is appropriate for them at their stage of economic development, which can
+                          negatively affect foreign direct investment as well as local innovators.
+                          Secondly, while anti-circumvention rules against tampering with technology
+                          protection measures protect IPR owners against piracy, it is important that
+                          the rules and penalties should not be so harsh that they inappropriately
+                          interfere with learning and imitation. Anti-circumvention rules can prevent
+                          reverse engineering and opportunities for learning by doing. Lastly, some
+                          developed economies have granted patent-like protection to compilers of
+                          databases, even if the data were already in the public domain or created
+                          with public funds. Strong database protections reduce the flow of useful,
+                          public knowledge to developing economies. If a country applies stringent
+                          policies in all 3 areas it receives 3 points, whereas if its policies
+                          facilitate knowledge sharing it scores 0. The weight of the indicator in
+                          Intellectual Property Rights subcomponent is 50%.
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='TEC_INT_COP' level='4'>
                        <label lang='EN'><![CDATA[Rights loss provisions]]></label>
                        <shortlabel lang='EN'><![CDATA[Rights loss provisions]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>This indicator combines an assessment of rich countries intellectual property right (IPR) provisions which relate to compulsory licensing, patent revoking and opposition system, and exceptions for research or defense purposes. As explained by <a href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf">Walter Park et al</a>.: Compulsory licensing refers to the situation in which a government compels a patent or copyright holder to license the invention or work to a third party. This a useful option for a government that wishes to respond to a lack of suppliers (or unwilling suppliers) for serving a specific market need, such as vaccines. Governments can also revoke a patent if the holder is not exploiting it or has never exploited it, but is simply hoarding the right. A patent opposition system enables third parties can challenge the validity of a patent grant (within a given time limit) which helps to ensure that invalid patents are not issued, which could otherwise tie up the supply of a good or innovation. Research exemptions allow firms to &ldquo;infringe&rdquo; a patent for research and experimental purposes and help prevent patent rights from inhibiting follow-on innovations. If a country applies stringent policies in all four areas it receives four points, whereas if its policies facilitate knowledge sharing it scores zero. The weight of the indicator in intellectual property rights subcomponent is 30 percent.</p>]]>
+                          <![CDATA[
+                          <p>
+                              This indicator combines an assessment of rich countries IPRs provision
+                              which relate to compulsory licensing, patent revoking and opposition
+                              system, and exceptions for research or defense purposes. As explained by
+                              <a
+                                  href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
+                              >
+                                  Walter Park et al
+                              </a>
+                              : Compulsory licensing refers to the situation in which a government
+                              compels a patent or copyright holder to license the invention or work to a
+                              third party. This a useful option for a government that wishes to respond
+                              to a lack of suppliers (or unwilling suppliers) for serving a specific
+                              market need, such as vaccines. Governments can also revoke a patent if the
+                              holder is not exploiting it or has never exploited it, but is simply
+                              hoarding the right. A patent opposition system enables third parties can
+                              challenge the validity of a patent grant (within a given time limit) which
+                              helps to ensure that invalid patents are not issued, which could otherwise
+                              tie up the supply of a good or innovation. Research exemptions allow firms
+                              to ‘infringe’ a patent for research and experimental purposes, and help
+                              prevent patent rights from inhibiting follow-on innovations. If a country
+                              applies stringent policies in all 4 areas it receives 4 points, whereas if
+                              its policies facilitate knowledge sharing it scores 0. The weight of the
+                              indicator in Intellectual Property Rights subcomponent is 30%.
+                          </p>
+                          <p>
+                              These three indicators measuring intellectual property rights combined and
+                              equally weighted account for one-third of the weight in the technology
+                              component.
+                          </p>
+                          ]]>
                        </description>
                     </indicator>
                  </hierarchy>
@@ -452,15 +1256,50 @@
            <label lang='EN'><![CDATA[Environment]]></label>
            <shortlabel lang='EN'><![CDATA[Environment]]></shortlabel>
            <description lang='EN'>
-              <![CDATA[<h2>Environment</h2><p>Rich countries are most responsible for anthropogenic climate change, but poor countries will suffer the most because they are more susceptible geographically and have less money and capacity to deal with the effects. The environment component of the CDI is composed of three subcomponents which assess countries’ environmental policies on global climate, sustainable fisheries, and biodiversity and ecosystems. Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
+              <![CDATA[<h2>Environment</h2><p>
+                  The environment component is composed of three subcomponents which assess
+                  countries’ environmental policies on global climate, sustainable fisheries,
+                  and biodiversity and ecosystems. Each category includes different
+                  indicators which are assigned distinct weights.
+              </p><p>Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
            </description>
            <explanation lang='EN'>
               <![CDATA[
               <h3>Why is protection of the environment important for development, and for all of us?</h3>
-              <p>A healthy environment is a necessity for all: poor countries as well as the wealthy ones. While rich countries bear the most responsibility for creating anthropogenic climate change, it is the poor countries for which the impact will be much more damaging because many are located in regions where the impacts of climate change will demonstrate themselves most.</p>
-              <p>Much of the world&rsquo;s poor depend on their surrounding environment to meet their daily needs. Healthy ecosystems are source of clean water and energy, they provide income opportunities and shelter, they are a source of treatment and protection, and biodiversity plays a central role for sustaining food security. Logging as well as increasing demand for arable land are among the main causes of deforestation. In recent <a href='http://www.cgdev.org/publication/future-forests-emissions-tropical-deforestation-carbon-price'>paper</a>, CGD experts estimate that by 2050 an area of tropical forest the size of India will have been cleared if countries do not change their current behavior and policies.</p>
-              <p>For more information on why rich countries policies matter for the environment, please see our <a href='http://www.cgdev.org/sites/default/files/ebaconsultation_environment_online.pdf'>paper with the Ecologic Institute (PDF)</a>.</p>
-              <p><strong>Related CGD work:</strong> <a href='/topics/climate-forest-energy'>Climate, forests, and energy</a>.</p>]]>
+              <p>
+                  A healthy environment is a necessity for all: poor countries as well as the
+                  wealthy ones. While rich countries bear the most responsibility for
+                  creating anthropogenic climate change, it is the poor countries for which
+                  the impact will be much more damaging. Many of these countries are in
+                  regions where the impacts of climate change will demonstrate themselves
+                  most.
+              </p>
+              <p>
+                  Much of the world’s poor depend on their surrounding environment to meet
+                  their daily needs. Healthy ecosystems are source of clean water and energy,
+                  they provide income opportunities and shelter, they are a source of
+                  treatment and protection, and biodiversity plays a central role for
+                  sustaining food security. Logging as well as increasing demand for arable
+                  land are among the main causes of deforestation.
+              </p>
+              <p>
+                  This especially applies to global fish stocks, which are becoming
+                  increasingly overexploited, partly because demand for fish remains high in
+                  rich countries. Fishing subsidies provided by rich countries often result
+                  in overfishing, which has a negative impact not only on ocean’s decreasing
+                  biodiversity, but also on the livelihoods of communities dependent on these
+                  resources.
+              </p>
+              <p>
+                  For more information on why rich countries policies matter for the
+                  environment, please see our
+                  <a
+                      href="http://international.cgdev.org/sites/default/files/ebaconsultation_environment_online.pdf"
+                  >
+                      paper with the Ecologic institute
+                  </a>
+                  .
+              </p>]]>
            </explanation>
            <unit lang='EN'><![CDATA[Score]]></unit>
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
@@ -477,7 +1316,15 @@
                        <shortlabel lang='EN'><![CDATA[Greenhouse gas emissions]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>This indicator assesses the level of greenhouse gas emissions per capita of a country. Data come from <a href='http://unfccc.int/ghg_data/ghg_data_unfccc/items/4146.php'>UNFCCC Greenhouse Gas Inventory Data</a>. The weight of this indicator in the environment component is 10 percent.</p>]]>
+                          <p>
+                              The indicator assesses the level of greenhouse gas emissions per capita of
+                              a country. Data come from
+                              <a href="http://unfccc.int/ghg_data/ghg_data_unfccc/items/4146.php">
+                                  UNFCCC Greenhouse Gas Inventory Data
+                              </a>
+                              , Population data from the World Bank. The weight of this indicator in the
+                              environment component is 10%.
+                          </p>]]>
                        </description>
                     </indicator>
 
@@ -486,7 +1333,22 @@
                        <shortlabel lang='EN'><![CDATA[Fossil fuel production ]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>This indicator takes into account the fact that responsibility for greenhouse gas emissions lies not only with the consumers, but also with the producers. The indicator penalizes those countries which extract fossil fuels, namely oil, gas, and coal. Volumes of production are <a href='http://content.ces.ncsu.edu/conversion-factors-for-bioenergy.pdf'>converted</a> to CO2 emissions equivalent and are calculated per capita of each country. Data on production come from <a href='http://www.bp.com/'>BP Statistical Review of World Energy</a>. The weight of this indicator in the environment component is 5 percent.</p>]]>
+                          <p>
+                            The indicator takes into account that responsibility for greenhouse gas
+                            emissions lies not only with the consumers, but also with the producers.
+                            The indicator penalizes those countries which extract fossil fuels, namely
+                            oil, gas and coal. Volumes of production are
+                            <a href="http://content.ces.ncsu.edu/conversion-factors-for-bioenergy.pdf">
+                                converted
+                            </a>
+                            to CO<sub>2</sub> emissions equivalent and are calculated per capita of
+                            each country. Data on production come from
+                            <a href="http://www.bp.com/en/global/corporate/energy-economics.html">
+                                BP Statistical Review of World Energy
+                            </a>
+                            . The weight of this indicator in the environment component is 5%.
+                        </p>
+                      ]]>
                        </description>
                     </indicator>
 
@@ -496,7 +1358,15 @@
                        <shortlabel lang='EN'><![CDATA[Change in greenhouse gas emissions]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>This indicator assesses the level of intensity of greenhouse gas emissions per unit of GDP over time. Data come from <a href='http://unfccc.int/ghg_data/ghg_data_unfccc/items/4146.php'>UNFCCC Greenhouse Gas Inventory Data</a>. The weight of this indicator in the environment component is 15 percent.</p>]]>
+                       <p>
+                          The indicator assesses the level of intensity of greenhouse gas emissions
+                          per unit of GDP over ten years. Data come from
+                          <a href="http://unfccc.int/ghg_data/ghg_data_unfccc/items/4146.php">
+                              UNFCCC Greenhouse Gas Inventory Data
+                          </a>
+                          , GDP data from the World Bank. The weight of this indicator in the
+                          environment component is 15%.
+                      </p>]]>
                        </description>
                     </indicator>
 
@@ -506,7 +1376,17 @@
                        <shortlabel lang='EN'><![CDATA[Gasoline taxes]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>This indicator assesses the level of tax burden on gas prices. Specifically premium unleaded (RON 95) tax level is taken into consideration. Data come from the OECD publication <a href='http://www.oecd-ilibrary.org/energy/energy-prices-and-taxes/volume-2015/issue-1_energy_tax-v2015-1-en'>Energy prices and Taxes</a>. The weight of this indicator in the environment component is 15 percent.</p>]]>
+                         <p>
+                          The indicator assesses the level of tax burden on gas prices. Specifically,
+                          premium unleaded (RON 95) tax level is taken into consideration. Data come
+                          from the OECD publication
+                          <a
+                              href="http://www.oecd-ilibrary.org/energy/energy-prices-and-taxes/volume-2015/issue-1_energy_tax-v2015-1-en"
+                          >
+                              Energy prices and Taxes
+                          </a>
+                          . The weight of this indicator in the environment component is 15%.
+                      </p>]]>
                        </description>
                     </indicator>
                     <indicator code='ENV_USE' level='4'>
@@ -514,14 +1394,43 @@
                        <shortlabel lang='EN'><![CDATA[Consumption of ozone-depleting substances]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>Two international agreements, the Vienna Convention (1985) and Montreal Protocol (1987), address the reduction of consumption of ozone depleting substances. Both agreements have been universally ratified. The indicator looks at per capita consumption of ozone depleting substances. Data come from <a href='http://ozone.unep.org/en/data-reporting/data-centre'>UNEP Data Center</a>. The weight of this indicator in the environment component is 10 percent.</p>]]>
+                          <p>
+                            Two international agreements - the Vienna Convention (1985) and Montreal
+                            Protocol (1987) – address the reduction of consumption of ozone depleting
+                            substances. Both agreements have been universally ratified. The indicator
+                            looks at per capita consumption of ozone depleting substances. Data on
+                            ozone output come from
+                            <a href="http://ozone.unep.org/en/data-reporting/data-centre">
+                                UNEP Data center
+                            </a>
+                            , population data from the World Bank. The weight of this indicator in the
+                            environment component is 10%.
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='ENV_PAR' level='4'>
                        <label lang='EN'><![CDATA[Paris Agreement]]></label>
                        <shortlabel lang='EN'><![CDATA[Paris Agreement]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[The Paris Agreement, which was adopted in December 2015, succeeds the Kyoto Protocol as the most ambitious climate change agreement to date. The agreement was negotiated within the <a href="https://en.wikipedia.org/wiki/United_Nations_Framework_Convention_on_Climate_Change">United Nations Framework Convention on Climate Change</a> (UNFCCC). The Paris Agreement is the first comprehensive climate agreement and its main aim is to hold the increase of the global temperature below 2 &deg;C above pre-industrial levels. The agreement entered into force in November 2016. A list of all countries which have ratified the agreement can be found <a href="http://unfccc.int/paris_agreement/items/9444.php">here</a>. The weight of this indicator in the environment component is 5 percent.]]>
+                          <![CDATA[<p>
+                            The Paris Agreement, which was adopted in December 2015, succeeds the Kyoto
+                            Protocol as the most ambitious climate change agreement to date. The
+                            agreement was negotiated within the
+                            <a
+                                href="https://en.wikipedia.org/wiki/United_Nations_Framework_Convention_on_Climate_Change"
+                            >
+                                United Nations Framework Convention on Climate Change
+                            </a>
+                            (UNFCCC). The Paris Agreement is the first comprehensive climate agreement
+                            and its main aim is to hold the increase of the global temperature below
+                            2 °C above pre-industrial levels. The agreement entered into force in
+                            November 2016. A list of all countries which have ratified the agreement
+                        can be found    <a href="http://unfccc.int/paris_agreement/items/9444.php">here</a>. The
+                            weight of this indicator in the environment component is 5%.
+                        </p>
+                        <p>
+                        An evaluation on the Paris agreement by CGD experts can be found    <a href="http://www.cgdev.org/topics/climate-change">here</a>.
+                        </p>]]>
                        </description>
                     </indicator>
                  </hierarchy>
@@ -538,7 +1447,23 @@
                        <shortlabel lang='EN'><![CDATA[Fishing subsidies]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>Fishing subsidies often result in overfishing, which depletes fishing stocks and can have a negative impact on the livelihoods of communities dependent on these resources. Fishing subsidies data come from <a href='http://www.oecd-ilibrary.org/agriculture-and-food/oecd-review-of-fisheries-country-statistics_rev_fish_stat'>OECD Review of Fisheries</a> and are calculated per capita. The weight of this indicator in the environment component is 5 percent.</p>]]>
+                          <p>
+                            Fishing subsidies often result in overfishing, which leads to
+                            <a href="http://www.pnas.org/content/113/1/134.full">
+                                depleting fishing stocks
+                            </a>
+                            and can have a
+                            <a href="https://link.springer.com/article/10.1007/s10818-010-9090-9">
+                                negative impact on the livelihoods of communities
+                            </a>
+                            dependent on these resources. Fishing subsidies are assessed using the
+                            OECD’s
+                            <a href="http://stats.oecd.org/Index.aspx?datasetcode=FISH_FSE">
+                                Fisheries Support Estimate
+                            </a>
+                            which calculates subsidies as a proportion of fisheries output (value of
+                            landings). The weight of this indicator in the environment component is 5%.
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='ENV_UNI' level='4'>
@@ -546,7 +1471,27 @@
                        <shortlabel lang='EN'><![CDATA[Ratification of UN Fisheries Agreement]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p><a href="http://www.un.org/Depts/los/convention_agreements/convention_overview_fish_stocks.htm">The UN agreement for the Implementation of the Provisions of UNCLOS relating to the Conservation and Management of Straddling Fish Stocks and Highly Migratory Fish Stocks (UNFSA)</a> aims to establish principles for the conservation and management of these fish stocks through enhanced cooperation among countries while recognizing the special requirements those countries whose economic livelihoods to great extent depend on fisheries resources. Full list of signatories is available <a href='http://www.un.org/Depts/los/reference_files/chronological_lists_of_ratifications.htm'>here</a>. The weight of this indicator in the environment component is 5 percent.</p>]]>
+                          <p>
+                              The UN agreement for the Implementation of the Provisions of UNCLOS
+                              relating to the Conservation and Management of Straddling Fish Stocks and
+                              Highly Migratory Fish Stocks (
+                              <a
+                                  href="http://www.un.org/Depts/los/convention_agreements/convention_overview_fish_stocks.htm"
+                              >
+                                  UNFSA
+                              </a>
+                              ) aims to establish principles for the conservation and management of these
+                              fish stocks through enhanced cooperation among countries while recognizing
+                              the special requirements those countries whose economic livelihoods to
+                              great extent depend on fisheries resources. A full list of ratifying
+                              countries is available
+                              <a
+                                  href="http://www.un.org/Depts/los/reference_files/chronological_lists_of_ratifications.htm#Agreement%20for%20the%20implementation%20of%20the%20provisions%20of%20the%20Convention%20relating%20to%20the%20conservation%20and%20management%20of%20straddling%20fish%20stocks%20and%20highly%20migratory%20fish%20stocks"
+                              >
+                                  here
+                              </a>
+                              . The weight of this indicator in the environment component is 5%.
+                          </p>]]>
                        </description>
                     </indicator>
                  </hierarchy>
@@ -561,22 +1506,70 @@
                        <label lang='EN'><![CDATA[Biodiversity treaties participation]]></label>
                        <shortlabel lang='EN'><![CDATA[Biodiversity treaties participation]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator evaluates how countries fulfill their monitoring and reporting requirements of key international biodiversity agreements. Four biodiversity agreements are considered:</p>
-                          <ol>
-                          <li><a href="https://www.cbd.int/reports">Convention on Biological Diversity</a> (CBD)</li>
-                          <li><a href="https://cites.org/sites/default/files/annual_reports.pdf">Convention on International Trade in Endangered Species of Wild Fauna and Flora</a> (CITES)</li>
-                          <li><a href="http://www.ramsar.org/search?f%5B0%5D=type%3Adocument#search-documents">Ramsar Convention on Wetlands of International Importance </a></li>
-                          <li><a href="http://www.cms.int/en/documents/national-reports">Convention on Migratory Species</a> (CMS)</li>
-                          </ol>
-                          <p>Countries receive two points if a report is submitted without errors and on time, one point if it is late or with errors, and no points if the country fails to submit a report. The weight of this indicator in the environment component is 15 percent.</p> ]]>
-                       </description>
+                          <![CDATA[<p>
+                            The indicator evaluates how countries fulfil their monitoring and reporting
+                            requirements of key international biodiversity agreements. Four
+                            biodiversity agreements are considered:
+                        </p>
+                        <ol>
+                        <li>
+                            <a href="https://www.cbd.int/reports">
+                                Convention on Biological Diversity
+                            </a>
+                            (CBD)
+                        </li>
+                        <li>
+                            <a href="https://cites.org/sites/default/files/annual_reports.pdf">
+                                Convention on International Trade in Endangered Species of Wild Fauna
+                                and Flora
+                            </a>
+                            (CITES)
+                        </li>
+                        <li>
+                            <a
+                                href="http://www.ramsar.org/search?f%5B0%5D=type%3Adocument#search-documents"
+                            >
+                                Ramsar Convention on Wetlands of International Importance
+                            </a>
+                            <u></u>
+                        </li>
+                        <li>
+                            <a href="http://www.cms.int/en/documents/national-reports">
+                                Convention on Migratory Species
+                            </a>
+                            (CMS)
+                        </li>
+                        </ol>
+                        <p>
+                            CDI-Countries’ commitment to biodiversity is measured with the following
+                            scoring system (per agreement): A country receives 2 points if the required
+                            annual/biannual report is submitted without errors and on time, 1 point if
+                            it is late and/or with errors and no points if the country fails to submit
+                            a report. The weight of this indicator in the environment component is 15%.
+                        </p>
                     </indicator>
                     <indicator code='ENV_TRO' level='4' lessIsBetter='1' format='currency'>
                        <label lang='EN'><![CDATA[Tropical wood imports]]></label>
                        <shortlabel lang='EN'><![CDATA[Tropical wood imports]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>Tropical timber imports per capita are an indicator of countries&rsquo; indirect support to illegal logging, as the majority of tropical timber imports stem from illegal practices and have negative environmental and social impacts. Data come from <a href="http://comtrade.un.org/db/">UN comtrade</a> database. The weight of this indicator in the environment component is 15 percent.</p> ]]>
+                          <p>
+                            Tropical timber imports per capita are an indicator of countries’ indirect
+                            support to logging, as
+                            <a
+                                href="https://www.chathamhouse.org/sites/files/chathamhouse/publications/research/20150715IllegalLoggingHoareFinal.pdf"
+                            >
+                                about one third of tropical timber imports
+                            </a>
+                            is illegally produced. This has negative environmental and social impacts.
+                            The total amount of carbon emitted due to tropical deforestation is
+                            <a href="http://science.sciencemag.org/content/316/5827/985">
+                                estimated to be 1.5 Gigatons per year - which is equivalent to about
+                                20% of global anthropogenic emissions
+                            </a>
+                            . Data come from <a href="http://comtrade.un.org/db/">UN comtrade</a>
+                            database. The weight of this indicator in the environment component is 15%.
+                        </p>]]>
                        </description>
                     </indicator>
                  </hierarchy>
@@ -588,42 +1581,149 @@
            <shortlabel lang='EN'><![CDATA[Trade]]></shortlabel>
            <description lang='EN'>
               <![CDATA[<h2>Trade</h2>
-              <p>The trade component is composed of three subcomponents which assess countries&rsquo; policies facilitating international trade in goods and services by lowering tariffs and quotas, reducing agricultural subsidies to rich countries&rsquo; farmers, and minimizing red tape. Each category includes different indicators which are assigned distinct weights.</p>
+             <p>
+                  The trade component is composed of four indicators which assess countries’
+                  policies facilitating international trade in goods by lowering tariffs and
+                  quotas, reducing agricultural subsidies to rich countries’ farmers,
+                  enabling trade in services and minimizing red tape.
+              </p>
               <p>Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
            </description>
            <explanation lang='EN'>
               <![CDATA[
               <h3>Why is trade important for development, and for all of us?</h3>
-              <p>Rich countries&rsquo; policies have a significant impact on the trading prospects of developing countries and their citizens. Trade provides important opportunities for countries to attract investment, create jobs, and reduce poverty. Rich-country policies that are open to trade are critical in creating these development prospects. However, it is the rich countries which have been deciding the world trade rules for decades, and even though there is a wide consensus on the positive outcomes of trade, some goods that poor countries are best at producing&mdash;including crops&mdash;still face high trade barriers in rich countries.</p>
-              <p>Rich countries also affect the development prospects beyond their borders when they subsidize their own farmers&rsquo; production. This causes overproduction and &ldquo;dumping&rdquo; on world markets, which leads to lower prices and hurts poor-country farmers. Industrial tariffs also tend to hurt the poor, with low rates for raw commodities and high rates for labor-intensive, processed goods.</p>
-              <p>Besides these direct measures, many countries exercise high administrative burden for imports, and trade in services.</p>
-              <p>For more information on rich countries&rsquo; trade policies, please consult our <a href="http://www.cgdev.org/sites/default/files/Europe_Beyond_Aid_Trade.pdf">paper</a>.</p>
+              <p>
+                  International trade and trading relationships are also changing very
+                  rapidly. According to a recent
+                  <a href="http://unctad.org/en/PublicationsLibrary/ditctab2015d1_en.pdf">
+                      UNCTAD report
+                  </a>
+                  , international trade grew by USD 20 trillion from 1990 to 2014, being USD
+                  4 trillion in 1990 and USD 24 trillion in 2014. Rich countries’ policies
+                  have a significant impact on the trading prospects of developing countries
+                  and their citizens. Trade provides important opportunities for countries to
+                  attract investment, create jobs, and reduce poverty. For instance,
+                  <a
+                      href="https://editorialexpress.com/cgi-bin/conference/download.cgi?db_name=CSAE2016&amp;paper_id=832"
+                  >
+                      one recent study
+                  </a>
+                  suggests that the African Growth and Opportunity Act, the US trade
+                  agreement with Sub-saharan African countries, has reduced infant mortality
+                  by about 9%. Rich-country policies that are open to trade are critical in
+                  creating these development prospects. However, even though there is a wide
+                  consensus on the positive outcomes of trade, some goods that poor countries
+                  are best at producing—including agricultural goods—still face high trade
+                  barriers in rich countries.
+              </p>
+              <p>
+                  Rich countries also affect the development prospects beyond their borders
+                  when they subsidize their own farmers’ production. This ability to
+                  subsidise unfairly lowers rich-country farmer production costs, causes
+                  overproduction and ‘dumping’ on world markets, which leads to lower prices
+                  and hurts poor-country farmers.
+              </p>
+              <p>
+                  Trade in services is becoming increasingly important for development, with
+                  growth of modern
+                  <a
+                      href="http://documents.worldbank.org/curated/en/477321469182630728/The-unexplored-potential-of-trade-in-services-in-Africa-from-hair-stylists-and-teachers-to-accountants-and-doctors"
+                  >
+                      service exports now growing
+                  </a>
+                  <a
+                      href="http://documents.worldbank.org/curated/en/477321469182630728/The-unexplored-potential-of-trade-in-services-in-Africa-from-hair-stylists-and-teachers-to-accountants-and-doctors"
+                  >
+                      even faster than trade in goods
+                  </a>
+                  in some African countries - however, regulatory barriers remain.
+              </p>
+              <p>
+                  Besides these direct measures, many countries exercise a high
+                  administrative burden for imports.
+              </p>
+              <p>
+                  For more information on rich countries’ trade policies, please consult our
+                  <a
+                      href="http://www.cgdev.org/sites/default/files/Europe_Beyond_Aid_Trade.pdf"
+                  >
+                      paper
+                  </a>
+                  .
+              </p>
               <p><strong>Related CGD work:</strong> <a href='/topics/trade'>Trade</a>.</p>]]>
            </explanation>
            <unit lang='EN'><![CDATA[Score]]></unit>
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
            <hierarchy>
-              <indicator code='TRA_PRO' level='3'>
-                 <label lang='EN'><![CDATA[Market protection]]></label>
-                 <shortlabel lang='EN'><![CDATA[Market protection]]></shortlabel>
+              <!--<indicator code='TRA_TAR' level='3'>
+                 <label lang='EN'><![CDATA[Tariff protection]]></label>
+                 <shortlabel lang='EN'><![CDATA[Tariff protection]]></shortlabel>
                  <description lang='EN'>
-                    <![CDATA[<p>The subcomponent includes two areas of rich countries&rsquo; policies aimed at market protection. First, agricultural subsidies are considered. The data for EU countries come from the <a href="http://eur-lex.europa.eu/resource.html?uri=cellar:03ae5e2b-6384-11e5-9317-01aa75ed71a1.0023.02/DOC_2&amp;format=PDF">European Commission</a>, and for non-EU countries from the <a href="http://stats.oecd.org/Index.aspx?DataSetCode=MON2012TSE">OECD</a>.</p>
-                    <p>Second, the indicator assesses ad valorem equivalent of duties on imports from developing countries. The data by importer and exporter at the Harmonized System six-digit level are from the&nbsp;<a href="http://www.cepii.fr/anglaisgraph/bdd/macmap.htm">Market Access database</a> of CEPII. Definitions of major product categories such as rice and clothing come from the&nbsp;<a href="https://www.gtap.agecon.purdue.edu/databases/v8/default.asp">Global Trade Analysis Project</a> database.&nbsp;</p>
-                    <p>The weight of this indicator in the trade component equals 50 percent.</p>]]>
+                    <![CDATA[<p>
+                    This indicator assesses ad valorem equivalent of duties on imports from
+                    developing countries. We use Global Trade Analysis Project data from ITC’s
+                    <a
+                        href="http://www.macmap.org/countryanalysis/countrystatistics/GlobalAnalysis.aspx?s=1"
+                    >
+                        Market Access Map (MAcMAp)
+                    </a>
+                    . A high score indicates low tariffs against developing countries.
+                </p>
+                <p>
+                    The weight of the tariff protection indicator in the trade component equals
+                    40%.
+                </p>]]>
+                 </description>
+              </indicator>-->
+              <indicator code='TRA_PRO' level='3'>
+                 <label lang='EN'><![CDATA[Agricultural protection]]></label>
+                 <shortlabel lang='EN'><![CDATA[Agricultural protection]]></shortlabel>
+                 <description lang='EN'>
+                    <![CDATA[<p>
+                      The indicator assesses the extent of agricultural subsidy expressed as a
+                      proportion of country’s agricultural output. The data for EU countries come
+                      from the
+                      <a
+                          href="http://eur-lex.europa.eu/resource.html?uri=cellar:03ae5e2b-6384-11e5-9317-01aa75ed71a1.0023.02/DOC_2&amp;format=PDF"
+                      >
+                          European Commission
+                      </a>
+                  , and for non-EU countries from the    <a href="http://stats.oecd.org/Index.aspx?DataSetCode=MON2012TSE">OECD</a>.
+                  </p>
+                  <p>
+                      The weight of the agricultural protection indicator in the trade component
+                      is 10%.
+                  </p>]]>
                  </description>
               </indicator>
               <indicator code='TRA_IMP' level='3'>
                  <label lang='EN'><![CDATA[Impediments to imports]]></label>
                  <shortlabel lang='EN'><![CDATA[Impediments to imports]]></shortlabel>
                  <description lang='EN'>
-                    <![CDATA[<p>This indicator includes three subindicators from the <a href="http://www.doingbusiness.org/">Doing Business Database</a> published by the World Bank: the number of documents a country requires to import a container, the number of days it takes to import a container, and the costs of importing a container. The indicator has 25 percent weight in the trade component.</p>]]>
+                    <![CDATA[<p>
+                        The indicator assesses regulatory burden that countries face when trading
+                    across borders. Three indicators from the    <a href="http://www.doingbusiness.org/">Doing Business Database</a>
+                        published by the World Bank are included: number of documents a country
+                        requires to import a container, number of days it takes to import a
+                        container and costs for importing a container. The indicator has 25% weight
+                        in the trade component.
+                    </p>]]>
                  </description>
               </indicator>
               <indicator code='TRA_SRV' level='3'>
                  <label lang='EN'><![CDATA[Restrictions to trade in services]]></label>
                  <shortlabel lang='EN'><![CDATA[Restrictions to trade in services]]></shortlabel>
                  <description lang='EN'>
-                    <![CDATA[<p>The indicator assesses countries&rsquo; level of restrictiveness for trade in services. It is based on the <a href="http://stats.oecd.org/Index.aspx?DataSetCode=STRI">Services Trade Restrictiveness Index</a> published by the OECD. The indicator is the average of restrictiveness in all sectors. The indicator has 25 percent weight in the trade component.</p>]]>
+                    <![CDATA[<p>
+                      The indicator assesses countries’ level of restrictiveness for trade in
+                      services. It is based on the
+                      <a href="http://stats.oecd.org/Index.aspx?DataSetCode=STRI">
+                          Services Trade Restrictiveness Index
+                      </a>
+                      published by the OECD. The indicator is the average of restrictiveness in
+                      all sectors. The indicator has 25% weight in the trade component.
+                  </p>]]>
                  </description>
               </indicator>
            </hierarchy>
@@ -634,13 +1734,32 @@
            <description lang='EN'>
               <![CDATA[
               <h2>Security</h2>
-              <p>The security component assesses countries’ policies to facilitate peacekeeping and world security. It is composed of three subcomponents: financial contributions to peacekeeping, exporting arms to poor and undemocratic countries, and participation in security regimes. Each subcomponent includes different indicators with distinct weights.</p>
+              <p>
+                  The security component is composed of three subcomponents which assess
+                  countries’ policies facilitating peacekeeping and world security, these
+                  subcomponents include financial contributions to peacekeeping, exporting
+                  arms to poor and undemocratic countries, and participation in security
+                  regimes. Each category includes different indicators which are assigned
+                  distinct weights.
+              </p>
               <p>Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
            </description>
            <explanation lang='EN'>
               <![CDATA[
               <h3>Why is security important for development?</h3>
-               <p>Security and development are closely interlinked. War and political violence do not concentrate exclusively on governmental targets—they also harm civilians and their homes and livelihoods, and they exacerbate other conflicts. The destruction of public capacities not only affects the high political institutions of a state but has a detrimental effect on the daily lives of countries’ citizens. And this causal link also works the other way around: poverty and institutional weakness make it easier for both challengers and incumbents to gain support for political violence and war. Conflicts also do not respect borders and it is therefore in the interest of all countries to support peace and international security beyond their borders.</p>]]>
+               <p>
+                Security and development are closely interlinked. War and political
+                violence do not concentrate exclusively on governmental targets – they also
+                harm civilians and their homes and livelihoods, and they exacerbate other
+                inter-social conflicts. The destruction of public capacities affects not
+                only the high political institutions of a state but has a detrimental
+                effect on the daily lives of countries’ citizens. And this causal link also
+                works the other way around: poverty and institutional weakness make it
+                easier for both challengers and incumbents to gain support for political
+                violence and war. Conflicts also do not respect borders and it is therefore
+                in the interest of all countries to support peace and international
+                security beyond their borders.
+            </p>]]>
            </explanation>
            <unit lang='EN'><![CDATA[Score]]></unit>
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
@@ -648,15 +1767,53 @@
               <!-- Subindicators -->
               <indicator code='SEC_PEA' level='3'>
                  <label lang='EN'><![CDATA[Contributions to peacekeeping]]></label>
+                 <shortlabel lang='EN'><![CDATA[Contributions to peacekeeping]]></shortlabel>
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
+                 <description><![CDATA[
+                  <p>
+                      The subcomponent includes two indicators: countries contributions to
+                      peacekeeping and humanitarian interventions and sea lanes protection. These
+                      indicators combined have a 55% weight.
+                  </p>
+                  ]]></description>
                  <hierarchy>
                     <indicator code='SEC_PEA_PHI' level='4' format='percentage'>
                        <label lang='EN'><![CDATA[Peacekeeping & humanitarian interventions]]></label>
                        <shortlabel lang='EN'><![CDATA[Peacekeeping & humanitarian interventions]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>The indicator considers countries&rsquo; personnel and financial contributions to peacekeeping, this includes: financial contributions to the UN peacekeeping budget, personnel contributions UN operations&rsquo; and non-UN but internationally approved operations. Data come from <a href="http://www.un.org/en/peacekeeping/resources/statistics/contributors_archive.shtml">UN Department of Peace Keeping Operations</a> and <a href="http://www.iiss.org/en/publications/military%20balance/issues/the-military-balance-2015-5ea6">International Institute for Strategic Studies</a>.</p>]]>
+                        <p>
+                            The indicator considers countries’ personnel and financial contributions to
+                            peacekeeping, this includes: financial contributions to the UN peacekeeping
+                            budget and both direct and indirect personnel contributions UN operations’
+                            and non-UN but internationally approved operations. Financial contributions
+                            to the UNDPKO budget are weighted by GDP. Direct personnel contributions
+                            are measured by the average monthly contributions of personnel to UN PKO.
+                            Indirect personnel contributions are weighted by the number of active
+                            military forces and annual defense expenditures of each country.
+                        </p>
+                        <p>
+                            Data come from
+                            <a
+                                href="http://www.un.org/en/peacekeeping/resources/statistics/contributors_archive.shtml"
+                            >
+                                UN Department of Peacekeeping Operations
+                            </a>
+                            ,
+                            <a
+                                href="http://www.iiss.org/en/publications/military%20balance/issues/the-military-balance-2015-5ea6"
+                            >
+                                International Institute for Strategic Studies
+                            </a>
+                        , the Stockholm Peace Research Institute (    <a href="https://www.sipri.org/">SIPRI</a>) and the IMF
+                            <a
+                                href="https://www.imf.org/external/pubs/ft/weo/2017/01/weodata/index.aspx"
+                            >
+                                World Economic Outlook
+                            </a>
+                            .
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='SEC_PEA_SLP' level='4' format='percentage'>
@@ -664,7 +1821,14 @@
                        <shortlabel lang='EN'><![CDATA[Sea lanes protection]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>The indicator assesses countries contribution to the protection of sea lanes based on the quantity of major ships in the navy, the naval budget, and ships devoted to sea lanes protection. The data on naval budgets and maritime deployments is collected by Mark Stoker, an independent defense economist, using sources as the United Nations and individual ministries of defense. The indicator is expressed as share of GDP.</p>]]>
+                            <p>
+                              The indicator assesses countries contribution to the protection of sea
+                              lanes based on the quantity of major ships in the navy, the naval budget
+                              and ships devoted to sea lanes protection. The data on naval budgets and
+                              maritime deployments is collected by Mark Stoker, an independent defense
+                              economist, using sources such as the United Nations and individual
+                              Ministries of Defence. The indicator is expressed as share of GDP.
+                          </p>]]>
                        </description>
                     </indicator>
                     <indicator code='SEC_ARM' level='4' format='percentage'>
@@ -672,7 +1836,36 @@
                        <shortlabel lang='EN'><![CDATA[Arms exports]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>The arms exports indicator takes into account that countries also affect peace and security beyond their borders if they supply arms to other countries. This might be especially detrimental for development if the government of the recipient country does not rule according to democratic principles. The arms exports indicator is therefore weighted by the level of democracy (measured by <a href="http://info.worldbank.org/governance/wgi/index.aspx#home">World Governance Indicators</a>) and level of poverty (GDP per capita). The indicator is expressed as a share of GDP. The data on arms exports is collected by Mark Stoker, an independent defense economist, using publicly available data from multiple sources including individual governments and bodies such as the EU. Countries are rewarded for making such data publicly available. This subcomponent has a 15 percent weight.</p>]]>
+                         <p>
+                            The arms exports indicator takes into account that countries also affect
+                            peace and security beyond their borders if they supply arms to other
+                            countries. This might be especially detrimental for development if the
+                            government of the recipient country does not necessarily rule according to
+                            democratic principles. Therefore, the indicator weights arms export by the
+                            level of democracy (measured by the Voice and accountability dimension of
+                            governance by the
+                            <a href="http://info.worldbank.org/governance/wgi/index.aspx#home">
+                                World Governance Indicators
+                            </a>
+                            ) and level of poverty (GDP per capita as measured by the World Bank’s
+                            <a
+                                href="http://data.worldbank.org/data-catalog/world-development-indicators"
+                            >
+                                World Development Indicators
+                            </a>
+                            ) of the recipient country. Because arms exports are volatile in quantity
+                            from year to year, here too multi-year discounted averages are taken and
+                            exports are weighted by the exporters GDP.
+                        </p>
+                        <p>
+                            The data on arms exports is collected by Mark Stoker, an independent
+                            defense economist, using publicly available data from multiple sources
+                            including individual governments and bodies such as the EU. Countries are
+                            rewarded for making such data publicly available.
+                        </p>
+                        <p>
+                            This indicator has a 15% weight.
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='SEC_RAT' level='4'>
@@ -680,17 +1873,82 @@
                        <shortlabel lang='EN'><![CDATA[Participation in security regimes]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
-                          <p>The indicator assesses the level of countries&rsquo; participation in important international security regimes. Countries receive one point for ratifying each of the following eight treaties. No points are awarded if the country has signed but not ratified the agreement. Follow the links to access the list of signatories for each treaty. This subcomponent has a 30 percent weight.</p>
+                          <p>
+                              The indicator assesses the level of countries’ participation in important
+                              international security regimes. Countries receive 1 point for ratifying
+                              each of the following 9 treaties. No points are awarded if the country only
+                              signed, but not ratified the agreement. Countries also get a reduced score
+                              for not ratifying all protocols of the Convention on Certain Conventional
+                              Weapons.
+                          </p>
+                          <p>
+                              Follow the links to access the list of signatories for each treaty. This
+                              subcomponent has a 30% weight.
+                          </p>
+                          <p>
+                          <a href="http://disarmament.un.org/treaties/t/npt">Treaty on the </a><a href="http://disarmament.un.org/treaties/t/npt">Nonproliferation</a>    <a href="http://disarmament.un.org/treaties/t/npt"> of Nuclear Weapons</a>
+                          </p>
                           <ul>
-                          <li><a href="http://disarmament.un.org/treaties/t/npt">Treaty on the Non-Proliferation of Nuclear Weapons</a></li>
-                          <li><a href="https://www.ctbto.org/the-treaty/status-of-signature-and-ratification/">Comprehensive Nuclear-Test-Ban Treaty</a></li>
-                          <li><a href="https://www.opcw.org/fileadmin/OPCW/S_series/2015/en/s-1304-2015_e_.pdf">Chemical Weapons Convention</a></li>
-                          <li><a href="http://www.opbw.org/">The Biological and Toxin Weapons Convention</a></li>
-                          <li><a href="http://www.apminebanconvention.org/states-parties-to-the-convention/">Mine Ban Treaty</a></li>
-                          <li><a href="http://www.unog.ch/__80256ee600585943.nsf/(httpPages)/3ce7cfc0aa4a7548c12571c00039cb0c?OpenDocument&amp;ExpandSection=1%2C2#_Section1">Convention on Certain Chemical Weapons</a></li>
-                          <li><a href="http://www.clusterconvention.org/the-convention/convention-status/">Convention on Cluster Munitions</a></li>
-                          <li><a href="https://asp.icc-cpi.int/en_menus/asp/states%20parties/Pages/the%20states%20parties%20to%20the%20rome%20statute.aspx">Rome Statute of the International Criminal Court</a></li>
-                          <li><a href="https://www.un.org/disarmament/convarms/att/">Arms Trade Treaty</a></li>
+                          <li>
+                              
+                              <a
+                                  href="https://www.ctbto.org/the-treaty/status-of-signature-and-ratification/"
+                              >
+                                  Comprehensive Nuclear-Test-Ban Treaty
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a
+                                  href="https://www.opcw.org/fileadmin/OPCW/S_series/2015/en/s-1304-2015_e_.pdf"
+                              >
+                                  Chemical Weapons Convention
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a href="https://www.un.org/disarmament/geneva/bwc/">
+                                  The Biological and Toxin Weapons Convention
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a
+                                  href="http://www.apminebanconvention.org/states-parties-to-the-convention/"
+                              >
+                                  Mine Ban Treaty
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a
+                                  href="http://www.unog.ch/__80256ee600585943.nsf/(httpPages)/3ce7cfc0aa4a7548c12571c00039cb0c?OpenDocument&amp;ExpandSection=1%2C2#_Section1"
+                              >
+                                  Convention on Certain Conventional Weapons
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a
+                                  href="http://www.clusterconvention.org/the-convention/convention-status/"
+                              >
+                                  Convention on Cluster Munitions
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a
+                                  href="https://asp.icc-cpi.int/en_menus/asp/states%20parties/Pages/the%20states%20parties%20to%20the%20rome%20statute.aspx"
+                              >
+                                  Rome Statute of the International Criminal Court
+                              </a>
+                          </li>
+                          <li>
+                              
+                              <a href="https://www.un.org/disarmament/convarms/att/">
+                                  Arms Trade Treaty
+                              </a>
+                          </li>
                           </ul>]]>
                        </description>
                     </indicator>
@@ -704,14 +1962,44 @@
            <description lang='EN'>
               <![CDATA[
              <h2>Migration</h2>
-              <p>Migration is a powerful tool against poverty, with benefits for poor countries and rich ones alike. The migration component of the CDI is composed of three subcomponents that measure efforts to facilitate international mobility, migrant integration policies, and contributions to burden sharing. Each category includes different indicators which are assigned distinct weights.</p>
+              <p>
+                  The migration component is composed of six indicators which assess
+                  countries’ efforts in facilitating international mobility, migrant
+                  integration policies, and each country’s receptiveness to migrants.
+              </p>
               <p>Select a country to see how it scores on each indicator and to learn about the methodology.</p>]]>
            </description>
            <explanation lang='EN'>
               <![CDATA[
               <h3>Why is migration important for development?</h3>
-               <p>International mobility of workers is potentially the most powerful tool for poverty reduction and income redistribution, and migration policies of rich countries therefore greatly affect citizens of poor countries. Workers who have migrated from poor to rich countries broadened their opportunities to earn higher incomes, access knowledge, and gain valuable skills. These workers in turn send billions of dollars back to their countries each year, a flow of remittances that surpasses foreign aid several times over. Immigrants from developing countries, especially students, who return home bring their new knowledge and skills, which they can employ by opening businesses, and enhance the knowledge base of the country. There is very <a href="https://centerforglobaldevelop-my.sharepoint.com/personal/pkrylova_cgdev_org/Documents/CDI/2015/Environment/International%20mobility%20of%20workers%20is%20arguably%20the%20most%20powerful%20engine%20for%20global%20prosperity%20and%20income%20redistribution">little evidence</a> that skilled migration hurts the sending countries. On the contrary, migrants can strengthen and build trade networks, transfer technologies, and provide investment resources for their home economies among other benefits.</p>
-              <p>For more information on the impact of migration, please visit CGD&rsquo;s work on <a href="http://www.cgdev.org/topics/migration">migration and development</a>.</p>
+               <p>
+                      International mobility of workers is potentially the most powerful tool for
+                      poverty reduction and income redistribution, and migration policies of rich
+                      countries therefore greatly affect citizens of poor countries. Workers who
+                      have migrated from poor to rich countries broadened their opportunities to
+                      earn higher incomes, access knowledge and gain valuable skills. These
+                      workers in turn send billions of dollars back to their countries each year,
+                      a flow of remittances that surpasses foreign aid several fold. Immigrants
+                      from developing countries, especially students, who return bring their new
+                      knowledge and skills which they can employ by opening businesses, and
+                      enhance the knowledge base of the country. There is very
+                      <a
+                          href="http://www.cgdev.org/publication/skill-flow-fundamental-reconsideration-skilled-worker-mobility-and-development-working"
+                      >
+                          little evidence
+                      </a>
+                      that skilled migration hurts the sending countries. On the contrary,
+                      migrants can strengthen and build trade networks, transfer technologies,
+                      and provide investment resources for their home economies among other
+                      benefits.
+                  </p>
+                  <p>
+                      For more information on the impact of migration, please visit CGD’s work on
+                      <a href="http://www.cgdev.org/topics/migration">
+                          migration and development
+                      </a>
+                      .
+                  </p>
               <p><strong>Related CGD work:</strong> <a href='/topics/migration'>Migration</a>.</p>]]>
            </explanation>
            <unit lang='EN'><![CDATA[Score]]></unit>
@@ -721,18 +2009,48 @@
                  <label lang='EN'><![CDATA[Participation in international conventions ]]></label>
                  <shortlabel lang='EN'><![CDATA[Participation in international conventions ]]></shortlabel>
                  <description lang='EN'>
-                    <![CDATA[<p>The indicator assesses to what extent have countries signed up to international conventions which aim to protect migrants. Three conventions are considered:</p>
-                    <ol>
-                    <li><a href="http://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312242">1949 Convention concerning Migration for Employment (No. 97)</a></li>
-                    <li><a href="https://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312288">1975 Convention concerning Migrations in Abusive Conditions and the Promotion of Equality of Opportunity and Treatment of Migrant Workers (No. 143)</a></li>
-                    <li><a href="https://www.unodc.org/unodc/en/treaties/CTOC/countrylist-traffickingprotocol.html">2000 Protocol to Prevent, Suppress and Punish Trafficking in Persons, Especially Women and Children</a></li>
-                    </ol>
-                    <p>Countries receive 10 points for ratifying each treaty. The overall weight of this indicator within the migration component is 10 percent.</p>]]>
+                    <![CDATA[<p>
+                        The indicator assesses to what extent have countries signed up to
+                        international conventions which aim to protect migrants. Three conventions
+                        are considered:
+                    </p>
+                    <p>
+                        
+                        <a
+                            href="http://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_INSTRUMENT_ID:312242"
+                        >
+                            1949 Convention concerning Migration for Employment (No. 97)
+                        </a>
+                    </p>
+                    <p>
+                        
+                        <a
+                            href="http://www.ilo.org/dyn/normlex/en/f?p=NORMLEXPUB:12100:0::NO::P12100_ILO_CODE:C143"
+                        >
+                            1975 Convention concerning Migrations in Abusive Conditions and the
+                            Promotion of Equality of Opportunity and Treatment of Migrant Workers
+                            (No. 143)
+                        </a>
+                    </p>
+                    <p>
+                        
+                        <a
+                            href="http://www.ohchr.org/EN/ProfessionalInterest/Pages/ProtocolTraffickingInPersons.aspx"
+                        >
+                            2000 Protocol to Prevent, Suppress and Punish Trafficking in Persons,
+                            Especially Women and Children
+                        </a>
+                    </p>
+                    <p>
+                        Countries receive 10 points for ratifying each treaty, 5 points if the
+                        convention was ratified with excluded provisions. The overall weight of
+                        this indicator within the migration component is 10%.
+                    </p>]]>
                  </description>
               </indicator>
               <indicator code='MIG_MIP' level='3'>
-                 <label lang='EN'><![CDATA[Implementation of policies domestically]]></label>
-                 <shortlabel lang='EN'><![CDATA[Implementation of policies domestically]]></shortlabel>
+                 <label lang='EN'><![CDATA[Integration policies]]></label>
+                 <shortlabel lang='EN'><![CDATA[Integration policies]]></shortlabel>
                  <description lang='EN'>
                     <![CDATA[<p>The indicator uses the data from the <a href="http://www.mipex.eu/">Migrant Integration Policy Index</a> (MIPEX) which assesses policies to integrate migrants. MIPEX consists of eight categories, which together assess 167 policy indicators. MIPEX is the only comprehensive assessment tool for the integration of migrants in rich countries. The eight dimensions of MIPEX are the following:</p>
                     <ol>
@@ -750,7 +2068,7 @@
               </indicator>
               <!-- Subindicators -->
               <indicator code='MIG_BDN' level='3'>
-                 <label lang='EN'><![CDATA[Contribution to burden sharing]]></label>
+                 <label lang='EN'><![CDATA[Receptiveness to migrants]]></label>
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <hierarchy>
@@ -758,31 +2076,114 @@
                        <label lang='EN'><![CDATA[Share of students from developing countries]]></label>
                        <shortlabel lang='EN'><![CDATA[Share of students from developing countries]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator evaluates how many students from developing countries are enrolled in tertiary education in CDI countries. Two indicators are considered: students from countries eligible for ODA as a portion on total foreign students and students from countries eligible for ODA as a portion of total students. Data come from the <a href="http://stats.oecd.org/Index.aspx?DatasetCode=RFOREIGN">OECD Education and Skills database</a>.</p>
-                          <p>Note: as of 2004 Australia and the United States stopped reporting students from developing countries based on citizenship and only provide data based on residency. The CDI methodology therefore considers residency, rather than citizenship statistics to calculate this indicator. The weight of this indicator in the migration component is 15 percent.</p>]]>
+                          <![CDATA[<p>
+                            The indicator evaluates how many students from developing countries are
+                            enrolled in tertiary education in CDI countries. Two equally weighted
+                            indicators are considered: The number of students from countries eligible
+                            for ODA as a share of total international students, and as a share of total
+                            students. Data come from the
+                            <a href="http://stats.oecd.org/Index.aspx?DatasetCode=RFOREIGN">
+                                OECD Education and Skills database
+                            </a>
+                            and the <a href="http://www.oecd.org/dac/stats/daclist.htm">DAC list</a> of
+                            ODA recipient countries.
+                        </p>
+                        <p>
+                            Note: as of 2004 Australia and the United States stopped reporting students
+                            from developing countries based on citizenship, and only provide data based
+                            on residency. The CDI methodology therefore considers residency, rather
+                            than citizenship statistics to calculate this indicator.
+                        </p>
+                        <p>
+                            The weight of this indicator in the migration component is 15%.
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='MIG_BDN_INM' level='4'>
                        <label lang='EN'><![CDATA[Immigrant inflow]]></label>
                        <shortlabel lang='EN'><![CDATA[Immigrant inflow]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The indicator looks at inflow of immigrants to rich countries, and it is weighted by a selectivity factor based on countries of origin. Countries are rewarded more for accepting migrants from poor countries than from relatively rich countries. Data come from the <a href="http://stats.oecd.org/Index.aspx?DatasetCode=MIG">OECD migration database</a>. The weight of this indicator in the migration component is 30 percent.</p>]]>
+                          <![CDATA[<p>
+                            The indicator looks at inflow of total immigrants to rich countries, and it
+                            is weighted by a selectivity factor based on countries of origin, i.e.
+                            countries are more rewarded for accepting migrants from poor countries,
+                            rather than relatively rich countries (measured by GDP/capita). Data come
+                            from the
+                            <a href="http://stats.oecd.org/Index.aspx?DatasetCode=MIG">
+                                OECD International migration database
+                            </a>
+                            and the World Bank’s
+                            <a
+                                href="http://data.worldbank.org/data-catalog/world-development-indicators"
+                            >
+                                World Development Indicators
+                            </a>
+                            . The weight of this indicator in the migration component is 30%.
+                        </p>]]>
                        </description>
                     </indicator>
                     <indicator code='MIG_BDN_ASY' level='4'>
-                       <label lang='EN'><![CDATA[Asylum-seekers burden sharing ]]></label>
-                       <shortlabel lang='EN'><![CDATA[Asylum-seekers burden sharing ]]></shortlabel>
+                       <label lang='EN'><![CDATA[Share of asylum-seekers ]]></label>
+                       <shortlabel lang='EN'><![CDATA[Share of asylum-seekers ]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>An asylum-seeker is someone who claims they are a refugee, but whose claims have not yet been definitively evaluated. The 1951 Refugee Convention defines a refugee as someone &ldquo;who owing to a well-founded fear of being persecuted for reasons of race, religion, nationality, membership of a particular social group or political opinion is outside the country of his nationality and is unable or, owing to such fear, is unwilling to avail himself of the protection of that country; or who, not having a nationality and being outside the country of his former habitual residence as a result of such events, is unable or, owing to such fear, is unwilling to return to it.&rdquo;</p>
-                          <p>The indicator takes into account the number of asylum seekers total as share population of recipient country, and the number asylums granted as a share of total asylum applications. The data come from the <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">UNHCR statistical yearbook</a>. The weight of this indicator in the migration component is 10 percent.</p>]]>
+                          <![CDATA[<p>
+                          An asylum seeker is someone who has applied for asylum and is waiting for a
+                          decision as to whether or not they are a refugee. The 1951 Refugee
+                          Convention defines a refugee as someone
+                          <blockquote>
+                              who owing to a well-founded fear of being persecuted for reasons of
+                              race, religion, nationality, membership of a particular social group or
+                              political opinion is outside the country of his nationality and is
+                              unable or, owing to such fear, is unwilling to avail himself of the
+                              protection of that country; or who, not having a nationality and being
+                              outside the country of his former habitual residence as a result of
+                              such events, is unable or, owing to such fear, is unwilling to return
+                              to it.
+                          </blockquote>
+                      </p>
+                      <p>
+                          The indicator takes into account the number of asylum-seekers total as
+                          share population of recipient country, and the number of positive decisions
+                          as a share of all decisions taken within a year. Both ratios are weighted
+                          equally. The data come from the
+                          <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
+                              UNHCR statistical yearbook
+                          </a>
+                      (until 2014) and its    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
+                          (since 2015). The weight of this indicator in the migration component is
+                          10%.
+                      </p>]]>
                        </description>
                     </indicator>
                     <indicator code='MIG_BDN_REF' level='4'>
                        <label lang='EN'><![CDATA[Refugee burden sharing]]></label>
                        <shortlabel lang='EN'><![CDATA[Refugee burden sharing]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>The 1951 Refugee Convention defines a refugee as someone &ldquo;who owing to a well-founded fear of being persecuted for reasons of race, religion, nationality, membership of a particular social group or political opinion is outside the country of his nationality and is unable or, owing to such fear, is unwilling to avail himself of the protection of that country; or who, not having a nationality and being outside the country of his former habitual residence as a result of such events, is unable or, owing to such fear, is unwilling to return to it.&rdquo;</p>
-                          <p>The indicator takes into account three aspects: the ratio of total refugees to recipient-country GDP, the ratio of total refugees to recipient-country population, and the ratio of total refugees to recipient-country area. The data come from the <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">UNHCR statistical yearbook</a>. The weight of this indicator in the migration component is 10 percent.</p>]]>
+                          <![CDATA[<p>
+                            The 1951 Refugee Convention defines a refugee as someone
+                            <blockquote>
+                                who owing to a well-founded fear of being persecuted for reasons of
+                                race, religion, nationality, membership of a particular social group or
+                                political opinion is outside the country of his nationality and is
+                                unable or, owing to such fear, is unwilling to avail himself of the
+                                protection of that country; or who, not having a nationality and being
+                                outside the country of his former habitual residence as a result of
+                                such events, is unable or, owing to such fear, is unwilling to return
+                                to it.
+                            </blockquote>
+                        </p>
+                        <p>
+                            The indicator takes into account the three ratios: total refugees/recipient
+                            country GDP, total refugees/recipient country population, total
+                            refugees/recipient country area, which are weighted equally. The data come
+                            from the
+                            <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
+                                UNHCR statistical yearbook
+                            </a>
+                        (until 2014) and the    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
+                            (since 2015). The weight of this indicator in the migration component is
+                            10%.
+                        </p>]]>
                        </description>
                     </indicator>
                  </hierarchy>
