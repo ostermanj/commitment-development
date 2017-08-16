@@ -1546,7 +1546,8 @@
                             annual/biannual report is submitted without errors and on time, 1 point if
                             it is late and/or with errors and no points if the country fails to submit
                             a report. The weight of this indicator in the environment component is 15%.
-                        </p>
+                        </p>]]>
+                      </description>
                     </indicator>
                     <indicator code='ENV_TRO' level='4' lessIsBetter='1' format='currency'>
                        <label lang='EN'><![CDATA[Tropical wood imports]]></label>
@@ -1656,7 +1657,7 @@
            <unit lang='EN'><![CDATA[Score]]></unit>
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
            <hierarchy>
-              <!--<indicator code='TRA_TAR' level='3'>
+              <indicator code='TRA_TAR' level='3'>
                  <label lang='EN'><![CDATA[Tariff protection]]></label>
                  <shortlabel lang='EN'><![CDATA[Tariff protection]]></shortlabel>
                  <description lang='EN'>
@@ -1675,7 +1676,7 @@
                     40%.
                 </p>]]>
                  </description>
-              </indicator>-->
+              </indicator>
               <indicator code='TRA_PRO' level='3'>
                  <label lang='EN'><![CDATA[Agricultural protection]]></label>
                  <shortlabel lang='EN'><![CDATA[Agricultural protection]]></shortlabel>
@@ -2156,8 +2157,8 @@
                        </description>
                     </indicator>
                     <indicator code='MIG_BDN_REF' level='4'>
-                       <label lang='EN'><![CDATA[Refugee burden sharing]]></label>
-                       <shortlabel lang='EN'><![CDATA[Refugee burden sharing]]></shortlabel>
+                       <label lang='EN'><![CDATA[Share of refugees]]></label>
+                       <shortlabel lang='EN'><![CDATA[Share of refugees]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[<p>
                             The 1951 Refugee Convention defines a refugee as someone
