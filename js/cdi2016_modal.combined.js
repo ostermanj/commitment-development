@@ -1,7 +1,7 @@
 (function ($) {
   Drupal.behaviors.cdi2016 = {
     attach: function (context, settings) {
-      window.cgdCdi = new cdiApp({
+    window.cgdCdi = new cdiApp({
         el: '#new_cdi',
         url: '/sites/all/modules/custom/cdi2016/ParserTest.php',
         onLoad: 'startApp'

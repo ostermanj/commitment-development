@@ -3,16 +3,16 @@ var originalRanks = {};
 
 var BarChartModel = Backbone.Model.extend({
     initialize: function(attributes) {
-	this.level = attributes.level;
-        this.data = attributes.data;
-	this.data_labels = attributes.data_labels;
-        this.indicators = attributes.indicators;
-	this.weighted = attributes.weighted;
-	this.max = attributes.max;
-	this.min = attributes.min;
-	this.min_label = attributes.min_label;
-	this.max_label = attributes.max_label;
-	this.total_weighted = attributes.total_weighted;
+    	this.level = attributes.level;
+      this.data = attributes.data;
+    	this.data_labels = attributes.data_labels;
+      this.indicators = attributes.indicators;
+    	this.weighted = attributes.weighted;
+    	this.max = attributes.max;
+    	this.min = attributes.min;
+    	this.min_label = attributes.min_label;
+    	this.max_label = attributes.max_label;
+    	this.total_weighted = attributes.total_weighted;
     }
 });
 
@@ -315,7 +315,7 @@ var cdiApp = Backbone.View.extend({
 
         $.get(options.url).done(function(data){
             that.data = data;
-            
+            console.log(data);
             var countryCodes = that.getCountryCodes();
             that.getCountryNames(countryCodes);
             that.getMainIndicators();
