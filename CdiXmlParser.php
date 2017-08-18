@@ -115,16 +115,18 @@ class CdiXmlParser {
                     continue;
                 $floatValue = floatval(isset($entry['score']) ? $entry['score'] : $entry['value']); 
                 $this->indicatorsValues[$indicator][$year][$country] = isset($value['precision']) ? round($floatValue,intval($value['precision'])) : $floatValue;
-             
+
                 $printedValue = '';
                 if ('currency' === $format) {
                     $printedValue = $formatter->formatCurrency($this->indicatorsValues[$indicator][$year][$country], 'USD');
                 } else {
                     $printedValue = $formatter->format($this->indicatorsValues[$indicator][$year][$country]);
+                    
                 }
                 if (isset($entry['isnull'])){
-                    $printedValue = 'null';
-                } 
+                    $printedValue = (string) $entry['value'];
+                }
+                
                 // xml data now puts empty value instead of "null" and adds isnull attribute instead
                 // is isnull is set, changes printedvalue. value is parse d as zero. null value was
                 // messing up the calculation of min and max, which was returning zero because of the

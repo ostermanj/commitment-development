@@ -627,21 +627,16 @@ tr.trend {
 }
 
 .null-value .value {
-    display:none;
+    width: 300px;
+    color: #767676 !important;
+    bottom: -20px;
+    left: 15px;
 }
 
-.chart-holder.null-value .bar-segment {
-    display: none;
+.null-value .bar-segment {
+    background-color: transparent !important;
 }
 
-.chart-holder.null-value:before {
-    content: 'no data';
-    position: absolute;
-    right: 0px;
-    bottom: 15px;
-    color: #dfdfdb;
-
-}
 .zero-mark {
     position: absolute;
     width: 1px;

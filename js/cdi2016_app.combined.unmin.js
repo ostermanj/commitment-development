@@ -315,7 +315,6 @@ var cdiApp = Backbone.View.extend({
 
         $.get(options.url).done(function(data){
             that.data = data;
-            console.log(data);
             var countryCodes = that.getCountryCodes();
             that.getCountryNames(countryCodes);
             that.getMainIndicators();
@@ -1106,7 +1105,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                             indicators = [child.children[k]];
                             all_data = that.flatIndicators[child.children[k]];
                             
-                            if (all_data.user_friendly_values[countryCode] === 'null') {
+                            if ( isNaN(all_data.user_friendly_values[countryCode].replace(/%|\$/,'')) ) {
                               $chart.addClass('null-value');
                             }
                             // null-value class is now function of the printed value, not the value itself. see parser line 128
@@ -2527,8 +2526,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         $content.append($chart);
                         indicators = [this.app.flatIndicators[i].children[j]];
                         parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
-                        console.log(parent);
-                        if (parent.user_friendly_values[this.countryCode] === 'null'){
+                        if ( isNaN( parent.user_friendly_values[this.countryCode].replace(/%|\$/,''))) {
                           $chart.addClass('null-value');
                         }
                         this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
