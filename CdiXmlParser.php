@@ -1,5 +1,5 @@
 <?php
-
+//require 'ChromePhp.php';
 /**
  * Created by PhpStorm.
  * User: javie_000
@@ -205,7 +205,7 @@ class CdiXmlParser {
             $indicators[$code] = array(
                 'label' => (string) $item->label,
                 'unit' => (string) $item->score,
-                'less_is_better' => isset($value['lessisbetter']) && intval($value['lessisbetter']) == 1,
+                'less_is_better' => isset($item['lessisbetter']) && intval($item['lessisbetter']) == 1,
                 'decimal_places' => intval((string) $item->decimalplaces),
                 'description' => isset($item->description) ? (string) $item->description : false,
                 'short_label' => isset($item->shortlabel) ? (string) $item->shortlabel : false,

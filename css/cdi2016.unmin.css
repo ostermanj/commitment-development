@@ -626,6 +626,10 @@ tr.trend {
     background: repeating-linear-gradient( 45deg, #fff, #fff 5px, #dfdfdb 5px, #dfdfdb 10px );
 }
 
+.chart-holder.less-is-better {
+    background-color: #767676;
+}
+
 .null-value .value {
     width: 300px;
     color: #767676 !important;
@@ -665,27 +669,49 @@ div.chart-holder > div.transition {
     position: absolute;
     
 }
+
+.chart-holder.less-is-better div:not(.tooltip) > .value {
+ right:10px;
+    
+}
+
+.chart-holder.less-is-better:before {
+    content: '← less is better, right to left';
+    position: absolute;
+    bottom: 18px;
+    right: 0;
+    font-size: 14px;
+    color: #767676;
+}
+
 .chart-holder div.indicator {
     position: absolute;
     font-size: 10px;
     bottom: -14px;
     left: 0;
-    color:#dfdfdb;
+    color:#767676;
 }
 .chart-holder div.indicator span {
     position: relative;
 }
-.chart-holder div.indicator.min span {
+.chart-holder div.indicator.min span, .chart-holder.less-is-better div.indicator.max span {
     right:50%;
+    left:initial;
 }
-.chart-holder div.indicator.max span {
+.chart-holder div.indicator.max span, .chart-holder.less-is-better div.indicator.min span {
     left: 50%;
+
 }
 
-.chart-holder div.indicator.max {
+.chart-holder div.indicator.max, .chart-holder.less-is-better div.indicator.min {
     right: 0;
     float: none;
     left: initial;
+}
+
+.chart-holder.less-is-better div.indicator.max {
+    left: 0;
+    right:initial;
 }
 .chart-holder div.indicator.zero {
         margin-left: -2px;

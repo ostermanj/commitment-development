@@ -2521,7 +2521,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     $content.append($label);
                     for (var j in this.app.flatIndicators[i].children) {
                         $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a></div>');
-                        $chart = $('<div class="chart-holder"></div>');
+                        $chart = $('<div class="chart-holder HERE"></div>');
                         $content.append($label);
                         $content.append($chart);
                         indicators = [this.app.flatIndicators[i].children[j]];
@@ -2529,7 +2529,13 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         if ( isNaN( parent.user_friendly_values[this.countryCode].replace(/%|\$/,''))) {
                           $chart.addClass('null-value');
                         }
-                        this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
+                        
+                        var max = parent.less_is_better ? parent.min : parent.max;
+                        var min = parent.less_is_better ? parent.max : parent.min;
+                        if ( parent.less_is_better ) {
+                          $chart.addClass('less-is-better');
+                        }
+                        this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, min, max, parent.user_friendly_min, parent.user_friendly_max, 4);
                     }
                 } else {
                     var $label = $('<div class="indicator-label">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a></div>');
