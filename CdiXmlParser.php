@@ -122,11 +122,11 @@ class CdiXmlParser {
                 } else {
                     $printedValue = $formatter->format($this->indicatorsValues[$indicator][$year][$country]);
                 }
-                if (isset($entry['isNull'])){
+                if (isset($entry['isnull'])){
                     $printedValue = 'null';
                 } 
-                // xml data now puts empty value instead of "null" and adds isNull attribute instead
-                // is isNull is set, changes printedvalue. value is parse d as zero. null value was
+                // xml data now puts empty value instead of "null" and adds isnull attribute instead
+                // is isnull is set, changes printedvalue. value is parse d as zero. null value was
                 // messing up the calculation of min and max, which was returning zero because of the
                 // mixed types
                
@@ -138,7 +138,7 @@ class CdiXmlParser {
                     $this->weightedList[$indicator][$year][$country] = floatval($entry['weighted']);
                 }
             }
-            if (isset($value['lessIsBetter']) && intval($value['lessIsBetter']) == 1) {
+            if (isset($value['lessisbetter']) && intval($value['lessisbetter']) == 1) {
                 asort($this->indicatorsValues[$indicator][$year]);
             } else {
                 arsort($this->indicatorsValues[$indicator][$year]);
@@ -203,7 +203,7 @@ class CdiXmlParser {
             $indicators[$code] = array(
                 'label' => (string) $item->label,
                 'unit' => (string) $item->score,
-                'less_is_better' => isset($value['lessIsBetter']) && intval($value['lessIsBetter']) == 1,
+                'less_is_better' => isset($value['lessisbetter']) && intval($value['lessisbetter']) == 1,
                 'decimal_places' => intval((string) $item->decimalplaces),
                 'description' => isset($item->description) ? (string) $item->description : false,
                 'short_label' => isset($item->shortlabel) ? (string) $item->shortlabel : false,
