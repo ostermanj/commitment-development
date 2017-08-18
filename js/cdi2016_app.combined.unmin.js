@@ -1,6 +1,6 @@
 Backbone.pubSub = _.extend({}, Backbone.Events); //creates a global mechanism to subscribe views to events published in others
 var originalRanks = {};
-
+var currentYear = 2017;
 var BarChartModel = Backbone.Model.extend({
     initialize: function(attributes) {
     	this.level = attributes.level;
@@ -1110,7 +1110,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                               $chart.addClass('null-value');
                             }
                             // null-value class is now function of the printed value, not the value itself. see parser line 128
-                            that.createBarChart(2016, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
+                            that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                                     }
                                 } else {
                         $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
@@ -1121,7 +1121,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             all_data = that.flatIndicators[children[j]];
 
                         
-                        that.createBarChart(2016, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
+                        that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
                     }
                 }
             }
@@ -1408,7 +1408,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 this.$el.find('tbody').append($row);
                 var indicators = this.indicator.children;
 
-                this.app.createBarChart(2016, item.index, indicators, $row.find('.chart-holder'), false, this.indicator.min, this.indicator.max, "0", this.indicator.user_friendly_max, 1);
+                this.app.createBarChart(currentYear, item.index, indicators, $row.find('.chart-holder'), false, this.indicator.min, this.indicator.max, "0", this.indicator.user_friendly_max, 1);
                 this.$el.find('tbody').append(infoView.$el);
                 // Add charts row.
                 this.$el.find('tbody').append(trendView.$el);
@@ -2334,7 +2334,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     
 
                     this.$el.find('tbody').append($row);
-                    this.app.createBarChart(2016, i, [this.indicator], $row.find('.chart-holder'), false, item.min, item.max, item.min_label, item.max_label, 2);
+                    this.app.createBarChart(currentYear, i, [this.indicator], $row.find('.chart-holder'), false, item.min, item.max, item.min_label, item.max_label, 2);
 
                     //$('#new_cdi table tbody').append('<tr id="' + data[i].c + '-info" class="info"><td></td><td colspan="5">Info</td></tr>');
                    
@@ -2527,10 +2527,11 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         $content.append($chart);
                         indicators = [this.app.flatIndicators[i].children[j]];
                         parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
-                        if (parent.values[this.countryCode] === null){
+                        console.log(parent);
+                        if (parent.user_friendly_values[this.countryCode] === 'null'){
                           $chart.addClass('null-value');
                         }
-                        this.app.createBarChart(2016, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
+                        this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
                     }
                 } else {
                     var $label = $('<div class="indicator-label">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a></div>');
@@ -2539,7 +2540,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     $content.append($label);
                     $content.append($chart);
 
-                    this.app.createBarChart(2016, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
+                    this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
                 }
             }
             $content.append('<div class="year-results"><a class="components-report-bottom cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
