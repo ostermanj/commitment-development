@@ -1108,8 +1108,13 @@ new code : adds object 'original' to main indicators and copies data to it so th
                             if ( isNaN(all_data.user_friendly_values[countryCode].replace(/%|\$/,'')) ) {
                               $chart.addClass('null-value');
                             }
+                              var max = all_data.less_is_better ? all_data.min : all_data.max;
+                              var min = all_data.less_is_better ? all_data.max : all_data.min;
+                              if ( all_data.less_is_better ) {
+                                $chart.addClass('less-is-better');
+                              }
                             // null-value class is now function of the printed value, not the value itself. see parser line 128
-                            that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
+                            that.createBarChart(currentYear, countryCode, indicators, $chart, true, min, max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                                     }
                                 } else {
                         $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');

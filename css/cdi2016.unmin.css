@@ -671,12 +671,12 @@ div.chart-holder > div.transition {
 }
 
 .chart-holder.less-is-better div:not(.tooltip) > .value {
- right:10px;
+ right:5px;
     
 }
 
 .chart-holder.less-is-better:before {
-    content: '← less is better, right to left';
+    content: '\2190 less is better, right to left';
     position: absolute;
     bottom: 18px;
     right: 0;
@@ -850,7 +850,6 @@ td.spacer {
 .chart-holder div.bar-segment {
   float: left;
   height: 20px;
-  position: relative;
   max-width: 100%;
 }
 .chart-holder div .tooltip {
