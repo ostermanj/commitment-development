@@ -179,26 +179,30 @@ class CdiXmlParser {
             switch ($format) {
                 case 'percentage' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::PERCENT);
-                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 3);
+                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, isset($value['precision']) ? intval($value['precision']) : 1);
                     break;
                 case 'currency' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::CURRENCY);
-                    $formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 0);
+                    $formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 2);
                     break;
                 default:
                     $formatter = new NumberFormatter('en-US', NumberFormatter::DECIMAL);
-                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 0);
+                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, isset($value['precision']) ? intval($value['precision']) : 2);
+                   
                     break;
             }
 
             $realMin = min($this->indicatorsValues[$code][$year]);
             $realMax = max($this->indicatorsValues[$code][$year]);
-
-            if ($realMin > 0) {
-                $realMin = 0;
+            $searchFor = 'CDI_';
+            $pos = strpos($code, $searchFor);
+            if ( $pos !== false ) {
+                if ($realMin > 0) {
+                    $realMin = 0;
+                }
             }
-            $min = $format == 'percentage' ? floor($realMin / 0.01) * 0.01 : floor($realMin);
-            $max = $format == 'percentage' ? ceil($realMax / 0.01) * 0.01 : ceil($realMax);
+            $min = $realMin;
+            $max = $realMax;
 
             if ('currency' === $format) {
                 $friendlyMin = $formatter->formatCurrency($min, 'USD');
