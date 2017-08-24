@@ -445,6 +445,10 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
   -webkit-transition:opacity .25s linear;
   transition: opacity .25s linear;
   margin-bottom: 0;
+  color: magenta;
+}
+.cdi-carousel::before {
+    content: 'TO BE UPDATED: ';
 }
 #carousel-indicator-wrapper {
   width: 98%;
@@ -599,6 +603,7 @@ tr.trend {
 }
 .field-name-field-overall {
     max-width:650px;
+    color:magenta;
 }
 .trends-wrapper {
     max-width: 100%;
