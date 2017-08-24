@@ -97,7 +97,7 @@ class CdiXmlParser {
             switch ($format) {
                 case 'percentage' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::PERCENT);
-                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, 3);
+                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, isset($value['precision']) ? intval($value['precision']) : 1);
                     break;
                 case 'currency' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::CURRENCY);
@@ -106,6 +106,11 @@ class CdiXmlParser {
                 default:
                     $formatter = new NumberFormatter('en-US', NumberFormatter::DECIMAL);
                     $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, isset($value['precision']) ? intval($value['precision']) : 2);
+                    $searchFor = 'CDI_';
+                    $pos = strpos($indicator, $searchFor);
+                    if ( $pos !== false ) {
+                        $formatter->setAttribute(NumberFormatter::FRACTION_DIGITS, 2);
+                    }
                     break;
             }
 

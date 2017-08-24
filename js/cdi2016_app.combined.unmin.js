@@ -2526,12 +2526,12 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     $content.append($label);
                     for (var j in this.app.flatIndicators[i].children) {
                         $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a></div>');
-                        $chart = $('<div class="chart-holder HERE"></div>');
+                        $chart = $('<div class="chart-holder"></div>');
                         $content.append($label);
                         $content.append($chart);
                         indicators = [this.app.flatIndicators[i].children[j]];
                         parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
-                        if ( isNaN( parent.user_friendly_values[this.countryCode].replace(/%|\$/,''))) {
+                        if ( isNaN( parent.user_friendly_values[this.countryCode].replace(/%|\$|,/,''))) {
                           $chart.addClass('null-value');
                         }
                         
