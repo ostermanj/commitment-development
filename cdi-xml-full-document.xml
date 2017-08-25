@@ -123,6 +123,7 @@
               <indicator code='AID_QNT' level='3'>
                  <label lang='EN'><![CDATA[Aid quantity]]></label>
                  <shortlabel lang='EN'><![CDATA[Aid Quantity]]></shortlabel>
+                 <unit lang='EN'><![CDATA[TEST!!]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <description lang='EN'>
                     <![CDATA[
@@ -2080,6 +2081,166 @@
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <hierarchy>
+                    <indicator code='MIG_BDN_ASY' level='4'>
+                       <label lang='EN'><![CDATA[Total asylum applications ]]></label>
+                       <shortlabel lang='EN'><![CDATA[Total asylum applications ]]></shortlabel>
+                       <decimalplaces lang='EN'><![CDATA[2]]></decimalplaces>
+                       <description lang='EN'>
+                          <![CDATA[
+                      <p>
+                          This indicator takes into account the total number of asylum-seekers as
+                          share population of recipient country. The data come from the
+                          <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
+                              UNHCR statistical yearbook
+                          </a>
+                      (until 2014) and its    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
+                          (since 2015). The weight of this indicator in the migration component is
+                          5%.
+                      </p>
+                         <p>An asylum seeker is someone who has applied for asylum and is waiting for a
+                          decision as to whether or not they are a refugee. The 1951 Refugee
+                          Convention defines a refugee as someone
+                          <blockquote>
+                              who owing to a well-founded fear of being persecuted for reasons of
+                              race, religion, nationality, membership of a particular social group or
+                              political opinion is outside the country of his nationality and is
+                              unable or, owing to such fear, is unwilling to avail himself of the
+                              protection of that country; or who, not having a nationality and being
+                              outside the country of his former habitual residence as a result of
+                              such events, is unable or, owing to such fear, is unwilling to return
+                              to it.
+                          </blockquote>
+                      </p>
+                      ]]>
+                       </description>
+                    </indicator>
+                    <indicator code='MIG_BDN_ASP' level='4'>
+                       <label lang='EN'><![CDATA[Accepted asylum applications ]]></label>
+                       <shortlabel lang='EN'><![CDATA[Accepted asylum applications ]]></shortlabel>
+                       <decimalplaces lang='EN'><![CDATA[2]]></decimalplaces>
+                       <description lang='EN'>
+                          <![CDATA[
+                      <p>
+                          This indicator takes into account the number of <em>accepted</em> asylum-seekers as
+                          share population of recipient country. The data come from the
+                          <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
+                              UNHCR statistical yearbook
+                          </a>
+                      (until 2014) and its    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
+                          (since 2015). The weight of this indicator in the migration component is
+                          5%.
+                      </p>
+                         <p>An asylum seeker is someone who has applied for asylum and is waiting for a
+                          decision as to whether or not they are a refugee. The 1951 Refugee
+                          Convention defines a refugee as someone
+                          <blockquote>
+                              who owing to a well-founded fear of being persecuted for reasons of
+                              race, religion, nationality, membership of a particular social group or
+                              political opinion is outside the country of his nationality and is
+                              unable or, owing to such fear, is unwilling to avail himself of the
+                              protection of that country; or who, not having a nationality and being
+                              outside the country of his former habitual residence as a result of
+                              such events, is unable or, owing to such fear, is unwilling to return
+                              to it.
+                          </blockquote>
+                      </p>
+                      ]]>
+                       </description>
+                    </indicator>
+                    <indicator code='MIG_BDN_REP' level='4'>
+                       <label lang='EN'><![CDATA[Refugees relative to GDP]]></label>
+                       <shortlabel lang='EN'><![CDATA[Refugees relative to GDP]]></shortlabel>
+                       <description lang='EN'>
+                          <![CDATA[
+                        <p>
+                            This indicator reflects the ratio of total refugees to the recipient
+                            country's GDP. The data come
+                            from the
+                            <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
+                                UNHCR statistical yearbook
+                            </a>
+                        (until 2014) and the    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
+                            (since 2015). The weight of this indicator in the migration component is
+                            3.33%.
+                        </p>
+                          <p>
+                            The 1951 Refugee Convention defines a refugee as someone
+                            <blockquote>
+                                who owing to a well-founded fear of being persecuted for reasons of
+                                race, religion, nationality, membership of a particular social group or
+                                political opinion is outside the country of his nationality and is
+                                unable or, owing to such fear, is unwilling to avail himself of the
+                                protection of that country; or who, not having a nationality and being
+                                outside the country of his former habitual residence as a result of
+                                such events, is unable or, owing to such fear, is unwilling to return
+                                to it.
+                            </blockquote>
+                        </p>]]>
+                       </description>
+                    </indicator>
+                    <indicator code='MIG_BDN_REF' level='4'>
+                       <label lang='EN'><![CDATA[Refugees relative to population]]></label>
+                       <shortlabel lang='EN'><![CDATA[Refugees relative to population]]></shortlabel>
+                       <precision lang='EN'><![CDATA[0]]></precision>
+                       <description lang='EN'>
+                          <![CDATA[
+                        <p>
+                            This indicator reflects the ratio of total refugees to the recipient
+                            country's population. The data come
+                            from the
+                            <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
+                                UNHCR statistical yearbook
+                            </a>
+                        (until 2014) and the    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
+                            (since 2015). The weight of this indicator in the migration component is
+                            3.33%.
+                        </p>
+                          <p>
+                            The 1951 Refugee Convention defines a refugee as someone
+                            <blockquote>
+                                who owing to a well-founded fear of being persecuted for reasons of
+                                race, religion, nationality, membership of a particular social group or
+                                political opinion is outside the country of his nationality and is
+                                unable or, owing to such fear, is unwilling to avail himself of the
+                                protection of that country; or who, not having a nationality and being
+                                outside the country of his former habitual residence as a result of
+                                such events, is unable or, owing to such fear, is unwilling to return
+                                to it.
+                            </blockquote>
+                        </p>]]>
+                       </description>
+                    </indicator>
+                    <indicator code='MIG_BDN_REA' level='4'>
+                       <label lang='EN'><![CDATA[Refugees relative to land area]]></label>
+                       <shortlabel lang='EN'><![CDATA[Refugees relative to land area]]></shortlabel>
+                       <description lang='EN'>
+                          <![CDATA[
+                        <p>
+                            This indicator reflects the ratio of total refugees to the recipient
+                            country's area. The data come
+                            from the
+                            <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
+                                UNHCR statistical yearbook
+                            </a>
+                        (until 2014) and the    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
+                            (since 2015). The weight of this indicator in the migration component is
+                            3.33%.
+                        </p>
+                          <p>
+                            The 1951 Refugee Convention defines a refugee as someone
+                            <blockquote>
+                                who owing to a well-founded fear of being persecuted for reasons of
+                                race, religion, nationality, membership of a particular social group or
+                                political opinion is outside the country of his nationality and is
+                                unable or, owing to such fear, is unwilling to avail himself of the
+                                protection of that country; or who, not having a nationality and being
+                                outside the country of his former habitual residence as a result of
+                                such events, is unable or, owing to such fear, is unwilling to return
+                                to it.
+                            </blockquote>
+                        </p>]]>
+                       </description>
+                    </indicator>
                     <indicator code='MIG_BDN_SHA' level='4'>
                        <label lang='EN'><![CDATA[University students from ODA countries as share of total]]></label>
                        <shortlabel lang='EN'><![CDATA[University students from ODA countries as share of total]]></shortlabel>
@@ -2150,166 +2311,6 @@
                                 World Development Indicators
                             </a>
                             . The weight of this indicator in the migration component is 30%.
-                        </p>]]>
-                       </description>
-                    </indicator>
-                    <indicator code='MIG_BDN_ASY' level='4'>
-                       <label lang='EN'><![CDATA[Total asylum-seekers as share of population ]]></label>
-                       <shortlabel lang='EN'><![CDATA[Total asylum-seekers as share of population ]]></shortlabel>
-                       <decimalplaces lang='EN'><![CDATA[2]]></decimalplaces>
-                       <description lang='EN'>
-                          <![CDATA[
-                      <p>
-                          This indicator takes into account the total number of asylum-seekers as
-                          share population of recipient country. The data come from the
-                          <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
-                              UNHCR statistical yearbook
-                          </a>
-                      (until 2014) and its    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
-                          (since 2015). The weight of this indicator in the migration component is
-                          5%.
-                      </p>
-                         <p>An asylum seeker is someone who has applied for asylum and is waiting for a
-                          decision as to whether or not they are a refugee. The 1951 Refugee
-                          Convention defines a refugee as someone
-                          <blockquote>
-                              who owing to a well-founded fear of being persecuted for reasons of
-                              race, religion, nationality, membership of a particular social group or
-                              political opinion is outside the country of his nationality and is
-                              unable or, owing to such fear, is unwilling to avail himself of the
-                              protection of that country; or who, not having a nationality and being
-                              outside the country of his former habitual residence as a result of
-                              such events, is unable or, owing to such fear, is unwilling to return
-                              to it.
-                          </blockquote>
-                      </p>
-                      ]]>
-                       </description>
-                    </indicator>
-                    <indicator code='MIG_BDN_ASP' level='4'>
-                       <label lang='EN'><![CDATA[Accepted asylum-seekers as share of population ]]></label>
-                       <shortlabel lang='EN'><![CDATA[Accepted asylum-seekers as share of population ]]></shortlabel>
-                       <decimalplaces lang='EN'><![CDATA[2]]></decimalplaces>
-                       <description lang='EN'>
-                          <![CDATA[
-                      <p>
-                          This indicator takes into account the number of <em>accepted</em> asylum-seekers as
-                          share population of recipient country. The data come from the
-                          <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
-                              UNHCR statistical yearbook
-                          </a>
-                      (until 2014) and its    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
-                          (since 2015). The weight of this indicator in the migration component is
-                          5%.
-                      </p>
-                         <p>An asylum seeker is someone who has applied for asylum and is waiting for a
-                          decision as to whether or not they are a refugee. The 1951 Refugee
-                          Convention defines a refugee as someone
-                          <blockquote>
-                              who owing to a well-founded fear of being persecuted for reasons of
-                              race, religion, nationality, membership of a particular social group or
-                              political opinion is outside the country of his nationality and is
-                              unable or, owing to such fear, is unwilling to avail himself of the
-                              protection of that country; or who, not having a nationality and being
-                              outside the country of his former habitual residence as a result of
-                              such events, is unable or, owing to such fear, is unwilling to return
-                              to it.
-                          </blockquote>
-                      </p>
-                      ]]>
-                       </description>
-                    </indicator>
-                    <indicator code='MIG_BDN_REF' level='4'>
-                       <label lang='EN'><![CDATA[Share of refugees to GDP]]></label>
-                       <shortlabel lang='EN'><![CDATA[Share of refugees to GDP]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[
-                        <p>
-                            This indicator reflects the ratio of total refugees to the recipient
-                            country's GDP. The data come
-                            from the
-                            <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
-                                UNHCR statistical yearbook
-                            </a>
-                        (until 2014) and the    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
-                            (since 2015). The weight of this indicator in the migration component is
-                            3.33%.
-                        </p>
-                          <p>
-                            The 1951 Refugee Convention defines a refugee as someone
-                            <blockquote>
-                                who owing to a well-founded fear of being persecuted for reasons of
-                                race, religion, nationality, membership of a particular social group or
-                                political opinion is outside the country of his nationality and is
-                                unable or, owing to such fear, is unwilling to avail himself of the
-                                protection of that country; or who, not having a nationality and being
-                                outside the country of his former habitual residence as a result of
-                                such events, is unable or, owing to such fear, is unwilling to return
-                                to it.
-                            </blockquote>
-                        </p>]]>
-                       </description>
-                    </indicator>
-                    <indicator code='MIG_BDN_REP' level='4'>
-                       <label lang='EN'><![CDATA[Share of refugees to population]]></label>
-                       <shortlabel lang='EN'><![CDATA[Share of refugees to population]]></shortlabel>
-                       <precision lang='EN'><![CDATA[0]]></precision>
-                       <description lang='EN'>
-                          <![CDATA[
-                        <p>
-                            This indicator reflects the ratio of total refugees to the recipient
-                            country's population. The data come
-                            from the
-                            <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
-                                UNHCR statistical yearbook
-                            </a>
-                        (until 2014) and the    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
-                            (since 2015). The weight of this indicator in the migration component is
-                            3.33%.
-                        </p>
-                          <p>
-                            The 1951 Refugee Convention defines a refugee as someone
-                            <blockquote>
-                                who owing to a well-founded fear of being persecuted for reasons of
-                                race, religion, nationality, membership of a particular social group or
-                                political opinion is outside the country of his nationality and is
-                                unable or, owing to such fear, is unwilling to avail himself of the
-                                protection of that country; or who, not having a nationality and being
-                                outside the country of his former habitual residence as a result of
-                                such events, is unable or, owing to such fear, is unwilling to return
-                                to it.
-                            </blockquote>
-                        </p>]]>
-                       </description>
-                    </indicator>
-                    <indicator code='MIG_BDN_REA' level='4'>
-                       <label lang='EN'><![CDATA[Share of refugees to area]]></label>
-                       <shortlabel lang='EN'><![CDATA[Share of refugees to area]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[
-                        <p>
-                            This indicator reflects the ratio of total refugees to the recipient
-                            country's area. The data come
-                            from the
-                            <a href="http://www.unhcr.org/uk/statistical-yearbooks.html">
-                                UNHCR statistical yearbook
-                            </a>
-                        (until 2014) and the    <a href="http://www.unhcr.org/globaltrends2016/">global trend reports</a>
-                            (since 2015). The weight of this indicator in the migration component is
-                            3.33%.
-                        </p>
-                          <p>
-                            The 1951 Refugee Convention defines a refugee as someone
-                            <blockquote>
-                                who owing to a well-founded fear of being persecuted for reasons of
-                                race, religion, nationality, membership of a particular social group or
-                                political opinion is outside the country of his nationality and is
-                                unable or, owing to such fear, is unwilling to avail himself of the
-                                protection of that country; or who, not having a nationality and being
-                                outside the country of his former habitual residence as a result of
-                                such events, is unable or, owing to such fear, is unwilling to return
-                                to it.
-                            </blockquote>
                         </p>]]>
                        </description>
                     </indicator>
@@ -5412,36 +5413,36 @@
 ###############################################################################
    -->
 
-<vs y="2017" r="LMY" i="AID_QNT">
-    <v c="AUS" value="0.25"></v>
-    <v c="AUT" value="0.41"></v>
-    <v c="BEL" value="0.49"></v>
-    <v c="CAN" value="0.26"></v>
-    <v c="CZE" value="0.14"></v>
-    <v c="DNK" value="0.75"></v>
-    <v c="FIN" value="0.44"></v>
-    <v c="FRA" value="0.38"></v>
-    <v c="DEU" value="0.7"></v>
-    <v c="GRC" value="0.14"></v>
-    <v c="HUN" value="0.13"></v>
-    <v c="IRL" value="0.33"></v>
-    <v c="ITA" value="0.26"></v>
-    <v c="JPN" value="0.2"></v>
-    <v c="LUX" value="1"></v>
-    <v c="NLD" value="0.65"></v>
-    <v c="NZL" value="0.25"></v>
-    <v c="NOR" value="1.11"></v>
-    <v c="POL" value="0.13"></v>
-    <v c="PRT" value="0.17"></v>
-    <v c="SVK" value="0.12"></v>
-    <v c="KOR" value="0.14"></v>
-    <v c="ESP" value="0.33"></v>
-    <v c="SWE" value="0.94"></v>
-    <v c="CHE" value="0.54"></v>
-    <v c="GBR" value="0.7"></v>
-    <v c="USA" value="0.18"></v>
+<vs y="2017" r="LMY" i="AID_QNT" format="percentage" units="% GNI">
+    <v c="AUS" value="0.00250279"></v>
+    <v c="AUT" value="0.00407088"></v>
+    <v c="BEL" value="0.00492745"></v>
+    <v c="CAN" value="0.0026311"></v>
+    <v c="CZE" value="0.00143326"></v>
+    <v c="DNK" value="0.00752781"></v>
+    <v c="FIN" value="0.00442385"></v>
+    <v c="FRA" value="0.00379896"></v>
+    <v c="DEU" value="0.00697731"></v>
+    <v c="GRC" value="0.001355"></v>
+    <v c="HUN" value="0.00129593"></v>
+    <v c="IRL" value="0.00332209"></v>
+    <v c="ITA" value="0.00262177"></v>
+    <v c="JPN" value="0.00203303"></v>
+    <v c="LUX" value="0.01004336"></v>
+    <v c="NLD" value="0.00654495"></v>
+    <v c="NZL" value="0.00250109"></v>
+    <v c="NOR" value="0.01114477"></v>
+    <v c="POL" value="0.00133811"></v>
+    <v c="PRT" value="0.00169905"></v>
+    <v c="SVK" value="0.0012231"></v>
+    <v c="KOR" value="0.00139124"></v>
+    <v c="ESP" value="0.00332302"></v>
+    <v c="SWE" value="0.0093677"></v>
+    <v c="CHE" value="0.00536386"></v>
+    <v c="GBR" value="0.0069646"></v>
+    <v c="USA" value="0.00180918"></v>
 </vs>
-<vs y="2017" r="LMY" i="AID_QLT_EFF">
+<vs y="2017" r="LMY" i="AID_QLT_EFF" units="score">
     <v c="AUS" value="-0.26"></v>
     <v c="AUT" value="-0.23"></v>
     <v c="BEL" value="0.1"></v>
@@ -5470,7 +5471,7 @@
     <v c="GBR" value="0.27"></v>
     <v c="USA" value="-0.09"></v>
 </vs>
-<vs y="2017" r="LMY" i="AID_QLT_FST">
+<vs y="2017" r="LMY" i="AID_QLT_FST" units="score">
     <v c="AUS" value="-0.33"></v>
     <v c="AUT" value="-0.8"></v>
     <v c="BEL" value="-0.69"></v>
@@ -5499,7 +5500,7 @@
     <v c="GBR" value="0.45"></v>
     <v c="USA" value="-0.2"></v>
 </vs>
-<vs y="2017" r="LMY" i="AID_QLT_BRD">
+<vs y="2017" r="LMY" i="AID_QLT_BRD" units="score">
     <v c="AUS" value="-0.06"></v>
     <v c="AUT" value="-0.05"></v>
     <v c="BEL" value="-0.56"></v>
@@ -5528,7 +5529,7 @@
     <v c="GBR" value="0.36"></v>
     <v c="USA" value="-0.68"></v>
 </vs>
-<vs y="2017" r="LMY" i="AID_QLT_TRA">
+<vs y="2017" r="LMY" i="AID_QLT_TRA" units="score">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="-0.14"></v>
     <v c="BEL" value="-0.54"></v>
@@ -5557,7 +5558,7 @@
     <v c="GBR" value="0.1"></v>
     <v c="USA" value="0.27"></v>
 </vs>
-<vs y="2017" r="LMY" i="TRA_TAR">
+<vs y="2017" r="LMY" i="TRA_TAR" units="score">
     <v c="AUS" value="5.4"></v>
     <v c="AUT" value="5.4"></v>
     <v c="BEL" value="5.4"></v>
@@ -5586,7 +5587,7 @@
     <v c="GBR" value="5.5"></v>
     <v c="USA" value="5.5"></v>
 </vs>
-<vs y="2017" r="LMY" i="TRA_PRO" format="percentage" lessisbetter="1">
+<vs y="2017" r="LMY" i="TRA_PRO" format="percentage" lessisbetter="1" units="agricultural subsidy rate">
     <v c="AUS" value="0.01375384"></v>
     <v c="AUT" value="0.09323317"></v>
     <v c="BEL" value="0.10427694"></v>
@@ -5615,7 +5616,7 @@
     <v c="GBR" value="0.10755138"></v>
     <v c="USA" value="0.05578795"></v>
 </vs>
-<vs y="2017" r="LMY" i="TRA_IMP">
+<vs y="2017" r="LMY" i="TRA_IMP" units="score">
     <v c="AUS" value="4.3"></v>
     <v c="AUT" value="5"></v>
     <v c="BEL" value="4.9"></v>
@@ -5644,7 +5645,7 @@
     <v c="GBR" value="5.5"></v>
     <v c="USA" value="5"></v>
 </vs>
-<vs y="2017" r="LMY" i="TRA_SRV">
+<vs y="2017" r="LMY" i="TRA_SRV" units="score">
     <v c="AUS" value="5.8"></v>
     <v c="AUT" value="4.3"></v>
     <v c="BEL" value="3.4"></v>
@@ -5673,7 +5674,7 @@
     <v c="GBR" value="6"></v>
     <v c="USA" value="4.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_COM" precision="0">
+<vs y="2017" r="LMY" i="INV_COM" precision="0" units="points">
     <v c="AUS" value="13"></v>
     <v c="AUT" value="8"></v>
     <v c="BEL" value="14"></v>
@@ -5702,7 +5703,7 @@
     <v c="GBR" value="15"></v>
     <v c="USA" value="13"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_IIA" format="percentage">
+<vs y="2017" r="LMY" i="INV_IIA" format="percentage" units="IIA score (% of maximum score for sustainable IIA)">
     <v c="AUS" value="0.556"></v>
     <v c="AUT" value="0.278"></v>
     <v c="BEL" value="0"></v>
@@ -5731,7 +5732,7 @@
     <v c="GBR" value="0.333"></v>
     <v c="USA" value="0.611"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_OOF" format="percentage" precision="4">
+<vs y="2017" r="LMY" i="INV_OOF" format="percentage" precision="4" units="% GNI">
     <v c="AUS" value="0.0002"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="-0.0001"></v>
@@ -5760,7 +5761,7 @@
     <v c="GBR" value="0"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_BNK">
+<vs y="2017" r="LMY" i="INV_SEC_BNK" units="points">
     <v c="AUS" value="0.8"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.9"></v>
@@ -5789,7 +5790,7 @@
     <v c="GBR" value="0.7"></v>
     <v c="USA" value="0.6"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_TFR">
+<vs y="2017" r="LMY" i="INV_SEC_TFR" units="points">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="0.3"></v>
     <v c="BEL" value="0.3"></v>
@@ -5818,7 +5819,7 @@
     <v c="GBR" value="0.5"></v>
     <v c="USA" value="0.5"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_RCO">
+<vs y="2017" r="LMY" i="INV_SEC_RCO" units="points">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.3"></v>
     <v c="BEL" value="0.3"></v>
@@ -5847,7 +5848,7 @@
     <v c="GBR" value="0.3"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_PCO">
+<vs y="2017" r="LMY" i="INV_SEC_PCO" units="points">
     <v c="AUS" value="0.1"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0"></v>
@@ -5876,7 +5877,7 @@
     <v c="GBR" value="0"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_PCA">
+<vs y="2017" r="LMY" i="INV_SEC_PCA" units="points">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="1"></v>
@@ -5905,7 +5906,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_CCR">
+<vs y="2017" r="LMY" i="INV_SEC_CCR" units="points">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.5"></v>
@@ -5934,7 +5935,7 @@
     <v c="GBR" value="0.5"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_FIE">
+<vs y="2017" r="LMY" i="INV_SEC_FIE" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0"></v>
@@ -5963,7 +5964,7 @@
     <v c="GBR" value="0"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_ETA">
+<vs y="2017" r="LMY" i="INV_SEC_ETA" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="0.2"></v>
     <v c="BEL" value="0.6"></v>
@@ -5992,7 +5993,7 @@
     <v c="GBR" value="0.6"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_AVO">
+<vs y="2017" r="LMY" i="INV_SEC_AVO" units="points">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="0.7"></v>
     <v c="BEL" value="0.5"></v>
@@ -6021,7 +6022,7 @@
     <v c="GBR" value="0.2"></v>
     <v c="USA" value="0.6"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_HLV">
+<vs y="2017" r="LMY" i="INV_SEC_HLV" units="points">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.5"></v>
@@ -6050,7 +6051,7 @@
     <v c="GBR" value="0.5"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_AML">
+<vs y="2017" r="LMY" i="INV_SEC_AML" units="points">
     <v c="AUS" value="0.6"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.7"></v>
@@ -6079,7 +6080,7 @@
     <v c="GBR" value="0.7"></v>
     <v c="USA" value="0.7"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_AIE">
+<vs y="2017" r="LMY" i="INV_SEC_AIE" units="points">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="1"></v>
@@ -6108,7 +6109,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_BIT">
+<vs y="2017" r="LMY" i="INV_SEC_BIT" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6137,7 +6138,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_ITC">
+<vs y="2017" r="LMY" i="INV_SEC_ITC" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6166,7 +6167,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="0.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_IJC">
+<vs y="2017" r="LMY" i="INV_SEC_IJC" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.7"></v>
@@ -6195,7 +6196,7 @@
     <v c="GBR" value="0.9"></v>
     <v c="USA" value="0.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_ASC">
+<vs y="2017" r="LMY" i="INV_SEC_ASC" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6224,7 +6225,7 @@
     <v c="GBR" value="0"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_CON">
+<vs y="2017" r="LMY" i="MIG_CON" units="points">
     <v c="AUS" value="10"></v>
     <v c="AUT" value="10"></v>
     <v c="BEL" value="20"></v>
@@ -6253,7 +6254,7 @@
     <v c="GBR" value="15"></v>
     <v c="USA" value="10"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_MIP">
+<vs y="2017" r="LMY" i="MIG_MIP" units="points">
     <v c="AUS" value="66"></v>
     <v c="AUT" value="50"></v>
     <v c="BEL" value="67"></v>
@@ -6282,7 +6283,7 @@
     <v c="GBR" value="57"></v>
     <v c="USA" value="63"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_ASY" format="percentage" precision="4">
+<vs y="2017" r="LMY" i="MIG_BDN_ASY" format="percentage" precision="4" units="% population">
     <v c="AUS" value="0.0011953"></v>
     <v c="AUT" value="0.0047061"></v>
     <v c="BEL" value="0.0013118"></v>
@@ -6311,7 +6312,7 @@
     <v c="GBR" value="0.0006006"></v>
     <v c="USA" value="0.0008279"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_ASP" format="percentage" precision="2">
+<vs y="2017" r="LMY" i="MIG_BDN_ASP" format="percentage" precision="2" units="% total applications">
     <v c="AUS" value="0.3332132"></v>
     <v c="AUT" value="0.8584112"></v>
     <v c="BEL" value="0.5922645"></v>
@@ -6340,7 +6341,7 @@
     <v c="GBR" value="0.3636788"></v>
     <v c="USA" value="0.6143341"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_REF">
+<vs y="2017" r="LMY" i="MIG_BDN_REF" units="refugees / 1,000 inhabitants">
     <v c="AUS" value="1.7"></v>
     <v c="AUT" value="10.9"></v>
     <v c="BEL" value="3.7"></v>
@@ -6369,7 +6370,7 @@
     <v c="GBR" value="1.8"></v>
     <v c="USA" value="0.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_REP">
+<vs y="2017" r="LMY" i="MIG_BDN_REP" units="refugees / GDP per capita (PPP)">
     <v c="AUS" value="0.9"></v>
     <v c="AUT" value="1.9"></v>
     <v c="BEL" value="0.9"></v>
@@ -6398,7 +6399,7 @@
     <v c="GBR" value="2.8"></v>
     <v c="USA" value="4.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_REA" precision="0">
+<vs y="2017" r="LMY" i="MIG_BDN_REA" precision="0" units="refugees / 1,000 sq. km.">
     <v c="AUS" value="5.5"></v>
     <v c="AUT" value="1130"></v>
     <v c="BEL" value="1392.6"></v>
@@ -6427,7 +6428,7 @@
     <v c="GBR" value="491.9"></v>
     <v c="USA" value="29.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_SHA" format="percentage">
+<vs y="2017" r="LMY" i="MIG_BDN_SHA" format="percentage" units="% total tertiary students">
     <v c="AUS" value="0.1468462"></v>
     <v c="AUT" value="0.0368687"></v>
     <v c="BEL" value="0.0528302"></v>
@@ -6456,7 +6457,7 @@
     <v c="GBR" value="0.0960894"></v>
     <v c="USA" value="0.0296826"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_SHI" format="percentage">
+<vs y="2017" r="LMY" i="MIG_BDN_SHI" format="percentage" units="% international tertiary students">
     <v c="AUS" value="0.8022763"></v>
     <v c="AUT" value="0.2383181"></v>
     <v c="BEL" value="0.471918"></v>
@@ -6485,7 +6486,7 @@
     <v c="GBR" value="0.5273603"></v>
     <v c="USA" value="0.6941644"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_INM">
+<vs y="2017" r="LMY" i="MIG_BDN_INM" units="score">
     <v c="AUS" value="5.2"></v>
     <v c="AUT" value="7"></v>
     <v c="BEL" value="5.6"></v>
@@ -6514,7 +6515,7 @@
     <v c="GBR" value="4.7"></v>
     <v c="USA" value="4.3"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_FFP" lessisbetter="1">
+<vs y="2017" r="LMY" i="ENV_FFP" lessisbetter="1" units="tons of CO2 equivalent per capita">
     <v c="AUS" value="82.9"></v>
     <v c="AUT" value="8.6"></v>
     <v c="BEL" value="10.2"></v>
@@ -6543,7 +6544,7 @@
     <v c="GBR" value="11.3"></v>
     <v c="USA" value="33.9"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_GRE" lessisbetter="1">
+<vs y="2017" r="LMY" i="ENV_GRE" lessisbetter="1" units="tons of CO2 equivalent per capita">
     <v c="AUS" value="24.4"></v>
     <v c="AUT" value="8.6"></v>
     <v c="BEL" value="10.2"></v>
@@ -6572,7 +6573,7 @@
     <v c="GBR" value="7.7"></v>
     <v c="USA" value="18.2"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_CGE" lessisbetter="1">
+<vs y="2017" r="LMY" i="ENV_CGE" lessisbetter="1" units="average annual growth rate of GHG emissions, % GDP (PPP), 2005–2015">
     <v c="AUS" value="-0.04343"></v>
     <v c="AUT" value="-0.050774"></v>
     <v c="BEL" value="-0.053906"></v>
@@ -6601,7 +6602,7 @@
     <v c="GBR" value="-0.048053"></v>
     <v c="USA" value="-0.035767"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_GAS" format="currency">
+<vs y="2017" r="LMY" i="ENV_GAS" format="currency" units="$PPP/liter">
     <v c="AUS" value="0.35"></v>
     <v c="AUT" value="0.85"></v>
     <v c="BEL" value="1.05"></v>
@@ -6630,7 +6631,7 @@
     <v c="GBR" value="1.1"></v>
     <v c="USA" value="0.14"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_USE">
+<vs y="2017" r="LMY" i="ENV_USE" units="score">
     <v c="AUS" value="4.8"></v>
     <v c="AUT" value="5.3"></v>
     <v c="BEL" value="5.3"></v>
@@ -6659,7 +6660,7 @@
     <v c="GBR" value="5.3"></v>
     <v c="USA" value="4.7"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_PAR">
+<vs y="2017" r="LMY" i="ENV_PAR" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6688,7 +6689,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_SUB" format="percentage" lessisbetter="1">
+<vs y="2017" r="LMY" i="ENV_SUB" format="percentage" lessisbetter="1" units="% of production value (est)">
     <v c="AUS" value="0.08852091"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0.04404975"></v>
@@ -6717,7 +6718,7 @@
     <v c="GBR" value="0.0322133"></v>
     <v c="USA" value="0.33297632"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_UNI">
+<vs y="2017" r="LMY" i="ENV_UNI" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6746,7 +6747,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_MEA">
+<vs y="2017" r="LMY" i="ENV_MEA" units="score">
     <v c="AUS" value="4.8"></v>
     <v c="AUT" value="5.1"></v>
     <v c="BEL" value="6.3"></v>
@@ -6775,7 +6776,7 @@
     <v c="GBR" value="5.7"></v>
     <v c="USA" value="4"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_TRO" lessisbetter="1">
+<vs y="2017" r="LMY" i="ENV_TRO" format="currency" lessisbetter="1" units="$ per capita">
     <v c="AUS" value="40.7"></v>
     <v c="AUT" value="26.8"></v>
     <v c="BEL" value="26.8"></v>
@@ -6804,7 +6805,7 @@
     <v c="GBR" value="26.8"></v>
     <v c="USA" value="25.7"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_PEA_PHI" format="percentage" precision="4">
+<vs y="2017" r="LMY" i="SEC_PEA_PHI" format="percentage" precision="4" units="% GDP">
     <v c="AUS" value="0.000622851"></v>
     <v c="AUT" value="0.000790068"></v>
     <v c="BEL" value="0.000309719"></v>
@@ -6833,7 +6834,7 @@
     <v c="GBR" value="0.000274016"></v>
     <v c="USA" value="0.000264556"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_PEA_SLP" format="percentage" precision="4">
+<vs y="2017" r="LMY" i="SEC_PEA_SLP" format="percentage" precision="4" units="% GDP">
     <v c="AUS" value="0.000051479"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0.000038117"></v>
@@ -6862,7 +6863,7 @@
     <v c="GBR" value="0.000315369"></v>
     <v c="USA" value="0.001327563"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_ARM" format="percentage" precision="4">
+<vs y="2017" r="LMY" i="SEC_ARM" format="percentage" precision="4" units="% GDP, weighted">
     <v c="AUS" value="not published" isnull="true"></v>
     <v c="AUT" value="-0.00218289"></v>
     <v c="BEL" value="-0.00559497"></v>
@@ -6891,7 +6892,7 @@
     <v c="GBR" value="-0.00514209"></v>
     <v c="USA" value="-0.00494377"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_RAT">
+<vs y="2017" r="LMY" i="SEC_RAT" units="points">
     <v c="AUS" value="9"></v>
     <v c="AUT" value="9"></v>
     <v c="BEL" value="9"></v>
@@ -6920,7 +6921,7 @@
     <v c="GBR" value="8.8"></v>
     <v c="USA" value="4"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_GOV_GOV" format="percentage" precision="4">
+<vs y="2017" r="LMY" i="TEC_GOV_GOV" format="percentage" precision="4" units="% GDP">
     <v c="AUS" value="0.00410667"></v>
     <v c="AUT" value="0.00795604"></v>
     <v c="BEL" value="0.00618673"></v>
@@ -6949,7 +6950,7 @@
     <v c="GBR" value="0.00496223"></v>
     <v c="USA" value="0.00596249"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_GOV_TAX" format="percentage" precision="4">
+<vs y="2017" r="LMY" i="TEC_GOV_TAX" format="percentage" precision="4" units="tax subsidy rate for R&amp;D">
     <v c="AUS" value="0.00111563"></v>
     <v c="AUT" value="0.0024525"></v>
     <v c="BEL" value="0.00146025"></v>
@@ -6978,7 +6979,7 @@
     <v c="GBR" value="0.001638"></v>
     <v c="USA" value="0.000597"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_LIM">
+<vs y="2017" r="LMY" i="TEC_INT_LIM" units="points">
     <v c="AUS" value="2"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -7007,7 +7008,7 @@
     <v c="GBR" value="0.75"></v>
     <v c="USA" value="2"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_TRI">
+<vs y="2017" r="LMY" i="TEC_INT_TRI" units="points">
     <v c="AUS" value="1.1"></v>
     <v c="AUT" value="2.8"></v>
     <v c="BEL" value="2.4"></v>
@@ -7036,7 +7037,7 @@
     <v c="GBR" value="2.6"></v>
     <v c="USA" value="1.3"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_COP">
+<vs y="2017" r="LMY" i="TEC_INT_COP" units="points">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="1"></v>

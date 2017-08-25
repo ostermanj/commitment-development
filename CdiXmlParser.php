@@ -1,5 +1,5 @@
 <?php
-//require 'ChromePhp.php';
+require 'ChromePhp.php';
 /**
  * Created by PhpStorm.
  * User: javie_000
@@ -93,7 +93,10 @@ class CdiXmlParser {
             $indicator = (string) $value['i'];  // for example 'SEC_ARM'
             $year = intval($value['y']); // for example 2016
             $format = isset($value['format']) ? (string) $value['format'] : 'score'; // if format is specified, use that. if not use 'score'. for example: 'percentage'
-
+            if ( isset($value['units']) ) {
+                ChromePhp::log((string) $value['units']);
+            }
+            $this->indicatorsValues[$indicator]['units'] = isset($value['units']) ? (string) $value['units'] : false;
             switch ($format) {
                 case 'percentage' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::PERCENT);
@@ -151,6 +154,7 @@ class CdiXmlParser {
                 arsort($this->indicatorsValues[$indicator][$year]);
             }
         }
+        ChromePhp::log($this->indicatorsValues);
     }
 
     private function _transpose2DArray($array) {
@@ -170,7 +174,7 @@ class CdiXmlParser {
     private function _iterateIndicators($xmlElement, $parent = false, $level = 1) {
         $indicators = array();
         $year = (string) $this->xml['year'];
-
+ChromePhp::log('_iterateIndicators');
         foreach ($xmlElement->indicator as $item) {
             $code = (string) $item['code'];
 
@@ -191,7 +195,8 @@ class CdiXmlParser {
                    
                     break;
             }
-
+            //$unit = isset($item['units']) ? (string) $item['units'] : false;
+            //ChromePhp::log($item);
             $realMin = min($this->indicatorsValues[$code][$year]);
             $realMax = max($this->indicatorsValues[$code][$year]);
             $searchFor = 'CDI_';
@@ -213,7 +218,7 @@ class CdiXmlParser {
             }
             $indicators[$code] = array(
                 'label' => (string) $item->label,
-                'unit' => (string) $item->score,
+                'unit' => &$this->indicatorsValues[$code]['units'],
                 'less_is_better' => isset($item['lessisbetter']) && intval($item['lessisbetter']) == 1,
                 'decimal_places' => intval((string) $item->decimalplaces),
                 'description' => isset($item->description) ? (string) $item->description : false,
