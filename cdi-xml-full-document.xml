@@ -1314,7 +1314,7 @@
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <hierarchy>
 
-                    <indicator code='ENV_GRE' level='4' lessisbetter='1'>
+                    <indicator code='ENV_GRE' level='4' >
                        <label lang='EN'><![CDATA[Greenhouse gas emissions]]></label>
                        <shortlabel lang='EN'><![CDATA[Greenhouse gas emissions]]></shortlabel>
                        <description lang='EN'>
@@ -1331,7 +1331,7 @@
                        </description>
                     </indicator>
 
-                    <indicator code='ENV_FFP' level='4' lessisbetter='1'>
+                    <indicator code='ENV_FFP' level='4' >
                        <label lang='EN'><![CDATA[Fossil fuel production ]]></label>
                        <shortlabel lang='EN'><![CDATA[Fossil fuel production ]]></shortlabel>
                        <description lang='EN'>
@@ -1445,7 +1445,7 @@
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <hierarchy>
-                    <indicator code='ENV_SUB' level='4' lessisbetter='1'>
+                    <indicator code='ENV_SUB' level='4' >
                        <label lang='EN'><![CDATA[Fishing subsidies]]></label>
                        <shortlabel lang='EN'><![CDATA[Fishing subsidies]]></shortlabel>
                        <decimalplaces lang='EN'><![CDATA[2]]></decimalplaces>
@@ -1553,7 +1553,7 @@
                         </p>]]>
                       </description>
                     </indicator>
-                    <indicator code='ENV_TRO' level='4' lessisbetter='1'>
+                    <indicator code='ENV_TRO' level='4' >
                        <label lang='EN'><![CDATA[Tropical wood imports]]></label>
                        <shortlabel lang='EN'><![CDATA[Tropical wood imports]]></shortlabel>
                        <description lang='EN'>

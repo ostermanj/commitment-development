@@ -96,7 +96,8 @@ class CdiXmlParser {
             if ( isset($value['units']) ) {
                 ChromePhp::log((string) $value['units']);
             }
-            $this->indicatorsValues[$indicator]['units'] = isset($value['units']) ? (string) $value['units'] : false;
+            $this->indicatorsValues[$indicator]['units'] = isset($value['units']) ? (string) $value['units'] : null;
+            $this->indicatorsValues[$indicator]['less_is_better'] = isset($value['lessisbetter']) ? intval($value['lessisbetter']) : 0;
             switch ($format) {
                 case 'percentage' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::PERCENT);
@@ -216,10 +217,11 @@ ChromePhp::log('_iterateIndicators');
                 $friendlyMin = $formatter->format($min);
                 $friendlyMax = $formatter->format($max);
             }
+            $less_is_better_boolean = ( $this->indicatorsValues[$code]['less_is_better'] == 1 );
             $indicators[$code] = array(
                 'label' => (string) $item->label,
                 'unit' => &$this->indicatorsValues[$code]['units'],
-                'less_is_better' => isset($item['lessisbetter']) && intval($item['lessisbetter']) == 1,
+                'less_is_better' => $less_is_better_boolean,
                 'decimal_places' => intval((string) $item->decimalplaces),
                 'description' => isset($item->description) ? (string) $item->description : false,
                 'short_label' => isset($item->shortlabel) ? (string) $item->shortlabel : false,
