@@ -2525,7 +2525,14 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent + '">' + this.data[i] + '</div>');
                     $content.append($label);
                     for (var j in this.app.flatIndicators[i].children) {
-                        $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a></div>');
+                      var unitLabel;
+                      if ( this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit !== null ){
+                        unitLabel = this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit;
+                      } else {
+                        unitLabel = '';
+                      }
+                      console.log(this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit);
+                        $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + '<a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         $content.append($label);
                         $content.append($chart);
