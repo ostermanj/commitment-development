@@ -93,11 +93,9 @@ class CdiXmlParser {
             $indicator = (string) $value['i'];  // for example 'SEC_ARM'
             $year = intval($value['y']); // for example 2016
             $format = isset($value['format']) ? (string) $value['format'] : 'score'; // if format is specified, use that. if not use 'score'. for example: 'percentage'
-            if ( isset($value['units']) ) {
-                ChromePhp::log((string) $value['units']);
-            }
             $this->indicatorsValues[$indicator]['units'] = isset($value['units']) ? (string) $value['units'] : null;
             $this->indicatorsValues[$indicator]['less_is_better'] = isset($value['lessisbetter']) ? intval($value['lessisbetter']) : 0;
+            $this->indicatorsValues[$indicator]['is_discrete'] = isset($value['discrete']) ? intval($value['discrete']) : 0;
             switch ($format) {
                 case 'percentage' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::PERCENT);
@@ -155,7 +153,6 @@ class CdiXmlParser {
                 arsort($this->indicatorsValues[$indicator][$year]);
             }
         }
-        ChromePhp::log($this->indicatorsValues);
     }
 
     private function _transpose2DArray($array) {
@@ -175,7 +172,6 @@ class CdiXmlParser {
     private function _iterateIndicators($xmlElement, $parent = false, $level = 1) {
         $indicators = array();
         $year = (string) $this->xml['year'];
-ChromePhp::log('_iterateIndicators');
         foreach ($xmlElement->indicator as $item) {
             $code = (string) $item['code'];
 
@@ -218,6 +214,7 @@ ChromePhp::log('_iterateIndicators');
                 $friendlyMax = $formatter->format($max);
             }
             $less_is_better_boolean = ( $this->indicatorsValues[$code]['less_is_better'] == 1 );
+            $is_discrete_boolean = ( $this->indicatorsValues[$code]['is_discrete'] == 1 );
             $indicators[$code] = array(
                 'label' => (string) $item->label,
                 'unit' => &$this->indicatorsValues[$code]['units'],
@@ -235,6 +232,7 @@ ChromePhp::log('_iterateIndicators');
                 'max' => $max,
                 'user_friendly_min' => $friendlyMin,
                 'user_friendly_max' => $friendlyMax,
+                'is_discrete' => $is_discrete_boolean,
                 
             );
             

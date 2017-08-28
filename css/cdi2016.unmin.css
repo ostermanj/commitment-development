@@ -615,6 +615,38 @@ tr.trend {
             transition-duration: 0.4s;
 }
 
+.context-div {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    opacity: 0.2;
+    bottom: -7px;
+}
+
+.context-div.discrete-true {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 6px;
+}
+
+.context-div.discrete-true span {
+    position: absolute;
+    font-size: 12px;
+    left: 1px;
+    bottom: -3px;
+}
+
+.discrete-marker {
+    position: absolute;
+    width: 1px;
+    height: 10px;
+    background: #fff;
+    bottom: 0;
+}
 .chart-holder {
   height: 20px;
   background: #DFDFDB;
@@ -694,7 +726,7 @@ div.chart-holder > div.transition {
 .chart-holder div.indicator {
     position: absolute;
     font-size: 10px;
-    bottom: -14px;
+    bottom: -23px;
     left: 0;
     color:#767676;
 }

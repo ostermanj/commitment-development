@@ -431,6 +431,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
      *   tooltip.
      */
     createBarChart: function(year, countryCode, indicators, $el, includeValueOnChart, min, max, min_label, max_label, level) {
+      console.log('bar chart');
 
         var data = [];
     var data_labels = [];
@@ -472,6 +473,37 @@ new code : adds object 'original' to main indicators and copies data to it so th
             el: $el,
             includeValueOnChart: includeValueOnChart
         });
+    },
+
+    addContext: function(year,indicators, $chart) {
+      console.log(year,indicators,$chart);
+      var max = cgdCdi.flatIndicators[indicators[0]].max,
+          min = cgdCdi.flatIndicators[indicators[0]].min,
+          range = max - min;
+
+      console.log(cgdCdi.flatIndicators[indicators[0]].values);
+      var values = cgdCdi.flatIndicators[indicators[0]].values
+      var counts = {};
+      
+      
+        for (var key in values) {
+          if (values.hasOwnProperty(key)) {
+              console.log(values[key], min, range);
+              var relativePos = ( ( values[key] - min ) / range ) * 100;
+              counts[relativePos] = counts[relativePos] ? counts[relativePos] + 1 : 1;
+              var offset  = cgdCdi.flatIndicators[indicators[0]].is_discrete ? relativePos == 100 ? ( 3 + ( 6 * (counts[relativePos] - 1 ) ) ) : ( 3 - ( 6 * (counts[relativePos] - 1 ) ) ) : 3;
+              var $div = $('<div>').attr('id', [indicators[0]] + '-' + values[key]).addClass('context-div').css({'left':'calc(' + relativePos + '% - ' + offset + 'px)'});//,'bottom': -7 - ( 6 * (counts[values[key]] - 1 ) ) + 'px'});
+              $chart.append($div);
+          }
+        }
+        if ( cgdCdi.flatIndicators[indicators[0]].is_discrete ) {
+           for (var key in counts) {
+              if (counts.hasOwnProperty(key)) {
+                $marker = $('<div>').addClass('discrete-marker').css('left', key + '%');
+                $chart.append($marker);
+              }
+            }
+        }
     },
 
     /**
@@ -1115,18 +1147,20 @@ new code : adds object 'original' to main indicators and copies data to it so th
                               }
                             // null-value class is now function of the printed value, not the value itself. see parser line 128
                             that.createBarChart(currentYear, countryCode, indicators, $chart, true, min, max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
-                                    }
-                                } else {
+                            that.addContext(currentYear,indicators,$chart);
+                            }
+                        } else {
                         $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         indicators = [children[j]];
                         $content.append($label);
                         $content.append($chart);
-            all_data = that.flatIndicators[children[j]];
+                        all_data = that.flatIndicators[children[j]];
 
-                        
                         that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
+                        that.addContext(currentYear,indicators,$chart);
                     }
+                    console.log('in loadCountry');
                 }
             }
         });
@@ -1413,6 +1447,7 @@ cdiApp.CDI.View = Backbone.View.extend({
                 var indicators = this.indicator.children;
 
                 this.app.createBarChart(currentYear, item.index, indicators, $row.find('.chart-holder'), false, this.indicator.min, this.indicator.max, "0", this.indicator.user_friendly_max, 1);
+                console.log('in CDI.View');
                 this.$el.find('tbody').append(infoView.$el);
                 // Add charts row.
                 this.$el.find('tbody').append(trendView.$el);
@@ -2296,7 +2331,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
         this.indicators = this.model.indicators;
     this.groupedValues = this.model.groupedValues;
     },
-    render: function() {
+    render: function() { // this is when you select a component from main menu
         var that = this;
         var indicators = this.indicators;
        
@@ -2514,7 +2549,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             
             
           
-            for(var i in this.data) {
+            for(var i in this.data) { // i is category of indicator. some have children, some don't
                 var $label, $chart;
                 var indicators = [];
         var parent = this.app.flatIndicators[i];
@@ -2548,6 +2583,8 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                           $chart.addClass('less-is-better');
                         }
                         this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, min, max, parent.user_friendly_min, parent.user_friendly_max, 4);
+                        this.app.addContext(currentYear, indicators, $chart);
+                        
                     }
                 } else {
                     var $label = $('<div class="indicator-label">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a></div>');
@@ -2557,8 +2594,12 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     $content.append($chart);
 
                     this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
+                    this.app.addContext(currentYear, indicators, $chart);
                 }
+
+
             }
+
             $content.append('<div class="year-results"><a class="components-report-bottom cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
            
         }

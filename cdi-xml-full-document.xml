@@ -5559,33 +5559,33 @@
     <v c="USA" value="0.27"></v>
 </vs>
 <vs y="2017" r="LMY" i="TRA_TAR" units="score">
-    <v c="AUS" value="5.4"></v>
+    <v c="AUS" value="5.38"></v>
     <v c="AUT" value="5.4"></v>
-    <v c="BEL" value="5.4"></v>
-    <v c="CAN" value="4.3"></v>
-    <v c="CZE" value="5.4"></v>
-    <v c="DNK" value="5.4"></v>
-    <v c="FIN" value="5.4"></v>
-    <v c="FRA" value="5.4"></v>
+    <v c="BEL" value="5.42"></v>
+    <v c="CAN" value="4.34"></v>
+    <v c="CZE" value="5.42"></v>
+    <v c="DNK" value="5.41"></v>
+    <v c="FIN" value="5.41"></v>
+    <v c="FRA" value="5.44"></v>
     <v c="DEU" value="5.4"></v>
-    <v c="GRC" value="5.4"></v>
-    <v c="HUN" value="5.3"></v>
-    <v c="IRL" value="5.4"></v>
+    <v c="GRC" value="5.41"></v>
+    <v c="HUN" value="5.34"></v>
+    <v c="IRL" value="5.36"></v>
     <v c="ITA" value="5.4"></v>
-    <v c="JPN" value="2"></v>
-    <v c="LUX" value="5.4"></v>
-    <v c="NLD" value="5.4"></v>
-    <v c="NZL" value="5.4"></v>
-    <v c="NOR" value="3.6"></v>
-    <v c="POL" value="5.3"></v>
-    <v c="PRT" value="5.4"></v>
-    <v c="SVK" value="5.4"></v>
-    <v c="KOR" value="1.6"></v>
-    <v c="ESP" value="5.4"></v>
-    <v c="SWE" value="5.4"></v>
-    <v c="CHE" value="4.6"></v>
-    <v c="GBR" value="5.5"></v>
-    <v c="USA" value="5.5"></v>
+    <v c="JPN" value="2.01"></v>
+    <v c="LUX" value="5.38"></v>
+    <v c="NLD" value="5.39"></v>
+    <v c="NZL" value="5.43"></v>
+    <v c="NOR" value="3.59"></v>
+    <v c="POL" value="5.34"></v>
+    <v c="PRT" value="5.42"></v>
+    <v c="SVK" value="5.37"></v>
+    <v c="KOR" value="1.55"></v>
+    <v c="ESP" value="5.42"></v>
+    <v c="SWE" value="5.42"></v>
+    <v c="CHE" value="4.61"></v>
+    <v c="GBR" value="5.45"></v>
+    <v c="USA" value="5.47"></v>
 </vs>
 <vs y="2017" r="LMY" i="TRA_PRO" format="percentage" lessisbetter="1" units="agricultural subsidy rate">
     <v c="AUS" value="0.01375384"></v>
@@ -5674,7 +5674,7 @@
     <v c="GBR" value="6"></v>
     <v c="USA" value="4.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_COM" precision="0" units="points">
+<vs y="2017" r="LMY" i="INV_COM" precision="0" units="points" discrete="1">
     <v c="AUS" value="13"></v>
     <v c="AUT" value="8"></v>
     <v c="BEL" value="14"></v>
@@ -5732,36 +5732,36 @@
     <v c="GBR" value="0.333"></v>
     <v c="USA" value="0.611"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_OOF" format="percentage" precision="4" units="% GNI">
-    <v c="AUS" value="0.0002"></v>
+<vs y="2017" r="LMY" i="INV_OOF" format="percentage" precision="5" units="% GNI">
+    <v c="AUS" value="0.00025"></v>
     <v c="AUT" value="0"></v>
-    <v c="BEL" value="-0.0001"></v>
-    <v c="CAN" value="0.0004"></v>
-    <v c="CZE" value="0.0001"></v>
-    <v c="DNK" value="0.0004"></v>
-    <v c="FIN" value="0.0001"></v>
-    <v c="FRA" value="0.0001"></v>
-    <v c="DEU" value="0.0004"></v>
+    <v c="BEL" value="-0.00014"></v>
+    <v c="CAN" value="0.00036"></v>
+    <v c="CZE" value="0.00015"></v>
+    <v c="DNK" value="0.00039"></v>
+    <v c="FIN" value="0.00009"></v>
+    <v c="FRA" value="0.00014"></v>
+    <v c="DEU" value="0.00038"></v>
     <v c="GRC" value="0"></v>
     <v c="HUN" value="0"></v>
     <v c="IRL" value="0"></v>
-    <v c="ITA" value="0"></v>
+    <v c="ITA" value="0.00002"></v>
     <v c="JPN" value="-0.0002"></v>
     <v c="LUX" value="0"></v>
     <v c="NLD" value="0"></v>
-    <v c="NZL" value="0.0001"></v>
-    <v c="NOR" value="0.0008"></v>
+    <v c="NZL" value="0.00009"></v>
+    <v c="NOR" value="0.00084"></v>
     <v c="POL" value="0"></v>
     <v c="PRT" value="0"></v>
     <v c="SVK" value="0"></v>
-    <v c="KOR" value="0.0018"></v>
+    <v c="KOR" value="0.00177"></v>
     <v c="ESP" value="0"></v>
     <v c="SWE" value="0.0001"></v>
-    <v c="CHE" value="0.0001"></v>
-    <v c="GBR" value="0"></v>
+    <v c="CHE" value="0.00005"></v>
+    <v c="GBR" value="0.00001"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_BNK" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_BNK" units="points" discrete="1">
     <v c="AUS" value="0.8"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.9"></v>
@@ -5790,7 +5790,7 @@
     <v c="GBR" value="0.7"></v>
     <v c="USA" value="0.6"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_TFR" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_TFR" units="points" discrete="1">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="0.3"></v>
     <v c="BEL" value="0.3"></v>
@@ -5819,7 +5819,7 @@
     <v c="GBR" value="0.5"></v>
     <v c="USA" value="0.5"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_RCO" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_RCO" units="points" discrete="1">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.3"></v>
     <v c="BEL" value="0.3"></v>
@@ -5848,7 +5848,7 @@
     <v c="GBR" value="0.3"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_PCO" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_PCO" units="points" discrete="1">
     <v c="AUS" value="0.1"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0"></v>
@@ -5877,7 +5877,7 @@
     <v c="GBR" value="0"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_PCA" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_PCA" units="points" discrete="1">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="1"></v>
@@ -5906,7 +5906,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_CCR" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_CCR" units="points" discrete="1">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.5"></v>
@@ -5935,7 +5935,7 @@
     <v c="GBR" value="0.5"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_FIE" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_FIE" units="points" discrete="1">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0"></v>
@@ -5964,7 +5964,7 @@
     <v c="GBR" value="0"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_ETA" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_ETA" units="points" discrete="1">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="0.2"></v>
     <v c="BEL" value="0.6"></v>
@@ -5993,7 +5993,7 @@
     <v c="GBR" value="0.6"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_AVO" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_AVO" units="points" discrete="1">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="0.7"></v>
     <v c="BEL" value="0.5"></v>
@@ -6022,7 +6022,7 @@
     <v c="GBR" value="0.2"></v>
     <v c="USA" value="0.6"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_HLV" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_HLV" units="points" discrete="1">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.5"></v>
@@ -6051,7 +6051,7 @@
     <v c="GBR" value="0.5"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_AML" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_AML" units="points" discrete="1">
     <v c="AUS" value="0.6"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.7"></v>
@@ -6080,7 +6080,7 @@
     <v c="GBR" value="0.7"></v>
     <v c="USA" value="0.7"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_AIE" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_AIE" units="points" discrete="1">
     <v c="AUS" value="0.5"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="1"></v>
@@ -6109,7 +6109,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_BIT" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_BIT" units="points" discrete="1">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6138,7 +6138,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_ITC" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_ITC" units="points" discrete="1">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6167,7 +6167,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="0.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_IJC" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_IJC" units="points" discrete="1">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="0.7"></v>
@@ -6196,7 +6196,7 @@
     <v c="GBR" value="0.9"></v>
     <v c="USA" value="0.8"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_ASC" units="points">
+<vs y="2017" r="LMY" i="INV_SEC_ASC" units="points" discrete="1">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6225,7 +6225,7 @@
     <v c="GBR" value="0"></v>
     <v c="USA" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_CON" units="points">
+<vs y="2017" r="LMY" i="MIG_CON" units="points" discrete="1">
     <v c="AUS" value="10"></v>
     <v c="AUT" value="10"></v>
     <v c="BEL" value="20"></v>
@@ -6631,36 +6631,36 @@
     <v c="GBR" value="1.1"></v>
     <v c="USA" value="0.14"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_USE" units="score">
-    <v c="AUS" value="4.8"></v>
-    <v c="AUT" value="5.3"></v>
-    <v c="BEL" value="5.3"></v>
-    <v c="CAN" value="4.8"></v>
-    <v c="CZE" value="5.3"></v>
-    <v c="DNK" value="5.3"></v>
-    <v c="FIN" value="5.3"></v>
-    <v c="FRA" value="5.3"></v>
-    <v c="DEU" value="5.3"></v>
-    <v c="GRC" value="5.3"></v>
-    <v c="HUN" value="5.3"></v>
-    <v c="IRL" value="5.3"></v>
-    <v c="ITA" value="5.3"></v>
-    <v c="JPN" value="5"></v>
-    <v c="LUX" value="5.3"></v>
-    <v c="NLD" value="5.3"></v>
-    <v c="NZL" value="5"></v>
-    <v c="NOR" value="4.9"></v>
-    <v c="POL" value="5.3"></v>
-    <v c="PRT" value="5.3"></v>
-    <v c="SVK" value="5.3"></v>
-    <v c="KOR" value="0"></v>
-    <v c="ESP" value="5.3"></v>
-    <v c="SWE" value="5.3"></v>
-    <v c="CHE" value="4.9"></v>
-    <v c="GBR" value="5.3"></v>
-    <v c="USA" value="4.7"></v>
+<vs y="2017" r="LMY" i="ENV_USE" precision="2" units="score">
+    <v c="AUS" value="4.81"></v>
+    <v c="AUT" value="5.31"></v>
+    <v c="BEL" value="5.31"></v>
+    <v c="CAN" value="4.85"></v>
+    <v c="CZE" value="5.31"></v>
+    <v c="DNK" value="5.31"></v>
+    <v c="FIN" value="5.31"></v>
+    <v c="FRA" value="5.31"></v>
+    <v c="DEU" value="5.31"></v>
+    <v c="GRC" value="5.31"></v>
+    <v c="HUN" value="5.31"></v>
+    <v c="IRL" value="5.31"></v>
+    <v c="ITA" value="5.31"></v>
+    <v c="JPN" value="4.99"></v>
+    <v c="LUX" value="5.31"></v>
+    <v c="NLD" value="5.31"></v>
+    <v c="NZL" value="4.98"></v>
+    <v c="NOR" value="4.92"></v>
+    <v c="POL" value="5.31"></v>
+    <v c="PRT" value="5.31"></v>
+    <v c="SVK" value="5.31"></v>
+    <v c="KOR" value="-0.01"></v>
+    <v c="ESP" value="5.31"></v>
+    <v c="SWE" value="5.31"></v>
+    <v c="CHE" value="4.92"></v>
+    <v c="GBR" value="5.31"></v>
+    <v c="USA" value="4.72"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_PAR" units="points">
+<vs y="2017" r="LMY" i="ENV_PAR" units="points" discrete="1">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6718,7 +6718,7 @@
     <v c="GBR" value="0.0322133"></v>
     <v c="USA" value="0.33297632"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_UNI" units="points">
+<vs y="2017" r="LMY" i="ENV_UNI" units="points" discrete="1">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6747,7 +6747,7 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_MEA" units="score">
+<vs y="2017" r="LMY" i="ENV_MEA" units="score" discrete="1">
     <v c="AUS" value="4.8"></v>
     <v c="AUT" value="5.1"></v>
     <v c="BEL" value="6.3"></v>
@@ -6776,7 +6776,7 @@
     <v c="GBR" value="5.7"></v>
     <v c="USA" value="4"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_TRO" format="currency" lessisbetter="1" units="$ per capita">
+<vs y="2017" r="LMY" i="ENV_TRO" format="currency" lessisbetter="1" units="$ per capita" discrete="1">
     <v c="AUS" value="40.7"></v>
     <v c="AUT" value="26.8"></v>
     <v c="BEL" value="26.8"></v>
@@ -6805,7 +6805,7 @@
     <v c="GBR" value="26.8"></v>
     <v c="USA" value="25.7"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_PEA_PHI" format="percentage" precision="4" units="% GDP">
+<vs y="2017" r="LMY" i="SEC_PEA_PHI" format="percentage" precision="5" units="% GDP">
     <v c="AUS" value="0.000622851"></v>
     <v c="AUT" value="0.000790068"></v>
     <v c="BEL" value="0.000309719"></v>
@@ -6834,7 +6834,7 @@
     <v c="GBR" value="0.000274016"></v>
     <v c="USA" value="0.000264556"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_PEA_SLP" format="percentage" precision="4" units="% GDP">
+<vs y="2017" r="LMY" i="SEC_PEA_SLP" format="percentage" precision="5" units="% GDP">
     <v c="AUS" value="0.000051479"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0.000038117"></v>
@@ -6892,7 +6892,7 @@
     <v c="GBR" value="-0.00514209"></v>
     <v c="USA" value="-0.00494377"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_RAT" units="points">
+<vs y="2017" r="LMY" i="SEC_RAT" units="points" discrete="1">
     <v c="AUS" value="9"></v>
     <v c="AUT" value="9"></v>
     <v c="BEL" value="9"></v>
@@ -6979,7 +6979,7 @@
     <v c="GBR" value="0.001638"></v>
     <v c="USA" value="0.000597"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_LIM" units="points">
+<vs y="2017" r="LMY" i="TEC_INT_LIM" units="points" discrete="1">
     <v c="AUS" value="2"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -7008,7 +7008,7 @@
     <v c="GBR" value="0.75"></v>
     <v c="USA" value="2"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_TRI" units="points">
+<vs y="2017" r="LMY" i="TEC_INT_TRI" units="points" discrete="1">
     <v c="AUS" value="1.1"></v>
     <v c="AUT" value="2.8"></v>
     <v c="BEL" value="2.4"></v>
@@ -7037,7 +7037,7 @@
     <v c="GBR" value="2.6"></v>
     <v c="USA" value="1.3"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_COP" units="points">
+<vs y="2017" r="LMY" i="TEC_INT_COP" units="points" discrete="1">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="1"></v>
@@ -7066,6 +7066,7 @@
     <v c="GBR" value="2"></v>
     <v c="USA" value="3"></v>
 </vs>
+
    <!-- main components -->
   
 
