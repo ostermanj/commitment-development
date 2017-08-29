@@ -622,7 +622,7 @@ tr.trend {
     border-right: 4px solid transparent;
     border-bottom: 8px solid #000;
     position: absolute;
-    opacity: 0.25;
+    opacity: 0.2;
     bottom: -7px;
 
 }
@@ -681,10 +681,10 @@ tr.trend {
 }
 
 .null-value .value {
-    width: 300px;
+   width: 300px;
     color: #767676 !important;
-    bottom: -20px;
-    left: 15px;
+    top: -14px;
+    left: -9px;
 }
 
 .null-value .bar-segment {
@@ -717,13 +717,22 @@ div.chart-holder > div.transition {
   line-height: 20px;
   margin-left: 10px;
     position: absolute;
+    right: 5px;
     
 }
 
-.chart-holder.less-is-better div:not(.tooltip) > .value {
- right:5px;
-    
+.chart-holder.value-overset-left div:not(.tooltip) > .value {
+    right:initial;
 }
+
+.chart-holder.less-is-better div:not(.tooltip) > .value {
+    transform: translateX(calc(100% + 9px));
+}
+
+.chart-holder.less-is-better.value-overset-right div:not(.tooltip) > .value {
+    transform: translateX(0);
+}
+
 
 .chart-holder.less-is-better:before {
     content: '\2190 less is better, right to left';
@@ -903,7 +912,13 @@ td.spacer {
   float: left;
   height: 20px;
   max-width: 100%;
+  position: relative;
 }
+
+.chart-holder.less-is-better div.bar-segment {
+/*    position: initial;*/
+}
+
 .chart-holder div .tooltip {
   display: none;
   position: absolute;

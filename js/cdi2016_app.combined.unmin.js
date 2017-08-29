@@ -475,7 +475,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
         });
     },
 
-    addContext: function(year,indicators, $chart) {
+    addContext: function(year,indicators, $chart, countryCode) {
       console.log(year,indicators,$chart);
       var max = cgdCdi.flatIndicators[indicators[0]].max,
           min = cgdCdi.flatIndicators[indicators[0]].min,
@@ -507,6 +507,20 @@ new code : adds object 'original' to main indicators and copies data to it so th
         } else {
           this.addMedianMarker(values, min, range, $chart);
         }
+        this.checkValueVisibility(values, min, range, $chart, countryCode);
+    },
+    checkValueVisibility: function(values, min, range, $chart, countryCode){
+      var value = values[countryCode];
+      var valuePosition = ( ( value - min ) / range ) * $chart.width();
+      console.log(valuePosition); 
+        if ( !$chart.hasClass('less-is-better') && valuePosition - 9 - $chart.children('.bar-segment').children('div.value').width() < 0 ) {
+          $chart.addClass('value-overset-left');
+        }
+        if ( $chart.hasClass('less-is-better') && valuePosition < $chart.children('.bar-segment').children('div.value').width() ) {
+          $chart.addClass('value-overset-right');
+        }
+      
+
     },
     addMedianMarker: function(values, min, range, $chart) {
       valuesArray = [];
@@ -1188,7 +1202,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                               }
                             // null-value class is now function of the printed value, not the value itself. see parser line 128
                             that.createBarChart(currentYear, countryCode, indicators, $chart, true, min, max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
-                            that.addContext(currentYear,indicators,$chart);
+                            that.addContext(currentYear,indicators,$chart, countryCode);
                             }
                         } else {
                         $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
@@ -1199,7 +1213,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                         all_data = that.flatIndicators[children[j]];
 
                         that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
-                        that.addContext(currentYear,indicators,$chart);
+                        that.addContext(currentYear,indicators,$chart, countryCode);
                     }
                     console.log('in loadCountry');
                 }
@@ -2624,7 +2638,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                           $chart.addClass('less-is-better');
                         }
                         this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, min, max, parent.user_friendly_min, parent.user_friendly_max, 4);
-                        this.app.addContext(currentYear, indicators, $chart);
+                        this.app.addContext(currentYear, indicators, $chart, this.countryCode);
                         
                     }
                 } else {
@@ -2635,7 +2649,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                     $content.append($chart);
 
                     this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 3);
-                    this.app.addContext(currentYear, indicators, $chart);
+                    this.app.addContext(currentYear, indicators, $chart, this.countryCode);
                 }
 
 
