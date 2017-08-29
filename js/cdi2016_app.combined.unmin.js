@@ -491,15 +491,16 @@ new code : adds object 'original' to main indicators and copies data to it so th
               console.log(values[key], min, range);
               var relativePos = ( ( values[key] - min ) / range ) * 100;
               counts[relativePos] = counts[relativePos] ? counts[relativePos] + 1 : 1;
-              var offset  = cgdCdi.flatIndicators[indicators[0]].is_discrete ? relativePos == 100 ? ( 3 + ( 6 * (counts[relativePos] - 1 ) ) ) : ( 3 - ( 6 * (counts[relativePos] - 1 ) ) ) : 3;
-              var $div = $('<div>').attr('id', [indicators[0]] + '-' + values[key]).addClass('context-div').css({'left':'calc(' + relativePos + '% - ' + offset + 'px)'});//,'bottom': -7 - ( 6 * (counts[values[key]] - 1 ) ) + 'px'});
+              var offset  = cgdCdi.flatIndicators[indicators[0]].is_discrete ? relativePos == 100 ? ( 4 + ( 8 * (counts[relativePos] - 1 ) ) ) : ( 4 - ( 8 * (counts[relativePos] - 1 ) ) ) : 4;
+              var $div = $('<div>').attr('id', [indicators[0]] + '-' + values[key]).addClass('context-div discrete-offset-' + ( cgdCdi.flatIndicators[indicators[0]].is_discrete && counts[relativePos] != 1 ) ).css({'left':'calc(' + relativePos + '% - ' + offset + 'px)'});//,'bottom': -7 - ( 6 * (counts[values[key]] - 1 ) ) + 'px'});
               $chart.append($div);
           }
         }
         if ( cgdCdi.flatIndicators[indicators[0]].is_discrete ) {
            for (var key in counts) {
               if (counts.hasOwnProperty(key)) {
-                $marker = $('<div>').addClass('discrete-marker').css('left', key + '%');
+                var offset = key == 0 ? 0 : 1;
+                $marker = $('<div>').addClass('discrete-marker').css('left', 'calc(' + key + '% - ' + offset + 'px)');
                 $chart.append($marker);
               }
             }
