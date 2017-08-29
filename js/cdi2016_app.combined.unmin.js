@@ -64,7 +64,7 @@ var BarChartView = Backbone.View.extend({
 	      var negative_number_space = Math.abs(this.model.min)/range_space;
 	      var zero_position = negative_number_space*100;
 
-	      this.$el.append('<div class="indicator zero" style="left:'+zero_position+'%">0</div>');
+	      //this.$el.append('<div class="indicator zero" style="left:'+zero_position+'%">0</div>');
 	   }
 
 	   this.$el.append('<div class="indicator max"><span>' + this.model.max_label + '</span></div>');
@@ -492,7 +492,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
               var relativePos = ( ( values[key] - min ) / range ) * 100;
               counts[relativePos] = counts[relativePos] ? counts[relativePos] + 1 : 1;
               var offset  = cgdCdi.flatIndicators[indicators[0]].is_discrete ? relativePos == 100 ? ( 4 + ( 8 * (counts[relativePos] - 1 ) ) ) : ( 4 - ( 8 * (counts[relativePos] - 1 ) ) ) : 4;
-              var $div = $('<div>').attr('id', [indicators[0]] + '-' + values[key]).addClass('context-div discrete-offset-' + ( cgdCdi.flatIndicators[indicators[0]].is_discrete && counts[relativePos] != 1 ) ).css({'left':'calc(' + relativePos + '% - ' + offset + 'px)'});//,'bottom': -7 - ( 6 * (counts[values[key]] - 1 ) ) + 'px'});
+              var $div = $('<div>').addClass('context-div discrete-offset-' + ( cgdCdi.flatIndicators[indicators[0]].is_discrete && counts[relativePos] != 1 ) ).css({'left':'calc(' + relativePos + '% - ' + offset + 'px)'});//,'bottom': -7 - ( 6 * (counts[values[key]] - 1 ) ) + 'px'});
               $chart.append($div);
           }
         }
@@ -504,7 +504,47 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 $chart.append($marker);
               }
             }
+        } else {
+          this.addMedianMarker(values, min, range, $chart);
         }
+    },
+    addMedianMarker: function(values, min, range, $chart) {
+      valuesArray = [];
+      for (var key in values) {
+        if (values.hasOwnProperty(key)) {
+          valuesArray.push(values[key]);
+        }
+      }
+      numericalValues = valuesArray.map(function(each){
+        if ( !isNaN(+each) ) {
+          return +each;
+        }
+      });
+      var relativePos = (( median(numericalValues) - min ) / range ) * 100;
+      var $div = $('<div>').addClass('median-marker').css('left', 'calc(' + relativePos + '% - 1px)');
+      $chart.append($div);
+      console.log(parseInt($div.css('left')) - 25, parseInt($chart.children('.indicator.max').css('left') / 2 ) );
+      if ( $chart.hasClass('less-is-better') ){
+        if ( parseInt($div.css('left')) - 25 < $chart.children('.indicator.max').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.min').css('left')) ) {
+          console.log('overlap', $chart.children('.indicator.max'));
+          $div.addClass('overlapped-median');
+        } 
+      } else {
+        if ( parseInt($div.css('left'))  - 25 < $chart.children('.indicator.min').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.max').css('left')) ) {
+          console.log('overlap', $chart.children('.indicator.min'));
+          $div.addClass('overlapped-median');
+        } 
+      }
+
+      function median(values) {
+        values.sort( function(a,b) {return a - b;} );
+        var half = Math.floor(values.length/2);
+        if ( values.length % 2 ) {
+          return values[half];
+        } else {
+          return (values[half-1] + values[half]) / 2.0;
+        }
+      }
     },
 
     /**
@@ -1132,7 +1172,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     if (child.children) {
                         for (var k in child.children) {
                             $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a></div>');
-                            $chart = $('<div class="chart-holder"></div>');
+                            $chart = $('<div class="chart-holder ' + indicators[0] + '"></div>');
                             $content.append($label);
                             $content.append($chart);
                             indicators = [child.children[k]];
@@ -1152,7 +1192,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                             }
                         } else {
                         $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
-                        $chart = $('<div class="chart-holder"></div>');
+                        $chart = $('<div class="chart-holder ' + indicators[0] + '"></div>');
                         indicators = [children[j]];
                         $content.append($label);
                         $content.append($chart);

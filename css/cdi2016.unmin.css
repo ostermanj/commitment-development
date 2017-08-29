@@ -577,7 +577,7 @@ tr.trend {
     -webkit-transition:height 0.5s linear;
     transition: height 0.5s linear;
     height: 0;
-    padding: 10px 10px 0px 20px;
+    padding: 10px 14px 0px 20px;
    background-color: #fff;
     
 }
@@ -637,13 +637,29 @@ tr.trend {
     bottom: -7px;
 }
 
-.discrete-marker {
+.discrete-marker, .median-marker {
     position: absolute;
     width: 1px;
     height: 10px;
     background: #fff;
     bottom: 0;
 }
+
+
+
+.median-marker::after {
+    content: 'median';
+    position: absolute;
+    bottom: -23px;
+    color:#767676;
+    font-size: 12px;
+    transform: translateX(-50%);
+}
+
+.median-marker.overlapped-median::after {
+    transform: translate(-50%, 75%);
+}
+
 .chart-holder {
   height: 20px;
   background: #DFDFDB;

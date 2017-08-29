@@ -7008,7 +7008,7 @@
     <v c="GBR" value="0.75"></v>
     <v c="USA" value="2"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_TRI" units="points" discrete="1">
+<vs y="2017" r="LMY" i="TEC_INT_TRI" units="points">
     <v c="AUS" value="1.1"></v>
     <v c="AUT" value="2.8"></v>
     <v c="BEL" value="2.4"></v>
