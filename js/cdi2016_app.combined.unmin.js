@@ -2642,8 +2642,15 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         
                     }
                 } else {
-                    var $label = $('<div class="indicator-label">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a></div>');
-                    var $chart = $('<div class="chart-holder"></div>');                   
+                  console.log(i, this);
+                   var unitLabel;
+                      if ( this.app.flatIndicators[i].unit !== null ){
+                        unitLabel = this.app.flatIndicators[i].unit;
+                      } else {
+                        unitLabel = '';
+                      }               
+                    var $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                    var $chart = $('<div class="chart-holder"></div>');  
                     indicators = [i];
                     $content.append($label);
                     $content.append($chart);
