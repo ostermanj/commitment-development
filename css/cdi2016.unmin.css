@@ -109,7 +109,6 @@ body {
     display: block;
     width: 100%;
     height: 1px;
-    background-color: magenta;
     margin: 15px auto;
     position: relative;
     top: 5px;
@@ -445,11 +444,9 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
   -webkit-transition:opacity .25s linear;
   transition: opacity .25s linear;
   margin-bottom: 0;
-  color: magenta;
+  color: #fff;
 }
-.cdi-carousel::before {
-    content: 'TO BE UPDATED: ';
-}
+
 #carousel-indicator-wrapper {
   width: 98%;
   height: 30px;
