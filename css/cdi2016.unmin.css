@@ -719,10 +719,11 @@ div.chart-holder > div.transition {
 }
 
 .chart-holder.value-overset-left div:not(.tooltip) > .value {
-    right:initial;
+    right:0;
     color: #3b342b;
     font-weight:bold;
     margin-left: 3px;
+    transform: translateX(100%);
 }
 
 .chart-holder.less-is-better:before {
