@@ -723,7 +723,7 @@ div.chart-holder > div.transition {
     color: #3b342b;
     font-weight:bold;
     margin-left: 3px;
-    transform: translateX(100%);
+    transform: translateX(calc(100% + 2px));
 }
 
 .chart-holder.less-is-better:before {

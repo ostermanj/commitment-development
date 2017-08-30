@@ -120,7 +120,7 @@
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
            <hierarchy>
               <!-- Subindicators -->
-              <indicator code='AID_QNT' level='3'>
+              <indicator code='AID_QNT' level='3' format='percentage'>
                  <label lang='EN'><![CDATA[Aid quantity]]></label>
                  <shortlabel lang='EN'><![CDATA[Aid Quantity]]></shortlabel>
                  <unit lang='EN'><![CDATA[TEST!!]]></unit>
@@ -600,8 +600,8 @@
                  <hierarchy>
 
                     <indicator code='INV_SEC_BNK' level='4'>
-                       <label lang='EN'><![CDATA[Banking secrecy]]></label>
-                       <shortlabel lang='EN'><![CDATA[Banking secrecy]]></shortlabel>
+                       <label lang='EN'><![CDATA[Banking secrecy score]]></label>
+                       <shortlabel lang='EN'><![CDATA[Banking secrecy score]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[This indicator assesses whether a jurisdiction enables banking secrecy;
                               absence or inaccessibility of banking information is considered a form of
@@ -6776,7 +6776,7 @@
     <v c="GBR" value="5.7"></v>
     <v c="USA" value="4"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_TRO" format="currency" lessisbetter="1" units="$ per capita" discrete="1">
+<vs y="2017" r="LMY" i="ENV_TRO" format="currency" lessisbetter="1" units="$ per capita">
     <v c="AUS" value="40.7"></v>
     <v c="AUT" value="26.8"></v>
     <v c="BEL" value="26.8"></v>
@@ -6833,6 +6833,7 @@
     <v c="CHE" value="0.00027495"></v>
     <v c="GBR" value="0.000274016"></v>
     <v c="USA" value="0.000264556"></v>
+    <v c="0" value="0"></v>
 </vs>
 <vs y="2017" r="LMY" i="SEC_PEA_SLP" format="percentage" precision="5" units="% GDP">
     <v c="AUS" value="0.000051479"></v>
@@ -6862,8 +6863,9 @@
     <v c="CHE" value="0"></v>
     <v c="GBR" value="0.000315369"></v>
     <v c="USA" value="0.001327563"></v>
+    <v c="0" value="0"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_ARM" format="percentage" precision="4" units="% GDP, weighted">
+<vs y="2017" r="LMY" i="SEC_ARM" format="percentage" precision="4" units="% GDP, weighted (higher is better)">
     <v c="AUS" value="not published" isnull="true"></v>
     <v c="AUT" value="-0.00218289"></v>
     <v c="BEL" value="-0.00559497"></v>
@@ -6891,6 +6893,7 @@
     <v c="CHE" value="-0.00122988"></v>
     <v c="GBR" value="-0.00514209"></v>
     <v c="USA" value="-0.00494377"></v>
+    <v c="0" value="0"></v>
 </vs>
 <vs y="2017" r="LMY" i="SEC_RAT" units="points" discrete="1">
     <v c="AUS" value="9"></v>
@@ -6920,6 +6923,7 @@
     <v c="CHE" value="9"></v>
     <v c="GBR" value="8.8"></v>
     <v c="USA" value="4"></v>
+    <v c="0" value="undefined" isnull="true"></v>
 </vs>
 <vs y="2017" r="LMY" i="TEC_GOV_GOV" format="percentage" precision="4" units="% GDP">
     <v c="AUS" value="0.00410667"></v>

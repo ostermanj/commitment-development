@@ -96,6 +96,9 @@ class CdiXmlParser {
             $this->indicatorsValues[$indicator]['units'] = isset($value['units']) ? (string) $value['units'] : null;
             $this->indicatorsValues[$indicator]['less_is_better'] = isset($value['lessisbetter']) ? intval($value['lessisbetter']) : 0;
             $this->indicatorsValues[$indicator]['is_discrete'] = isset($value['discrete']) ? intval($value['discrete']) : 0;
+            $this->indicatorsValues[$indicator]['format'] = isset($value['format']) ? (string) $value['format'] : 'none';
+            $this->indicatorsValues[$indicator]['precision'] = isset($value['precision']) ? intval($value['precision']) : null;
+
             switch ($format) {
                 case 'percentage' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::PERCENT);
@@ -175,12 +178,14 @@ class CdiXmlParser {
         foreach ($xmlElement->indicator as $item) {
             $code = (string) $item['code'];
 
-
-            $format = isset($item['format']) ? (string) $item['format'] : 'score';
+ChromePhp::log($this->indicatorsValues[$code]['format']);
+            //$format = isset($item['format']) ? (string) $item['format'] : 'score';
+            $format = isset($this->indicatorsValues[$code]['format']) ? $this->indicatorsValues[$code]['format'] : 'score';
+            $precision = isset($this->indicatorsValues[$code]['precision']) ? $this->indicatorsValues[$code]['precision'] : null;
             switch ($format) {
                 case 'percentage' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::PERCENT);
-                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, isset($value['precision']) ? intval($value['precision']) : 1);
+                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, $precision !== null ? $precision : 1);
                     break;
                 case 'currency' :
                     $formatter = new NumberFormatter('en-US', NumberFormatter::CURRENCY);
@@ -188,8 +193,7 @@ class CdiXmlParser {
                     break;
                 default:
                     $formatter = new NumberFormatter('en-US', NumberFormatter::DECIMAL);
-                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, isset($value['precision']) ? intval($value['precision']) : 2);
-                   
+                    $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, $precision !== null ? $precision : 2);
                     break;
             }
             //$unit = isset($item['units']) ? (string) $item['units'] : false;
