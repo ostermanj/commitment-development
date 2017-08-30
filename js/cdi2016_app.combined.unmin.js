@@ -136,7 +136,7 @@ var BarChartItemView = Backbone.View.extend({
 
 	} else { // if main 7-indicator chart
 
-	 var availableSpace = this.model.max;
+	 var availableSpace = this.model.max + 0.75;
 	  
      var percent_width = this.model.weighted / availableSpace;	
    
@@ -831,7 +831,6 @@ new code : adds object 'original' to main indicators and copies data to it so th
         for (var ind in this.flatIndicators){    
             
             if (ind.indexOf('CDI_') != -1){
-          
                 for (var c in this.flatIndicators[ind].weighted){
           
                     var segment = $('tr#' + c + '-master div.' + ind + '-bg');
@@ -842,11 +841,12 @@ new code : adds object 'original' to main indicators and copies data to it so th
                         segment.removeClass('transition');
                     }
                     segment.attr('data-weighted', this.flatIndicators[ind].weighted[c]);
-                    newWidth = this.flatIndicators[ind].weighted[c] * 100  / this.data.indicators.CDI.max;
+                    newWidth = this.flatIndicators[ind].weighted[c] * 100  / ( this.data.indicators.CDI.max + 0.75 );
                     segment.css('width', newWidth + '%');
 
                     
                 }
+               
             }
             
         }
