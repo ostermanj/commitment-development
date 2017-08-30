@@ -431,7 +431,6 @@ new code : adds object 'original' to main indicators and copies data to it so th
      *   tooltip.
      */
     createBarChart: function(year, countryCode, indicators, $el, includeValueOnChart, min, max, min_label, max_label, level) {
-      console.log('bar chart');
 
         var data = [];
     var data_labels = [];
@@ -476,19 +475,16 @@ new code : adds object 'original' to main indicators and copies data to it so th
     },
 
     addContext: function(year,indicators, $chart, countryCode) {
-      console.log(year,indicators,$chart);
       var max = cgdCdi.flatIndicators[indicators[0]].max,
           min = cgdCdi.flatIndicators[indicators[0]].min,
           range = max - min;
 
-      console.log(cgdCdi.flatIndicators[indicators[0]].values);
       var values = cgdCdi.flatIndicators[indicators[0]].values
       var counts = {};
       
       
         for (var key in values) {
           if (values.hasOwnProperty(key)) {
-              console.log(values[key], min, range);
               var relativePos = ( ( values[key] - min ) / range ) * 100;
               counts[relativePos] = counts[relativePos] ? counts[relativePos] + 1 : 1;
               var offset  = cgdCdi.flatIndicators[indicators[0]].is_discrete ? relativePos == 100 ? ( 4 + ( 8 * (counts[relativePos] - 1 ) ) ) : ( 4 - ( 8 * (counts[relativePos] - 1 ) ) ) : 4;
@@ -512,7 +508,6 @@ new code : adds object 'original' to main indicators and copies data to it so th
     checkValueVisibility: function(values, min, range, $chart, countryCode){
       var value = values[countryCode];
       var valuePosition = ( ( value - min ) / range ) * $chart.width();
-      console.log(valuePosition); 
       if ( valuePosition - 9 - $chart.children('.bar-segment').children('div.value').width() < 0 ) {
         $chart.addClass('value-overset-left');
       }
@@ -1228,7 +1223,6 @@ new code : adds object 'original' to main indicators and copies data to it so th
                         that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
                         that.addContext(currentYear,indicators,$chart, countryCode);
                     }
-                    console.log('in loadCountry');
                 }
             }
         });
@@ -1515,7 +1509,6 @@ cdiApp.CDI.View = Backbone.View.extend({
                 var indicators = this.indicator.children;
 
                 this.app.createBarChart(currentYear, item.index, indicators, $row.find('.chart-holder'), false, this.indicator.min, this.indicator.max, "0", this.indicator.user_friendly_max, 1);
-                console.log('in CDI.View');
                 this.$el.find('tbody').append(infoView.$el);
                 // Add charts row.
                 this.$el.find('tbody').append(trendView.$el);
@@ -2652,7 +2645,6 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         
                     }
                 } else {
-                  console.log(i, this);
                    var unitLabel;
                       if ( this.app.flatIndicators[i].unit !== null ){
                         unitLabel = this.app.flatIndicators[i].unit;

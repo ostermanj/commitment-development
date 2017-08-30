@@ -1,5 +1,5 @@
 <?php
-require 'ChromePhp.php';
+//require 'ChromePhp.php';
 /**
  * Created by PhpStorm.
  * User: javie_000
@@ -178,7 +178,6 @@ class CdiXmlParser {
         foreach ($xmlElement->indicator as $item) {
             $code = (string) $item['code'];
 
-ChromePhp::log($this->indicatorsValues[$code]['format']);
             //$format = isset($item['format']) ? (string) $item['format'] : 'score';
             $format = isset($this->indicatorsValues[$code]['format']) ? $this->indicatorsValues[$code]['format'] : 'score';
             $precision = isset($this->indicatorsValues[$code]['precision']) ? $this->indicatorsValues[$code]['precision'] : null;
