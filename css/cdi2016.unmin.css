@@ -662,11 +662,12 @@ tr.trend {
 
 .chart-holder {
   height: 20px;
-  background: #DFDFDB;
   margin-bottom: 20px;
   top: 2px;
   position: relative;
+  background: #DFDFDB !important;
 }
+
 .unstacked .chart-holder {
     background-color: transparent;
 }
@@ -674,10 +675,6 @@ tr.trend {
 .chart-holder.null-value {
     background: -webkit-repeating-linear-gradient( 45deg, #fff, #fff 5px, #dfdfdb 5px, #dfdfdb 10px );
     background: repeating-linear-gradient( 45deg, #fff, #fff 5px, #dfdfdb 5px, #dfdfdb 10px );
-}
-
-.chart-holder.less-is-better {
-    background-color: #767676;
 }
 
 .null-value .value {
@@ -723,23 +720,17 @@ div.chart-holder > div.transition {
 
 .chart-holder.value-overset-left div:not(.tooltip) > .value {
     right:initial;
+    color: #3b342b;
+    font-weight:bold;
+    margin-left: 3px;
 }
-
-.chart-holder.less-is-better div:not(.tooltip) > .value {
-    transform: translateX(calc(100% + 9px));
-}
-
-.chart-holder.less-is-better.value-overset-right div:not(.tooltip) > .value {
-    transform: translateX(0);
-}
-
 
 .chart-holder.less-is-better:before {
-    content: '\2190 less is better, right to left';
+    content: 'less is better';
     position: absolute;
     bottom: 18px;
-    right: 0;
-    font-size: 14px;
+    left: 0;
+    font-size: 12px;
     color: #767676;
 }
 
@@ -755,25 +746,21 @@ div.chart-holder > div.transition {
 .chart-holder div.indicator span {
     position: relative;
 }
-.chart-holder div.indicator.min span, .chart-holder.less-is-better div.indicator.max span {
+.chart-holder div.indicator.min span {
     right:50%;
     left:initial;
 }
-.chart-holder div.indicator.max span, .chart-holder.less-is-better div.indicator.min span {
+.chart-holder div.indicator.max span {
     left: 50%;
 
 }
 
-.chart-holder div.indicator.max, .chart-holder.less-is-better div.indicator.min {
+.chart-holder div.indicator.max {
     right: 0;
     float: none;
     left: initial;
 }
 
-.chart-holder.less-is-better div.indicator.max {
-    left: 0;
-    right:initial;
-}
 .chart-holder div.indicator.zero {
         margin-left: -2px;
 }
@@ -913,10 +900,6 @@ td.spacer {
   height: 20px;
   max-width: 100%;
   position: relative;
-}
-
-.chart-holder.less-is-better div.bar-segment {
-/*    position: initial;*/
 }
 
 .chart-holder div .tooltip {

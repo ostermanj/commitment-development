@@ -513,14 +513,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
       var value = values[countryCode];
       var valuePosition = ( ( value - min ) / range ) * $chart.width();
       console.log(valuePosition); 
-        if ( !$chart.hasClass('less-is-better') && valuePosition - 9 - $chart.children('.bar-segment').children('div.value').width() < 0 ) {
-          $chart.addClass('value-overset-left');
-        }
-        if ( $chart.hasClass('less-is-better') && valuePosition < $chart.children('.bar-segment').children('div.value').width() ) {
-          $chart.addClass('value-overset-right');
-        }
-      
-
+      if ( valuePosition - 9 - $chart.children('.bar-segment').children('div.value').width() < 0 ) {
+        $chart.addClass('value-overset-left');
+      }
     },
     addMedianMarker: function(values, min, range, $chart) {
       valuesArray = [];
@@ -537,18 +532,11 @@ new code : adds object 'original' to main indicators and copies data to it so th
       var relativePos = (( median(numericalValues) - min ) / range ) * 100;
       var $div = $('<div>').addClass('median-marker').css('left', 'calc(' + relativePos + '% - 1px)');
       $chart.append($div);
-      console.log(parseInt($div.css('left')) - 25, parseInt($chart.children('.indicator.max').css('left') / 2 ) );
-      if ( $chart.hasClass('less-is-better') ){
-        if ( parseInt($div.css('left')) - 25 < $chart.children('.indicator.max').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.min').css('left')) ) {
-          console.log('overlap', $chart.children('.indicator.max'));
-          $div.addClass('overlapped-median');
-        } 
-      } else {
-        if ( parseInt($div.css('left'))  - 25 < $chart.children('.indicator.min').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.max').css('left')) ) {
-          console.log('overlap', $chart.children('.indicator.min'));
-          $div.addClass('overlapped-median');
-        } 
-      }
+
+      if ( parseInt($div.css('left'))  - 25 < $chart.children('.indicator.min').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.max').css('left')) ) {
+        console.log('overlap', $chart.children('.indicator.min'));
+        $div.addClass('overlapped-median');
+      } 
 
       function median(values) {
         values.sort( function(a,b) {return a - b;} );
@@ -1186,7 +1174,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     if (child.children) {
                         for (var k in child.children) {
                             $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a></div>');
-                            $chart = $('<div class="chart-holder ' + indicators[0] + '"></div>');
+                            $chart = $('<div class="chart-holder"></div>');
                             $content.append($label);
                             $content.append($chart);
                             indicators = [child.children[k]];
@@ -1195,18 +1183,16 @@ new code : adds object 'original' to main indicators and copies data to it so th
                             if ( isNaN(all_data.user_friendly_values[countryCode].replace(/%|\$/,'')) ) {
                               $chart.addClass('null-value');
                             }
-                              var max = all_data.less_is_better ? all_data.min : all_data.max;
-                              var min = all_data.less_is_better ? all_data.max : all_data.min;
-                              if ( all_data.less_is_better ) {
-                                $chart.addClass('less-is-better');
-                              }
+                            if ( all_data.less_is_better ) {
+                              $chart.addClass('less-is-better');
+                            }
                             // null-value class is now function of the printed value, not the value itself. see parser line 128
-                            that.createBarChart(currentYear, countryCode, indicators, $chart, true, min, max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
+                            that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
                             that.addContext(currentYear,indicators,$chart, countryCode);
                             }
                         } else {
                         $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
-                        $chart = $('<div class="chart-holder ' + indicators[0] + '"></div>');
+                        $chart = $('<div class="chart-holder"></div>');
                         indicators = [children[j]];
                         $content.append($label);
                         $content.append($chart);
@@ -2622,22 +2608,19 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         unitLabel = '';
                       }
                       console.log(this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit);
+                        indicators = [this.app.flatIndicators[i].children[j]];
                         $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + '<a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         $content.append($label);
                         $content.append($chart);
-                        indicators = [this.app.flatIndicators[i].children[j]];
                         parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
                         if ( isNaN( parent.user_friendly_values[this.countryCode].replace(/%|\$|,/,''))) {
                           $chart.addClass('null-value');
                         }
-                        
-                        var max = parent.less_is_better ? parent.min : parent.max;
-                        var min = parent.less_is_better ? parent.max : parent.min;
                         if ( parent.less_is_better ) {
                           $chart.addClass('less-is-better');
                         }
-                        this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, min, max, parent.user_friendly_min, parent.user_friendly_max, 4);
+                        this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
                         this.app.addContext(currentYear, indicators, $chart, this.countryCode);
                         
                     }
@@ -2649,9 +2632,9 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                       } else {
                         unitLabel = '';
                       }               
-                    var $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
-                    var $chart = $('<div class="chart-holder"></div>');  
                     indicators = [i];
+                    var $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                    var $chart = $('<div class="chart-holder"></div>');
                     $content.append($label);
                     $content.append($chart);
 
