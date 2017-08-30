@@ -1364,7 +1364,7 @@ span.indicator-units {
   margin: 50px 0 10px;
 }
 .indicator-label.category:not(.no-child) {
-    margin-bottom: -50px;
+    margin-bottom: -43px;
     }
 .indicator-label.category.CDI,
 .line-chart-header.CDI {
@@ -1534,6 +1534,7 @@ span.indicator-units {
   border-bottom: 1px solid #FFF;
   padding: 30px;
   overflow:hidden;
+  cursor:pointer;
 }
 .cdi-footer .footer-block .cdi-icon {
   width: 36px;

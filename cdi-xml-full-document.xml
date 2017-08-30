@@ -1661,77 +1661,84 @@
            <unit lang='EN'><![CDATA[Score]]></unit>
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
            <hierarchy>
-              <indicator code='TRA_TAR' level='3'>
-                 <label lang='EN'><![CDATA[Tariff protection]]></label>
-                 <shortlabel lang='EN'><![CDATA[Tariff protection]]></shortlabel>
-                 <description lang='EN'>
-                    <![CDATA[<p>
-                    This indicator assesses ad valorem equivalent of duties on imports from
-                    developing countries. We use Global Trade Analysis Project data from ITC’s
-                    <a
-                        href="http://www.macmap.org/countryanalysis/countrystatistics/GlobalAnalysis.aspx?s=1"
-                    >
-                        Market Access Map (MAcMAp)
-                    </a>
-                    . A high score indicates low tariffs against developing countries.
-                </p>
-                <p>
-                    The weight of the tariff protection indicator in the trade component equals
-                    40%.
-                </p>]]>
-                 </description>
-              </indicator>
-              <indicator code='TRA_PRO' level='3'>
-                 <label lang='EN'><![CDATA[Agricultural protection]]></label>
-                 <shortlabel lang='EN'><![CDATA[Agricultural protection]]></shortlabel>
+              <indicator code='TRA_GEN' level='3'>
+                 <label lang='EN'><![CDATA[Development-friendly trade]]></label>
+                 <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
-                 <description lang='EN'>
-                    <![CDATA[<p>
-                      The indicator assesses the extent of agricultural subsidy expressed as a
-                      proportion of country’s agricultural output. The data for EU countries come
-                      from the
-                      <a
-                          href="http://eur-lex.europa.eu/resource.html?uri=cellar:03ae5e2b-6384-11e5-9317-01aa75ed71a1.0023.02/DOC_2&amp;format=PDF"
-                      >
-                          European Commission
-                      </a>
-                  , and for non-EU countries from the    <a href="http://stats.oecd.org/Index.aspx?DataSetCode=MON2012TSE">OECD</a>.
-                  </p>
-                  <p>
-                      The weight of the agricultural protection indicator in the trade component
-                      is 10%.
-                  </p>]]>
-                 </description>
-              </indicator>
-              <indicator code='TRA_IMP' level='3'>
-                 <label lang='EN'><![CDATA[Impediments to imports]]></label>
-                 <shortlabel lang='EN'><![CDATA[Impediments to imports]]></shortlabel>
-                 <description lang='EN'>
-                    <![CDATA[<p>
-                        The indicator assesses regulatory burden that countries face when trading
-                    across borders. Three indicators from the    <a href="http://www.doingbusiness.org/">Doing Business Database</a>
-                        published by the World Bank are included: number of documents a country
-                        requires to import a container, number of days it takes to import a
-                        container and costs for importing a container. The indicator has 25% weight
-                        in the trade component.
-                    </p>]]>
-                 </description>
-              </indicator>
-              <indicator code='TRA_SRV' level='3'>
-                 <label lang='EN'><![CDATA[Restrictions to trade in services]]></label>
-                 <shortlabel lang='EN'><![CDATA[Restrictions to trade in services]]></shortlabel>
-                 <description lang='EN'>
-                    <![CDATA[<p>
-                      The indicator assesses countries’ level of restrictiveness for trade in
-                      services. It is based on the
-                      <a href="http://stats.oecd.org/Index.aspx?DataSetCode=STRI">
-                          Services Trade Restrictiveness Index
-                      </a>
-                      published by the OECD. The indicator is the average of restrictiveness in
-                      all sectors. The indicator has 25% weight in the trade component.
-                  </p>]]>
-                 </description>
-              </indicator>
+                 <hierarchy>
+                        <indicator code='TRA_TAR' level='4'>
+                           <label lang='EN'><![CDATA[Tariff protection]]></label>
+                           <shortlabel lang='EN'><![CDATA[Tariff protection]]></shortlabel>
+                           <description lang='EN'>
+                              <![CDATA[<p>
+                              This indicator assesses ad valorem equivalent of duties on imports from
+                              developing countries. We use Global Trade Analysis Project data from ITC’s
+                              <a
+                                  href="http://www.macmap.org/countryanalysis/countrystatistics/GlobalAnalysis.aspx?s=1"
+                              >
+                                  Market Access Map (MAcMAp)
+                              </a>
+                              . A high score indicates low tariffs against developing countries.
+                          </p>
+                          <p>
+                              The weight of the tariff protection indicator in the trade component equals
+                              40%.
+                          </p>]]>
+                           </description>
+                        </indicator>
+                        <indicator code='TRA_PRO' level='4'>
+                           <label lang='EN'><![CDATA[Agricultural protection]]></label>
+                           <shortlabel lang='EN'><![CDATA[Agricultural protection]]></shortlabel>
+                           <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
+                           <description lang='EN'>
+                              <![CDATA[<p>
+                                The indicator assesses the extent of agricultural subsidy expressed as a
+                                proportion of country’s agricultural output. The data for EU countries come
+                                from the
+                                <a
+                                    href="http://eur-lex.europa.eu/resource.html?uri=cellar:03ae5e2b-6384-11e5-9317-01aa75ed71a1.0023.02/DOC_2&amp;format=PDF"
+                                >
+                                    European Commission
+                                </a>
+                            , and for non-EU countries from the    <a href="http://stats.oecd.org/Index.aspx?DataSetCode=MON2012TSE">OECD</a>.
+                            </p>
+                            <p>
+                                The weight of the agricultural protection indicator in the trade component
+                                is 10%.
+                            </p>]]>
+                           </description>
+                        </indicator>
+                        <indicator code='TRA_IMP' level='4'>
+                           <label lang='EN'><![CDATA[Impediments to imports]]></label>
+                           <shortlabel lang='EN'><![CDATA[Impediments to imports]]></shortlabel>
+                           <description lang='EN'>
+                              <![CDATA[<p>
+                                  The indicator assesses regulatory burden that countries face when trading
+                              across borders. Three indicators from the    <a href="http://www.doingbusiness.org/">Doing Business Database</a>
+                                  published by the World Bank are included: number of documents a country
+                                  requires to import a container, number of days it takes to import a
+                                  container and costs for importing a container. The indicator has 25% weight
+                                  in the trade component.
+                              </p>]]>
+                           </description>
+                        </indicator>
+                        <indicator code='TRA_SRV' level='4'>
+                           <label lang='EN'><![CDATA[Restrictions to trade in services]]></label>
+                           <shortlabel lang='EN'><![CDATA[Restrictions to trade in services]]></shortlabel>
+                           <description lang='EN'>
+                              <![CDATA[<p>
+                                The indicator assesses countries’ level of restrictiveness for trade in
+                                services. It is based on the
+                                <a href="http://stats.oecd.org/Index.aspx?DataSetCode=STRI">
+                                    Services Trade Restrictiveness Index
+                                </a>
+                                published by the OECD. The indicator is the average of restrictiveness in
+                                all sectors. The indicator has 25% weight in the trade component.
+                            </p>]]>
+                           </description>
+                        </indicator>
+                      </hierarchy>
+                    </indicator>
            </hierarchy>
         </indicator>
         <indicator code='CDI_SEC' level='2'>

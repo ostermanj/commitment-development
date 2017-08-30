@@ -529,7 +529,6 @@ new code : adds object 'original' to main indicators and copies data to it so th
       $chart.append($div);
 
       if ( parseInt($div.css('left'))  - 25 < $chart.children('.indicator.min').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.max').css('left')) ) {
-        console.log('overlap', $chart.children('.indicator.min'));
         $div.addClass('overlapped-median');
       } 
 
@@ -1182,7 +1181,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                           } else {
                             unitLabel = '';
                           }
-                          console.log(unitLabel);
+                          
                             $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                             $chart = $('<div class="chart-holder"></div>');
                             $content.append($label);
@@ -2627,7 +2626,6 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                       } else {
                         unitLabel = '';
                       }
-                      console.log(this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit);
                         indicators = [this.app.flatIndicators[i].children[j]];
                         $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
