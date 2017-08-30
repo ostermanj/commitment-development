@@ -154,7 +154,7 @@ var BarChartItemView = Backbone.View.extend({
         // If we display the value on the bar we don't need the tooltip.
         
         if (this.includeValue) {
-            this.$el.append('<div class="value">' + this.model.data_label + '</div>');
+            this.$el.append('<div class="value">' + this.model.data_label.replace(' ','&nbsp;') + '</div>');
         } else if (typeof cgdCdi.indicators !== 'undefined'){ // added typeof check because country pages were sending CDI_AID as param for some reason. workaround
 
             var tooltipModel = new BarChartTooltipModel({
@@ -1105,8 +1105,15 @@ new code : adds object 'original' to main indicators and copies data to it so th
     loadCountry: function(args) {
 
     
-
         var that = this;
+        
+        var countryCount = 0;
+        for (var key in that.countries) {
+          if ( that.countries.hasOwnProperty(key) ){
+            countryCount++;
+          }
+        }
+      
         var cssSelector = '';
         var $indicatorElement;
         args.countryCodes.forEach(function(countryCode) {
@@ -1119,7 +1126,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             }
             // Set Overall data.
             var $rank = $indicatorElement.find('.indicator-rank');
-            $rank.html('Rank: ' + that.getRank(countryCode, 'CDI'));
+            $rank.html('Rank: ' + that.getRank(countryCode, 'CDI') + ' / ' + countryCount);
             var $avg = $indicatorElement.find('.avg');
             $avg.html(that.flatIndicators['CDI'].values[countryCode].toFixed(2));
 
@@ -1155,7 +1162,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
                 // Set rank.
                 var $rank = $indicatorElement.find('.indicator-rank');
-                $rank.html('Rank: ' + that.getRank(countryCode, i));
+                $rank.html('Rank: ' + that.getRank(countryCode, i) + ' / ' + countryCount );
 
                 // Set average.
                 var $avg = $indicatorElement.find('.avg');
@@ -1169,11 +1176,19 @@ new code : adds object 'original' to main indicators and copies data to it so th
               
                 for (var j in children) {
                     var child = that.flatIndicators[children[j]];
+                    if (child.children) {
                     $label = $('<div class="indicator-label category ' + i + '">' + child.label + '</div>');
                     $content.append($label);
-                    if (child.children) {
+                       
                         for (var k in child.children) {
-                            $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a></div>');
+                          var unitLabel;
+                          if ( that.flatIndicators[child.children[k]].unit !== null ){
+                            unitLabel = that.flatIndicators[child.children[k]].unit;
+                          } else {
+                            unitLabel = '';
+                          }
+                          console.log(unitLabel);
+                            $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                             $chart = $('<div class="chart-holder"></div>');
                             $content.append($label);
                             $content.append($chart);
@@ -1191,12 +1206,24 @@ new code : adds object 'original' to main indicators and copies data to it so th
                             that.addContext(currentYear,indicators,$chart, countryCode);
                             }
                         } else {
-                        $label = $('<div class="indicator-label">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a></div>');
+                        var unitLabel;
+                          if ( child.unit !== null ){
+                            unitLabel = child.unit;
+                          } else {
+                            unitLabel = '';
+                          }
+                        $label = $('<div class="indicator-label no-child category ' + i + '">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         indicators = [children[j]];
                         $content.append($label);
                         $content.append($chart);
                         all_data = that.flatIndicators[children[j]];
+                         if ( isNaN(all_data.user_friendly_values[countryCode].replace(/%|\$/,'')) ) {
+                          $chart.addClass('null-value');
+                        }
+                        if ( all_data.less_is_better ) {
+                          $chart.addClass('less-is-better');
+                        }
 
                         that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
                         that.addContext(currentYear,indicators,$chart, countryCode);
@@ -2609,7 +2636,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                       }
                       console.log(this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit);
                         indicators = [this.app.flatIndicators[i].children[j]];
-                        $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + '<a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                        $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         $content.append($label);
                         $content.append($chart);
@@ -2633,7 +2660,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         unitLabel = '';
                       }               
                     indicators = [i];
-                    var $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                    var $label = $('<div class="indicator-label no-child category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                     var $chart = $('<div class="chart-holder"></div>');
                     $content.append($label);
                     $content.append($chart);

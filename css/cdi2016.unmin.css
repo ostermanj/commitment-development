@@ -665,7 +665,7 @@ tr.trend {
   margin-bottom: 20px;
   top: 2px;
   position: relative;
-  background: #DFDFDB !important;
+  background: #DFDFDB;
 }
 
 .unstacked .chart-holder {
@@ -678,7 +678,6 @@ tr.trend {
 }
 
 .null-value .value {
-   width: 300px;
     color: #767676 !important;
     top: -14px;
     left: -9px;
@@ -1335,20 +1334,19 @@ a.load-trends.fading {
 
 .indicator-label {
   font-weight: bold;
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 15px;
 }
 span.indicator-units {
     font-size:12px;
     color: #767676;
     font-weight: normal;   
     text-transform: none; 
+    margin-top: -5px;
+    display: block;
 }
 
-#home-cdi-indicator .indicator-label {
-  margin-top: 50px;
-  
-  position: relative;
-  margin-bottom: 20px;
-}
 #home-cdi-indicator .indicator-label:first-child {
   margin-top: 20px;
 }
@@ -1363,8 +1361,11 @@ span.indicator-units {
 }
 .indicator-label.category {
   text-transform: uppercase;
-  margin: 35px 0 10px;
+  margin: 50px 0 10px;
 }
+.indicator-label.category:not(.no-child) {
+    margin-bottom: -50px;
+    }
 .indicator-label.category.CDI,
 .line-chart-header.CDI {
   color: #574D40;
@@ -1454,8 +1455,16 @@ span.indicator-units {
   margin-bottom: 10px;
 }
 .country-details .right-side .bar-charts .indicator-label.category {
-  border-top: 1px solid #CCC;
   padding: 10px 0;
+  margin-top: 50px;
+
+}
+
+.country-details .right-side .bar-charts .indicator-label.category:first-child {
+    margin-top: 35px;
+}
+.country-details .right-side .bar-charts .indicator-label.category:not(.no-child){
+    margin-bottom: -50px;
 }
 .country-details .left-side,
 .country-details .right-side {
