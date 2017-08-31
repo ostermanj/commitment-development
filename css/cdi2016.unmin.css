@@ -725,8 +725,8 @@ div.chart-holder > div.transition {
 .chart-holder.less-is-better:before {
     content: 'less is better';
     position: absolute;
-    bottom: 18px;
-    left: 0;
+    bottom: 20px;
+    right: 0;
     font-size: 12px;
     color: #767676;
 }
@@ -1021,6 +1021,10 @@ td.spacer {
 }
 .mainNav.closed {
     height: 0 !important;
+}
+
+.mainNav.closed > div {
+    opacity: 0;
 }
 .mainNav.closed .weight-toggle div, .mainNav.closed .weight-toggle span {
     display: none;
@@ -1849,11 +1853,11 @@ span.country-label {
     }
         .chart-holder div:not(.tooltip) > .value {
         bottom:8px;
-        
-        color: #000;
+        color: #3b342b;
+        font-weight: normal;
     }
 }
-@media screen and (max-width: 515px) {
+@media screen and (max-width: 530px) {
     #home-cdi .master-row td:nth-child(4){
         width: 63%;
     }
@@ -1863,6 +1867,9 @@ span.country-label {
     }
      .cdi-footer .footer-block {
      width: 100%;   
+    }
+    .country-details {
+        padding: 15px;
     }
 }
 @media screen and (max-width: 410px) {
@@ -1899,7 +1906,7 @@ span.country-label {
         display: block;
     }
     .info-wrapper, .trends-wrapper, .components-wrapper {
-        padding: 10px 5px 0 15px;
+        padding: 10px 20px 0 15px;
     }
   
     .twitter-td, .facebook-td {
@@ -1911,8 +1918,8 @@ span.country-label {
     }
     .chart-holder div:not(.tooltip) > .value {
         bottom:8px;
-        
-        color: #000;
+        color: #3b342b;
+        font-weight: normal;
     }
     #home_cdi tr.master-row td:first-child, #new_cdi table tr.master-row td:nth-child(3) {
         text-align: left;
