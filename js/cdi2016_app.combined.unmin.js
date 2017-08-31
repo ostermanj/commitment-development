@@ -1097,9 +1097,16 @@ new code : adds object 'original' to main indicators and copies data to it so th
     },
 
     loadCountry: function(args) {
-
-    
         var that = this;
+
+    if ( originalRanks[args.countryCodes[0]] == undefined ){  // makes sure that original ranks object is ready before
+                                                              // proceeding
+      console.log('too early');
+      setTimeout(function(){
+        that.loadCountry(args);
+      },1000);
+      return;
+    }
         
         var countryCount = 0;
         for (var key in that.countries) {
