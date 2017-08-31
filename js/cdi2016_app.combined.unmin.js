@@ -1555,8 +1555,8 @@ cdiApp.CDI.View = Backbone.View.extend({
             name: fbCountry + ' ranks ' + fbRank + ' out of 27 on the Commitment to Development Index',
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
-            link: 'http://www.cgdev.org' + location.pathname,
-            picture: 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png'
+            link: 'https://www.cgdev.org' + location.pathname,
+            picture: 'https://www.cgdev.org/sites/default/files/cdi-2017-image-share_final.png'
         }); 
         $(event.currentTarget).blur(); //remove focus after click   
         dataLayer.push({event: 'cdiFacebook', label: fbCountry + '-overall'});
@@ -2204,7 +2204,7 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
         
-                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a class="cdi-country-report" href="/cdi-2016/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a class="cdi-country-report" href="/cdi-2017/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
  
  
                 that.$el.append(content);
@@ -2274,7 +2274,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                
             });
              var $buttonWrapper = $('<div style="clear:left">');
-             $buttonWrapper.append('<div class="year-results hello"><a class="cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>');
+             $buttonWrapper.append('<div class="year-results hello"><a class="cdi-country-report" target="_blank" href="/cdi-2017/country/' + this.countryCode + '">Country report</a></div>');
             $content.append($buttonWrapper);
             $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 80;
@@ -2478,8 +2478,8 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
             name: e.currentTarget.dataset.country + ' ranks ' + e.currentTarget.dataset.rank + ' out of 27 on ' +  e.currentTarget.dataset.component.toLowerCase() + ' in the Commitment to Development Index',
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
-            link: 'http://www.cgdev.org' + location.pathname,
-            picture: 'http://www.cgdev.org/sites/default/files/cdi-2016-image-share_final.png'
+            link: 'https://www.cgdev.org' + location.pathname,
+            picture: 'https://www.cgdev.org/sites/default/files/cdi-2017-image-share_final.png'
         }); 
         dataLayer.push({event: 'cdiFacebook', label: e.currentTarget.dataset.country + '-' + e.currentTarget.dataset.component.toLowerCase()});
         $(e.currentTarget).blur(); //remove focus after click   
@@ -2605,7 +2605,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
-             $content.append('<div class="year-results"><a class="cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
+             $content.append('<div class="year-results"><a class="cdi-country-report" target="_blank" href="/cdi-2017/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
             
             
           
@@ -2662,7 +2662,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
 
             }
 
-            $content.append('<div class="year-results"><a class="components-report-bottom cdi-country-report" target="_blank" href="/cdi-2016/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
+            $content.append('<div class="year-results"><a class="components-report-bottom cdi-country-report" target="_blank" href="/cdi-2017/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
            
         }
         var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 50;

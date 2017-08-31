@@ -169,11 +169,11 @@
                       “good” aid, and researchers have struggled to find common ground amidst
                       these competing definitions. There are several reasons why assessing the
                       quality of aid is a challenging exercise, and you can read more about it in
-                      <a href="http://www.cgdev.org/sites/default/files/eba_role_of_aid.pdf">
+                      <a href="https://www.cgdev.org/sites/default/files/eba_role_of_aid.pdf">
                           our paper
                       </a>
                       . The CDI uses the
-                      <a href="http://www.cgdev.org/page/quality-oda-quoda?callout=4-5">
+                      <a href="https://www.cgdev.org/page/quality-oda-quoda?callout=4-5">
                           Quality of Official Development Assistance
                       </a>
                       (QuODA) to evaluate the qualitative aspects of countries’ ODA programmes.
@@ -218,7 +218,7 @@
                               Share of untied aid
                           </li>
                           </ol>
-                          <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
+                          <p>For more information of this dimension, please consult the <a href="https://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                        </description>
                     </indicator>
                     <indicator code='AID_QLT_FST' level='4'>
@@ -258,7 +258,7 @@
                               Coverage of forward spending plans/Aid predictability
                           </li>
                           </ol>
-                          <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
+                          <p>For more information of this dimension, please consult the <a href="https://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                        </description>
                     </indicator>
 
@@ -294,7 +294,7 @@
                               Coordinated analytical work
                           </li>
                           </ol>
-                          <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
+                          <p>For more information of this dimension, please consult the <a href="https://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
                        </description>
                     </indicator>
                     <indicator code='AID_QLT_TRA' level='4'>
@@ -332,7 +332,7 @@
                               Aid to partners with good monitoring &amp; evaluation frameworks
                           </li>
                           </ol>
-                          <p>For more information of this dimension, please consult the <a href="http://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p>]]>
+                          <p>For more information of this dimension, please consult the <a href="https://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p>]]>
                        </description>
                     </indicator>
                  </hierarchy>
@@ -805,8 +805,8 @@
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_HLV' level='4'>
-                       <label lang='EN'><![CDATA[Harmful legal vehicles]]></label>
-                       <shortlabel lang='EN'><![CDATA[Harmful legal vehicles]]></shortlabel>
+                       <label lang='EN'><![CDATA[Harmful legal vehicles score]]></label>
+                       <shortlabel lang='EN'><![CDATA[Harmful legal vehicles score]]></shortlabel>
                        <description lang='EN'><![CDATA[<p>
                         This indicator assesses to what extent countries enable secrecy within
                         companies. Firstly, it looks at whether a jurisdiction allows the creation
@@ -1008,8 +1008,8 @@
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_ASC' level='4'>
-                       <label lang='EN'><![CDATA[ Allowing secrecy within a country sphere of influence]]></label>
-                       <shortlabel lang='EN'><![CDATA[ Allowing secrecy within a country sphere of influence]]></shortlabel>
+                       <label lang='EN'><![CDATA[ Allowing secrecy within a country sphere of influence score]]></label>
+                       <shortlabel lang='EN'><![CDATA[ Allowing secrecy within a country sphere of influence score]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[<p>
                             This indicator takes into account whether a country contributes to enabling
@@ -1069,7 +1069,7 @@
               <p>
                   For more information on intellectual property rights, please consult our
                   <a
-                      href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
+                      href="https://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
                   >
                       paper
                   </a>
@@ -1155,7 +1155,7 @@
                               The indicator takes into account countries policies countries’ policies on
                               patenting plant and animal varieties and software. As explained by
                               <a
-                                  href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
+                                  href="https://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
                               >
                                   Walter Park et al
                               </a>
@@ -1189,7 +1189,7 @@
                           Rights (TRIPS), countries’ anti-circumvention rules and database
                           protection. As explained by
                           <a
-                              href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
+                              href="https://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
                           >
                               Walter Park et al
                           </a>
@@ -1223,7 +1223,7 @@
                               which relate to compulsory licensing, patent revoking and opposition
                               system, and exceptions for research or defense purposes. As explained by
                               <a
-                                  href="http://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
+                                  href="https://www.cgdev.org/sites/default/files/europe-beyond-aid-technology_0.pdf"
                               >
                                   Walter Park et al
                               </a>
@@ -1393,8 +1393,8 @@
                        </description>
                     </indicator>
                     <indicator code='ENV_USE' level='4'>
-                       <label lang='EN'><![CDATA[Consumption of ozone-depleting substances]]></label>
-                       <shortlabel lang='EN'><![CDATA[Consumption of ozone-depleting substances]]></shortlabel>
+                       <label lang='EN'><![CDATA[Consumption of ozone-depleting substances score]]></label>
+                       <shortlabel lang='EN'><![CDATA[Consumption of ozone-depleting substances score]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
                           <p>
@@ -1432,7 +1432,7 @@
                             weight of this indicator in the environment component is 5%.
                         </p>
                         <p>
-                        An evaluation on the Paris agreement by CGD experts can be found    <a href="http://www.cgdev.org/topics/climate-change">here</a>.
+                        An evaluation on the Paris agreement by CGD experts can be found    <a href="https://www.cgdev.org/topics/climate-change">here</a>.
                         </p>]]>
                        </description>
                     </indicator>
@@ -1650,7 +1650,7 @@
               <p>
                   For more information on rich countries’ trade policies, please consult our
                   <a
-                      href="http://www.cgdev.org/sites/default/files/Europe_Beyond_Aid_Trade.pdf"
+                      href="https://www.cgdev.org/sites/default/files/Europe_Beyond_Aid_Trade.pdf"
                   >
                       paper
                   </a>
@@ -1667,8 +1667,8 @@
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <hierarchy>
                         <indicator code='TRA_TAR' level='4'>
-                           <label lang='EN'><![CDATA[Tariff protection]]></label>
-                           <shortlabel lang='EN'><![CDATA[Tariff protection]]></shortlabel>
+                           <label lang='EN'><![CDATA[Market protection score]]></label>
+                           <shortlabel lang='EN'><![CDATA[Market protection score]]></shortlabel>
                            <description lang='EN'>
                               <![CDATA[<p>
                               This indicator assesses ad valorem equivalent of duties on imports from
@@ -1709,8 +1709,8 @@
                            </description>
                         </indicator>
                         <indicator code='TRA_IMP' level='4'>
-                           <label lang='EN'><![CDATA[Impediments to imports]]></label>
-                           <shortlabel lang='EN'><![CDATA[Impediments to imports]]></shortlabel>
+                           <label lang='EN'><![CDATA[Impediments to imports score]]></label>
+                           <shortlabel lang='EN'><![CDATA[Impediments to imports score]]></shortlabel>
                            <description lang='EN'>
                               <![CDATA[<p>
                                   The indicator assesses regulatory burden that countries face when trading
@@ -1723,8 +1723,8 @@
                            </description>
                         </indicator>
                         <indicator code='TRA_SRV' level='4'>
-                           <label lang='EN'><![CDATA[Restrictions to trade in services]]></label>
-                           <shortlabel lang='EN'><![CDATA[Restrictions to trade in services]]></shortlabel>
+                           <label lang='EN'><![CDATA[Restrictions in services score]]></label>
+                           <shortlabel lang='EN'><![CDATA[Restrictions in services score]]></shortlabel>
                            <description lang='EN'>
                               <![CDATA[<p>
                                 The indicator assesses countries’ level of restrictiveness for trade in
@@ -1847,8 +1847,8 @@
                        </description>
                     </indicator>
                     <indicator code='SEC_ARM' level='4' format='percentage'>
-                       <label lang='EN'><![CDATA[Arms exports]]></label>
-                       <shortlabel lang='EN'><![CDATA[Arms exports]]></shortlabel>
+                       <label lang='EN'><![CDATA[Arms exports / GDP]]></label>
+                       <shortlabel lang='EN'><![CDATA[Arms exports / GDP]]></shortlabel>
                        <decimalplaces lang='EN'><![CDATA[2]]></decimalplaces>
                        <description lang='EN'>
                           <![CDATA[
@@ -2000,7 +2000,7 @@
                       knowledge and skills which they can employ by opening businesses, and
                       enhance the knowledge base of the country. There is very
                       <a
-                          href="http://www.cgdev.org/publication/skill-flow-fundamental-reconsideration-skilled-worker-mobility-and-development-working"
+                          href="https://www.cgdev.org/publication/skill-flow-fundamental-reconsideration-skilled-worker-mobility-and-development-working"
                       >
                           little evidence
                       </a>
@@ -2011,7 +2011,7 @@
                   </p>
                   <p>
                       For more information on the impact of migration, please visit CGD’s work on
-                      <a href="http://www.cgdev.org/topics/migration">
+                      <a href="https://www.cgdev.org/topics/migration">
                           migration and development
                       </a>
                       .
