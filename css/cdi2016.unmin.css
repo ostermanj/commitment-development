@@ -842,16 +842,7 @@ td.spacer {
     height:20px;
     position: relative;
 }
-#new_cdi table tr.master-row a.show-info,
-#home-cdi-indicator .indicator-label a.indicator-info,
-.bar-charts .indicator-label a.indicator-info {
-  background: url(../images/info.png) center center no-repeat;
-  image-rendering: -moz-crisp-edges;         /* Firefox */
-  image-rendering:   -o-crisp-edges;         /* Opera */
-  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-}
+
 #new_cdi table tr.master-row a.show-trend {
   background: url(../images/trends.png) center center no-repeat;
 }
@@ -859,14 +850,28 @@ td.spacer {
 #new_cdi table tr.master-row a.show-trend,
 #home-cdi-indicator .indicator-label a.indicator-info,
 .bar-charts .indicator-label a.indicator-info {
+       cursor: pointer;
+    right: 2px;
+    position: absolute;
+    top: 20%;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-size: contain;
-  text-indent: -9999em;
+  text-indent: 4px;
   margin: 0 auto;
-  position: relative;
+  border-radius: 11px;
+    background-color: #ccc;
+    color: #fff;
+    line-height: 95%;
 }
+
+#new_cdi table tr.master-row a.show-info:hover,
+#new_cdi table tr.master-row a.show-trend:hover,
+#home-cdi-indicator .indicator-label a.indicator-info:hover,
+.bar-charts .indicator-label a.indicator-info:hover {
+  background-color: #296976;
+    }
 .right-side a.indicator-info {
         bottom: 10px;
     right: 5px;
@@ -1266,7 +1271,7 @@ background: repeating-linear-gradient(
   width: 285px;
   float: left;
   box-sizing: border-box;
-  margin-right: 28px;
+  margin-right: 25px;
   margin-bottom: 3px;
 }
 .line-chart-wrapper .indicator-value {
@@ -1338,6 +1343,7 @@ a.load-trends.fading {
   margin-top: 50px;
   position: relative;
   margin-bottom: 15px;
+  padding-right: 20px;
 }
 span.indicator-units {
     font-size:12px;
@@ -1351,11 +1357,7 @@ span.indicator-units {
 #home-cdi-indicator .indicator-label:first-child {
   margin-top: 20px;
 }
-#home-cdi-indicator .indicator-label a.indicator-info {
-     bottom: 5px;
-    cursor: pointer;
-    right: 4px;
-}
+
 .bar-charts .indicator-label a.indicator-info {
   display: inline-block;
   margin-right: 10px;

@@ -1662,7 +1662,7 @@
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
            <hierarchy>
               <indicator code='TRA_GEN' level='3'>
-                 <label lang='EN'><![CDATA[Development-friendly trade]]></label>
+                 <label lang='EN'><![CDATA[Trade policies]]></label>
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <hierarchy>

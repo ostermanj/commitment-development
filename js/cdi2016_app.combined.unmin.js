@@ -527,11 +527,14 @@ new code : adds object 'original' to main indicators and copies data to it so th
       var relativePos = (( median(numericalValues) - min ) / range ) * 100;
       var $div = $('<div>').addClass('median-marker').css('left', 'calc(' + relativePos + '% - 1px)');
       $chart.append($div);
-
-      if ( parseInt($div.css('left'))  - 25 < $chart.children('.indicator.min').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.max').css('left')) ) {
+console.log($chart);
+console.log($div.css('left'));
+   /*   if ( parseInt($div.css('left')) - 25 < $chart.children('.indicator.min').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.max').css('left')) ) {
         $div.addClass('overlapped-median');
-      } 
-
+      } */
+      if ( $div.offset().left - 20 < $chart.children('.indicator.min').width() / 2 + $chart.children('.indicator.min').offset().left || $div.offset().left + 20 > $chart.children('.indicator.max').offset().left ) {
+        $div.addClass('overlapped-median');
+      }
       function median(values) {
         values.sort( function(a,b) {return a - b;} );
         var half = Math.floor(values.length/2);
@@ -964,7 +967,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     startApp: function() { // still in var cdiApp = Backbone.View.extend
         // Create main nav.
         var mainNavModel = new cdiApp.mainNav.Model({
-            items: this.indicators,
+            items: this.indicators
         });
         mainNavModel.addOverallItem();
         this.mainNavView = new cdiApp.mainNav.View({
@@ -1189,7 +1192,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                             unitLabel = '';
                           }
                           
-                            $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                            $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                             $chart = $('<div class="chart-holder"></div>');
                             $content.append($label);
                             $content.append($chart);
@@ -1213,7 +1216,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                           } else {
                             unitLabel = '';
                           }
-                        $label = $('<div class="indicator-label no-child category ' + i + '">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                        $label = $('<div class="indicator-label no-child category ' + i + '">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         indicators = [children[j]];
                         $content.append($label);
@@ -2317,7 +2320,7 @@ cdiApp.LineChart.Model = Backbone.Model.extend({
                 fillColor: 'rgba(0,0,0,0)',
                 pointStrokeCol: border_color,
                 strokeColor: border_color,
-                pointColor: border_color,
+                pointColor: border_color
             }]
         };
         var that = this;
@@ -2382,7 +2385,7 @@ cdiApp.CDI_Indicator.Model = Backbone.Model.extend({
             min : this.data.min,
             min_label: this.data.user_friendly_min,
             max : this.data.max,
-            max_label : this.data.user_friendly_max,
+            max_label : this.data.user_friendly_max
                 });
                 rank++;
             }
@@ -2428,7 +2431,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
                     });
 
                     this.collapsibleViews[i] = {
-                        'components': componentsView,
+                        'components': componentsView
                     };
 
                     var $chartHolder = $('<div class="chart-holder"></div>');
@@ -2634,7 +2637,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         unitLabel = '';
                       }
                         indicators = [this.app.flatIndicators[i].children[j]];
-                        $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                        $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         $content.append($label);
                         $content.append($chart);
@@ -2657,7 +2660,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         unitLabel = '';
                       }               
                     indicators = [i];
-                    var $label = $('<div class="indicator-label no-child category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">i</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                    var $label = $('<div class="indicator-label no-child category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                     var $chart = $('<div class="chart-holder"></div>');
                     $content.append($label);
                     $content.append($chart);
@@ -2676,7 +2679,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
         $('.' + this.countryCode + '-components .components-wrapper').height(cHeight);
     },
     events: {
-        'click a.indicator-info': 'showIndicatorInfo',
+        'click a.indicator-info': 'showIndicatorInfo'
         
     },
     
@@ -2696,5 +2699,6 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
         });
 
         event.preventDefault();
-    },
+    }
 });
+
