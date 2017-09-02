@@ -2214,10 +2214,15 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
         
-                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="field-item even">' + cgdCdi.data.indicators.CDI.summaries[that.countryCode] + '</div></div></div><div class="year-results"><a class="cdi-country-report" href="/cdi-2017/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="' + that.countryCode + '-summary-text" class="field-item even">Loading ... <br /> <br> </div></div></div><div class="year-results"><a class="cdi-country-report" href="/cdi-2017/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
  
  
                 that.$el.append(content);
+                $.get('/cdi-2017/country/' + that.countryCode, function(data){
+                  $('.' + that.countryCode + '-summary-text').text($( data ).find('.indicator.cdi .left-side').text());
+                        cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + addHeight;
+                        $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
+                });
                 
                 cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + addHeight;
                 $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Show trends</a>');
