@@ -487,22 +487,22 @@ new code : adds object 'original' to main indicators and copies data to it so th
           if (values.hasOwnProperty(key)) {
               var relativePos = ( ( values[key] - min ) / range ) * 100;
               counts[relativePos] = counts[relativePos] ? counts[relativePos] + 1 : 1;
-              var offset  = cgdCdi.flatIndicators[indicators[0]].is_discrete ? relativePos == 100 ? ( 4 + ( 8 * (counts[relativePos] - 1 ) ) ) : ( 4 - ( 8 * (counts[relativePos] - 1 ) ) ) : 4;
-              var $div = $('<div>').addClass('context-div discrete-offset-' + ( cgdCdi.flatIndicators[indicators[0]].is_discrete && counts[relativePos] != 1 ) ).css({'left':'calc(' + relativePos + '% - ' + offset + 'px)'});//,'bottom': -7 - ( 6 * (counts[values[key]] - 1 ) ) + 'px'});
+              var offset = 4;
+              var $div = $('<div>').addClass('context-div').css({'left':'calc(' + relativePos + '% - ' + offset + 'px)'});//,'bottom': -7 - ( 6 * (counts[values[key]] - 1 ) ) + 'px'});
               $chart.append($div);
           }
         }
-        if ( cgdCdi.flatIndicators[indicators[0]].is_discrete ) {
+       /* if ( cgdCdi.flatIndicators[indicators[0]].is_discrete ) {
            for (var key in counts) {
               if (counts.hasOwnProperty(key)) {
                 var offset = key == 0 ? 0 : 1;
                 $marker = $('<div>').addClass('discrete-marker').css('left', 'calc(' + key + '% - ' + offset + 'px)');
                 $chart.append($marker);
               }
-            }
-        } else {
+            }*/
+      //  } else {
           this.addMedianMarker(values, min, range, $chart);
-        }
+      //  }
         this.checkValueVisibility(values, min, range, $chart, countryCode);
     },
     checkValueVisibility: function(values, min, range, $chart, countryCode){
@@ -2620,7 +2620,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
-             $content.append('<div class="year-results"><a class="cdi-country-report" target="_blank" href="/cdi-2017/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a>');
+             $content.append('<div class="year-results"><a class="cdi-country-report" target="_blank" href="/cdi-2017/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a><br /><span class="context-key"><div class="context-div key"></div> = other countries’ scores</span>');
             
             
           

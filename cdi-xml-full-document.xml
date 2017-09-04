@@ -5420,7 +5420,7 @@
 ###############################################################################
    -->
 
-<vs y="2017" r="LMY" i="AID_QNT" format="percentage" units="% GNI">
+<vs y="2017" r="LMY" i="AID_QNT" precision="4" format="percentage" units="% GNI">
     <v c="AUS" value="0.00250279"></v>
     <v c="AUT" value="0.00407088"></v>
     <v c="BEL" value="0.00492745"></v>

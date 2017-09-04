@@ -420,7 +420,7 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
 }
 .cdi-header-wrapper h1 {
   font-size: 44px;
-  max-width: 400px;
+  max-width: 500px;
   width:100%;
 }
 .cdi-header-wrapper p {
@@ -622,6 +622,27 @@ tr.trend {
     opacity: 0.2;
     bottom: -7px;
 
+}
+
+.context-div.key {
+    position: relative;
+    display: inline;
+    bottom: 11px;
+    margin-right: 4px;
+}
+
+.context-key {
+    color: #767676;
+    font-size: 12px;
+    display: block;
+    clear: left;
+    top: 30px;
+    position: relative;
+}
+
+
+.indicator.cdi .context-key {
+    display: none;
 }
 
 .context-div.discrete-offset-true {

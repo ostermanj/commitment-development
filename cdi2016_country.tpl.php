@@ -41,6 +41,7 @@
                     </div>
                     <div class="right-side">
                         <div class="average">SCORE: <span class="avg"></span></div>
+                        <span class="context-key"><div class="context-div key"></div> = other countries’ scores</span>
                         <div class="bar-charts"></div>
                     </div>
                     <div class="clearfix"></div>
