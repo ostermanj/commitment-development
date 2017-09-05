@@ -8,7 +8,7 @@
         </div>
         <div class="footer-block data" onclick="window.open('https://drive.google.com/drive/folders/0B167nw-gSVHRcXhILXg0RjM3Vmc')">
             <div class="cdi-icon"></div>
-            <div class="title"><?php print t('Download');?></div>
+            <div class="title"><?php print t('Explore');?></div>
             <div class="description"><?php print t('The data and methodology');?></div>
             <a href="#" class="cdi-footer-link"></a>
         </div>
