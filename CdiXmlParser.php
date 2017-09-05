@@ -1,5 +1,4 @@
 <?php
-//require 'ChromePhp.php';
 /**
  * Created by PhpStorm.
  * User: javie_000
@@ -190,8 +189,6 @@ class CdiXmlParser {
                     $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, $precision !== null ? $precision : 2);
                     break;
             }
-            //$unit = isset($item['units']) ? (string) $item['units'] : false;
-            //ChromePhp::log($item);
             $realMin = min($this->indicatorsValues[$code][$year]);
             $realMax = max($this->indicatorsValues[$code][$year]);
             $searchFor = 'CDI_';

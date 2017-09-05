@@ -527,8 +527,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
       var relativePos = (( median(numericalValues) - min ) / range ) * 100;
       var $div = $('<div>').addClass('median-marker').css('left', 'calc(' + relativePos + '% - 1px)');
       $chart.append($div);
-console.log($chart);
-console.log($div.css('left'));
+
+
    /*   if ( parseInt($div.css('left')) - 25 < $chart.children('.indicator.min').width() / 2  || parseInt($div.css('left')) + 25 > parseInt($chart.children('.indicator.max').css('left')) ) {
         $div.addClass('overlapped-median');
       } */
@@ -1104,7 +1104,7 @@ console.log($div.css('left'));
 
     if ( originalRanks[args.countryCodes[0]] == undefined ){  // makes sure that original ranks object is ready before
                                                               // proceeding
-      console.log('too early');
+      
       setTimeout(function(){
         that.loadCountry(args);
       },1000);

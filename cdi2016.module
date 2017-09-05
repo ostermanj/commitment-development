@@ -10,7 +10,7 @@
  */
 function cdi2016_menu() {
     $items = array();
-    $items['commitment-development-index-2017'] = array(
+    $items['commitment-development-index--2017'] = array(
         'page callback' => 'cdi2016_index_page',
         'access callback' => TRUE,
         'type' => MENU_CALLBACK,
@@ -49,7 +49,7 @@ function cdi2016_theme() {
   function cdi2016_html_head_alter(&$head_elements) {
 
     $item = menu_get_item();
-    if ($item['path'] == 'commitment-development-index-2017' || $item['path'] == 'cdi-2017/country/%'){
+    if ($item['path'] == 'commitment-development-index--2017' || $item['path'] == 'cdi-2017/country/%'){
       $getTitle = drupal_get_title();
       $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark takes first place with Sweden and Finland as runners-up. The UK is 7th (tied) while the United States takes 23rd.';
       
