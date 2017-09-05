@@ -31,35 +31,6 @@
    <country code='USA' lang='EN'><![CDATA[United States]]></country>
    <country code='EU' lang='EN'><![CDATA[Europe]]></country>
    <region code='LMY' lang='EN'><![CDATA[All developing countries]]></region>
-  
-   <summary code='AUT' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Austria is tied for 7th on the Commitment to Development Index. It performs well on <em>technology</em> and finishes first on <em>security</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='AUS' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Australia ranks 17th on the Commitment to Development Index. It does well on <em>trade</em> and <em>migration</em> but poorly on <em>environment</em> and <em>security</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='BEL' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Belgium ranks 14th  on the Commitment to Development Index. Its best performance is on <em>trade</em> and <em>migration</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='CAN' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Canada is tied for 12th on the Commitment to Development Index. It is near the top on <em>finance</em> but near the bottom on <em>environment</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='CZE' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** The Czech Republic ranks 21st on the Commitment to Development Index. Its best performance is on <em>environment</em> and <em>finance</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='DNK' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Denmark ranks second on the Commitment to Development Index with strong performance across all policy areas except <em>migration</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='FIN' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Finland ranks first on the Commitment to Development Index with strong performance especially on <em>finance</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='FRA' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** France ranks fourth on the Commitment to Development Index with strong performance across most policy areas. It ranks second on <em>security</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='DEU' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Germany ranks 15th on the Commitment to Development Index. Its best performance is on <em>migration</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='GRC' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Greece ranks 22nd on the Commitment to Development Index. Its best performance is on <em>security</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='HUN' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Hungary ranks 19th on the Commitment to Development Index. Its best performance is on <em>environment</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='IRL' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Ireland is tied for 12th on the Commitment to Development Index. It scores near the top on <em>aid</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='ITA' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Italy ranks 16th on the Commitment to Development Index. Its best performance is on <em>finance</em> and <em>environment</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='JPN' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Japan ranks 26th on the Commitment to Development Index. It ranks near the bottom of many components but performs well on <em>technology</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='LUX' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Luxembourg ranks 18th on the Commitment to Development Index. It is in the top 6 on <em>aid</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='NLD' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** The Netherlands is tied for seventh on the Commitment to Development Index. It takes the top spot on <em>trade</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='NZL' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** New Zealand ranks 10th on the Commitment to Development Index. It takes the top spot on <em>migration</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='NOR' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Norway ranks sixth on the Commitment to Development Index with strong performance in <em>aid</em> and <em>migration</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='POL' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Poland ranks 25th on the Commitment to Development Index. Its best performance is on <em>environment</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='PRT' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Portugal ranks fifth on the Commitment to Development Index with strong performance <em>technology</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='SVK' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Slovakia ranks 24th on the Commitment to Development Index but ranks first on <em>environment</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='KOR' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** South Korea ranks 23rd on the Commitment to Development Index. It ranks at the bottom of many components, but at the top of <em>technology</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='ESP' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Spain ranks 11th on the Commitment to Development Index. It performs strongly on <em>finance</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='SWE' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Sweden ranks third on the Commitment to Development Index. A strong performance on <em>migration</em> makes up for a poor score on <em>security</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='CHE' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** Switzerland ranks 27th on the Commitment to Development Index with a poor showing on <em>finance</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='GBR' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** The United Kingdom ranks ninth on the Commitment to Development Index with strong performance across most components. It does poorly on <em>technology</em>. Select a graph segment to drill down.]]></summary>
-   <summary code='USA' lang='EN'><![CDATA[** NEEDS TO BE UPDATED** The United States ranks 20th on the Commitment to Development Index. Its best performance on <em>trade</em>. Low scores on <em>environment</em> and <em>security</em> bring it down. Select a graph segment to drill down.]]></summary>
-   
    <hierarchy>
   <indicator code='CDI' level='1'>
      <label lang='EN'><![CDATA[Overall]]></label>

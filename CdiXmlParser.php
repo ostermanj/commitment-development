@@ -83,11 +83,6 @@ class CdiXmlParser {
         $this->indicatorsValues = array();
         $this->weightedList = array();
         $this->userFriendlyList = array();
-        $this->summaries = array();
-        
-        foreach ($this->xml->xpath('/data/summary') as $summary) {
-            $this->summaries[(string) $summary['code']] = (string) $summary;
-        }
      
         foreach ($this->xml->xpath('//vs') as $value) { // for each <vs> tag in the XML
             $indicator = (string) $value['i'];  // for example 'SEC_ARM'
@@ -239,9 +234,6 @@ class CdiXmlParser {
                 
             );
             
-            if ($code === 'CDI'){
-                $indicators[$code]['summaries'] = $this->summaries;
-            }
             if (isset($this->weightedList[$code][$year])) {
                 $indicators[$code]['weighted'] = $this->weightedList[$code][$year];
             }
