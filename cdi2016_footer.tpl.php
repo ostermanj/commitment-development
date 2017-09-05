@@ -6,10 +6,10 @@
             <div class="description"><?php print t('This year\'s brief');?></div>
             <a href="#" class="cdi-footer-link"></a>
         </div>
-        <div class="footer-block postcard" onclick="window.open('/www.cgdev.org/sites/default/files/cdi-postcard-2016.pdf')">
+        <div class="footer-block data" onclick="window.open('https://drive.google.com/drive/folders/0B167nw-gSVHRcXhILXg0RjM3Vmc')">
             <div class="cdi-icon"></div>
-            <div class="title"><?php print t('Read');?></div>
-            <div class="description"><?php print t('The postcard (PDF)');?></div>
+            <div class="title"><?php print t('Download');?></div>
+            <div class="description"><?php print t('The data and methodology');?></div>
             <a href="#" class="cdi-footer-link"></a>
         </div>
         <div class="footer-block video" onclick="window.open('//www.youtube.com/watch?v=_e6TTZYomTk')">

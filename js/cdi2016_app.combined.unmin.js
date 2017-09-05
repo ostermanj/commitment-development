@@ -595,7 +595,7 @@ console.log($div.css('left'));
             NZL: "New Zealand",
             POL: "Poland",
             PRT: "Portugal",
-            SVK: "Slovakia",
+            SVK: "Slovak Republic",
             SWE: "Sweden",
             USA: "United States"
         };

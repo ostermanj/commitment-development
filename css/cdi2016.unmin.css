@@ -1569,8 +1569,8 @@ span.indicator-units {
 .cdi-footer .footer-block.brief .cdi-icon {
   background-image: url(../images/brief.png);
 }
-.cdi-footer .footer-block.postcard .cdi-icon {
-  background-image: url(../images/postcard.png);
+.cdi-footer .footer-block.data .cdi-icon {
+  background-image: url(../images/data.png);
 }
 .cdi-footer .footer-block.video .cdi-icon {
   background-image: url(../images/video.png);
