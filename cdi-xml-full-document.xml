@@ -600,8 +600,8 @@
                  <hierarchy>
 
                     <indicator code='INV_SEC_BNK' level='4'>
-                       <label lang='EN'><![CDATA[Banking secrecy score]]></label>
-                       <shortlabel lang='EN'><![CDATA[Banking secrecy score]]></shortlabel>
+                       <label lang='EN'><![CDATA[Limiting banking secrecy]]></label>
+                       <shortlabel lang='EN'><![CDATA[Limiting banking secrecy]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[This indicator assesses whether a jurisdiction enables banking secrecy;
                               absence or inaccessibility of banking information is considered a form of
@@ -805,8 +805,8 @@
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_HLV' level='4'>
-                       <label lang='EN'><![CDATA[Harmful legal vehicles score]]></label>
-                       <shortlabel lang='EN'><![CDATA[Harmful legal vehicles score]]></shortlabel>
+                       <label lang='EN'><![CDATA[Restricting harmful legal vehicles]]></label>
+                       <shortlabel lang='EN'><![CDATA[Restricting harmful legal vehicles]]></shortlabel>
                        <description lang='EN'><![CDATA[<p>
                         This indicator assesses to what extent countries enable secrecy within
                         companies. Firstly, it looks at whether a jurisdiction allows the creation
@@ -1008,8 +1008,8 @@
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_ASC' level='4'>
-                       <label lang='EN'><![CDATA[ Allowing secrecy within a country sphere of influence score]]></label>
-                       <shortlabel lang='EN'><![CDATA[ Allowing secrecy within a country sphere of influence score]]></shortlabel>
+                       <label lang='EN'><![CDATA[ Preventing secrecy within a country's sphere of influence score]]></label>
+                       <shortlabel lang='EN'><![CDATA[ Preventing secrecy within a country's sphere of influence score]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[<p>
                             This indicator takes into account whether a country contributes to enabling
@@ -1393,8 +1393,8 @@
                        </description>
                     </indicator>
                     <indicator code='ENV_USE' level='4'>
-                       <label lang='EN'><![CDATA[Consumption of ozone-depleting substances score]]></label>
-                       <shortlabel lang='EN'><![CDATA[Consumption of ozone-depleting substances score]]></shortlabel>
+                       <label lang='EN'><![CDATA[Reduction of emissions of selected ozone-depleting substances]]></label>
+                       <shortlabel lang='EN'><![CDATA[Reduction of emissions of selected ozone-depleting substances]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
                           <p>
@@ -1412,8 +1412,8 @@
                        </description>
                     </indicator>
                     <indicator code='ENV_PAR' level='4'>
-                       <label lang='EN'><![CDATA[Paris Agreement]]></label>
-                       <shortlabel lang='EN'><![CDATA[Paris Agreement]]></shortlabel>
+                       <label lang='EN'><![CDATA[Paris Agreement ratification]]></label>
+                       <shortlabel lang='EN'><![CDATA[Paris Agreement ratification]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[<p>
                             The Paris Agreement, which was adopted in December 2015, succeeds the Kyoto
@@ -1471,8 +1471,8 @@
                        </description>
                     </indicator>
                     <indicator code='ENV_UNI' level='4'>
-                       <label lang='EN'><![CDATA[Ratification of UN Fisheries Agreement]]></label>
-                       <shortlabel lang='EN'><![CDATA[Ratification of UN Fisheries Agreement]]></shortlabel>
+                       <label lang='EN'><![CDATA[Ratification of Fish Stocks Agreement]]></label>
+                       <shortlabel lang='EN'><![CDATA[Ratification of Fish Stocks Agreement]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[
                           <p>
@@ -2022,8 +2022,8 @@
            <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
            <hierarchy>
               <indicator code='MIG_CON' level='3'>
-                 <label lang='EN'><![CDATA[Participation in international conventions ]]></label>
-                 <shortlabel lang='EN'><![CDATA[Participation in international conventions ]]></shortlabel>
+                 <label lang='EN'><![CDATA[International conventions ]]></label>
+                 <shortlabel lang='EN'><![CDATA[International conventions ]]></shortlabel>
                  <description lang='EN'>
                     <![CDATA[<p>
                         The indicator assesses to what extent have countries signed up to
