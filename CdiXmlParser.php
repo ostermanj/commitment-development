@@ -192,8 +192,13 @@ class CdiXmlParser {
                     $formatter->setAttribute(NumberFormatter::MAX_FRACTION_DIGITS, $precision !== null ? $precision : 2);
                     break;
             }
-            $realMin = min($this->indicatorsValues[$code][$year]);
-            $realMax = max($this->indicatorsValues[$code][$year]);
+            if ( !isset($this->indicatorsValues[$code]) ) {
+                $realMin = 0;
+                $realMax = 0;
+            } else {
+                $realMin = min($this->indicatorsValues[$code][$year]);
+                $realMax = max($this->indicatorsValues[$code][$year]);
+            }
             $searchFor = 'CDI_';
             $pos = strpos($code, $searchFor);
             if ( $pos !== false ) {
@@ -211,8 +216,13 @@ class CdiXmlParser {
                 $friendlyMin = $formatter->format($min);
                 $friendlyMax = $formatter->format($max);
             }
-            $less_is_better_boolean = ( $this->indicatorsValues[$code]['less_is_better'] == 1 );
-            $is_discrete_boolean = ( $this->indicatorsValues[$code]['is_discrete'] == 1 );
+            if ( isset($this->indicatorsValues[$code]) ) {
+                $less_is_better_boolean = ( $this->indicatorsValues[$code]['less_is_better'] == 1 );
+                $is_discrete_boolean = ( $this->indicatorsValues[$code]['is_discrete'] == 1 );
+            } else {
+                $less_is_better_boolean = false;
+                $is_discrete_boolean = false;
+            }
             $indicators[$code] = array(
                 'label' => (string) $item->label,
                 'unit' => &$this->indicatorsValues[$code]['units'],
