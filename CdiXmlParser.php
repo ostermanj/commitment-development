@@ -1,4 +1,5 @@
 <?php
+include 'ChromePhp.php';
 /**
  * Created by PhpStorm.
  * User: javie_000
@@ -154,9 +155,11 @@ class CdiXmlParser {
 
     private function _transpose2DArray($array) {
         $newArray = array();
-        foreach ($array as $i => $x) {
-            foreach ($x as $j => $y) {
-                $newArray[$j][$i] = $y;
+        foreach ($array as $key_1 => $value_1) { 
+            if ( is_array($value_1) ) {
+                foreach ($value_1 as $key_2 => $value_2) {
+                    $newArray[$key_2][$key_1] = $value_2;
+                }
             }
         }
         return $newArray;
