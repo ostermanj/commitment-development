@@ -9,4 +9,4 @@ Other 2016 improvements include better responsiveness for mobile and tablets, mo
 
 ## 2017 Update
 
-2017 updates by John Osterman improve bar charts by showing the units of the data and displayinghow one country's score compares to the spread and median of all other countries, improve the handling of null data, and better explain inversed indicators, where a lower score is better.
+2017 updates by John Osterman improve bar charts by showing the units of the data and displayinghow one country's score compares to the spread and median of all other countries, improve the handling of null data, and better explain inversed indicators, where a lower score is better. See [this blog post](http://osterman.io/project/2017/09/05/commitment-to-development-index/) for more information about the update.
