@@ -1,0 +1,1 @@
+This was first created by [Creative Science](http://creativesci.co/) in 2015 for the [Center for Global Development](https://www.cgdev.org), whose research is made available under the [Creative Commons Attribution-NonCommercial 4.0 International License](http://creativecommons.org/licenses/by-nc/4.0/). Updates in 2016 and 2017 were performed by John Osterman.

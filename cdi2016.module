@@ -1,0 +1,190 @@
+<?php
+/**
+ *
+ * @file cdi2016.module
+ *   Contains cdi2016 functionality.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function cdi2016_menu() {
+    $items = array();
+    $items['commitment-development-index-2017'] = array(
+        'page callback' => 'cdi2016_index_page',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+    $items['cdi-2017/country/%'] = array(
+        'page callback' => 'cdi2016_country_page',
+        'page arguments' => array(2),
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK,
+    );
+  
+    return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cdi2016_theme() {
+  return array(
+    'cdi2016_index' => array(
+      'template' => 'cdi2016_index',
+    ),
+    'cdi2016_country' => array(
+      'variables' => array('countries' => NULL, 'indicators' => NULL),
+      'template' => 'cdi2016_country',
+    ),
+    'cdi2016_footer' => array(
+      'template' => 'cdi2016_footer',
+    ),
+  );
+}
+
+
+/* function below is being called on and altering ALL pages; execute only when requested path matches for CDI pages*/
+
+  function cdi2016_html_head_alter(&$head_elements) {
+
+    $item = menu_get_item();
+    if ($item['path'] == 'commitment-development-index-2017' || $item['path'] == 'cdi-2017/country/%'){
+      $getTitle = drupal_get_title();
+      $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark takes first place with Sweden and Finland as runners-up. The UK is 7th (tied) while the US takes 23rd.';
+      
+      $cdiImageURL = 'https://www.cgdev.org/sites/default/files/cdi-2017-image-share_final.png'; 
+      $head_elements['metatag_description_0']['#value'] = $longDescription;
+      $head_elements['metatag_twitter:card_0']['#value'] = 'summary_large_image';
+      $head_elements['metatag_twitter:title_0']['#value'] = $getTitle;
+      $head_elements['metatag_twitter:image:src_0']['#value'] = $cdiImageURL;
+      $head_elements['metatag_twitter:image_0']['#value'] = $cdiImageURL;
+      $head_elements['metatag_og:image:url_0']['#value'] = $cdiImageURL;
+      $head_elements['metatag_og:image_0']['#weight'] = 30;
+      $head_elements['metatag_og:description_0']['#weight'] = 30;
+      $head_elements['metatag_twitter:description_0']['#weight'] = 30;
+     
+    }
+  } 
+
+function addHeadElements(){
+  
+  $fbDescription = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+         'property' => 'og:description',
+         'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Denmark takes first place with Sweden and Finland as runners-up. The UK is 7th (tied) while the US takes 23rd.'  ,
+      ),
+    );
+    drupal_add_html_head($fbDescription, 'metatag_og:description_0');
+
+    $fbImage = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+         'property' => 'og:image',
+         'content' => 'https://www.cgdev.org/sites/default/files/cdi-2017-image-share_final.png',
+      ),
+    );
+    drupal_add_html_head($fbImage, 'metatag_og:image_0');
+
+    $twitterDescription = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+         'name' => 'twitter:description',
+         'content' => 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations.',
+      ),
+    );  
+    drupal_add_html_head($twitterDescription, 'metatag_twitter:description_0'); 
+
+    
+  
+
+
+}
+
+
+/**
+ * Gets the content of the Country page.
+ *
+ * @return {string}
+ *   The page content.
+ */
+function cdi2016_index_page() {
+  drupal_add_css(drupal_get_path('module', 'cdi2016') . '/css/cdi2017.css');
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js', 'external');
+  drupal_add_js('//connect.facebook.net/en_US/all.js', 'external');
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js', 'external');
+  drupal_add_js(drupal_get_path('module', 'cdi2016') . '/js/cdi2017_app.combined.js');
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js', 'external');
+  drupal_add_js(drupal_get_path('module', 'cdi2016') . '/js/cdi2017_modal.combined.js');
+  drupal_add_js(array('cdi2016' => array('pathToModule' => drupal_get_path('module', 'cdi2016'))), 'setting');
+
+  drupal_set_title(t('Commitment to Development Index')); 
+
+  addHeadElements();
+  
+  return theme('cdi2016_index') . theme('cdi2016_footer');
+}
+
+/**
+ * Gets the content of the Country page.
+ *
+ * @return {string}
+ *   The page content.
+ */
+function cdi2016_country_page($country_code) {
+  $country = cdi2016_get_country_node($country_code);
+  drupal_add_css(drupal_get_path('module', 'cdi2016') . '/css/cdi2017.css');
+  drupal_add_js('countryCodes = ["' . $country_code. '"];', 'inline');
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js', 'external');
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js', 'external');
+  drupal_add_js(drupal_get_path('module', 'cdi2016') . '/js/cdi2017_app.combined.js');
+  drupal_add_js('//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js', 'external');
+  drupal_add_js(drupal_get_path('module', 'cdi2016') . '/js/cdi2017_modal.combined.js');
+  drupal_add_js(drupal_get_path('module', 'cdi2016') . '/js/cdi2017_country.js');
+  drupal_add_js(array('cdi2016' => array('pathToModule' => drupal_get_path('module', 'cdi2016'))), 'setting');
+
+  drupal_set_title(t('Commitment to Development Index - ' . $country->title));
+  
+  
+  $content = node_view($country, 'teaser');
+  $description_overall = strip_tags(drupal_render($content['field_overall']));
+  
+
+  $indicators = array(
+    'cdi' => 'field_overall',
+    'cdi_aid' => 'field_aid',
+    'cdi_inv' => 'field_finance',
+    'cdi_tec' => 'field_technology',
+    'cdi_env' => 'field_environment',
+    'cdi_tra' => 'field_trade',
+    'cdi_sec' => 'field_security',
+    'cdi_mig' => 'field_migration',
+  );
+
+  $args = array(
+    'countries' => array($country),
+    'indicators' => $indicators,
+  );
+  addHeadElements();
+  return theme('cdi2016_country', $args) . theme('cdi2016_footer');
+}
+
+function cdi2016_get_country_node($country_code) {
+  $result = db_query("SELECT c.entity_id 
+    FROM field_data_field_country_code c
+    WHERE c.entity_type = 'taxonomy_term' AND
+    c.field_country_code_value = :country_code", array(':country_code' => $country_code));
+  foreach ($result as $record) {
+    $tid = $record->entity_id;
+  }
+  if (empty($tid)) {
+    print 'Data not available.';
+    return;
+  }
+  $nids = taxonomy_select_nodes($tid);
+  $node = node_load($nids[0]);
+  $node->country_code = $country_code;
+    
+  return $node;
+}
