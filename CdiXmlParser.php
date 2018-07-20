@@ -82,6 +82,9 @@ class CdiXmlParser {
         $this->indicatorsValues = array();
         $this->weightedList = array();
         $this->userFriendlyList = array();
+        /* new for 2018 */
+        $this->weights = array();
+        /* end new for 2018 */
      
         foreach ($this->xml->xpath('//vs') as $value) { // for each <vs> tag in the XML
             $indicator = (string) $value['i'];  // for example 'SEC_ARM'
@@ -130,6 +133,12 @@ class CdiXmlParser {
                 if (isset($entry['isnull'])){
                     $printedValue = (string) $entry['value'];
                 }
+                /* new for 2018 */
+                if ( floatval(isset($entry['weight']))) {
+                    $this->weights[$indicator][$year][$country] = floatval($entry['weight']);
+                }                
+                /* end new for 2018 */
+
                 
                 // xml data now puts empty value instead of "null" and adds isnull attribute instead
                 // is isnull is set, changes printedvalue. value is parse d as zero. null value was
@@ -240,6 +249,7 @@ class CdiXmlParser {
                 'user_friendly_min' => $friendlyMin,
                 'user_friendly_max' => $friendlyMax,
                 'is_discrete' => $is_discrete_boolean,
+                'weights' => &$this->weights[$code][$year],
                 
             );
             

@@ -104,6 +104,7 @@ var BarChartItemView = Backbone.View.extend({
         var left = 0;
         
 	if(this.model.numElements==1){ // if single indicator chart
+    console.log('single-indicator bar chart');
 	  var range_space = this.model.max-this.model.min;
 	  if(this.model.min > 0){
 	 	var range_value = data-this.model.min;
@@ -135,7 +136,7 @@ var BarChartItemView = Backbone.View.extend({
 	  }
 
 	} else { // if main 7-indicator chart
-
+    console.log('7-indicator bar chart');
 	 var availableSpace = this.model.max + 0.75;
 	  
      var percent_width = this.model.weighted / availableSpace;	
@@ -372,7 +373,7 @@ var cdiApp = Backbone.View.extend({
      * the hierarchy from the data object.
      */
     flattenData: function() {
-
+console.log(this);
         var that = this;
         this.flatIndicators = {};
 
@@ -431,7 +432,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
      *   tooltip.
      */
     createBarChart: function(year, countryCode, indicators, $el, includeValueOnChart, min, max, min_label, max_label, level) {
-
+      console.log(arguments);
         var data = [];
     var data_labels = [];
         var that = this;
@@ -442,6 +443,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     var max_label = max_label;
     var total_val = 0;
         indicators.forEach(function(indicator) {
+          console.log(that.flatIndicators[indicator]);
             var value = that.flatIndicators[indicator].values ?  that.flatIndicators[indicator].values[countryCode] : 0;
             data.push(value);
         
@@ -451,7 +453,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
         var weighted_value = that.flatIndicators[indicator].weighted ?  that.flatIndicators[indicator].weighted[countryCode] : 0;
         weighted.push(weighted_value);
 
-        total_val+= weighted_value;
+        total_val+= weighted_value; // total value is the sum of weighted values for each indicator ( array of 1 or array of 7)
     
         });
     
