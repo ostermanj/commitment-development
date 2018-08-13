@@ -4,11 +4,6 @@ body {
 
 /* ^ fixes font-rendering inconsistency in safari, perhaps others. text in menus looked thin without */
 
-#mobile-hat {
-    height: 47px !important;
-}
-
-
 .weight-toggle {
     width:122px;
     height: 53px;
@@ -199,11 +194,12 @@ body {
 .weights-instruct, #weights-note {
     position: absolute;
     color: #fff;
-    font-size: 12px;
+    font-size: 10px;
     bottom: 4px;
     width: 100%;
     -webkit-transition:opacity 0.5s linear;
     transition: opacity 0.5s linear;
+    line-height: 100%;
 }
 #weights-note {
     top: 53px;
@@ -239,7 +235,7 @@ body {
     background: transparent;
     padding: 0;
     text-transform: none;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: normal;
     line-height: inherit;
     font-family: inherit;
@@ -422,6 +418,7 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
   font-size: 44px;
   max-width: 500px;
   width:100%;
+  color: #fff;
 }
 .cdi-header-wrapper p {
   font-size: 20px;
@@ -526,11 +523,7 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
   text-transform: uppercase;
 }
 
-#new_cdi table tr.master-row {
-  border-right: 2px solid #f3f3f3;
-    border-left: 2px solid #f3f3f3;
-  background-color:#f3f3f3;    
-}
+
 #new_cdi table tr.master-row:first-child {
   border-top: none;
 }
@@ -816,7 +809,7 @@ div.chart-holder > div.transition {
     cursor: pointer;
 }
 .master-row:hover {
-    background-color: #fff !important;
+    background-color: #f3f3f3;
 }
 td.spacer {
     width:15px;
@@ -1069,7 +1062,7 @@ td.spacer {
 }
 .mainNav.stick-to-top {
     position: fixed;
-    top: 49px;
+    top: 70px;
     z-index: 999;
 }
 .mainNav.stick-to-top .weight-toggle {
@@ -1717,7 +1710,7 @@ span.country-label {
     } 
    
 }
-@media screen and (max-width: 1019px) {
+@media screen and (max-width: 1024px) {
 
     div.countries {
         margin-top: -6px
@@ -1731,7 +1724,7 @@ span.country-label {
       margin-top: -6px; 
     }
     .mainNav.stick-to-top {
-        top: 44px;
+        top: 71px;
     }
     .weight-toggle .active-indicator {
         width: 2px;
@@ -1803,7 +1796,7 @@ span.country-label {
         margin-bottom: 7px;
     } 
 
-    #site-logo {
+   /* #site-logo {
         height: 36px !important;
         background-size: contain !important;
         position: absolute;
@@ -1819,7 +1812,7 @@ span.country-label {
     }
     #block-menu-menu-contribute {
         display: none;  
-    }
+    } */
     .cdi-header-wrapper {
         padding: 4% 0;
     }
@@ -1838,7 +1831,7 @@ span.country-label {
         top: 7px;
     }
     .mainNav.stick-to-top {
-        top: 0px;
+        top: 70px;
     }
     #new_cdi #home-cdi {
         width: 99%;

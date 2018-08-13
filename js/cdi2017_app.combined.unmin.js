@@ -1813,8 +1813,8 @@ cdiApp.mainNav.View = Backbone.View.extend({
         $(window).scroll(function(){
 
             el = document.getElementById('cdi-mainNav');
-            var extra = $('body').width() > 739 ? 31 : $('body').width() > 739 ? 36 : $('body').width() > 539 ? 58 : 35;
-            var scrollPoint = $('#section-header').height() + $('.cdi-header-wrapper').height() + extra;
+            var extra = $('body').width() > 1219 ? 210 : $('body').width() > 1024 ? 207 : $('body').width() > 739 ? 145 : 50  ;
+            var scrollPoint = $('.cdi-header-wrapper').height() + extra;
 
 
             
