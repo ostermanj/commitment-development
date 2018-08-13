@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CDI Trends Maker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.min.js"></script>
+    <style>
+        body {
+           width: 100%;
+            max-width: 750px;
+            margin: 10px auto; 
+        }
+        textarea {
+            width: 100%;
+            font-size: 14px;
+            height: 400px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h2>Trends data</h2>
+    <textarea id="trends-result-wrapper"></textarea>
+    <h2>Subindicators</h2>
+    <textarea id="indicators-result-wrapper"></textarea>
+    <h2>Main components</h2>
+    <textarea id="main-result-wrapper"></textarea>
+    <script>
+    
+    const trendsPromises = [],
+        indicPromises = [],
+        minYear = 2003,
+        maxYear = 2018,
+        sheetID = '1moTvKNuWzkyf1MmRw92h3-GEkkdt6gU4OQn6ZkLGa4o',
+        sheetComponents = ['CDI_AID', 'CDI_TRA', 'CDI_INV', 'CDI_MIG', 'CDI_ENV', 'CDI_SEC', 'CDI_TEC'];
+
+    function returnKeyValues(values, rollup){ 
+        return values.slice(1).map(row => row.reduce(function(acc, cur, i) { // 1. params: total, currentValue, currentIndex[, arr]
+          acc[values[0][i]] = isNaN(+cur) ? cur : +cur; // 3. // acc is an object , key is corresponding value from row 0, value is current value of array
+          if ( rollup ) {
+            acc.rollup = rollup;
+          }
+          return acc;
+        }, {}));
+    }
+
+    function formatCode(code) {
+        return code.replace(/<vs/g,'\n<vs')
+                    .replace(/<v /g,'\n    <v ')
+                    .replace(/<\/vs/g, '\n</vs')
+                    .replace(/^\n/,'');
+    }
+
+
+/*
+ * METADATA
+ */
+
+ var metadataPromise = new Promise(function(resolve, reject){
+    d3.json('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/metadata?key=AIzaSyDD3W5wJeJF2esffZMQxNtEl9tt-OfgSq4', function (error,data){ 
+        if ( error ) throw error;
+        var values = data.values;
+        resolve(returnKeyValues(values));
+    });
+ })
+
+
+
+/*
+ * TRENDS
+ */
+
+    for (let year = minYear; year < ( maxYear + 1 ); year++ ){
+        var promise = new Promise(function(resolve,reject){
+            d3.json('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/' + year + '!A:I?key=AIzaSyDD3W5wJeJF2esffZMQxNtEl9tt-OfgSq4', function (error,data){ // columns A through I
+                if (error) throw error;
+                var values = data.values;
+                resolve(returnKeyValues(values, year));
+            });
+        });
+        trendsPromises.push(promise);
+
+    }
+
+    var trendsPromiseAll = Promise.all(trendsPromises);
+
+    trendsPromiseAll.then(values => {
+        
+        trendsCreateXML(nest(combineValues(values)));
+    });
+
+    function nest(values) {
+        return d3.nest()
+          .key(function(d) { return d.rollup; })
+          .entries(values);
+    }
+
+    function combineValues(values){
+        return values.reduce(function(acc, cur){
+            acc = acc.concat(cur);
+            return acc;
+        },[]);
+    }
+
+    function trendsCreateXML(nested){
+        var components = sheetComponents;
+        var container = document.createElement('div');
+        components.push('CDI');
+        nested.forEach(year => {
+            sheetComponents.forEach(component => { // each year-component gets a <vs>
+                var vs = document.createElement('vs');
+                vs.setAttribute('y',year.key);
+                vs.setAttribute('r','LMY');
+                vs.setAttribute('i',component);
+                year.values.forEach(row =>{ 
+                    var v = document.createElement('v');
+                    v.setAttribute('c',row.country_code);
+                    v.setAttribute('score',row[component]);
+                    vs.appendChild(v);
+                });
+                container.appendChild(vs);
+            });
+        });
+    document.getElementById('trends-result-wrapper').value = formatCode(container.innerHTML);
+    }
+
+    /*
+     * END TRENDS
+     */
+
+    /* 
+     * INDICATORS
+     */
+
+     metadataPromise.then(values => {
+        processIndicators(values);
+     });
+
+     function processIndicators(metadata) {
+console.log(metadata);
+
+         sheetComponents.forEach(component => {
+            var promise = new Promise(function(resolve,reject){
+                d3.json('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/' + component + '?key=AIzaSyDD3W5wJeJF2esffZMQxNtEl9tt-OfgSq4', function (error,data){ // columns A through I
+                    if (error) throw error;
+                    var values = data.values;
+                    resolve(returnKeyValues(values, component));
+                });
+            });
+            indicPromises.push(promise);
+         });
+
+         Promise.all(indicPromises).then(values => {
+            indicCreateXML(nest(combineValues(values)));
+         });
+    /*  from
+        {country_code: "AUS", AID_QNT: 0.25, AID_QLT_EFF: -0.26, AID_QLT_FST: -0.33, AID_QLT_BRD: -0.06, …}
+        {country_code: "AUT", AID_QNT: 0.41, AID_QLT_EFF: -0.23, AID_QLT_FST: -0.8, AID_QLT_BRD: -0.05, …}
+        {country_code: "BEL", AID_QNT: 0.49, AID_QLT_EFF: 0.1, AID_QLT_FST: -0.69, AID_QLT_BRD: -0.56, …} 
+
+        to
+
+        <vs y='2017' r='LMY' i='AID_QLT_EFF'>
+          <v c='AUS' value='-0.260255868'/>
+          <v c='AUT' value='-0.229182348'/>
+          <v c='BEL' value='0.101754743'/>
+          <v c='CAN' value='0.156746539'/>*/
+
+
+         function indicCreateXML(nested) {
+            console.log(nested);
+            var container = document.createElement('div');
+                   
+            nested.forEach((component) => { // ie each 7 main components
+                console.log(component);
+                var subindicators = [];
+                Object.keys(component.values[0]).forEach(eachKey => {
+                    if ( eachKey !== 'country_code' && eachKey !== 'rollup' && subindicators.indexOf(eachKey) === -1 ) {
+                        subindicators.push(eachKey);
+                    }
+                });
+                console.log(subindicators);
+                subindicators.forEach(subIndic => {
+                    var vs = document.createElement('vs');
+                    vs.setAttribute('y',maxYear);
+                    vs.setAttribute('r','LMY');
+                    vs.setAttribute('i', subIndic);
+                    var metaDataMatches = metadata.filter(function(each){
+                        return each.component === subIndic;
+                    });
+                    metaDataMatches.forEach(each => {
+                        vs.setAttribute(each.attribute, each.value);
+                    })
+                    component.values.forEach(row => {
+                        var v = document.createElement('v');
+                        v.setAttribute('c', row.country_code);
+                        v.setAttribute('value', row[subIndic]);
+                        if ( isNaN(row[subIndic]) ) {
+                            v.setAttribute('isNull','true');
+                        }
+                        vs.appendChild(v);
+                    });
+                    container.appendChild(vs);
+                });
+            });
+            document.getElementById('indicators-result-wrapper').value = formatCode(container.innerHTML);
+         }
+     }
+
+     /*
+      * CURRENT YEAR'S WEIGHTED MAIN COMPONENTS
+      */
+
+    var weightedPromise = new Promise(function(resolve,reject){
+        d3.json('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/' + maxYear + '!M:T?key=AIzaSyDD3W5wJeJF2esffZMQxNtEl9tt-OfgSq4', function (error,data){ // columns M through T
+            if (error) throw error;
+            var values = data.values;
+            resolve(returnKeyValues(values));
+        });
+    });
+
+    Promise.all([weightedPromise, trendsPromiseAll]).then(values => {
+        console.log(values); // array of 2 arrays
+        var weighted = values[0];
+        var unweighted = values[1];
+        var lastYearIndex = unweighted.length - 1;
+        var container = document.createElement('div');
+        sheetComponents.forEach(component => { // each year-component gets a <vs>
+            var vs = document.createElement('vs');
+            vs.setAttribute('y', maxYear);
+            vs.setAttribute('r','LMY');
+            vs.setAttribute('i',component);
+            unweighted[lastYearIndex].forEach(row =>{
+
+                var correspondingWeightObj = weighted.find(function(each){
+                    return each.country_code === row.country_code;
+                });
+                console.log(correspondingWeightObj);
+                var v = document.createElement('v');
+                v.setAttribute('c',row.country_code);
+                v.setAttribute('score',row[component]);
+                if (correspondingWeightObj[component] !== undefined ){
+                    v.setAttribute('weighted', correspondingWeightObj[component]);
+                }
+                vs.appendChild(v);
+            });
+            container.appendChild(vs);
+        });
+        document.getElementById('main-result-wrapper').value = formatCode(container.innerHTML);
+
+    })
+
+    </script>
+</body>
+</html>

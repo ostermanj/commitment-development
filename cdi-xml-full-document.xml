@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf8' ?>
-<data year='2017'>
+<data year='2018'>
 
    <label code='EU_COUNTRIES' lang='EN'><![CDATA[AUT, BEL, CHE, CZE,DNK,FIN,FRA,DEU,GRC,HUN,IRL,ITA, LUX,NLD, NOR, POL,PRT,SVK, ESP,SWE, GBR]]></label>
    <country code='AUT' lang='EN'><![CDATA[Austria]]></country>
@@ -134,6 +134,7 @@
                  <unit lang='EN'><![CDATA[Score]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <description lang='EN'><![CDATA[
+                  <p>UPDATE TO COME </p>
                   <p>
                       The quality of foreign aid is hard to define and therefore hard to measure
                       – donors and recipients have distinct understandings of what comprises
@@ -152,158 +153,42 @@
                   </p>
                   ]]></description>
                  <hierarchy>
-                    <indicator code='AID_QLT_EFF' level='4'>
-                       <label lang='EN'><![CDATA[Maximizing efficiency]]></label>
-                       <shortlabel lang='EN'><![CDATA[Maximizing efficiency]]></shortlabel>
+                    <indicator code='AID_QLT_MUL' level='4'>
+                       <label lang='EN'><![CDATA[Multilateral Aid Quality]]></label>
+                       <shortlabel lang='EN'><![CDATA[Multilateral Aid Quality]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[<p>
-                              This category of indicators emphasizes the effect of development assistance
-                              on poverty reduction. While donors have their own objectives in giving aid,
-                              this measure of aid quality aims to assess each donor's aid against a
-                              global standard of how to best achieve sustainable growth.
+                              DESCRIPTION TO COME
                           </p>
-                          <p>The category includes eight indicators:</p>
-                          <ol>
-                          <li>
-                              Share of allocation to poor countries
-                          </li>
-                          <li>
-                              Share of allocation to well-governed countries
-                          </li>
-                          <li>
-                              Low unit administrative costs
-                          </li>
-                          <li>
-                              High country programmable aid share
-                          </li>
-                          <li>
-                              Focus/specialization by recipient country
-                          </li>
-                          <li>
-                              Focus/specialization by sector
-                          </li>
-                          <li>
-                              Support of select global public goods facilities
-                          </li>
-                          <li>
-                              Share of untied aid
-                          </li>
-                          </ol>
-                          <p>For more information of this dimension, please consult the <a href="https://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
+                          ]]>
                        </description>
                     </indicator>
-                    <indicator code='AID_QLT_FST' level='4'>
-                       <label lang='EN'><![CDATA[Fostering institutions]]></label>
-                       <shortlabel lang='EN'><![CDATA[Fostering institutions]]></shortlabel>
+                    <indicator code='AID_QLT_BI' level='4'>
+                       <label lang='EN'><![CDATA[Bilateral Aid Quality]]></label>
+                       <shortlabel lang='EN'><![CDATA[Bilateral Aid Quality]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p> Fostering local institutions is essential for any intervention aiming to
-                          achieve long-term impact. When aid passes through partner country
-                          institutions, it is more likely to be "owned" by the partner and
-                          development is more likely to be sustainable. The fostering institutions
-                          dimension highlights the importance of institutions in achieving growth and
-                          poverty reduction.</p>
-                          <p>The category includes eight indicators:</p>
-                          <ol>
-                          <li>
-                              Share of aid to recipients’ top development priorities
-                          </li>
-                          <li>
-                              Avoidance of project implementation units
-                          </li>
-                          <li>
-                              Share of aid recorded in recipient budgets
-                          </li>
-                          <li>
-                              Share of aid to partners with good operational strategies
-                          </li>
-                          <li>
-                              Use of recipient country systems
-                          </li>
-                          <li>
-                              Share of scheduled aid recorded as received by recipients
-                          </li>
-                          <li>
-                              Coordination of technical cooperation
-                          </li>
-                          <li>
-                              Coverage of forward spending plans/Aid predictability
-                          </li>
-                          </ol>
-                          <p>For more information of this dimension, please consult the <a href="https://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
+                          <![CDATA[<p>
+                            DESCRIPTION TO COME
+                          </p> ]]>
                        </description>
                     </indicator>
 
-                    <indicator code='AID_QLT_BRD' level='4'>
-                       <label lang='EN'><![CDATA[Reducing burden]]></label>
-                       <shortlabel lang='EN'><![CDATA[Reducing burden]]></shortlabel>
+                    <indicator code='AID_QLT_MUL_W' level='4'>
+                       <label lang='EN'><![CDATA[Multilateral Aid Share]]></label>
+                       <shortlabel lang='EN'><![CDATA[Multilateral Aid Share]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>Reducing Burden recognizes that the administrative burdens placed on
-                          partner countries make aid less effective. A high number of projects and
-                          small project sizes create a burden of increased reporting and monitoring
-                          requirements on partner governments.</p>
-                          <p>The category includes seven indicators:</p>
-                          <ol>
-                          <li>
-                              Significance of aid relationships
-                          </li>
-                          <li>
-                              Fragmentation across donor agencies
-                          </li>
-                          <li>
-                              Median project size
-                          </li>
-                          <li>
-                              Contribution to multilaterals
-                          </li>
-                          <li>
-                              Coordinated missions
-                          </li>
-                          <li>
-                              Use of programmatic aid
-                          </li>
-                          <li>
-                              Coordinated analytical work
-                          </li>
-                          </ol>
-                          <p>For more information of this dimension, please consult the <a href="https://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p> ]]>
+                          <![CDATA[<p>
+                              The share of the country's aid that is delivered through multilateral channels. The multilateral aid quality score's contribution to the total aid quality score is weighted by this factor.
+                        </p> ]]>
                        </description>
                     </indicator>
-                    <indicator code='AID_QLT_TRA' level='4'>
-                       <label lang='EN'><![CDATA[Transparency and learning]]></label>
-                       <shortlabel lang='EN'><![CDATA[Transparency and learning]]></shortlabel>
+                    <indicator code='AID_QLT_BI_W' level='4'>
+                       <label lang='EN'><![CDATA[Bilateral Aid Share]]></label>
+                       <shortlabel lang='EN'><![CDATA[Bilateral Aid Share]]></shortlabel>
                        <description lang='EN'>
-                            <![CDATA[<p>Transparency and Learning reflects the importance of providing timely and
-                          comparative information about aid spending. Sharing timely information
-                          enables donors to coordinate better with other donors and with recipient
-                          countries, to improve their planning, and to learn from actual experience.</p>
-                          <p>The category includes eight indicators:</p>
-                          <ol>
-                          <li>
-                              Signatory of International Aid Transparency Initiative (IATI)
-                          </li>
-                          <li>
-                              Implementation of IATI data reporting standards
-                          </li>
-                          <li>
-                              Recording of project title and description
-                          </li>
-                          <li>
-                              Detail of project description
-                          </li>
-                          <li>
-                              Reporting of aid delivery channel
-                          </li>
-                          <li>
-                              Quality of main agency evaluation policy
-                          </li>
-                          <li>
-                              Completeness of project level commitment data
-                          </li>
-                          <li>
-                              Aid to partners with good monitoring &amp; evaluation frameworks
-                          </li>
-                          </ol>
-                          <p>For more information of this dimension, please consult the <a href="https://www.cgdev.org/userfiles/quoda/QuODA%20Second%20Edition%20Report.pdf">QuODA report</a>.</p>]]>
+                          <![CDATA[<p>
+                              The share of the country's aid that is delivered through bilateral channels. The bilateral aid quality score's contribution to the total aid quality score is weighted by this factor.
+                        </p> ]]>
                        </description>
                     </indicator>
                  </hierarchy>
@@ -536,6 +421,9 @@
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <description><![CDATA[
                   <p>
+                    UPDATE TO COME
+                  </p>
+                  <p>
                     The Financial Secrecy subcomponent of the CDI is based on the Financial
                     Secrecy Index (FSI). The FSI is published biannually by Tax Justice
                     Network. It uses a combination of qualitative and quantitative data to
@@ -574,7 +462,11 @@
                        <label lang='EN'><![CDATA[Limiting banking secrecy]]></label>
                        <shortlabel lang='EN'><![CDATA[Limiting banking secrecy]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[This indicator assesses whether a jurisdiction enables banking secrecy;
+                          <![CDATA[
+                          <p>
+                              UPDATE TO COME
+                          </p>
+                          <p>  This indicator assesses whether a jurisdiction enables banking secrecy;
                               absence or inaccessibility of banking information is considered a form of
                               banking secrecy. For a country to obtain a full score on this indicator,
                               the jurisdiction must ensure that banking data exists, and that it has
@@ -590,80 +482,21 @@
                           </p>]]>
                        </description>
                     </indicator>
-                    <indicator code='INV_SEC_TFR' level='4'>
-                       <label lang='EN'><![CDATA[Trust and foundations register]]></label>
-                       <shortlabel lang='EN'><![CDATA[Trust and foundations register]]></shortlabel>
+                    <indicator code='INV_SEC_BEN' level='4'>
+                       <label lang='EN'><![CDATA[Beneficial ownership]]></label>
+                       <shortlabel lang='EN'><![CDATA[Beneficial ownership]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[<p>
-                            The indicator looks at whether a country has a central register all trusts
-                            (domestic as well as international with connections to the country), and
-                            all private foundations. The register should be publicly accessible via the
-                            internet at a cost not exceeding 10 €/US$. For further details on this
-                            indicator, please consult the
-                            <a href="http://www.financialsecrecyindex.com/methodology">
-                                Financial Secrecy Index Methodology
-                            </a>
-                            .
+                            DESCRIPTION TO COME
                         </p>]]>
-                       </description>
-                    </indicator>
-                    <indicator code='INV_SEC_RCO' level='4'>
-                       <label lang='EN'><![CDATA[Recorded company ownership]]></label>
-                       <shortlabel lang='EN'><![CDATA[Recorded company ownership]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[<p>
-                            This indicator assesses whether a country requires all available types of
-                            companies to submit beneficial ownership information upon incorporation to
-                            a governmental authority, and whether it requires this information to be
-                            updated upon any event or action which changes beneficial ownership
-                            information, regardless of if this information is made available on public
-                            record. To receive a full credit on this indicator, registered ownership
-                            information must comply with minimum requirements (listing the names,
-                            country of residence and a clear identifier such as full address, and/or
-                            date and place of birth, and/or Taxpayer Identification Number of each
-                            owner holding at least 10% ownership in the entity). Countries subject to
-                            the
-                            <a
-                                href="http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:JOL_2015_141_R_0003&amp;from=EN"
-                            >
-                                4th EU Directive on Anti-Money Laundering
-                            </a>
-                            receive 0.25 credits. For further details on this indicator, please consult
-                            the
-                            <a href="http://www.financialsecrecyindex.com/methodology">
-                                Financial Secrecy Index Methodology
-                            </a>
-                            .
-                        </p>]]>
-                       </description>
-                    </indicator>
-                    <indicator code='INV_SEC_PCO' level='4'>
-                       <label lang='EN'><![CDATA[ Public company ownership]]></label>
-                       <shortlabel lang='EN'><![CDATA[ Public company ownership]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[<p>
-                            The indicator considers whether a country requires all available types of
-                            company with limited liability to publish updated beneficial ownership or
-                            legal ownership information on public records accessible for free via the
-                            internet. If beneficial ownership information is published for free, a full
-                            transparency credit is awarded. If there is a fixed cost for accessing the
-                            data not exceeding US$10, €10 or £10, only half the credit (0.5) is
-                            awarded. If only legal ownership information is available for all types of
-                            company for free, a 0.2 transparency credit is awarded. If access to legal
-                            ownership data entails a cost not exceeding US$10, €10 or £10, a 0.1 credit
-                            is awarded. For further details on this indicator, please consult the
-                            <a href="http://www.financialsecrecyindex.com/methodology">
-                                Financial Secrecy Index Methodology
-                            </a>
-                            .
-                        </p> ]]>
                        </description>
                     </indicator>
                     <indicator code='INV_SEC_PCA' level='4'>
-                       <label lang='EN'><![CDATA[Public company accounts]]></label>
-                       <shortlabel lang='EN'><![CDATA[Public company accounts]]></shortlabel>
+                       <label lang='EN'><![CDATA[Public statistics]]></label>
+                       <shortlabel lang='EN'><![CDATA[Public statistics]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>
+                          <![CDATA[<p>UPDATE TO COME </p>
+                          <p>
                             The indicator assesses whether a country requires all types of companies
                             with limited liability to file their annual accounts and makes them readily
                             accessible online via the internet for free (full credit) or at a maximum
@@ -681,6 +514,9 @@
                        <shortlabel lang='EN'><![CDATA[ Country-by-country Reporting]]></shortlabel>
                        <description lang='EN'>
                           <![CDATA[<p>
+                          UPDATE TO COME
+                        </p>
+                        <p>
                           The indicator measures whether the companies listed on the stock exchanges
                           or incorporated in a given country are required to publish worldwide
                           financial reporting data on a
@@ -705,106 +541,13 @@
                       </p>]]>
                        </description>
                     </indicator>
-                    <indicator code='INV_SEC_FIE' level='4'>
-                       <label lang='EN'><![CDATA[Fit for information exchange]]></label>
-                       <shortlabel lang='EN'><![CDATA[Fit for information exchange]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[<p>
-                            This indicator assesses whether resident paying agents (such as joint stock
-                            companies and financial institutions) are required to report to the
-                            domestic tax administration information on all payments (of dividends and
-                            interest) to all non-residents, without exceptions. Scoring is established
-                            as follows: 0 points for no reporting, 0.5 point for reporting dividends or
-                            interest, 1 point for reporting both interest and dividends. For further
-                            details on this indicator, please consult the
-                            <a href="http://www.financialsecrecyindex.com/methodology">
-                                Financial Secrecy Index Methodology
-                            </a>
-                            .
-                        </p>]]>
-                       </description>
-                    </indicator>
-                    <indicator code='INV_SEC_ETA' level='4'>
-                       <label lang='EN'><![CDATA[Efficiency of tax administration]]></label>
-                       <shortlabel lang='EN'><![CDATA[Efficiency of tax administration]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[<p>
-                          This indicator looks at whether the tax administration of a given country
-                          uses taxpayer identifiers for efficiently analyzing information, and
-                          whether the tax administration has a dedicated unit for large taxpayers.
-                          Specifically, the indicator assesses whether the tax administration makes
-                          use of taxpayer identifiers for matching information reported by a)
-                          financial institutions on interest payments and b) by companies on dividend
-                          payments. In each case, where the tax administration uses taxpayer
-                          identifiers for information matching, it receives 0.4 credit points. A
-                          further 0.2 credit is awarded when the tax authority is equipped with a
-                          large taxpayer unit. For further details on this indicator, please consult
-                          the
-                          <a href="http://www.financialsecrecyindex.com/methodology">
-                              Financial Secrecy Index Methodology
-                          </a>
-                          .
-                      </p>]]>
-                       </description>
-                    </indicator>
-                    <indicator code='INV_SEC_AVO' level='4'>
-                       <label lang='EN'><![CDATA[Avoids promoting tax evasion]]></label>
-                       <shortlabel lang='EN'><![CDATA[Avoids promoting tax evasion]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[
-                          <p>
-                              The indicator evaluates whether a country includes worldwide capital income
-                              in its income tax base and if it grants unilateral tax credits for foreign
-                              tax paid on certain foreign capital income. The types of capital income
-                              included are interest and dividend payments. Three different payment
-                              scenarios are considered. First, payments received by an independent legal
-                              person. Second, payments received by a related party legal person. Third,
-                              payments received by a natural person. A 50% transparency score is awarded
-                              for jurisdictions which grant unilateral tax credits for all payment
-                              scenarios for one type of payment (dividend or interest). If unilateral tax
-                              credits are granted only in some payment scenarios, for each single payment
-                              scenario with a tax credit, a 10% transparency score is awarded. No points
-                              are awarded where a jurisdiction effectively exempts foreign income from
-                              domestic taxation. For further details on this indicator, please consult
-                              the
-                              <a href="http://www.financialsecrecyindex.com/methodology">
-                                  Financial Secrecy Index Methodology
-                              </a>
-                              .
-                          </p>
-                          ]]>
-                       </description>
-                    </indicator>
-                    <indicator code='INV_SEC_HLV' level='4'>
-                       <label lang='EN'><![CDATA[Restricting harmful legal vehicles]]></label>
-                       <shortlabel lang='EN'><![CDATA[Restricting harmful legal vehicles]]></shortlabel>
-                       <description lang='EN'><![CDATA[<p>
-                        This indicator assesses to what extent countries enable secrecy within
-                        companies. Firstly, it looks at whether a jurisdiction allows the creation
-                        of “series limited liability companies (Series LLCs)” and/or “protected
-                        cell companies” (PCC) in its territory. Secondly, it measures whether the
-                        administration of trusts with flee clauses is prohibited. Protected Cell
-                        Companies are a rare type of corporate entity found almost exclusively in
-                        secrecy jurisdictions. Essentially a PCC is a legal entity that contains
-                        within itself, but not legally distinct from it, several cells which behave
-                        as if they are companies in their own right, but are not. Series LLCs serve
-                        the same purpose as PCCs. A flee clause enables trusts to change its
-                        location if a disadvantageous event, such as the breakdown of law and order
-                        and/or the imposition of taxation in the place where they are located
-                        occurs. For further details on this indicator, please consult the
-                        <a href="http://www.financialsecrecyindex.com/methodology">
-                            Financial Secrecy Index Methodology
-                        </a>
-                        .
-                        </p>]]>
-                      </description>
-                    </indicator>
                     <indicator code='INV_SEC_AML' level='4'>
                        <label lang='EN'><![CDATA[Anti–money laundering]]></label>
                        <shortlabel lang='EN'><![CDATA[Anti–money laundering]]></shortlabel>
                         <description lang='EN'>
                         <![CDATA[<p>
-                            This indicator examines the extent to which the anti-money laundering
+                        <p> UPDATE TO COME</p>
+                            <p>This indicator examines the extent to which the anti-money laundering
                         regime of a country is considered effective by the    <a href="http://www.fatf-gafi.org/">Financial Action Task Force (FATF)</a>,
                             the international body dedicated to tackle money laundering. The assessment
                             is based on peer-reviews evaluating the implementation of
@@ -837,7 +580,9 @@
                        <label lang='EN'><![CDATA[Automatic information exchange]]></label>
                        <shortlabel lang='EN'><![CDATA[Automatic information exchange]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>
+                          <![CDATA[
+                          <p>UPDATE TO COME </p>
+                          <p>
                             The indicator assesses whether a country signed the
                             <a
                                 href="http://www.oecd.org/tax/exchange-of-tax-information/multilateral-competent-authority-agreement.htm"
@@ -868,7 +613,9 @@
                        <label lang='EN'><![CDATA[ Bilateral treaties]]></label>
                        <shortlabel lang='EN'><![CDATA[ Bilateral treaties]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>
+                          <![CDATA[
+                          <p>UPDATE TO COME </p>
+                          <p>
                             The indicator assesses the extent to which a jurisdiction has signed and
                             ratified bilateral treaties conforming to the ‘upon request’ information
                             exchange standard developed by the OECD and the Global Forum with 53 other
@@ -893,70 +640,13 @@
                         </p>]]>
                        </description>
                     </indicator>
-                    <indicator code='INV_SEC_ITC' level='4'>
-                       <label lang='EN'><![CDATA[International transparency commitments]]></label>
-                       <shortlabel lang='EN'><![CDATA[International transparency commitments]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[<p>
-                              The indicator measures the extent to which a jurisdiction has taken on
-                              international transparency commitments. Participation in five international
-                              conventions is assessed and a score of 0.2 points is awarded for each of
-                              the conventions adhered to by a jurisdiction. These five conventions are:
-                          </p>
-                          <ol>
-                          <li>
-                              
-                              <a
-                                  href="http://www.oecd.org/tax/exchange-of-tax-information/conventiononmutualadministrativeassistanceintaxmatters.htm"
-                              >
-                                  Amended Council of Europe / OECD Convention on Mutual Administrative
-                                  Assistance in Tax Matters
-                              </a>
-                          </li>
-                          <li>
-                              
-                              <a href="http://www.unodc.org/unodc/en/treaties/CAC/index.html">
-                                  2003 UN Convention against Corruption
-                              </a>
-                          </li>
-                          <li>
-                              
-                              <a href="http://www.unodc.org/unodc/en/treaties/illicit-trafficking.html">
-                                  1988 UN Convention against Illicit Traffic in Narcotic Drugs and
-                                  Psychotropic Substances
-                              </a>
-                          </li>
-                          <li>
-                              
-                              <a href="http://www.un.org/law/cod/finterr.htm">
-                                  1999 UN International Convention for the Suppression of the Financing
-                                  of Terrorism
-                              </a>
-                          </li>
-                          <li>
-                              
-                              <a
-                                  href="https://www.unodc.org/documents/middleeastandnorthafrica/organised-crime/UNITED_NATIONS_CONVENTION_AGAINST_TRANSNATIONAL_ORGANIZED_CRIME_AND_THE_PROTOCOLS_THERETO.pdf"
-                              >
-                                  2000 UN Convention against Transnational Organised Crime
-                              </a>
-                          </li>
-                          <p>
-                              For further details on this indicator, please consult the
-                              <a href="http://www.financialsecrecyindex.com/methodology">
-                                  Financial Secrecy Index Methodology
-                              </a>
-                              .
-                          </p>
-                          </ol>
-                         ]]>
-                       </description>
-                    </indicator>
                     <indicator code='INV_SEC_IJC' level='4'>
-                       <label lang='EN'><![CDATA[International judicial cooperation]]></label>
-                       <shortlabel lang='EN'><![CDATA[International judicial cooperation]]></shortlabel>
+                       <label lang='EN'><![CDATA[International legal cooperation]]></label>
+                       <shortlabel lang='EN'><![CDATA[International legal cooperation]]></shortlabel>
                        <description lang='EN'>
-                          <![CDATA[<p>
+                          <![CDATA[
+                            <p>UPDATE TO COME </p>
+                          <p>
                             The indicator measures the degree to which a country engages in
                             international judicial cooperation on money laundering and other criminal
                             matters. The indicator assesses the level of country’s compliance with the
@@ -975,22 +665,6 @@
                                 Financial Secrecy Index Methodology
                             </a>
                             .
-                        </p>]]>
-                       </description>
-                    </indicator>
-                    <indicator code='INV_SEC_ASC' level='4'>
-                       <label lang='EN'><![CDATA[ Preventing secrecy within a country's sphere of influence score]]></label>
-                       <shortlabel lang='EN'><![CDATA[ Preventing secrecy within a country's sphere of influence score]]></shortlabel>
-                       <description lang='EN'>
-                          <![CDATA[<p>
-                            This indicator takes into account whether a country contributes to enabling
-                            financial secrecy indirectly, via jurisdictions which are within a
-                            country’s sphere of influence. For example, the UK crown dependencies and
-                            the Dutch constituent countries all score poorly on the financial secrecy
-                            index, so does the US Virgin Islands. Countries receive 1 point if no such
-                            jurisdictions exist within their sphere of influence and 0 points if they
-                            do. This indicator was developed by CGD in cooperation with the Tax Justice
-                            Network and is not part of the FSI.
                         </p>]]>
                        </description>
                     </indicator>
@@ -1638,10 +1312,12 @@
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <hierarchy>
                         <indicator code='TRA_TAR' level='4'>
-                           <label lang='EN'><![CDATA[Reducing tariffs]]></label>
-                           <shortlabel lang='EN'><![CDATA[Reducing tariffs]]></shortlabel>
+                           <label lang='EN'><![CDATA[Lower-income-weighted tariffs]]></label>
+                           <shortlabel lang='EN'><![CDATA[Lower-income-weighted tariffs]]></shortlabel>
                            <description lang='EN'>
-                              <![CDATA[<p>
+                              <![CDATA[
+                              <p>UPDATE TO COME </p>
+                              <p>
                               This indicator assesses ad valorem equivalent of duties on imports from
                               developing countries. We use Global Trade Analysis Project data from ITC’s
                               <a
@@ -1680,16 +1356,11 @@
                            </description>
                         </indicator>
                         <indicator code='TRA_IMP' level='4'>
-                           <label lang='EN'><![CDATA[Reducing regulatory impediments to imports ]]></label>
-                           <shortlabel lang='EN'><![CDATA[Reducing regulatory impediments to imports ]]></shortlabel>
+                           <label lang='EN'><![CDATA[Logistics performance ]]></label>
+                           <shortlabel lang='EN'><![CDATA[Logistics performance ]]></shortlabel>
                            <description lang='EN'>
                               <![CDATA[<p>
-                                  The indicator assesses regulatory burden that countries face when trading
-                              across borders. Three indicators from the    <a href="http://www.doingbusiness.org/">Doing Business Database</a>
-                                  published by the World Bank are included: number of documents a country
-                                  requires to import a container, number of days it takes to import a
-                                  container and costs for importing a container. The indicator has 25% weight
-                                  in the trade component.
+                                  DESCRIPTION TO COME
                               </p>]]>
                            </description>
                         </indicator>
@@ -5370,32 +5041,264 @@
 </vs>
 <vs y="2017" r="LMY" i="CDI">
     <v c="AUS" score="4.88"></v>
-    <v c="AUT" score="5.09"></v>
-    <v c="BEL" score="4.98"></v>
-    <v c="CAN" score="4.95"></v>
-    <v c="CZE" score="4.78"></v>
-    <v c="DNK" score="5.71"></v>
-    <v c="FIN" score="5.42"></v>
+    <v c="AUT" score="5.091"></v>
+    <v c="BEL" score="4.985"></v>
+    <v c="CAN" score="4.946"></v>
+    <v c="CZE" score="4.779"></v>
+    <v c="DNK" score="5.712"></v>
+    <v c="FIN" score="5.422"></v>
     <v c="FRA" score="5.32"></v>
-    <v c="DEU" score="5.27"></v>
-    <v c="GRC" score="4.57"></v>
-    <v c="HUN" score="4.78"></v>
-    <v c="IRL" score="4.98"></v>
-    <v c="ITA" score="5.01"></v>
-    <v c="JPN" score="4.55"></v>
-    <v c="LUX" score="5.03"></v>
-    <v c="NLD" score="5.21"></v>
-    <v c="NZL" score="5.12"></v>
-    <v c="NOR" score="5.19"></v>
+    <v c="DEU" score="5.274"></v>
+    <v c="GRC" score="4.572"></v>
+    <v c="HUN" score="4.782"></v>
+    <v c="IRL" score="4.979"></v>
+    <v c="ITA" score="5.008"></v>
+    <v c="JPN" score="4.553"></v>
+    <v c="LUX" score="5.025"></v>
+    <v c="NLD" score="5.214"></v>
+    <v c="NZL" score="5.117"></v>
+    <v c="NOR" score="5.192"></v>
     <v c="POL" score="4.66"></v>
-    <v c="PRT" score="5.22"></v>
-    <v c="SVK" score="4.71"></v>
-    <v c="KOR" score="4.48"></v>
-    <v c="ESP" score="5.05"></v>
+    <v c="PRT" score="5.223"></v>
+    <v c="SVK" score="4.712"></v>
+    <v c="KOR" score="4.482"></v>
+    <v c="ESP" score="5.052"></v>
+    <v c="SWE" score="5.492"></v>
+    <v c="CHE" score="4.622"></v>
+    <v c="GBR" score="5.212"></v>
+    <v c="USA" score="4.628"></v>
+</vs>
+<vs y="2018" r="LMY" i="CDI_AID">
+    <v c="AUS" score="5.36"></v>
+    <v c="AUT" score="4.76"></v>
+    <v c="BEL" score="5.13"></v>
+    <v c="CAN" score="5.37"></v>
+    <v c="CZE" score="4.41"></v>
+    <v c="DNK" score="6.42"></v>
+    <v c="FIN" score="5.06"></v>
+    <v c="FRA" score="4.97"></v>
+    <v c="DEU" score="4.65"></v>
+    <v c="GRC" score="4.15"></v>
+    <v c="HUN" score="4.32"></v>
+    <v c="IRL" score="5.13"></v>
+    <v c="ITA" score="4.45"></v>
+    <v c="JPN" score="4.89"></v>
+    <v c="LUX" score="6.52"></v>
+    <v c="NLD" score="5.57"></v>
+    <v c="NZL" score="6.12"></v>
+    <v c="NOR" score="5.4"></v>
+    <v c="POL" score="4.38"></v>
+    <v c="PRT" score="4.92"></v>
+    <v c="SVK" score="4.36"></v>
+    <v c="KOR" score="4.27"></v>
+    <v c="ESP" score="4.02"></v>
+    <v c="SWE" score="6.36"></v>
+    <v c="CHE" score="4.61"></v>
+    <v c="GBR" score="5.43"></v>
+    <v c="USA" score="3.96"></v>
+</vs>
+<vs y="2018" r="LMY" i="CDI_TRA">
+    <v c="AUS" score="5.65"></v>
+    <v c="AUT" score="5.13"></v>
+    <v c="BEL" score="4.98"></v>
+    <v c="CAN" score="5.06"></v>
+    <v c="CZE" score="5.19"></v>
+    <v c="DNK" score="5.37"></v>
+    <v c="FIN" score="5.3"></v>
+    <v c="FRA" score="5.2"></v>
+    <v c="DEU" score="5.9"></v>
+    <v c="GRC" score="4.41"></v>
+    <v c="HUN" score="4.42"></v>
+    <v c="IRL" score="5.28"></v>
+    <v c="ITA" score="5"></v>
+    <v c="JPN" score="5.12"></v>
+    <v c="LUX" score="5.34"></v>
+    <v c="NLD" score="5.97"></v>
+    <v c="NZL" score="5.33"></v>
+    <v c="NOR" score="3.73"></v>
+    <v c="POL" score="4.45"></v>
+    <v c="PRT" score="4.8"></v>
+    <v c="SVK" score="4.76"></v>
+    <v c="KOR" score="3.17"></v>
+    <v c="ESP" score="5.12"></v>
     <v c="SWE" score="5.49"></v>
-    <v c="CHE" score="4.62"></v>
-    <v c="GBR" score="5.21"></v>
-    <v c="USA" score="4.63"></v>
+    <v c="CHE" score="3.87"></v>
+    <v c="GBR" score="5.64"></v>
+    <v c="USA" score="5.29"></v>
+</vs>
+<vs y="2018" r="LMY" i="CDI_INV">
+    <v c="AUS" score="5.51"></v>
+    <v c="AUT" score="4.68"></v>
+    <v c="BEL" score="5.77"></v>
+    <v c="CAN" score="5.52"></v>
+    <v c="CZE" score="4.85"></v>
+    <v c="DNK" score="4.79"></v>
+    <v c="FIN" score="5.53"></v>
+    <v c="FRA" score="5.64"></v>
+    <v c="DEU" score="5.23"></v>
+    <v c="GRC" score="4.3"></v>
+    <v c="HUN" score="4.83"></v>
+    <v c="IRL" score="5.52"></v>
+    <v c="ITA" score="5.73"></v>
+    <v c="JPN" score="4.05"></v>
+    <v c="LUX" score="4.68"></v>
+    <v c="NLD" score="5.03"></v>
+    <v c="NZL" score="4.24"></v>
+    <v c="NOR" score="5.45"></v>
+    <v c="POL" score="4.75"></v>
+    <v c="PRT" score="5.21"></v>
+    <v c="SVK" score="4.67"></v>
+    <v c="KOR" score="4.45"></v>
+    <v c="ESP" score="5.59"></v>
+    <v c="SWE" score="5.28"></v>
+    <v c="CHE" score="4.31"></v>
+    <v c="GBR" score="5.35"></v>
+    <v c="USA" score="4.03"></v>
+</vs>
+<vs y="2018" r="LMY" i="CDI_MIG">
+    <v c="AUS" score="5.4"></v>
+    <v c="AUT" score="5.35"></v>
+    <v c="BEL" score="5.29"></v>
+    <v c="CAN" score="5.42"></v>
+    <v c="CZE" score="4.1"></v>
+    <v c="DNK" score="4.82"></v>
+    <v c="FIN" score="5.03"></v>
+    <v c="FRA" score="4.86"></v>
+    <v c="DEU" score="6.05"></v>
+    <v c="GRC" score="4.38"></v>
+    <v c="HUN" score="4.15"></v>
+    <v c="IRL" score="4.29"></v>
+    <v c="ITA" score="5.19"></v>
+    <v c="JPN" score="4.12"></v>
+    <v c="LUX" score="5.9"></v>
+    <v c="NLD" score="5.22"></v>
+    <v c="NZL" score="5.93"></v>
+    <v c="NOR" score="5.57"></v>
+    <v c="POL" score="4.17"></v>
+    <v c="PRT" score="5.41"></v>
+    <v c="SVK" score="3.83"></v>
+    <v c="KOR" score="4.7"></v>
+    <v c="ESP" score="4.97"></v>
+    <v c="SWE" score="6.06"></v>
+    <v c="CHE" score="5.05"></v>
+    <v c="GBR" score="4.88"></v>
+    <v c="USA" score="4.88"></v>
+</vs>
+<vs y="2018" r="LMY" i="CDI_ENV">
+    <v c="AUS" score="4.19"></v>
+    <v c="AUT" score="5.11"></v>
+    <v c="BEL" score="5.28"></v>
+    <v c="CAN" score="4.51"></v>
+    <v c="CZE" score="5.29"></v>
+    <v c="DNK" score="5.25"></v>
+    <v c="FIN" score="5.28"></v>
+    <v c="FRA" score="5.26"></v>
+    <v c="DEU" score="5.2"></v>
+    <v c="GRC" score="4.95"></v>
+    <v c="HUN" score="5.39"></v>
+    <v c="IRL" score="4.72"></v>
+    <v c="ITA" score="5.32"></v>
+    <v c="JPN" score="4.11"></v>
+    <v c="LUX" score="4.93"></v>
+    <v c="NLD" score="5.1"></v>
+    <v c="NZL" score="4.85"></v>
+    <v c="NOR" score="4.72"></v>
+    <v c="POL" score="5.48"></v>
+    <v c="PRT" score="5.38"></v>
+    <v c="SVK" score="5.6"></v>
+    <v c="KOR" score="3.64"></v>
+    <v c="ESP" score="5.39"></v>
+    <v c="SWE" score="5.52"></v>
+    <v c="CHE" score="4.92"></v>
+    <v c="GBR" score="5.31"></v>
+    <v c="USA" score="4.3"></v>
+</vs>
+<vs y="2018" r="LMY" i="CDI_SEC">
+    <v c="AUS" score="4.9"></v>
+    <v c="AUT" score="5.4"></v>
+    <v c="BEL" score="4.73"></v>
+    <v c="CAN" score="4.48"></v>
+    <v c="CZE" score="4.65"></v>
+    <v c="DNK" score="6.6"></v>
+    <v c="FIN" score="5.82"></v>
+    <v c="FRA" score="5.48"></v>
+    <v c="DEU" score="4.89"></v>
+    <v c="GRC" score="4.26"></v>
+    <v c="HUN" score="5.24"></v>
+    <v c="IRL" score="5.09"></v>
+    <v c="ITA" score="5.02"></v>
+    <v c="JPN" score="4.16"></v>
+    <v c="LUX" score="5.48"></v>
+    <v c="NLD" score="5.15"></v>
+    <v c="NZL" score="4.61"></v>
+    <v c="NOR" score="5.08"></v>
+    <v c="POL" score="4.42"></v>
+    <v c="PRT" score="5"></v>
+    <v c="SVK" score="5.58"></v>
+    <v c="KOR" score="3.56"></v>
+    <v c="ESP" score="4.89"></v>
+    <v c="SWE" score="4.71"></v>
+    <v c="CHE" score="4.83"></v>
+    <v c="GBR" score="5.58"></v>
+    <v c="USA" score="5.39"></v>
+</vs>
+<vs y="2018" r="LMY" i="CDI_TEC">
+    <v c="AUS" score="4.75"></v>
+    <v c="AUT" score="5.76"></v>
+    <v c="BEL" score="5.17"></v>
+    <v c="CAN" score="5.04"></v>
+    <v c="CZE" score="5.09"></v>
+    <v c="DNK" score="5.33"></v>
+    <v c="FIN" score="5.13"></v>
+    <v c="FRA" score="5.43"></v>
+    <v c="DEU" score="5.32"></v>
+    <v c="GRC" score="4.3"></v>
+    <v c="HUN" score="4.28"></v>
+    <v c="IRL" score="4.11"></v>
+    <v c="ITA" score="4.36"></v>
+    <v c="JPN" score="5.53"></v>
+    <v c="LUX" score="4.55"></v>
+    <v c="NLD" score="5.19"></v>
+    <v c="NZL" score="4.92"></v>
+    <v c="NOR" score="6.07"></v>
+    <v c="POL" score="3.38"></v>
+    <v c="PRT" score="5.79"></v>
+    <v c="SVK" score="3.91"></v>
+    <v c="KOR" score="6.67"></v>
+    <v c="ESP" score="4.93"></v>
+    <v c="SWE" score="5.13"></v>
+    <v c="CHE" score="5.57"></v>
+    <v c="GBR" score="4.66"></v>
+    <v c="USA" score="4.59"></v>
+</vs>
+<vs y="2018" r="LMY" i="CDI">
+    <v c="AUS" score="5.08"></v>
+    <v c="AUT" score="5.16"></v>
+    <v c="BEL" score="5.21"></v>
+    <v c="CAN" score="5.03"></v>
+    <v c="CZE" score="4.82"></v>
+    <v c="DNK" score="5.48"></v>
+    <v c="FIN" score="5.32"></v>
+    <v c="FRA" score="5.28"></v>
+    <v c="DEU" score="5.32"></v>
+    <v c="GRC" score="4.42"></v>
+    <v c="HUN" score="4.71"></v>
+    <v c="IRL" score="4.89"></v>
+    <v c="ITA" score="5.06"></v>
+    <v c="JPN" score="4.51"></v>
+    <v c="LUX" score="5.3"></v>
+    <v c="NLD" score="5.3"></v>
+    <v c="NZL" score="5.09"></v>
+    <v c="NOR" score="5.12"></v>
+    <v c="POL" score="4.5"></v>
+    <v c="PRT" score="5.22"></v>
+    <v c="SVK" score="4.74"></v>
+    <v c="KOR" score="4.29"></v>
+    <v c="ESP" score="5.04"></v>
+    <v c="SWE" score="5.49"></v>
+    <v c="CHE" score="4.73"></v>
+    <v c="GBR" score="5.27"></v>
+    <v c="USA" score="4.62"></v>
 </vs>
    
 <!-- end of trends -->
@@ -5406,443 +5309,530 @@
 ###############################################################################
    -->
 
-<vs y="2017" r="LMY" i="AID_QNT" format="percentage" precision="4" units="% GNI">
-    <v c="AUS" value="0.00250279"></v>
-    <v c="AUT" value="0.00407088"></v>
-    <v c="BEL" value="0.00492745"></v>
-    <v c="CAN" value="0.0026311"></v>
-    <v c="CZE" value="0.00143326"></v>
-    <v c="DNK" value="0.00752781"></v>
-    <v c="FIN" value="0.00442385"></v>
-    <v c="FRA" value="0.00379896"></v>
-    <v c="DEU" value="0.00697731"></v>
-    <v c="GRC" value="0.001355"></v>
-    <v c="HUN" value="0.00129593"></v>
-    <v c="IRL" value="0.00332209"></v>
-    <v c="ITA" value="0.00262177"></v>
-    <v c="JPN" value="0.00203303"></v>
-    <v c="LUX" value="0.01004336"></v>
-    <v c="NLD" value="0.00654495"></v>
-    <v c="NZL" value="0.00250109"></v>
-    <v c="NOR" value="0.01114477"></v>
-    <v c="POL" value="0.00133811"></v>
-    <v c="PRT" value="0.00169905"></v>
-    <v c="SVK" value="0.0012231"></v>
-    <v c="KOR" value="0.00139124"></v>
-    <v c="ESP" value="0.00332302"></v>
-    <v c="SWE" value="0.0093677"></v>
-    <v c="CHE" value="0.00536386"></v>
-    <v c="GBR" value="0.0069646"></v>
-    <v c="USA" value="0.00180918"></v>
+<vs y="2018" r="LMY" i="AID_QNT" format="percentage" precision="4" units="% GNI">
+    <v c="AUS" value="0.00226"></v>
+    <v c="AUT" value="0.003024"></v>
+    <v c="BEL" value="0.004538"></v>
+    <v c="CAN" value="0.002633"></v>
+    <v c="CZE" value="0.001341"></v>
+    <v c="DNK" value="0.007234"></v>
+    <v c="FIN" value="0.0041"></v>
+    <v c="FRA" value="0.004337"></v>
+    <v c="DEU" value="0.006588"></v>
+    <v c="GRC" value="0.001564"></v>
+    <v c="HUN" value="0.001112"></v>
+    <v c="IRL" value="0.002971"></v>
+    <v c="ITA" value="0.002946"></v>
+    <v c="JPN" value="0.002278"></v>
+    <v c="LUX" value="0.009964"></v>
+    <v c="NLD" value="0.006033"></v>
+    <v c="NZL" value="0.002296"></v>
+    <v c="NOR" value="0.009923"></v>
+    <v c="POL" value="0.001333"></v>
+    <v c="PRT" value="0.001779"></v>
+    <v c="SVK" value="0.001205"></v>
+    <v c="KOR" value="0.001441"></v>
+    <v c="ESP" value="0.001915"></v>
+    <v c="SWE" value="0.0101"></v>
+    <v c="CHE" value="0.004566"></v>
+    <v c="GBR" value="0.006951"></v>
+    <v c="USA" value="0.001819"></v>
 </vs>
-<vs y="2017" r="LMY" i="AID_QLT_EFF" units="score">
-    <v c="AUS" value="-0.26" weight="0.6"></v>
-    <v c="AUT" value="-0.23" weight="0.6"></v>
-    <v c="BEL" value="0.1" weight="0.6"></v>
-    <v c="CAN" value="0.16" weight="0.6"></v>
-    <v c="CZE" value="-0.19" weight="0.6"></v>
-    <v c="DNK" value="0.04" weight="0.6"></v>
-    <v c="FIN" value="-0.04" weight="0.6"></v>
-    <v c="FRA" value="0.07" weight="0.6"></v>
-    <v c="DEU" value="-0.34" weight="0.6"></v>
-    <v c="GRC" value="0.01" weight="0.6"></v>
-    <v c="HUN" value="-0.26" weight="0.6"></v>
-    <v c="IRL" value="0.65" weight="0.6"></v>
-    <v c="ITA" value="-0.24" weight="0.6"></v>
-    <v c="JPN" value="0.07" weight="0.6"></v>
-    <v c="LUX" value="-0.13" weight="0.6"></v>
-    <v c="NLD" value="0.5" weight="0.6"></v>
-    <v c="NZL" value="-0.43" weight="0.6"></v>
-    <v c="NOR" value="0.27" weight="0.6"></v>
-    <v c="POL" value="-0.09" weight="0.6"></v>
-    <v c="PRT" value="-0.05" weight="0.6"></v>
-    <v c="SVK" value="0.79" weight="0.6"></v>
-    <v c="KOR" value="-0.35" weight="0.6"></v>
-    <v c="ESP" value="-0.12" weight="0.6"></v>
-    <v c="SWE" value="-0.1" weight="0.6"></v>
-    <v c="CHE" value="-0.18" weight="0.6"></v>
-    <v c="GBR" value="0.27" weight="0.6"></v>
-    <v c="USA" value="-0.09" weight="0.6"></v>
-</vs>
-<vs y="2017" r="LMY" i="AID_QLT_FST" units="score">
-    <v c="AUS" value="-0.33"></v>
-    <v c="AUT" value="-0.8"></v>
-    <v c="BEL" value="-0.69"></v>
-    <v c="CAN" value="0.02"></v>
-    <v c="CZE" value="0.96"></v>
-    <v c="DNK" value="0.9"></v>
-    <v c="FIN" value="0.38"></v>
-    <v c="FRA" value="0.3"></v>
-    <v c="DEU" value="0.12"></v>
-    <v c="GRC" value="0.12"></v>
-    <v c="HUN" value="-2.17"></v>
-    <v c="IRL" value="1.05"></v>
-    <v c="ITA" value="-0.39"></v>
-    <v c="JPN" value="0.56"></v>
-    <v c="LUX" value="-0.2"></v>
-    <v c="NLD" value="-0.42"></v>
-    <v c="NZL" value="0.02"></v>
-    <v c="NOR" value="-0.03"></v>
-    <v c="POL" value="-0.05"></v>
-    <v c="PRT" value="-1.71"></v>
-    <v c="SVK" value="-0.23"></v>
-    <v c="KOR" value="-0.45"></v>
-    <v c="ESP" value="-0.29"></v>
-    <v c="SWE" value="0.53"></v>
-    <v c="CHE" value="-0.49"></v>
-    <v c="GBR" value="0.45"></v>
-    <v c="USA" value="-0.2"></v>
-</vs>
-<vs y="2017" r="LMY" i="AID_QLT_BRD" units="score">
-    <v c="AUS" value="-0.06"></v>
-    <v c="AUT" value="-0.05"></v>
-    <v c="BEL" value="-0.56"></v>
-    <v c="CAN" value="-0.04"></v>
-    <v c="CZE" value="-0.31"></v>
-    <v c="DNK" value="0.69"></v>
+<vs y="2018" r="LMY" i="AID_QLT">
+    <v c="AUS" value="0.2"></v>
+    <v c="AUT" value="0.01"></v>
+    <v c="BEL" value="0.04"></v>
+    <v c="CAN" value="0.18"></v>
+    <v c="CZE" value="0"></v>
+    <v c="DNK" value="0.24"></v>
     <v c="FIN" value="0.04"></v>
-    <v c="FRA" value="-0.35"></v>
-    <v c="DEU" value="-0.16"></v>
-    <v c="GRC" value="-0.06"></v>
-    <v c="HUN" value="0.7"></v>
-    <v c="IRL" value="0.82"></v>
-    <v c="ITA" value="-0.53"></v>
-    <v c="JPN" value="-0.25"></v>
-    <v c="LUX" value="-0.89"></v>
-    <v c="NLD" value="0.09"></v>
-    <v c="NZL" value="0.87"></v>
-    <v c="NOR" value="0.66"></v>
-    <v c="POL" value="-0.37"></v>
-    <v c="PRT" value="0.71"></v>
-    <v c="SVK" value="0.37"></v>
-    <v c="KOR" value="0.59"></v>
-    <v c="ESP" value="-0.1"></v>
-    <v c="SWE" value="0.41"></v>
-    <v c="CHE" value="-0.61"></v>
-    <v c="GBR" value="0.36"></v>
-    <v c="USA" value="-0.68"></v>
+    <v c="FRA" value="0"></v>
+    <v c="DEU" value="-0.18"></v>
+    <v c="GRC" value="-0.08"></v>
+    <v c="HUN" value="-0.01"></v>
+    <v c="IRL" value="0.11"></v>
+    <v c="ITA" value="-0.07"></v>
+    <v c="JPN" value="0.08"></v>
+    <v c="LUX" value="0.14"></v>
+    <v c="NLD" value="0.08"></v>
+    <v c="NZL" value="0.39"></v>
+    <v c="NOR" value="-0.14"></v>
+    <v c="POL" value="-0.01"></v>
+    <v c="PRT" value="0.11"></v>
+    <v c="SVK" value="-0.01"></v>
+    <v c="KOR" value="-0.04"></v>
+    <v c="ESP" value="-0.13"></v>
+    <v c="SWE" value="0.1"></v>
+    <v c="CHE" value="-0.1"></v>
+    <v c="GBR" value="0"></v>
+    <v c="USA" value="-0.14"></v>
 </vs>
-<vs y="2017" r="LMY" i="AID_QLT_TRA" units="score">
-    <v c="AUS" value="0.5"></v>
-    <v c="AUT" value="-0.14"></v>
-    <v c="BEL" value="-0.54"></v>
-    <v c="CAN" value="0.72"></v>
-    <v c="CZE" value="-0.36"></v>
-    <v c="DNK" value="0.18"></v>
-    <v c="FIN" value="0.24"></v>
-    <v c="FRA" value="-0.03"></v>
-    <v c="DEU" value="0.29"></v>
-    <v c="GRC" value="-0.75"></v>
-    <v c="HUN" value="-0.48"></v>
-    <v c="IRL" value="0.67"></v>
-    <v c="ITA" value="-0.62"></v>
-    <v c="JPN" value="0.1"></v>
-    <v c="LUX" value="0.01"></v>
-    <v c="NLD" value="-0.9"></v>
-    <v c="NZL" value="0.09"></v>
-    <v c="NOR" value="0.12"></v>
-    <v c="POL" value="0.39"></v>
-    <v c="PRT" value="-0.63"></v>
-    <v c="SVK" value="-0.32"></v>
-    <v c="KOR" value="-0.54"></v>
-    <v c="ESP" value="0.2"></v>
-    <v c="SWE" value="0.32"></v>
-    <v c="CHE" value="0.28"></v>
-    <v c="GBR" value="0.1"></v>
+<vs y="2018" r="LMY" i="AID_QLT_BI" units="score">
+    <v c="AUS" value="0.18"></v>
+    <v c="AUT" value="-0.09"></v>
+    <v c="BEL" value="0.02"></v>
+    <v c="CAN" value="0.14"></v>
+    <v c="CZE" value="-0.12"></v>
+    <v c="DNK" value="0.31"></v>
+    <v c="FIN" value="0.01"></v>
+    <v c="FRA" value="-0.06"></v>
+    <v c="DEU" value="-0.25"></v>
+    <v c="GRC" value="-0.22"></v>
+    <v c="HUN" value="-0.15"></v>
+    <v c="IRL" value="0.23"></v>
+    <v c="ITA" value="-0.22"></v>
+    <v c="JPN" value="0"></v>
+    <v c="LUX" value="0.17"></v>
+    <v c="NLD" value="0.04"></v>
+    <v c="NZL" value="0.48"></v>
+    <v c="NOR" value="-0.22"></v>
+    <v c="POL" value="-0.14"></v>
+    <v c="PRT" value="0.18"></v>
+    <v c="SVK" value="-0.13"></v>
+    <v c="KOR" value="-0.22"></v>
+    <v c="ESP" value="-0.27"></v>
+    <v c="SWE" value="0.1"></v>
+    <v c="CHE" value="-0.2"></v>
+    <v c="GBR" value="-0.1"></v>
+    <v c="USA" value="-0.22"></v>
+</vs>
+<vs y="2018" r="LMY" i="AID_QLT_MUL" units="score">
+    <v c="AUS" value="0.26"></v>
+    <v c="AUT" value="0.16"></v>
+    <v c="BEL" value="0.06"></v>
+    <v c="CAN" value="0.28"></v>
+    <v c="CZE" value="0.04"></v>
+    <v c="DNK" value="0.08"></v>
+    <v c="FIN" value="0.08"></v>
+    <v c="FRA" value="0.12"></v>
+    <v c="DEU" value="0.12"></v>
+    <v c="GRC" value="0.03"></v>
+    <v c="HUN" value="0.04"></v>
+    <v c="IRL" value="-0.03"></v>
+    <v c="ITA" value="0.08"></v>
+    <v c="JPN" value="0.37"></v>
+    <v c="LUX" value="0.07"></v>
+    <v c="NLD" value="0.16"></v>
+    <v c="NZL" value="0.02"></v>
+    <v c="NOR" value="0.13"></v>
+    <v c="POL" value="0.03"></v>
+    <v c="PRT" value="0.06"></v>
+    <v c="SVK" value="0.03"></v>
+    <v c="KOR" value="0.37"></v>
+    <v c="ESP" value="0.13"></v>
+    <v c="SWE" value="0.09"></v>
+    <v c="CHE" value="0.25"></v>
+    <v c="GBR" value="0.18"></v>
     <v c="USA" value="0.27"></v>
 </vs>
-<vs y="2017" r="LMY" i="TRA_TAR" units="score">
-    <v c="AUS" value="5.38"></v>
+<vs y="2018" r="LMY" i="AID_QLT_BI_W" format="percentage">
+    <v c="AUS" value="0.7"></v>
+    <v c="AUT" value="0.6"></v>
+    <v c="BEL" value="0.63"></v>
+    <v c="CAN" value="0.68"></v>
+    <v c="CZE" value="0.27"></v>
+    <v c="DNK" value="0.71"></v>
+    <v c="FIN" value="0.6"></v>
+    <v c="FRA" value="0.63"></v>
+    <v c="DEU" value="0.81"></v>
+    <v c="GRC" value="0.43"></v>
+    <v c="HUN" value="0.28"></v>
+    <v c="IRL" value="0.53"></v>
+    <v c="ITA" value="0.48"></v>
+    <v c="JPN" value="0.8"></v>
+    <v c="LUX" value="0.7"></v>
+    <v c="NLD" value="0.65"></v>
+    <v c="NZL" value="0.81"></v>
+    <v c="NOR" value="0.79"></v>
+    <v c="POL" value="0.25"></v>
+    <v c="PRT" value="0.44"></v>
+    <v c="SVK" value="0.24"></v>
+    <v c="KOR" value="0.7"></v>
+    <v c="ESP" value="0.64"></v>
+    <v c="SWE" value="0.71"></v>
+    <v c="CHE" value="0.78"></v>
+    <v c="GBR" value="0.64"></v>
+    <v c="USA" value="0.83"></v>
+</vs>
+<vs y="2018" r="LMY" i="AID_QLT_MUL_W" format="percentage">
+    <v c="AUS" value="0.3"></v>
+    <v c="AUT" value="0.4"></v>
+    <v c="BEL" value="0.37"></v>
+    <v c="CAN" value="0.32"></v>
+    <v c="CZE" value="0.73"></v>
+    <v c="DNK" value="0.29"></v>
+    <v c="FIN" value="0.4"></v>
+    <v c="FRA" value="0.37"></v>
+    <v c="DEU" value="0.19"></v>
+    <v c="GRC" value="0.57"></v>
+    <v c="HUN" value="0.72"></v>
+    <v c="IRL" value="0.47"></v>
+    <v c="ITA" value="0.52"></v>
+    <v c="JPN" value="0.2"></v>
+    <v c="LUX" value="0.3"></v>
+    <v c="NLD" value="0.35"></v>
+    <v c="NZL" value="0.19"></v>
+    <v c="NOR" value="0.21"></v>
+    <v c="POL" value="0.75"></v>
+    <v c="PRT" value="0.56"></v>
+    <v c="SVK" value="0.76"></v>
+    <v c="KOR" value="0.3"></v>
+    <v c="ESP" value="0.36"></v>
+    <v c="SWE" value="0.29"></v>
+    <v c="CHE" value="0.22"></v>
+    <v c="GBR" value="0.36"></v>
+    <v c="USA" value="0.17"></v>
+</vs>
+<vs y="2018" r="LMY" i="undefined">
+    <v c="AUS" value="0.23"></v>
+    <v c="AUT" value="0.3"></v>
+    <v c="BEL" value="0.45"></v>
+    <v c="CAN" value="0.26"></v>
+    <v c="CZE" value="0.13"></v>
+    <v c="DNK" value="0.72"></v>
+    <v c="FIN" value="0.41"></v>
+    <v c="FRA" value="0.43"></v>
+    <v c="DEU" value="0.66"></v>
+    <v c="GRC" value="0.16"></v>
+    <v c="HUN" value="0.11"></v>
+    <v c="IRL" value="0.3"></v>
+    <v c="ITA" value="0.29"></v>
+    <v c="JPN" value="0.23"></v>
+    <v c="LUX" value="1"></v>
+    <v c="NLD" value="0.6"></v>
+    <v c="NZL" value="0.23"></v>
+    <v c="NOR" value="0.99"></v>
+    <v c="POL" value="0.13"></v>
+    <v c="PRT" value="0.18"></v>
+    <v c="SVK" value="0.12"></v>
+    <v c="KOR" value="0.14"></v>
+    <v c="ESP" value="0.19"></v>
+    <v c="SWE" value="1.01"></v>
+    <v c="CHE" value="0.46"></v>
+    <v c="GBR" value="0.7"></v>
+    <v c="USA" value="0.18"></v>
+</vs>
+<vs y="2018" r="LMY" i="TRA_TAR" units="score">
+    <v c="AUS" value="5.59"></v>
     <v c="AUT" value="5.4"></v>
-    <v c="BEL" value="5.42"></v>
-    <v c="CAN" value="4.34"></v>
-    <v c="CZE" value="5.42"></v>
-    <v c="DNK" value="5.41"></v>
-    <v c="FIN" value="5.41"></v>
-    <v c="FRA" value="5.44"></v>
+    <v c="BEL" value="5.4"></v>
+    <v c="CAN" value="4.19"></v>
+    <v c="CZE" value="5.4"></v>
+    <v c="DNK" value="5.4"></v>
+    <v c="FIN" value="5.4"></v>
+    <v c="FRA" value="5.4"></v>
     <v c="DEU" value="5.4"></v>
-    <v c="GRC" value="5.41"></v>
-    <v c="HUN" value="5.34"></v>
-    <v c="IRL" value="5.36"></v>
+    <v c="GRC" value="5.4"></v>
+    <v c="HUN" value="5.4"></v>
+    <v c="IRL" value="5.4"></v>
     <v c="ITA" value="5.4"></v>
-    <v c="JPN" value="2.01"></v>
-    <v c="LUX" value="5.38"></v>
-    <v c="NLD" value="5.39"></v>
-    <v c="NZL" value="5.43"></v>
-    <v c="NOR" value="3.59"></v>
-    <v c="POL" value="5.34"></v>
-    <v c="PRT" value="5.42"></v>
-    <v c="SVK" value="5.37"></v>
-    <v c="KOR" value="1.55"></v>
-    <v c="ESP" value="5.42"></v>
-    <v c="SWE" value="5.42"></v>
-    <v c="CHE" value="4.61"></v>
-    <v c="GBR" value="5.45"></v>
-    <v c="USA" value="5.47"></v>
-</vs>
-<vs y="2017" r="LMY" i="TRA_PRO" format="percentage" lessisbetter="1" units="agricultural subsidy rate">
-    <v c="AUS" value="0.01375384"></v>
-    <v c="AUT" value="0.09323317"></v>
-    <v c="BEL" value="0.10427694"></v>
-    <v c="CAN" value="0.04200538"></v>
-    <v c="CZE" value="0.12176788"></v>
-    <v c="DNK" value="0.16071068"></v>
-    <v c="FIN" value="0.05920943"></v>
-    <v c="FRA" value="0.11662939"></v>
-    <v c="DEU" value="0.15488713"></v>
-    <v c="GRC" value="0.17369973"></v>
-    <v c="HUN" value="0.16433147"></v>
-    <v c="IRL" value="0.27516744"></v>
-    <v c="ITA" value="0.06168071"></v>
-    <v c="JPN" value="0.09033483"></v>
-    <v c="LUX" value="0.15416889"></v>
-    <v c="NLD" value="0.03806299"></v>
-    <v c="NZL" value="0.00180208"></v>
-    <v c="NOR" value="0.4313168"></v>
-    <v c="POL" value="0.17399783"></v>
-    <v c="PRT" value="0.08945891"></v>
-    <v c="SVK" value="0.08692875"></v>
-    <v c="KOR" value="0.0456395"></v>
-    <v c="ESP" value="0.10770476"></v>
-    <v c="SWE" value="0.06780719"></v>
-    <v c="CHE" value="0.28716465"></v>
-    <v c="GBR" value="0.10755138"></v>
-    <v c="USA" value="0.05578795"></v>
-</vs>
-<vs y="2017" r="LMY" i="TRA_IMP" units="score">
-    <v c="AUS" value="4.3"></v>
-    <v c="AUT" value="5"></v>
-    <v c="BEL" value="4.9"></v>
-    <v c="CAN" value="4.6"></v>
-    <v c="CZE" value="3.8"></v>
-    <v c="DNK" value="6.2"></v>
-    <v c="FIN" value="5.7"></v>
-    <v c="FRA" value="5.1"></v>
-    <v c="DEU" value="5.4"></v>
-    <v c="GRC" value="4.2"></v>
-    <v c="HUN" value="4.1"></v>
-    <v c="IRL" value="5.7"></v>
-    <v c="ITA" value="4.6"></v>
-    <v c="JPN" value="4.8"></v>
-    <v c="LUX" value="4.9"></v>
-    <v c="NLD" value="5.6"></v>
-    <v c="NZL" value="5"></v>
-    <v c="NOR" value="5"></v>
-    <v c="POL" value="4.8"></v>
-    <v c="PRT" value="5.1"></v>
-    <v c="SVK" value="3.8"></v>
-    <v c="KOR" value="6.1"></v>
-    <v c="ESP" value="4.8"></v>
-    <v c="SWE" value="6.1"></v>
-    <v c="CHE" value="4.8"></v>
-    <v c="GBR" value="5.5"></v>
-    <v c="USA" value="5"></v>
-</vs>
-<vs y="2017" r="LMY" i="TRA_SRV" units="score">
-    <v c="AUS" value="5.8"></v>
-    <v c="AUT" value="4.3"></v>
-    <v c="BEL" value="3.4"></v>
-    <v c="CAN" value="5.1"></v>
-    <v c="CZE" value="5.9"></v>
-    <v c="DNK" value="6"></v>
-    <v c="FIN" value="4.6"></v>
-    <v c="FRA" value="5"></v>
-    <v c="DEU" value="6.4"></v>
-    <v c="GRC" value="4.2"></v>
-    <v c="HUN" value="4.3"></v>
-    <v c="IRL" value="6.4"></v>
-    <v c="ITA" value="5"></v>
-    <v c="JPN" value="6.3"></v>
-    <v c="LUX" value="4.8"></v>
-    <v c="NLD" value="6.3"></v>
-    <v c="NZL" value="6.1"></v>
-    <v c="NOR" value="2.8"></v>
-    <v c="POL" value="4"></v>
-    <v c="PRT" value="5.2"></v>
+    <v c="JPN" value="4.25"></v>
+    <v c="LUX" value="5.4"></v>
+    <v c="NLD" value="5.4"></v>
+    <v c="NZL" value="5.6"></v>
+    <v c="NOR" value="3.4"></v>
+    <v c="POL" value="5.4"></v>
+    <v c="PRT" value="5.4"></v>
     <v c="SVK" value="5.4"></v>
-    <v c="KOR" value="4"></v>
-    <v c="ESP" value="4.6"></v>
-    <v c="SWE" value="5"></v>
-    <v c="CHE" value="3.1"></v>
-    <v c="GBR" value="6"></v>
-    <v c="USA" value="4.8"></v>
+    <v c="KOR" value="0.93"></v>
+    <v c="ESP" value="5.4"></v>
+    <v c="SWE" value="5.4"></v>
+    <v c="CHE" value="3.32"></v>
+    <v c="GBR" value="5.4"></v>
+    <v c="USA" value="5.1"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_COM" precision="0" units="points">
-    <v c="AUS" value="13"></v>
+<vs y="2018" r="LMY" i="TRA_PRO" format="percentage" lessisbetter="1" units="agricultural subsidy rate">
+    <v c="AUS" value="0.01484252"></v>
+    <v c="AUT" value="0.1056733"></v>
+    <v c="BEL" value="0.12022999"></v>
+    <v c="CAN" value="0.03886093"></v>
+    <v c="CZE" value="0.12951108"></v>
+    <v c="DNK" value="0.22348989"></v>
+    <v c="FIN" value="0.06090546"></v>
+    <v c="FRA" value="0.13047418"></v>
+    <v c="DEU" value="0.16983585"></v>
+    <v c="GRC" value="0.20170318"></v>
+    <v c="HUN" value="0.17021554"></v>
+    <v c="IRL" value="0.2955359"></v>
+    <v c="ITA" value="0.0732303"></v>
+    <v c="JPN" value="0.0813724"></v>
+    <v c="LUX" value="0.15744242"></v>
+    <v c="NLD" value="0.03796971"></v>
+    <v c="NZL" value="0.00233873"></v>
+    <v c="NOR" value="0.38408871"></v>
+    <v c="POL" value="0.19608583"></v>
+    <v c="PRT" value="0.10735429"></v>
+    <v c="SVK" value="0.0958962"></v>
+    <v c="KOR" value="0.05606083"></v>
+    <v c="ESP" value="0.10962929"></v>
+    <v c="SWE" value="0.07421468"></v>
+    <v c="CHE" value="0.25777596"></v>
+    <v c="GBR" value="0.14163371"></v>
+    <v c="USA" value="0.05740116"></v>
+</vs>
+<vs y="2018" r="LMY" i="TRA_IMP" units="score">
+    <v c="AUS" value="4.8"></v>
+    <v c="AUT" value="5.5"></v>
+    <v c="BEL" value="5.6"></v>
+    <v c="CAN" value="5.9"></v>
+    <v c="CZE" value="4.2"></v>
+    <v c="DNK" value="5.1"></v>
+    <v c="FIN" value="5.8"></v>
+    <v c="FRA" value="5.3"></v>
+    <v c="DEU" value="6.5"></v>
+    <v c="GRC" value="3.1"></v>
+    <v c="HUN" value="3.6"></v>
+    <v c="IRL" value="4.6"></v>
+    <v c="ITA" value="4.6"></v>
+    <v c="JPN" value="5.7"></v>
+    <v c="LUX" value="5.9"></v>
+    <v c="NLD" value="6.3"></v>
+    <v c="NZL" value="3.9"></v>
+    <v c="NOR" value="5"></v>
+    <v c="POL" value="3.5"></v>
+    <v c="PRT" value="3.6"></v>
+    <v c="SVK" value="3.6"></v>
+    <v c="KOR" value="4.6"></v>
+    <v c="ESP" value="4.6"></v>
+    <v c="SWE" value="6"></v>
+    <v c="CHE" value="5.8"></v>
+    <v c="GBR" value="6"></v>
+    <v c="USA" value="5.6"></v>
+</vs>
+<vs y="2018" r="LMY" i="TRA_SRV" units="score">
+    <v c="AUS" value="6.3"></v>
+    <v c="AUT" value="4.2"></v>
+    <v c="BEL" value="3.6"></v>
+    <v c="CAN" value="5.3"></v>
+    <v c="CZE" value="5.9"></v>
+    <v c="DNK" value="6.1"></v>
+    <v c="FIN" value="4.5"></v>
+    <v c="FRA" value="4.8"></v>
+    <v c="DEU" value="6.6"></v>
+    <v c="GRC" value="4.3"></v>
+    <v c="HUN" value="3.7"></v>
+    <v c="IRL" value="6.6"></v>
+    <v c="ITA" value="4.5"></v>
+    <v c="JPN" value="5.8"></v>
+    <v c="LUX" value="4.9"></v>
+    <v c="NLD" value="6.5"></v>
+    <v c="NZL" value="5.9"></v>
+    <v c="NOR" value="3.6"></v>
+    <v c="POL" value="4"></v>
+    <v c="PRT" value="4.9"></v>
+    <v c="SVK" value="4.6"></v>
+    <v c="KOR" value="4.2"></v>
+    <v c="ESP" value="5.2"></v>
+    <v c="SWE" value="5.1"></v>
+    <v c="CHE" value="2.9"></v>
+    <v c="GBR" value="6"></v>
+    <v c="USA" value="5.1"></v>
+</vs>
+<vs y="2018" r="LMY" i="INV_COM" precision="0" units="points">
+    <v c="AUS" value="14"></v>
     <v c="AUT" value="8"></v>
-    <v c="BEL" value="14"></v>
-    <v c="CAN" value="11"></v>
-    <v c="CZE" value="11"></v>
+    <v c="BEL" value="15"></v>
+    <v c="CAN" value="12"></v>
+    <v c="CZE" value="13"></v>
     <v c="DNK" value="16"></v>
-    <v c="FIN" value="16"></v>
-    <v c="FRA" value="15"></v>
-    <v c="DEU" value="15"></v>
+    <v c="FIN" value="17"></v>
+    <v c="FRA" value="16"></v>
+    <v c="DEU" value="17"></v>
     <v c="GRC" value="8"></v>
-    <v c="HUN" value="12"></v>
+    <v c="HUN" value="13"></v>
     <v c="IRL" value="11"></v>
     <v c="ITA" value="16"></v>
     <v c="JPN" value="12"></v>
     <v c="LUX" value="13"></v>
     <v c="NLD" value="16"></v>
     <v c="NZL" value="7"></v>
-    <v c="NOR" value="16"></v>
+    <v c="NOR" value="17"></v>
     <v c="POL" value="13"></v>
-    <v c="PRT" value="11"></v>
+    <v c="PRT" value="12"></v>
     <v c="SVK" value="10"></v>
     <v c="KOR" value="8"></v>
-    <v c="ESP" value="13"></v>
-    <v c="SWE" value="14"></v>
+    <v c="ESP" value="14"></v>
+    <v c="SWE" value="15"></v>
     <v c="CHE" value="17"></v>
-    <v c="GBR" value="15"></v>
-    <v c="USA" value="13"></v>
+    <v c="GBR" value="16"></v>
+    <v c="USA" value="14"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_IIA" format="percentage" units="IIA score (% of maximum score for sustainable IIA)">
-    <v c="AUS" value="0.556"></v>
-    <v c="AUT" value="0.278"></v>
+<vs y="2018" r="LMY" i="INV_IIA" format="percentage" units="IIA score (% of maximum score for sustainable IIA)">
+    <v c="AUS" value="0.56"></v>
+    <v c="AUT" value="0.28"></v>
     <v c="BEL" value="0"></v>
-    <v c="CAN" value="0.833"></v>
-    <v c="CZE" value="0.111"></v>
+    <v c="CAN" value="0.83"></v>
+    <v c="CZE" value="0.11"></v>
     <v c="DNK" value="0"></v>
-    <v c="FIN" value="0.444"></v>
-    <v c="FRA" value="0.167"></v>
+    <v c="FIN" value="0.44"></v>
+    <v c="FRA" value="0.17"></v>
     <v c="DEU" value="0"></v>
     <v c="GRC" value="0"></v>
-    <v c="HUN" value="0.111"></v>
-    <v c="IRL" value="No IIAs" isnull="true"></v>
-    <v c="ITA" value="0.056"></v>
-    <v c="JPN" value="0.611"></v>
+    <v c="HUN" value="0.11"></v>
+    <v c="IRL" value="N/A" isnull="true"></v>
+    <v c="ITA" value="0.06"></v>
+    <v c="JPN" value="0.56"></v>
     <v c="LUX" value="0"></v>
-    <v c="NLD" value="0.056"></v>
-    <v c="NZL" value="0.444"></v>
+    <v c="NLD" value="0.06"></v>
+    <v c="NZL" value="0.44"></v>
     <v c="NOR" value="0.25"></v>
-    <v c="POL" value="0.167"></v>
+    <v c="POL" value="0.17"></v>
     <v c="PRT" value="0"></v>
-    <v c="SVK" value="0.222"></v>
-    <v c="KOR" value="0.5"></v>
+    <v c="SVK" value="0.39"></v>
+    <v c="KOR" value="0.67"></v>
     <v c="ESP" value="0"></v>
-    <v c="SWE" value="0.056"></v>
-    <v c="CHE" value="0.222"></v>
-    <v c="GBR" value="0.333"></v>
-    <v c="USA" value="0.611"></v>
+    <v c="SWE" value="0.06"></v>
+    <v c="CHE" value="0.22"></v>
+    <v c="GBR" value="0.33"></v>
+    <v c="USA" value="0.61"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_OOF" format="percentage" precision="5" units="% GNI">
-    <v c="AUS" value="0.00025"></v>
-    <v c="AUT" value="0"></v>
-    <v c="BEL" value="-0.00014"></v>
-    <v c="CAN" value="0.00036"></v>
-    <v c="CZE" value="0.00015"></v>
-    <v c="DNK" value="0.00039"></v>
-    <v c="FIN" value="0.00009"></v>
-    <v c="FRA" value="0.00014"></v>
-    <v c="DEU" value="0.00038"></v>
+<vs y="2018" r="LMY" i="INV_OOF" format="percentage" precision="5" units="% GNI">
+    <v c="AUS" value="0.00039"></v>
+    <v c="AUT" value="0.00033"></v>
+    <v c="BEL" value="0.00063"></v>
+    <v c="CAN" value="0.00004"></v>
+    <v c="CZE" value="0"></v>
+    <v c="DNK" value="-0.00032"></v>
+    <v c="FIN" value="0.0002"></v>
+    <v c="FRA" value="0.00004"></v>
+    <v c="DEU" value="-0.00011"></v>
     <v c="GRC" value="0"></v>
     <v c="HUN" value="0"></v>
     <v c="IRL" value="0"></v>
     <v c="ITA" value="0.00002"></v>
-    <v c="JPN" value="-0.0002"></v>
+    <v c="JPN" value="-0.00048"></v>
     <v c="LUX" value="0"></v>
     <v c="NLD" value="0"></v>
     <v c="NZL" value="0.00009"></v>
-    <v c="NOR" value="0.00084"></v>
+    <v c="NOR" value="-0.0003"></v>
     <v c="POL" value="0"></v>
     <v c="PRT" value="0"></v>
     <v c="SVK" value="0"></v>
-    <v c="KOR" value="0.00177"></v>
-    <v c="ESP" value="0"></v>
-    <v c="SWE" value="0.0001"></v>
-    <v c="CHE" value="0.00005"></v>
+    <v c="KOR" value="0.00012"></v>
+    <v c="ESP" value="0.00006"></v>
+    <v c="SWE" value="0.00005"></v>
+    <v c="CHE" value="0.00003"></v>
     <v c="GBR" value="0.00001"></v>
-    <v c="USA" value="0"></v>
+    <v c="USA" value="0.00001"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_BNK" units="points">
-    <v c="AUS" value="0.8"></v>
-    <v c="AUT" value="0.5"></v>
-    <v c="BEL" value="0.9"></v>
-    <v c="CAN" value="0.7"></v>
-    <v c="CZE" value="0.5"></v>
+<vs y="2018" r="LMY" i="INV_SEC_BNK" units="points">
+    <v c="AUS" value="0.2"></v>
+    <v c="AUT" value="0.57"></v>
+    <v c="BEL" value="0.07"></v>
+    <v c="CAN" value="0.14"></v>
+    <v c="CZE" value="0.4"></v>
     <v c="DNK" value="0.6"></v>
-    <v c="FIN" value="0.6"></v>
-    <v c="FRA" value="0.7"></v>
-    <v c="DEU" value="0.6"></v>
+    <v c="FIN" value="0.53"></v>
+    <v c="FRA" value="0.54"></v>
+    <v c="DEU" value="0.5"></v>
     <v c="GRC" value="0.6"></v>
     <v c="HUN" value="0.7"></v>
-    <v c="IRL" value="0.8"></v>
-    <v c="ITA" value="0.8"></v>
-    <v c="JPN" value="0.7"></v>
-    <v c="LUX" value="0.3"></v>
-    <v c="NLD" value="0.7"></v>
-    <v c="NZL" value="0.6"></v>
-    <v c="NOR" value="0.8"></v>
-    <v c="POL" value="0.5"></v>
-    <v c="PRT" value="0.6"></v>
-    <v c="SVK" value="0.4"></v>
+    <v c="IRL" value="0.24"></v>
+    <v c="ITA" value="0.27"></v>
+    <v c="JPN" value="0.27"></v>
+    <v c="LUX" value="0.6"></v>
+    <v c="NLD" value="0.5"></v>
+    <v c="NZL" value="0.27"></v>
+    <v c="NOR" value="0.2"></v>
+    <v c="POL" value="0.53"></v>
+    <v c="PRT" value="0.37"></v>
+    <v c="SVK" value="0.5"></v>
     <v c="KOR" value="0.5"></v>
-    <v c="ESP" value="0.7"></v>
-    <v c="SWE" value="0.5"></v>
-    <v c="CHE" value="0.4"></v>
-    <v c="GBR" value="0.7"></v>
-    <v c="USA" value="0.6"></v>
+    <v c="ESP" value="0.07"></v>
+    <v c="SWE" value="0.27"></v>
+    <v c="CHE" value="0.73"></v>
+    <v c="GBR" value="0.43"></v>
+    <v c="USA" value="0.2"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_TFR" units="points">
-    <v c="AUS" value="0.5"></v>
+<vs y="2018" r="LMY" i="INV_SEC_PCA">
+    <v c="AUS" value="0.2"></v>
     <v c="AUT" value="0.3"></v>
     <v c="BEL" value="0.3"></v>
-    <v c="CAN" value="0.5"></v>
-    <v c="CZE" value="0.8"></v>
-    <v c="DNK" value="0.3"></v>
-    <v c="FIN" value="0.8"></v>
-    <v c="FRA" value="0.6"></v>
-    <v c="DEU" value="0"></v>
-    <v c="GRC" value="0.8"></v>
-    <v c="HUN" value="0.8"></v>
-    <v c="IRL" value="0.6"></v>
-    <v c="ITA" value="0"></v>
-    <v c="JPN" value="0.6"></v>
-    <v c="LUX" value="0.5"></v>
-    <v c="NLD" value="0.3"></v>
-    <v c="NZL" value="0.6"></v>
-    <v c="NOR" value="0.5"></v>
-    <v c="POL" value="0.8"></v>
-    <v c="PRT" value="0.8"></v>
-    <v c="SVK" value="0.8"></v>
-    <v c="KOR" value="0.6"></v>
-    <v c="ESP" value="0.8"></v>
-    <v c="SWE" value="0.3"></v>
-    <v c="CHE" value="0"></v>
-    <v c="GBR" value="0.5"></v>
-    <v c="USA" value="0.5"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_RCO" units="points">
-    <v c="AUS" value="0"></v>
-    <v c="AUT" value="0.3"></v>
-    <v c="BEL" value="0.3"></v>
-    <v c="CAN" value="0"></v>
-    <v c="CZE" value="0.3"></v>
+    <v c="CAN" value="0.3"></v>
+    <v c="CZE" value="0.5"></v>
     <v c="DNK" value="0.3"></v>
     <v c="FIN" value="0.3"></v>
     <v c="FRA" value="0.3"></v>
     <v c="DEU" value="0.3"></v>
     <v c="GRC" value="0.3"></v>
-    <v c="HUN" value="0.3"></v>
+    <v c="HUN" value="0.5"></v>
     <v c="IRL" value="0.3"></v>
     <v c="ITA" value="0.3"></v>
-    <v c="JPN" value="0"></v>
+    <v c="JPN" value="0.3"></v>
     <v c="LUX" value="0.3"></v>
     <v c="NLD" value="0.3"></v>
-    <v c="NZL" value="0"></v>
-    <v c="NOR" value="0"></v>
-    <v c="POL" value="0.3"></v>
+    <v c="NZL" value="0.5"></v>
+    <v c="NOR" value="0.4"></v>
+    <v c="POL" value="0.5"></v>
     <v c="PRT" value="0.3"></v>
-    <v c="SVK" value="0.3"></v>
-    <v c="KOR" value="0"></v>
+    <v c="SVK" value="0.5"></v>
+    <v c="KOR" value="0.3"></v>
     <v c="ESP" value="0.3"></v>
     <v c="SWE" value="0.3"></v>
-    <v c="CHE" value="0"></v>
-    <v c="GBR" value="0.3"></v>
-    <v c="USA" value="0"></v>
+    <v c="CHE" value="0.3"></v>
+    <v c="GBR" value="0.38"></v>
+    <v c="USA" value="0.3"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_PCO" units="points">
-    <v c="AUS" value="0.1"></v>
+<vs y="2018" r="LMY" i="INV_SEC_AML" units="points">
+    <v c="AUS" value="0.43"></v>
+    <v c="AUT" value="0.41"></v>
+    <v c="BEL" value="0.38"></v>
+    <v c="CAN" value="0.41"></v>
+    <v c="CZE" value="0.51"></v>
+    <v c="DNK" value="0.5"></v>
+    <v c="FIN" value="0.51"></v>
+    <v c="FRA" value="0.35"></v>
+    <v c="DEU" value="0.47"></v>
+    <v c="GRC" value="0.66"></v>
+    <v c="HUN" value="0.53"></v>
+    <v c="IRL" value="0.41"></v>
+    <v c="ITA" value="0.31"></v>
+    <v c="JPN" value="0.55"></v>
+    <v c="LUX" value="0.65"></v>
+    <v c="NLD" value="0.44"></v>
+    <v c="NZL" value="0.56"></v>
+    <v c="NOR" value="0.48"></v>
+    <v c="POL" value="0.58"></v>
+    <v c="PRT" value="0.34"></v>
+    <v c="SVK" value="0.65"></v>
+    <v c="KOR" value="0.58"></v>
+    <v c="ESP" value="0.2"></v>
+    <v c="SWE" value="0.37"></v>
+    <v c="CHE" value="0.38"></v>
+    <v c="GBR" value="0.29"></v>
+    <v c="USA" value="0.37"></v>
+</vs>
+<vs y="2018" r="LMY" i="INV_SEC_AIE" units="points">
+    <v c="AUS" value="0"></v>
+    <v c="AUT" value="0.36"></v>
+    <v c="BEL" value="0"></v>
+    <v c="CAN" value="0.36"></v>
+    <v c="CZE" value="0.01"></v>
+    <v c="DNK" value="0"></v>
+    <v c="FIN" value="0.01"></v>
+    <v c="FRA" value="0"></v>
+    <v c="DEU" value="0"></v>
+    <v c="GRC" value="0.01"></v>
+    <v c="HUN" value="0.01"></v>
+    <v c="IRL" value="0"></v>
+    <v c="ITA" value="0"></v>
+    <v c="JPN" value="0.29"></v>
+    <v c="LUX" value="0"></v>
+    <v c="NLD" value="0"></v>
+    <v c="NZL" value="0.3"></v>
+    <v c="NOR" value="0.01"></v>
+    <v c="POL" value="0.01"></v>
+    <v c="PRT" value="0"></v>
+    <v c="SVK" value="0.02"></v>
+    <v c="KOR" value="0.01"></v>
+    <v c="ESP" value="0"></v>
+    <v c="SWE" value="0.01"></v>
+    <v c="CHE" value="0.77"></v>
+    <v c="GBR" value="0.02"></v>
+    <v c="USA" value="1"></v>
+</vs>
+<vs y="2018" r="LMY" i="INV_SEC_BIT" units="points">
+    <v c="AUS" value="0"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0"></v>
     <v c="CAN" value="0"></v>
@@ -5854,11 +5844,11 @@
     <v c="GRC" value="0"></v>
     <v c="HUN" value="0"></v>
     <v c="IRL" value="0"></v>
-    <v c="ITA" value="0.1"></v>
+    <v c="ITA" value="0"></v>
     <v c="JPN" value="0"></v>
     <v c="LUX" value="0"></v>
     <v c="NLD" value="0"></v>
-    <v c="NZL" value="0.2"></v>
+    <v c="NZL" value="0"></v>
     <v c="NOR" value="0"></v>
     <v c="POL" value="0"></v>
     <v c="PRT" value="0"></v>
@@ -5868,357 +5858,96 @@
     <v c="SWE" value="0"></v>
     <v c="CHE" value="0"></v>
     <v c="GBR" value="0"></v>
-    <v c="USA" value="0"></v>
+    <v c="USA" value="0.28"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_PCA" units="points">
+<vs y="2018" r="LMY" i="INV_SEC_IJC" units="points">
     <v c="AUS" value="0"></v>
-    <v c="AUT" value="0.5"></v>
-    <v c="BEL" value="1"></v>
-    <v c="CAN" value="0"></v>
-    <v c="CZE" value="1"></v>
-    <v c="DNK" value="1"></v>
-    <v c="FIN" value="0.5"></v>
-    <v c="FRA" value="0.5"></v>
-    <v c="DEU" value="0"></v>
-    <v c="GRC" value="0"></v>
-    <v c="HUN" value="0.5"></v>
-    <v c="IRL" value="0.5"></v>
-    <v c="ITA" value="0.5"></v>
-    <v c="JPN" value="0"></v>
-    <v c="LUX" value="0.5"></v>
-    <v c="NLD" value="0"></v>
-    <v c="NZL" value="0"></v>
-    <v c="NOR" value="0.5"></v>
-    <v c="POL" value="0"></v>
+    <v c="AUT" value="0.14"></v>
+    <v c="BEL" value="0.18"></v>
+    <v c="CAN" value="0.14"></v>
+    <v c="CZE" value="0.14"></v>
+    <v c="DNK" value="0.18"></v>
+    <v c="FIN" value="0.14"></v>
+    <v c="FRA" value="0.14"></v>
+    <v c="DEU" value="0.18"></v>
+    <v c="GRC" value="0.21"></v>
+    <v c="HUN" value="0.18"></v>
+    <v c="IRL" value="0.11"></v>
+    <v c="ITA" value="0.14"></v>
+    <v c="JPN" value="0.27"></v>
+    <v c="LUX" value="0.14"></v>
+    <v c="NLD" value="0.27"></v>
+    <v c="NZL" value="0.14"></v>
+    <v c="NOR" value="0.18"></v>
+    <v c="POL" value="0.18"></v>
     <v c="PRT" value="0"></v>
-    <v c="SVK" value="1"></v>
-    <v c="KOR" value="0"></v>
-    <v c="ESP" value="0"></v>
-    <v c="SWE" value="0.5"></v>
-    <v c="CHE" value="0"></v>
-    <v c="GBR" value="1"></v>
-    <v c="USA" value="0"></v>
+    <v c="SVK" value="0.24"></v>
+    <v c="KOR" value="0.14"></v>
+    <v c="ESP" value="0.07"></v>
+    <v c="SWE" value="0.07"></v>
+    <v c="CHE" value="0.24"></v>
+    <v c="GBR" value="0.09"></v>
+    <v c="USA" value="0.27"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_CCR" units="points">
-    <v c="AUS" value="0"></v>
-    <v c="AUT" value="0.5"></v>
-    <v c="BEL" value="0.5"></v>
-    <v c="CAN" value="0.25"></v>
-    <v c="CZE" value="0.5"></v>
-    <v c="DNK" value="0.5"></v>
-    <v c="FIN" value="0.5"></v>
-    <v c="FRA" value="0.5"></v>
-    <v c="DEU" value="0.5"></v>
-    <v c="GRC" value="0.5"></v>
-    <v c="HUN" value="0.5"></v>
-    <v c="IRL" value="0.5"></v>
-    <v c="ITA" value="0.5"></v>
-    <v c="JPN" value="0"></v>
-    <v c="LUX" value="0.5"></v>
-    <v c="NLD" value="0.5"></v>
-    <v c="NZL" value="0"></v>
-    <v c="NOR" value="0"></v>
-    <v c="POL" value="0.5"></v>
-    <v c="PRT" value="0.5"></v>
-    <v c="SVK" value="0.5"></v>
-    <v c="KOR" value="0"></v>
-    <v c="ESP" value="0.5"></v>
-    <v c="SWE" value="0.5"></v>
-    <v c="CHE" value="0"></v>
-    <v c="GBR" value="0.5"></v>
-    <v c="USA" value="0"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_FIE" units="points">
+<vs y="2018" r="LMY" i="INV_SEC_CCR" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0"></v>
-    <v c="CAN" value="1"></v>
-    <v c="CZE" value="1"></v>
-    <v c="DNK" value="1"></v>
-    <v c="FIN" value="1"></v>
-    <v c="FRA" value="1"></v>
-    <v c="DEU" value="0"></v>
-    <v c="GRC" value="1"></v>
-    <v c="HUN" value="0"></v>
-    <v c="IRL" value="0.5"></v>
-    <v c="ITA" value="1"></v>
-    <v c="JPN" value="1"></v>
-    <v c="LUX" value="0"></v>
-    <v c="NLD" value="0.5"></v>
-    <v c="NZL" value="1"></v>
-    <v c="NOR" value="1"></v>
-    <v c="POL" value="1"></v>
-    <v c="PRT" value="0.5"></v>
-    <v c="SVK" value="0"></v>
-    <v c="KOR" value="1"></v>
-    <v c="ESP" value="1"></v>
-    <v c="SWE" value="1"></v>
-    <v c="CHE" value="0"></v>
-    <v c="GBR" value="0"></v>
-    <v c="USA" value="0"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_ETA" units="points">
-    <v c="AUS" value="1"></v>
-    <v c="AUT" value="0.2"></v>
-    <v c="BEL" value="0.6"></v>
-    <v c="CAN" value="1"></v>
-    <v c="CZE" value="1"></v>
-    <v c="DNK" value="1"></v>
-    <v c="FIN" value="1"></v>
-    <v c="FRA" value="0.2"></v>
-    <v c="DEU" value="0"></v>
-    <v c="GRC" value="1"></v>
-    <v c="HUN" value="1"></v>
-    <v c="IRL" value="0.6"></v>
-    <v c="ITA" value="1"></v>
-    <v c="JPN" value="0.2"></v>
-    <v c="LUX" value="0.4"></v>
-    <v c="NLD" value="1"></v>
-    <v c="NZL" value="1"></v>
-    <v c="NOR" value="1"></v>
-    <v c="POL" value="1"></v>
-    <v c="PRT" value="0.6"></v>
-    <v c="SVK" value="0.2"></v>
-    <v c="KOR" value="0.8"></v>
-    <v c="ESP" value="1"></v>
-    <v c="SWE" value="1"></v>
-    <v c="CHE" value="0"></v>
-    <v c="GBR" value="0.6"></v>
-    <v c="USA" value="1"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_AVO" units="points">
-    <v c="AUS" value="0.5"></v>
-    <v c="AUT" value="0.7"></v>
-    <v c="BEL" value="0.5"></v>
-    <v c="CAN" value="0.4"></v>
+    <v c="CAN" value="0"></v>
     <v c="CZE" value="0"></v>
-    <v c="DNK" value="1"></v>
-    <v c="FIN" value="1"></v>
+    <v c="DNK" value="0"></v>
+    <v c="FIN" value="0"></v>
     <v c="FRA" value="0"></v>
-    <v c="DEU" value="0.7"></v>
-    <v c="GRC" value="1"></v>
-    <v c="HUN" value="0.6"></v>
-    <v c="IRL" value="0.1"></v>
-    <v c="ITA" value="0.5"></v>
-    <v c="JPN" value="0.7"></v>
-    <v c="LUX" value="0.2"></v>
+    <v c="DEU" value="0"></v>
+    <v c="GRC" value="0"></v>
+    <v c="HUN" value="0"></v>
+    <v c="IRL" value="0"></v>
+    <v c="ITA" value="0"></v>
+    <v c="JPN" value="1"></v>
+    <v c="LUX" value="0"></v>
     <v c="NLD" value="0"></v>
-    <v c="NZL" value="0.6"></v>
-    <v c="NOR" value="0.7"></v>
-    <v c="POL" value="1"></v>
-    <v c="PRT" value="0.7"></v>
+    <v c="NZL" value="1"></v>
+    <v c="NOR" value="0"></v>
+    <v c="POL" value="0"></v>
+    <v c="PRT" value="0"></v>
     <v c="SVK" value="0"></v>
     <v c="KOR" value="1"></v>
-    <v c="ESP" value="0.6"></v>
-    <v c="SWE" value="0.7"></v>
-    <v c="CHE" value="0"></v>
-    <v c="GBR" value="0.2"></v>
-    <v c="USA" value="0.6"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_HLV" units="points">
-    <v c="AUS" value="0.5"></v>
-    <v c="AUT" value="0.5"></v>
-    <v c="BEL" value="0.5"></v>
-    <v c="CAN" value="0.5"></v>
-    <v c="CZE" value="0.5"></v>
-    <v c="DNK" value="0.5"></v>
-    <v c="FIN" value="0.5"></v>
-    <v c="FRA" value="0.5"></v>
-    <v c="DEU" value="0.5"></v>
-    <v c="GRC" value="0.5"></v>
-    <v c="HUN" value="0.5"></v>
-    <v c="IRL" value="0.5"></v>
-    <v c="ITA" value="0.5"></v>
-    <v c="JPN" value="0.5"></v>
-    <v c="LUX" value="0"></v>
-    <v c="NLD" value="0.5"></v>
-    <v c="NZL" value="0.5"></v>
-    <v c="NOR" value="0.5"></v>
-    <v c="POL" value="0.5"></v>
-    <v c="PRT" value="0.5"></v>
-    <v c="SVK" value="0.5"></v>
-    <v c="KOR" value="0.5"></v>
-    <v c="ESP" value="0.5"></v>
-    <v c="SWE" value="0.5"></v>
-    <v c="CHE" value="0.5"></v>
-    <v c="GBR" value="0.5"></v>
-    <v c="USA" value="0"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_AML" units="points">
-    <v c="AUS" value="0.6"></v>
-    <v c="AUT" value="0.5"></v>
-    <v c="BEL" value="0.7"></v>
-    <v c="CAN" value="0.5"></v>
-    <v c="CZE" value="0.5"></v>
-    <v c="DNK" value="0.5"></v>
-    <v c="FIN" value="0.5"></v>
-    <v c="FRA" value="0.7"></v>
-    <v c="DEU" value="0.5"></v>
-    <v c="GRC" value="0.3"></v>
-    <v c="HUN" value="0.8"></v>
-    <v c="IRL" value="0.6"></v>
-    <v c="ITA" value="0.6"></v>
-    <v c="JPN" value="0.5"></v>
-    <v c="LUX" value="0.4"></v>
-    <v c="NLD" value="0.6"></v>
-    <v c="NZL" value="0.4"></v>
-    <v c="NOR" value="0.6"></v>
-    <v c="POL" value="0.4"></v>
-    <v c="PRT" value="0.7"></v>
-    <v c="SVK" value="0.4"></v>
-    <v c="KOR" value="0.4"></v>
-    <v c="ESP" value="0.9"></v>
-    <v c="SWE" value="0.5"></v>
-    <v c="CHE" value="0.6"></v>
-    <v c="GBR" value="0.7"></v>
-    <v c="USA" value="0.7"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_AIE" units="points">
-    <v c="AUS" value="0.5"></v>
-    <v c="AUT" value="0.5"></v>
-    <v c="BEL" value="1"></v>
-    <v c="CAN" value="0.5"></v>
-    <v c="CZE" value="1"></v>
-    <v c="DNK" value="1"></v>
-    <v c="FIN" value="1"></v>
-    <v c="FRA" value="1"></v>
-    <v c="DEU" value="1"></v>
-    <v c="GRC" value="1"></v>
-    <v c="HUN" value="1"></v>
-    <v c="IRL" value="1"></v>
-    <v c="ITA" value="1"></v>
-    <v c="JPN" value="0.1"></v>
-    <v c="LUX" value="1"></v>
-    <v c="NLD" value="1"></v>
-    <v c="NZL" value="0.5"></v>
-    <v c="NOR" value="1"></v>
-    <v c="POL" value="1"></v>
-    <v c="PRT" value="1"></v>
-    <v c="SVK" value="1"></v>
-    <v c="KOR" value="1"></v>
-    <v c="ESP" value="1"></v>
-    <v c="SWE" value="1"></v>
-    <v c="CHE" value="0.5"></v>
-    <v c="GBR" value="1"></v>
-    <v c="USA" value="0"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_BIT" units="points">
-    <v c="AUS" value="1"></v>
-    <v c="AUT" value="1"></v>
-    <v c="BEL" value="1"></v>
-    <v c="CAN" value="1"></v>
-    <v c="CZE" value="1"></v>
-    <v c="DNK" value="1"></v>
-    <v c="FIN" value="1"></v>
-    <v c="FRA" value="1"></v>
-    <v c="DEU" value="1"></v>
-    <v c="GRC" value="1"></v>
-    <v c="HUN" value="1"></v>
-    <v c="IRL" value="1"></v>
-    <v c="ITA" value="1"></v>
-    <v c="JPN" value="1"></v>
-    <v c="LUX" value="1"></v>
-    <v c="NLD" value="1"></v>
-    <v c="NZL" value="1"></v>
-    <v c="NOR" value="1"></v>
-    <v c="POL" value="1"></v>
-    <v c="PRT" value="1"></v>
-    <v c="SVK" value="1"></v>
-    <v c="KOR" value="1"></v>
-    <v c="ESP" value="1"></v>
-    <v c="SWE" value="1"></v>
-    <v c="CHE" value="0.53"></v>
-    <v c="GBR" value="1"></v>
+    <v c="ESP" value="0"></v>
+    <v c="SWE" value="0"></v>
+    <v c="CHE" value="1"></v>
+    <v c="GBR" value="0.23"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="INV_SEC_ITC" units="points">
-    <v c="AUS" value="1"></v>
-    <v c="AUT" value="1"></v>
-    <v c="BEL" value="1"></v>
-    <v c="CAN" value="1"></v>
-    <v c="CZE" value="1"></v>
-    <v c="DNK" value="1"></v>
-    <v c="FIN" value="1"></v>
-    <v c="FRA" value="1"></v>
-    <v c="DEU" value="0.8"></v>
-    <v c="GRC" value="1"></v>
-    <v c="HUN" value="1"></v>
-    <v c="IRL" value="1"></v>
-    <v c="ITA" value="1"></v>
-    <v c="JPN" value="0.6"></v>
-    <v c="LUX" value="1"></v>
-    <v c="NLD" value="1"></v>
-    <v c="NZL" value="0.8"></v>
-    <v c="NOR" value="1"></v>
-    <v c="POL" value="1"></v>
-    <v c="PRT" value="1"></v>
-    <v c="SVK" value="1"></v>
-    <v c="KOR" value="0.8"></v>
-    <v c="ESP" value="1"></v>
-    <v c="SWE" value="1"></v>
-    <v c="CHE" value="0.8"></v>
-    <v c="GBR" value="1"></v>
-    <v c="USA" value="0.8"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_IJC" units="points">
-    <v c="AUS" value="1"></v>
-    <v c="AUT" value="0.5"></v>
-    <v c="BEL" value="0.7"></v>
-    <v c="CAN" value="0.7"></v>
-    <v c="CZE" value="0.7"></v>
-    <v c="DNK" value="0.8"></v>
-    <v c="FIN" value="0.7"></v>
-    <v c="FRA" value="0.7"></v>
-    <v c="DEU" value="0.7"></v>
-    <v c="GRC" value="0.6"></v>
-    <v c="HUN" value="1"></v>
-    <v c="IRL" value="1"></v>
-    <v c="ITA" value="1"></v>
-    <v c="JPN" value="0.5"></v>
-    <v c="LUX" value="0.7"></v>
-    <v c="NLD" value="0.5"></v>
-    <v c="NZL" value="0.7"></v>
-    <v c="NOR" value="0.7"></v>
-    <v c="POL" value="0.7"></v>
-    <v c="PRT" value="1"></v>
-    <v c="SVK" value="0.5"></v>
-    <v c="KOR" value="0.7"></v>
-    <v c="ESP" value="0.9"></v>
-    <v c="SWE" value="0.9"></v>
-    <v c="CHE" value="0.8"></v>
-    <v c="GBR" value="0.9"></v>
-    <v c="USA" value="0.8"></v>
-</vs>
-<vs y="2017" r="LMY" i="INV_SEC_ASC" units="points">
-    <v c="AUS" value="1"></v>
-    <v c="AUT" value="1"></v>
-    <v c="BEL" value="1"></v>
-    <v c="CAN" value="1"></v>
-    <v c="CZE" value="1"></v>
-    <v c="DNK" value="1"></v>
-    <v c="FIN" value="1"></v>
-    <v c="FRA" value="1"></v>
-    <v c="DEU" value="1"></v>
-    <v c="GRC" value="1"></v>
-    <v c="HUN" value="1"></v>
-    <v c="IRL" value="1"></v>
-    <v c="ITA" value="1"></v>
+<vs y="2018" r="LMY" i="INV_SEC_BEN" units="points">
+    <v c="AUS" value="0.33"></v>
+    <v c="AUT" value="0.66"></v>
+    <v c="BEL" value="0.33"></v>
+    <v c="CAN" value="0.66"></v>
+    <v c="CZE" value="0.66"></v>
+    <v c="DNK" value="0.66"></v>
+    <v c="FIN" value="0.66"></v>
+    <v c="FRA" value="0"></v>
+    <v c="DEU" value="0.33"></v>
+    <v c="GRC" value="0.66"></v>
+    <v c="HUN" value="0.33"></v>
+    <v c="IRL" value="0"></v>
+    <v c="ITA" value="0"></v>
     <v c="JPN" value="1"></v>
-    <v c="LUX" value="1"></v>
-    <v c="NLD" value="0"></v>
-    <v c="NZL" value="1"></v>
-    <v c="NOR" value="1"></v>
-    <v c="POL" value="1"></v>
-    <v c="PRT" value="1"></v>
-    <v c="SVK" value="1"></v>
-    <v c="KOR" value="1"></v>
-    <v c="ESP" value="1"></v>
-    <v c="SWE" value="1"></v>
-    <v c="CHE" value="1"></v>
-    <v c="GBR" value="0"></v>
-    <v c="USA" value="0"></v>
+    <v c="LUX" value="0.66"></v>
+    <v c="NLD" value="0.66"></v>
+    <v c="NZL" value="0.33"></v>
+    <v c="NOR" value="0.33"></v>
+    <v c="POL" value="0.66"></v>
+    <v c="PRT" value="0.33"></v>
+    <v c="SVK" value="0.66"></v>
+    <v c="KOR" value="0.66"></v>
+    <v c="ESP" value="0.33"></v>
+    <v c="SWE" value="0.66"></v>
+    <v c="CHE" value="0.33"></v>
+    <v c="GBR" value="0.58"></v>
+    <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_CON" units="points">
+<vs y="2018" r="LMY" i="MIG_CON" units="points">
     <v c="AUS" value="10"></v>
     <v c="AUT" value="10"></v>
     <v c="BEL" value="20"></v>
@@ -6247,7 +5976,7 @@
     <v c="GBR" value="15"></v>
     <v c="USA" value="10"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_MIP" units="points">
+<vs y="2018" r="LMY" i="MIG_MIP" units="points">
     <v c="AUS" value="66"></v>
     <v c="AUT" value="50"></v>
     <v c="BEL" value="67"></v>
@@ -6276,389 +6005,389 @@
     <v c="GBR" value="57"></v>
     <v c="USA" value="63"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_ASY" format="percentage" precision="4" units="% population">
-    <v c="AUS" value="0.0011953"></v>
-    <v c="AUT" value="0.0047061"></v>
-    <v c="BEL" value="0.0013118"></v>
-    <v c="CAN" value="0.0006718"></v>
-    <v c="CZE" value="0.0001151"></v>
-    <v c="DNK" value="0.0011355"></v>
-    <v c="FIN" value="0.0009781"></v>
-    <v c="FRA" value="0.0011879"></v>
-    <v c="DEU" value="0.0089573"></v>
-    <v c="GRC" value="0.0045459"></v>
-    <v c="HUN" value="0.0028373"></v>
-    <v c="IRL" value="0.0005817"></v>
-    <v c="ITA" value="0.0020416"></v>
-    <v c="JPN" value="0.0000856"></v>
-    <v c="LUX" value="0.0035667"></v>
-    <v c="NLD" value="0.0011626"></v>
-    <v c="NZL" value="0.0000909"></v>
-    <v c="NOR" value="0.0006294"></v>
-    <v c="POL" value="0.0002587"></v>
-    <v c="PRT" value="0.0001399"></v>
-    <v c="SVK" value="0.0000183"></v>
-    <v c="KOR" value="0.0001618"></v>
-    <v c="ESP" value="0.0003294"></v>
-    <v c="SWE" value="0.0023359"></v>
-    <v c="CHE" value="0.0033633"></v>
-    <v c="GBR" value="0.0006006"></v>
-    <v c="USA" value="0.0008279"></v>
+<vs y="2018" r="LMY" i="MIG_BDN_ASY" format="percentage" precision="4" units="% population">
+    <v c="AUS" value="0.0014734"></v>
+    <v c="AUT" value="0.0025509"></v>
+    <v c="BEL" value="0.0012342"></v>
+    <v c="CAN" value="0.0013033"></v>
+    <v c="CZE" value="0.0001078"></v>
+    <v c="DNK" value="0.0006016"></v>
+    <v c="FIN" value="0.0005808"></v>
+    <v c="FRA" value="0.0013861"></v>
+    <v c="DEU" value="0.0023982"></v>
+    <v c="GRC" value="0.0052928"></v>
+    <v c="HUN" value="0.000274"></v>
+    <v c="IRL" value="0.0006301"></v>
+    <v c="ITA" value="0.0020886"></v>
+    <v c="JPN" value="0.000155"></v>
+    <v c="LUX" value="0.0038619"></v>
+    <v c="NLD" value="0.0008696"></v>
+    <v c="NZL" value="0.0000937"></v>
+    <v c="NOR" value="0.0006393"></v>
+    <v c="POL" value="0.0000751"></v>
+    <v c="PRT" value="0.0000962"></v>
+    <v c="SVK" value="0.0000305"></v>
+    <v c="KOR" value="0.0001932"></v>
+    <v c="ESP" value="0.0006813"></v>
+    <v c="SWE" value="0.0021398"></v>
+    <v c="CHE" value="0.0019685"></v>
+    <v c="GBR" value="0.0005076"></v>
+    <v c="USA" value="0.0010182"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_ASP" format="percentage" precision="2" units="% total applications">
-    <v c="AUS" value="0.3332132"></v>
-    <v c="AUT" value="0.8584112"></v>
-    <v c="BEL" value="0.5922645"></v>
-    <v c="CAN" value="0.668597"></v>
-    <v c="CZE" value="0.4122449"></v>
-    <v c="DNK" value="0.9913032"></v>
-    <v c="FIN" value="0.2863304"></v>
-    <v c="FRA" value="0.298597"></v>
-    <v c="DEU" value="0.6927262"></v>
-    <v c="GRC" value="0.3716865"></v>
-    <v c="HUN" value="0.0745098"></v>
-    <v c="IRL" value="0.1783573"></v>
-    <v c="ITA" value="0.3927653"></v>
-    <v c="JPN" value="0.0119231"></v>
-    <v c="LUX" value="0.4413004"></v>
-    <v c="NLD" value="0.7197504"></v>
-    <v c="NZL" value="0.2569721"></v>
-    <v c="NOR" value="0.5037534"></v>
-    <v c="POL" value="0.0657975"></v>
-    <v c="PRT" value="0.6680412"></v>
-    <v c="SVK" value="0.6382114"></v>
-    <v c="KOR" value="0.0453224"></v>
-    <v c="ESP" value="0.7329233"></v>
-    <v c="SWE" value="0.6767549"></v>
-    <v c="CHE" value="0.230724"></v>
-    <v c="GBR" value="0.3636788"></v>
-    <v c="USA" value="0.6143341"></v>
+<vs y="2018" r="LMY" i="MIG_BDN_ASP" format="percentage" precision="2" units="% total applications">
+    <v c="AUS" value="0.2597706"></v>
+    <v c="AUT" value="0.8487202"></v>
+    <v c="BEL" value="0.5229778"></v>
+    <v c="CAN" value="0.596626"></v>
+    <v c="CZE" value="0.1879795"></v>
+    <v c="DNK" value="0.3167135"></v>
+    <v c="FIN" value="0.4154242"></v>
+    <v c="FRA" value="0.2937741"></v>
+    <v c="DEU" value="0.5127978"></v>
+    <v c="GRC" value="0.3862436"></v>
+    <v c="HUN" value="0.296875"></v>
+    <v c="IRL" value="0.3824757"></v>
+    <v c="ITA" value="0.4064265"></v>
+    <v c="JPN" value="0.0050446"></v>
+    <v c="LUX" value="0.5516373"></v>
+    <v c="NLD" value="0.490605"></v>
+    <v c="NZL" value="0.3501048"></v>
+    <v c="NOR" value="0.3504416"></v>
+    <v c="POL" value="0.110148"></v>
+    <v c="PRT" value="0.5245902"></v>
+    <v c="SVK" value="0.5142857"></v>
+    <v c="KOR" value="0.07261"></v>
+    <v c="ESP" value="0.4031124"></v>
+    <v c="SWE" value="0.3570502"></v>
+    <v c="CHE" value="0.7670574"></v>
+    <v c="GBR" value="0.3449467"></v>
+    <v c="USA" value="0.4077765"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_REF" units="refugees / 1,000 inhabitants">
-    <v c="AUS" value="1.7"></v>
-    <v c="AUT" value="10.9"></v>
-    <v c="BEL" value="3.7"></v>
-    <v c="CAN" value="2.7"></v>
-    <v c="CZE" value="0.4"></v>
-    <v c="DNK" value="5.9"></v>
-    <v c="FIN" value="3.3"></v>
-    <v c="FRA" value="4.7"></v>
-    <v c="DEU" value="8.3"></v>
-    <v c="GRC" value="4.3"></v>
-    <v c="HUN" value="0.5"></v>
-    <v c="IRL" value="1.2"></v>
-    <v c="ITA" value="2.5"></v>
-    <v c="JPN" value="0"></v>
-    <v c="LUX" value="3.6"></v>
-    <v c="NLD" value="6"></v>
-    <v c="NZL" value="0.3"></v>
-    <v c="NOR" value="11.3"></v>
-    <v c="POL" value="0.3"></v>
-    <v c="PRT" value="0.1"></v>
-    <v c="SVK" value="0.2"></v>
-    <v c="KOR" value="0"></v>
-    <v c="ESP" value="0.3"></v>
-    <v c="SWE" value="23.4"></v>
-    <v c="CHE" value="9.9"></v>
-    <v c="GBR" value="1.8"></v>
-    <v c="USA" value="0.8"></v>
+<vs y="2018" r="LMY" i="MIG_BDN_REF" units="refugees / 1,000 inhabitants">
+    <v c="AUS" value="1.98"></v>
+    <v c="AUT" value="13.19"></v>
+    <v c="BEL" value="3.69"></v>
+    <v c="CAN" value="2.86"></v>
+    <v c="CZE" value="0.34"></v>
+    <v c="DNK" value="6.22"></v>
+    <v c="FIN" value="3.77"></v>
+    <v c="FRA" value="5.19"></v>
+    <v c="DEU" value="11.82"></v>
+    <v c="GRC" value="3.49"></v>
+    <v c="HUN" value="0.59"></v>
+    <v c="IRL" value="1.35"></v>
+    <v c="ITA" value="2.82"></v>
+    <v c="JPN" value="0.02"></v>
+    <v c="LUX" value="3.51"></v>
+    <v c="NLD" value="6.1"></v>
+    <v c="NZL" value="0.31"></v>
+    <v c="NOR" value="11.17"></v>
+    <v c="POL" value="0.32"></v>
+    <v c="PRT" value="0.16"></v>
+    <v c="SVK" value="0.17"></v>
+    <v c="KOR" value="0.04"></v>
+    <v c="ESP" value="0.38"></v>
+    <v c="SWE" value="24.31"></v>
+    <v c="CHE" value="10.98"></v>
+    <v c="GBR" value="1.84"></v>
+    <v c="USA" value="0.88"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_REP" units="refugees / GDP per capita (PPP)">
-    <v c="AUS" value="0.9"></v>
-    <v c="AUT" value="1.9"></v>
-    <v c="BEL" value="0.9"></v>
-    <v c="CAN" value="2.1"></v>
+<vs y="2018" r="LMY" i="MIG_BDN_REP" units="refugees / GDP per capita (PPP)">
+    <v c="AUS" value="0.96"></v>
+    <v c="AUT" value="2.31"></v>
+    <v c="BEL" value="0.91"></v>
+    <v c="CAN" value="2.17"></v>
     <v c="CZE" value="0.1"></v>
-    <v c="DNK" value="0.7"></v>
-    <v c="FIN" value="0.4"></v>
-    <v c="FRA" value="7.2"></v>
-    <v c="DEU" value="13.9"></v>
-    <v c="GRC" value="1.7"></v>
-    <v c="HUN" value="0.2"></v>
-    <v c="IRL" value="0.1"></v>
-    <v c="ITA" value="4"></v>
-    <v c="JPN" value="0.1"></v>
-    <v c="LUX" value="0"></v>
-    <v c="NLD" value="2"></v>
-    <v c="NZL" value="0"></v>
-    <v c="NOR" value="0.9"></v>
-    <v c="POL" value="0.4"></v>
-    <v c="PRT" value="0"></v>
-    <v c="SVK" value="0"></v>
-    <v c="KOR" value="0"></v>
-    <v c="ESP" value="0.4"></v>
-    <v c="SWE" value="4.6"></v>
-    <v c="CHE" value="1.4"></v>
-    <v c="GBR" value="2.8"></v>
-    <v c="USA" value="4.8"></v>
+    <v c="DNK" value="0.72"></v>
+    <v c="FIN" value="0.47"></v>
+    <v c="FRA" value="7.71"></v>
+    <v c="DEU" value="19.24"></v>
+    <v c="GRC" value="1.41"></v>
+    <v c="HUN" value="0.19"></v>
+    <v c="IRL" value="0.08"></v>
+    <v c="ITA" value="4.39"></v>
+    <v c="JPN" value="0.05"></v>
+    <v c="LUX" value="0.02"></v>
+    <v c="NLD" value="1.94"></v>
+    <v c="NZL" value="0.04"></v>
+    <v c="NOR" value="0.82"></v>
+    <v c="POL" value="0.41"></v>
+    <v c="PRT" value="0.05"></v>
+    <v c="SVK" value="0.03"></v>
+    <v c="KOR" value="0.06"></v>
+    <v c="ESP" value="0.46"></v>
+    <v c="SWE" value="4.68"></v>
+    <v c="CHE" value="1.52"></v>
+    <v c="GBR" value="2.76"></v>
+    <v c="USA" value="4.83"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_REA" precision="0" units="refugees / 1,000 sq. km.">
-    <v c="AUS" value="5.5"></v>
-    <v c="AUT" value="1130"></v>
+<vs y="2018" r="LMY" i="MIG_BDN_REA" precision="0" units="refugees / 1,000 sq. km.">
+    <v c="AUS" value="6.3"></v>
+    <v c="AUT" value="1396.7"></v>
     <v c="BEL" value="1392.6"></v>
-    <v c="CAN" value="10.7"></v>
+    <v c="CAN" value="11.5"></v>
     <v c="CZE" value="47.2"></v>
-    <v c="DNK" value="792.8"></v>
-    <v c="FIN" value="60.6"></v>
-    <v c="FRA" value="556.2"></v>
-    <v c="DEU" value="1918.8"></v>
-    <v c="GRC" value="360.2"></v>
-    <v c="HUN" value="52.4"></v>
-    <v c="IRL" value="83.2"></v>
-    <v c="ITA" value="404.2"></v>
-    <v c="JPN" value="8.5"></v>
+    <v c="DNK" value="844.1"></v>
+    <v c="FIN" value="68.5"></v>
+    <v c="FRA" value="615.8"></v>
+    <v c="DEU" value="2781.2"></v>
+    <v c="GRC" value="302.6"></v>
+    <v c="HUN" value="62.9"></v>
+    <v c="IRL" value="93"></v>
+    <v c="ITA" value="459"></v>
+    <v c="JPN" value="7.4"></v>
     <v c="LUX" value="790"></v>
-    <v c="NLD" value="3020"></v>
-    <v c="NZL" value="5.4"></v>
-    <v c="NOR" value="163"></v>
-    <v c="POL" value="38.4"></v>
-    <v c="PRT" value="13"></v>
-    <v c="SVK" value="20.6"></v>
-    <v c="KOR" value="18.5"></v>
-    <v c="ESP" value="26"></v>
-    <v c="SWE" value="565.1"></v>
-    <v c="CHE" value="2092.3"></v>
-    <v c="GBR" value="491.9"></v>
-    <v c="USA" value="29.8"></v>
+    <v c="NLD" value="3082.8"></v>
+    <v c="NZL" value="5.6"></v>
+    <v c="NOR" value="162.2"></v>
+    <v c="POL" value="40"></v>
+    <v c="PRT" value="17.7"></v>
+    <v c="SVK" value="19.2"></v>
+    <v c="KOR" value="23"></v>
+    <v c="ESP" value="35.1"></v>
+    <v c="SWE" value="591.6"></v>
+    <v c="CHE" value="2354.9"></v>
+    <v c="GBR" value="503.6"></v>
+    <v c="USA" value="31.4"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_SHA" format="percentage" units="% total tertiary students">
-    <v c="AUS" value="0.1468462"></v>
-    <v c="AUT" value="0.0368687"></v>
-    <v c="BEL" value="0.0528302"></v>
-    <v c="CAN" value="0.0895703"></v>
-    <v c="CZE" value="0.0207848"></v>
-    <v c="DNK" value="0.0152953"></v>
-    <v c="FIN" value="0.0490329"></v>
-    <v c="FRA" value="0.0758159"></v>
-    <v c="DEU" value="0.0429991"></v>
+<vs y="2018" r="LMY" i="MIG_BDN_SHA" format="percentage" units="% total tertiary students">
+    <v c="AUS" value="0.1305716"></v>
+    <v c="AUT" value="0.0358686"></v>
+    <v c="BEL" value="0.0358815"></v>
+    <v c="CAN" value="0.0794853"></v>
+    <v c="CZE" value="0.0222537"></v>
+    <v c="DNK" value="0.0146483"></v>
+    <v c="FIN" value="0.0428957"></v>
+    <v c="FRA" value="0.0714021"></v>
+    <v c="DEU" value="0.0407065"></v>
     <v c="GRC" value="0.0178056"></v>
-    <v c="HUN" value="0.0244373"></v>
-    <v c="IRL" value="0.0300963"></v>
-    <v c="ITA" value="0.032491"></v>
-    <v c="JPN" value="0.0285877"></v>
-    <v c="LUX" value="0.0857847"></v>
-    <v c="NLD" value="0.0307883"></v>
-    <v c="NZL" value="0.144096"></v>
-    <v c="NOR" value="0.018811"></v>
-    <v c="POL" value="0.013546"></v>
-    <v c="PRT" value="0.033429"></v>
-    <v c="SVK" value="0.008764"></v>
-    <v c="KOR" value="0.0143525"></v>
-    <v c="ESP" value="0.0144685"></v>
-    <v c="SWE" value="0.0338996"></v>
-    <v c="CHE" value="0.0423214"></v>
-    <v c="GBR" value="0.0960894"></v>
-    <v c="USA" value="0.0296826"></v>
+    <v c="HUN" value="0.0262796"></v>
+    <v c="IRL" value="0.029087"></v>
+    <v c="ITA" value="0.0344893"></v>
+    <v c="JPN" value="0.0309612"></v>
+    <v c="LUX" value="0.0783063"></v>
+    <v c="NLD" value="0.0293816"></v>
+    <v c="NZL" value="0.158875"></v>
+    <v c="NOR" value="0.018581"></v>
+    <v c="POL" value="0.0198696"></v>
+    <v c="PRT" value="0.0393858"></v>
+    <v c="SVK" value="0.0088345"></v>
+    <v c="KOR" value="0.0150041"></v>
+    <v c="ESP" value="0.020929"></v>
+    <v c="SWE" value="0.0299587"></v>
+    <v c="CHE" value="0.0376736"></v>
+    <v c="GBR" value="0.0992926"></v>
+    <v c="USA" value="0.0323824"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_SHI" format="percentage" units="% international tertiary students">
-    <v c="AUS" value="0.8022763"></v>
-    <v c="AUT" value="0.2383181"></v>
-    <v c="BEL" value="0.471918"></v>
-    <v c="CAN" value="0.9820841"></v>
-    <v c="CZE" value="0.2114511"></v>
-    <v c="DNK" value="0.1539695"></v>
-    <v c="FIN" value="0.6594894"></v>
-    <v c="FRA" value="0.7702989"></v>
-    <v c="DEU" value="0.5947602"></v>
+<vs y="2018" r="LMY" i="MIG_BDN_SHI" format="percentage" units="% international tertiary students">
+    <v c="AUS" value="0.8441064"></v>
+    <v c="AUT" value="0.2257169"></v>
+    <v c="BEL" value="0.3208155"></v>
+    <v c="CAN" value="0.724492"></v>
+    <v c="CZE" value="0.2110032"></v>
+    <v c="DNK" value="0.1424498"></v>
+    <v c="FIN" value="0.5606689"></v>
+    <v c="FRA" value="0.7229887"></v>
+    <v c="DEU" value="0.5298877"></v>
     <v c="GRC" value="0.4245987"></v>
-    <v c="HUN" value="0.3469062"></v>
-    <v c="IRL" value="0.4301234"></v>
-    <v c="ITA" value="0.6882253"></v>
-    <v c="JPN" value="0.8130822"></v>
-    <v c="LUX" value="0.1754032"></v>
-    <v c="NLD" value="0.3456685"></v>
-    <v c="NZL" value="0.7687761"></v>
-    <v c="NOR" value="0.5378788"></v>
-    <v c="POL" value="0.6888047"></v>
-    <v c="PRT" value="0.8135457"></v>
-    <v c="SVK" value="0.1559914"></v>
-    <v c="KOR" value="0.9080094"></v>
-    <v c="ESP" value="0.5944204"></v>
-    <v c="SWE" value="0.574031"></v>
-    <v c="CHE" value="0.2473958"></v>
-    <v c="GBR" value="0.5273603"></v>
-    <v c="USA" value="0.6941644"></v>
+    <v c="HUN" value="0.3725526"></v>
+    <v c="IRL" value="0.3947518"></v>
+    <v c="ITA" value="0.6966899"></v>
+    <v c="JPN" value="0.9020912"></v>
+    <v c="LUX" value="0.170724"></v>
+    <v c="NLD" value="0.2872408"></v>
+    <v c="NZL" value="0.7515721"></v>
+    <v c="NOR" value="0.5229801"></v>
+    <v c="POL" value="0.7522279"></v>
+    <v c="PRT" value="0.787127"></v>
+    <v c="SVK" value="0.1497793"></v>
+    <v c="KOR" value="0.8990649"></v>
+    <v c="ESP" value="0.5455161"></v>
+    <v c="SWE" value="0.4813662"></v>
+    <v c="CHE" value="0.2192682"></v>
+    <v c="GBR" value="0.5370642"></v>
+    <v c="USA" value="0.6971433"></v>
 </vs>
-<vs y="2017" r="LMY" i="MIG_BDN_INM" units="score">
-    <v c="AUS" value="5.2"></v>
-    <v c="AUT" value="7"></v>
-    <v c="BEL" value="5.6"></v>
-    <v c="CAN" value="5.1"></v>
+<vs y="2018" r="LMY" i="MIG_BDN_INM" units="score">
+    <v c="AUS" value="5.1"></v>
+    <v c="AUT" value="6.4"></v>
+    <v c="BEL" value="5"></v>
+    <v c="CAN" value="5.2"></v>
     <v c="CZE" value="4.2"></v>
     <v c="DNK" value="5.2"></v>
-    <v c="FIN" value="4.4"></v>
+    <v c="FIN" value="4.5"></v>
     <v c="FRA" value="4.3"></v>
-    <v c="DEU" value="7.2"></v>
-    <v c="GRC" value="3.8"></v>
-    <v c="HUN" value="4.2"></v>
-    <v c="IRL" value="3.9"></v>
+    <v c="DEU" value="6.8"></v>
+    <v c="GRC" value="4"></v>
+    <v c="HUN" value="4"></v>
+    <v c="IRL" value="3.8"></v>
     <v c="ITA" value="4.5"></v>
-    <v c="JPN" value="4.3"></v>
-    <v c="LUX" value="7.6"></v>
-    <v c="NLD" value="5"></v>
-    <v c="NZL" value="6.3"></v>
-    <v c="NOR" value="5.3"></v>
+    <v c="JPN" value="4.2"></v>
+    <v c="LUX" value="7.9"></v>
+    <v c="NLD" value="5.2"></v>
+    <v c="NZL" value="6.4"></v>
+    <v c="NOR" value="5.5"></v>
     <v c="POL" value="4.2"></v>
-    <v c="PRT" value="4.3"></v>
-    <v c="SVK" value="3.9"></v>
-    <v c="KOR" value="4.9"></v>
-    <v c="ESP" value="4.6"></v>
-    <v c="SWE" value="5.5"></v>
+    <v c="PRT" value="4.2"></v>
+    <v c="SVK" value="3.8"></v>
+    <v c="KOR" value="5"></v>
+    <v c="ESP" value="4.8"></v>
+    <v c="SWE" value="6.2"></v>
     <v c="CHE" value="5.6"></v>
-    <v c="GBR" value="4.7"></v>
+    <v c="GBR" value="4.4"></v>
     <v c="USA" value="4.3"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_FFP" lessisbetter="1" units="tons of CO2 equivalent per capita">
-    <v c="AUS" value="58.5"></v>
+<vs y="2018" r="LMY" i="ENV_FFP" lessisbetter="1" units="tons of CO2 equivalent per capita">
+    <v c="AUS" value="57.8"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0"></v>
     <v c="CAN" value="30.2"></v>
-    <v c="CZE" value="6.2"></v>
-    <v c="DNK" value="5.7"></v>
+    <v c="CZE" value="6"></v>
+    <v c="DNK" value="5.2"></v>
     <v c="FIN" value="0"></v>
     <v c="FRA" value="0"></v>
-    <v c="DEU" value="1"></v>
-    <v c="GRC" value="2.1"></v>
+    <v c="DEU" value="2.1"></v>
+    <v c="GRC" value="1.5"></v>
     <v c="HUN" value="0.6"></v>
     <v c="IRL" value="0"></v>
-    <v c="ITA" value="0.5"></v>
+    <v c="ITA" value="0.4"></v>
     <v c="JPN" value="0"></v>
     <v c="LUX" value="0"></v>
-    <v c="NLD" value="5.1"></v>
-    <v c="NZL" value="1.7"></v>
-    <v c="NOR" value="97"></v>
-    <v c="POL" value="5.7"></v>
+    <v c="NLD" value="4.7"></v>
+    <v c="NZL" value="1.4"></v>
+    <v c="NOR" value="97.3"></v>
+    <v c="POL" value="5.6"></v>
     <v c="PRT" value="0"></v>
     <v c="SVK" value="0"></v>
     <v c="KOR" value="0.1"></v>
     <v c="ESP" value="0.1"></v>
     <v c="SWE" value="0"></v>
     <v c="CHE" value="0"></v>
-    <v c="GBR" value="3.7"></v>
-    <v c="USA" value="15.8"></v>
+    <v c="GBR" value="3.6"></v>
+    <v c="USA" value="14.3"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_GRE" lessisbetter="1" units="tons of CO2 equivalent per capita">
-    <v c="AUS" value="24.4"></v>
+<vs y="2018" r="LMY" i="ENV_GRE" lessisbetter="1" units="tons of CO2 equivalent per capita">
+    <v c="AUS" value="21.7"></v>
     <v c="AUT" value="8.6"></v>
-    <v c="BEL" value="10.2"></v>
-    <v c="CAN" value="19.2"></v>
-    <v c="CZE" value="11.4"></v>
-    <v c="DNK" value="9.3"></v>
-    <v c="FIN" value="5.4"></v>
+    <v c="BEL" value="10.3"></v>
+    <v c="CAN" value="18.7"></v>
+    <v c="CZE" value="11.8"></v>
+    <v c="DNK" value="10"></v>
+    <v c="FIN" value="5.8"></v>
     <v c="FRA" value="6.4"></v>
     <v c="DEU" value="10.9"></v>
-    <v c="GRC" value="8.6"></v>
-    <v c="HUN" value="5.5"></v>
-    <v c="IRL" value="13.7"></v>
-    <v c="ITA" value="6.5"></v>
-    <v c="JPN" value="9.9"></v>
-    <v c="LUX" value="17.3"></v>
-    <v c="NLD" value="11.9"></v>
-    <v c="NZL" value="13"></v>
-    <v c="NOR" value="5.7"></v>
-    <v c="POL" value="9.4"></v>
-    <v c="PRT" value="5.8"></v>
-    <v c="SVK" value="6.4"></v>
-    <v c="KOR" value="12.4"></v>
-    <v c="ESP" value="6.4"></v>
-    <v c="SWE" value="0.3"></v>
-    <v c="CHE" value="5.7"></v>
-    <v c="GBR" value="7.7"></v>
-    <v c="USA" value="18.2"></v>
+    <v c="GRC" value="8.2"></v>
+    <v c="HUN" value="5.8"></v>
+    <v c="IRL" value="14"></v>
+    <v c="ITA" value="6.6"></v>
+    <v c="JPN" value="9.8"></v>
+    <v c="LUX" value="16.4"></v>
+    <v c="NLD" value="11.8"></v>
+    <v c="NZL" value="11.9"></v>
+    <v c="NOR" value="5.5"></v>
+    <v c="POL" value="9.7"></v>
+    <v c="PRT" value="6"></v>
+    <v c="SVK" value="6.3"></v>
+    <v c="KOR" value="12.6"></v>
+    <v c="ESP" value="6.1"></v>
+    <v c="SWE" value="1"></v>
+    <v c="CHE" value="5.5"></v>
+    <v c="GBR" value="7.2"></v>
+    <v c="USA" value="17.9"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_CGE" lessisbetter="1" units="average annual growth rate of GHG emissions, % GDP (PPP), 2005–2015">
-    <v c="AUS" value="-0.04343"></v>
-    <v c="AUT" value="-0.050774"></v>
-    <v c="BEL" value="-0.053906"></v>
-    <v c="CAN" value="-0.044218"></v>
-    <v c="CZE" value="-0.061176"></v>
-    <v c="DNK" value="-0.069366"></v>
-    <v c="FIN" value="-0.061685"></v>
-    <v c="FRA" value="-0.047296"></v>
-    <v c="DEU" value="-0.042095"></v>
-    <v c="GRC" value="-0.034037"></v>
-    <v c="HUN" value="-0.068194"></v>
-    <v c="IRL" value="-0.049879"></v>
-    <v c="ITA" value="-0.051393"></v>
-    <v c="JPN" value="-0.014299"></v>
-    <v c="LUX" value="-0.071067"></v>
-    <v c="NLD" value="-0.036468"></v>
-    <v c="NZL" value="-0.030771"></v>
-    <v c="NOR" value="-0.047493"></v>
-    <v c="POL" value="-0.069053"></v>
-    <v c="PRT" value="-0.062111"></v>
-    <v c="SVK" value="-0.08367"></v>
-    <v c="KOR" value="-0.044908"></v>
-    <v c="ESP" value="-0.060647"></v>
-    <v c="SWE" value="-0.214293"></v>
-    <v c="CHE" value="-0.054754"></v>
-    <v c="GBR" value="-0.048053"></v>
-    <v c="USA" value="-0.035767"></v>
+<vs y="2018" r="LMY" i="ENV_CGE" lessisbetter="1" units="average annual growth rate of GHG emissions, % GDP (PPP), 2005–2015">
+    <v c="AUS" value="-0.04575"></v>
+    <v c="AUT" value="-0.021185"></v>
+    <v c="BEL" value="-0.029824"></v>
+    <v c="CAN" value="-0.017859"></v>
+    <v c="CZE" value="-0.029612"></v>
+    <v c="DNK" value="-0.039144"></v>
+    <v c="FIN" value="-0.053641"></v>
+    <v c="FRA" value="-0.022885"></v>
+    <v c="DEU" value="-0.02015"></v>
+    <v c="GRC" value="-0.004195"></v>
+    <v c="HUN" value="-0.031939"></v>
+    <v c="IRL" value="-0.046364"></v>
+    <v c="ITA" value="-0.028347"></v>
+    <v c="JPN" value="-0.00334"></v>
+    <v c="LUX" value="-0.042481"></v>
+    <v c="NLD" value="-0.01457"></v>
+    <v c="NZL" value="-0.015914"></v>
+    <v c="NOR" value="-0.003524"></v>
+    <v c="POL" value="-0.036293"></v>
+    <v c="PRT" value="-0.010266"></v>
+    <v c="SVK" value="-0.04839"></v>
+    <v c="KOR" value="-0.004186"></v>
+    <v c="ESP" value="-0.032225"></v>
+    <v c="SWE" value="-0.114855"></v>
+    <v c="CHE" value="-0.029997"></v>
+    <v c="GBR" value="-0.044557"></v>
+    <v c="USA" value="-0.025338"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_GAS" format="currency" units="$PPP/liter">
+<vs y="2018" r="LMY" i="ENV_GAS" format="currency" units="$PPP/liter">
     <v c="AUS" value="0.35"></v>
-    <v c="AUT" value="0.85"></v>
-    <v c="BEL" value="1.05"></v>
+    <v c="AUT" value="0.86"></v>
+    <v c="BEL" value="1.06"></v>
     <v c="CAN" value="0.32"></v>
-    <v c="CZE" value="1.39"></v>
-    <v c="DNK" value="0.9"></v>
-    <v c="FIN" value="1.03"></v>
-    <v c="FRA" value="1.04"></v>
+    <v c="CZE" value="1.4"></v>
+    <v c="DNK" value="0.93"></v>
+    <v c="FIN" value="1.1"></v>
+    <v c="FRA" value="1.11"></v>
     <v c="DEU" value="1.12"></v>
-    <v c="GRC" value="1.55"></v>
-    <v c="HUN" value="1.49"></v>
-    <v c="IRL" value="1"></v>
-    <v c="ITA" value="1.34"></v>
-    <v c="JPN" value="0.63"></v>
+    <v c="GRC" value="1.67"></v>
+    <v c="HUN" value="1.44"></v>
+    <v c="IRL" value="1.07"></v>
+    <v c="ITA" value="1.41"></v>
+    <v c="JPN" value="0.68"></v>
     <v c="LUX" value="0.71"></v>
-    <v c="NLD" value="1.25"></v>
-    <v c="NZL" value="0.62"></v>
-    <v c="NOR" value="0.87"></v>
-    <v c="POL" value="1.41"></v>
-    <v c="PRT" value="1.49"></v>
-    <v c="SVK" value="1.47"></v>
-    <v c="KOR" value="1.07"></v>
-    <v c="ESP" value="1"></v>
-    <v c="SWE" value="0.9"></v>
-    <v c="CHE" value="0.67"></v>
+    <v c="NLD" value="1.3"></v>
+    <v c="NZL" value="0.64"></v>
+    <v c="NOR" value="0.89"></v>
+    <v c="POL" value="1.42"></v>
+    <v c="PRT" value="1.59"></v>
+    <v c="SVK" value="1.5"></v>
+    <v c="KOR" value="1.08"></v>
+    <v c="ESP" value="1.03"></v>
+    <v c="SWE" value="0.99"></v>
+    <v c="CHE" value="0.71"></v>
     <v c="GBR" value="1.1"></v>
-    <v c="USA" value="0.14"></v>
+    <v c="USA" value="0.15"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_USE" precision="2" units="score">
-    <v c="AUS" value="4.81"></v>
-    <v c="AUT" value="5.31"></v>
-    <v c="BEL" value="5.31"></v>
-    <v c="CAN" value="4.85"></v>
-    <v c="CZE" value="5.31"></v>
-    <v c="DNK" value="5.31"></v>
-    <v c="FIN" value="5.31"></v>
-    <v c="FRA" value="5.31"></v>
-    <v c="DEU" value="5.31"></v>
-    <v c="GRC" value="5.31"></v>
-    <v c="HUN" value="5.31"></v>
-    <v c="IRL" value="5.31"></v>
-    <v c="ITA" value="5.31"></v>
-    <v c="JPN" value="4.99"></v>
-    <v c="LUX" value="5.31"></v>
-    <v c="NLD" value="5.31"></v>
-    <v c="NZL" value="4.98"></v>
-    <v c="NOR" value="4.92"></v>
-    <v c="POL" value="5.31"></v>
-    <v c="PRT" value="5.31"></v>
-    <v c="SVK" value="5.31"></v>
-    <v c="KOR" value="-0.01"></v>
-    <v c="ESP" value="5.31"></v>
-    <v c="SWE" value="5.31"></v>
-    <v c="CHE" value="4.92"></v>
-    <v c="GBR" value="5.31"></v>
-    <v c="USA" value="4.72"></v>
+<vs y="2018" r="LMY" i="ENV_USE" precision="2" units="score">
+    <v c="AUS" value="5.08"></v>
+    <v c="AUT" value="5.22"></v>
+    <v c="BEL" value="5.22"></v>
+    <v c="CAN" value="5.16"></v>
+    <v c="CZE" value="5.22"></v>
+    <v c="DNK" value="5.22"></v>
+    <v c="FIN" value="5.22"></v>
+    <v c="FRA" value="5.22"></v>
+    <v c="DEU" value="5.22"></v>
+    <v c="GRC" value="5.22"></v>
+    <v c="HUN" value="5.22"></v>
+    <v c="IRL" value="5.22"></v>
+    <v c="ITA" value="5.22"></v>
+    <v c="JPN" value="5.09"></v>
+    <v c="LUX" value="5.22"></v>
+    <v c="NLD" value="5.22"></v>
+    <v c="NZL" value="5.22"></v>
+    <v c="NOR" value="5.22"></v>
+    <v c="POL" value="5.22"></v>
+    <v c="PRT" value="5.22"></v>
+    <v c="SVK" value="5.22"></v>
+    <v c="KOR" value="-0.09"></v>
+    <v c="ESP" value="5.22"></v>
+    <v c="SWE" value="5.22"></v>
+    <v c="CHE" value="5.22"></v>
+    <v c="GBR" value="5.22"></v>
+    <v c="USA" value="4.91"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_PAR" units="points">
+<vs y="2018" r="LMY" i="ENV_PAR" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
     <v c="CAN" value="1"></v>
-    <v c="CZE" value="0"></v>
+    <v c="CZE" value="1"></v>
     <v c="DNK" value="1"></v>
     <v c="FIN" value="1"></v>
     <v c="FRA" value="1"></v>
@@ -6678,40 +6407,40 @@
     <v c="KOR" value="1"></v>
     <v c="ESP" value="1"></v>
     <v c="SWE" value="1"></v>
-    <v c="CHE" value="0"></v>
+    <v c="CHE" value="1"></v>
     <v c="GBR" value="1"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_SUB" format="percentage" lessisbetter="1" units="% of production value (est)">
-    <v c="AUS" value="0.08852091"></v>
+<vs y="2018" r="LMY" i="ENV_SUB" format="percentage" lessisbetter="1" units="% of production value (est)">
+    <v c="AUS" value="0.05654912"></v>
     <v c="AUT" value="0"></v>
     <v c="BEL" value="0.04404975"></v>
-    <v c="CAN" value="0.30014111"></v>
+    <v c="CAN" value="0.31275346"></v>
     <v c="CZE" value="0"></v>
-    <v c="DNK" value="0.1157505"></v>
-    <v c="FIN" value="1.0493139"></v>
+    <v c="DNK" value="0.22606277"></v>
+    <v c="FIN" value="0.91911706"></v>
     <v c="FRA" value="0.06173804"></v>
-    <v c="DEU" value="0.13213367"></v>
+    <v c="DEU" value="0.1159714"></v>
     <v c="GRC" value="0.14517547"></v>
     <v c="HUN" value="0"></v>
-    <v c="IRL" value="0.10171354"></v>
-    <v c="ITA" value="0.07881267"></v>
-    <v c="JPN" value="0.12105412"></v>
+    <v c="IRL" value="0.08823326"></v>
+    <v c="ITA" value="0.07778957"></v>
+    <v c="JPN" value="0.12862891"></v>
     <v c="LUX" value="0"></v>
-    <v c="NLD" value="0.01352931"></v>
-    <v c="NZL" value="0.12275409"></v>
-    <v c="NOR" value="0.10761647"></v>
+    <v c="NLD" value="0.19537729"></v>
+    <v c="NZL" value="0.09247275"></v>
+    <v c="NOR" value="0.0953691"></v>
     <v c="POL" value="0.00002471"></v>
-    <v c="PRT" value="0.00940905"></v>
+    <v c="PRT" value="0.0048615"></v>
     <v c="SVK" value="0"></v>
-    <v c="KOR" value="0.01057291"></v>
-    <v c="ESP" value="0.03556722"></v>
-    <v c="SWE" value="0.86239236"></v>
+    <v c="KOR" value="0.01255569"></v>
+    <v c="ESP" value="0.00002785"></v>
+    <v c="SWE" value="0.75973318"></v>
     <v c="CHE" value="0"></v>
-    <v c="GBR" value="0.0322133"></v>
+    <v c="GBR" value="0.00396568"></v>
     <v c="USA" value="0.33297632"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_UNI" units="points">
+<vs y="2018" r="LMY" i="ENV_UNI" units="points">
     <v c="AUS" value="1"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -6740,155 +6469,152 @@
     <v c="GBR" value="1"></v>
     <v c="USA" value="1"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_MEA" units="score">
-    <v c="AUS" value="4.8"></v>
-    <v c="AUT" value="5.1"></v>
-    <v c="BEL" value="6.3"></v>
-    <v c="CAN" value="4.6"></v>
-    <v c="CZE" value="4.6"></v>
-    <v c="DNK" value="6.3"></v>
-    <v c="FIN" value="5.7"></v>
-    <v c="FRA" value="5.7"></v>
-    <v c="DEU" value="6.3"></v>
+<vs y="2018" r="LMY" i="ENV_MEA" units="score">
+    <v c="AUS" value="4.7"></v>
+    <v c="AUT" value="5.6"></v>
+    <v c="BEL" value="6.1"></v>
+    <v c="CAN" value="4.7"></v>
+    <v c="CZE" value="5.6"></v>
+    <v c="DNK" value="6.1"></v>
+    <v c="FIN" value="5.6"></v>
+    <v c="FRA" value="5.6"></v>
+    <v c="DEU" value="6.1"></v>
     <v c="GRC" value="3.4"></v>
-    <v c="HUN" value="5.1"></v>
-    <v c="IRL" value="2.2"></v>
-    <v c="ITA" value="5.1"></v>
-    <v c="JPN" value="4.8"></v>
-    <v c="LUX" value="4"></v>
-    <v c="NLD" value="5.7"></v>
-    <v c="NZL" value="4.3"></v>
-    <v c="NOR" value="4.8"></v>
-    <v c="POL" value="5.7"></v>
-    <v c="PRT" value="5.1"></v>
-    <v c="SVK" value="5.7"></v>
-    <v c="KOR" value="3.4"></v>
-    <v c="ESP" value="6.3"></v>
-    <v c="SWE" value="4.3"></v>
-    <v c="CHE" value="5.7"></v>
-    <v c="GBR" value="5.7"></v>
-    <v c="USA" value="4"></v>
+    <v c="HUN" value="5"></v>
+    <v c="IRL" value="2.3"></v>
+    <v c="ITA" value="5"></v>
+    <v c="JPN" value="4.7"></v>
+    <v c="LUX" value="5"></v>
+    <v c="NLD" value="5.6"></v>
+    <v c="NZL" value="4.7"></v>
+    <v c="NOR" value="4.7"></v>
+    <v c="POL" value="6.1"></v>
+    <v c="PRT" value="5.6"></v>
+    <v c="SVK" value="5.6"></v>
+    <v c="KOR" value="2.8"></v>
+    <v c="ESP" value="6.1"></v>
+    <v c="SWE" value="3.6"></v>
+    <v c="CHE" value="5.6"></v>
+    <v c="GBR" value="5"></v>
+    <v c="USA" value="3.9"></v>
 </vs>
-<vs y="2017" r="LMY" i="ENV_TRO" format="currency" lessisbetter="1" units="$ per capita">
-    <v c="AUS" value="40.7"></v>
-    <v c="AUT" value="26.8"></v>
-    <v c="BEL" value="26.8"></v>
-    <v c="CAN" value="22.4"></v>
-    <v c="CZE" value="26.8"></v>
-    <v c="DNK" value="26.8"></v>
-    <v c="FIN" value="26.8"></v>
-    <v c="FRA" value="26.8"></v>
-    <v c="DEU" value="26.8"></v>
-    <v c="GRC" value="26.8"></v>
-    <v c="HUN" value="26.8"></v>
-    <v c="IRL" value="26.8"></v>
-    <v c="ITA" value="26.8"></v>
-    <v c="JPN" value="51.2"></v>
-    <v c="LUX" value="26.8"></v>
-    <v c="NLD" value="26.8"></v>
-    <v c="NZL" value="23.3"></v>
-    <v c="NOR" value="26.8"></v>
-    <v c="POL" value="26.8"></v>
-    <v c="PRT" value="26.8"></v>
-    <v c="SVK" value="26.8"></v>
-    <v c="KOR" value="42.7"></v>
-    <v c="ESP" value="26.8"></v>
-    <v c="SWE" value="26.8"></v>
-    <v c="CHE" value="26.8"></v>
-    <v c="GBR" value="26.8"></v>
-    <v c="USA" value="25.7"></v>
+<vs y="2018" r="LMY" i="ENV_TRO" format="currency" lessisbetter="1" units="$ per capita">
+    <v c="AUS" value="39.2"></v>
+    <v c="AUT" value="27.2"></v>
+    <v c="BEL" value="27.2"></v>
+    <v c="CAN" value="21.7"></v>
+    <v c="CZE" value="27.2"></v>
+    <v c="DNK" value="27.2"></v>
+    <v c="FIN" value="27.2"></v>
+    <v c="FRA" value="27.2"></v>
+    <v c="DEU" value="27.2"></v>
+    <v c="GRC" value="27.2"></v>
+    <v c="HUN" value="27.2"></v>
+    <v c="IRL" value="27.2"></v>
+    <v c="ITA" value="27.2"></v>
+    <v c="JPN" value="51.7"></v>
+    <v c="LUX" value="27.2"></v>
+    <v c="NLD" value="27.2"></v>
+    <v c="NZL" value="23.8"></v>
+    <v c="NOR" value="27.2"></v>
+    <v c="POL" value="27.2"></v>
+    <v c="PRT" value="27.2"></v>
+    <v c="SVK" value="27.2"></v>
+    <v c="KOR" value="43.1"></v>
+    <v c="ESP" value="27.2"></v>
+    <v c="SWE" value="27.2"></v>
+    <v c="CHE" value="27.2"></v>
+    <v c="GBR" value="27.2"></v>
+    <v c="USA" value="25.1"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_PEA_PHI" format="percentage" precision="5" units="% GDP">
-    <v c="AUS" value="0.000622851"></v>
-    <v c="AUT" value="0.000790068"></v>
-    <v c="BEL" value="0.000309719"></v>
-    <v c="CAN" value="0.000195547"></v>
-    <v c="CZE" value="0.000539308"></v>
-    <v c="DNK" value="0.001452795"></v>
-    <v c="FIN" value="0.001292687"></v>
-    <v c="FRA" value="0.001291105"></v>
-    <v c="DEU" value="0.000300413"></v>
-    <v c="GRC" value="0.000448566"></v>
-    <v c="HUN" value="0.000499321"></v>
-    <v c="IRL" value="0.000479259"></v>
-    <v c="ITA" value="0.000405166"></v>
-    <v c="JPN" value="0.000224669"></v>
-    <v c="LUX" value="0.000847742"></v>
-    <v c="NLD" value="0.000475159"></v>
-    <v c="NZL" value="0.000513636"></v>
-    <v c="NOR" value="0.000297983"></v>
-    <v c="POL" value="0.000268234"></v>
-    <v c="PRT" value="0.000364244"></v>
-    <v c="SVK" value="0.00086848"></v>
-    <v c="KOR" value="0.000217945"></v>
-    <v c="ESP" value="0.00034171"></v>
-    <v c="SWE" value="0.000356723"></v>
-    <v c="CHE" value="0.00027495"></v>
-    <v c="GBR" value="0.000274016"></v>
-    <v c="USA" value="0.000264556"></v>
-    <v c="0" value="0"></v>
+<vs y="2018" r="LMY" i="SEC_PEA_PHI" format="percentage" precision="5" units="% GDP">
+    <v c="AUS" value="0.000682031"></v>
+    <v c="AUT" value="0.000805805"></v>
+    <v c="BEL" value="0.000341949"></v>
+    <v c="CAN" value="0.00021076"></v>
+    <v c="CZE" value="0.000666109"></v>
+    <v c="DNK" value="0.001609324"></v>
+    <v c="FIN" value="0.001361756"></v>
+    <v c="FRA" value="0.000564083"></v>
+    <v c="DEU" value="0.000400507"></v>
+    <v c="GRC" value="0.000405506"></v>
+    <v c="HUN" value="0.000593754"></v>
+    <v c="IRL" value="0.000466109"></v>
+    <v c="ITA" value="0.000477971"></v>
+    <v c="JPN" value="0.000187349"></v>
+    <v c="LUX" value="0.000774026"></v>
+    <v c="NLD" value="0.00041927"></v>
+    <v c="NZL" value="0.000513759"></v>
+    <v c="NOR" value="0.000421674"></v>
+    <v c="POL" value="0.000283233"></v>
+    <v c="PRT" value="0.000330679"></v>
+    <v c="SVK" value="0.000902084"></v>
+    <v c="KOR" value="0.000213944"></v>
+    <v c="ESP" value="0.000299267"></v>
+    <v c="SWE" value="0.000402938"></v>
+    <v c="CHE" value="0.000307446"></v>
+    <v c="GBR" value="0.000629156"></v>
+    <v c="USA" value="0.000651902"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_PEA_SLP" format="percentage" precision="5" units="% GDP">
-    <v c="AUS" value="0.000051479"></v>
+<vs y="2018" r="LMY" i="SEC_PEA_SLP" format="percentage" precision="5" units="% GDP">
+    <v c="AUS" value="0.000065416"></v>
     <v c="AUT" value="0"></v>
-    <v c="BEL" value="0.000038117"></v>
-    <v c="CAN" value="0.00003162"></v>
+    <v c="BEL" value="0.00003148"></v>
+    <v c="CAN" value="0.000029551"></v>
     <v c="CZE" value="0"></v>
-    <v c="DNK" value="0.000111421"></v>
+    <v c="DNK" value="0.000068662"></v>
     <v c="FIN" value="0"></v>
-    <v c="FRA" value="0.000268961"></v>
-    <v c="DEU" value="0.000079729"></v>
-    <v c="GRC" value="0.000065417"></v>
+    <v c="FRA" value="0.000500544"></v>
+    <v c="DEU" value="0.000078206"></v>
+    <v c="GRC" value="0.000058475"></v>
     <v c="HUN" value="0"></v>
     <v c="IRL" value="0"></v>
-    <v c="ITA" value="0.000029932"></v>
-    <v c="JPN" value="0.000021305"></v>
+    <v c="ITA" value="0.00004293"></v>
+    <v c="JPN" value="0.000011406"></v>
     <v c="LUX" value="0"></v>
-    <v c="NLD" value="0.00018543"></v>
+    <v c="NLD" value="0.000209585"></v>
     <v c="NZL" value="0"></v>
-    <v c="NOR" value="0.000038058"></v>
+    <v c="NOR" value="0.000061674"></v>
     <v c="POL" value="0"></v>
-    <v c="PRT" value="0.000048306"></v>
+    <v c="PRT" value="0.0001032"></v>
     <v c="SVK" value="0"></v>
-    <v c="KOR" value="0.000020993"></v>
-    <v c="ESP" value="0.000076788"></v>
+    <v c="KOR" value="0.000024512"></v>
+    <v c="ESP" value="0.00015613"></v>
     <v c="SWE" value="0"></v>
     <v c="CHE" value="0"></v>
-    <v c="GBR" value="0.000315369"></v>
-    <v c="USA" value="0.001327563"></v>
-    <v c="0" value="0"></v>
+    <v c="GBR" value="0.00042852"></v>
+    <v c="USA" value="0.001353858"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_ARM" format="percentage" lessisbetter="1" precision="4" units="weighted exports as % GDP">
+<vs y="2018" r="LMY" i="SEC_ARM" format="percentage" lessisbetter="1" precision="4" units="weighted exports as % GDP">
     <v c="AUS" value="not published" isnull="true"></v>
-    <v c="AUT" value="0.00218289"></v>
-    <v c="BEL" value="0.00559497"></v>
-    <v c="CAN" value="0.00073941"></v>
-    <v c="CZE" value="0.01500866"></v>
-    <v c="DNK" value="0.000706"></v>
-    <v c="FIN" value="0.00260255"></v>
-    <v c="FRA" value="0.00781771"></v>
-    <v c="DEU" value="0.00402624"></v>
-    <v c="GRC" value="0.00175173"></v>
-    <v c="HUN" value="0.00036775"></v>
-    <v c="IRL" value="0.00008456"></v>
-    <v c="ITA" value="0.00295972"></v>
-    <v c="JPN" value="0"></v>
-    <v c="LUX" value="0.00010133"></v>
-    <v c="NLD" value="0.00322197"></v>
-    <v c="NZL" value="0.00009608"></v>
-    <v c="NOR" value="0.00080742"></v>
-    <v c="POL" value="0.00338032"></v>
-    <v c="PRT" value="0.00090264"></v>
-    <v c="SVK" value="0.00147826"></v>
+    <v c="AUT" value="-0.00247611"></v>
+    <v c="BEL" value="-0.0050239"></v>
+    <v c="CAN" value="-0.00068254"></v>
+    <v c="CZE" value="-0.01421628"></v>
+    <v c="DNK" value="-0.00082732"></v>
+    <v c="FIN" value="-0.0025135"></v>
+    <v c="FRA" value="-0.0075584"></v>
+    <v c="DEU" value="-0.00433494"></v>
+    <v c="GRC" value="not published" isnull="true"></v>
+    <v c="HUN" value="-0.00031816"></v>
+    <v c="IRL" value="-0.00007885"></v>
+    <v c="ITA" value="-0.00284519"></v>
+    <v c="JPN" value="not published" isnull="true"></v>
+    <v c="LUX" value="-0.00008876"></v>
+    <v c="NLD" value="-0.0029869"></v>
+    <v c="NZL" value="not published" isnull="true"></v>
+    <v c="NOR" value="-0.00074226"></v>
+    <v c="POL" value="-0.00316904"></v>
+    <v c="PRT" value="-0.0009377"></v>
+    <v c="SVK" value="-0.00128118"></v>
     <v c="KOR" value="not published" isnull="true"></v>
-    <v c="ESP" value="0.00391862"></v>
-    <v c="SWE" value="0.00674995"></v>
-    <v c="CHE" value="0.00122988"></v>
-    <v c="GBR" value="0.00514209"></v>
-    <v c="USA" value="0.00494377"></v>
-    <v c="0" value="0.01500866"></v>
+    <v c="ESP" value="-0.0037167"></v>
+    <v c="SWE" value="-0.00606503"></v>
+    <v c="CHE" value="-0.00117047"></v>
+    <v c="GBR" value="-0.00465374"></v>
+    <v c="USA" value="-0.00486355"></v>
 </vs>
-<vs y="2017" r="LMY" i="SEC_RAT" units="points">
+<vs y="2018" r="LMY" i="SEC_RAT" units="points">
     <v c="AUS" value="9"></v>
     <v c="AUT" value="9"></v>
     <v c="BEL" value="9"></v>
@@ -6902,7 +6628,7 @@
     <v c="HUN" value="9"></v>
     <v c="IRL" value="9"></v>
     <v c="ITA" value="9"></v>
-    <v c="JPN" value="8.8"></v>
+    <v c="JPN" value="8.9"></v>
     <v c="LUX" value="9"></v>
     <v c="NLD" value="9"></v>
     <v c="NZL" value="9"></v>
@@ -6910,73 +6636,72 @@
     <v c="POL" value="8"></v>
     <v c="PRT" value="9"></v>
     <v c="SVK" value="9"></v>
-    <v c="KOR" value="6.4"></v>
+    <v c="KOR" value="6.6"></v>
     <v c="ESP" value="9"></v>
     <v c="SWE" value="9"></v>
     <v c="CHE" value="9"></v>
-    <v c="GBR" value="8.8"></v>
+    <v c="GBR" value="8.9"></v>
     <v c="USA" value="4"></v>
-    
 </vs>
-<vs y="2017" r="LMY" i="TEC_GOV_GOV" format="percentage" precision="4" units="% GDP">
-    <v c="AUS" value="0.00410667"></v>
-    <v c="AUT" value="0.00795604"></v>
-    <v c="BEL" value="0.00618673"></v>
-    <v c="CAN" value="0.00472611"></v>
-    <v c="CZE" value="0.00618695"></v>
-    <v c="DNK" value="0.0095356"></v>
-    <v c="FIN" value="0.00855456"></v>
-    <v c="FRA" value="0.00536551"></v>
-    <v c="DEU" value="0.00880001"></v>
-    <v c="GRC" value="0.00456658"></v>
-    <v c="HUN" value="0.00282216"></v>
-    <v c="IRL" value="0.00272492"></v>
-    <v c="ITA" value="0.00507265"></v>
-    <v c="JPN" value="0.0063906"></v>
-    <v c="LUX" value="0.00598363"></v>
-    <v c="NLD" value="0.00720581"></v>
-    <v c="NZL" value="0.00539232"></v>
-    <v c="NOR" value="0.01031184"></v>
-    <v c="POL" value="0.00397876"></v>
-    <v c="PRT" value="0.00906938"></v>
-    <v c="SVK" value="0.00346175"></v>
-    <v c="KOR" value="0.01117401"></v>
-    <v c="ESP" value="0.00558201"></v>
-    <v c="SWE" value="0.00752712"></v>
-    <v c="CHE" value="0.00861782"></v>
-    <v c="GBR" value="0.00496223"></v>
-    <v c="USA" value="0.00596249"></v>
+<vs y="2018" r="LMY" i="TEC_GOV_GOV" format="percentage" precision="4" units="% GDP">
+    <v c="AUS" value="0.00393291"></v>
+    <v c="AUT" value="0.00771461"></v>
+    <v c="BEL" value="0.00635261"></v>
+    <v c="CAN" value="0.00463154"></v>
+    <v c="CZE" value="0.00643966"></v>
+    <v c="DNK" value="0.00903655"></v>
+    <v c="FIN" value="0.00794844"></v>
+    <v c="FRA" value="0.005309"></v>
+    <v c="DEU" value="0.00871197"></v>
+    <v c="GRC" value="0.00540708"></v>
+    <v c="HUN" value="0.00394987"></v>
+    <v c="IRL" value="0.00261026"></v>
+    <v c="ITA" value="0.00517972"></v>
+    <v c="JPN" value="0.00626801"></v>
+    <v c="LUX" value="0.00624246"></v>
+    <v c="NLD" value="0.00692356"></v>
+    <v c="NZL" value="0.00520551"></v>
+    <v c="NOR" value="0.00989342"></v>
+    <v c="POL" value="0.00150796"></v>
+    <v c="PRT" value="0.00905846"></v>
+    <v c="SVK" value="0.00346589"></v>
+    <v c="KOR" value="0.01084652"></v>
+    <v c="ESP" value="0.00538646"></v>
+    <v c="SWE" value="0.00770094"></v>
+    <v c="CHE" value="0.00896547"></v>
+    <v c="GBR" value="0.00480383"></v>
+    <v c="USA" value="0.0057869"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_GOV_TAX" format="percentage" precision="4" units="OECD 'B-index'">
-    <v c="AUS" value="0.00111563"></v>
-    <v c="AUT" value="0.0024525"></v>
-    <v c="BEL" value="0.00146025"></v>
-    <v c="CAN" value="0.00129"></v>
-    <v c="CZE" value="0.0016695"></v>
+<vs y="2018" r="LMY" i="TEC_GOV_TAX" format="percentage" precision="4" units="OECD 'B-index'">
+    <v c="AUS" value="0.000975"></v>
+    <v c="AUT" value="0.002475"></v>
+    <v c="BEL" value="0.00142725"></v>
+    <v c="CAN" value="0.00132225"></v>
+    <v c="CZE" value="0.00162225"></v>
     <v c="DNK" value="-0.00014175"></v>
-    <v c="FIN" value="-0.0001455"></v>
-    <v c="FRA" value="0.00375188"></v>
-    <v c="DEU" value="-0.0002925"></v>
-    <v c="GRC" value="0.000264"></v>
-    <v c="HUN" value="0.00189375"></v>
-    <v c="IRL" value="0.00237075"></v>
-    <v c="ITA" value="0.0004995"></v>
-    <v c="JPN" value="0.00277425"></v>
-    <v c="LUX" value="-0.00005025"></v>
-    <v c="NLD" value="0.001764"></v>
-    <v c="NZL" value="-0.000081"></v>
-    <v c="NOR" value="0.00118125"></v>
-    <v c="POL" value="0.00019388"></v>
-    <v c="PRT" value="0.0016425"></v>
-    <v c="SVK" value="0.00027225"></v>
-    <v c="KOR" value="0.003567"></v>
+    <v c="FIN" value="-0.00013575"></v>
+    <v c="FRA" value="0.00370013"></v>
+    <v c="DEU" value="-0.0003"></v>
+    <v c="GRC" value="0.00033825"></v>
+    <v c="HUN" value="0.00113475"></v>
+    <v c="IRL" value="0.00180525"></v>
+    <v c="ITA" value="0.00050625"></v>
+    <v c="JPN" value="0.002964"></v>
+    <v c="LUX" value="-0.000048"></v>
+    <v c="NLD" value="0.001827"></v>
+    <v c="NZL" value="-0.000096"></v>
+    <v c="NOR" value="0.0009315"></v>
+    <v c="POL" value="0.00037013"></v>
+    <v c="PRT" value="0.00171563"></v>
+    <v c="SVK" value="0.00018"></v>
+    <v c="KOR" value="0.003948"></v>
     <v c="ESP" value="0.001728"></v>
-    <v c="SWE" value="0.00085125"></v>
-    <v c="CHE" value="-0.0001545"></v>
-    <v c="GBR" value="0.001638"></v>
-    <v c="USA" value="0.000597"></v>
+    <v c="SWE" value="0.0008475"></v>
+    <v c="CHE" value="-0.00018"></v>
+    <v c="GBR" value="0.00156788"></v>
+    <v c="USA" value="0.00043875"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_LIM" lessisbetter="1" units="points">
+<vs y="2018" r="LMY" i="TEC_INT_LIM" lessisbetter="1" units="points">
     <v c="AUS" value="2"></v>
     <v c="AUT" value="1"></v>
     <v c="BEL" value="1"></v>
@@ -7005,7 +6730,7 @@
     <v c="GBR" value="0.75"></v>
     <v c="USA" value="2"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_TRI" lessisbetter="1" units="points">
+<vs y="2018" r="LMY" i="TEC_INT_TRI" lessisbetter="1" units="points">
     <v c="AUS" value="1.1"></v>
     <v c="AUT" value="2.8"></v>
     <v c="BEL" value="2.4"></v>
@@ -7034,7 +6759,7 @@
     <v c="GBR" value="2.6"></v>
     <v c="USA" value="1.3"></v>
 </vs>
-<vs y="2017" r="LMY" i="TEC_INT_COP" lessisbetter="1" units="points">
+<vs y="2018" r="LMY" i="TEC_INT_COP" lessisbetter="1" units="points">
     <v c="AUS" value="0"></v>
     <v c="AUT" value="0.5"></v>
     <v c="BEL" value="1"></v>
@@ -7067,237 +6792,237 @@
    <!-- main components -->
   
 
-<vs y="2017" r="LMY" i="CDI_AID">
-    <v c="AUS" score="4.5968994" weighted="0.5051946506"></v>
-    <v c="AUT" score="4.7588749" weighted="0.5229956003"></v>
-    <v c="BEL" score="4.3645056" weighted="0.4796548079"></v>
-    <v c="CAN" score="5.3144354" weighted="0.5840511341"></v>
-    <v c="CZE" score="4.2462555" weighted="0.4666592315"></v>
-    <v c="DNK" score="6.4560019" weighted="0.7095081529"></v>
-    <v c="FIN" score="5.3092897" weighted="0.5834856309"></v>
-    <v c="FRA" score="4.9720795" weighted="0.5464265665"></v>
-    <v c="DEU" score="5.4877195" weighted="0.6030948875"></v>
-    <v c="GRC" score="4.134497" weighted="0.4543770882"></v>
-    <v c="HUN" score="4.1820694" weighted="0.4596052445"></v>
-    <v c="IRL" score="6.3260875" weighted="0.6952306906"></v>
-    <v c="ITA" score="4.3783399" weighted="0.4811751833"></v>
-    <v c="JPN" score="5.0391338" weighted="0.5537957706"></v>
-    <v c="LUX" score="5.5567345" weighted="0.6106795738"></v>
-    <v c="NLD" score="5.5725979" weighted="0.6124229427"></v>
-    <v c="NZL" score="5.1128994" weighted="0.5619025365"></v>
-    <v c="NOR" score="6.1234228" weighted="0.6729580503"></v>
-    <v c="POL" score="4.1422556" weighted="0.4552297502"></v>
-    <v c="PRT" score="4.7851371" weighted="0.5258817841"></v>
-    <v c="SVK" score="4.1245023" weighted="0.4532786846"></v>
-    <v c="KOR" score="3.957504" weighted="0.4349257372"></v>
-    <v c="ESP" score="4.6098277" weighted="0.5066154613"></v>
-    <v c="SWE" score="6.4413226" weighted="0.7078949154"></v>
-    <v c="CHE" score="4.68404" weighted="0.5147713155"></v>
-    <v c="GBR" score="6.0937146" weighted="0.6696931408"></v>
-    <v c="USA" score="4.2298524" weighted="0.464856553"></v>
+<vs y="2018" r="LMY" i="CDI_AID">
+    <v c="AUS" score="5.36" weighted="0.636461042"></v>
+    <v c="AUT" score="4.76" weighted="0.5644788271"></v>
+    <v c="BEL" score="5.13" weighted="0.6088810532"></v>
+    <v c="CAN" score="5.37" weighted="0.9069577739"></v>
+    <v c="CZE" score="4.41" weighted="0.7451587149"></v>
+    <v c="DNK" score="6.42" weighted="1.085090124"></v>
+    <v c="FIN" score="5.06" weighted="0.5998647305"></v>
+    <v c="FRA" score="4.97" weighted="0.5893859821"></v>
+    <v c="DEU" score="4.65" weighted="0.5515470304"></v>
+    <v c="GRC" score="4.15" weighted="0.7014742377"></v>
+    <v c="HUN" score="4.32" weighted="0.7306083214"></v>
+    <v c="IRL" score="5.13" weighted="0.8674477087"></v>
+    <v c="ITA" score="4.45" weighted="0.528265055"></v>
+    <v c="JPN" score="4.89" weighted="0.5798987877"></v>
+    <v c="LUX" score="6.52" weighted="0.7735800277"></v>
+    <v c="NLD" score="5.57" weighted="0.9421365222"></v>
+    <v c="NZL" score="6.12" weighted="1.034644607"></v>
+    <v c="NOR" score="5.4" weighted="0.912382487"></v>
+    <v c="POL" score="4.38" weighted="0.5199374345"></v>
+    <v c="PRT" score="4.92" weighted="0.5839715468"></v>
+    <v c="SVK" score="4.36" weighted="0.516740649"></v>
+    <v c="KOR" score="4.27" weighted="0.7215406076"></v>
+    <v c="ESP" score="4.02" weighted="0.6788620448"></v>
+    <v c="SWE" score="6.36" weighted="1.075186977"></v>
+    <v c="CHE" score="4.61" weighted="0.5472365088"></v>
+    <v c="GBR" score="5.43" weighted="0.644299247"></v>
+    <v c="USA" score="3.96" weighted="0.469451854"></v>
 </vs>
-<vs y="2017" r="LMY" i="CDI_TRA">
-    <v c="AUS" score="5.2936822" weighted="0.8013055628"></v>
-    <v c="AUT" score="5.0292426" weighted="0.761277297"></v>
-    <v c="BEL" score="4.7645915" weighted="0.7212170109"></v>
-    <v c="CAN" score="4.7605873" weighted="0.7206108912"></v>
-    <v c="CZE" score="5.0921535" weighted="0.7708001275"></v>
-    <v c="DNK" score="5.6857478" weighted="0.8606526006"></v>
-    <v c="FIN" score="5.2926196" weighted="0.8011447223"></v>
-    <v c="FRA" score="5.2012872" weighted="0.7873197215"></v>
-    <v c="DEU" score="5.5835314" weighted="0.845180082"></v>
-    <v c="GRC" score="4.6946915" weighted="0.710636244"></v>
-    <v c="HUN" score="4.6865829" weighted="0.7094088453"></v>
-    <v c="IRL" score="5.4958759" weighted="0.8319116586"></v>
-    <v c="ITA" score="5.1444667" weighted="0.7787187872"></v>
-    <v c="JPN" score="4.1126962" weighted="0.6225395121"></v>
-    <v c="LUX" score="5.0589687" weighted="0.7657769365"></v>
-    <v c="NLD" score="5.7227618" weighted="0.8662554051"></v>
-    <v c="NZL" score="5.5720557" weighted="0.8434430035"></v>
-    <v c="NOR" score="3.5554852" weighted="0.5381943897"></v>
-    <v c="POL" score="4.7763537" weighted="0.7229974517"></v>
-    <v c="PRT" score="5.2737209" weighted="0.7982840169"></v>
-    <v c="SVK" score="4.9805241" weighted="0.7539027693"></v>
-    <v c="KOR" score="3.7318135" weighted="0.5648852394"></v>
-    <v c="ESP" score="5.0413543" weighted="0.763110638"></v>
-    <v c="SWE" score="5.5226941" weighted="0.8359711369"></v>
-    <v c="CHE" score="4.1512562" weighted="0.6283763425"></v>
-    <v c="GBR" score="5.5634773" weighted="0.8421444859"></v>
-    <v c="USA" score="5.2117781" weighted="0.788907718"></v>
+<vs y="2018" r="LMY" i="CDI_TRA">
+    <v c="AUS" score="5.65" weighted="0.7592442566"></v>
+    <v c="AUT" score="5.13" weighted="0.6891062849"></v>
+    <v c="BEL" score="4.98" weighted="0.6687881116"></v>
+    <v c="CAN" score="5.06" weighted="0.7553230728"></v>
+    <v c="CZE" score="5.19" weighted="0.774866981"></v>
+    <v c="DNK" score="5.37" weighted="0.8015483712"></v>
+    <v c="FIN" score="5.3" weighted="0.7125834231"></v>
+    <v c="FRA" score="5.2" weighted="0.6995257043"></v>
+    <v c="DEU" score="5.9" weighted="0.7934832626"></v>
+    <v c="GRC" score="4.41" weighted="0.6584327242"></v>
+    <v c="HUN" score="4.42" weighted="0.6597063508"></v>
+    <v c="IRL" score="5.28" weighted="0.7878807148"></v>
+    <v c="ITA" score="5" weighted="0.6724655552"></v>
+    <v c="JPN" score="5.12" weighted="0.688456799"></v>
+    <v c="LUX" score="5.34" weighted="0.7182178858"></v>
+    <v c="NLD" score="5.97" weighted="0.8906180142"></v>
+    <v c="NZL" score="5.33" weighted="0.7947814344"></v>
+    <v c="NOR" score="3.73" weighted="0.55650205"></v>
+    <v c="POL" score="4.45" weighted="0.5981918427"></v>
+    <v c="PRT" score="4.8" weighted="0.6447863231"></v>
+    <v c="SVK" score="4.76" weighted="0.6398211597"></v>
+    <v c="KOR" score="3.17" weighted="0.472699039"></v>
+    <v c="ESP" score="5.12" weighted="0.7630266456"></v>
+    <v c="SWE" score="5.49" weighted="0.8195937887"></v>
+    <v c="CHE" score="3.87" weighted="0.5204807664"></v>
+    <v c="GBR" score="5.64" weighted="0.7585223414"></v>
+    <v c="USA" score="5.29" weighted="0.7107293867"></v>
 </vs>
-<vs y="2017" r="LMY" i="CDI_INV">
-    <v c="AUS" score="5.3526539" weighted="0.8973434118"></v>
-    <v c="AUT" score="4.2291281" weighted="0.7089903976"></v>
-    <v c="BEL" score="5.0062536" weighted="0.8392712719"></v>
-    <v c="CAN" score="5.3514797" weighted="0.8971465684"></v>
-    <v c="CZE" score="5.2070921" weighted="0.8729407613"></v>
-    <v c="DNK" score="5.7165719" weighted="0.9583522814"></v>
-    <v c="FIN" score="6.0182285" weighted="1.008923379"></v>
-    <v c="FRA" score="5.190029" weighted="0.8700802186"></v>
-    <v c="DEU" score="4.4333933" weighted="0.7432343504"></v>
-    <v c="GRC" score="4.8143732" weighted="0.8071035617"></v>
-    <v c="HUN" score="5.2170474" weighted="0.8746097165"></v>
-    <v c="IRL" score="5.0380312" weighted="0.8445986181"></v>
-    <v c="ITA" score="5.5038713" weighted="0.9226941888"></v>
-    <v c="JPN" score="4.5842945" weighted="0.7685321219"></v>
-    <v c="LUX" score="4.2840715" weighted="0.7182013611"></v>
-    <v c="NLD" score="4.5441656" weighted="0.7618047203"></v>
-    <v c="NZL" score="4.6588669" weighted="0.781033774"></v>
-    <v c="NOR" score="5.6451767" weighted="0.9463832732"></v>
-    <v c="POL" score="5.3193545" weighted="0.8917609462"></v>
-    <v c="PRT" score="4.8862964" weighted="0.8191610984"></v>
-    <v c="SVK" score="4.4957535" weighted="0.7536887096"></v>
-    <v c="KOR" score="5.1783816" weighted="0.8681276097"></v>
-    <v c="ESP" score="5.3486523" weighted="0.8966725566"></v>
-    <v c="SWE" score="5.3257406" weighted="0.8928315392"></v>
-    <v c="CHE" score="3.9380235" weighted="0.6601882881"></v>
-    <v c="GBR" score="5.0737124" weighted="0.8505803857"></v>
-    <v c="USA" score="4.255423" weighted="0.713398593"></v>
+<vs y="2018" r="LMY" i="CDI_INV">
+    <v c="AUS" score="5.51" weighted="0.884521936"></v>
+    <v c="AUT" score="4.68" weighted="0.7519961565"></v>
+    <v c="BEL" score="5.77" weighted="0.9266435789"></v>
+    <v c="CAN" score="5.52" weighted="0.688653691"></v>
+    <v c="CZE" score="4.85" weighted="0.6049637583"></v>
+    <v c="DNK" score="4.79" weighted="0.5976883923"></v>
+    <v c="FIN" score="5.53" weighted="0.8879554432"></v>
+    <v c="FRA" score="5.64" weighted="0.9065432435"></v>
+    <v c="DEU" score="5.23" weighted="0.840440986"></v>
+    <v c="GRC" score="4.3" weighted="0.5360883461"></v>
+    <v c="HUN" score="4.83" weighted="0.6031084645"></v>
+    <v c="IRL" score="5.52" weighted="0.6883261539"></v>
+    <v c="ITA" score="5.73" weighted="0.9197627741"></v>
+    <v c="JPN" score="4.05" weighted="0.6504200456"></v>
+    <v c="LUX" score="4.68" weighted="0.7515509622"></v>
+    <v c="NLD" score="5.03" weighted="0.628306018"></v>
+    <v c="NZL" score="4.24" weighted="0.5295312004"></v>
+    <v c="NOR" score="5.45" weighted="0.6808188703"></v>
+    <v c="POL" score="4.75" weighted="0.7635247907"></v>
+    <v c="PRT" score="5.21" weighted="0.8375038721"></v>
+    <v c="SVK" score="4.67" weighted="0.7503700296"></v>
+    <v c="KOR" score="4.45" weighted="0.5558302027"></v>
+    <v c="ESP" score="5.59" weighted="0.698289498"></v>
+    <v c="SWE" score="5.28" weighted="0.659015362"></v>
+    <v c="CHE" score="4.31" weighted="0.6928738284"></v>
+    <v c="GBR" score="5.35" weighted="0.8602129636"></v>
+    <v c="USA" score="4.03" weighted="0.6466864238"></v>
 </vs>
-<vs y="2017" r="LMY" i="CDI_MIG">
-    <v c="AUS" score="5.3946424" weighted="0.7294566921"></v>
-    <v c="AUT" score="5.4785298" weighted="0.7407998344"></v>
-    <v c="BEL" score="5.5219514" weighted="0.7466712463"></v>
-    <v c="CAN" score="5.4199452" weighted="0.7328781017"></v>
-    <v c="CZE" score="4.1547758" weighted="0.5618035004"></v>
-    <v c="DNK" score="4.9613654" weighted="0.670869518"></v>
-    <v c="FIN" score="4.9746386" weighted="0.6726643054"></v>
-    <v c="FRA" score="4.8833432" weighted="0.660319455"></v>
-    <v c="DEU" score="6.2927964" weighted="0.8509039239"></v>
-    <v c="GRC" score="4.2310656" weighted="0.5721193082"></v>
-    <v c="HUN" score="4.1855314" weighted="0.5659622356"></v>
-    <v c="IRL" score="4.276508" weighted="0.5782639697"></v>
-    <v c="ITA" score="5.1283973" weighted="0.6934553645"></v>
-    <v c="JPN" score="4.1118388" weighted="0.5559976175"></v>
-    <v c="LUX" score="5.729517" weighted="0.7747380019"></v>
-    <v c="NLD" score="5.2018396" weighted="0.7033861332"></v>
-    <v c="NZL" score="5.829437" weighted="0.7882490574"></v>
-    <v c="NOR" score="5.5285273" weighted="0.7475604292"></v>
-    <v c="POL" score="4.1266702" weighted="0.5580030908"></v>
-    <v c="PRT" score="5.4062429" weighted="0.7310252913"></v>
-    <v c="SVK" score="3.8744516" weighted="0.5238984185"></v>
-    <v c="KOR" score="4.6638482" weighted="0.6306396187"></v>
-    <v c="ESP" score="4.9300512" weighted="0.6666352497"></v>
-    <v c="SWE" score="5.928482" weighted="0.8016418024"></v>
-    <v c="CHE" score="4.9258547" weighted="0.6660678091"></v>
-    <v c="GBR" score="4.9536653" weighted="0.6698283243"></v>
-    <v c="USA" score="4.8860838" weighted="0.6606900425"></v>
+<vs y="2018" r="LMY" i="CDI_MIG">
+    <v c="AUS" score="5.4" weighted="0.7404734422"></v>
+    <v c="AUT" score="5.35" weighted="0.7335864458"></v>
+    <v c="BEL" score="5.29" weighted="0.725362409"></v>
+    <v c="CAN" score="5.42" weighted="0.7918935404"></v>
+    <v c="CZE" score="4.1" weighted="0.5996836852"></v>
+    <v c="DNK" score="4.82" weighted="0.7046778248"></v>
+    <v c="FIN" score="5.03" weighted="0.6892822906"></v>
+    <v c="FRA" score="4.86" weighted="0.6669803581"></v>
+    <v c="DEU" score="6.05" weighted="0.8303126078"></v>
+    <v c="GRC" score="4.38" weighted="0.6400062378"></v>
+    <v c="HUN" score="4.15" weighted="0.6062129066"></v>
+    <v c="IRL" score="4.29" weighted="0.6273255027"></v>
+    <v c="ITA" score="5.19" weighted="0.7113966464"></v>
+    <v c="JPN" score="4.12" weighted="0.5651776483"></v>
+    <v c="LUX" score="5.9" weighted="0.8094097128"></v>
+    <v c="NLD" score="5.22" weighted="0.7628145317"></v>
+    <v c="NZL" score="5.93" weighted="0.8671321973"></v>
+    <v c="NOR" score="5.57" weighted="0.8135520579"></v>
+    <v c="POL" score="4.17" weighted="0.5713380958"></v>
+    <v c="PRT" score="5.41" weighted="0.7417534144"></v>
+    <v c="SVK" score="3.83" weighted="0.5250595321"></v>
+    <v c="KOR" score="4.7" weighted="0.6867993394"></v>
+    <v c="ESP" score="4.97" weighted="0.7261859433"></v>
+    <v c="SWE" score="6.06" weighted="0.886180582"></v>
+    <v c="CHE" score="5.05" weighted="0.6922841259"></v>
+    <v c="GBR" score="4.88" weighted="0.6693925595"></v>
+    <v c="USA" score="4.88" weighted="0.6695070405"></v>
 </vs>
-<vs y="2017" r="LMY" i="CDI_ENV">
-    <v c="AUS" score="3.9464783" weighted="0.6635534986"></v>
-    <v c="AUT" score="5.106873" weighted="0.8586601141"></v>
-    <v c="BEL" score="5.3305838" weighted="0.8962744277"></v>
-    <v c="CAN" score="4.4821261" weighted="0.7536163244"></v>
-    <v c="CZE" score="5.0181279" weighted="0.8437386774"></v>
-    <v c="DNK" score="5.3349362" weighted="0.8970062282"></v>
-    <v c="FIN" score="5.1758986" weighted="0.8702659381"></v>
-    <v c="FRA" score="5.2915986" weighted="0.8897195337"></v>
-    <v c="DEU" score="5.2744832" weighted="0.8868417705"></v>
-    <v c="GRC" score="5.0220548" weighted="0.8443989389"></v>
-    <v c="HUN" score="5.5095208" weighted="0.9263605565"></v>
-    <v c="IRL" score="4.5939921" weighted="0.7724252644"></v>
-    <v c="ITA" score="5.3384487" weighted="0.8975968227"></v>
-    <v c="JPN" score="4.1272708" weighted="0.6939516264"></v>
-    <v c="LUX" score="4.7730977" weighted="0.8025397599"></v>
-    <v c="NLD" score="5.2101183" weighted="0.8760195878"></v>
-    <v c="NZL" score="4.7257971" weighted="0.7945867252"></v>
-    <v c="NOR" score="4.8523974" weighted="0.8158730568"></v>
-    <v c="POL" score="5.4729372" weighted="0.9202094562"></v>
-    <v c="PRT" score="5.4772379" weighted="0.920932579"></v>
-    <v c="SVK" score="5.6386798" weighted="0.9480771159"></v>
-    <v c="KOR" score="3.9003938" weighted="0.6558049435"></v>
-    <v c="ESP" score="5.4278874" weighted="0.9126348668"></v>
-    <v c="SWE" score="5.7280772" weighted="0.9631082214"></v>
-    <v c="CHE" score="4.7097112" weighted="0.7918820579"></v>
-    <v c="GBR" score="5.2917467" weighted="0.889744433"></v>
-    <v c="USA" score="4.2395252" weighted="0.7128258731"></v>
+<vs y="2018" r="LMY" i="CDI_ENV">
+    <v c="AUS" score="4.19" weighted="0.7494248294"></v>
+    <v c="AUT" score="5.11" weighted="0.914075276"></v>
+    <v c="BEL" score="5.28" weighted="0.9442735373"></v>
+    <v c="CAN" score="4.51" weighted="0.5051790281"></v>
+    <v c="CZE" score="5.29" weighted="0.5931606739"></v>
+    <v c="DNK" score="5.25" weighted="0.5879811843"></v>
+    <v c="FIN" score="5.28" weighted="0.9449989613"></v>
+    <v c="FRA" score="5.26" weighted="0.9405318201"></v>
+    <v c="DEU" score="5.2" weighted="0.9308542687"></v>
+    <v c="GRC" score="4.95" weighted="0.5552919684"></v>
+    <v c="HUN" score="5.39" weighted="0.6043629583"></v>
+    <v c="IRL" score="4.72" weighted="0.5292407242"></v>
+    <v c="ITA" score="5.32" weighted="0.9519211509"></v>
+    <v c="JPN" score="4.11" weighted="0.735376289"></v>
+    <v c="LUX" score="4.93" weighted="0.8814572323"></v>
+    <v c="NLD" score="5.1" weighted="0.5721747504"></v>
+    <v c="NZL" score="4.85" weighted="0.5431456806"></v>
+    <v c="NOR" score="4.72" weighted="0.5285883492"></v>
+    <v c="POL" score="5.48" weighted="0.9796387159"></v>
+    <v c="PRT" score="5.38" weighted="0.9624460907"></v>
+    <v c="SVK" score="5.6" weighted="1.002121902"></v>
+    <v c="KOR" score="3.64" weighted="0.4081732524"></v>
+    <v c="ESP" score="5.39" weighted="0.6041756145"></v>
+    <v c="SWE" score="5.52" weighted="0.6182177421"></v>
+    <v c="CHE" score="4.92" weighted="0.8798936149"></v>
+    <v c="GBR" score="5.31" weighted="0.9490691068"></v>
+    <v c="USA" score="4.3" weighted="0.7699678915"></v>
 </vs>
-<vs y="2017" r="LMY" i="CDI_SEC">
-    <v c="AUS" score="4.8143203" weighted="0.6991368667"></v>
-    <v c="AUT" score="5.4154877" weighted="0.7864385565"></v>
-    <v c="BEL" score="4.6591563" weighted="0.6766039055"></v>
-    <v c="CAN" score="4.4388256" weighted="0.6446074247"></v>
-    <v c="CZE" score="4.4816959" weighted="0.6508330708"></v>
-    <v c="DNK" score="6.531033" weighted="0.9484383427"></v>
-    <v c="FIN" score="5.7936171" weighted="0.8413506133"></v>
-    <v c="FRA" score="6.195709" weighted="0.8997425021"></v>
-    <v c="DEU" score="4.7755808" weighted="0.6935111013"></v>
-    <v c="GRC" score="4.7798262" weighted="0.6941276313"></v>
-    <v c="HUN" score="5.1063905" weighted="0.7415513758"></v>
-    <v c="IRL" score="5.0923842" weighted="0.7395173751"></v>
-    <v c="ITA" score="4.8993571" weighted="0.7114859364"></v>
-    <v c="JPN" score="4.7243295" weighted="0.6860683839"></v>
-    <v c="LUX" score="5.5899989" weighted="0.8117811249"></v>
-    <v c="NLD" score="5.192188" weighted="0.7540109075"></v>
-    <v c="NZL" score="5.1383477" weighted="0.7461922101"></v>
-    <v c="NOR" score="4.8651624" weighted="0.7065201772"></v>
-    <v c="POL" score="4.3719346" weighted="0.6348934983"></v>
-    <v c="PRT" score="4.9642302" weighted="0.7209068187"></v>
-    <v c="SVK" score="5.554212" weighted="0.8065841396"></v>
-    <v c="KOR" score="3.4916283" weighted="0.5070551872"></v>
-    <v c="ESP" score="4.8324499" weighted="0.7017696494"></v>
-    <v c="SWE" score="4.6176295" weighted="0.6705733804"></v>
-    <v c="CHE" score="4.7629476" weighted="0.6916765166"></v>
-    <v c="GBR" score="4.9504135" weighted="0.7189003514"></v>
-    <v c="USA" score="4.961144" weighted="0.7204586505"></v>
+<vs y="2018" r="LMY" i="CDI_SEC">
+    <v c="AUS" score="4.9" weighted="0.7175257686"></v>
+    <v c="AUT" score="5.4" weighted="0.7904879253"></v>
+    <v c="BEL" score="4.73" weighted="0.6915391348"></v>
+    <v c="CAN" score="4.48" weighted="0.6142285868"></v>
+    <v c="CZE" score="4.65" weighted="0.6370570533"></v>
+    <v c="DNK" score="6.6" weighted="0.9036369067"></v>
+    <v c="FIN" score="5.82" weighted="0.8522581275"></v>
+    <v c="FRA" score="5.48" weighted="0.8024334283"></v>
+    <v c="DEU" score="4.89" weighted="0.7161239619"></v>
+    <v c="GRC" score="4.26" weighted="0.5831911294"></v>
+    <v c="HUN" score="5.24" weighted="0.7175361574"></v>
+    <v c="IRL" score="5.09" weighted="0.6968286685"></v>
+    <v c="ITA" score="5.02" weighted="0.7346608455"></v>
+    <v c="JPN" score="4.16" weighted="0.6091325092"></v>
+    <v c="LUX" score="5.48" weighted="0.8016402858"></v>
+    <v c="NLD" score="5.15" weighted="0.7057893265"></v>
+    <v c="NZL" score="4.61" weighted="0.6309796532"></v>
+    <v c="NOR" score="5.08" weighted="0.6953967383"></v>
+    <v c="POL" score="4.42" weighted="0.6462287644"></v>
+    <v c="PRT" score="5" weighted="0.7320664805"></v>
+    <v c="SVK" score="5.58" weighted="0.8170126568"></v>
+    <v c="KOR" score="3.56" weighted="0.4879318661"></v>
+    <v c="ESP" score="4.89" weighted="0.6705805571"></v>
+    <v c="SWE" score="4.71" weighted="0.645676008"></v>
+    <v c="CHE" score="4.83" weighted="0.7067982799"></v>
+    <v c="GBR" score="5.58" weighted="0.8159592077"></v>
+    <v c="USA" score="5.39" weighted="0.7886749401"></v>
 </vs>
-<vs y="2017" r="LMY" i="CDI_TEC">
-    <v c="AUS" score="4.767145" weighted="0.5840187636"></v>
-    <v c="AUT" score="5.8111691" weighted="0.7119212387"></v>
-    <v c="BEL" score="5.1016744" weighted="0.6250016591"></v>
-    <v c="CAN" score="5.0024817" weighted="0.6128496552"></v>
-    <v c="CZE" score="4.9971163" weighted="0.6121923379"></v>
-    <v c="DNK" score="5.4431513" weighted="0.666835695"></v>
-    <v c="FIN" score="5.2570918" weighted="0.6440417101"></v>
-    <v c="FRA" score="5.4372822" weighted="0.6661166739"></v>
-    <v c="DEU" score="5.3194097" weighted="0.6516762225"></v>
-    <v c="GRC" score="3.9975375" weighted="0.4897348139"></v>
-    <v c="HUN" score="4.1182392" weighted="0.5045218756"></v>
-    <v c="IRL" score="4.2197801" weighted="0.5169615627"></v>
-    <v c="ITA" score="4.2699259" weighted="0.5231048787"></v>
-    <v c="JPN" score="5.4862745" weighted="0.6721186823"></v>
-    <v c="LUX" score="4.4211706" weighted="0.5416337319"></v>
-    <v c="NLD" score="5.222569" weighted="0.6398123508"></v>
-    <v c="NZL" score="4.9116472" weighted="0.6017215985"></v>
-    <v c="NOR" score="6.243049" weighted="0.7648304631"></v>
-    <v c="POL" score="3.8957183" weighted="0.4772610383"></v>
-    <v c="PRT" score="5.772972" weighted="0.7072417468"></v>
-    <v c="SVK" score="3.8556929" weighted="0.4723575653"></v>
-    <v c="KOR" score="6.6980177" weighted="0.8205682844"></v>
-    <v c="ESP" score="4.9374689" weighted="0.6048849892"></v>
-    <v c="SWE" score="5.0588949" weighted="0.6197607828"></v>
-    <v c="CHE" score="5.4615892" weighted="0.6690945091"></v>
-    <v c="GBR" score="4.6643771" weighted="0.5714287494"></v>
-    <v c="USA" score="4.6285545" weighted="0.5670401544"></v>
+<vs y="2018" r="LMY" i="CDI_TEC">
+    <v c="AUS" score="4.75" weighted="0.5889707068"></v>
+    <v c="AUT" score="5.76" weighted="0.7143014817"></v>
+    <v c="BEL" score="5.17" weighted="0.6413227891"></v>
+    <v c="CAN" score="5.04" weighted="0.8157100768"></v>
+    <v c="CZE" score="5.09" weighted="0.822653947"></v>
+    <v c="DNK" score="5.33" weighted="0.8628417556"></v>
+    <v c="FIN" score="5.13" weighted="0.6363725902"></v>
+    <v c="FRA" score="5.43" weighted="0.6732440594"></v>
+    <v c="DEU" score="5.32" weighted="0.659873972"></v>
+    <v c="GRC" score="4.3" weighted="0.6957881583"></v>
+    <v c="HUN" score="4.28" weighted="0.6928768308"></v>
+    <v c="IRL" score="4.11" weighted="0.6651341113"></v>
+    <v c="ITA" score="4.36" weighted="0.5404665643"></v>
+    <v c="JPN" score="5.53" weighted="0.6848250866"></v>
+    <v c="LUX" score="4.55" weighted="0.5633965417"></v>
+    <v c="NLD" score="5.19" weighted="0.8395214832"></v>
+    <v c="NZL" score="4.92" weighted="0.7964942677"></v>
+    <v c="NOR" score="6.07" weighted="0.9814624364"></v>
+    <v c="POL" score="3.38" weighted="0.4194842152"></v>
+    <v c="PRT" score="5.79" weighted="0.7180833479"></v>
+    <v c="SVK" score="3.91" weighted="0.4852258979"></v>
+    <v c="KOR" score="6.67" weighted="1.079169005"></v>
+    <v c="ESP" score="4.93" weighted="0.7973562879"></v>
+    <v c="SWE" score="5.13" weighted="0.8302459148"></v>
+    <v c="CHE" score="5.57" weighted="0.6908281237"></v>
+    <v c="GBR" score="4.66" weighted="0.5770720231"></v>
+    <v c="USA" score="4.59" weighted="0.5693421245"></v>
 </vs>
-<vs y="2017" r="LMY" i="CDI">
-    <v c="AUS" score="4.88"></v>
-    <v c="AUT" score="5.091"></v>
-    <v c="BEL" score="4.985"></v>
-    <v c="CAN" score="4.946"></v>
-    <v c="CZE" score="4.779"></v>
-    <v c="DNK" score="5.712"></v>
-    <v c="FIN" score="5.422"></v>
-    <v c="FRA" score="5.32"></v>
-    <v c="DEU" score="5.274"></v>
-    <v c="GRC" score="4.572"></v>
-    <v c="HUN" score="4.782"></v>
-    <v c="IRL" score="4.979"></v>
-    <v c="ITA" score="5.008"></v>
-    <v c="JPN" score="4.553"></v>
-    <v c="LUX" score="5.025"></v>
-    <v c="NLD" score="5.214"></v>
-    <v c="NZL" score="5.117"></v>
-    <v c="NOR" score="5.192"></v>
-    <v c="POL" score="4.66"></v>
-    <v c="PRT" score="5.223"></v>
-    <v c="SVK" score="4.712"></v>
-    <v c="KOR" score="4.482"></v>
-    <v c="ESP" score="5.052"></v>
-    <v c="SWE" score="5.492"></v>
-    <v c="CHE" score="4.622"></v>
-    <v c="GBR" score="5.212"></v>
-    <v c="USA" score="4.628"></v>
+<vs y="2018" r="LMY" i="CDI">
+    <v c="AUS" score="5.08"></v>
+    <v c="AUT" score="5.16"></v>
+    <v c="BEL" score="5.21"></v>
+    <v c="CAN" score="5.03"></v>
+    <v c="CZE" score="4.82"></v>
+    <v c="DNK" score="5.48"></v>
+    <v c="FIN" score="5.32"></v>
+    <v c="FRA" score="5.28"></v>
+    <v c="DEU" score="5.32"></v>
+    <v c="GRC" score="4.42"></v>
+    <v c="HUN" score="4.71"></v>
+    <v c="IRL" score="4.89"></v>
+    <v c="ITA" score="5.06"></v>
+    <v c="JPN" score="4.51"></v>
+    <v c="LUX" score="5.3"></v>
+    <v c="NLD" score="5.3"></v>
+    <v c="NZL" score="5.09"></v>
+    <v c="NOR" score="5.12"></v>
+    <v c="POL" score="4.5"></v>
+    <v c="PRT" score="5.22"></v>
+    <v c="SVK" score="4.74"></v>
+    <v c="KOR" score="4.29"></v>
+    <v c="ESP" score="5.04"></v>
+    <v c="SWE" score="5.49"></v>
+    <v c="CHE" score="4.73"></v>
+    <v c="GBR" score="5.27"></v>
+    <v c="USA" score="4.62"></v>
 </vs>
 
 </data>
