@@ -1167,55 +1167,66 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     $content.append($label);
                        
                         for (var k in child.children) {
-                          var unitLabel;
-                          if ( that.flatIndicators[child.children[k]].unit !== null ){
-                            unitLabel = that.flatIndicators[child.children[k]].unit;
-                          } else {
-                            unitLabel = '';
-                          }
-                            console.log(that.flatIndicators[child.children[k]]);
-                            $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
-                            $chart = $('<div class="chart-holder"></div>');
-                            $content.append($label);
-                            $content.append($chart);
-                            indicators = [child.children[k]];
-                            all_data = that.flatIndicators[child.children[k]];
-                            
-                            if ( isNaN(all_data.user_friendly_values[countryCode].replace(/%|\$/,'')) ) {
-                              $chart.addClass('null-value');
-                            }
-                            if ( all_data.less_is_better ) {
-                              $chart.addClass('less-is-better');
-                            }
-                            // null-value class is now function of the printed value, not the value itself. see parser line 128
-                            that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
-                            that.addContext(currentYear,indicators,$chart, countryCode);
-                            }
-                        } else {
-                        var unitLabel;
-                          if ( child.unit !== null ){
-                            unitLabel = child.unit;
-                          } else {
-                            unitLabel = '';
-                          }
-                          console.log(child);
-                        $label = $('<div class="indicator-label no-child category ' + i + '">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
-                        $chart = $('<div class="chart-holder"></div>');
-                        indicators = [children[j]];
-                        $content.append($label);
-                        $content.append($chart);
-                        all_data = that.flatIndicators[children[j]];
-                         if ( isNaN(all_data.user_friendly_values[countryCode].replace(/%|\$/,'')) ) {
-                          $chart.addClass('null-value');
-                        }
-                        if ( all_data.less_is_better ) {
-                          $chart.addClass('less-is-better');
-                        }
 
-                        that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
-                        that.addContext(currentYear,indicators,$chart, countryCode);
+                            if ( child.children[k] !== 'AID_QLT_BI_W' && child.children[k] !== 'AID_QLT_MUL_W' ) {
+                                var unitLabel;
+                                if ( that.flatIndicators[child.children[k]].unit !== null ){
+                                  unitLabel = that.flatIndicators[child.children[k]].unit;
+                                } else {
+                                  unitLabel = '';
+                                }
+                                  console.log(that.flatIndicators[child.children[k]]);
+                                  $label = $('<div class="indicator-label"><a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                                  $chart = $('<div class="chart-holder"></div>');
+                                  var aidShare = '';
+                                  if ( child.children[k] === 'AID_QLT_BI' || child.children[k] === 'AID_QLT_MUL' ){
+                                    $chart.addClass('small-chart-holder');
+                                    $label.addClass('small-chart-label');
+                                    aidShare = ' (share=' + that.flatIndicators[child.children[k] + '_W'].user_friendly_values[countryCode] + ')';
+                                  }
+                                  $label.prepend(that.flatIndicators[child.children[k]].label + aidShare);
+                                  $content.append($label);
+                                  $content.append($chart);
+                                  indicators = [child.children[k]];
+                                  all_data = that.flatIndicators[child.children[k]];
+                                  
+                                  if ( isNaN(all_data.user_friendly_values[countryCode].replace(/%|\$/,'')) ) {
+                                    $chart.addClass('null-value');
+                                  }
+                                  if ( all_data.less_is_better ) {
+                                    $chart.addClass('less-is-better');
+                                  }
+                                  // null-value class is now function of the printed value, not the value itself. see parser line 128
+                                  that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 4);
+                                  that.addContext(currentYear,indicators,$chart, countryCode);
+                          } // end if not aid_qlt_bi_w and aid_qlt_nul_w
+
+                        } // end for k in child.children
+                    } else {
+                    var unitLabel;
+                      if ( child.unit !== null ){
+                        unitLabel = child.unit;
+                      } else {
+                        unitLabel = '';
+                      }
+                      console.log(child);
+                    $label = $('<div class="indicator-label no-child category ' + i + '">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                    $chart = $('<div class="chart-holder"></div>');
+                    indicators = [children[j]];
+                    $content.append($label);
+                    $content.append($chart);
+                    all_data = that.flatIndicators[children[j]];
+                     if ( isNaN(all_data.user_friendly_values[countryCode].replace(/%|\$/,'')) ) {
+                      $chart.addClass('null-value');
                     }
+                    if ( all_data.less_is_better ) {
+                      $chart.addClass('less-is-better');
+                    }
+
+                    that.createBarChart(currentYear, countryCode, indicators, $chart, true, all_data.min, all_data.max, all_data.user_friendly_min, all_data.user_friendly_max, 3);
+                    that.addContext(currentYear,indicators,$chart, countryCode);
                 }
+            }
             }
         });
         $('a.indicator-info').click(function(e) {
