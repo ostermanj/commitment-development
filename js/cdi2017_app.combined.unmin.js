@@ -1145,27 +1145,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 } else {
                     $indicatorElement = $(cssSelector + ' .indicator.' + indicatorLowerCase);
                 }
-                var $content = $indicatorElement.find('.line-chart');
-                var $canvas = $('<canvas></canvas>');
-                $content.append($canvas);
-
-                for (var year in that.flatIndicators[i].trends[countryCode]) {
-                    data.push({
-                        year: year,
-                        data: that.flatIndicators[i].trends[countryCode][year]
-                    });
-                }
-
-                var lineChartModel = new cdiApp.LineChart.Model({
-                    data: data,
-                    indicator: i
-                });
-                var lineChartView = new cdiApp.LineChart.View({
-                    model: lineChartModel,
-                    el: $canvas
-                });
-                $content.append(lineChartView.$el);
-
+               
                 // Set rank.
                 var $rank = $indicatorElement.find('.indicator-rank');
                 $rank.html('Rank: ' + that.getRank(countryCode, i) + ' / ' + countryCount );
@@ -1496,17 +1476,9 @@ cdiApp.CDI.View = Backbone.View.extend({
                     id: item.index + '-info',
                     countryCode: item.index
                 });
-                var trendView = new cdiApp.trendView({
-                    tagName: 'tr',
-                    className: 'trend',
-                    id: item.index + '-trend',
-                    countryCode: item.index,
-                    app: this.app
-                });
-
+              
                 this.collapsibleViews[item.index] = {
-                    'info': infoView,
-                    'trend': trendView
+                    'info': infoView
                 };
 
                 var $chartHolder = $('<div class="chart-holder"></div>');
@@ -1522,8 +1494,6 @@ cdiApp.CDI.View = Backbone.View.extend({
 
                 this.app.createBarChart(currentYear, item.index, indicators, $row.find('.chart-holder'), false, this.indicator.min, this.indicator.max, "0", this.indicator.user_friendly_max, 1);
                 this.$el.find('tbody').append(infoView.$el);
-                // Add charts row.
-                this.$el.find('tbody').append(trendView.$el);
             }
         }
         
@@ -1535,7 +1505,7 @@ cdiApp.CDI.View = Backbone.View.extend({
     },
     events: {
         'mouseup .active .bar-segment': 'barSegmentClicked',
-        'click tr.master-row, .load-trends, .close-info': 'showCollapsed',
+        'click tr.master-row, .close-info': 'showCollapsed',
         'click a.sorting':'sortColumn',
         'click .facebook-td a': 'facebookShare',
         'click .twitter-td a': 'twitterShare'
@@ -1601,37 +1571,12 @@ cdiApp.CDI.View = Backbone.View.extend({
         if ($target.hasClass('active')){
 
           if (viewType === 'info'){
-              var trendButton = $('#' + countryCode + '-info a.load-trends');
-              if (trendButton.hasClass('active-trend')){
-
-                  $targetInfo = $target;
-                  $target = trendButton;
-                  viewInfo = view;
-                  view = this.collapsibleViews[countryCode]['trend'];
-
-                  $('#' + countryCode + '-trend .trends-wrapper').addClass('faster-collapse');
-                  delay = 500;
-                  
-                  this.collapseTrends($target,view,delay,countryCode, bottom);
-                  $target = $targetInfo;
-                  view = viewInfo;
-                  
-              }
               
               $('#' + countryCode + '-info .info-wrapper').css('height', 0);
               
               delay = 500;
               this.showCollapsedHelper($target,view,delay,countryCode);
           }
-          if (viewType === 'trend'){
-            $('#' + countryCode + '-trend .trends-wrapper').css('height', 0);
-            
-              delay = 750;
-              this.collapseTrends($target,view,delay,countryCode);
-             
-              
-          }
-          
       } else {
           this.showCollapsedHelper($target,view,delay,countryCode);
       }
@@ -2228,7 +2173,6 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
                 });
                 
                 cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + addHeight;
-                $('#' + that.countryCode + '-info .year-results').before('<a class="load-trends" data-v="trend" data-c="' + that.countryCode + '" href="#">Show trends</a>');
                 $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
                  //REWRITE HERE AND BELOW TO AVOID REPETITION
                 $('#' + that.countryCode + '-info .year-results a').text('Country report').attr('target', '_blank');
@@ -2240,133 +2184,6 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
              $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
             
         }
-    }
-});
-cdiApp.trendView = cdiApp.collapsibleView.extend({
-    initialize: function(args) {
-        this.countryCode = args.countryCode;
-        this.app = args.app;
-    },
-    render: function() {
-         if (!this.loaded) {
-
-            this.loaded = true;
-            var $content = $('<div class="trends-inner-wrapper"></div>');
-            var $contentWrapper = $('<div class="trends-wrapper"></div>');
-            var $contentTd = $('<td colspan="7"></td>');
-            var that = this;
-            
-            $contentWrapper.append($content);
-            $contentTd.append($contentWrapper);
-            this.$el.append($contentTd);
-            var allIndicators = ['CDI'].concat(this.app.indicatorsOrder);
-            that.app.indicators['CDI'] = 'Overall';
-
-            allIndicators.forEach(function(indicator){
-                var data = [];
-                var $canvas = $('<canvas></canvas>');
-                var $canvasWrapper = $('<div class="line-chart-wrapper ' + indicator + '"></div>');
-                var label = that.app.indicators[indicator];
-                var value = that.app.flatIndicators[indicator].values[that.countryCode];
-                $canvasWrapper.append('<div class="line-chart-header ' + indicator + '">' +
-                    '<span class="indicator-label">' + label + '</span> ' +
-                    '<span class="indicator-value">' + value.toFixed(1) + '</span>' +
-                    '</div>');
-
-                $canvasWrapper.append($canvas);
-                $content.append($canvasWrapper);
-                for (var year in that.app.flatIndicators[indicator].trends[that.countryCode]) {
-                    data.push({
-                        year: year,
-                        data: that.app.flatIndicators[indicator].trends[that.countryCode][year]
-                    });
-                }
-                var lineChartModel = new cdiApp.LineChart.Model({
-                    data: data,
-                    indicator: indicator
-                });
-                var lineChartView = new cdiApp.LineChart.View({
-                    model: lineChartModel,
-                    el: $canvas
-                });
-               
-            });
-             var $buttonWrapper = $('<div style="clear:left">');
-             $buttonWrapper.append('<div class="year-results hello"><a class="cdi-country-report" target="_blank" href="/cdi-2017/country/' + this.countryCode + '">Country report</a></div>');
-            $content.append($buttonWrapper);
-            $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
-            var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 80;
-            $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
-            
-        } else {
-           
-            var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 50; //CAN REWRITE HERE TO AVOID REPETITION
-            $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
-        }   
-    }
-});
-
-
-/*
- *
- * LINE-CHART.JS
- */
-
- cdiApp.LineChart = {};
-cdiApp.LineChart.Model = Backbone.Model.extend({
-    initialize: function(args) {
-    var item = cgdCdi.indicatorColors[args.indicator];
-    var border_color = item.border;
-    var background_color = item.background;
-    var scaleLineColor = "rgba(0,0,0,.1)";
-    var scaleFontColor = "#666";
-
-        this.data = {
-            labels: [],
-            datasets: [{
-                data: [],
-                fillColor: 'rgba(0,0,0,0)',
-                pointStrokeCol: border_color,
-                strokeColor: border_color,
-                pointColor: border_color
-            }]
-        };
-        var that = this;
-        args.data.forEach(function(value) {
-            that.data.labels.push(value.year);
-            that.data.datasets[0].data.push(parseFloat(value.data).toFixed(2));
-        });
-        this.options = {
-            
-            
-           scaleOverride: true,
-           
-            scaleSteps: 6,
-            scaleStepWidth: 2,
-            scaleStartValue: 0,         
-            scaleShowGridLines: false,
-            tooltipTemplate: "<%= value %>",
-            tooltipFillColor: background_color,
-            tooltipFontColor: '#706E69',
-            tooltipXPadding: 10,
-        scaleLineColor: scaleLineColor,
-                scaleFontColor: scaleFontColor,
-            pointDotRadius: 2,
-        percentageInnerCutout : 70,
-            pointHitDetectionRadius: 4
-        };
-    } 
-});
-
-cdiApp.LineChart.View = Backbone.View.extend({
-    initialize: function() {
-        this.data = this.model.data;
-        this.options = this.model.options;
-        this.render();
-    },
-    render: function() {
-        var chartHolder = this.el.getContext('2d');
-        var myLineChart = new Chart(chartHolder).Line(this.data, this.options);
     }
 });
 
