@@ -1,6 +1,6 @@
 Backbone.pubSub = _.extend({}, Backbone.Events); //creates a global mechanism to subscribe views to events published in others
 var originalRanks = {};
-var currentYear = 2017;
+var currentYear = 2018;
 var BarChartModel = Backbone.Model.extend({
     initialize: function(attributes) {
     	this.level = attributes.level;
