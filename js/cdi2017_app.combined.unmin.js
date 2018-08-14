@@ -205,37 +205,37 @@ this calculation has to be reproduced to allow users to adjust weights and retur
        CDI_AID: {
           value: 1,
           unlocked: true,
-          invSTD: 1.299973199          
+          invSTD: 1.389302487
        },
        CDI_TRA: {
           value: 1,
           unlocked: true,
-          invSTD: 1.790527298
+          invSTD: 1.57407581
        },
        CDI_INV: {
           value: 1,
           unlocked: true,
-          invSTD: 1.983034042
+          invSTD: 1.881240178
        },
        CDI_MIG: {
           value: 1,
           unlocked: true,
-          invSTD: 1.599475172
+          invSTD: 1.606214226
        },
         CDI_ENV: {
           value: 1,
           unlocked: true,
-          invSTD: 1.988872233
+          invSTD: 2.094850657
        },
         CDI_SEC: {
           value: 1,
           unlocked: true,
-          invSTD: 1.717781332
+          invSTD: 1.713680275
        },
        CDI_TEC: {
           value: 1,
           unlocked: true,
-          invSTD: 1.449135814
+          invSTD: 1.451552142
        }
    };
    
