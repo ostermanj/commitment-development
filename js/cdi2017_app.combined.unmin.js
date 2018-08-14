@@ -1142,11 +1142,13 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
           var view = {
             init: function(){
+              console.log()
               this.renderCharts();
               //this.addDropdown();
             },
             renderCharts: function(){
               document.querySelector('div.indicator.cdi').insertAdjacentHTML('afterbegin', '<div id="comparison-charts"></div>');
+
               
               var chartDivs = d3.select('#comparison-charts')
                 .selectAll('div.comparison-component')
@@ -1155,6 +1157,75 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     .attr('class', function(d){
                       return 'comparison-component ' + d.component;
                     });
+
+              var height = 40,
+                  yScale = d3.scaleLinear().range([0, height]),
+                  barPadding = 1,
+                  barWidth = 100 / countryCount - barPadding;
+
+
+              var svg = chartDivs
+                .append('svg')
+                  .attr('width', '100%')
+                  .attr('xmlns','http://www.w3.org/2000/svg')
+                  .attr('version','1.1')
+                  .attr('viewBox', '0 0 100 ' + height)
+                  .attr('focusable',false)
+                  .attr('aria-labelledby', 'svgTitle svgDesc')
+                  .attr('role','graphics-dataunit')
+                  .attr('class', 'pubtype-pie');
+
+                svg.append('title')
+                    .attr('id', 'svgTitle')
+                    .text(function(d){
+                      console.log(d, that.indicators);
+                      if ( d.component === 'CDI' ){
+                        return 'Chart showing how ' + that.countries[args.countryCodes[0]] + ' ranks on the CDI overall';
+                      } else {
+                        return 'Chart showing how ' + that.countries[args.countryCodes[0]] + ' ranks on the ' + that.indicators[d.component].toLowerCase() + ' component';
+                      }
+                    });
+
+                svg.append('desc')
+                    .attr('id','svgDesc')
+                    .text(function(d){
+                      var datum = d.values.find(function(obj){
+                        return obj.country === args.countryCodes[0];
+                      });
+                      if (d.component === 'CDI'){
+                        return that.countries[args.countryCodes[0]] + ' ranks ' + datum.rank + ' out of ' + countryCount + ' on the CDI';
+                      } else {
+                        return that.countries[args.countryCodes[0]] + ' ranks ' + datum.rank + ' out of ' + countryCount + ' on the ' + that.indicators[d.component].toLowerCase() + ' component';
+                      }
+                    });
+
+              var title  = svg.append('text')
+                .text(function(d){
+                  var componentStr = d.component === 'CDI' ? 'Overall' : that.indicators[d.component];
+                  var datum = d.values.find(function(obj){
+                    return obj.country === args.countryCodes[0];
+                  });
+                  return componentStr + ': ' + datum.value + ' (' + datum.rank + '/' + countryCount + ')';
+                })
+                .attr('class', function(d){
+                  return 'component-chart-title ' + d.component;
+                })
+                .attr('y',6);
+
+              var barGroup = svg.append('g')
+                .selectAll('rect')
+                .data(function(d){
+                  return d.values;
+                })
+                .enter().append('rect')
+                .attr('x', function(d,i){
+                  return barWidth * i + barPadding * i;
+                })
+                .attr('height', height / 2)
+                .attr('width', barWidth)
+                .attr('y', height - height / 2)
+                .attr('fill', 'cyan');
+
             }
           };
           if ( !document.querySelector('#comparison-charts') ){

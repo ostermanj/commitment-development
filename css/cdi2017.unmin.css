@@ -1405,36 +1405,44 @@ span.indicator-units {
     margin-bottom: -43px;
     }
 .indicator-label.category.CDI,
-.line-chart-header.CDI {
+.line-chart-header.CDI, .component-chart-title.CDI {
   color: #574D40;
+  fill: #574D40;
 }
 .indicator-label.category.CDI_AID,
-.line-chart-header.CDI_AID {
+.line-chart-header.CDI_AID, .component-chart-title.CDI_AID {
   color: #9E142E;
+  fill: #9E142E;
 }
 .indicator-label.category.CDI_INV,
-.line-chart-header.CDI_INV {
+.line-chart-header.CDI_INV, .component-chart-title.CDI_INV {
   color: #D77438;
+  fill: #D77438;
 }
 .indicator-label.category.CDI_TEC,
-.line-chart-header.CDI_TEC {
+.line-chart-header.CDI_TEC, .component-chart-title.CDI_TEC {
   color: #F5C144;
+  fill: #F5C144;
 }
 .indicator-label.category.CDI_ENV,
-.line-chart-header.CDI_ENV {
+.line-chart-header.CDI_ENV, .component-chart-title.CDI_ENV {
   color: #41B976;
+  fill: #41B976;
 }
 .indicator-label.category.CDI_TRA,
-.line-chart-header.CDI_TRA {
+.line-chart-header.CDI_TRA, .component-chart-title.CDI_TRA {
   color: #21358B;
+  fill: #21358B;
 }
 .indicator-label.category.CDI_SEC,
-.line-chart-header.CDI_SEC {
+.line-chart-header.CDI_SEC, .component-chart-title.CDI_SEC {
   color: #1792C5;
+  fill: #1792C5;
 }
 .indicator-label.category.CDI_MIG,
-.line-chart-header.CDI_MIG {
+.line-chart-header.CDI_MIG, .component-chart-title.CDI_MIG {
   color: #8850AC;
+  fill: #8850AC;
 }
 .countries {
   max-width: 100%;
@@ -2056,9 +2064,12 @@ span.country-label {
 }
 .comparison-component {
     width: 220px;
-    height:110px;
     background-color: #f3f3f3;
     margin:10px;
+}
+.component-chart-title {
+    font-size: 7px; /* percentage */
+    font-weight: bold;
 }
 
 
