@@ -2633,41 +2633,42 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
         var parent = this.app.flatIndicators[i];
 
 
-                if (this.app.flatIndicators[i].children) {
+                if (this.app.flatIndicators[i].children ) {
                   
                     $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent + '">' + this.data[i] + '</div>');
                     $content.append($label);
                     for (var j in this.app.flatIndicators[i].children) {
-                      var unitLabel;
-                      if ( this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit !== null ){
-                        unitLabel = this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit;
-                      } else {
-                        unitLabel = '';
-                      }
-                        indicators = [this.app.flatIndicators[i].children[j]];
-                        console.log(indicators);
-                        $label = $('<div class="indicator-label"><a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
-                        $chart = $('<div class="chart-holder"></div>');
-                        var aidShare = '';
-                        if ( indicators[0] === 'AID_QLT_BI' || indicators[0] === 'AID_QLT_MUL') {
-                          $chart.addClass('small-chart-holder');
-                          $label.addClass('small-chart-label');
-                          console.log(this.app.flatIndicators, this.countryCode);
-                          aidShare = ' (share=' + this.app.flatIndicators[indicators[0] + '_W'].user_friendly_values[this.countryCode] + ')';
-                        }
-                        $label.prepend(this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + aidShare);
-                        $content.append($label);
-                        $content.append($chart);
-                        parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
-                        if ( isNaN( parent.user_friendly_values[this.countryCode].replace(/%|\$|,/,''))) {
-                          $chart.addClass('null-value');
-                        }
-                        if ( parent.less_is_better ) {
-                          $chart.addClass('less-is-better');
-                        }
-                        this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
-                        this.app.addContext(currentYear, indicators, $chart, this.countryCode);
-                        
+                      if ( this.app.flatIndicators[i].children[j] !== 'AID_QLT_BI_W' && this.app.flatIndicators[i].children[j] !== 'AID_QLT_MUL_W' ) {
+                          var unitLabel;
+                          if ( this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit !== null ){
+                            unitLabel = this.app.flatIndicators[this.app.flatIndicators[i].children[j]].unit;
+                          } else {
+                            unitLabel = '';
+                          }
+                            indicators = [this.app.flatIndicators[i].children[j]];
+                            console.log(indicators);
+                            $label = $('<div class="indicator-label"><a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                            $chart = $('<div class="chart-holder"></div>');
+                            var aidShare = '';
+                            if ( indicators[0] === 'AID_QLT_BI' || indicators[0] === 'AID_QLT_MUL') {
+                              $chart.addClass('small-chart-holder');
+                              $label.addClass('small-chart-label');
+                              console.log(this.app.flatIndicators, this.countryCode);
+                              aidShare = ' (share=' + this.app.flatIndicators[indicators[0] + '_W'].user_friendly_values[this.countryCode] + ')';
+                            }
+                            $label.prepend(this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + aidShare);
+                            $content.append($label);
+                            $content.append($chart);
+                            parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];
+                            if ( isNaN( parent.user_friendly_values[this.countryCode].replace(/%|\$|,/,''))) {
+                              $chart.addClass('null-value');
+                            }
+                            if ( parent.less_is_better ) {
+                              $chart.addClass('less-is-better');
+                            }
+                            this.app.createBarChart(currentYear, this.countryCode, indicators, $chart, true, parent.min, parent.max, parent.user_friendly_min, parent.user_friendly_max, 4);
+                            this.app.addContext(currentYear, indicators, $chart, this.countryCode);
+                        }   
                     }
                 } else {
                    var unitLabel;
