@@ -1102,7 +1102,79 @@ new code : adds object 'original' to main indicators and copies data to it so th
     },
 
     loadCountry: function(args) {
+
+        var countryCount = 0;
+        var countries = [];
+        for (var key in this.countries) {
+          if ( this.countries.hasOwnProperty(key) ){
+            countryCount++;
+            countries.push(key);
+          }
+        }
         var that = this;
+      /*
+        countryCode = args.countryCodes[0]
+        CDI = this.flatIndicators.CDI
+                                     .values[countrycode]
+        componentCodes = CDI.children  
+
+        rank = getRank(countryCode, 'CDI') (for example)                                   
+        */
+
+
+        function countryComparisons(){
+          var components = ['CDI', 'CDI_AID', 'CDI_INV', 'CDI_TEC', 'CDI_ENV', 'CDI_TRA', 'CDI_SEC', 'CDI_MIG'];
+          var model = components.map(function(component){
+            return {
+              component: component,
+              values: countries.map(function(country){
+                console.log(country, component);
+                return {
+                  country: country,
+                  value: that.flatIndicators[component].values[country],
+                  rank: that.getRank(country, component, true)
+                };
+              }).sort(function(a,b){
+                return a.rank - b.rank > 0 ? 1 : a.rank - b.rank < 0 ? -1 : 0;
+              })
+            };
+          });
+
+          var view = {
+            init: function(){
+              this.renderCharts();
+              //this.addDropdown();
+            },
+            renderCharts: function(){
+              document.querySelector('div.indicator.cdi').insertAdjacentHTML('afterbegin', '<div id="comparison-charts"></div>');
+              
+              var chartDivs = d3.select('#comparison-charts')
+                .selectAll('div.comparison-component')
+                  .data(model)
+                  .enter().append('div')
+                    .attr('class', function(d){
+                      return 'comparison-component ' + d.component;
+                    });
+            }
+          };
+          if ( !document.querySelector('#comparison-charts') ){
+            view.init(); // prevent double firing. for some reason loadCountry is called twice sometimes
+          }
+        }
+
+        countryComparisons();
+
+
+
+
+
+
+
+
+
+
+      console.log('load country', args, this, originalRanks);
+        
 
     if ( originalRanks[args.countryCodes[0]] == undefined ){  // makes sure that original ranks object is ready before
                                                               // proceeding
@@ -1113,12 +1185,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
       return;
     }
         
-        var countryCount = 0;
-        for (var key in that.countries) {
-          if ( that.countries.hasOwnProperty(key) ){
-            countryCount++;
-          }
-        }
+     
       
         var cssSelector = '';
         var $indicatorElement;
@@ -1258,8 +1325,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
      * @return {integer}
      *   The rank of the given country in the given indicator.
      */
-    getRank: function(countryCode, indicator) {
-       if (indicator === 'CDI') {
+    getRank: function(countryCode, indicator, returnExact) {
+       if (indicator === 'CDI' && returnExact !== true) {
          var rank = originalRanks[countryCode]['rank_label'].replace('*',' (tie)');
          return rank;
        } else { 

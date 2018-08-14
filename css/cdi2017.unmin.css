@@ -2045,3 +2045,20 @@ span.country-label {
         font-size: 13px;
     }
 }
+
+/*  CSS for the comparison charts */
+
+#comparison-charts {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.comparison-component {
+    width: 220px;
+    height:110px;
+    background-color: #f3f3f3;
+    margin:10px;
+}
+
+
