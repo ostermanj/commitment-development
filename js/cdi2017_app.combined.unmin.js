@@ -1193,7 +1193,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                           } else {
                             unitLabel = '';
                           }
-                          
+                            console.log(that.flatIndicators[child.children[k]]);
                             $label = $('<div class="indicator-label">' + that.flatIndicators[child.children[k]].label + ' <a href="#info" class="indicator-info" data-indicator="' + child.children[k] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                             $chart = $('<div class="chart-holder"></div>');
                             $content.append($label);
@@ -1218,6 +1218,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                           } else {
                             unitLabel = '';
                           }
+                          console.log(child);
                         $label = $('<div class="indicator-label no-child category ' + i + '">' + child.label + ' <a href="#info" class="indicator-info" data-indicator="' + children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
                         indicators = [children[j]];
@@ -2644,8 +2645,17 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         unitLabel = '';
                       }
                         indicators = [this.app.flatIndicators[i].children[j]];
-                        $label = $('<div class="indicator-label">' + this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + ' <a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                        console.log(indicators);
+                        $label = $('<div class="indicator-label"><a href="#info" class="indicator-info" data-indicator="' + this.app.flatIndicators[i].children[j] + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                         $chart = $('<div class="chart-holder"></div>');
+                        var aidShare = '';
+                        if ( indicators[0] === 'AID_QLT_BI' || indicators[0] === 'AID_QLT_MUL') {
+                          $chart.addClass('small-chart-holder');
+                          $label.addClass('small-chart-label');
+                          console.log(this.app.flatIndicators, this.countryCode);
+                          aidShare = ' (share=' + this.app.flatIndicators[indicators[0] + '_W'].user_friendly_values[this.countryCode] + ')';
+                        }
+                        $label.prepend(this.app.flatIndicators[this.app.flatIndicators[i].children[j]].label + aidShare);
                         $content.append($label);
                         $content.append($chart);
                         parent = this.app.flatIndicators[this.app.flatIndicators[i].children[j]];

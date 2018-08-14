@@ -94,7 +94,7 @@
               <indicator code='AID_QNT' level='3' format='percentage'>
                  <label lang='EN'><![CDATA[Aid quantity]]></label>
                  <shortlabel lang='EN'><![CDATA[Aid Quantity]]></shortlabel>
-                 <unit lang='EN'><![CDATA[TEST!!]]></unit>
+                 <unit lang='EN'><![CDATA[]]></unit>
                  <decimalplaces lang='EN'><![CDATA[1]]></decimalplaces>
                  <description lang='EN'>
                     <![CDATA[
@@ -153,6 +153,16 @@
                   </p>
                   ]]></description>
                  <hierarchy>
+                    <indicator code='AID_QLT_TTL' level='4'>
+                       <label lang='EN'><![CDATA[Weighted Total ]]></label>
+                       <shortlabel lang='EN'><![CDATA[Weighted Total ]]></shortlabel>
+                       <description lang='EN'>
+                          <![CDATA[<p>
+                              DESCRIPTION TO COME
+                          </p>
+                          ]]>
+                       </description>
+                    </indicator>
                     <indicator code='AID_QLT_MUL' level='4'>
                        <label lang='EN'><![CDATA[Multilateral Aid Quality]]></label>
                        <shortlabel lang='EN'><![CDATA[Multilateral Aid Quality]]></shortlabel>
@@ -5338,7 +5348,7 @@
     <v c="GBR" value="0.006951"></v>
     <v c="USA" value="0.001819"></v>
 </vs>
-<vs y="2018" r="LMY" i="AID_QLT">
+<vs y="2018" r="LMY" i="AID_QLT_TTL" format="points" precision="3" units="sum of weighted bilateral and multilateral scores">
     <v c="AUS" value="0.2"></v>
     <v c="AUT" value="0.01"></v>
     <v c="BEL" value="0.04"></v>
@@ -5482,35 +5492,6 @@
     <v c="CHE" value="0.22"></v>
     <v c="GBR" value="0.36"></v>
     <v c="USA" value="0.17"></v>
-</vs>
-<vs y="2018" r="LMY" i="undefined">
-    <v c="AUS" value="0.23"></v>
-    <v c="AUT" value="0.3"></v>
-    <v c="BEL" value="0.45"></v>
-    <v c="CAN" value="0.26"></v>
-    <v c="CZE" value="0.13"></v>
-    <v c="DNK" value="0.72"></v>
-    <v c="FIN" value="0.41"></v>
-    <v c="FRA" value="0.43"></v>
-    <v c="DEU" value="0.66"></v>
-    <v c="GRC" value="0.16"></v>
-    <v c="HUN" value="0.11"></v>
-    <v c="IRL" value="0.3"></v>
-    <v c="ITA" value="0.29"></v>
-    <v c="JPN" value="0.23"></v>
-    <v c="LUX" value="1"></v>
-    <v c="NLD" value="0.6"></v>
-    <v c="NZL" value="0.23"></v>
-    <v c="NOR" value="0.99"></v>
-    <v c="POL" value="0.13"></v>
-    <v c="PRT" value="0.18"></v>
-    <v c="SVK" value="0.12"></v>
-    <v c="KOR" value="0.14"></v>
-    <v c="ESP" value="0.19"></v>
-    <v c="SWE" value="1.01"></v>
-    <v c="CHE" value="0.46"></v>
-    <v c="GBR" value="0.7"></v>
-    <v c="USA" value="0.18"></v>
 </vs>
 <vs y="2018" r="LMY" i="TRA_TAR" units="score">
     <v c="AUS" value="5.59"></v>

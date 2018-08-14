@@ -679,6 +679,17 @@ tr.trend {
   background: #DFDFDB;
 }
 
+.chart-holder.small-chart-holder {
+    margin-left: 13%;
+    height: 11px;
+    width: 85%;
+
+}
+
+.chart-holder.small-chart-holder div.value {
+    top: -4px;
+}
+
 .unstacked .chart-holder {
     background-color: transparent;
 }
@@ -914,6 +925,12 @@ td.spacer {
 .chart-holder div.bar-segment {
   float: left;
   height: 20px;
+  max-width: 100%;
+  position: relative;
+}
+.chart-holder.small-chart-holder div.bar-segment {
+  float: left;
+  height: 11px;
   max-width: 100%;
   position: relative;
 }
@@ -1358,6 +1375,10 @@ a.load-trends.fading {
   position: relative;
   margin-bottom: 15px;
   padding-right: 20px;
+}
+
+.indicator-label.small-chart-label {
+    margin-left: 13%;
 }
 span.indicator-units {
     font-size:12px;
