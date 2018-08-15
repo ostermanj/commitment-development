@@ -1108,7 +1108,10 @@ new code : adds object 'original' to main indicators and copies data to it so th
         for (var key in this.countries) {
           if ( this.countries.hasOwnProperty(key) ){
             countryCount++;
-            countries.push(key);
+            countries.push({
+              key: key,
+              value: this.countries[key]
+            });
           }
         }
         var that = this;
@@ -1130,9 +1133,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
               values: countries.map(function(country){
                 console.log(country, component);
                 return {
-                  country: country,
-                  value: that.flatIndicators[component].values[country],
-                  rank: that.getRank(country, component, true)
+                  country: country.key,
+                  value: that.flatIndicators[component].values[country.key],
+                  rank: that.getRank(country.key, component, true)
                 };
               }).sort(function(a,b){
                 return a.rank - b.rank > 0 ? 1 : a.rank - b.rank < 0 ? -1 : 0;
@@ -1154,7 +1157,48 @@ new code : adds object 'original' to main indicators and copies data to it so th
             init: function(){
               console.log(model)
               this.renderCharts();
-              //this.addDropdown();
+              this.addDropdown();
+            },
+            addDropdown: function(){
+              console.log(countries);
+              var dropdown = d3.select('#comparison-charts')
+                .append('select')
+                .attr('id', 'country-selector');
+
+              dropdown
+                .selectAll('option.country')
+                .data(countries.sort(function(a,b){
+                  return d3.ascending(a.value, b.value);
+                }))
+                  .enter().append('option')
+                  .attr('class','country')
+                  .attr('value', function(d){
+                    return d.key;
+                  })
+                  .text(function(d){
+                    return d.value;
+                  });
+
+              view.selector = new Selectr('#country-selector', {
+                multiple: true,
+                maxSelections: 2,
+                placeholder: 'Select up to two countries to compare'
+              });
+
+              view.selector.on('selectr.select', function(option) {
+                  var bar = d3.select('.component-bar.' + option.value);
+                  bar.each(function(d,i,nodes){
+                    view.highlightCountry.call(this,d,i,nodes);
+                    view.selectHighlightedCountry.call(this,d,i,nodes);
+                  });
+              });
+              view.selector.on('selectr.deselect', function(option) {
+                  var bar = d3.select('.component-bar.' + option.value);
+                  bar.each(function(d,i,nodes){
+                    //view.highlightCountry.call(this,d,i,nodes);
+                    view.selectHighlightedCountry.call(this,d,i,nodes, true);
+                  });
+              });
             },
             renderCharts: function(){
               document.querySelector('div.indicator.cdi').insertAdjacentHTML('afterbegin', '<div id="comparison-charts"></div>');
@@ -1258,7 +1302,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 this.blur();
               });
               rects.on('blur', view.unhighlightCountry);
-              rects.on('click', view.selectHighlightedCountry);
+              rects.on('click', function(d){
+                view.selector.setValue(d.country);
+              });
               rects.on('keyup', function(d,i,nodes){
                 if (d3.event.keyCode === 13){
                   view.selectHighlightedCountry.call(this,d,i,nodes);
@@ -1307,7 +1353,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 .attr('x', 8)
                 .attr('dy', '0.8em');
             },
-            highlightCountry(d,i,nodes){
+            highlightCountry: function(d,i,nodes){
               // `this` is the node
               console.log(d,i,nodes);
               var degree;
@@ -1325,7 +1371,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                   });
               }
             },
-            unhighlightCountry(d,i,nodes,called){
+            unhighlightCountry: function(d,i,nodes,called){
               // `this` is the node
               console.log(this,d,i,nodes);
               var degree;
@@ -1343,7 +1389,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                
               }
             },
-            selectHighlightedCountry(d,i,nodes){
+            selectHighlightedCountry: function(d,i,nodes){
               var $el = d3.select(this);
                if ( view.tertiarySelection === d.country ){
                   view.tertiarySelection = null;
@@ -1373,13 +1419,13 @@ new code : adds object 'original' to main indicators and copies data to it so th
                
                }
             },
-            fadeOutText(el){
+            fadeOutText: function(el){
                 var $el = d3.select(el);
                 var comp = $el.attr('data-component');
                 clearTimeout(view['fadeInTimeout-' + comp]);
                 $el.classed('no-opacity', true); // using d3 for easy SVG className support
             },
-            fadeInText(el,text){
+            fadeInText: function(el,text){
                 var $el = d3.select(el);
                 var comp = $el.attr('data-component');
                 clearTimeout(view['fadeInTimeout-' + comp]);
