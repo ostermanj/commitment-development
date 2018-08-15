@@ -1139,10 +1139,20 @@ new code : adds object 'original' to main indicators and copies data to it so th
               })
             };
           });
+          model.max = d3.max(model, function(d){
+            return d3.max(d.values, function(e){
+              return e.value;
+            });
+          });
+          model.min = d3.min(model, function(d){
+            return d3.min(d.values, function(e){
+              return e.value;
+            });
+          });
 
           var view = {
             init: function(){
-              console.log()
+              console.log(model)
               this.renderCharts();
               //this.addDropdown();
             },
@@ -1158,8 +1168,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
                       return 'comparison-component ' + d.component;
                     });
 
-              var height = 40,
-                  yScale = d3.scaleLinear().range([0, height]),
+              var height = 40, // percent of width,
+                  marginTop = 40 / 3,
+                  yScale = d3.scaleLinear().range([0, height - marginTop]).domain([model.min - 0.5, model.max]),
                   barPadding = 1,
                   barWidth = 100 / countryCount - barPadding;
 
@@ -1221,10 +1232,17 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 .attr('x', function(d,i){
                   return barWidth * i + barPadding * i;
                 })
-                .attr('height', height / 2)
+                .attr('height', function(d){
+                  return yScale(d.value);
+                })
                 .attr('width', barWidth)
-                .attr('y', height - height / 2)
-                .attr('fill', 'cyan');
+                .attr('y', function(d){
+                  return height - yScale(d.value);
+                })
+                .attr('class', 'component-bar')
+                .classed('primary', function(d){
+                  return d.country === args.countryCodes[0];
+                });
 
             }
           };
