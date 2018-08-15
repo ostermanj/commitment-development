@@ -1232,6 +1232,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                   return d.values;
                 })
                 .enter().append('rect')
+                .attr('tabindex', 0)
                 .attr('x', function(d,i){
                   return barWidth * i + barPadding * i;
                 })
@@ -1249,8 +1250,20 @@ new code : adds object 'original' to main indicators and copies data to it so th
                   return d.country === args.countryCodes[0];
                 });
 
-              rects.on('mouseenter', view.highlightCountry);
-              rects.on('mouseleave', view.unhighlightCountry);
+              rects.on('mouseenter', function(){
+                this.focus();
+              });
+              rects.on('focus', view.highlightCountry);
+              rects.on('mouseleave', function(){
+                this.blur();
+              });
+              rects.on('blur', view.unhighlightCountry);
+              rects.on('click', view.selectHighlightedCountry);
+              rects.on('keyup', function(d,i,nodes){
+                if (d3.event.keyCode === 13){
+                  view.selectHighlightedCountry.call(this,d,i,nodes);
+                }
+              });
 
               var secondaryGroup = svg.append('g')
                 .attr('class','secondary');
@@ -1298,8 +1311,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
               // `this` is the node
               console.log(d,i,nodes);
               var degree;
-              if (!view.tertiaryIsSelected && d.country !== args.countryCodes[0]){ // mouseenter should fired only if at least tertiary country is not selected
-                degree = !view.secondaryIsSelected ? 'secondary' : 'tertiary';
+              if (!view.tertiarySelection && d.country !== args.countryCodes[0] && view.secondarySelection !== d.country ){ // mouseenter should fired only if at least tertiary country is not selected
+                degree = !view.secondarySelection ? 'secondary' : 'tertiary';
+
                 d3.selectAll('rect.' + d.country)
                   .each(function(d,i){
                     d3.select(this).classed(degree, true);
@@ -1311,11 +1325,12 @@ new code : adds object 'original' to main indicators and copies data to it so th
                   });
               }
             },
-            unhighlightCountry(d,i,nodes){
+            unhighlightCountry(d,i,nodes,called){
               // `this` is the node
+              console.log(this,d,i,nodes);
               var degree;
-              if (!view.tertiaryIsSelected && d.country !== args.countryCodes[0]){ // mouseenter should fired only if at least tertiary country is not selected
-                degree = !view.secondaryIsSelected ? 'secondary' : 'tertiary';
+              if (( !view.tertiarySelection && d.country !== args.countryCodes[0] ) || called ){ 
+                degree = !view.secondarySelection ? 'secondary' : 'tertiary';
                 d3.selectAll('rect.' + d.country)
                   .each(function(d,i){
                   d3.select(this).classed(degree, false);
@@ -1327,6 +1342,36 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 });
                
               }
+            },
+            selectHighlightedCountry(d,i,nodes){
+              var $el = d3.select(this);
+               if ( view.tertiarySelection === d.country ){
+                  view.tertiarySelection = null;
+                  view.unhighlightCountry.call(this,d,i,nodes);
+                  return;
+               }
+               if ( view.secondarySelection === d.country ){
+                  view.secondarySelection = null;
+                  view.unhighlightCountry.call(this,d,i,nodes,true);
+                  if ( view.tertiarySelection ){
+                    view.secondarySelection = true;
+                    view.tertiarySelection = null;    
+                    d3.select('rect.tertiary')
+                      .each(function(d,i,nodes){
+                        view.unhighlightCountry.call(this,d,i,nodes,true);
+                        view.secondarySelection = null;
+                      });
+                  }
+                  return;
+               }
+               if (!view.tertiarySelection && d.country !== args.countryCodes[0]){ 
+                if ( !view.secondarySelection ){
+                  view.secondarySelection = d.country;
+                } else {
+                  view.tertiarySelection = d.country;
+                }
+               
+               }
             },
             fadeOutText(el){
                 var $el = d3.select(el);
@@ -1351,8 +1396,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 }, duration);
 
             },
-            secondaryIsSelected: false,
-            tertiaryIsSelected: false
+            secondarySelection: null,
+            tertiarySelection: null
           };
           if ( !document.querySelector('#comparison-charts') ){
             view.init(); // prevent double firing. for some reason loadCountry is called twice sometimes

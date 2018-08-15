@@ -2084,13 +2084,13 @@ span.country-label {
 }
 .tertiary rect, rect.tertiary {
     stroke: #574D40;
-    fill: none;
+    fill: #fff;
 }
 .component-bar {
     stroke-width: 0.25px;
     stroke: #DFDFDB;
     fill: #DFDFDB;
-    transition: stroke fill 0.2s linear;
+    transition: stroke, fill 0.2s linear;
 }
 .no-opacity {
     opacity: 0;
