@@ -2096,4 +2096,22 @@ span.country-label {
     opacity: 0;
 }
 
+/* SELECTR */
+
+#selector-container {
+    width:320px;
+    z-index: 1;
+}
+.selectr-placeholder {
+    color: #b0b0a6;
+}
+.selectr-option.selected {
+    background-color: #DFDFDB;
+}.selectr-option.active {
+    background-color: #2b6a77;
+}
+.selectr-tag {
+    background-color: #b0b0a6;
+}
+
 

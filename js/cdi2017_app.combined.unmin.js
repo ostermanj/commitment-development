@@ -1162,8 +1162,10 @@ new code : adds object 'original' to main indicators and copies data to it so th
             addDropdown: function(){
               console.log(countries);
               var dropdown = d3.select('#comparison-charts')
-                .append('select')
-                .attr('id', 'country-selector');
+                .append('div')
+                .attr('id','selector-container')
+                  .append('select')
+                  .attr('id', 'country-selector');
 
               dropdown
                 .selectAll('option.country')
