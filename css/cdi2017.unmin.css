@@ -2070,9 +2070,30 @@ span.country-label {
     font-size: 7px; /* percentage */
     font-weight: bold;
 }
-
+.secondary text, .tertiary text {
+    font-size: 7px;
+    transition: opacity 0.1s linear;
+}
+.secondary rect, .tertiary rect {
+    stroke-width: 0.25px;
+    transition: opacity 0.2s linear 0.2s;
+}
+.secondary rect, rect.secondary {
+    stroke: #b0b0a6;
+    fill: #b0b0a6;
+}
+.tertiary rect, rect.tertiary {
+    stroke: #574D40;
+    fill: none;
+}
 .component-bar {
+    stroke-width: 0.25px;
+    stroke: #DFDFDB;
     fill: #DFDFDB;
+    transition: stroke fill 0.2s linear;
+}
+.no-opacity {
+    opacity: 0;
 }
 
 

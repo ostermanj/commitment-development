@@ -1168,9 +1168,10 @@ new code : adds object 'original' to main indicators and copies data to it so th
                       return 'comparison-component ' + d.component;
                     });
 
-              var height = 40, // percent of width,
-                  marginTop = 40 / 3,
-                  yScale = d3.scaleLinear().range([0, height - marginTop]).domain([model.min - 0.5, model.max]),
+              var height = 66, // percent of width,
+                  marginTop = height / 4,
+                  marginBottom = height / 3.5,
+                  yScale = d3.scaleLinear().range([0, height - marginTop - marginBottom]).domain([model.min - 0.5, model.max]),
                   barPadding = 1,
                   barWidth = 100 / countryCount - barPadding;
 
@@ -1223,7 +1224,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 })
                 .attr('y',6);
 
-              var barGroup = svg.append('g')
+              var barGroup = svg.append('g');
+
+              var rects = barGroup
                 .selectAll('rect')
                 .data(function(d){
                   return d.values;
@@ -1237,14 +1240,119 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 })
                 .attr('width', barWidth)
                 .attr('y', function(d){
-                  return height - yScale(d.value);
+                  return height - yScale(d.value) - marginBottom;
                 })
-                .attr('class', 'component-bar')
+                .attr('class', function(d){
+                  return 'component-bar ' + d.country;
+                })
                 .classed('primary', function(d){
                   return d.country === args.countryCodes[0];
                 });
 
-            }
+              rects.on('mouseenter', view.highlightCountry);
+              rects.on('mouseleave', view.unhighlightCountry);
+
+              var secondaryGroup = svg.append('g')
+                .attr('class','secondary');
+
+              secondaryGroup
+                  .append('rect')
+                  .attr('class', 'no-opacity')
+                  .attr('width', 6)
+                  .attr('height', 6)
+                  .attr('y', height - marginBottom + 2);
+
+              secondaryGroup
+                .append('text')
+                .attr('class', 'no-opacity')
+                .attr('data-component', function(d){
+                  return d.component;
+                })
+                .text('None selected')
+                .attr('y', height - marginBottom + 2)
+                .attr('x', 8)
+                .attr('dy', '0.8em');
+
+              var tertiaryGroup = svg.append('g')
+                .attr('class','tertiary');
+
+              tertiaryGroup
+                  .append('rect')
+                  .attr('class', 'no-opacity')
+                  .attr('width', 6)
+                  .attr('height', 6)
+                  .attr('y', height - marginBottom + 10);
+
+              tertiaryGroup
+                .append('text')
+                 .attr('class', 'no-opacity')
+                 .attr('data-component', function(d){
+                   return d.component;
+                 })
+                .text('None selected')
+                .attr('y', height - marginBottom + 10)
+                .attr('x', 8)
+                .attr('dy', '0.8em');
+            },
+            highlightCountry(d,i,nodes){
+              // `this` is the node
+              console.log(d,i,nodes);
+              var degree;
+              if (!view.tertiaryIsSelected && d.country !== args.countryCodes[0]){ // mouseenter should fired only if at least tertiary country is not selected
+                degree = !view.secondaryIsSelected ? 'secondary' : 'tertiary';
+                d3.selectAll('rect.' + d.country)
+                  .each(function(d,i){
+                    d3.select(this).classed(degree, true);
+                    console.log(this.parentNode.parentNode,d,i);
+                    var svg = d3.select(this.parentNode.parentNode);
+                    view.fadeInText(svg.select('g.' + degree + ' text').node(), that.countries[d.country] + ': ' + d.value + ' (' + d.rank + '/' + countryCount + ')' );
+                    svg.select('g.' + degree + ' rect')
+                      .classed('no-opacity', false);
+                  });
+              }
+            },
+            unhighlightCountry(d,i,nodes){
+              // `this` is the node
+              var degree;
+              if (!view.tertiaryIsSelected && d.country !== args.countryCodes[0]){ // mouseenter should fired only if at least tertiary country is not selected
+                degree = !view.secondaryIsSelected ? 'secondary' : 'tertiary';
+                d3.selectAll('rect.' + d.country)
+                  .each(function(d,i){
+                  d3.select(this).classed(degree, false);
+                  console.log(this.parentNode.parentNode,d,i);
+                  var svg = d3.select(this.parentNode.parentNode);
+                  view.fadeOutText(svg.select('g.' + degree + ' text').node());
+                  svg.select('g.' + degree + ' rect')
+                    .classed('no-opacity', true);
+                });
+               
+              }
+            },
+            fadeOutText(el){
+                var $el = d3.select(el);
+                var comp = $el.attr('data-component');
+                clearTimeout(view['fadeInTimeout-' + comp]);
+                $el.classed('no-opacity', true); // using d3 for easy SVG className support
+            },
+            fadeInText(el,text){
+                var $el = d3.select(el);
+                var comp = $el.attr('data-component');
+                clearTimeout(view['fadeInTimeout-' + comp]);
+                var durationStr = window.getComputedStyle(el).getPropertyValue('transition-duration');
+                var duration = parseFloat(durationStr) * 1000;
+                view.fadeOutText(el);
+                view['fadeInTimeout-' + comp] = setTimeout(() => {
+                  if ( el instanceof SVGElement ){
+                    el.textContent = text;
+                  } else {
+                    el.innerHTML = text;
+                  }
+                  $el.classed('no-opacity', false);
+                }, duration);
+
+            },
+            secondaryIsSelected: false,
+            tertiaryIsSelected: false
           };
           if ( !document.querySelector('#comparison-charts') ){
             view.init(); // prevent double firing. for some reason loadCountry is called twice sometimes
