@@ -1402,10 +1402,16 @@ new code : adds object 'original' to main indicators and copies data to it so th
                   if ( view.tertiarySelection ){
                     view.secondarySelection = true;
                     view.tertiarySelection = null;    
-                    d3.select('rect.tertiary')
+                    var tertiary = d3.select('rect.tertiary');
+                    tertiary
                       .each(function(d,i,nodes){
                         view.unhighlightCountry.call(this,d,i,nodes,true);
                         view.secondarySelection = null;
+                      });
+                    tertiary
+                      .each(function(d,i,nodes){
+                        view.highlightCountry.call(this,d,i,nodes);
+                        view.secondarySelection = d.country;
                       });
                   }
                   return;

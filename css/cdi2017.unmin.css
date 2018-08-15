@@ -2071,7 +2071,7 @@ span.country-label {
     font-weight: bold;
 }
 .secondary text, .tertiary text {
-    font-size: 7px;
+    font-size: 6px;
     transition: opacity 0.1s linear;
 }
 .secondary rect, .tertiary rect {
