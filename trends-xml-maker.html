@@ -71,6 +71,9 @@
  */
 
     for (let year = minYear; year < ( maxYear + 1 ); year++ ){
+        if ( year === maxYear ){
+            year = maxYear + '_rank'
+        }
         var promise = new Promise(function(resolve,reject){
             d3.json('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/' + year + '!A:I?key=AIzaSyDD3W5wJeJF2esffZMQxNtEl9tt-OfgSq4', function (error,data){ // columns A through I
                 if (error) throw error;

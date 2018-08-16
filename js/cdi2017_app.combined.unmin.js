@@ -2635,7 +2635,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
             this.$el.append($contentTd);
             var allIndicators = ['CDI'].concat(this.app.indicatorsOrder);
             that.app.indicators['CDI'] = 'Overall';
-
+            console.log(originalRanks);
             allIndicators.forEach(function(indicator){
                 var data = [];
                 var $canvas = $('<canvas></canvas>');
@@ -2650,10 +2650,17 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                 $canvasWrapper.append($canvas);
                 $content.append($canvasWrapper);
                 for (var year in that.app.flatIndicators[indicator].trends[that.countryCode]) {
-                    data.push({
-                        year: year,
-                        data: that.app.flatIndicators[indicator].trends[that.countryCode][year]
-                    });
+                    if ( year != currentYear ){
+                      data.push({
+                          year: year,
+                          data: that.app.flatIndicators[indicator].trends[that.countryCode][year]
+                      });
+                    } else {
+                      data.push({
+                          year: year,
+                          data: that.app.getRank(that.countryCode, indicator, true)
+                      });
+                    }
                 }
                 var lineChartModel = new cdiApp.LineChart.Model({
                     data: data,
