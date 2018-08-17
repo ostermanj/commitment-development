@@ -1,6 +1,6 @@
 <div class="cdi-header-wrapper">
     <div class="cdi-header">
-        <h1>The Commitment to Development Index 2017</h1>
+        <h1>The Commitment to Development Index 2018</h1>
         <div id="cdi-carousel-wrapper">
           
             <p id="cdi-carousel-0" class="cdi-carousel" style="position: relative;">The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations.</p>
