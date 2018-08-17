@@ -604,7 +604,20 @@ tr.trend {
     -webkit-transition-duration: 0.4s;
             transition-duration: 0.4s;
 }
+.trends-note {
+    clear: left;
+    margin-top: 2em;
+    font-size: 0.85em;
+}
+.left-side .trends-note {
+    margin-top: 0;
+    line-height: 120%;
+}
+.country-trend-label {
+    margin-bottom: -20px;
+    margin-top: 1em;
 
+}
 .context-div {
     width: 0;
     height: 0;

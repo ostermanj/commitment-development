@@ -1501,6 +1501,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
 
             for (var i in that.indicators) {
+              console.log(i,currentYear);
                 var data = [];
                 var indicatorLowerCase = i.toLowerCase();
                 if (args.comparison) {
@@ -1509,14 +1510,22 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     $indicatorElement = $(cssSelector + ' .indicator.' + indicatorLowerCase);
                 }
                 var $content = $indicatorElement.find('.line-chart');
+                $content.append('<p class="country-trend-label">Rank</p>')
                 var $canvas = $('<canvas></canvas>');
                 $content.append($canvas);
 
                 for (var year in that.flatIndicators[i].trends[countryCode]) {
-                    data.push({
-                        year: year,
-                        data: that.flatIndicators[i].trends[countryCode][year]
-                    });
+                    if (year != currentYear ){
+                      data.push({
+                          year: year,
+                          data: that.flatIndicators[i].trends[countryCode][year]
+                      });
+                    } else {
+                       data.push({
+                          year: year,
+                          data: that.getRank(countryCode, i, true)
+                      });
+                    }
                 }
 
                 var lineChartModel = new cdiApp.LineChart.Model({
@@ -1528,6 +1537,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     el: $canvas
                 });
                 $content.append(lineChartView.$el);
+                $content.append('<p class="trends-note">The 2001–07 CDI included 21 countries; 2008–11, 22 countries; 2012–18, 27 countries.</p>');
 
                 // Set rank.
                 var $rank = $indicatorElement.find('.indicator-rank');
@@ -2643,8 +2653,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                 var label = that.app.indicators[indicator];
                 var value = that.app.flatIndicators[indicator].values[that.countryCode];
                 $canvasWrapper.append('<div class="line-chart-header ' + indicator + '">' +
-                    '<span class="indicator-label">' + label + '</span> ' +
-                    '<span class="indicator-value">' + value.toFixed(1) + '</span>' +
+                    '<span class="indicator-label">' + label + ' Rank</span> ' +
                     '</div>');
 
                 $canvasWrapper.append($canvas);
@@ -2676,6 +2685,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
              $buttonWrapper.append('<div class="year-results hello"><a class="cdi-country-report" target="_blank" href="/cdi-2017/country/' + this.countryCode + '">Country report</a></div>');
             $content.append($buttonWrapper);
             $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
+            $content.append('<p class="trends-note">The 2001–07 CDI included 21 countries; 2008–11, 22 countries; 2012–18, 27 countries.</p>');
             var tHeight = $('#' + this.countryCode + '-trend .trends-inner-wrapper').height() + 80;
             $('#' + this.countryCode + '-trend .trends-wrapper').css('height', tHeight);
             
@@ -2715,17 +2725,19 @@ cdiApp.LineChart.Model = Backbone.Model.extend({
         var that = this;
         args.data.forEach(function(value) {
             that.data.labels.push(value.year);
-            that.data.datasets[0].data.push(parseFloat(value.data).toFixed(2));
+            that.data.datasets[0].data.push(parseFloat(value.data).toFixed(0));
         });
         this.options = {
             
             
            scaleOverride: true,
+           //showScale: false,
            
-            scaleSteps: 6,
-            scaleStepWidth: 2,
-            scaleStartValue: 0,         
+            scaleSteps: 7.5,
+            scaleStepWidth: -4,
+            scaleStartValue: 29,         
             scaleShowGridLines: false,
+            scaleLabel: "<%= value != 29 ? ' ' + value : '' %>",
             tooltipTemplate: "<%= value %>",
             tooltipFillColor: background_color,
             tooltipFontColor: '#706E69',
