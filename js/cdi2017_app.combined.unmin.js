@@ -3028,7 +3028,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
 
                 if (this.app.flatIndicators[i].children ) {
                   
-                    $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent + '">' + this.data[i] + '</div>');
+                    $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent + '">' + this.data[i] + ' <a href="#info" class="indicator-info indicator-info-left" data-indicator="' + i + '">?</a><br /></div>');
                     $content.append($label);
                     for (var j in this.app.flatIndicators[i].children) {
                       if ( this.app.flatIndicators[i].children[j] !== 'AID_QLT_BI_W' && this.app.flatIndicators[i].children[j] !== 'AID_QLT_MUL_W' ) {
@@ -3071,7 +3071,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
                         unitLabel = '';
                       }               
                     indicators = [i];
-                    var $label = $('<div class="indicator-label no-child category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info" data-indicator="' + i + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
+                    var $label = $('<div class="indicator-label no-child category ' + this.app.flatIndicators[i].parent +'">' + this.data[i] + ' <a href="#info" class="indicator-info indicator-info-left" data-indicator="' + i + '">?</a><br /><span class="indicator-units">' + unitLabel +  '</span></div>');
                     var $chart = $('<div class="chart-holder"></div>');
                     $content.append($label);
                     $content.append($chart);

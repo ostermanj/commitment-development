@@ -891,7 +891,7 @@ td.spacer {
        cursor: pointer;
     right: 2px;
     position: absolute;
-    top: 20%;
+    top: 14%;
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -902,8 +902,15 @@ td.spacer {
     background-color: #ccc;
     color: #fff;
     line-height: 95%;
+    font-size:14px;
+    line-height: 115%;
 }
 
+#home-cdi-indicator .indicator-label a.indicator-info-left,
+.bar-charts .indicator-label a.indicator-info-left {
+
+    right: inherit;
+}
 #new_cdi table tr.master-row a.show-info:hover,
 #new_cdi table tr.master-row a.show-trend:hover,
 #home-cdi-indicator .indicator-label a.indicator-info:hover,
