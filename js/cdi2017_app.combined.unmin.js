@@ -1263,7 +1263,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                   var datum = d.values.find(function(obj){
                     return obj.country === args.countryCodes[0];
                   });
-                  return componentStr + ': ' + datum.value + ' (' + datum.rank + '/' + countryCount + ')';
+                  return componentStr + ': ' + d3.format('.2f')(datum.value) + ' (' + datum.rank + '/' + countryCount + ')';
                 })
                 .attr('class', function(d){
                   return 'component-chart-title ' + d.component;
@@ -1296,13 +1296,9 @@ new code : adds object 'original' to main indicators and copies data to it so th
                   return d.country === args.countryCodes[0];
                 });
 
-              rects.on('mouseenter', function(){
-                this.focus();
-              });
+              rects.on('mouseenter', view.highlightCountry);
               rects.on('focus', view.highlightCountry);
-              rects.on('mouseleave', function(){
-                this.blur();
-              });
+              rects.on('mouseleave', view.unhighlightCountry);
               rects.on('blur', view.unhighlightCountry);
               rects.on('click', function(d){
                 view.selector.setValue(d.country);
@@ -1367,7 +1363,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     d3.select(this).classed(degree, true);
                     console.log(this.parentNode.parentNode,d,i);
                     var svg = d3.select(this.parentNode.parentNode);
-                    view.fadeInText(svg.select('g.' + degree + ' text').node(), that.countries[d.country] + ': ' + d.value + ' (' + d.rank + '/' + countryCount + ')' );
+                    view.fadeInText(svg.select('g.' + degree + ' text').node(), that.countries[d.country] + ': ' + d3.format('.2f')(d.value) + ' (' + d.rank + '/' + countryCount + ')' );
                     svg.select('g.' + degree + ' rect')
                       .classed('no-opacity', false);
                   });
@@ -1440,7 +1436,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 var durationStr = window.getComputedStyle(el).getPropertyValue('transition-duration');
                 var duration = parseFloat(durationStr) * 1000;
                 view.fadeOutText(el);
-                view['fadeInTimeout-' + comp] = setTimeout(() => {
+                view['fadeInTimeout-' + comp] = setTimeout(function(){
                   if ( el instanceof SVGElement ){
                     el.textContent = text;
                   } else {
