@@ -71,9 +71,9 @@
  */
 
     for (let year = minYear; year < ( maxYear + 1 ); year++ ){
-        if ( year === maxYear ){
-            year = maxYear + '_rank'
-        }
+       /* if ( year === maxYear ){
+            year = maxYear + '_rank';
+        }*/
         var promise = new Promise(function(resolve,reject){
             d3.json('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/' + year + '!A:I?key=AIzaSyDD3W5wJeJF2esffZMQxNtEl9tt-OfgSq4', function (error,data){ // columns A through I
                 if (error) throw error;
@@ -83,7 +83,19 @@
         });
         trendsPromises.push(promise);
 
-    }
+    } // new for 2018; trends data uses ranks, not scores, so we need to add YYYY_rank to the promises
+      // the 2018 tab of the sheets doc includes scores while all other tabs for years now include ranks
+      // below, in the "CURRENT YEAR'S WEIGHTED MAIN COMPONENTS" section, we will specify the length - 2 index
+      // for the scores
+       
+    var promise = new Promise(function(resolve,reject){
+        d3.json('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/' + maxYear + '_rank' + '!A:I?key=AIzaSyDD3W5wJeJF2esffZMQxNtEl9tt-OfgSq4', function (error,data){ // columns A through I
+            if (error) throw error;
+            var values = data.values;
+            resolve(returnKeyValues(values, maxYear + '_rank'));
+        });
+    });
+    trendsPromises.push(promise);
 
     var trendsPromiseAll = Promise.all(trendsPromises);
 
@@ -110,19 +122,24 @@
         var container = document.createElement('div');
         components.push('CDI');
         nested.forEach(year => {
-            sheetComponents.forEach(component => { // each year-component gets a <vs>
-                var vs = document.createElement('vs');
-                vs.setAttribute('y',year.key);
-                vs.setAttribute('r','LMY');
-                vs.setAttribute('i',component);
-                year.values.forEach(row =>{ 
-                    var v = document.createElement('v');
-                    v.setAttribute('c',row.country_code);
-                    v.setAttribute('score',row[component]);
-                    vs.appendChild(v);
+            console.log(year);
+            if ( year.key != maxYear ){ // new for 2018: the maxYear trends data is scores while the rest are ranks
+                                      // the "[maxYear]_rank" is ranks. this IF statement excludes the score based
+                                      // trend from the output
+                sheetComponents.forEach(component => { // each year-component gets a <vs>
+                    var vs = document.createElement('vs');
+                    vs.setAttribute('y',year.key);
+                    vs.setAttribute('r','LMY');
+                    vs.setAttribute('i',component);
+                    year.values.forEach(row =>{ 
+                        var v = document.createElement('v');
+                        v.setAttribute('c',row.country_code);
+                        v.setAttribute('score',row[component]);
+                        vs.appendChild(v);
+                    });
+                    container.appendChild(vs);
                 });
-                container.appendChild(vs);
-            });
+            }
         });
     document.getElementById('trends-result-wrapper').value = formatCode(container.innerHTML);
     }
@@ -215,6 +232,7 @@ console.log(metadata);
       */
 
     var weightedPromise = new Promise(function(resolve,reject){
+        console.log(maxYear);
         d3.json('https://sheets.googleapis.com/v4/spreadsheets/' + sheetID + '/values/' + maxYear + '!M:T?key=AIzaSyDD3W5wJeJF2esffZMQxNtEl9tt-OfgSq4', function (error,data){ // columns M through T
             if (error) throw error;
             var values = data.values;
@@ -226,7 +244,9 @@ console.log(metadata);
         console.log(values); // array of 2 arrays
         var weighted = values[0];
         var unweighted = values[1];
-        var lastYearIndex = unweighted.length - 1;
+        var lastYearIndex = unweighted.length - 2; 
+            // new for 2018. the second to last trendPromis is the current year's scores
+            // the last one is the ranks
         var container = document.createElement('div');
         sheetComponents.forEach(component => { // each year-component gets a <vs>
             var vs = document.createElement('vs');

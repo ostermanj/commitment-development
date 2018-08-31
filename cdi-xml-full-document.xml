@@ -6774,236 +6774,236 @@
   
 
 <vs y="2018" r="LMY" i="CDI_AID">
-    <v c="AUS" score="5.36" weighted="0.636461042"></v>
-    <v c="AUT" score="4.76" weighted="0.5644788271"></v>
-    <v c="BEL" score="5.13" weighted="0.6088810532"></v>
-    <v c="CAN" score="5.37" weighted="0.9069577739"></v>
-    <v c="CZE" score="4.41" weighted="0.7451587149"></v>
-    <v c="DNK" score="6.42" weighted="1.085090124"></v>
-    <v c="FIN" score="5.06" weighted="0.5998647305"></v>
-    <v c="FRA" score="4.97" weighted="0.5893859821"></v>
-    <v c="DEU" score="4.65" weighted="0.5515470304"></v>
-    <v c="GRC" score="4.15" weighted="0.7014742377"></v>
-    <v c="HUN" score="4.32" weighted="0.7306083214"></v>
-    <v c="IRL" score="5.13" weighted="0.8674477087"></v>
-    <v c="ITA" score="4.45" weighted="0.528265055"></v>
-    <v c="JPN" score="4.89" weighted="0.5798987877"></v>
-    <v c="LUX" score="6.52" weighted="0.7735800277"></v>
-    <v c="NLD" score="5.57" weighted="0.9421365222"></v>
-    <v c="NZL" score="6.12" weighted="1.034644607"></v>
-    <v c="NOR" score="5.4" weighted="0.912382487"></v>
-    <v c="POL" score="4.38" weighted="0.5199374345"></v>
-    <v c="PRT" score="4.92" weighted="0.5839715468"></v>
-    <v c="SVK" score="4.36" weighted="0.516740649"></v>
-    <v c="KOR" score="4.27" weighted="0.7215406076"></v>
-    <v c="ESP" score="4.02" weighted="0.6788620448"></v>
-    <v c="SWE" score="6.36" weighted="1.075186977"></v>
-    <v c="CHE" score="4.61" weighted="0.5472365088"></v>
-    <v c="GBR" score="5.43" weighted="0.644299247"></v>
-    <v c="USA" score="3.96" weighted="0.469451854"></v>
+    <v c="AUS" score="5.365" weighted="0.636461042"></v>
+    <v c="AUT" score="4.758" weighted="0.5644788271"></v>
+    <v c="BEL" score="5.132" weighted="0.6088810532"></v>
+    <v c="CAN" score="5.367" weighted="0.9069577739"></v>
+    <v c="CZE" score="4.409" weighted="0.7451587149"></v>
+    <v c="DNK" score="6.421" weighted="1.085090124"></v>
+    <v c="FIN" score="5.056" weighted="0.5998647305"></v>
+    <v c="FRA" score="4.968" weighted="0.5893859821"></v>
+    <v c="DEU" score="4.649" weighted="0.5515470304"></v>
+    <v c="GRC" score="4.151" weighted="0.7014742377"></v>
+    <v c="HUN" score="4.323" weighted="0.7306083214"></v>
+    <v c="IRL" score="5.133" weighted="0.8674477087"></v>
+    <v c="ITA" score="4.453" weighted="0.528265055"></v>
+    <v c="JPN" score="4.888" weighted="0.5798987877"></v>
+    <v c="LUX" score="6.521" weighted="0.7735800277"></v>
+    <v c="NLD" score="5.575" weighted="0.9421365222"></v>
+    <v c="NZL" score="6.122" weighted="1.034644607"></v>
+    <v c="NOR" score="5.399" weighted="0.912382487"></v>
+    <v c="POL" score="4.383" weighted="0.5199374345"></v>
+    <v c="PRT" score="4.923" weighted="0.5839715468"></v>
+    <v c="SVK" score="4.356" weighted="0.516740649"></v>
+    <v c="KOR" score="4.269" weighted="0.7215406076"></v>
+    <v c="ESP" score="4.017" weighted="0.6788620448"></v>
+    <v c="SWE" score="6.362" weighted="1.075186977"></v>
+    <v c="CHE" score="4.613" weighted="0.5472365088"></v>
+    <v c="GBR" score="5.431" weighted="0.644299247"></v>
+    <v c="USA" score="3.957" weighted="0.469451854"></v>
 </vs>
 <vs y="2018" r="LMY" i="CDI_TRA">
-    <v c="AUS" score="5.65" weighted="0.7592442566"></v>
-    <v c="AUT" score="5.13" weighted="0.6891062849"></v>
-    <v c="BEL" score="4.98" weighted="0.6687881116"></v>
-    <v c="CAN" score="5.06" weighted="0.7553230728"></v>
-    <v c="CZE" score="5.19" weighted="0.774866981"></v>
-    <v c="DNK" score="5.37" weighted="0.8015483712"></v>
-    <v c="FIN" score="5.3" weighted="0.7125834231"></v>
-    <v c="FRA" score="5.2" weighted="0.6995257043"></v>
-    <v c="DEU" score="5.9" weighted="0.7934832626"></v>
-    <v c="GRC" score="4.41" weighted="0.6584327242"></v>
-    <v c="HUN" score="4.42" weighted="0.6597063508"></v>
-    <v c="IRL" score="5.28" weighted="0.7878807148"></v>
-    <v c="ITA" score="5" weighted="0.6724655552"></v>
-    <v c="JPN" score="5.12" weighted="0.688456799"></v>
-    <v c="LUX" score="5.34" weighted="0.7182178858"></v>
-    <v c="NLD" score="5.97" weighted="0.8906180142"></v>
-    <v c="NZL" score="5.33" weighted="0.7947814344"></v>
-    <v c="NOR" score="3.73" weighted="0.55650205"></v>
+    <v c="AUS" score="5.649" weighted="0.7592442566"></v>
+    <v c="AUT" score="5.127" weighted="0.6891062849"></v>
+    <v c="BEL" score="4.976" weighted="0.6687881116"></v>
+    <v c="CAN" score="5.064" weighted="0.7553230728"></v>
+    <v c="CZE" score="5.195" weighted="0.774866981"></v>
+    <v c="DNK" score="5.374" weighted="0.8015483712"></v>
+    <v c="FIN" score="5.302" weighted="0.7125834231"></v>
+    <v c="FRA" score="5.204" weighted="0.6995257043"></v>
+    <v c="DEU" score="5.903" weighted="0.7934832626"></v>
+    <v c="GRC" score="4.414" weighted="0.6584327242"></v>
+    <v c="HUN" score="4.423" weighted="0.6597063508"></v>
+    <v c="IRL" score="5.282" weighted="0.7878807148"></v>
+    <v c="ITA" score="5.003" weighted="0.6724655552"></v>
+    <v c="JPN" score="5.122" weighted="0.688456799"></v>
+    <v c="LUX" score="5.343" weighted="0.7182178858"></v>
+    <v c="NLD" score="5.971" weighted="0.8906180142"></v>
+    <v c="NZL" score="5.328" weighted="0.7947814344"></v>
+    <v c="NOR" score="3.731" weighted="0.55650205"></v>
     <v c="POL" score="4.45" weighted="0.5981918427"></v>
-    <v c="PRT" score="4.8" weighted="0.6447863231"></v>
+    <v c="PRT" score="4.797" weighted="0.6447863231"></v>
     <v c="SVK" score="4.76" weighted="0.6398211597"></v>
-    <v c="KOR" score="3.17" weighted="0.472699039"></v>
-    <v c="ESP" score="5.12" weighted="0.7630266456"></v>
-    <v c="SWE" score="5.49" weighted="0.8195937887"></v>
-    <v c="CHE" score="3.87" weighted="0.5204807664"></v>
-    <v c="GBR" score="5.64" weighted="0.7585223414"></v>
-    <v c="USA" score="5.29" weighted="0.7107293867"></v>
+    <v c="KOR" score="3.169" weighted="0.472699039"></v>
+    <v c="ESP" score="5.115" weighted="0.7630266456"></v>
+    <v c="SWE" score="5.495" weighted="0.8195937887"></v>
+    <v c="CHE" score="3.872" weighted="0.5204807664"></v>
+    <v c="GBR" score="5.643" weighted="0.7585223414"></v>
+    <v c="USA" score="5.288" weighted="0.7107293867"></v>
 </vs>
 <vs y="2018" r="LMY" i="CDI_INV">
-    <v c="AUS" score="5.51" weighted="0.884521936"></v>
-    <v c="AUT" score="4.68" weighted="0.7519961565"></v>
-    <v c="BEL" score="5.77" weighted="0.9266435789"></v>
-    <v c="CAN" score="5.52" weighted="0.688653691"></v>
-    <v c="CZE" score="4.85" weighted="0.6049637583"></v>
-    <v c="DNK" score="4.79" weighted="0.5976883923"></v>
-    <v c="FIN" score="5.53" weighted="0.8879554432"></v>
-    <v c="FRA" score="5.64" weighted="0.9065432435"></v>
-    <v c="DEU" score="5.23" weighted="0.840440986"></v>
-    <v c="GRC" score="4.3" weighted="0.5360883461"></v>
-    <v c="HUN" score="4.83" weighted="0.6031084645"></v>
-    <v c="IRL" score="5.52" weighted="0.6883261539"></v>
-    <v c="ITA" score="5.73" weighted="0.9197627741"></v>
-    <v c="JPN" score="4.05" weighted="0.6504200456"></v>
-    <v c="LUX" score="4.68" weighted="0.7515509622"></v>
-    <v c="NLD" score="5.03" weighted="0.628306018"></v>
-    <v c="NZL" score="4.24" weighted="0.5295312004"></v>
-    <v c="NOR" score="5.45" weighted="0.6808188703"></v>
-    <v c="POL" score="4.75" weighted="0.7635247907"></v>
-    <v c="PRT" score="5.21" weighted="0.8375038721"></v>
-    <v c="SVK" score="4.67" weighted="0.7503700296"></v>
-    <v c="KOR" score="4.45" weighted="0.5558302027"></v>
-    <v c="ESP" score="5.59" weighted="0.698289498"></v>
+    <v c="AUS" score="5.506" weighted="0.884521936"></v>
+    <v c="AUT" score="4.681" weighted="0.7519961565"></v>
+    <v c="BEL" score="5.768" weighted="0.9266435789"></v>
+    <v c="CAN" score="5.518" weighted="0.688653691"></v>
+    <v c="CZE" score="4.847" weighted="0.6049637583"></v>
+    <v c="DNK" score="4.789" weighted="0.5976883923"></v>
+    <v c="FIN" score="5.528" weighted="0.8879554432"></v>
+    <v c="FRA" score="5.643" weighted="0.9065432435"></v>
+    <v c="DEU" score="5.232" weighted="0.840440986"></v>
+    <v c="GRC" score="4.295" weighted="0.5360883461"></v>
+    <v c="HUN" score="4.832" weighted="0.6031084645"></v>
+    <v c="IRL" score="5.515" weighted="0.6883261539"></v>
+    <v c="ITA" score="5.726" weighted="0.9197627741"></v>
+    <v c="JPN" score="4.049" weighted="0.6504200456"></v>
+    <v c="LUX" score="4.678" weighted="0.7515509622"></v>
+    <v c="NLD" score="5.034" weighted="0.628306018"></v>
+    <v c="NZL" score="4.243" weighted="0.5295312004"></v>
+    <v c="NOR" score="5.455" weighted="0.6808188703"></v>
+    <v c="POL" score="4.753" weighted="0.7635247907"></v>
+    <v c="PRT" score="5.214" weighted="0.8375038721"></v>
+    <v c="SVK" score="4.671" weighted="0.7503700296"></v>
+    <v c="KOR" score="4.453" weighted="0.5558302027"></v>
+    <v c="ESP" score="5.595" weighted="0.698289498"></v>
     <v c="SWE" score="5.28" weighted="0.659015362"></v>
-    <v c="CHE" score="4.31" weighted="0.6928738284"></v>
-    <v c="GBR" score="5.35" weighted="0.8602129636"></v>
-    <v c="USA" score="4.03" weighted="0.6466864238"></v>
+    <v c="CHE" score="4.313" weighted="0.6928738284"></v>
+    <v c="GBR" score="5.355" weighted="0.8602129636"></v>
+    <v c="USA" score="4.026" weighted="0.6466864238"></v>
 </vs>
 <vs y="2018" r="LMY" i="CDI_MIG">
-    <v c="AUS" score="5.4" weighted="0.7404734422"></v>
-    <v c="AUT" score="5.35" weighted="0.7335864458"></v>
-    <v c="BEL" score="5.29" weighted="0.725362409"></v>
-    <v c="CAN" score="5.42" weighted="0.7918935404"></v>
-    <v c="CZE" score="4.1" weighted="0.5996836852"></v>
-    <v c="DNK" score="4.82" weighted="0.7046778248"></v>
-    <v c="FIN" score="5.03" weighted="0.6892822906"></v>
-    <v c="FRA" score="4.86" weighted="0.6669803581"></v>
-    <v c="DEU" score="6.05" weighted="0.8303126078"></v>
-    <v c="GRC" score="4.38" weighted="0.6400062378"></v>
-    <v c="HUN" score="4.15" weighted="0.6062129066"></v>
-    <v c="IRL" score="4.29" weighted="0.6273255027"></v>
-    <v c="ITA" score="5.19" weighted="0.7113966464"></v>
-    <v c="JPN" score="4.12" weighted="0.5651776483"></v>
-    <v c="LUX" score="5.9" weighted="0.8094097128"></v>
-    <v c="NLD" score="5.22" weighted="0.7628145317"></v>
-    <v c="NZL" score="5.93" weighted="0.8671321973"></v>
-    <v c="NOR" score="5.57" weighted="0.8135520579"></v>
-    <v c="POL" score="4.17" weighted="0.5713380958"></v>
-    <v c="PRT" score="5.41" weighted="0.7417534144"></v>
-    <v c="SVK" score="3.83" weighted="0.5250595321"></v>
-    <v c="KOR" score="4.7" weighted="0.6867993394"></v>
-    <v c="ESP" score="4.97" weighted="0.7261859433"></v>
-    <v c="SWE" score="6.06" weighted="0.886180582"></v>
-    <v c="CHE" score="5.05" weighted="0.6922841259"></v>
-    <v c="GBR" score="4.88" weighted="0.6693925595"></v>
-    <v c="USA" score="4.88" weighted="0.6695070405"></v>
+    <v c="AUS" score="5.399" weighted="0.7404734422"></v>
+    <v c="AUT" score="5.349" weighted="0.7335864458"></v>
+    <v c="BEL" score="5.289" weighted="0.725362409"></v>
+    <v c="CAN" score="5.417" weighted="0.7918935404"></v>
+    <v c="CZE" score="4.102" weighted="0.5996836852"></v>
+    <v c="DNK" score="4.821" weighted="0.7046778248"></v>
+    <v c="FIN" score="5.026" weighted="0.6892822906"></v>
+    <v c="FRA" score="4.863" weighted="0.6669803581"></v>
+    <v c="DEU" score="6.054" weighted="0.8303126078"></v>
+    <v c="GRC" score="4.378" weighted="0.6400062378"></v>
+    <v c="HUN" score="4.147" weighted="0.6062129066"></v>
+    <v c="IRL" score="4.291" weighted="0.6273255027"></v>
+    <v c="ITA" score="5.187" weighted="0.7113966464"></v>
+    <v c="JPN" score="4.121" weighted="0.5651776483"></v>
+    <v c="LUX" score="5.901" weighted="0.8094097128"></v>
+    <v c="NLD" score="5.218" weighted="0.7628145317"></v>
+    <v c="NZL" score="5.932" weighted="0.8671321973"></v>
+    <v c="NOR" score="5.565" weighted="0.8135520579"></v>
+    <v c="POL" score="4.166" weighted="0.5713380958"></v>
+    <v c="PRT" score="5.408" weighted="0.7417534144"></v>
+    <v c="SVK" score="3.828" weighted="0.5250595321"></v>
+    <v c="KOR" score="4.698" weighted="0.6867993394"></v>
+    <v c="ESP" score="4.968" weighted="0.7261859433"></v>
+    <v c="SWE" score="6.062" weighted="0.886180582"></v>
+    <v c="CHE" score="5.047" weighted="0.6922841259"></v>
+    <v c="GBR" score="4.881" weighted="0.6693925595"></v>
+    <v c="USA" score="4.881" weighted="0.6695070405"></v>
 </vs>
 <vs y="2018" r="LMY" i="CDI_ENV">
     <v c="AUS" score="4.19" weighted="0.7494248294"></v>
     <v c="AUT" score="5.11" weighted="0.914075276"></v>
-    <v c="BEL" score="5.28" weighted="0.9442735373"></v>
-    <v c="CAN" score="4.51" weighted="0.5051790281"></v>
-    <v c="CZE" score="5.29" weighted="0.5931606739"></v>
-    <v c="DNK" score="5.25" weighted="0.5879811843"></v>
-    <v c="FIN" score="5.28" weighted="0.9449989613"></v>
-    <v c="FRA" score="5.26" weighted="0.9405318201"></v>
-    <v c="DEU" score="5.2" weighted="0.9308542687"></v>
-    <v c="GRC" score="4.95" weighted="0.5552919684"></v>
-    <v c="HUN" score="5.39" weighted="0.6043629583"></v>
-    <v c="IRL" score="4.72" weighted="0.5292407242"></v>
-    <v c="ITA" score="5.32" weighted="0.9519211509"></v>
-    <v c="JPN" score="4.11" weighted="0.735376289"></v>
-    <v c="LUX" score="4.93" weighted="0.8814572323"></v>
-    <v c="NLD" score="5.1" weighted="0.5721747504"></v>
-    <v c="NZL" score="4.85" weighted="0.5431456806"></v>
-    <v c="NOR" score="4.72" weighted="0.5285883492"></v>
-    <v c="POL" score="5.48" weighted="0.9796387159"></v>
+    <v c="BEL" score="5.279" weighted="0.9442735373"></v>
+    <v c="CAN" score="4.507" weighted="0.5051790281"></v>
+    <v c="CZE" score="5.292" weighted="0.5931606739"></v>
+    <v c="DNK" score="5.246" weighted="0.5879811843"></v>
+    <v c="FIN" score="5.283" weighted="0.9449989613"></v>
+    <v c="FRA" score="5.258" weighted="0.9405318201"></v>
+    <v c="DEU" score="5.204" weighted="0.9308542687"></v>
+    <v c="GRC" score="4.954" weighted="0.5552919684"></v>
+    <v c="HUN" score="5.392" weighted="0.6043629583"></v>
+    <v c="IRL" score="4.722" weighted="0.5292407242"></v>
+    <v c="ITA" score="5.322" weighted="0.9519211509"></v>
+    <v c="JPN" score="4.111" weighted="0.735376289"></v>
+    <v c="LUX" score="4.928" weighted="0.8814572323"></v>
+    <v c="NLD" score="5.105" weighted="0.5721747504"></v>
+    <v c="NZL" score="4.846" weighted="0.5431456806"></v>
+    <v c="NOR" score="4.716" weighted="0.5285883492"></v>
+    <v c="POL" score="5.477" weighted="0.9796387159"></v>
     <v c="PRT" score="5.38" weighted="0.9624460907"></v>
-    <v c="SVK" score="5.6" weighted="1.002121902"></v>
-    <v c="KOR" score="3.64" weighted="0.4081732524"></v>
+    <v c="SVK" score="5.602" weighted="1.002121902"></v>
+    <v c="KOR" score="3.642" weighted="0.4081732524"></v>
     <v c="ESP" score="5.39" weighted="0.6041756145"></v>
-    <v c="SWE" score="5.52" weighted="0.6182177421"></v>
-    <v c="CHE" score="4.92" weighted="0.8798936149"></v>
-    <v c="GBR" score="5.31" weighted="0.9490691068"></v>
-    <v c="USA" score="4.3" weighted="0.7699678915"></v>
+    <v c="SWE" score="5.516" weighted="0.6182177421"></v>
+    <v c="CHE" score="4.919" weighted="0.8798936149"></v>
+    <v c="GBR" score="5.306" weighted="0.9490691068"></v>
+    <v c="USA" score="4.304" weighted="0.7699678915"></v>
 </vs>
 <vs y="2018" r="LMY" i="CDI_SEC">
-    <v c="AUS" score="4.9" weighted="0.7175257686"></v>
-    <v c="AUT" score="5.4" weighted="0.7904879253"></v>
-    <v c="BEL" score="4.73" weighted="0.6915391348"></v>
-    <v c="CAN" score="4.48" weighted="0.6142285868"></v>
+    <v c="AUS" score="4.903" weighted="0.7175257686"></v>
+    <v c="AUT" score="5.402" weighted="0.7904879253"></v>
+    <v c="BEL" score="4.726" weighted="0.6915391348"></v>
+    <v c="CAN" score="4.483" weighted="0.6142285868"></v>
     <v c="CZE" score="4.65" weighted="0.6370570533"></v>
-    <v c="DNK" score="6.6" weighted="0.9036369067"></v>
-    <v c="FIN" score="5.82" weighted="0.8522581275"></v>
-    <v c="FRA" score="5.48" weighted="0.8024334283"></v>
-    <v c="DEU" score="4.89" weighted="0.7161239619"></v>
-    <v c="GRC" score="4.26" weighted="0.5831911294"></v>
-    <v c="HUN" score="5.24" weighted="0.7175361574"></v>
-    <v c="IRL" score="5.09" weighted="0.6968286685"></v>
-    <v c="ITA" score="5.02" weighted="0.7346608455"></v>
-    <v c="JPN" score="4.16" weighted="0.6091325092"></v>
-    <v c="LUX" score="5.48" weighted="0.8016402858"></v>
-    <v c="NLD" score="5.15" weighted="0.7057893265"></v>
-    <v c="NZL" score="4.61" weighted="0.6309796532"></v>
-    <v c="NOR" score="5.08" weighted="0.6953967383"></v>
-    <v c="POL" score="4.42" weighted="0.6462287644"></v>
-    <v c="PRT" score="5" weighted="0.7320664805"></v>
-    <v c="SVK" score="5.58" weighted="0.8170126568"></v>
-    <v c="KOR" score="3.56" weighted="0.4879318661"></v>
-    <v c="ESP" score="4.89" weighted="0.6705805571"></v>
-    <v c="SWE" score="4.71" weighted="0.645676008"></v>
+    <v c="DNK" score="6.595" weighted="0.9036369067"></v>
+    <v c="FIN" score="5.824" weighted="0.8522581275"></v>
+    <v c="FRA" score="5.484" weighted="0.8024334283"></v>
+    <v c="DEU" score="4.894" weighted="0.7161239619"></v>
+    <v c="GRC" score="4.257" weighted="0.5831911294"></v>
+    <v c="HUN" score="5.237" weighted="0.7175361574"></v>
+    <v c="IRL" score="5.086" weighted="0.6968286685"></v>
+    <v c="ITA" score="5.021" weighted="0.7346608455"></v>
+    <v c="JPN" score="4.163" weighted="0.6091325092"></v>
+    <v c="LUX" score="5.478" weighted="0.8016402858"></v>
+    <v c="NLD" score="5.151" weighted="0.7057893265"></v>
+    <v c="NZL" score="4.605" weighted="0.6309796532"></v>
+    <v c="NOR" score="5.075" weighted="0.6953967383"></v>
+    <v c="POL" score="4.416" weighted="0.6462287644"></v>
+    <v c="PRT" score="5.003" weighted="0.7320664805"></v>
+    <v c="SVK" score="5.583" weighted="0.8170126568"></v>
+    <v c="KOR" score="3.561" weighted="0.4879318661"></v>
+    <v c="ESP" score="4.894" weighted="0.6705805571"></v>
+    <v c="SWE" score="4.713" weighted="0.645676008"></v>
     <v c="CHE" score="4.83" weighted="0.7067982799"></v>
-    <v c="GBR" score="5.58" weighted="0.8159592077"></v>
+    <v c="GBR" score="5.576" weighted="0.8159592077"></v>
     <v c="USA" score="5.39" weighted="0.7886749401"></v>
 </vs>
 <vs y="2018" r="LMY" i="CDI_TEC">
-    <v c="AUS" score="4.75" weighted="0.5889707068"></v>
-    <v c="AUT" score="5.76" weighted="0.7143014817"></v>
-    <v c="BEL" score="5.17" weighted="0.6413227891"></v>
-    <v c="CAN" score="5.04" weighted="0.8157100768"></v>
-    <v c="CZE" score="5.09" weighted="0.822653947"></v>
-    <v c="DNK" score="5.33" weighted="0.8628417556"></v>
-    <v c="FIN" score="5.13" weighted="0.6363725902"></v>
-    <v c="FRA" score="5.43" weighted="0.6732440594"></v>
-    <v c="DEU" score="5.32" weighted="0.659873972"></v>
-    <v c="GRC" score="4.3" weighted="0.6957881583"></v>
-    <v c="HUN" score="4.28" weighted="0.6928768308"></v>
-    <v c="IRL" score="4.11" weighted="0.6651341113"></v>
+    <v c="AUS" score="4.752" weighted="0.5889707068"></v>
+    <v c="AUT" score="5.763" weighted="0.7143014817"></v>
+    <v c="BEL" score="5.174" weighted="0.6413227891"></v>
+    <v c="CAN" score="5.043" weighted="0.8157100768"></v>
+    <v c="CZE" score="5.086" weighted="0.822653947"></v>
+    <v c="DNK" score="5.334" weighted="0.8628417556"></v>
+    <v c="FIN" score="5.134" weighted="0.6363725902"></v>
+    <v c="FRA" score="5.432" weighted="0.6732440594"></v>
+    <v c="DEU" score="5.324" weighted="0.659873972"></v>
+    <v c="GRC" score="4.302" weighted="0.6957881583"></v>
+    <v c="HUN" score="4.284" weighted="0.6928768308"></v>
+    <v c="IRL" score="4.112" weighted="0.6651341113"></v>
     <v c="ITA" score="4.36" weighted="0.5404665643"></v>
-    <v c="JPN" score="5.53" weighted="0.6848250866"></v>
-    <v c="LUX" score="4.55" weighted="0.5633965417"></v>
+    <v c="JPN" score="5.525" weighted="0.6848250866"></v>
+    <v c="LUX" score="4.545" weighted="0.5633965417"></v>
     <v c="NLD" score="5.19" weighted="0.8395214832"></v>
-    <v c="NZL" score="4.92" weighted="0.7964942677"></v>
-    <v c="NOR" score="6.07" weighted="0.9814624364"></v>
-    <v c="POL" score="3.38" weighted="0.4194842152"></v>
-    <v c="PRT" score="5.79" weighted="0.7180833479"></v>
-    <v c="SVK" score="3.91" weighted="0.4852258979"></v>
-    <v c="KOR" score="6.67" weighted="1.079169005"></v>
-    <v c="ESP" score="4.93" weighted="0.7973562879"></v>
-    <v c="SWE" score="5.13" weighted="0.8302459148"></v>
-    <v c="CHE" score="5.57" weighted="0.6908281237"></v>
-    <v c="GBR" score="4.66" weighted="0.5770720231"></v>
-    <v c="USA" score="4.59" weighted="0.5693421245"></v>
+    <v c="NZL" score="4.924" weighted="0.7964942677"></v>
+    <v c="NOR" score="6.068" weighted="0.9814624364"></v>
+    <v c="POL" score="3.384" weighted="0.4194842152"></v>
+    <v c="PRT" score="5.793" weighted="0.7180833479"></v>
+    <v c="SVK" score="3.915" weighted="0.4852258979"></v>
+    <v c="KOR" score="6.672" weighted="1.079169005"></v>
+    <v c="ESP" score="4.929" weighted="0.7973562879"></v>
+    <v c="SWE" score="5.133" weighted="0.8302459148"></v>
+    <v c="CHE" score="5.574" weighted="0.6908281237"></v>
+    <v c="GBR" score="4.656" weighted="0.5770720231"></v>
+    <v c="USA" score="4.593" weighted="0.5693421245"></v>
 </vs>
 <vs y="2018" r="LMY" i="CDI">
-    <v c="AUS" score="5.08"></v>
-    <v c="AUT" score="5.16"></v>
-    <v c="BEL" score="5.21"></v>
-    <v c="CAN" score="5.03"></v>
+    <v c="AUS" score="5.077"></v>
+    <v c="AUT" score="5.158"></v>
+    <v c="BEL" score="5.207"></v>
+    <v c="CAN" score="5.034"></v>
     <v c="CZE" score="4.82"></v>
-    <v c="DNK" score="5.48"></v>
-    <v c="FIN" score="5.32"></v>
-    <v c="FRA" score="5.28"></v>
-    <v c="DEU" score="5.32"></v>
-    <v c="GRC" score="4.42"></v>
-    <v c="HUN" score="4.71"></v>
-    <v c="IRL" score="4.89"></v>
-    <v c="ITA" score="5.06"></v>
-    <v c="JPN" score="4.51"></v>
-    <v c="LUX" score="5.3"></v>
-    <v c="NLD" score="5.3"></v>
-    <v c="NZL" score="5.09"></v>
+    <v c="DNK" score="5.479"></v>
+    <v c="FIN" score="5.323"></v>
+    <v c="FRA" score="5.279"></v>
+    <v c="DEU" score="5.323"></v>
+    <v c="GRC" score="4.418"></v>
+    <v c="HUN" score="4.714"></v>
+    <v c="IRL" score="4.892"></v>
+    <v c="ITA" score="5.059"></v>
+    <v c="JPN" score="4.513"></v>
+    <v c="LUX" score="5.299"></v>
+    <v c="NLD" score="5.299"></v>
+    <v c="NZL" score="5.089"></v>
     <v c="NOR" score="5.12"></v>
-    <v c="POL" score="4.5"></v>
-    <v c="PRT" score="5.22"></v>
-    <v c="SVK" score="4.74"></v>
-    <v c="KOR" score="4.29"></v>
-    <v c="ESP" score="5.04"></v>
-    <v c="SWE" score="5.49"></v>
+    <v c="POL" score="4.498"></v>
+    <v c="PRT" score="5.221"></v>
+    <v c="SVK" score="4.736"></v>
+    <v c="KOR" score="4.292"></v>
+    <v c="ESP" score="5.036"></v>
+    <v c="SWE" score="5.485"></v>
     <v c="CHE" score="4.73"></v>
-    <v c="GBR" score="5.27"></v>
-    <v c="USA" score="4.62"></v>
+    <v c="GBR" score="5.275"></v>
+    <v c="USA" score="4.624"></v>
 </vs>
 
 </data>
