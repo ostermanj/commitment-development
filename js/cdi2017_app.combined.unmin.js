@@ -1102,7 +1102,17 @@ new code : adds object 'original' to main indicators and copies data to it so th
     },
 
     loadCountry: function(args) {
-
+        console.log(originalRanks);
+        var that = this;
+        if ( originalRanks[args.countryCodes[0]] == undefined ){  // makes sure that original ranks object is ready before
+                                                              // proceeding
+          
+          setTimeout(function(){
+            that.loadCountry(args);
+          },500);
+          return;
+        }
+            
         var countryCount = 0;
         var countries = [];
         for (var key in this.countries) {
@@ -1203,6 +1213,13 @@ new code : adds object 'original' to main indicators and copies data to it so th
               });
             },
             renderCharts: function(){
+             /* var that = this;
+              if ( originalRanks.SWE === undefined ) { //ie the original ranks are not ready yet
+                setTimeout(function(){
+                  that.renderCharts();
+                }, 1000);
+                return;
+              }*/
               document.querySelector('div.indicator.cdi').insertAdjacentHTML('afterbegin', '<div id="comparison-charts"></div>');
 
               
@@ -1259,11 +1276,19 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
               var title  = svg.append('text')
                 .text(function(d){
+                  console.log(d);
                   var componentStr = d.component === 'CDI' ? 'Overall' : that.indicators[d.component];
                   var datum = d.values.find(function(obj){
                     return obj.country === args.countryCodes[0];
                   });
-                  return componentStr + ': ' + d3.format('.2f')(datum.value) + ' (' + datum.rank + '/' + countryCount + ')';
+                  console.log(datum);
+                  var rankStringOrNumber = that.getRank(args.countryCodes[0], d.component);
+                  var tieString = '';
+                  if ( typeof rankStringOrNumber === 'string' && rankStringOrNumber.indexOf('tie') !== -1 ){
+                    tieString = ' — tie';
+                    rankStringOrNumber = rankStringOrNumber.replace(' (tie)','');
+                  }
+                  return componentStr + ': ' + d3.format('.2f')(datum.value) + ' (' + rankStringOrNumber + '/' + countryCount + ')' + tieString;
                 })
                 .attr('class', function(d){
                   return 'component-chart-title ' + d.component;
@@ -1468,15 +1493,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
       console.log('load country', args, this, originalRanks);
         
 
-    if ( originalRanks[args.countryCodes[0]] == undefined ){  // makes sure that original ranks object is ready before
-                                                              // proceeding
-      
-      setTimeout(function(){
-        that.loadCountry(args);
-      },1000);
-      return;
-    }
-        
+    
      
       
         var cssSelector = '';
@@ -1648,6 +1665,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
      *   The rank of the given country in the given indicator.
      */
     getRank: function(countryCode, indicator, returnExact) {
+      
        if (indicator === 'CDI' && returnExact !== true) {
          var rank = originalRanks[countryCode]['rank_label'].replace('*',' (tie)');
          return rank;
