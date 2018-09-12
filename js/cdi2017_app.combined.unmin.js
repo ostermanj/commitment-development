@@ -1104,6 +1104,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     loadCountry: function(args) {
         console.log(originalRanks);
         var that = this;
+        var thisCountry = args.countryCodes[0];
         if ( originalRanks[args.countryCodes[0]] == undefined ){  // makes sure that original ranks object is ready before
                                                               // proceeding
           
@@ -1375,6 +1376,26 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 .attr('y', height - marginBottom + 10)
                 .attr('x', 8)
                 .attr('dy', '0.8em');
+
+              function checkForOverallTies(){
+                d3.select('.comparison-component.CDI')
+                  .selectAll('rect.component-bar')
+                  .each(function(d,i,array){
+                    var previous = d3.select(array[i - 1]);
+                    if ( i > 0 && d.country === thisCountry && Math.round(d.value * 100) === Math.round( previous.data()[0].value * 100 )){
+                      console.log('tie with ' + previous.data()[0].country);
+                      d3.select(this).attr('x', function(){
+                        return barWidth * (i - 1) + barPadding * (i - 1);
+                      });
+                      previous.attr('x', function(){
+                        return barWidth * i + barPadding * i;
+                      });
+                    }
+                  });
+              };
+              checkForOverallTies();
+              console.log(thisCountry);
+
             },
             highlightCountry: function(d,i,nodes){
               // `this` is the node
