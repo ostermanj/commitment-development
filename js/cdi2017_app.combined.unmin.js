@@ -1399,7 +1399,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             },
             highlightCountry: function(d,i,nodes){
               // `this` is the node
-              console.log(d,i,nodes);
+              console.log(d,i,nodes,args);
               var degree;
               if (!view.tertiarySelection && d.country !== args.countryCodes[0] && view.secondarySelection !== d.country ){ // mouseenter should fired only if at least tertiary country is not selected
                 degree = !view.secondarySelection ? 'secondary' : 'tertiary';
@@ -1409,7 +1409,14 @@ new code : adds object 'original' to main indicators and copies data to it so th
                     d3.select(this).classed(degree, true);
                     console.log(this.parentNode.parentNode,d,i);
                     var svg = d3.select(this.parentNode.parentNode);
-                    view.fadeInText(svg.select('g.' + degree + ' text').node(), that.countries[d.country] + ': ' + d3.format('.2f')(d.value) + ' (' + d.rank + '/' + countryCount + ')' );
+                    console.log(svg.data());
+                    var rankStringOrNumber = that.getRank(d.country, svg.data()[0].component);
+                    var tieString = '';
+                    if ( typeof rankStringOrNumber === 'string' && rankStringOrNumber.indexOf('tie') !== -1 ){
+                      tieString = ' — tie';
+                      rankStringOrNumber = rankStringOrNumber.replace(' (tie)','');
+                    }
+                    view.fadeInText(svg.select('g.' + degree + ' text').node(), that.countries[d.country] + ': ' + d3.format('.2f')(d.value) + ' (' + rankStringOrNumber + '/' + countryCount + ')' + tieString );
                     svg.select('g.' + degree + ' rect')
                       .classed('no-opacity', false);
                   });
