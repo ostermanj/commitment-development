@@ -407,12 +407,13 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
 }
 
 .cdi-header-wrapper {
-    background: url(../images/home-hero-2016_4.jpg);
-    background-size: cover;
+    background: url(../images/home-hero-2018.jpg);
+    background-size: 125%;
     padding: 40px 0;
     color: #FFF;
-    background-position-y: -115px;
+    background-position-y: -110px;
     margin-top:-1px;
+    position: relative;
 }
 .cdi-header-wrapper h1 {
   font-size: 44px;
@@ -435,7 +436,7 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
   position: relative;
 }
 .cdi-carousel {
-  max-width: 732px;
+  max-width: 490px;
   width: 100%;
   position: absolute;
   -webkit-transition:opacity .25s linear;
@@ -448,7 +449,7 @@ tr.master-row.processed .original-rank, tr.master-row.processed .original-value 
   width: 98%;
   height: 30px;
   position: relative;
-  max-width: 718px;
+  max-width: 470px;
   padding: 0 1%;
 }
 #carousel-indicator {
@@ -1476,7 +1477,7 @@ span.indicator-units {
   margin: 0 auto;
 }
 .country-title {
-  background: #666 center center url(../images/home-hero-2016_4.jpg);
+  background: #666 center center url(../images/home-hero-2018.jpg);
   background-size: cover;
   width: 98%;
   padding: 0 1%;
@@ -1769,7 +1770,7 @@ span.country-label {
         top: 66px;
     }
     .cdi-header-wrapper {
-      background-position-y: 0px;
+      background-position-y: -30px;
       margin-top: -6px; 
     }
     .mainNav.stick-to-top {
@@ -1821,6 +1822,7 @@ span.country-label {
     .flexbox .mainNav {
         height:132px;
     }
+    
 }
 @media screen and (max-width: 739px) {
 
@@ -1863,12 +1865,18 @@ span.country-label {
         display: none;  
     } */
     .cdi-header-wrapper {
-        padding: 4% 0;
+        background-position-y: -71px;
+        background-position-x: -75px;
+        height: 0;
+        padding: 0 0 25%;
     }
-    .cdi-header-wrapper h1 {
-        max-width: 100%;
-        font-size: 36px;
+    .cdi-header h1 {
+        font-size: 22px;
     }
+    #cdi-carousel-wrapper, #carousel-indicator-wrapper {
+        display: none;
+    }
+    
     .chart-holder, .chart-holder div.bar-segment {
         height: 10px;
     }
@@ -1936,6 +1944,9 @@ span.country-label {
     .country-details {
         padding: 15px;
     }
+    .cdi-header-wrapper {
+        background-position-y: -50px;
+    }
 }
 @media screen and (max-width: 410px) {
 
@@ -1957,6 +1968,16 @@ span.country-label {
     }
     .flexbox .mainNav {
         height: 264px;
+    }
+}
+@media screen and (min-width: 1281px) {
+    .cdi-header-wrapper {
+        background-position-y: -214px;
+    }
+}
+@media screen and (min-width: 1900px) {
+    .cdi-header-wrapper {
+        background-position-y: -350px;
     }
 }
 @media screen and (max-width: 600px) {
