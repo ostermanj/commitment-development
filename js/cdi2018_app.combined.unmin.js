@@ -1724,7 +1724,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
     getTemplate: function(templateName) {
         var template = '';
         $.ajax({
-            url: Drupal.settings.basePath + Drupal.settings.cdi2016.pathToModule + '/templates/' + templateName + '.tmpl.html',
+            url: Drupal.settings.basePath + Drupal.settings.cdi2018.pathToModule + '/templates/' + templateName + '.tmpl.html',
             method: 'GET',
             async: false
         }).done(function(data) {
@@ -1746,7 +1746,7 @@ cdiApp.CDI.Model = Backbone.Model.extend({
          * there's a better way, but this solution works, adds needed flexibility
          */
         
-        Backbone.pubSub.on('rankCountries', function(params){this.rankCountries(params);}, this); //subscribe to rankCountries trigger published in cdi2016_app.js
+        Backbone.pubSub.on('rankCountries', function(params){this.rankCountries(params);}, this); 
         this.indicator = args.indicator;
         this.countries = args.countries;
         this.app = args.app;

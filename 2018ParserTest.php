@@ -6,7 +6,7 @@
  * Time: 10:36 PM
  */
 
-require_once dirname(__FILE__ ) . '/CdiXmlParser.php';
+require_once dirname(__FILE__ ) . '/2018CdiXmlParser.php';
 header('Content-Type: application/json');
-$parser = new CdiXmlParser(dirname(__FILE__) . '/cdi-xml-full-document.xml');
+$parser = new CdiXmlParser(dirname(__FILE__) . '/2018cdi-xml-full-document.xml');
 echo json_encode(array('indicators' => $parser->getIndicatorsTree()));

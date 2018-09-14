@@ -1,0 +1,4 @@
+name = Commitment to Development Index 2018
+description = Commitment to Development Index 2018, builds on cdi2016 module. Separated so both can be on site at same time to simplify deployment.
+core = 7.x
+package = CGD

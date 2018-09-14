@@ -2,7 +2,7 @@
     <div class="cdi-header">
         <h1>The Commitment to Development Index 2018</h1>
         <div id="cdi-carousel-wrapper">
-          
+          <!-- TODO -->
             <p id="cdi-carousel-0" class="cdi-carousel" style="position: relative;">The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations.</p>
             <p id="cdi-carousel-1" class="cdi-carousel" style="visibility: hidden; opacity:0">The CDI adjusts for size and economic weight to measure countries according to their potential to help. </p>
             <p id="cdi-carousel-2" class="cdi-carousel" style="visibility: hidden; opacity:0">Denmark takes first place. Sweden is second and Finland is third. France and Germany complete the top five.</p>
