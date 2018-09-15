@@ -1,12 +1,12 @@
 <div class="cdi-footer-wrapper">
     <div class="cdi-footer">
-        <div class="footer-block brief" onclick="window.open('//www.cgdev.org/publication/commitment-development-index-2017')">
+        <div class="footer-block brief" onclick="window.open('//www.cgdev.org/publication/commitment-development-index-2018')">
             <div class="cdi-icon"></div>
             <div class="title"><?php print t('Read');?></div>
             <div class="description"><?php print t('This year\'s brief');?></div>
             <a href="#" class="cdi-footer-link"></a>
         </div>
-        <div class="footer-block indicators" onclick="window.open('https://drive.google.com/drive/folders/0B167nw-gSVHRcXhILXg0RjM3Vmc')">
+        <div class="footer-block indicators" onclick="window.open('//www.cgdev.org/cdi-methodology')">
             <div class="cdi-icon"></div>
             <div class="title"><?php print t('Explore');?></div>
             <div class="description"><?php print t('The indicators and methodology');?></div>
