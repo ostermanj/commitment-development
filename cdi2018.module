@@ -49,11 +49,11 @@ function cdi2018_theme() {
   function cdi2018_html_head_alter(&$head_elements) {
 
     $item = menu_get_item();
-    if ($item['path'] == 'commitment-development-index-2018' || $item['path'] == 'cdi-2018/country/%'){
+    if ($item['path'] == '07EC607A9A07EC607A9A' || $item['path'] == '07EC607A9A/country/%'){
       $getTitle = drupal_get_title();
       $longDescription = 'The Commitment to Development Index ranks 27 of the world’s richest countries on their dedication to policies that benefit people living in poorer nations. Sweden takes first place with Denmark as runner-up. The UK is 8th while the US takes 23rd.';
       
-      $cdiImageURL = 'https://www.cgdev.org/sites/default/files/cdi-2017-image-share_final.png'; 
+      $cdiImageURL = 'https://www.cgdev.org/sites/default/files/cdi-2018-final-share.png'; 
       $head_elements['metatag_description_0']['#value'] = $longDescription;
       $head_elements['metatag_twitter:card_0']['#value'] = 'summary_large_image';
       $head_elements['metatag_twitter:title_0']['#value'] = $getTitle;
@@ -82,7 +82,7 @@ function cdi2018addHeadElements(){
       '#tag' => 'meta',
       '#attributes' => array(
          'property' => 'og:image',
-         'content' => 'https://www.cgdev.org/sites/default/files/cdi-2017-image-share_final.png',
+         'content' => 'https://www.cgdev.org/sites/default/files/cdi-2018-final-share.png',
       ),
     );
     drupal_add_html_head($fbImage, 'metatag_og:image_0');
