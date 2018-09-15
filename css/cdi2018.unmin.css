@@ -909,8 +909,8 @@ td.spacer {
 
 #home-cdi-indicator .indicator-label a.indicator-info-left,
 .bar-charts .indicator-label a.indicator-info-left {
-
-    right: inherit;
+    position: relative;
+    right: auto;
 }
 #new_cdi table tr.master-row a.show-info:hover,
 #new_cdi table tr.master-row a.show-trend:hover,
@@ -2076,6 +2076,16 @@ span.country-label {
 }
 
 /*  CSS for the comparison charts */
+
+.comparison-placeholder {
+    width: 220px;
+    height: 100px;
+    background-color: #DFDFDB;
+    margin: 40px 10PX;
+}
+.comparison-placeholder:last-child {
+    margin-bottom: 60px;
+}
 
 #comparison-charts {
     display: -ms-flexbox;

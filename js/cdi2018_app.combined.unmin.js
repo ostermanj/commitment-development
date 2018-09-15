@@ -1214,17 +1214,18 @@ new code : adds object 'original' to main indicators and copies data to it so th
               });
             },
             renderCharts: function(){
-             /* var that = this;
-              if ( originalRanks.SWE === undefined ) { //ie the original ranks are not ready yet
+             // var that = this;
+             /* if ( originalRanks.SWE === undefined ) { //ie the original ranks are not ready yet
                 setTimeout(function(){
                   that.renderCharts();
                 }, 1000);
                 return;
               }*/
-              document.querySelector('div.indicator.cdi').insertAdjacentHTML('afterbegin', '<div id="comparison-charts"></div>');
+              //document.querySelector('div.indicator.cdi').insertAdjacentHTML('afterbegin', '<div id="comparison-charts"></div>');
 
-              
-              var chartDivs = d3.select('#comparison-charts')
+              d3.selectAll('div.comparison-placeholder').remove();
+
+              var chartDivs = d3.select('div#comparison-charts')
                 .selectAll('div.comparison-component')
                   .data(model)
                   .enter().append('div')
@@ -1277,8 +1278,8 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
               var title  = svg.append('text')
                 .text(function(d){
-                  console.log(d);
-                  var componentStr = d.component === 'CDI' ? 'Overall' : that.indicators[d.component];
+                  console.log(that.indicators[d.component]);
+                  var componentStr = d.component === 'CDI' ? 'Overall' : that.indicators[d.component].replace(/\s/g,'');
                   var datum = d.values.find(function(obj){
                     return obj.country === args.countryCodes[0];
                   });
@@ -1502,7 +1503,7 @@ new code : adds object 'original' to main indicators and copies data to it so th
             secondarySelection: null,
             tertiarySelection: null
           };
-          if ( !document.querySelector('#comparison-charts') ){
+          if ( !document.querySelector('div.comparison-component') ){
             view.init(); // prevent double firing. for some reason loadCountry is called twice sometimes
           }
         }
