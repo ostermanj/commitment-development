@@ -2644,11 +2644,11 @@ cdiApp.infoView = cdiApp.collapsibleView.extend({
             this.loaded = true;
             
         
-                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="' + that.countryCode + '-summary-text" class="field-item even">Loading ... <br /> <br> </div></div></div><div class="year-results"><a class="cdi-country-report" href="/cdi-2018/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
+                var content = '<td colspan="7" class="info-td"><div class="info-wrapper"><div class="field field-name-field-overall field-type-text-long field-label-above"><div class="field-label">Overall:&nbsp;</div><div class="field-items"><div class="' + that.countryCode + '-summary-text" class="field-item even">Loading ... <br /> <br> </div></div></div><div class="year-results"><a class="cdi-country-report" href="/07EC607A9A/country/' + that.countryCode + '" target="_blank">Country report</a></div><a data-c="' + that.countryCode + '" data-v="info" class="close-info active" href="#">(X) Close</a></div></td>';
  
  
                 that.$el.append(content);
-                $.get('/cdi-2018/country/' + that.countryCode, function(data){
+                $.get('/07EC607A9A/country/' + that.countryCode, function(data){
                   $('.' + that.countryCode + '-summary-text').text($( data ).find('.indicator.cdi .left-side').text());
                         cHeight = $('#' + that.countryCode + '-info .field-name-field-overall').height() + $('#' + that.countryCode + '-info .year-results').height() + addHeight;
                         $('#' + that.countryCode + '-info .info-wrapper').css('height', cHeight);
@@ -2725,7 +2725,7 @@ cdiApp.trendView = cdiApp.collapsibleView.extend({
                
             });
              var $buttonWrapper = $('<div style="clear:left">');
-             $buttonWrapper.append('<div class="year-results hello"><a class="cdi-country-report" target="_blank" href="/cdi-2018/country/' + this.countryCode + '">Country report</a></div>');
+             $buttonWrapper.append('<div class="year-results hello"><a class="cdi-country-report" target="_blank" href="/07EC607A9A/country/' + this.countryCode + '">Country report</a></div>');
             $content.append($buttonWrapper);
             $content.append('<a data-c="' + this.countryCode + '" data-v="info" class="close-info close-bottom-trends active" href="#">(X) Close</a>')
             $content.append('<p class="trends-note">The 2001–07 CDI included 21 countries; 2008–11, 22 countries; 2012–18, 27 countries.</p>');
@@ -3059,7 +3059,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             $contentWrapper.append($content);
             $contentTd.append($contentWrapper);
             this.$el.append($contentTd);
-             $content.append('<div class="year-results"><a class="cdi-country-report" target="_blank" href="/cdi-2018/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a><br /><span class="context-key"><div class="context-div key"></div> = other countries’ scores</span>');
+             $content.append('<div class="year-results"><a class="cdi-country-report" target="_blank" href="/07EC607A9A/country/' + this.countryCode + '">Country report</a></div>','<a data-c="' + this.countryCode + '" data-v="components" class="close-components active" href="#">(X) Close</a>','<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main active" href="#">(←) Go back</a><br /><span class="context-key"><div class="context-div key"></div> = other countries’ scores</span>');
             
             
           
@@ -3127,7 +3127,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
 
             }
 
-            $content.append('<div class="year-results"><a class="components-report-bottom cdi-country-report" target="_blank" href="/cdi-2018/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
+            $content.append('<div class="year-results"><a class="components-report-bottom cdi-country-report" target="_blank" href="/07EC607A9A/country/' + this.countryCode + '">Country report</a></div>', '<a data-c="' + this.countryCode + '" data-v="components" class="close-components close-bottom active" href="#">(X) Close</a>', '<a data-c="' + this.countryCode + '" data-v="components" class="return-to-main close-bottom active" href="#">(←) Go back</a>');
            
         }
         var cHeight = $('.' + this.countryCode + '-components .components-inner-wrapper').height() + 50;

@@ -10,12 +10,12 @@
  */
 function cdi2018_menu() {
     $items = array();
-    $items['commitment-development-index-2018'] = array(
+    $items['07EC607A9A07EC607A9A'] = array(
         'page callback' => 'cdi2018_index_page',
         'access callback' => TRUE,
         'type' => MENU_CALLBACK,
     );
-    $items['cdi-2018/country/%'] = array(
+    $items['07EC607A9A/country/%'] = array(
         'page callback' => 'cdi2018_country_page',
         'page arguments' => array(2),
         'access callback' => TRUE,
