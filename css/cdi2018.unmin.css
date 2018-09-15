@@ -2135,4 +2135,9 @@ span.country-label {
     background-color: #b0b0a6;
 }
 
+/* download pdf button */
+.download-country-pdf {
+    margin-bottom: 1em;
+}
+
 

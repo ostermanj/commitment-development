@@ -29,6 +29,7 @@
                 </div>
                 <?php } ?>
                 <p>The Commitment to Development Index ranks 27 of the world’s richest countries on policies that affect people living in poorer nations. This is the country report for <?php print t($node->title);?>. For results of all countries, visit <a href="/commitment-development-index">the main CDI page</a>.</p>
+                <button class="download-country-pdf" onclick="window.open('//www.cgdev.org/sites/default/files/cdi2018-<?php print $node->country_code; ?>.PDF')">Download PDF</button>
                 <?php foreach ($indicators as $indicator => $field) { ?>
                 <div class="indicator <?php print $indicator;?>">
                     <div class="indicator-title">
