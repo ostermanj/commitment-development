@@ -3063,14 +3063,15 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             
           
             for(var i in this.data) { // i is category of indicator. some have children, some don't
-                var $label, $chart;
+                var $label, $chart, tooltipQuestion;
                 var indicators = [];
         var parent = this.app.flatIndicators[i];
 
 
                 if (this.app.flatIndicators[i].children ) {
-                  
-                    $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent + '">' + this.data[i] + ' <a href="#info" class="indicator-info indicator-info-left" data-indicator="' + i + '">?</a><br /></div>');
+                  console.log(this.app.flatIndicators[i]);
+                    tooltipQuestion = this.app.flatIndicators[i].description ? '<a href="#info" class="indicator-info indicator-info-left" data-indicator="' + i + '">?</a>' : '';
+                    $label = $('<div class="indicator-label category ' + this.app.flatIndicators[i].parent + '">' + this.data[i] +   tooltipQuestion + '<br /></div>');
                     $content.append($label);
                     for (var j in this.app.flatIndicators[i].children) {
                       if ( this.app.flatIndicators[i].children[j] !== 'AID_QLT_BI_W' && this.app.flatIndicators[i].children[j] !== 'AID_QLT_MUL_W' ) {
@@ -3150,8 +3151,7 @@ cdiApp.Components.View = cdiApp.collapsibleView.extend({
             className: 'cdi-modal',
             tagName: 'div'
         });
-
-        event.preventDefault();
+      event.preventDefault();
     }
 });
 
