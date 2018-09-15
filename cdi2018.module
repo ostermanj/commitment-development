@@ -97,10 +97,17 @@ function cdi2018addHeadElements(){
     );  
     drupal_add_html_head($twitterDescription, 'metatag_twitter:description_0'); 
 
-    
-  
-
-
+// ******
+// REMOVE BELOW WHEN READY TO BE PUBLIC
+// *****
+    $noindex = array(
+      '#tag' => 'meta', // The #tag is the html tag - 
+      '#attributes' => array( // Set up an array of attributes inside the tag
+        'name' => 'robots', 
+        'contents' => 'noindex, nofollow'
+      ),
+    );
+    drupal_add_html_head($noindex, 'no-index');
 }
 
 
