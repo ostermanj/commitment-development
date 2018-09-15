@@ -1996,7 +1996,7 @@ cdiApp.CDI.View = Backbone.View.extend({
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
             link: 'https://www.cgdev.org' + location.pathname,
- /* TODO*/           picture: 'https://www.cgdev.org/sites/default/files/cdi-2017-image-share_final.png'
+            picture: 'https://www.cgdev.org/sites/default/files/cdi-2018-final-share.png'
         }); 
         $(event.currentTarget).blur(); //remove focus after click   
         dataLayer.push({event: 'cdiFacebook', label: fbCountry + '-overall'});
@@ -2933,7 +2933,7 @@ cdiApp.CDI_Indicator.View = Backbone.View.extend({
             caption: 'The Commitment to Development Index: Ranking the Rich',
             description: 'The Commitment to Development Index ranks 27 of the world\'s richest countries on their dedication to policies that benefit people living in poorer nations.',
             link: 'https://www.cgdev.org' + location.pathname,
-   /*TODO*/         picture: 'https://www.cgdev.org/sites/default/files/cdi-2017-image-share_final.png'
+   /*TODO*/         picture: 'https://www.cgdev.org/sites/default/files/cdi-2018-final-share.png'
         }); 
         dataLayer.push({event: 'cdiFacebook', label: e.currentTarget.dataset.country + '-' + e.currentTarget.dataset.component.toLowerCase()});
         $(e.currentTarget).blur(); //remove focus after click   
