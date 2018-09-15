@@ -1,5 +1,4 @@
 <?php
-include 'ChromePhp.php';
 /**
  *
  * @file cdi2018.module
@@ -199,7 +198,6 @@ function cdi2018_get_country_node($country_code) {
   
   foreach ( $nids as $id ) {
     $n = node_load($id);
-    ChromePhp::log($n->name);
     if ( $n->name == 'cdi2018' ) {
       $n->country_code = $country_code;
       return $n;
