@@ -1176,8 +1176,14 @@ new code : adds object 'original' to main indicators and copies data to it so th
                 .append('div')
                 .attr('id','selector-container')
                   .append('select')
+                  .attr('multiple','true')
                   .attr('id', 'country-selector');
-
+              dropdown
+                .append('option')
+               // .attr()
+                .attr('value','null')
+                //.attr('disabled','disabled')
+                .text('');
               dropdown
                 .selectAll('option.country')
                 .data(countries.sort(function(a,b){
@@ -1194,18 +1200,46 @@ new code : adds object 'original' to main indicators and copies data to it so th
 
               view.selector = new Selectr('#country-selector', {
                 multiple: true,
-                maxSelections: 2,
-                placeholder: 'Select up to two countries to compare'
+               // maxSelections: 2,
+                placeholder: 'Select up to two countries to compare',
+                defaultSelected: false
               });
-
               view.selector.on('selectr.select', function(option) {
-                  var bar = d3.select('.component-bar.' + option.value);
+                console.log(this.selectedIndexes);
+                if ( this.selectedIndexes.length < 3 ){
+                  
+                  console.log(this);
+                  let bar = d3.select('.component-bar.' + option.value);
                   bar.each(function(d,i,nodes){
                     view.highlightCountry.call(this,d,i,nodes);
                     view.selectHighlightedCountry.call(this,d,i,nodes);
                   });
+                }
+                if ( this.selectedIndexes.length === 2 ) {
+                  console.log('max');
+                  this.options.forEach((each,i) => {
+                    if ( this.selectedIndexes.indexOf(i) === -1 ){
+                      console.log('match', each.value);
+                      each.disabled = true;
+                      each.hidden = true;
+                      each.style.display = 'none';
+                    }
+                  });
+                  this.items.forEach((each,i) => {
+                    if ( this.selectedIndexes.indexOf(i) === -1 ){
+                      console.log('match', each);
+                      each.disabled = true;
+                      each.hidden = true;
+                      each.style.display = 'none';
+                    }
+                  });
+                }
+                console.log(this);
               });
               view.selector.on('selectr.deselect', function(option) {
+                  this.options.forEach((each,i) => {
+                      each.disabled = false;
+                  });
                   var bar = d3.select('.component-bar.' + option.value);
                   bar.each(function(d,i,nodes){
                     //view.highlightCountry.call(this,d,i,nodes);
